@@ -1,0 +1,30 @@
+name: Collect stats and send replies
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: autopilot-post
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Send queued comment replies
+        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}" }
+        run: python scripts/send_replies.py
+      - name: Collect views and comments
+        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}" }
+        run: python scripts/collect.py
+      - name: Save
+        run: |
+          git config user.name "autopilot-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git pull --rebase || true
+          git add state || true
+          git diff --cached --quiet || (git commit -m "stats" && git push)
