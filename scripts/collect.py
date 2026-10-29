@@ -7,7 +7,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def load(p, d):
     try: return json.load(open(os.path.join(ROOT, p)))
     except Exception: return d
-token = os.environ["THREADS_TOKEN"]
+token = os.environ.get("THREADS_TOKEN", "")
+if not token:
+    print("No THREADS_TOKEN yet, skipping."); sys.exit(0)
 posted = load("state/posted.json", {})
 ins = load("state/insights.json", {}); com = load("state/comments.json", {})
 cut = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=14)

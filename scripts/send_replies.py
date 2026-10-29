@@ -8,7 +8,9 @@ if os.path.exists(os.path.join(ROOT, "PAUSE")): sys.exit(0)
 def load(p, d):
     try: return json.load(open(os.path.join(ROOT, p)))
     except Exception: return d
-token = os.environ["THREADS_TOKEN"]
+token = os.environ.get("THREADS_TOKEN", "")
+if not token:
+    print("No THREADS_TOKEN yet, skipping."); sys.exit(0)
 todo = load("queue/replies.json", []); sent = load("state/replied.json", {})
 uid = None
 for r in todo[:20]:
