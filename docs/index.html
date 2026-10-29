@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THE BUSINESS BRAIN · Free from AUTOPILOT.OI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040506;--lime:#D4FF3A;--lime2:#9BE15D;--ink:#fff;--mut:rgba(255,255,255,.62);--dim:rgba(255,255,255,.38);--card:rgba(255,255,255,.035);--line:rgba(255,255,255,.09);--gl:rgba(212,255,58,.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;z-index:0}
+.glowbg{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+a{color:var(--lime)}
+.wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0 22px}
+.mono{font-family:'Space Mono',monospace}
+.bebas{font-family:'Bebas Neue',sans-serif;font-weight:400}
+.spark{display:inline-block;width:18px;height:18px;background:var(--lime);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);filter:drop-shadow(0 0 6px var(--lime));vertical-align:-2px}
+.mk{width:38px;height:38px;border-radius:50%;background:var(--lime);color:#040506;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;letter-spacing:-1px;box-shadow:0 0 24px rgba(212,255,58,.5);flex:none}
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(4,5,6,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand b{font-family:'Bebas Neue';font-weight:400;font-size:24px;letter-spacing:3px}
+.prog{margin-left:auto;display:flex;align-items:center;gap:12px}
+.bar{width:140px;height:8px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--lime);box-shadow:0 0 14px var(--lime);transition:width .5s}
+.prog span{font:700 12px 'Space Mono';color:var(--lime);letter-spacing:1px;white-space:nowrap}
+.nav{display:flex;gap:8px;overflow-x:auto;padding:10px 22px 12px;max-width:980px;margin:0 auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;text-decoration:none;color:var(--mut);font:700 12px 'Space Mono';letter-spacing:1px;padding:8px 13px;border:1px solid var(--line);border-radius:30px;background:var(--card)}
+.nav a.on{color:#06120a;background:var(--lime);border-color:var(--lime)}
+/* hero */
+.hero{padding:80px 0 50px;text-align:center;position:relative}
+.kick{display:inline-flex;align-items:center;gap:10px;font:700 13px 'Space Mono';letter-spacing:3px;color:var(--lime);margin-bottom:22px}
+h1{font-family:'Bebas Neue';font-weight:400;font-size:clamp(84px,17vw,170px);line-height:.88;letter-spacing:2px;text-shadow:0 0 60px rgba(212,255,58,.25)}
+.hero p.sub{font-size:clamp(20px,3.4vw,26px);font-weight:600;margin:20px auto 0;max-width:640px;color:#fff;letter-spacing:-.3px}
+.hero p.sub em{font-style:normal;color:var(--lime)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.chip{font:700 12px 'Space Mono';letter-spacing:1.5px;padding:10px 16px;border-radius:30px;border:1px solid var(--gl);color:#fff;background:rgba(212,255,58,.06)}
+.arc{position:relative;height:150px;margin-top:40px;overflow:hidden}
+.arc:before{content:"";position:absolute;left:50%;top:40px;width:1400px;height:1400px;margin-left:-700px;border-radius:50%;border-top:2px solid rgba(235,255,150,.9);box-shadow:0 -10px 50px rgba(212,255,58,.55),inset 0 10px 60px rgba(212,255,58,.35);background:radial-gradient(circle at 50% 8%,rgba(212,255,58,.16),transparent 30%)}
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line);position:relative}
+.lnum{font:700 13px 'Space Mono';letter-spacing:3px;color:var(--lime);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.lnum .t{margin-left:auto;color:var(--dim);letter-spacing:1px}
+h2{font-size:clamp(34px,6vw,52px);font-weight:800;letter-spacing:-1.8px;line-height:1.05}
+h2 em{font-style:normal;color:var(--lime)}
+h3{font-size:22px;font-weight:700;letter-spacing:-.4px;margin-bottom:6px}
+.lead{color:var(--mut);font-size:19px;margin-top:14px;max-width:700px}
+.card{background:linear-gradient(180deg,rgba(28,34,26,.55),rgba(12,14,13,.7));border:1px solid var(--line);border-radius:22px;padding:24px;position:relative}
+.card.lit{border-color:var(--gl);box-shadow:0 0 50px rgba(212,255,58,.08)}
+.hot{background:linear-gradient(135deg,#E4FF6A,#B8F23A 55%,#7EE07A);color:#06120a;border:none;box-shadow:0 0 60px rgba(212,255,58,.35)}
+.hot p,.hot .mut{color:#163010}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+@media(max-width:820px){.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g2,.g4{grid-template-columns:1fr}}
+.ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(212,255,58,.1);color:var(--lime);margin-bottom:14px}
+.ic svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mut{color:var(--mut)}
+.small{font-size:14px}
+.tag{display:inline-block;font:700 11px 'Space Mono';letter-spacing:1.5px;padding:5px 10px;border-radius:8px;background:rgba(212,255,58,.12);color:var(--lime)}
+/* steps */
+.steps{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.step{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border-radius:18px;border:1px solid var(--line);background:var(--card);cursor:pointer;transition:border-color .2s,background .2s}
+.step:hover{border-color:var(--gl)}
+.step .ck{flex:none;width:30px;height:30px;border-radius:9px;border:2px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;margin-top:1px;transition:all .2s}
+.step.done{border-color:rgba(212,255,58,.35);background:rgba(212,255,58,.05)}
+.step.done .ck{background:var(--lime);border-color:var(--lime)}
+.step.done .ck:after{content:"";width:12px;height:7px;border-left:3px solid #06120a;border-bottom:3px solid #06120a;transform:rotate(-45deg) translate(1px,-1px)}
+.step b{font-weight:700}
+.step .d{color:var(--mut);font-size:15.5px;margin-top:3px}
+.step .d a{word-break:break-word}
+kbd{font:700 13px 'Space Mono';background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-bottom-width:2px;border-radius:6px;padding:1px 7px;color:#fff;white-space:nowrap}
+/* prompt box */
+.pbox{margin-top:18px;border-radius:18px;border:1px solid var(--gl);background:#07090a;overflow:hidden}
+.phead{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);font:700 12px 'Space Mono';letter-spacing:1.5px;color:var(--lime)}
+.phead button{margin-left:auto}
+pre{white-space:pre-wrap;word-wrap:break-word;font:400 14px/1.6 'Space Mono';color:rgba(255,255,255,.85);padding:18px;max-height:340px;overflow:auto}
+.btn{font:700 13px 'Space Mono';letter-spacing:1.5px;border:none;border-radius:12px;padding:11px 18px;cursor:pointer;background:var(--lime);color:#06120a;box-shadow:0 0 24px rgba(212,255,58,.35);transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:none}
+.btn.big{font-size:15px;padding:18px 26px;border-radius:16px;width:100%}
+/* compare */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+@media(max-width:560px){.vs{grid-template-columns:1fr}}
+.vs ul{list-style:none;margin-top:10px}
+.vs li{padding:7px 0 7px 26px;position:relative;font-size:15.5px}
+.vs li:before{content:"";position:absolute;left:2px;top:15px;width:12px;height:2px;background:var(--dim)}
+.vs .hot li:before{content:"";width:12px;height:7px;background:none;border-left:2.5px solid #06120a;border-bottom:2.5px solid #06120a;transform:rotate(-45deg);top:12px}
+/* mock screens */
+.screens{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-top:26px;align-items:end}
+@media(max-width:640px){.screens{grid-template-columns:1fr}}
+.desk{border-radius:16px;border:1px solid rgba(255,255,255,.12);background:#0b0d0e;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 40px rgba(212,255,58,.06)}
+.desk .tb{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#121416;border-bottom:1px solid var(--line)}
+.desk .tb i{width:10px;height:10px;border-radius:50%;background:#2a2d31}
+.desk .body{display:flex;min-height:230px}
+.side{width:34%;border-right:1px solid var(--line);padding:12px;display:flex;flex-direction:column;gap:7px}
+.side div{font:600 12px Inter;color:var(--mut);padding:7px 9px;border-radius:8px}
+.side div.on{background:rgba(212,255,58,.12);color:var(--lime)}
+.main{flex:1;padding:14px;display:flex;flex-direction:column;gap:8px}
+.row{height:30px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--line);display:flex;align-items:center;padding:0 10px;font:600 11.5px Inter;color:var(--mut);gap:8px}
+.row .on{margin-left:auto;font:700 10px 'Space Mono';color:var(--lime)}
+.phone{width:100%;max-width:240px;justify-self:center;border-radius:34px;border:1px solid rgba(255,255,255,.14);background:#0b0d0e;padding:14px 12px 18px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.phone .notch{width:70px;height:18px;border-radius:12px;background:#000;margin:0 auto 12px}
+.bub{border-radius:16px;padding:9px 12px;font-size:12.5px;line-height:1.4;margin-bottom:8px}
+.bub.u{background:rgba(255,255,255,.08);margin-left:22px}
+.bub.a{background:linear-gradient(135deg,#E4FF6A,#9BE15D);color:#06120a;margin-right:22px;font-weight:600}
+.cap{font:700 11px 'Space Mono';letter-spacing:1.5px;color:var(--dim);text-align:center;margin-top:10px}
+/* quiz */
+.quiz{margin-top:28px}
+.qhead{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.qbar{flex:1;height:8px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden}
+.qbar i{display:block;height:100%;background:var(--lime);box-shadow:0 0 12px var(--lime);transition:width .35s}
+.qcount{font:700 13px 'Space Mono';color:var(--lime);letter-spacing:1px}
+.qcard{min-height:330px}
+.qcard .qn{font:700 12px 'Space Mono';letter-spacing:2px;color:var(--lime)}
+.qcard .qq{font-size:clamp(24px,4.4vw,32px);font-weight:800;letter-spacing:-.8px;line-height:1.15;margin:8px 0 6px}
+.qcard .qh{color:var(--mut);font-size:15px;margin-bottom:18px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{font:600 15px Inter;padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03);color:#fff;cursor:pointer;transition:all .15s}
+.opt.sel{background:var(--lime);color:#06120a;border-color:var(--lime);box-shadow:0 0 20px rgba(212,255,58,.35)}
+textarea,input[type=text]{width:100%;font:500 16px Inter;color:#fff;background:#07090a;border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 16px;outline:none;resize:vertical}
+textarea:focus,input[type=text]:focus{border-color:var(--lime);box-shadow:0 0 0 3px rgba(212,255,58,.12)}
+textarea{min-height:110px}
+.qnav{display:flex;gap:10px;margin-top:20px}
+.qnav .btn{flex:1}
+.ex{font:500 13px Inter;color:var(--dim);margin-top:10px}
+/* agents */
+.agent{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.agent .ic{margin:0;width:58px;height:58px;border-radius:18px}
+.agent .ic svg{width:30px;height:30px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+details{margin-top:12px}
+summary{cursor:pointer;font:700 12px 'Space Mono';letter-spacing:1.5px;color:var(--lime);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"+ "}
+details[open] summary:before{content:"− "}
+/* commands */
+.cmds{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+@media(max-width:640px){.cmds{grid-template-columns:1fr}}
+.cmd{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:15px;transition:border-color .2s}
+.cmd:hover{border-color:var(--gl)}
+.cmd .n{font:700 12px 'Space Mono';color:var(--lime);flex:none;margin-top:3px}
+.cmd.copied{border-color:var(--lime)}
+.cg{font:700 13px 'Space Mono';letter-spacing:2px;color:#fff;margin-top:34px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(120px);background:var(--lime);color:#06120a;font:700 13px 'Space Mono';letter-spacing:1.5px;padding:14px 22px;border-radius:14px;box-shadow:0 0 40px rgba(212,255,58,.5);z-index:50;transition:transform .3s}
+.toast.on{transform:translateX(-50%) translateY(0)}
+.faq{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font:700 18px Inter;letter-spacing:-.3px;color:#fff}
+.faq summary:before{color:var(--lime)}
+.faq p{color:var(--mut);margin-top:10px}
+.rule{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.rule .n{font-family:'Bebas Neue';font-size:40px;line-height:1;color:var(--lime);width:44px;flex:none}
+.end{text-align:center;padding:80px 0 120px}
+.foot{text-align:center;color:var(--dim);font:700 12px 'Space Mono';letter-spacing:1.5px;padding:30px 0 60px}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+.flow .f{flex:1;min-width:150px;text-align:center;padding:16px 12px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.flow .f b{display:block;font-family:'Bebas Neue';font-weight:400;font-size:30px;letter-spacing:1px;color:var(--lime);line-height:1}
+.flow .ar{color:var(--lime);font-weight:900}
+@media(max-width:560px){.flow .ar{display:none}}
+</style></head><body><div class="glowbg" style="width:700px;height:700px;left:50%;margin-left:-350px;top:-300px;background:rgba(212,255,58,.13)"></div>
+<div class="top"><div class="wrap"><a class="brand" href="#top"><span class="mk">ap.</span><b>AUTOPILOT.OI</b></a><span class="tag" style="margin-left:auto">FREE</span></div></div>
+<div class="wrap" id="top">
+<header class="hero">
+ <div class="kick"><span class="spark"></span>FREE · WORKS WITH ANY AI</div>
+ <h1 style="font-size:clamp(72px,15vw,150px)">THE BUSINESS<br><span style="color:var(--lime)">BRAIN</span></h1>
+ <p class="sub">Answer 15 questions. Get an AI that <em>knows your prices, rules and voice</em>, 10 ready-to-use prompts and your personal automation plan. 5 minutes. $0.</p>
+ <div class="chips"><span class="chip">FREE CLAUDE OR CHATGPT</span><span class="chip">NO SIGN UP</span><span class="chip">YOURS TO KEEP</span></div>
+ <div class="arc"></div>
+</header>
+
+<section id="quiz">
+ <div class="lnum">STEP 01<span class="t">5 MIN</span></div>
+ <h2>Tell it about <em>your business</em></h2>
+ <p class="lead">Short answers are fine. Skip anything you're not sure about.</p>
+ <div class="quiz"><div class="qhead"><div class="qbar"><i id="qbar"></i></div><span class="qcount" id="qcount"></span></div>
+ <div class="card lit qcard" id="qcard"></div>
+ <div class="qnav"><button class="btn ghost" id="qback">BACK</button><button class="btn" id="qnext">NEXT</button></div></div>
+</section>
+
+<section id="results" style="display:none">
+ <div class="lnum">YOUR RESULTS</div>
+ <h2>Your Brain is <em>ready.</em></h2>
+
+ <h3 style="margin-top:34px">01 · Your Business Brain</h3>
+ <p class="mut">Paste this once and your AI works like it's part of your team.</p>
+ <div class="pbox"><div class="phead"><span class="spark"></span>BUSINESS BRAIN<button class="btn" data-copy="brainText">COPY</button></div><pre id="brainText"></pre></div>
+ <div class="g2">
+  <div class="card"><span class="tag">FREE CLAUDE</span><p class="small mut" style="margin-top:10px">Open <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> → Projects → Create project, name it after your business → Set project instructions → paste. Every chat inside that project now knows your business.</p></div>
+  <div class="card"><span class="tag">CHATGPT</span><p class="small mut" style="margin-top:10px">Open <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a> → Projects → New project → Instructions → paste. Or paste it at the start of any chat.</p></div>
+ </div>
+
+ <h3 style="margin-top:40px">02 · Your 10 prompts</h3>
+ <p class="mut">Use these inside your project. Tap to copy, then paste the customer's message where it says to.</p>
+ <div class="cmds" id="prompts"></div>
+
+ <h3 style="margin-top:40px">03 · Your Automation Plan</h3>
+ <div id="plan"></div>
+
+ <div class="card hot" style="padding:34px 26px;margin-top:30px">
+  <div class="mono" style="font-weight:700;letter-spacing:2px;font-size:13px">NEXT LEVEL</div>
+  <h2 style="color:#06120a;margin-top:10px">Make your Brain work on its own.</h2>
+  <p style="margin-top:10px;font-size:18px;color:#163010">Right now you ask, it answers. THE WORKSPACE turns this same Brain into 7 agents that clock in by themselves: inbox replies drafted overnight, jobs booked, quotes followed up, reviews requested and a brief every morning. About an hour to set up, $49.</p>
+  <div style="margin-top:20px"><span class="btn" style="background:#06120a;color:var(--lime);display:inline-block">LAUNCHING SOON</span></div>
+ </div>
+ <p class="small mut" style="margin-top:16px;text-align:center"><a href="#quiz" id="redo">Edit my answers</a></p>
+</section>
+<div class="foot">AUTOPILOT.OI · YOUR ANSWERS STAY IN THIS BROWSER. INDEPENDENT GUIDE, NOT AFFILIATED WITH ANTHROPIC OR OPENAI.</div>
+</div>
+<div class="toast" id="toast">COPIED</div>
+<script>
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{const v=localStorage.getItem('bb_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('bb_'+k,JSON.stringify(v))}catch(e){}}};
+function toast(){const e=$('toast');e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),1500)}
+function copy(t){try{navigator.clipboard.writeText(t).then(toast,()=>fb(t))}catch(e){fb(t)}}
+function fb(t){const a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity=0;document.body.appendChild(a);a.select();try{document.execCommand('copy');toast()}catch(e){}a.remove()}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+const PAINS={'Answering messages and emails':[4,'Inbox Agent','drafts a reply to every customer message in your voice'],'Booking and rescheduling':[2,'Booking Agent','books jobs from a text and drafts reminders'],'Chasing quotes that went quiet':[1.5,'Follow Up Agent','finds quiet quotes and drafts one friendly nudge'],'Quotes and invoices':[1.5,'Invoice Agent','turns "job + price" into a clean invoice'],'Asking for reviews':[.5,'Review Agent','asks every finished customer for 5 stars'],'Planning my day':[1,'Morning Brief','sends your day in one message before you wake up'],'Social media DMs':[2,'DM Assistant','writes replies in your social inbox for you to send']};
+const Q=[
+ {k:'name',q:'What is your business called?',t:'text',ph:'Northside Detail Co.'},
+ {k:'what',q:'What do you do, and for who?',t:'text',ph:'Mobile car detailing for busy families'},
+ {k:'offers',q:'Your main services or products, with prices',t:'area',ph:'Full detail SUV $250 (3 hrs)\nInterior only $150 (2 hrs)'},
+ {k:'hours',q:'Your days and hours',t:'text',ph:'Mon to Sat, 8 AM to 6 PM'},
+ {k:'area',q:'Where do you work or serve?',t:'text',ph:'Within 20 miles of downtown'},
+ {k:'book',q:'How do customers book or buy?',t:'text',ph:'Text me or book at mysite.com/book'},
+ {k:'policy',q:'Deposit, cancellation or refund rules',t:'area',ph:'$50 deposit. 24 hr notice to cancel.'},
+ {k:'pay',q:'How do customers pay?',t:'many',o:['Card','Cash','Zelle','Venmo','Cash App','PayPal','Bank transfer']},
+ {k:'voice',q:'How should your AI sound?',t:'one',o:['Warm and friendly','Professional','Short and direct','High energy']},
+ {k:'sign',q:'How do you sign off messages?',t:'text',ph:'Mike, Northside Detail'},
+ {k:'faq',q:'Top questions customers ask, with your answers',t:'area',ph:'Do you need water or power? No, we bring everything.'},
+ {k:'never',q:'What should your AI never say or promise?',t:'area',ph:'Never offer discounts. Never promise same day.'},
+ {k:'review',q:'Your Google review link (optional)',t:'text',ph:'https://g.page/r/...'},
+ {k:'pain',q:'What busy work eats your week?',t:'many',o:Object.keys(PAINS)},
+ {k:'goal',q:'Your number one goal for the next 90 days',t:'one',o:['Book more jobs','Get my time back','Reply faster','More 5 star reviews','Get paid faster']}];
+let A=store.get('a',{}),qi=Math.min(store.get('qi',0),Q.length-1);
+function rq(){const q=Q[qi],v=A[q.k];let b='';
+ if(q.t=='text')b=`<input type="text" id="qin" placeholder="${esc(q.ph)}" value="${esc(v||'')}">`;
+ else if(q.t=='area')b=`<textarea id="qin" placeholder="${esc(q.ph)}">${esc(v||'')}</textarea>`;
+ else{const sel=q.t=='many'?(v||[]):[v];b=`<div class="opts">${q.o.map(o=>`<button class="opt ${sel.includes(o)?'sel':''}" data-o="${esc(o)}">${esc(o)}</button>`).join('')}</div>`}
+ $('qcard').innerHTML=`<div class="qn">QUESTION ${qi+1} OF ${Q.length}</div><div class="qq">${q.q}</div><div class="qh">${q.t=='many'?'Pick all that apply.':q.t=='one'?'Pick one.':'Example in grey. Write your own, or skip.'}</div>${b}`;
+ $('qbar').style.width=((qi+1)/Q.length*100)+'%';$('qcount').textContent=(qi+1)+' / '+Q.length;
+ $('qnext').textContent=qi==Q.length-1?'BUILD MY BRAIN':'NEXT';$('qback').style.visibility=qi?'visible':'hidden';
+ const i=$('qin');if(i)i.oninput=()=>{A[q.k]=i.value;store.set('a',A)};
+ document.querySelectorAll('.opt').forEach(x=>x.onclick=()=>{const o=x.dataset.o;if(q.t=='one')A[q.k]=A[q.k]===o?'':o;else{let a=A[q.k]||[];A[q.k]=a.includes(o)?a.filter(y=>y!==o):[...a,o]}store.set('a',A);rq()})}
+$('qnext').onclick=()=>{if(qi<Q.length-1){qi++;store.set('qi',qi);rq()}else{build();$('results').style.display='block';$('results').scrollIntoView()}};
+$('qback').onclick=()=>{if(qi>0){qi--;store.set('qi',qi);rq()}};
+$('redo').onclick=()=>{qi=0;rq()};
+const v=(k,f)=>{const x=A[k];if(Array.isArray(x))return x.length?x.join(', '):f;return (x&&String(x).trim())?String(x).trim():f};
+function build(){
+ const N=v('name','my business');
+ const brain=`You are the assistant for ${N}. You help me reply to customers, write quotes, follow up and run the business. Always use the facts below. Never make up prices, policies or promises. If something isn't covered here, say I'll confirm and flag it for me.
+
+BUSINESS
+${N}: ${v('what','(add what you do)')}
+
+SERVICES AND PRICES
+${v('offers','(add your services and prices)')}
+
+HOURS AND AREA
+Hours: ${v('hours','(add hours)')}
+Area: ${v('area','(add area)')}
+
+HOW CUSTOMERS BOOK OR BUY
+${v('book','(add how to book)')}
+
+POLICIES
+${v('policy','(add deposit, cancellation and refund rules)')}
+
+PAYMENT
+${v('pay','(add payment methods)')}
+
+VOICE
+Tone: ${v('voice','Warm and friendly')}. Keep messages short and easy to read on a phone. Sign off as: ${v('sign',N)}.
+
+FAQ
+${v('faq','(add common questions and answers)')}
+
+NEVER
+${v('never','Never offer discounts or promise anything not listed here.')}
+
+REVIEW LINK
+${v('review','(none yet)')}
+
+GOAL
+${v('goal','Book more jobs')}. When it fits naturally, steer conversations toward booking.`;
+ $('brainText').textContent=brain;
+ const P=[['Reply to a lead','Write a reply to this customer message. Answer their question with my real prices, and end by offering to book them in. Message: [paste]'],
+  ['Price question','A customer asked how much it costs. Reply with the right price from my services, what is included, and how to book. Message: [paste]'],
+  ['Follow up a quiet quote','I quoted [name] for [service] a few days ago and they went quiet. Write one short, friendly follow up that makes it easy to say yes.'],
+  ['Write a quote','Write a clean quote for [name]: [services]. Include the total, what\'s included, my deposit rule and how to pay.'],
+  ['Booking confirmation','Write a confirmation for [name], [service], [day and time]. Include what they need to know from my FAQ and my cancellation policy.'],
+  ['Reminder for tomorrow','Write a short reminder text for [name] about tomorrow\'s [service] at [time].'],
+  ['Review request','Write a 3 sentence thank you to [name] for today\'s [service] that asks for a Google review with my link.'],
+  ['Unhappy customer','A customer is unhappy. Write a calm, kind reply that takes ownership and offers a next step, without promising anything I don\'t allow. Message: [paste]'],
+  ['Win back an old customer','Write a friendly check in to [name], who last bought [service] a while ago, with a reason to book again.'],
+  ['Turn my day into posts','Write 3 short social posts about today\'s work: [describe the job]. In my voice, ending with how to book.']];
+ $('prompts').innerHTML=P.map((p,i)=>`<div class="cmd" data-c="${esc(p[1])}"><span class="n">${String(i+1).padStart(2,'0')}</span><span><b>${p[0]}</b><br><span class="mut small">${esc(p[1])}</span></span></div>`).join('');
+ document.querySelectorAll('#prompts .cmd').forEach(e=>e.onclick=()=>{copy(e.dataset.c);e.classList.add('copied');setTimeout(()=>e.classList.remove('copied'),900)});
+ const pains=(A.pain&&A.pain.length?A.pain:['Answering messages and emails','Planning my day']);let hrs=0;
+ const rows=pains.map(p=>{const x=PAINS[p];hrs+=x[0];return `<div class="step done" style="cursor:default"><div class="ck"></div><div style="flex:1"><b>${esc(p)}</b><div class="d">${x[1]} ${x[2]}.</div></div><span class="mono small" style="color:var(--lime);white-space:nowrap">~${x[0]} hr/wk</span></div>`}).join('');
+ $('plan').innerHTML=`<div class="card hot" style="text-align:center;margin-top:14px"><div class="mono" style="font-weight:700;letter-spacing:2px;font-size:13px">BUSY WORK YOU COULD HAND OFF</div><div class="bebas" style="font-size:90px;line-height:1">~${hrs} HRS / WEEK</div><div style="font-weight:600">rough estimate based on what you picked</div></div><div class="steps">${rows}</div>`;
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b)copy($(b.dataset.copy).textContent)});
+rq();
+</script>
+</body></html>

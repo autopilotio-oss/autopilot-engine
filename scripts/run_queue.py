@@ -42,7 +42,7 @@ def main(now=None):
     for p in sorted(due, key=lambda x: x["at"])[:MAX_PER_RUN]:
         if today_count >= MAX_PER_DAY:
             print("daily cap reached"); break
-        urls = [raw + m for m in p.get("media", [])]
+        urls = [m if m.startswith("http") else raw + m for m in p.get("media", [])]
         if DRY:
             print("DRY", p["id"], p["kind"], len(urls), "media"); mid = "dry"
         else:
