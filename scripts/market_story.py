@@ -102,47 +102,62 @@ def frame(t, ctx):
     return im
 
 def soundtrack(path, green, n_items, n_lines, sr=44100):
-    """Original music made in code (no licensing issues): a short beat, major on green days, minor on red days,
-    with pops and clicks timed to the animation."""
+    """Original lofi trap beat made in code (no licensing issues): warm keys, 808 with glide, rolling hats,
+    vinyl crackle. Major 7ths on green days, minor on red days. Small pops are timed to the animation."""
     import numpy as np, wave
-    N = int(DUR * sr); L = np.zeros(N); rng = np.random.default_rng(7)
-    t_ = lambda d: np.arange(int(d * sr)) / sr
+    N = int(DUR * sr); L = np.zeros(N); rng = np.random.default_rng(11)
+    T = lambda d: np.arange(int(d * sr)) / sr
     def add(sig, at, g=1.0):
         i = int(at * sr); j = min(N, i + len(sig))
-        if i < N: L[i:j] += sig[: j - i] * g
+        if 0 <= i < N: L[i:j] += sig[: j - i] * g
     def env(n, a, d): x = np.arange(n) / sr; return np.minimum(1, x / a) * np.exp(-x / d)
+    def lp(x, k):
+        y = np.copy(x)
+        for _ in range(k): y = np.convolve(y, [.25, .5, .25], "same")
+        return y
+    mtof = lambda m: 440 * 2 ** ((m - 69) / 12)
+    if green: chords = [[53, 57, 60, 64], [52, 55, 59, 62], [50, 53, 57, 60], [48, 52, 55, 59]]   # Fmaj7 Em7 Dm7 Cmaj7
+    else:     chords = [[57, 60, 64, 67], [53, 57, 60, 64], [50, 53, 57, 60], [52, 56, 59, 62]]   # Am7 Fmaj7 Dm7 E7
+    bpm = 140; s16 = 60 / bpm / 4; bar = 16 * s16
+    def keys(ms, d):
+        x = T(d); w = 0
+        for m in ms:
+            f = mtof(m); w = w + (np.sin(2 * np.pi * f * x) + .25 * np.sin(4 * np.pi * f * x)) * np.exp(-x * 1.1)
+        w *= (1 + .12 * np.sin(2 * np.pi * 4.5 * x)) * np.minimum(1, x / .01)
+        return lp(w / len(ms), 3)
+    def eight08(m, d, glide_to=None):
+        x = T(d); f = mtof(m - 24) * np.ones_like(x)
+        if glide_to is not None: f = f + (mtof(glide_to - 24) - f) * np.clip((x - d * .7) / (d * .2), 0, 1)
+        w = np.sin(2 * np.pi * np.cumsum(f) / sr); return np.tanh(2.2 * w) * np.minimum(1, x / .005) * np.exp(-x / .9)
     def kick():
-        x = t_(0.4); return np.tanh(2 * np.sin(2 * np.pi * np.cumsum(45 + 110 * np.exp(-x * 30)) / sr)) * env(len(x), .002, .18)
+        x = T(.3); return np.sin(2 * np.pi * np.cumsum(50 + 120 * np.exp(-x * 40)) / sr) * env(len(x), .001, .12)
+    def snare():
+        x = rng.standard_normal(int(.25 * sr)); x = x - lp(x, 2)
+        t = T(.25); body = np.sin(2 * np.pi * 190 * t) * np.exp(-t / .05)
+        return (x * env(len(x), .001, .09) * .6 + body * .5)
     def hat():
-        x = rng.standard_normal(int(.05 * sr)); return np.diff(x, prepend=0) * env(len(x), .0005, .012) * .5
-    def clap():
-        x = rng.standard_normal(int(.2 * sr)); return np.diff(x, prepend=0) * env(len(x), .001, .06) * .5
-    def tone(f, d, dec=.25, kind="sine"):
-        x = t_(d); w = np.sin(2 * np.pi * f * x)
-        if kind == "pluck": w = w + .35 * np.sign(w)
-        return w * env(len(x), .004, dec)
-    def pad(fs, d):
-        x = t_(d); w = sum(np.sin(2 * np.pi * f * x * (1 + k)) for f in fs for k in (0, .003)) / (2 * len(fs))
-        return w * np.minimum(1, x / .5) * np.minimum(1, (d - x) / .6)
-    bpm = 112; b = 60 / bpm
-    if green: prog = [[261.6, 329.6, 392.0], [220.0, 261.6, 329.6], [174.6, 220.0, 261.6], [196.0, 246.9, 293.7]]
-    else:     prog = [[220.0, 261.6, 329.6], [174.6, 220.0, 261.6], [196.0, 233.1, 293.7], [164.8, 196.0, 246.9]]
-    beat = 0; at = 0.0
-    while at < DUR - 0.8:
-        ch = prog[(beat // 4) % 4]
-        if beat % 4 == 0: add(pad(ch, 4 * b), at, .5); add(tone(ch[0] / 2, b * 1.8, .35), at, .45)
-        if at >= 0.45: add(kick(), at, .55)
-        if beat % 4 in (1, 3) and at >= 0.45: add(clap(), at, .35)
-        add(hat(), at + b / 2, .35)
-        add(tone(ch[(beat * 2) % 3] * 2, .25, .12, "pluck"), at + b / 2, .08)
-        beat += 1; at += b
-    sw = rng.standard_normal(int(.6 * sr)); sw = np.convolve(sw, np.ones(40) / 40, "same") * np.sin(np.linspace(0, np.pi, len(sw))) ** 2
-    add(sw, 0.15, .6)
-    for k in range(12): add(tone(700 + k * 60 * (1 if green else -0.6), .05, .02), 0.7 + k * 0.1, .25)
-    for i in range(n_items): add(tone(900 + i * 70, .12, .03), 2.2 + i * 0.12, .35)
-    for i in range(n_lines): add(tone(1400, .05, .01), 3.6 + i * 0.55, .3)
+        x = rng.standard_normal(int(.04 * sr)); x = x - lp(x, 4); return x * env(len(x), .0005, .01) * .5
+    def ping(f): x = T(.15); return np.sin(2 * np.pi * f * x) * env(len(x), .002, .035)
+    nbars = int(DUR / bar) + 1
+    for k in range(nbars):
+        t0 = k * bar; ch = chords[k % 4]; nxt = chords[(k + 1) % 4]
+        add(keys(ch, bar * 1.05), t0, .55)
+        add(eight08(ch[0], bar * .95, nxt[0] if k % 2 else None), t0, .55)
+        if t0 > 0.3:
+            for st in (0, 10): add(kick(), t0 + st * s16, .5)
+            add(snare(), t0 + 8 * s16, .38)
+        for st in range(0, 16, 2): add(hat(), t0 + st * s16, .5 if st % 4 == 0 else .32)
+        for r in range(6): add(hat(), t0 + 13 * s16 + r * s16 / 2, .22 + .04 * r)   # hat roll
+    hiss = lp(rng.standard_normal(N), 6) * .02
+    crack = np.zeros(N); idx = rng.integers(0, N, 90); crack[idx] = rng.uniform(.2, .6, 90) * rng.choice([-1, 1], 90)
+    L += hiss + lp(crack, 1) * .35
+    for i in range(n_items): add(ping(1200 + i * 60), 2.2 + i * 0.12, .12)
+    for i in range(n_lines): add(ping(1600), 3.6 + i * 0.55, .1)
+    L = np.tanh(L * 1.3)
+    L = lp(L, 1)
     L /= max(1e-9, np.abs(L).max()); L *= 0.85
-    L[-int(.8 * sr):] *= np.linspace(1, 0, int(.8 * sr))
+    L[:int(.25 * sr)] *= np.linspace(0, 1, int(.25 * sr))
+    L[-int(1.0 * sr):] *= np.linspace(1, 0, int(1.0 * sr))
     pcm = (np.stack([L, L], 1) * 32767).astype("<i2")
     with wave.open(path, "wb") as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(sr); w.writeframes(pcm.tobytes())
