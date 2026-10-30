@@ -118,5 +118,5 @@ The free lead magnet at /brain/ is now called **The AI Front Desk** (was THE BUS
 ## Voiced reels (ElevenLabs)
 - Voice: ElevenLabs "Brian - Deep, Resonant and Comforting", ALWAYS sped to 1.2x (scripts/tts.py does it with ffmpeg atempo).
 - To make a reel: add tools/reel/<name>.py (copy credit.py: PHRASES, GROUPS, MOODS, SCENES) and push. The "Voiced reels" workflow renders every spec without a reel into docs/media/reels/money-<name>.mp4 + poster and commits it.
-- Needs repo secret ELEVENLABS_API_KEY. Robot body frames (tools/reel/fr/) are not in the repo, so reels show the face screen only.
+- Needs repo secret ELEVENLABS_API_KEY. Robot body frames live in tools/reel/fr/ (241 frames, rebuilt from the first 3 reels). The face screen is drawn on top.
 - Post the mp4 to IG/Threads through Metricool as a REEL, using the poster as the cover.

@@ -7,7 +7,7 @@ on:
         required: false
   push:
     branches: [main]
-    paths: ["tools/reel/*.py", ".github/workflows/reel.yml"]
+    paths: ["tools/reel/*.py", "tools/reel/fr/**", ".github/workflows/reel.yml"]
 permissions:
   contents: write
 concurrency: reel
