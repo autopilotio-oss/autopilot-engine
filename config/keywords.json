@@ -6,7 +6,10 @@
   "AGENT": "Here you go 🧠 Start with the free AI Front Desk: answer 15 questions and get an AI that knows your business. https://autopilotio-oss.github.io/autopilot-engine/brain/",
   "CREDIT": "Here you go 💳 Fix your credit report yourself with Claude: the exact prompts, dispute letters and a Credit Agent you can set up in minutes. Free: https://autopilotio-oss.github.io/autopilot-engine/g/credit/",
   "BILL": "Here you go 🧾 How to check and cut a medical bill with Claude, with the call script and a Bill Agent. Free: https://autopilotio-oss.github.io/autopilot-engine/g/bill/",
-  "DEBT": "Here you go 💸 The call script to ask for a lower rate, your payoff plan, and a Debt Agent that keeps you on track. Free: https://autopilotio-oss.github.io/autopilot-engine/g/debt/"
+  "DEBT": "Here you go 💸 The call script to ask for a lower rate, your payoff plan, and a Debt Agent that keeps you on track. Free: https://autopilotio-oss.github.io/autopilot-engine/g/debt/",
+  "SUBS": "Here you go ✂️ Find every forgotten subscription in 10 minutes with Claude, plus the cancel messages. Free: https://autopilotoi.app/g/subs/",
+  "REFUND": "Here you go ↩️ Get your money back: the refund rules, the exact request to send, and what to do if they say no. Free: https://autopilotoi.app/g/refund/",
+  "RAISE": "Here you go 📈 Real pay data, your number, and a practice run with Claude before you ask. Free: https://autopilotoi.app/g/raise/"
  },
  "max_per_run": 20
 }

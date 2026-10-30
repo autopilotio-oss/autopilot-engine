@@ -1,0 +1,15 @@
+{
+ "name": "AUTOPILOT.OI Refund Agent",
+ "price_cents": 1000,
+ "permalink": "refund-agent",
+ "filename": "AUTOPILOT.OI Refund Agent Setup.pdf",
+ "description_html": "<p><strong>Get your money back when you're owed it.</strong></p><p>Turn Claude into your Refund Agent in 10 minutes. Finds refundable charges, writes refund requests that cite your rights (like the DOT airline refund rule and your 60 day card dispute window), and tracks every claim until you're paid.</p><p>Inside: the full master prompt, 5 starter prompts, a step by step setup and your tracker. Works with Claude's free or paid plan.</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/refund-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "personal finance",
+  "ai agent",
+  "money"
+ ]
+}

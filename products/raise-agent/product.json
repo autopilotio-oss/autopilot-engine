@@ -1,0 +1,15 @@
+{
+ "name": "AUTOPILOT.OI Raise Agent",
+ "price_cents": 1000,
+ "permalink": "raise-agent",
+ "filename": "AUTOPILOT.OI Raise Agent Setup.pdf",
+ "description_html": "<p><strong>Walk into your pay conversation prepared.</strong></p><p>Turn Claude into your Raise Agent in 10 minutes. Logs your wins all year, reads real pay data for your job and city, picks your ask, target and minimum, and rehearses the conversation with realistic pushback.</p><p>Inside: the full master prompt, 5 starter prompts, a step by step setup and your tracker. Works with Claude's free or paid plan.</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/raise-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "career",
+  "ai agent",
+  "money"
+ ]
+}

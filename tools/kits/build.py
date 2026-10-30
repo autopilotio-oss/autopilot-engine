@@ -31,7 +31,7 @@ def kit_html(k, g, n0=1):
 <h2>What's inside</h2><ol><li>Setup in 10 minutes, step by step</li><li>The master prompt that turns Claude into your {e(g["name"])}</li><li>5 starter prompts for every situation</li><li>Your tracker</li><li>Official links you'll need</li></ol>
 <h2>Set it up</h2><ol>{"".join(f"<li>{e(s)}</li>" for s in g["setup"])}</ol></div>{foot}</div>'''
     p2 = f'''<div class="pg">{top("02")}<h2>The master prompt</h2><p style="color:#9a9d96;margin-bottom:6px">Paste this into your Claude Project's instructions. Exactly as written.</p>
-<div class="card"><div class="mono">MASTER PROMPT · {e(g["name"].upper())}</div><pre>{e(g["master"])}</pre></div>{foot}</div>'''
+<div class="card"><div class="mono">MASTER PROMPT · {e(g["name"].upper())}</div><pre style="{"font-size:10.6px;line-height:1.45" if len(g["master"])>2000 else ""}">{e(g["master"])}</pre></div>{foot}</div>'''
     p3 = f'''<div class="pg">{top("03")}<h2>Starter prompts</h2>{"".join(f'<div class="card"><div class="mono">{e(a)}</div><pre>{e(b)}</pre></div>' for a, b in g["starters"])}
 <h2>Links you'll need</h2><p>{" · ".join(f'<a href="{u}">{e(t)}</a>' for t, u in g["links"])}</p>{foot}</div>'''
     p4 = f'''<div class="pg">{top("04")}<h2>Your tracker</h2><p style="color:#9a9d96">Print it, or ask your agent to keep it for you.</p>
