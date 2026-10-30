@@ -15,20 +15,62 @@ import typeset as T
 INK, SOFT, LINE = (244, 244, 240), (150, 152, 150), (38, 38, 40)
 plain = lambda t: t.replace("{", "").replace("}", "")
 
+import numpy as np
+from PIL import ImageFilter
+def _atmos(seed):
+    """Studio backdrop: near black, drifting lime and teal light, vignette, film grain (same look as the reels)."""
+    rng = np.random.default_rng(seed)
+    base = Image.new("RGB", (W, H), (3, 4, 3)); glow = Image.new("RGB", (W, H), (0, 0, 0)); g = ImageDraw.Draw(glow)
+    x1, y1 = int(rng.integers(-150, 350)), int(rng.integers(150, 600)); g.ellipse((x1, y1, x1 + 900, y1 + 900), fill=(64, 82, 10))
+    x2, y2 = int(rng.integers(450, 800)), int(rng.integers(1000, 1400)); g.ellipse((x2, y2, x2 + 760, y2 + 680), fill=(10, 48, 36))
+    glow = glow.filter(ImageFilter.GaussianBlur(160))
+    a = np.asarray(base, np.float32) + np.asarray(glow, np.float32)
+    yy, xx = np.mgrid[0:H, 0:W]; v = ((xx - W / 2) / (W * .62)) ** 2 + ((yy - H * .46) / (H * .55)) ** 2
+    a = a * np.clip(1.25 - v * .75, .25, 1)[..., None] + rng.normal(0, 6, (H, W, 1))
+    return Image.fromarray(np.clip(a, 0, 255).astype("uint8"))
+
+def card(im, box, lit=False, radius=34):
+    """Glass card with a lime gradient edge and soft shadow."""
+    x0, y0, x1, y1 = [int(v) for v in box]; w, h = x1 - x0, y1 - y0
+    sh = Image.new("L", (W, H), 0); ImageDraw.Draw(sh).rounded_rectangle((x0, y0 + 24, x1, y1 + 30), radius, fill=170)
+    im.paste((0, 0, 0), (0, 0), sh.filter(ImageFilter.GaussianBlur(28)))
+    if lit:
+        gl = Image.new("L", (W, H), 0); ImageDraw.Draw(gl).rounded_rectangle((x0, y0, x1, y1), radius, fill=140)
+        im.paste((150, 190, 30), (0, 0), gl.filter(ImageFilter.GaussianBlur(40)))
+    top, bot = ((36, 46, 14), (12, 16, 6)) if lit else ((30, 33, 28), (11, 12, 11))
+    k = np.linspace(0, 1, h)[:, None, None]; arr = (np.array(top) * (1 - k) + np.array(bot) * k) * np.ones((1, w, 1))
+    body = Image.fromarray(arr.astype("uint8"))
+    m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), radius, fill=245)
+    im.paste(body, (x0, y0), m)
+    edge = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ed = ImageDraw.Draw(edge)
+    if lit:
+        ed.rounded_rectangle((0, 0, w - 1, h - 1), radius, outline=(212, 255, 58, 255), width=3)
+    else:
+        ed.rounded_rectangle((0, 0, w - 1, h - 1), radius, outline=(255, 255, 255, 34), width=2)
+        lime = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ImageDraw.Draw(lime).rounded_rectangle((0, 0, w - 1, h - 1), radius, outline=(212, 255, 58, 255), width=2)
+        fade = np.clip(1 - np.arange(w) / (w * .45), 0, 1)[None, :] * np.ones((h, 1)) * 170
+        al = np.minimum(np.asarray(lime.split()[3], np.float32), fade).astype("uint8"); lime.putalpha(Image.fromarray(al))
+        edge = Image.alpha_composite(edge, lime)
+    im.paste(edge, (x0, y0), edge)
+
+def chip(d, text, x, y, size=24):
+    f = T.font("SairaSemiCondensed-BlackItalic.otf", size); w = d.textlength(text, font=f)
+    d.rounded_rectangle((x, y, x + w + 36, y + size + 22), 12, fill=LIME)
+    d.text((x + 18, y + 11 + size * .82), text, font=f, fill=(8, 10, 4), anchor="ls")
+
 def canvas(label, now):
-    im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
+    im = _atmos(now.toordinal() * 7 + len(label)); d = ImageDraw.Draw(im)
     logo = Image.open(os.path.join(ROOT, "tools", "story", "logo.png")).convert("RGB").resize((76, 76))
     m = Image.new("L", (76, 76), 0); ImageDraw.Draw(m).ellipse((0, 0, 76, 76), fill=255); im.paste(logo, (80, 170), m)
-    d.text((176, 182), "AUTOPILOT.OI", font=T.font("Geist-SemiBold.otf", 32), fill=INK)
-    T.label(d, now.strftime("%b %d · %Y"), 176, 224, 20, SOFT)
+    d.text((176, 222), "AUTOPILOT.OI", font=T.font("SairaSemiCondensed-BlackItalic.otf", 38), fill=INK, anchor="ls")
+    T.label(d, now.strftime("%b %d · %Y"), 178, 238, 18, SOFT)
     T.label(d, "NO. " + str(now.timetuple().tm_yday).zfill(3), W - 80, 200, 20, SOFT, anchor="ra")
-    d.line([(80, 300), (W - 80, 300)], fill=LINE, width=2)
-    T.label(d, label, 80, 340, 24, LIME)
+    chip(d, label, 80, 320, 26)
     return im, d
 
 def footer(d, text):
-    d.line([(80, 1660), (W - 80, 1660)], fill=LINE, width=2)
-    T.label(d, text, 80, 1686, 22, SOFT)
+    d.line([(80, 1660), (W - 80, 1660)], fill=(40, 44, 36), width=2)
+    T.label(d, text, 80, 1686, 22, LIME)
     T.label(d, "@AUTOPILOT.OI", W - 80, 1686, 22, SOFT, anchor="ra")
 
 def tip(item, now, out):
@@ -41,38 +83,40 @@ def tip(item, now, out):
     d.rectangle((80, top + 26, 86, yb + 4), fill=LIME)
     footer(d, "SAVE THIS · TRY IT TODAY"); im.save(out, quality=94)
 
-def options(d, opts, y, highlight=None):
+def options(d, opts, y, highlight=None, im=None):
     for i, o in enumerate(opts):
         L = "ABC"[i]; on = highlight == i; off = highlight is not None and not on
-        h0 = y
-        yb = T.rich(d, o, 200, y + 40, 690, 46, (110, 110, 110) if off else INK, LIME, sans="Geist-Medium.otf", lead=1.2)
-        h = max(130, yb - y + 26)
-        d.rounded_rectangle((80, y, W - 80, y + h), 24, fill=(18, 24, 6) if on else None, outline=LIME if on else ((44, 44, 46) if off else (70, 70, 72)), width=3 if on else 2)
-        T.rich(d, o, 200, y + 40, 690, 46, (110, 110, 110) if off else INK, LIME, sans="Geist-Medium.otf", lead=1.2)
-        d.text((122, y + h // 2), L, font=T.font("SairaSemiCondensed-BlackItalic.otf", 54), fill=(90, 90, 90) if off else LIME, anchor="lm")
+        probe = ImageDraw.Draw(Image.new("RGB", (W, 600)))
+        yb = T.rich(probe, o, 0, 50, 640, 46, INK, LIME, sans="Geist-SemiBold.otf", lead=1.2)
+        h = max(140, yb + 40)
+        if im is not None: card(im, (80, y, W - 80, y + h), lit=on)
+        T.rich(d, o, 220, y + 56 + (h - 140) // 2 * 0, 640, 46, (96, 98, 94) if off else INK, LIME, sans="Geist-SemiBold.otf", lead=1.2)
+        bx, by = 112, y + h // 2 - 38
+        d.rounded_rectangle((bx, by, bx + 76, by + 76), 20, fill=LIME if not off else (40, 42, 38))
+        d.text((bx + 38, by + 60), L, font=T.font("SairaSemiCondensed-BlackItalic.otf", 58), fill=(8, 10, 4) if not off else (100, 100, 96), anchor="ms")
         if on:
-            cx, cy = W - 128, y + h // 2
-            d.ellipse((cx - 26, cy - 26, cx + 26, cy + 26), fill=LIME)
-            d.line([(cx - 12, cy), (cx - 3, cy + 10), (cx + 13, cy - 9)], fill=BG, width=6, joint="curve")
-        y += h + 22
+            cx, cy = W - 132, y + h // 2
+            d.ellipse((cx - 30, cy - 30, cx + 30, cy + 30), fill=LIME)
+            d.line([(cx - 14, cy), (cx - 3, cy + 12), (cx + 15, cy - 11)], fill=BG, width=7, joint="curve")
+        y += h + 24
     return y
 
 def quiz_q(item, now, out):
-    im, d = canvas("QUIZ · REPLY A, B OR C", now)
+    abc = "A, B OR C" if len(item["o"]) > 2 else "A OR B"; im, d = canvas("QUIZ · REPLY " + abc, now)
     y = T.headline(d, item["q"], 80, 410, 920, 120)
-    options(d, item["o"], y + 60); footer(d, "ANSWER IN 2 HOURS"); im.save(out, quality=94)
+    options(d, item["o"], y + 70, im=im); footer(d, "REPLY " + abc + " · ANSWER IN 2 HOURS"); im.save(out, quality=94)
 
 def quiz_a(item, now, out):
     im, d = canvas("THE ANSWER", now)
     y = T.headline(d, item["q"], 80, 410, 920, 84, SOFT, INK)
-    y = options(d, item["o"], y + 50, item["a"])
+    y = options(d, item["o"], y + 60, item["a"], im=im)
     T.rich(d, item["why"], 80, y + 40, 920, 50, INK, LIME, sans="Geist-Medium.otf", lead=1.25)
     footer(d, "DID YOU GET IT RIGHT?"); im.save(out, quality=94)
 
 def poll(item, now, out):
     im, d = canvas("QUICK POLL · REPLY A OR B", now)
     y = T.headline(d, item["q"], 80, 410, 920, 140)
-    options(d, item["o"], y + 70); footer(d, "REPLY A OR B"); im.save(out, quality=94)
+    options(d, item["o"], y + 80, im=im); footer(d, "REPLY A OR B"); im.save(out, quality=94)
 
 def fact(item, num, now, out):
     im, d = canvas("EVERYDAY FIX · NO. " + str(num).zfill(3), now)

@@ -43,78 +43,117 @@
  ],
  "quizzes": [
   {
+   "q": "How often can you check your credit reports for {free?}",
+   "o": [
+    "Once a year",
+    "Every week",
+    "Never, it costs money"
+   ],
+   "a": 1,
+   "why": "Every week, from all 3 bureaus, at {AnnualCreditReport.com.} Claude can read them and find errors."
+  },
+  {
+   "q": "Medical debt under {$500.} Does it show on your credit report?",
+   "o": [
+    "Yes",
+    "No"
+   ],
+   "a": 1,
+   "why": "The 3 bureaus don't report medical collections {under $500,} or paid ones. If you see one, dispute it."
+  },
+  {
+   "q": "Who can legally remove {accurate} negative items from your credit report?",
+   "o": [
+    "Credit repair companies",
+    "Nobody",
+    "Your bank"
+   ],
+   "a": 1,
+   "why": "{Nobody.} But errors can be disputed for free, and most negatives drop off after about 7 years."
+  },
+  {
+   "q": "A credit repair company wants {$199 upfront.} That's...",
+   "o": [
+    "Normal",
+    "Not allowed under federal law"
+   ],
+   "a": 1,
+   "why": "They {can't charge you} before doing the work. Everything they do, you can do yourself with Claude."
+  },
+  {
+   "q": "Paying off cards. What usually saves the {most interest?}",
+   "o": [
+    "Smallest balance first",
+    "Highest APR first"
+   ],
+   "a": 1,
+   "why": "{Highest APR first} usually saves the most. Smallest first gives faster wins. Claude can run both with your numbers."
+  },
+  {
+   "q": "Your card is at {29.99% APR.} Best first move?",
+   "o": [
+    "Ignore it",
+    "Call and ask for a lower rate",
+    "Open another card"
+   ],
+   "a": 1,
+   "why": "It doesn't always work, but asking {costs nothing.} Claude writes the call script in seconds."
+  },
+  {
+   "q": "Before paying a hospital bill, ask for the...",
+   "o": [
+    "Receipt",
+    "Itemized bill",
+    "Manager"
+   ],
+   "a": 1,
+   "why": "The {itemized bill} shows every charge, so you and Claude can catch duplicates and errors."
+  },
+  {
+   "q": "Most nonprofit hospitals are required to have a...",
+   "o": [
+    "Financial assistance policy",
+    "Payment app"
+   ],
+   "a": 0,
+   "why": "A {financial assistance policy.} Many people qualify and never ask. Comment BILL for the call script."
+  },
+  {
    "q": "Which prompt gets the {better} answer?",
    "o": [
     "\"Write an email\"",
     "\"Write a friendly 3 line email to a customer whose order is late. Offer 10% off.\""
    ],
    "a": 1,
-   "why": "Details in, quality out. Tell it who, what and how."
+   "why": "{Details in, quality out.} Tell it who, what and how."
   },
   {
-   "q": "Can Claude read a {handwritten} note?",
-   "o": [
-    "Yes",
-    "No"
-   ],
-   "a": 0,
-   "why": "It can read images, including handwriting. Double check names and numbers."
-  },
-  {
-   "q": "What should you {always} do before sending an AI reply?",
-   "o": [
-    "Send it fast",
-    "Read it first",
-    "Add emojis"
-   ],
-   "a": 1,
-   "why": "AI drafts. You decide. Read every word before it goes out."
-  },
-  {
-   "q": "Is the {free} version of Claude enough to start?",
-   "o": [
-    "Yes",
-    "No, you need to pay"
-   ],
-   "a": 0,
-   "why": "Free is plenty to learn and do real work. Upgrade only when you hit limits."
-  },
-  {
-   "q": "Chatbot vs agent. What's the {difference?}",
+   "q": "Chatbot vs AI agent. What's the {difference?}",
    "o": [
     "Same thing",
-    "A chatbot answers. An agent does a task."
+    "A chatbot answers. An agent does the work."
    ],
    "a": 1,
-   "why": "Agents take action, like drafting every reply in your inbox."
+   "why": "{Agents take action,} like checking your credit every month or drafting every reply."
+  },
+  {
+   "q": "AI gives you a number with {total confidence.} You should...",
+   "o": [
+    "Trust it",
+    "Check it"
+   ],
+   "a": 1,
+   "why": "AI can sound sure and {still be wrong.} Always check facts that matter."
   },
   {
    "q": "Best way to make AI sound like {you?}",
    "o": [
     "Ask nicely",
-    "Paste examples of how you write",
+    "Paste 2 real examples of your writing",
     "Type in all caps"
    ],
    "a": 1,
-   "why": "Show, don't tell. Two real examples beat any description."
-  },
-  {
-   "q": "AI stated a fact that's {wrong.} What happened?",
-   "o": [
-    "It's broken",
-    "It hallucinated"
-   ],
-   "a": 1,
-   "why": "AI can sound sure and still be wrong. Always check facts that matter."
-  },
-  {
-   "q": "How long does a Business Brain take to {make?}",
-   "o": [
-    "5 minutes",
-    "5 hours"
-   ],
-   "a": 0,
-   "why": "15 questions, about 5 minutes. Comment BRAIN on any post for the free tool."
+   "why": "{Show, don't tell.} Two real examples beat any description."
   }
  ],
  "polls": [
