@@ -101,6 +101,52 @@ def frame(t, ctx):
         d.text((80, 1712), "Not financial advice. Prices as of " + now.strftime("%I:%M %p").lstrip("0") + " ET.", font=font("Inter-Medium.otf", 28), fill=GREY)
     return im
 
+def soundtrack(path, green, n_items, n_lines, sr=44100):
+    """Original music made in code (no licensing issues): a short beat, major on green days, minor on red days,
+    with pops and clicks timed to the animation."""
+    import numpy as np, wave
+    N = int(DUR * sr); L = np.zeros(N); rng = np.random.default_rng(7)
+    t_ = lambda d: np.arange(int(d * sr)) / sr
+    def add(sig, at, g=1.0):
+        i = int(at * sr); j = min(N, i + len(sig))
+        if i < N: L[i:j] += sig[: j - i] * g
+    def env(n, a, d): x = np.arange(n) / sr; return np.minimum(1, x / a) * np.exp(-x / d)
+    def kick():
+        x = t_(0.4); return np.tanh(2 * np.sin(2 * np.pi * np.cumsum(45 + 110 * np.exp(-x * 30)) / sr)) * env(len(x), .002, .18)
+    def hat():
+        x = rng.standard_normal(int(.05 * sr)); return np.diff(x, prepend=0) * env(len(x), .0005, .012) * .5
+    def clap():
+        x = rng.standard_normal(int(.2 * sr)); return np.diff(x, prepend=0) * env(len(x), .001, .06) * .5
+    def tone(f, d, dec=.25, kind="sine"):
+        x = t_(d); w = np.sin(2 * np.pi * f * x)
+        if kind == "pluck": w = w + .35 * np.sign(w)
+        return w * env(len(x), .004, dec)
+    def pad(fs, d):
+        x = t_(d); w = sum(np.sin(2 * np.pi * f * x * (1 + k)) for f in fs for k in (0, .003)) / (2 * len(fs))
+        return w * np.minimum(1, x / .5) * np.minimum(1, (d - x) / .6)
+    bpm = 112; b = 60 / bpm
+    if green: prog = [[261.6, 329.6, 392.0], [220.0, 261.6, 329.6], [174.6, 220.0, 261.6], [196.0, 246.9, 293.7]]
+    else:     prog = [[220.0, 261.6, 329.6], [174.6, 220.0, 261.6], [196.0, 233.1, 293.7], [164.8, 196.0, 246.9]]
+    beat = 0; at = 0.0
+    while at < DUR - 0.8:
+        ch = prog[(beat // 4) % 4]
+        if beat % 4 == 0: add(pad(ch, 4 * b), at, .5); add(tone(ch[0] / 2, b * 1.8, .35), at, .45)
+        if at >= 0.45: add(kick(), at, .55)
+        if beat % 4 in (1, 3) and at >= 0.45: add(clap(), at, .35)
+        add(hat(), at + b / 2, .35)
+        add(tone(ch[(beat * 2) % 3] * 2, .25, .12, "pluck"), at + b / 2, .08)
+        beat += 1; at += b
+    sw = rng.standard_normal(int(.6 * sr)); sw = np.convolve(sw, np.ones(40) / 40, "same") * np.sin(np.linspace(0, np.pi, len(sw))) ** 2
+    add(sw, 0.15, .6)
+    for k in range(12): add(tone(700 + k * 60 * (1 if green else -0.6), .05, .02), 0.7 + k * 0.1, .25)
+    for i in range(n_items): add(tone(900 + i * 70, .12, .03), 2.2 + i * 0.12, .35)
+    for i in range(n_lines): add(tone(1400, .05, .01), 3.6 + i * 0.55, .3)
+    L /= max(1e-9, np.abs(L).max()); L *= 0.85
+    L[-int(.8 * sr):] *= np.linspace(1, 0, int(.8 * sr))
+    pcm = (np.stack([L, L], 1) * 32767).astype("<i2")
+    with wave.open(path, "wb") as w:
+        w.setnchannels(2); w.setsampwidth(2); w.setframerate(sr); w.writeframes(pcm.tobytes())
+
 def build(crypto, stocks, now, out_mp4, out_jpg):
     allm = crypto + stocks
     hero = max(allm, key=lambda x: abs(x["chg"]))
@@ -113,14 +159,15 @@ def build(crypto, stocks, now, out_mp4, out_jpg):
     logo = Image.open(os.path.join(ROOT, "tools", "story", "logo.png")).convert("RGB").resize((100, 100))
     mask = Image.new("L", (100, 100), 0); ImageDraw.Draw(mask).ellipse((0, 0, 100, 100), fill=255)
     ctx = {"hero": hero, "items": items, "lines": lines, "now": now, "base": base, "logo": logo, "mask": mask}
+    wav = out_mp4 + ".wav"; soundtrack(wav, hero["chg"] >= 0, len(items), len(lines))
     ff = subprocess.Popen(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                           "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-shortest",
-                           "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-movflags", "+faststart", out_mp4],
+                           "-i", wav, "-shortest",
+                           "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out_mp4],
                           stdin=subprocess.PIPE)
     for i in range(int(DUR * FPS)):
         f = frame(i / FPS, ctx); ff.stdin.write(f.tobytes())
         if i == int(7 * FPS): f.save(out_jpg, quality=90)
-    ff.stdin.close(); ff.wait()
+    ff.stdin.close(); ff.wait(); os.remove(wav)
     return hero, lines
 
 def main():
