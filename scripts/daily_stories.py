@@ -49,7 +49,7 @@ def options(d, opts, y, highlight=None):
         h = max(130, yb - y + 26)
         d.rounded_rectangle((80, y, W - 80, y + h), 24, fill=(18, 24, 6) if on else None, outline=LIME if on else ((44, 44, 46) if off else (70, 70, 72)), width=3 if on else 2)
         T.rich(d, o, 200, y + 40, 690, 46, (110, 110, 110) if off else INK, LIME, sans="Geist-Medium.otf", lead=1.2)
-        d.text((122, y + h // 2), L, font=T.font("BarlowCondensed-BlackItalic.otf", 60), fill=(90, 90, 90) if off else LIME, anchor="lm")
+        d.text((122, y + h // 2), L, font=T.font("SairaSemiCondensed-BlackItalic.otf", 54), fill=(90, 90, 90) if off else LIME, anchor="lm")
         if on:
             cx, cy = W - 128, y + h // 2
             d.ellipse((cx - 26, cy - 26, cx + 26, cy + 26), fill=LIME)
@@ -77,7 +77,7 @@ def poll(item, now, out):
 def fact(item, num, now, out):
     im, d = canvas("AI FACT · NO. " + str(num).zfill(3), now)
     # giant outlined number as texture
-    big = T.font("BarlowCondensed-BlackItalic.otf", 760)
+    big = T.font("SairaSemiCondensed-BlackItalic.otf", 700)
     d.text((W + 40, 1640), str(num).zfill(2), font=big, fill=BG, stroke_width=4, stroke_fill=(34, 40, 14), anchor="rs")
     T.label(d, "DID YOU KNOW", 80, 420, 24, SOFT)
     y = T.headline(d, item["f"], 80, 470, 920, 132)

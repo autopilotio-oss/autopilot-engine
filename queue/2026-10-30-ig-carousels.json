@@ -12,7 +12,7 @@
    "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/secrets/6.jpg"
   ],
   "threads": false,
-  "text": "The 3 things they don't want you to know about AI.\n\nSave it for the next time you open Claude.\n\nComment BRAIN for the free Business Brain builder."
+  "text": "The 3 things they don't want you to know about AI.\n\nSave it for the next time you open Claude."
  },
  {
   "id": "ig-c02",
@@ -31,7 +31,7 @@
    "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/10.jpg"
   ],
   "threads": false,
-  "text": "The prompts small business owners actually use. Copy them into Claude or ChatGPT.\n\nComment BRAIN and I'll send them back filled in with your business details."
+  "text": "The prompts small business owners actually use. Copy them into Claude or ChatGPT and fill in the brackets."
  },
  {
   "id": "ig-c03",
@@ -50,6 +50,70 @@
    "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/10.jpg"
   ],
   "threads": false,
-  "text": "Never used AI? This is all you need, in 10 slides.\n\nComment BRAIN for the free setup tool."
+  "text": "AI for beginners, lesson 1. If you've never used AI, start here.\n\nFollow along: a new lesson every day this week."
+ },
+ {
+  "id": "ig-l2",
+  "at": "2026-11-02T11:30:00-05:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson2/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson2/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson2/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson2/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson2/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson2/6.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson2/7.jpg"
+  ],
+  "threads": false,
+  "text": "Lesson 2: the four part prompt. Use it on your next real message and compare."
+ },
+ {
+  "id": "ig-l3",
+  "at": "2026-11-03T11:30:00-05:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson3/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson3/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson3/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson3/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson3/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson3/6.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson3/7.jpg"
+  ],
+  "threads": false,
+  "text": "Lesson 3: five things to try with AI today. Each one takes under a minute."
+ },
+ {
+  "id": "ig-l4",
+  "at": "2026-11-04T11:30:00-05:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson4/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson4/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson4/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson4/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson4/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson4/6.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson4/7.jpg"
+  ],
+  "threads": false,
+  "text": "Lesson 4: how to make AI sound like you, so your customers can't tell."
+ },
+ {
+  "id": "ig-l5",
+  "at": "2026-11-05T11:30:00-05:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson5/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson5/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson5/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson5/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson5/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson5/6.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/lesson5/7.jpg"
+  ],
+  "threads": false,
+  "text": "Lesson 5: how to check AI's work before you trust it. The most important one."
  }
 ]

@@ -10,7 +10,7 @@
    "2. It's only as good as what you tell it.\n\n\"Write an email\" gets you something generic.\n\n\"I own a bakery. A customer's order was late. Write a short apology and offer 10% off.\"\n\ngets you something you'd actually send.",
    "3. Make it ask you questions first.\n\nAdd this to any request:\n\n\"Before you answer, ask me 3 questions.\"\n\nThe answer gets noticeably better.",
    "It can be wrong.\n\nIt sounds confident either way. Read everything before you send it.",
-   "Want it to know your business?\n\nFree Business Brain builder, 5 minutes:\nautopilotio-oss.github.io/autopilot-engine"
+   "Try one of these today.\n\nBookmark this. Tomorrow: the prompts small business owners actually use."
   ]
  },
  {
@@ -28,7 +28,7 @@
    "6. Answer a bad review\n\n\"Write a calm, professional reply to this review: [review]\"",
    "7. Write captions\n\n\"Give me 5 short captions about [what I did today]. Plain language, no hashtags.\"",
    "8. Set it up once\n\n\"Ask me 5 questions about my business, then write instructions so you always answer the way I would.\"\n\nThat's a Business Brain.",
-   "Save this.\n\nFree Business Brain builder, 5 minutes:\nautopilotio-oss.github.io/autopilot-engine"
+   "Save this.\n\nCopy one into Claude today and see the difference. More every day here."
   ]
  },
  {
@@ -37,7 +37,7 @@
   "kind": "x_thread",
   "text": "",
   "tweets": [
-   "How to use Claude if you've never used AI.\n\n10 steps. No tech terms. 🧵",
+   "AI for beginners. Lesson 1: how to use Claude.\n\n10 steps. No tech terms. 🧵",
    "1. Go to claude.ai or download the app.\n\nSign up free with your email.",
    "2. Write like you're texting a capable assistant.\n\nNo special wording needed. Say what you need.",
    "3. Tell it who you are.\n\n\"I run a cleaning business in Miami.\"\n\nOne line of context changes every answer.",
@@ -46,7 +46,67 @@
    "6. Have it ask questions first.\n\n\"Ask me 3 questions before you answer.\"",
    "7. Save your details once.\n\nPut them in a Project so every chat already knows them.",
    "8. Check before you send.\n\nIt's fast, not perfect. Read every word.",
-   "Want a head start?\n\nFree Business Brain builder, 5 minutes:\nautopilotio-oss.github.io/autopilot-engine"
+   "That's lesson 1.\n\nBookmark this so you can follow along. Lesson 2 tomorrow: how to write a prompt that works."
+  ]
+ },
+ {
+  "id": "x-l2",
+  "at": "2026-11-02T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 2: how to write a prompt that actually works.\n\nFour parts. Use them every time. 🧵",
+   "1. Say who you are.\n\n\"I run a small landscaping business.\"\n\nContext changes everything that comes after.",
+   "2. Say exactly what you want.\n\nNot \"write something\". Name the thing.\n\n\"Write a text to a customer whose job is delayed by rain.\"",
+   "3. Add the details only you know.\n\n\"New date is Thursday. No extra charge. Keep it friendly.\"",
+   "4. Say how it should look.\n\n\"Under 50 words. No emojis.\"",
+   "Put together:\n\n\"I run a small landscaping business. Write a text to a customer whose job is delayed by rain. New date is Thursday, no extra charge. Friendly, under 50 words, no emojis.\"",
+   "That's lesson 2.\n\nBookmark it and try it on your next real message. Lesson 3: five things to try with AI today."
+  ]
+ },
+ {
+  "id": "x-l3",
+  "at": "2026-11-03T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 3: five things to try with AI today.\n\nEach one takes under a minute. 🧵",
+   "1. Explain a confusing email.\n\n\"Explain this in 3 sentences. What do I need to do?\"",
+   "2. Answer a hard message.\n\n\"Help me reply to this. Polite, short, firm.\"",
+   "3. Read a photo.\n\nSnap a receipt, a whiteboard or a handwritten note.\n\n\"Type this up as a list.\"",
+   "4. Plan your day.\n\n\"Here's my to do list. Order it by what matters most.\"",
+   "5. Get a second opinion.\n\n\"Here's my plan. What could go wrong?\"",
+   "That's lesson 3.\n\nPick one and do it today. Lesson 4: how to make AI sound like you."
+  ]
+ },
+ {
+  "id": "x-l4",
+  "at": "2026-11-04T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 4: how to make AI sound like you.\n\nSo nobody can tell. 🧵",
+   "1. Show, don't describe.\n\nPaste 2 or 3 messages you actually wrote.\n\n\"Write like this.\"",
+   "2. Ban the AI words.\n\n\"Don't use: delve, elevate, seamless, I hope this finds you well.\"",
+   "3. Set the length.\n\nAI rambles by default. Give it a limit.\n\n\"Two sentences max.\"",
+   "4. Ask it to rewrite casually.\n\n\"Make this sound like a text, not an email.\"",
+   "5. Save it once.\n\nPut your examples in a Claude Project so every chat starts in your voice.",
+   "That's lesson 4.\n\nBookmark this. Lesson 5: how to check AI's work before you trust it."
+  ]
+ },
+ {
+  "id": "x-l5",
+  "at": "2026-11-05T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 5: how to check AI's work.\n\nIt can sound sure and still be wrong. 🧵",
+   "1. Check names, numbers and dates.\n\nThat's where mistakes hide.",
+   "2. Ask how sure it is.\n\n\"How confident are you? What should I double check?\"",
+   "3. Ask where it got that.\n\n\"What's your source for this?\"\n\nIf it can't say, verify it yourself.",
+   "4. Turn on web search for anything recent.\n\nWithout it, AI only knows what it learned up to a cutoff date.",
+   "5. You send it, you own it.\n\nRead every word before it goes to a customer.",
+   "That's lesson 5.\n\nYou now know more than most people using AI. Bookmark this one."
   ]
  }
 ]

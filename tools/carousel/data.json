@@ -33,8 +33,8 @@
    },
    {
     "cta": true,
-    "t": "Want it to know your business?",
-    "s": "Comment BRAIN and I'll send the free Business Brain builder. Takes 5 minutes."
+    "t": "Try one of these today.",
+    "s": "Save this post. Tomorrow: the prompts small business owners actually use."
    }
   ]
  },
@@ -90,7 +90,7 @@
    {
     "cta": true,
     "t": "Save this.",
-    "s": "Comment BRAIN and I'll send these back with your business details filled in."
+    "s": "Copy one into Claude today and see the difference. More every day here."
    }
   ]
  },
@@ -99,8 +99,8 @@
   "slides": [
    {
     "hook": true,
-    "t": "How to use Claude if you've never used AI.",
-    "s": "10 slides. No tech terms."
+    "t": "AI for beginners. Lesson 1: how to use Claude.",
+    "s": "10 steps. No tech terms."
    },
    {
     "n": "1",
@@ -145,8 +145,174 @@
    },
    {
     "cta": true,
-    "t": "Want a head start?",
-    "s": "Comment BRAIN for a free tool that writes your business details for you in 5 minutes."
+    "t": "That's lesson 1.",
+    "s": "Save this so you can follow along. Lesson 2 tomorrow: how to write a prompt that works."
+   }
+  ]
+ },
+ "lesson2": {
+  "title": "L2",
+  "slides": [
+   {
+    "hook": true,
+    "t": "Lesson 2: how to write a prompt that actually works.",
+    "s": "Four parts. Use them every time."
+   },
+   {
+    "n": "1",
+    "t": "Say who you are.",
+    "x": "\"I run a small landscaping business.\"",
+    "s2": "Context changes everything that comes after."
+   },
+   {
+    "n": "2",
+    "t": "Say exactly what you want.",
+    "s": "Not \"write something\". Name the thing.",
+    "x": "\"Write a text to a customer whose job is delayed by rain.\""
+   },
+   {
+    "n": "3",
+    "t": "Add the details only you know.",
+    "x": "\"New date is Thursday. No extra charge. Keep it friendly.\""
+   },
+   {
+    "n": "4",
+    "t": "Say how it should look.",
+    "x": "\"Under 50 words. No emojis.\""
+   },
+   {
+    "n": "=",
+    "t": "Put together:",
+    "x": "\"I run a small landscaping business. Write a text to a customer whose job is delayed by rain. New date is Thursday, no extra charge. Friendly, under 50 words, no emojis.\""
+   },
+   {
+    "cta": true,
+    "t": "That's lesson 2.",
+    "s": "Save it and try it on your next real message. Lesson 3: five things to try with AI today."
+   }
+  ]
+ },
+ "lesson3": {
+  "title": "L3",
+  "slides": [
+   {
+    "hook": true,
+    "t": "Lesson 3: five things to try with AI today.",
+    "s": "Each one takes under a minute."
+   },
+   {
+    "n": "1",
+    "t": "Explain a confusing email.",
+    "x": "\"Explain this in 3 sentences. What do I need to do?\""
+   },
+   {
+    "n": "2",
+    "t": "Answer a hard message.",
+    "x": "\"Help me reply to this. Polite, short, firm.\""
+   },
+   {
+    "n": "3",
+    "t": "Read a photo.",
+    "s": "Snap a receipt, a whiteboard or a handwritten note.",
+    "x": "\"Type this up as a list.\""
+   },
+   {
+    "n": "4",
+    "t": "Plan your day.",
+    "x": "\"Here's my to do list. Order it by what matters most.\""
+   },
+   {
+    "n": "5",
+    "t": "Get a second opinion.",
+    "x": "\"Here's my plan. What could go wrong?\""
+   },
+   {
+    "cta": true,
+    "t": "That's lesson 3.",
+    "s": "Pick one and do it today. Lesson 4: how to make AI sound like you."
+   }
+  ]
+ },
+ "lesson4": {
+  "title": "L4",
+  "slides": [
+   {
+    "hook": true,
+    "t": "Lesson 4: how to make AI sound like you.",
+    "s": "So nobody can tell."
+   },
+   {
+    "n": "1",
+    "t": "Show, don't describe.",
+    "s": "Paste 2 or 3 messages you actually wrote.",
+    "x": "\"Write like this.\""
+   },
+   {
+    "n": "2",
+    "t": "Ban the AI words.",
+    "x": "\"Don't use: delve, elevate, seamless, I hope this finds you well.\""
+   },
+   {
+    "n": "3",
+    "t": "Set the length.",
+    "s": "AI rambles by default. Give it a limit.",
+    "x": "\"Two sentences max.\""
+   },
+   {
+    "n": "4",
+    "t": "Ask it to rewrite casually.",
+    "x": "\"Make this sound like a text, not an email.\""
+   },
+   {
+    "n": "5",
+    "t": "Save it once.",
+    "s": "Put your examples in a Claude Project so every chat starts in your voice."
+   },
+   {
+    "cta": true,
+    "t": "That's lesson 4.",
+    "s": "Save this. Lesson 5: how to check AI's work before you trust it."
+   }
+  ]
+ },
+ "lesson5": {
+  "title": "L5",
+  "slides": [
+   {
+    "hook": true,
+    "t": "Lesson 5: how to check AI's work.",
+    "s": "It can sound sure and still be wrong."
+   },
+   {
+    "n": "1",
+    "t": "Check names, numbers and dates.",
+    "s": "That's where mistakes hide."
+   },
+   {
+    "n": "2",
+    "t": "Ask how sure it is.",
+    "x": "\"How confident are you? What should I double check?\""
+   },
+   {
+    "n": "3",
+    "t": "Ask where it got that.",
+    "x": "\"What's your source for this?\"",
+    "s2": "If it can't say, verify it yourself."
+   },
+   {
+    "n": "4",
+    "t": "Turn on web search for anything recent.",
+    "s": "Without it, AI only knows what it learned up to a cutoff date."
+   },
+   {
+    "n": "5",
+    "t": "You send it, you own it.",
+    "s": "Read every word before it goes to a customer."
+   },
+   {
+    "cta": true,
+    "t": "That's lesson 5.",
+    "s": "You now know more than most people using AI. Save this one."
    }
   ]
  }

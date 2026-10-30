@@ -64,3 +64,6 @@ Write like a sharp operator texting a busy owner: calm, plain, specific, short. 
 ## Real Facts (Snapple style) and quality bar for everything generated
 Daily story at 4:30 PM ET: "AI FACT · NO. 0xx" from tools/story/pool.json "facts": a "whoa, AI can do that?" fact people can use today (most of them), with one {lime} phrase, one line of context and an optional "try" line (a prompt to copy). Only a few history facts, and only the jaw-dropping ones. Facts must be true and checkable: only add one after confirming it with a reliable source in a web search, and keep the wording precise (say "first recorded", "commonly credited" when that's the honest version). Topics: AI ONLY (history of AI, how chatbots and models work, milestones, AI companies and tools). No general tech or random trivia. No stats you can't source, no "studies show".
 Quality bar for every tip, quiz, poll and fact: it must teach something useful or surprising in one read. If it's generic, obvious, preachy or sounds like an ad, don't use it.
+
+## Trust first (Seb, Oct 30)
+For now we teach, we don't sell. Instagram runs the "AI for Beginners" lesson series (Lesson 1, 2, 3... one a day, CTA = save/follow for the next lesson, no product pitches). Threads CTAs point only to the free Business Brain or a question, never THE WORKSPACE, until Seb says to start selling.

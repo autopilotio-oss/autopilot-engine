@@ -11,17 +11,6 @@
   "ig": false
  },
  {
-  "id": "v2-02",
-  "at": "2026-11-02T12:30:00-05:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/n-handoff.jpg"
-  ],
-  "topic": "AI Tools",
-  "text": "If you run a small business, this is probably your list at midnight.\n\nAll five can be drafted by AI agents while you're on a job. You check them in the morning and tap approve.\n\nTHE WORKSPACE sets up 7 of them in about an hour. $49 once, 30 day refund.\n\nComment WORKSPACE and I'll send it.",
-  "ig": false
- },
- {
   "id": "v2-03",
   "at": "2026-10-31T09:00:00-04:00",
   "kind": "image",
@@ -84,7 +73,7 @@
    "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-steps.jpg"
   ],
   "topic": "AI Tools",
-  "text": "You don't need a developer to set up AI agents.\n\nThree steps, about an hour. You answer questions about your business and Claude handles the technical part.\n\nComment WORKSPACE for the full setup.",
+  "text": "You don't need a developer to set up AI agents.\n\nThree steps, about an hour. You answer questions about your business and Claude handles the technical part.\n\nComment BRAIN and I'll send the free first step.",
   "ig": false
  },
  {
@@ -117,7 +106,7 @@
    "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-honest2.jpg"
   ],
   "topic": "AI Tools",
-  "text": "What AI agents actually do: draft, sort, remind, summarize.\n\nWhat they don't do: run your business or make decisions for you.\n\nIf you want that first list off your plate, comment WORKSPACE.",
+  "text": "What AI agents actually do: draft, sort, remind, summarize.\n\nWhat they don't do: run your business or make decisions for you.\n\nWhich of those four would save you the most time?",
   "ig": false
  }
 ]

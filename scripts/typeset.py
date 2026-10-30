@@ -10,9 +10,10 @@ def font(name, size):
     if k not in _cache: _cache[k] = ImageFont.truetype(os.path.join(FD, name), size)
     return _cache[k]
 SANS, SANS_B, MONO = "Geist-SemiBold.otf", "Geist-Bold.otf", "GeistMono-Medium.otf"
-DISPLAY = "BarlowCondensed-BlackItalic.otf"
+DISPLAY = "SairaSemiCondensed-BlackItalic.otf"
+SLANT = 0.16   # extra slant on top of the italic, to match the AUTOPILOT.OI headline style
 
-def rich(d, text, x, y, width, size, fill, em_fill, sans=SANS, lead=1.12, track=-0.02, upper=False):
+def rich(d, text, x, y, width, size, fill, em_fill, sans=SANS, lead=1.12, track=-0.02, upper=False, line_cb=None):
     """Draws text with {emphasis} words in serif italic. Returns the y below the last line."""
     if upper: text = text.upper()
     toks = [(m.group(1) or m.group(2), bool(m.group(1))) for m in re.finditer(r"\{([^}]*)\}|(\S+)", text)]
@@ -31,11 +32,14 @@ def rich(d, text, x, y, width, size, fill, em_fill, sans=SANS, lead=1.12, track=
     if cur: lines.append(cur)
     lh = int(size * lead); base = y + int(size * 0.9)
     for ln in lines:
-        cx = x
-        for w, em, f, wl in ln:
-            for ch in w:
-                d.text((cx, base), ch, font=f, fill=em_fill if em else fill, anchor="ls"); cx += d.textlength(ch, font=f) + size * track
-            cx += space - size * track
+        def draw_line(dd, ln=ln, base=base):
+            cx = x
+            for w, em, f, wl in ln:
+                for ch in w:
+                    dd.text((cx, base), ch, font=f, fill=em_fill if em else fill, anchor="ls"); cx += dd.textlength(ch, font=f) + size * track
+                cx += space - size * track
+        if line_cb: line_cb(draw_line)
+        else: draw_line(d)
         base += lh
     return base - int(size * 0.9) + int(size * 0.25)
 
@@ -47,6 +51,26 @@ def label(d, text, x, y, size, fill, track=0.12, anchor="la"):
         d.text((cx, y), ch, font=f, fill=fill); cx += d.textlength(ch, font=f) + size * track
     return cx
 
-def headline(d, text, x, y, width, size, fill=(244, 244, 240), em_fill=(212, 255, 58), lead=0.96):
-    """Big sporty headline: Barlow Condensed Black Italic, uppercase."""
-    return rich(d, text, x, y, width, size, fill, em_fill, sans=DISPLAY, lead=lead, track=0.0, upper=True)
+def _slanted(d, draw_fn):
+    """Draws onto a transparent layer, then slants only the text's own box (fast)."""
+    from PIL import Image, ImageDraw
+    base = d._image; W, H = base.size
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(layer)
+    out = draw_fn(ld)
+    bb = layer.getbbox()
+    if not bb: return out
+    pad = int((bb[3] - bb[1]) * SLANT) + 20
+    x0, y0, x1, y1 = max(0, bb[0] - pad), bb[1], min(W, bb[2] + pad), bb[3]
+    crop = layer.crop((x0, y0, x1, y1)); h = y1 - y0
+    crop = crop.transform(crop.size, Image.AFFINE, (1, SLANT, -SLANT * h / 2, 0, 1, 0), resample=Image.BICUBIC)
+    base.paste(crop, (x0, y0), crop)
+    return out
+
+def headline(d, text, x, y, width, size, fill=(244, 244, 240), em_fill=(212, 255, 58), lead=0.98):
+    """Big sporty headline: Saira SemiCondensed Black Italic + extra slant, uppercase."""
+    return rich(d, text, x + int(size * SLANT * 0.45), y, width - 40, size, fill, em_fill, sans=DISPLAY, lead=lead, track=0.0, upper=True,
+                line_cb=lambda draw_line: _slanted(d, draw_line))
+
+def slant_text(d, xy, text, size, fill, anchor="ls"):
+    """Single line in the headline font with the extra slant."""
+    return _slanted(d, lambda ld: ld.text((xy[0] + int(size * SLANT * 0.4), xy[1]), text, font=font(DISPLAY, size), fill=fill, anchor=anchor))

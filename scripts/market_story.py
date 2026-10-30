@@ -65,10 +65,10 @@ def frame(t, ctx):
     hp = ease((t - 0.3) / 0.6)
     if hp > 0:
         T.label(d, f"TODAY'S BIGGEST MOVE · {hero['span']}", 80, 420, 22, SOFT)
-        d.text((76, 590), hero["name"].upper(), font=T.font("BarlowCondensed-BlackItalic.otf", 140), fill=INK, anchor="ls")
+        T.slant_text(d, (76, 590), hero["name"].upper(), 130, INK)
         T.label(d, money(hero["price"]), W - 80, 548, 30, SOFT, track=0.04, anchor="ra")
         shown = hero["chg"] * ease((t - 0.6) / 1.2)
-        d.text((70, 840), pct(shown), font=T.font("BarlowCondensed-BlackItalic.otf", 280), fill=col, anchor="ls")
+        T.slant_text(d, (70, 840), pct(shown), 260, col)
     # sparkline draws in
     hist = hero.get("hist") or []
     sp = ease((t - 1.0) / 1.6)
@@ -92,7 +92,7 @@ def frame(t, ctx):
         c = LIME if it["chg"] >= 0 else RED
         d.rounded_rectangle((cx, cy, cx + 216, cy + 112), 20, outline=(60, 60, 62), width=2)
         T.label(d, it["sym"], cx + 22, cy + 20, 22, (150, 152, 150))
-        d.text((cx + 22, cy + 50), pct(it["chg"]), font=T.font("BarlowCondensed-BlackItalic.otf", 50), fill=c)
+        T.slant_text(d, (cx + 22, cy + 96), pct(it["chg"]), 46, c)
     # plain english, line by line
     for i, l in enumerate(lines):
         p = ease((t - 3.6 - i * 0.55) / 0.4)

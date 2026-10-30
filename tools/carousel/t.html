@@ -1,25 +1,26 @@
 <!doctype html><meta charset=utf-8><style>
-@font-face{font-family:B;src:url(f/BarlowCondensed-BlackItalic.otf)}@font-face{font-family:G;font-weight:500;src:url(f/Geist-Medium.otf)}@font-face{font-family:G;font-weight:700;src:url(f/Geist-SemiBold.otf)}@font-face{font-family:M;font-weight:700;src:url(f/GeistMono-Medium.otf)}
+@font-face{font-family:B;src:url(f/SairaSemiCondensed-BlackItalic.otf)}@font-face{font-family:G;font-weight:500;src:url(f/Geist-Medium.otf)}@font-face{font-family:G;font-weight:700;src:url(f/Geist-SemiBold.otf)}@font-face{font-family:M;font-weight:700;src:url(f/GeistMono-Medium.otf)}
 *{box-sizing:border-box;margin:0;padding:0}body{background:#000}
 .k{position:relative;width:1080px;height:1350px;background:#000;color:#E7E9EA;font-family:G,sans-serif;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:0 90px}
 .u{display:flex;align-items:center;gap:22px;margin-bottom:38px}.u img{width:104px;height:104px;border-radius:50%}
 .nm{font-weight:700;font-size:40px;color:#fff;letter-spacing:-.5px}.hd{font-size:32px;color:#71767B;margin-top:2px}
-.t{font-family:B;font-size:92px;line-height:.98;color:#fff;text-transform:uppercase}
-.hook .t{font-size:118px}
+.t{font-family:B;font-size:84px;line-height:1.0;color:#fff;text-transform:uppercase}
+.t .w{display:inline-block;transform:skewX(-9deg);margin-right:.22em}
+.hook .t{font-size:104px}
 .s{font-weight:500;font-size:44px;line-height:1.38;color:#C9CCCF;margin-top:30px}
 .x{margin-top:34px;border:2px solid #3a3a3c;border-left:8px solid #D4FF3A;border-radius:22px;padding:30px 36px;font-size:44px;line-height:1.36;color:#fff;font-weight:500}
 .n{display:inline-flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:22px;background:#D4FF3A;color:#06120a;font-family:B;font-size:76px;margin-bottom:30px}
 .meta{font-size:30px;color:#71767B;margin-top:46px}
 .foot{position:absolute;left:90px;right:90px;bottom:70px;display:flex;justify-content:space-between;align-items:center;font:700 24px M;letter-spacing:4px;color:#8a8d90;border-top:2px solid #26262a;padding-top:26px}
 .foot b{color:#D4FF3A}
-.cta .t{font-size:104px}.kw{display:inline-block;background:#D4FF3A;color:#06120a;border-radius:14px;padding:2px 18px;font-weight:700}
+.cta .t{font-size:92px}.kw{display:inline-block;background:#D4FF3A;color:#06120a;border-radius:14px;padding:2px 18px;font-weight:700}
 .top{position:absolute;left:90px;right:90px;top:70px;height:6px;border-radius:9px;background:#16181C}.top i{display:block;height:100%;border-radius:9px;background:#D4FF3A}
 </style><body><div id=root></div><script>
 const D=__DATA__;const K=__KEY__;const S=D[K].slides;
 root.innerHTML=S.map((s,i)=>{const kw=t=>t.replace(/BRAIN/g,'<span class="kw">BRAIN</span>');return `<div class="k ${s.hook?'hook':''} ${s.cta?'cta':''}" id="s${i+1}">
 <div class="top"><i style="width:${(i+1)/S.length*100}%"></i></div>
 <div class="u"><img src="logo.png"><div><div class="nm">AUTOPILOT.OI</div><div class="hd">@autopilot.oi</div></div></div>
-${s.n?`<div><span class="n">${s.n}</span></div>`:''}<div class="t">${s.t}</div>${s.s?`<div class="s">${kw(s.s)}</div>`:''}${s.x?`<div class="x">${s.x}</div>`:''}${s.s2?`<div class="s">${s.s2}</div>`:''}
+${s.n?`<div><span class="n">${s.n}</span></div>`:''}<div class="t">${s.t.split(" ").map(w=>`<span class="w">${w}</span>`).join("")}</div>${s.s?`<div class="s">${kw(s.s)}</div>`:''}${s.x?`<div class="x">${s.x}</div>`:''}${s.s2?`<div class="s">${s.s2}</div>`:''}
 ${s.hook?'<div class="meta">8:14 AM · Oct 30, 2026</div>':''}
-<div class="foot"><span>${i+1} / ${S.length}</span><span>${i==S.length-1?'<b>COMMENT BRAIN</b>':'SWIPE <b>→</b>'}</span></div></div>`}).join('');
+<div class="foot"><span>${i+1} / ${S.length}</span><span>${i==S.length-1?'<b>SAVE THIS</b>':'SWIPE <b>→</b>'}</span></div></div>`}).join('');
 </script>
