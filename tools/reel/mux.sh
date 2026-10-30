@@ -1,0 +1,1 @@
+ffmpeg -v error -y -i $1_silent.mp4 -i $1.wav -i $1_bed.wav -filter_complex "[1:a]aresample=48000,apad[v];[2:a]anull[b];[v][b]amix=inputs=2:duration=shortest:normalize=0,volume=1.6,alimiter=limit=0.95[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -shortest "AUTOPILOT.OI $2.mp4"
