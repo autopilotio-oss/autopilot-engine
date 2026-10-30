@@ -1,7 +1,7 @@
 [
  {
   "id": "ig-money-credit",
-  "at": "2026-10-31T18:00:00-04:00",
+  "at": "2026-10-30T11:50:00-04:00",
   "kind": "video",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-credit.mp4"
@@ -23,7 +23,7 @@
  },
  {
   "id": "ig-money-bill",
-  "at": "2026-11-01T18:00:00-05:00",
+  "at": "2026-10-31T18:00:00-04:00",
   "kind": "video",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-bill.mp4"
@@ -45,7 +45,7 @@
  },
  {
   "id": "ig-money-debt",
-  "at": "2026-11-02T18:00:00-05:00",
+  "at": "2026-11-01T18:00:00-05:00",
   "kind": "video",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-debt.mp4"
