@@ -82,3 +82,6 @@ New account, so we run hot but never past where each post starts eating the next
 - X: every IG carousel as a thread + 2 to 3 single posts a day once X is connected.
 - API ceilings are not a factor: Instagram 100 posts per 24h, Threads 250 per 24h.
 If a slot's posts score in the bottom 3 for a week, move or drop that slot.
+
+## Money series + agents (Seb, Oct 30)
+Main content now: real money problems solved with Claude, in the AP robot reel format (objections reel style, ElevenLabs voice). Every reel ends with a comment keyword that sends a free guide (docs/g/<slug>/, built by tools/guides/build.py from tools/guides/guides.py). Every guide ends with "make it automatic": a Claude Project agent setup, and a waitlist for done-for-you agent setups (planned upsell: $10 per agent, later, Seb decides when). Topics: CREDIT, BILL, DEBT live; next LEAKS, RAISE, LOWER, BUDGET, DISPUTE, DEPOSIT, LEASE, SIDE, TAXES. Rules: education only, never promise results, only dispute what is wrong, no upfront-fee services, cite official sources (FTC, CFPB, CMS).
