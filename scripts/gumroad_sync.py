@@ -55,4 +55,8 @@ def main():
             DBG.append(["fail", slug, repr(e)[:300]]); print(f"::warning title=Gumroad failed::{slug} {str(e)[:300]}")
     json.dump(st, open(sp, "w"), indent=1)
     json.dump(DBG, open(os.path.join(ROOT, "state", "gumroad_debug.json"), "w"), indent=1)
-main()
+try:
+    main()
+except Exception as e:
+    import traceback; DBG.append(["crash", traceback.format_exc()[-800:].replace(TOK, "***") if TOK else traceback.format_exc()[-800:]])
+    json.dump(DBG, open(os.path.join(ROOT, "state", "gumroad_debug.json"), "w"), indent=1)

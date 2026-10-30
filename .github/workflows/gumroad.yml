@@ -1,5 +1,5 @@
 name: Gumroad products
-# run 6
+# run 7
 on:
   workflow_dispatch:
   push:
