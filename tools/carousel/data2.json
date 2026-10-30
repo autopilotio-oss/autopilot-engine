@@ -1,0 +1,73 @@
+{
+ "credit-fix": {
+  "slides": [
+   {
+    "type": "hook",
+    "tag": "AI for real life",
+    "tr": "Lesson|Money",
+    "h": [
+     "1 in 5 people",
+     "have an error",
+     "*on their",
+     "*credit report."
+    ],
+    "s": "Here's how to find yours with AI in about <b>10 minutes.</b>",
+    "size": 100
+   },
+   {
+    "type": "step",
+    "tag": "Step 01",
+    "h": [
+     "Get your",
+     "*free",
+     "*reports."
+    ],
+    "s": "Go to <b>AnnualCreditReport.com</b>. All 3 bureaus, free every week. It's the official site."
+   },
+   {
+    "type": "tweet",
+    "tag": "Step 02",
+    "t": "Before you upload anything to AI, black out your Social Security number and account numbers. It doesn't need them to find errors.",
+    "tm": "Rule #1 \u00b7 Protect your info"
+   },
+   {
+    "type": "prompt",
+    "tag": "Step 03",
+    "h": [
+     "Let AI",
+     "*find the errors."
+    ],
+    "p": "Read my credit report. List anything that looks wrong: accounts I may not have opened, late payments, wrong balances or duplicates. Explain each one in plain English."
+   },
+   {
+    "type": "prompt",
+    "tag": "Step 04",
+    "h": [
+     "Let AI",
+     "*write the letter."
+    ],
+    "p": "Write a short, factual dispute letter to [bureau] about [item]. Ask them to investigate and correct it under the Fair Credit Reporting Act."
+   },
+   {
+    "type": "lime",
+    "tag": "Step 05",
+    "h": [
+     "They have",
+     "30 days."
+    ],
+    "note": "keep copies!",
+    "s": "Credit bureaus generally must investigate a dispute within <b>30 days.</b> Dispute online or by certified mail, and save everything you send.",
+    "st": "Find|Dispute|Follow up"
+   },
+   {
+    "type": "cta",
+    "h": [
+     "Want the",
+     "*full guide?"
+    ],
+    "s": "Step by step guide and dispute letter templates, free in your DMs.",
+    "btn": "COMMENT CREDIT"
+   }
+  ]
+ }
+}
