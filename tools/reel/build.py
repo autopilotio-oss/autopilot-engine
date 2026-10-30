@@ -60,7 +60,7 @@ GR = spec.GROUPS
 EM = {i: [x.lower() for x in e] for i, (_, e) in enumerate(phr)}
 MOODS = [[P[a_] if a_ < len(P) else TOTAL, P[b_] if b_ < len(P) else 99, m] for a_, b_, m in spec.MOODS]
 head = open("head.html").read()
-js = f"const DUR={TOTAL};\nconst T={json.dumps(T)},MO={json.dumps(MO)},SCR={open('screen.json').read()},GR={json.dumps(GR)},EM={json.dumps(EM)},SEC={json.dumps(SEC)},MOODS={json.dumps(MOODS)},CAPEND={P[spec.CAPEND_PHRASE] if spec.CAPEND_PHRASE is not None else 999};\n" + open("engine.js").read()
+js = f"const NOROBOT={str(not os.path.exists('fr/0001.jpg')).lower()};const DUR={TOTAL};\nconst T={json.dumps(T)},MO={json.dumps(MO)},SCR={open('screen.json').read()},GR={json.dumps(GR)},EM={json.dumps(EM)},SEC={json.dumps(SEC)},MOODS={json.dumps(MOODS)},CAPEND={P[spec.CAPEND_PHRASE] if spec.CAPEND_PHRASE is not None else 999};\n" + open("engine.js").read()
 html = head + "\n".join(scenes) + '\n<div id="glow"></div><div id="pres"><img id="pf" src="fr/0001.jpg"></div><div id="scr"></div>\n</div><div id="flash"></div><div id="vig"></div><div id="grain"></div></div><script>' + js + "</script></body></html>"
 open(f"{name}.html", "w").write(html)
 json.dump({"dur": TOTAL, "P": P, "scenes": [s[1] for s in SEC], "pops": spec.POPS(P) if hasattr(spec, "POPS") else []}, open(f"{name}.meta.json", "w"))

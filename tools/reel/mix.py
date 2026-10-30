@@ -1,7 +1,8 @@
 import numpy as np, wave, sys, json
 name=sys.argv[1]; meta=json.load(open(f'{name}.meta.json')); D=meta['dur']; P=meta['P']
-src=open('/home/claude/saas/sfx_cut.py').read().split('bpm=118')[0].replace('DUR=float(sys.argv[1]);SC=json.loads(sys.argv[2]);OUT=sys.argv[3]; N=int(SR*DUR)',f'DUR={D};N=int(SR*DUR)')
-exec(src)
+DUR=D
+import sfx; sfx.init(D); from sfx import add,kick,clap,hat,note,whoosh,click,chime,pop,SR
+L,R=sfx.L,sfx.R
 bpm=100;b=60/bpm;bar=4*b
 prog=[(220.0,[220,261.6,329.6]),(174.6,[174.6,220,261.6]),(130.8,[261.6,329.6,392]),(196,[196,246.9,293.7])]
 t=0.0

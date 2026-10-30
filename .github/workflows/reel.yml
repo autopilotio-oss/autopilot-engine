@@ -1,0 +1,52 @@
+name: Voiced reels (ElevenLabs Brian 1.2x)
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "Spec name in tools/reel (blank = every spec without a reel yet)"
+        required: false
+  push:
+    branches: [main]
+    paths: ["tools/reel/*.py", ".github/workflows/reel.yml"]
+permissions:
+  contents: write
+concurrency: reel
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick specs
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.spec }}" ]; then L="${{ github.event.inputs.spec }}"; else
+            L=""
+            for f in tools/reel/*.py; do n=$(basename "$f" .py)
+              case "$n" in build|mix|sfx|common) continue;; esac
+              grep -q '^PHRASES' "$f" || continue
+              [ -f "docs/media/reels/money-$n.mp4" ] || L="$L $n"
+            done
+          fi
+          echo "list=$L" >> "$GITHUB_OUTPUT"; echo "Specs: ${L:-none}"
+      - name: Install tools
+        if: steps.pick.outputs.list != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q numpy
+          cd tools/reel && npm i --no-save --silent playwright && npx playwright install --with-deps chromium
+      - name: Render
+        if: steps.pick.outputs.list != ''
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          [ -n "$ELEVENLABS_API_KEY" ] || { echo "::error::Add the ELEVENLABS_API_KEY secret first"; exit 1; }
+          for n in ${{ steps.pick.outputs.list }}; do bash tools/reel/make.sh "$n"; done
+      - name: Commit
+        if: steps.pick.outputs.list != ''
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add docs/media/reels
+          git diff --cached --quiet && exit 0
+          git commit -m "New voiced reels:${{ steps.pick.outputs.list }}"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

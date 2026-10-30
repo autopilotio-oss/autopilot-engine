@@ -114,3 +114,9 @@ Threads is connected in Metricool (brand 7761544). GitHub no longer posts to Thr
 
 ## Rename (Seb, Oct 30)
 The free lead magnet at /brain/ is now called **The AI Front Desk** (was THE BUSINESS BRAIN). Use the new name in all new posts, emails and pages. The URL stays /brain/ and the comment keyword stays BRAIN (it already works in ManyChat and old posts). Inside the paid Workspace the setup file can still be called the Business Brain.
+
+## Voiced reels (ElevenLabs)
+- Voice: ElevenLabs "Brian - Deep, Resonant and Comforting", ALWAYS sped to 1.2x (scripts/tts.py does it with ffmpeg atempo).
+- To make a reel: add tools/reel/<name>.py (copy credit.py: PHRASES, GROUPS, MOODS, SCENES) and push. The "Voiced reels" workflow renders every spec without a reel into docs/media/reels/money-<name>.mp4 + poster and commits it.
+- Needs repo secret ELEVENLABS_API_KEY. Robot body frames (tools/reel/fr/) are not in the repo, so reels show the face screen only.
+- Post the mp4 to IG/Threads through Metricool as a REEL, using the poster as the cover.

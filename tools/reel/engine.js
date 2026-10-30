@@ -20,7 +20,7 @@ function face(t){const fi=Math.round(t*30),m=MO[fi]||0;
  const h=6+m*58;
  const mouth=m>0.08?`<path d="M${170-m*8} 222 h${80+m*16} q-6 ${h} -${40+m*8} ${h} q-${34+m*8} 0 -${40+m*8} -${h}z" fill="${G}"/>`:(mode=='skep'?`<path d="M180 240 h60"/>`:`<path d="M170 230 q40 28 80 0"/>`);
  scr.innerHTML=`<svg viewBox="0 0 420 330" style="width:100%;height:100%"><defs><filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="rgba(0,0,0,.35)"/></pattern></defs><g filter="url(#g)" fill="none" stroke="${G}" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">${eyes}${mouth}</g><rect width="420" height="330" fill="url(#sl)"/><path d="M30 40 Q120 10 200 18" stroke="#fff" stroke-opacity=".08" stroke-width="18" fill="none" stroke-linecap="round"/></svg>`;
- const k=Math.floor(t*30)%SCR.length;$('pf').src='fr/'+String(k+1).padStart(4,'0')+'.jpg';
+ const k=Math.floor(t*30)%SCR.length;if(!NOROBOT)$('pf').src='fr/'+String(k+1).padStart(4,'0')+'.jpg';
  const [cx,cy,sw,sh,an]=SCR[k];const W=sw*1.03,H=sh*1.04;scr.style.cssText+=`;left:${180+cx-W/2}px;top:${1260+cy-60-H/2}px;width:${W}px;height:${H}px;transform:rotate(${an}deg);border-radius:${W*.16}px`}
 let SEGS=null;
 // SHIFTED: each scene's first element starts the moment the scene starts (keeps the stagger)
