@@ -1,1 +1,22 @@
-{}
+{
+ "bill-agent": {
+  "id": "v4ojUqG-COND0xuYUgMaZA==",
+  "url": "https://autopilotoi.gumroad.com/l/bill-agent",
+  "published": true
+ },
+ "credit-agent": {
+  "id": "foI8-MiTn-D_fGDn6BTG-A==",
+  "url": "https://autopilotoi.gumroad.com/l/credit-agent",
+  "published": true
+ },
+ "debt-agent": {
+  "id": "eVhfNcly_sJA3bhXkwbujQ==",
+  "url": "https://autopilotoi.gumroad.com/l/debt-agent",
+  "published": true
+ },
+ "money-agents": {
+  "id": "x6n2xi-MW0lqHI5dXfS10g==",
+  "url": "https://autopilotoi.gumroad.com/l/money-agents",
+  "published": true
+ }
+}
