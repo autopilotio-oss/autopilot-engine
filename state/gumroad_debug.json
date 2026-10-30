@@ -1,0 +1,55 @@
+[
+ [
+  "token_len",
+  51
+ ],
+ [
+  "user",
+  401,
+  ""
+ ],
+ [
+  "POST",
+  "/files/presign",
+  401,
+  ""
+ ],
+ [
+  "fail",
+  "bill-agent",
+  "<HTTPError 401: 'Unauthorized'>"
+ ],
+ [
+  "POST",
+  "/files/presign",
+  401,
+  ""
+ ],
+ [
+  "fail",
+  "credit-agent",
+  "<HTTPError 401: 'Unauthorized'>"
+ ],
+ [
+  "POST",
+  "/files/presign",
+  401,
+  ""
+ ],
+ [
+  "fail",
+  "debt-agent",
+  "<HTTPError 401: 'Unauthorized'>"
+ ],
+ [
+  "POST",
+  "/files/presign",
+  401,
+  ""
+ ],
+ [
+  "fail",
+  "money-agents",
+  "<HTTPError 401: 'Unauthorized'>"
+ ]
+]
