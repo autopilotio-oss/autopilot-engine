@@ -24,10 +24,13 @@ jobs:
       - name: Reply to keyword comments
         env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}", THREADS_APP_SECRET: "${{ secrets.THREADS_APP_SECRET }}" }
         run: python scripts/keyword_replies.py
+      - name: Instagram stats and scoreboard
+        env: { IG_TOKEN: "${{ secrets.IG_TOKEN }}", IG_USER_ID: "${{ secrets.IG_USER_ID }}" }
+        run: python scripts/scoreboard.py || true
       - name: Save
         run: |
           git config user.name "autopilot-bot"
           git config user.email "bot@users.noreply.github.com"
           git pull --rebase || true
-          git add state || true
+          git add state SCOREBOARD.md || true
           git diff --cached --quiet || (git commit -m "stats" && git push)
