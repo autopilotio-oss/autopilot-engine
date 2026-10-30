@@ -52,22 +52,23 @@ def back(x):
 
 def frame(t, ctx):
     hero, items, lines, now = ctx["hero"], ctx["items"], ctx["lines"], ctx["now"]
-    im = ctx["base"].copy(); d = ImageDraw.Draw(im)
+    z = 1 + 0.06 * (t / DUR); bw, bh = int(W / z), int(H / z)
+    im = ctx["base"].crop(((W - bw) // 2, H - bh, (W + bw) // 2, H)).resize((W, H)); d = ImageDraw.Draw(im)
     up = hero["chg"] >= 0; col = LIME if up else RED
     # header (tweet style)
     a = ease(t / 0.4)
     im.paste(ctx["logo"], (80, int(150 - 20 * (1 - a))), ctx["mask"])
-    d.text((200, 156), "AUTOPILOT.OI", font=font("Inter-ExtraBold.otf", 40), fill=WHITE)
+    d.text((200, 160), "AUTOPILOT.OI", font=font("InterDisplay-SemiBold.otf", 38), fill=WHITE)
     d.text((200, 206), "@autopilot.oi · " + now.strftime("%b %d"), font=font("Inter-Medium.otf", 32), fill=GREY)
-    d.text((80, 300), "gm. your 30 second market check", font=font("Inter-Bold.otf", 46), fill=WHITE) if t > 0.2 else None
+    d.text((80, 300), "gm. your 30 second market check", font=font("InterDisplay-Medium.otf", 46), fill=WHITE) if t > 0.2 else None
     # hero: biggest mover
     hp = ease((t - 0.5) / 0.6)
     if hp > 0:
         d.text((80, 410), f"TODAY'S BIG MOVE · {hero['span']}", font=font("SpaceMono-Bold.ttf", 28), fill=GREY)
-        d.text((80, 452), hero["name"].upper(), font=font("BebasNeue-Regular.ttf", 120), fill=WHITE)
+        d.text((80, 460), hero["name"], font=font("InterDisplay-Medium.otf", 88), fill=WHITE)
         shown = hero["chg"] * ease((t - 0.7) / 1.2)
-        d.text((80, 560), pct(shown), font=font("BebasNeue-Regular.ttf", 250), fill=col)
-        d.text((W - 80, 640), money(hero["price"]), font=font("Inter-Bold.otf", 52), fill=WHITE, anchor="ra")
+        d.text((70, 560), pct(shown), font=font("InterDisplay-Light.otf", 230), fill=col)
+        d.text((W - 80, 486), money(hero["price"]), font=font("InterDisplay-Light.otf", 60), fill=WHITE, anchor="ra")
     # sparkline draws in
     hist = hero.get("hist") or []
     sp = ease((t - 1.0) / 1.6)
@@ -78,9 +79,9 @@ def frame(t, ctx):
         n = max(2, int(len(pts) * sp + 1)); seg = pts[:n]
         fill_poly = seg + [(seg[-1][0], y1 + 30), (x0, y1 + 30)]
         layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(layer)
-        ld.polygon(fill_poly, fill=col + (38,)); im.paste(layer, (0, 0), layer); d = ImageDraw.Draw(im)
-        d.line(seg, fill=col, width=8, joint="curve")
-        d.ellipse((seg[-1][0] - 14, seg[-1][1] - 14, seg[-1][0] + 14, seg[-1][1] + 14), fill=col)
+        ld.polygon(fill_poly, fill=col + (22,)); im.paste(layer, (0, 0), layer); d = ImageDraw.Draw(im)
+        d.line(seg, fill=col, width=5, joint="curve")
+        d.ellipse((seg[-1][0] - 10, seg[-1][1] - 10, seg[-1][0] + 10, seg[-1][1] + 10), fill=col)
         d.text((80, 1122), "LAST 7 DAYS", font=font("SpaceMono-Bold.ttf", 24), fill=GREY)
     # ticker chips slide in
     y = 1190
@@ -89,14 +90,14 @@ def frame(t, ctx):
         if p <= 0: continue
         cx = 80 + (i % 4) * 236; cy = y + (i // 4) * 132 + int(60 * (1 - p))
         c = LIME if it["chg"] >= 0 else RED
-        d.rounded_rectangle((cx, cy, cx + 216, cy + 112), 24, fill=DIM)
-        d.text((cx + 22, cy + 16), it["sym"], font=font("Inter-ExtraBold.otf", 32), fill=WHITE)
-        d.text((cx + 22, cy + 60), pct(it["chg"]), font=font("Inter-Bold.otf", 34), fill=c)
+        d.rounded_rectangle((cx, cy, cx + 216, cy + 112), 20, fill=(8, 8, 9), outline=(44, 44, 46), width=2)
+        d.text((cx + 22, cy + 18), it["sym"], font=font("SpaceMono-Bold.ttf", 26), fill=(170, 170, 166))
+        d.text((cx + 22, cy + 56), pct(it["chg"]), font=font("InterDisplay-Medium.otf", 38), fill=c)
     # plain english, line by line
     for i, l in enumerate(lines):
         p = ease((t - 3.6 - i * 0.55) / 0.4)
         if p <= 0: continue
-        d.text((80 + int(30 * (1 - p)), 1490 + 62 * i), l, font=font("Inter-SemiBold.otf", 36), fill=tuple(int(v * p) for v in WHITE))
+        d.text((80 + int(30 * (1 - p)), 1490 + 62 * i), l, font=font("InterDisplay-Medium.otf", 36), fill=tuple(int(v * p) for v in WHITE))
     if t > 5.6:
         d.text((80, 1712), "Not financial advice. Prices as of " + now.strftime("%I:%M %p").lstrip("0") + " ET.", font=font("Inter-Medium.otf", 28), fill=GREY)
     return im
@@ -167,10 +168,11 @@ def build(crypto, stocks, now, out_mp4, out_jpg):
     hero = max(allm, key=lambda x: abs(x["chg"]))
     items = [x for x in allm if x is not hero]
     lines = lines_for(crypto, stocks, now.weekday() >= 5 or now.weekday() == 0)
-    base = Image.new("RGB", (W, H), BG)
-    glow = Image.new("RGB", (W, H), BG); g = ImageDraw.Draw(glow)
-    gc = (40, 52, 8) if hero["chg"] >= 0 else (52, 16, 16)
-    g.ellipse((100, 300, 980, 1100), fill=gc); base = Image.blend(base, glow.filter(ImageFilter.GaussianBlur(200)), 1.0)
+    base = Image.open(os.path.join(ROOT, "tools", "story", "bg_green.png" if hero["chg"] >= 0 else "bg_red.png")).convert("RGB").resize((W, H))
+    shade = Image.new("L", (W, H), 0); sd = ImageDraw.Draw(shade)
+    for y in range(1120, 1800):
+        a = min(1, (y - 1120) / 120) * min(1, (1800 - y) / 160); sd.line([(0, y), (W, y)], fill=int(175 * a))
+    base = Image.composite(Image.new("RGB", (W, H), BG), base, shade)
     logo = Image.open(os.path.join(ROOT, "tools", "story", "logo.png")).convert("RGB").resize((100, 100))
     mask = Image.new("L", (100, 100), 0); ImageDraw.Draw(mask).ellipse((0, 0, 100, 100), fill=255)
     ctx = {"hero": hero, "items": items, "lines": lines, "now": now, "base": base, "logo": logo, "mask": mask}
