@@ -41,6 +41,9 @@ def _owner():
 
 def _body(p, ig_caption):
     m = (p.get("media") or [""])[0]
+    if p.get("kind") == "x_thread":
+        tw = "\n\n".join(f"**Tweet {i}**\n```\n{t}\n```" for i, t in enumerate(p["tweets"], 1))
+        return f"## Reply **YES** to post it, or **NO** to skip it.\n\n**Goes out:** {p['at']} (US Eastern) · **Where:** X (thread)\n\n{tw}\n\n_No answer = it waits and does not post._\n"
     if p.get("kind") == "video":
         poster = m.rsplit(".", 1)[0] + "-poster.jpg"
         media = f"### ▶️ [Watch the reel]({m})\n\n![preview]({poster})"

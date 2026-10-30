@@ -10,6 +10,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import threads
 import instagram
 import approval
+import xpost
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "state", "posted.json")
@@ -38,7 +39,7 @@ def main(now=None):
         approval.request_upcoming(allposts, now, instagram.ig_caption, set(posted))
     due = []
     for p in allposts:
-        if p["id"] in posted or p.get("threads") is False: continue
+        if p["id"] in posted or p.get("threads") is False or p.get("kind") == "x_thread": continue
         at = dt.datetime.fromisoformat(p["at"])
         if at <= now and (now - at) < dt.timedelta(hours=6):
             if gate:
@@ -75,7 +76,34 @@ def main(now=None):
         os.makedirs(os.path.dirname(STATE), exist_ok=True)
         json.dump(posted, open(STATE, "w"), indent=1)
     cross_post_instagram(raw, now)
+    post_x(now)
     return done
+
+X_STATE = os.path.join(ROOT, "state", "posted_x.json")
+
+def post_x(now):
+    """Text threads on X. Only runs when the X keys are set, and only after Seb approves."""
+    if not DRY and not xpost.creds():
+        return
+    done = load(X_STATE, {})
+    for f in sorted(glob.glob(os.path.join(ROOT, "queue", "*.json"))):
+        for p in load(f, []):
+            if p.get("kind") != "x_thread" or p["id"] in done: continue
+            at = dt.datetime.fromisoformat(p["at"])
+            if not (at <= now and (now - at) < dt.timedelta(hours=6)): continue
+            if DRY:
+                print("DRY X", p["id"], len(p["tweets"]), "tweets"); continue
+            if approval.required() and approval.status(p["id"]) != "approved":
+                print("waiting for approval", p["id"]); continue
+            try:
+                tid = xpost.thread(p["tweets"])
+                done[p["id"]] = {"tweet_id": tid, "at": now.isoformat()}
+                approval.finish(p["id"], f"Posted on X ✅ https://x.com/i/status/{tid}")
+                print("x", p["id"], tid)
+            except xpost.XError as e:
+                print("X FAILED", p["id"], e)
+    if not DRY:
+        json.dump(done, open(X_STATE, "w"), indent=1)
 
 IG_STATE = os.path.join(ROOT, "state", "posted_ig.json")
 
@@ -93,7 +121,7 @@ def cross_post_instagram(raw, now):
                 due.append(p)
     uid = None
     for p in sorted(due, key=lambda x: x["at"])[:MAX_PER_RUN]:
-        if p["id"] in done or p.get("kind") == "text" or p.get("ig") is False:
+        if p["id"] in done or p.get("kind") in ("text", "x_thread") or p.get("ig") is False:
             continue
         if approval.required() and not DRY and approval.status(p["id"]) != "approved":
             continue

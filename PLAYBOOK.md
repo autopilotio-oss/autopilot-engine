@@ -45,3 +45,6 @@ About 1 hour before each post, the bot opens a GitHub issue with the exact media
 ## Instagram style (Seb's call, Oct 30)
 Instagram gets human, tweet style carousels only (tools/carousel: black background, ap. avatar, AUTOPILOT.OI @autopilot.oi, big simple text, lime accents, 1 to 10 slides, last slide CTA). Topics that teach total beginners Claude and AI in the simplest words, with viral titles like "The 3 things they don't want you to know about AI" or "Top AI prompts of 2026". Everything must be true. Set "threads": false on Instagram only posts. The robot graphics stay on Threads only ("ig": false). Threads gets more volume.
 To make one: add a new key to tools/carousel/data.json, run node r.js inside tools/carousel, copy out/<key>/*.jpg to docs/media/carousels/<key>/.
+
+## X (Twitter)
+Every Instagram carousel is also posted on X as a text thread (one tweet per slide) at the same time, kind "x_thread" with a "tweets" list. Build it with scripts/xpost.py from_carousel(). Only the last tweet has a link (links cost more on X). Threads posts never go to Instagram; Instagram posts never go to Threads.
