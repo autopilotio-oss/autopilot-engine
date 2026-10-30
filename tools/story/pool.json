@@ -177,68 +177,84 @@
  ],
  "facts": [
   {
-   "f": "The word {robot} comes from the Czech \"robota\", meaning forced labor.",
-   "more": "It first appeared in a 1920 play called R.U.R."
-  },
-  {
-   "f": "The first recorded computer {bug} was a real moth.",
-   "more": "Engineers found it stuck in a Harvard Mark II relay in 1947 and taped it into the logbook."
-  },
-  {
    "f": "The term {artificial intelligence} was coined in 1955.",
-   "more": "It was written for a proposal for a 1956 summer workshop at Dartmouth."
+   "more": "John McCarthy used it in a proposal for a 1956 summer workshop at Dartmouth."
   },
   {
-   "f": "In 1950, Alan Turing proposed a test for machine intelligence he called {the imitation game.}",
+   "f": "In 1950, Alan Turing proposed a test for machine intelligence called {the imitation game.}",
    "more": "Today we call it the Turing test."
   },
   {
-   "f": "A 1966 chatbot named {ELIZA} convinced some people it understood them.",
-   "more": "It mostly rephrased their own words back as questions."
+   "f": "The first chatbot, {ELIZA,} was built at MIT in 1966.",
+   "more": "Its creator was surprised how many people confided in it. It mostly turned their own words into questions."
+  },
+  {
+   "f": "Arthur Samuel coined the term {machine learning} in 1959.",
+   "more": "He was teaching an IBM computer to get better at checkers by playing itself."
+  },
+  {
+   "f": "In 1958, the Navy showed off the {Perceptron,} an early neural network.",
+   "more": "Press coverage claimed it would one day walk, talk and be conscious of itself."
+  },
+  {
+   "f": "AI went through two {\"AI winters\"} where funding dried up.",
+   "more": "The first hit in the 1970s, the second in the late 1980s, after big promises didn't pay off."
   },
   {
    "f": "IBM's Deep Blue beat world chess champion {Garry Kasparov} in 1997.",
    "more": "It was the first time a computer beat a reigning champion in a full match."
   },
   {
-   "f": "The first text message ever sent said {\"Merry Christmas\".}",
-   "more": "It was sent from a computer to a phone in December 1992."
+   "f": "IBM's {Watson} won Jeopardy! in 2011.",
+   "more": "It beat two of the show's biggest champions, Ken Jennings and Brad Rutter."
   },
   {
-   "f": "The first webcam watched a {coffee pot.}",
-   "more": "Cambridge researchers set it up in 1991 so they'd stop walking to an empty pot."
+   "f": "In 2016, AlphaGo beat Go legend Lee Sedol {4 games to 1.}",
+   "more": "Go has more possible board positions than there are atoms in the observable universe."
   },
   {
-   "f": "{Bluetooth} is named after a 10th century Danish king.",
-   "more": "Harald \"Bluetooth\" Gormsson united Danish tribes. The tech unites devices."
+   "f": "AlphaGo's famous {Move 37} shocked the experts.",
+   "more": "Its makers estimated a human would play it about 1 time in 10,000."
   },
   {
-   "f": "{CAPTCHA} is an acronym.",
-   "more": "Completely Automated Public Turing test to tell Computers and Humans Apart."
+   "f": "The tech behind today's chatbots came from a 2017 Google paper called {\"Attention Is All You Need.\"}",
+   "more": "It introduced the Transformer. The T in GPT."
   },
   {
-   "f": "The first item sold on eBay was a {broken laser pointer.}",
-   "more": "The buyer said he collected broken laser pointers."
+   "f": "GPT stands for {Generative Pre-trained Transformer.}",
+   "more": "Generative: it creates text. Pre-trained: it learned from huge amounts of text first."
   },
   {
-   "f": "{Google} is named after \"googol\", a 1 followed by 100 zeros.",
-   "more": "The founders wanted a name that meant a huge amount of information."
+   "f": "Chatbots don't read words. They read {tokens.}",
+   "more": "In English, one token is roughly three quarters of a word."
   },
   {
-   "f": "The first domain name ever registered was {symbolics.com.}",
-   "more": "It was registered in March 1985."
+   "f": "A chatbot writes by predicting {the next token,} over and over.",
+   "more": "That's also why it can sound confident while being wrong."
   },
   {
-   "f": "{Nintendo} was founded in 1889.",
-   "more": "It started as a company making playing cards."
+   "f": "When AI states something false with confidence, it's called a {hallucination.}",
+   "more": "It's the main reason you should read before you send."
   },
   {
-   "f": "The first YouTube video is called {\"Me at the zoo\".}",
-   "more": "It's 19 seconds long and was uploaded in April 2005."
+   "f": "ChatGPT hit an estimated {100 million users} about two months after launch.",
+   "more": "At the time, analysts called it the fastest growing consumer app ever."
   },
   {
-   "f": "Ray Tomlinson sent the first network email in 1971 and picked the {@ symbol} to separate names from computers.",
-   "more": "He said he chose it because it wasn't used in anyone's name."
+   "f": "The 2018 Turing Award, computing's top prize, went to three {deep learning} pioneers.",
+   "more": "Geoffrey Hinton, Yann LeCun and Yoshua Bengio."
+  },
+  {
+   "f": "In 2024, AI research won {two Nobel Prizes.}",
+   "more": "Physics for neural network foundations, and Chemistry for AlphaFold's protein predictions."
+  },
+  {
+   "f": "DeepMind's {AlphaFold} has predicted structures for over 200 million proteins.",
+   "more": "Work that used to take scientists years per protein."
+  },
+  {
+   "f": "{Claude} is made by Anthropic, an AI safety company founded in 2021.",
+   "more": "It's the AI we use for every setup on this page."
   }
  ]
 }
