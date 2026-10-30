@@ -97,3 +97,11 @@ Every morning find what's viral or trending that we can genuinely help with: AI 
 
 ## Products (Gumroad, automatic)
 Paid kits: $10 per agent, bundles $24. A product = products/<permalink>/product.json + sealed file (bash tools/kits/seal.sh <pdf> products/<permalink>). Pushing it runs .github/workflows/gumroad.yml, which creates and publishes it on Gumroad (secrets GUMROAD_TOKEN, KIT_PRIVATE_KEY) and writes state/products.json. Never commit an unsealed paid PDF (tools/kits/out is gitignored). Kit PDF: python tools/kits/build.py <kit.json> <out.pdf> (keys: name, price, tag, promise, setup[], master, starters[[title,prompt]], tracker[], links[[title,url]]). Cover: tools/kits/covers.py style, saved to docs/store/<key>-cover.png. Add every new product to docs/store/index.html.
+
+## Stories value gate (Seb, Oct 30 13:49: "I don't like the stories, only post after making sure it's something someone finds of value")
+Stories are paused by default. No story is scheduled in Metricool unless it passes ALL of these, checked on the rendered image:
+1. A stranger would screenshot or send it to a friend: it solves a real problem they have this week (a scam to avoid, a bill to fight, a deadline, a prompt that saves real time).
+2. One specific, usable takeaway they can act on in under a minute (an exact prompt, a number, a step). No trivia, no filler quizzes or polls, no "fun facts", nothing generic.
+3. Verified with 2 sources when it states a fact.
+4. If in doubt, don't post. Zero stories on a day is fine. Filler stories are worse than none.
+The automatic 5 a day story set (tip, quiz, answer, fact, poll) no longer goes to Metricool on autopilot.
