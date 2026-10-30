@@ -4,11 +4,12 @@ import os, sys, json, glob, subprocess, urllib.request, urllib.parse, tempfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 API = "https://api.gumroad.com/v2"; TOK = os.environ.get("GUMROAD_TOKEN", "").strip()
 def call(method, path, data=None, raw=False):
-    body = urllib.parse.urlencode(data or {}, doseq=True).encode() if data is not None else None
-    req = urllib.request.Request(API + path, data=body, method=method, headers={"Authorization": "Bearer " + TOK})
+    data = dict(data or {}); data["access_token"] = TOK
+    body = urllib.parse.urlencode(data, doseq=True).encode()
+    req = urllib.request.Request(API + path, data=body, method=method, headers={"Content-Type": "application/x-www-form-urlencoded"})
     try: r = urllib.request.urlopen(req, timeout=120).read().decode(); return json.loads(r)
     except urllib.error.HTTPError as e:
-        print(f"::error title=Gumroad {method} {path}::{e.read().decode()[:400]}"); raise
+        msg = e.read().decode()[:300].replace(TOK, "***"); print(f"::warning title=Gumroad {method} {path} {e.code}::{msg}"); raise
 def unseal(d):
     pk = os.environ["KIT_PRIVATE_KEY"]; tmp = tempfile.mkdtemp()
     open(tmp + "/pk.pem", "w").write(pk)
@@ -29,6 +30,10 @@ def upload(path, name):
     return pre["file_url"]
 def main():
     if not TOK: print("No GUMROAD_TOKEN yet"); return
+    try:
+        u = urllib.request.urlopen(API + "/user?" + urllib.parse.urlencode({"access_token": TOK}), timeout=60).read().decode()
+        print("::notice title=Gumroad user::" + json.loads(u)["user"].get("name", "ok"))
+    except urllib.error.HTTPError as e: print(f"::warning title=Gumroad user check {e.code}::" + e.read().decode()[:200])
     sp = os.path.join(ROOT, "state", "products.json"); st = json.load(open(sp)) if os.path.exists(sp) else {}
     for f in sorted(glob.glob(os.path.join(ROOT, "products", "*", "product.json"))):
         d = os.path.dirname(f); slug = os.path.basename(d); p = json.load(open(f))
