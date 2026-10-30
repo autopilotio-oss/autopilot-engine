@@ -3,6 +3,9 @@ on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["queue/**", ".github/workflows/post.yml"]
 permissions:
   contents: write
   issues: write
