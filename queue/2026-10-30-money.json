@@ -1,0 +1,68 @@
+[
+ {
+  "id": "ig-money-credit",
+  "at": "2026-10-31T18:00:00-04:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-credit.mp4"
+  ],
+  "poster": "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-credit-poster.jpg",
+  "threads": false,
+  "text": "One in five people have an error on their credit report. Here's how to find yours and dispute it with Claude, then turn it into a Credit Agent that checks every month.\n\nComment CREDIT and I'll send you the free step by step guide and agent setup.\n\nEducation only, not financial advice."
+ },
+ {
+  "id": "th-money-credit",
+  "at": "2026-10-31T10:30:00-04:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-credit.mp4"
+  ],
+  "ig": false,
+  "topic": "AI",
+  "text": "One in five people have an error on their credit report. Here's how to find yours and dispute it with Claude, then turn it into a Credit Agent that checks every month.\n\nComment CREDIT and I'll send you the free guide."
+ },
+ {
+  "id": "ig-money-bill",
+  "at": "2026-11-01T18:00:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-bill.mp4"
+  ],
+  "poster": "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-bill-poster.jpg",
+  "threads": false,
+  "text": "Never pay a medical bill before you check it. Itemized bill + your insurance statement + one Claude prompt. Then a Bill Agent checks every bill before you pay.\n\nComment BILL and I'll send you the free step by step guide and agent setup.\n\nEducation only, not financial advice."
+ },
+ {
+  "id": "th-money-bill",
+  "at": "2026-11-01T10:30:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-bill.mp4"
+  ],
+  "ig": false,
+  "topic": "AI",
+  "text": "Never pay a medical bill before you check it. Itemized bill + your insurance statement + one Claude prompt. Then a Bill Agent checks every bill before you pay.\n\nComment BILL and I'll send you the free guide."
+ },
+ {
+  "id": "ig-money-debt",
+  "at": "2026-11-02T18:00:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-debt.mp4"
+  ],
+  "poster": "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-debt-poster.jpg",
+  "threads": false,
+  "text": "Most people never call to ask for a lower rate. Claude writes the script, builds your payoff plan, and a Debt Agent tells you what to pay every payday.\n\nComment DEBT and I'll send you the free step by step guide and agent setup.\n\nEducation only, not financial advice."
+ },
+ {
+  "id": "th-money-debt",
+  "at": "2026-11-02T10:30:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-debt.mp4"
+  ],
+  "ig": false,
+  "topic": "AI",
+  "text": "Most people never call to ask for a lower rate. Claude writes the script, builds your payoff plan, and a Debt Agent tells you what to pay every payday.\n\nComment DEBT and I'll send you the free guide."
+ }
+]
