@@ -1,0 +1,115 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/* Tutorial carousel: "Your first Claude agent". Sleek, modern, teaches real steps.
+   Render: PAGE=guide.html node render.js   (renders every .k) */
+@font-face{font-family:B;src:url(f/BarlowCondensed-BlackItalic.otf)}
+@font-face{font-family:G;font-weight:500;src:url(f/Geist-Medium.otf)}@font-face{font-family:G;font-weight:600;src:url(f/Geist-SemiBold.otf)}@font-face{font-family:G;font-weight:700;src:url(f/Geist-Bold.otf)}
+@font-face{font-family:M;src:url(f/GeistMono-Medium.otf)}
+*{box-sizing:border-box;margin:0;padding:0}body{background:#222}
+.k{position:relative;width:1080px;height:1350px;overflow:hidden;background:#000;color:#F2F2EE;font-family:G,sans-serif;margin-bottom:20px;padding:64px 72px;display:flex;flex-direction:column}
+.hd{display:flex;align-items:center;gap:14px;font:20px M;letter-spacing:4px;color:#8C8C88;padding-bottom:24px;border-bottom:1px solid #262626}
+.hd img{width:38px;height:38px;border-radius:10px}.hd b{color:#F2F2EE;font-weight:400}.hd span{margin-left:auto}
+.dots{display:flex;gap:8px;margin-left:auto}.dots i{width:28px;height:4px;border-radius:2px;background:#2E2E2E}.dots i.on{background:#D4FF3A}
+.st{font:22px M;letter-spacing:5px;color:#D4FF3A;margin-top:56px}
+.h{font-family:B;text-transform:uppercase;line-height:.86;margin-top:18px;letter-spacing:-.5px}.h i{font-style:normal;color:#D4FF3A}
+.s{font-size:40px;font-weight:500;line-height:1.32;color:#B8B8B2;margin-top:30px;letter-spacing:-.4px}.s b{color:#F2F2EE;font-weight:600}
+/* app window mock */
+.win{margin-top:44px;border:1px solid #2E2E2E;border-radius:28px;background:#0E0E0E;overflow:hidden}
+.wbar{display:flex;align-items:center;gap:10px;padding:20px 26px;border-bottom:1px solid #222}.wbar i{width:16px;height:16px;border-radius:50%;background:#2E2E2E}
+.wbar span{margin-left:16px;font:20px M;letter-spacing:3px;color:#6E6E6A}
+.wb{padding:34px 36px}
+.lab{font:19px M;letter-spacing:4px;color:#6E6E6A;margin-bottom:14px}
+.field{border:1px solid #2E2E2E;border-radius:16px;padding:22px 26px;font-size:34px;font-weight:500;line-height:1.38;color:#F2F2EE;letter-spacing:-.3px}
+.field.on{border-color:#D4FF3A}
+.field em{font-style:normal;color:#D4FF3A}
+.btn{display:inline-block;margin-top:24px;background:#D4FF3A;color:#0A0A0A;border-radius:14px;padding:16px 28px;font-weight:700;font-size:30px}
+.side{display:flex}.side .nav{width:250px;border-right:1px solid #222;padding:30px 0 30px 30px;font-size:30px;font-weight:600;color:#6E6E6A;line-height:2.1}
+.side .nav .on{color:#F2F2EE}.side .nav .on:before{content:'';display:inline-block;width:10px;height:10px;border-radius:50%;background:#D4FF3A;margin:0 14px 4px -24px}
+.chip{display:inline-block;border:1px solid #2E2E2E;border-radius:999px;padding:10px 22px;font:20px M;letter-spacing:3px;color:#B8B8B2;margin:0 10px 10px 0}
+.chip.on{border-color:#D4FF3A;color:#D4FF3A}
+.ft{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:26px;border-top:1px solid #262626;font:20px M;letter-spacing:4px;color:#6E6E6A}
+.ft b{color:#D4FF3A;font-weight:400}
+.cmp{display:flex;margin-top:56px;border-top:1px solid #262626;border-bottom:1px solid #262626}
+.cmp>div{flex:1;padding:36px 0}.cmp>div+div{border-left:1px solid #262626;padding-left:40px}
+.cmp h3{font:20px M;letter-spacing:4px;color:#6E6E6A;font-weight:400}.cmp .on h3{color:#D4FF3A}
+.cmp p{font-size:42px;font-weight:600;line-height:1.25;margin-top:20px;letter-spacing:-.5px;padding-right:24px}
+.cmp div:first-child p{color:#6E6E6A}
+.rule{display:flex;gap:28px;align-items:baseline;padding:38px 0;border-top:1px solid #262626}.rule:last-child{border-bottom:1px solid #262626}
+.rule .n{font:22px M;color:#D4FF3A;width:50px;flex:none}.rule .t{font-size:42px;font-weight:600;letter-spacing:-.5px}.rule .t small{display:block;font-size:31px;color:#8C8C88;font-weight:500;margin-top:6px}
+.kw{font-family:B;font-size:250px;line-height:.8;color:#D4FF3A;margin-top:40px}
+</style></head><body>
+
+<!-- 1 hook -->
+<div class="k" id="g1"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+<div class="st" style="margin-top:110px">A BEGINNER GUIDE</div>
+<div class="h" style="font-size:225px">Your first<br><i>Claude agent</i><br>in 10 min.</div>
+<div class="s" style="margin-top:44px">5 steps. No code. Everything you type is on the slides, so you can copy it.</div>
+<div class="ft"><span>CLAUDE · FOR SMALL BUSINESS</span><b>SWIPE →</b></div></div>
+
+<!-- 2 chatbot vs agent -->
+<div class="k" id="g2"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+<div class="st">FIRST, THE DIFFERENCE</div>
+<div class="h" style="font-size:150px">A chatbot talks.<br><i>An agent works.</i></div>
+<div class="cmp"><div><h3>CHATBOT</h3><p>Starts from zero every time.</p><p>Waits for you to ask.</p></div>
+<div class="on"><h3>AGENT</h3><p>Knows your business.</p><p>Has one job.</p><p>Runs on a schedule.</p></div></div>
+<div class="s">The next 4 slides give it exactly those three things.</div>
+<div class="ft"><span>02 / 08</span><b>SWIPE →</b></div></div>
+
+<!-- 3 step 1 project -->
+<div class="k" id="g3"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div>
+<div class="st">STEP 01</div>
+<div class="h" style="font-size:190px">Give it a <i>home.</i></div>
+<div class="s">In Claude, open <b>Projects</b> and tap <b>New project</b>. Name it after your business. Everything you add here, it remembers in every chat inside it.</div>
+<div class="win"><div class="wbar"><i></i><i></i><i></i><span>PROJECTS</span></div>
+<div class="side"><div class="nav"><div>Chats</div><div class="on">Projects</div><div>Settings</div></div>
+<div class="wb" style="flex:1;padding:60px 40px"><div class="lab">PROJECT NAME</div><div class="field on" style="font-size:38px">Rivera Plumbing<span style="color:#6E6E6A"> (example)</span></div><div class="btn">Create project</div></div></div></div>
+<div class="ft"><span>03 / 08</span><b>SWIPE →</b></div></div>
+
+<!-- 4 step 2 instructions -->
+<div class="k" id="g4"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+<div class="st">STEP 02</div>
+<div class="h" style="font-size:150px">Teach it <i>your business.</i></div>
+<div class="s">Paste this into the project <b>instructions</b>. Fill in the brackets.</div>
+<div class="win"><div class="wbar"><i></i><i></i><i></i><span>PROJECT INSTRUCTIONS</span></div>
+<div class="wb"><div class="field" style="font-size:31px">You work for <em>[business name]</em>, a <em>[type of business]</em> in <em>[town]</em>. Our prices: <em>[list]</em>. Our hours: <em>[hours]</em>. Write like me: friendly, short, plain words. Never promise a date or price that isn't listed here. If something is missing, ask me.</div></div></div>
+<div class="s" style="font-size:34px">Then upload your price list and FAQ to the project files.</div>
+<div class="ft"><span>04 / 08</span><b>SWIPE →</b></div></div>
+
+<!-- 5 step 3 one job -->
+<div class="k" id="g5"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i></span></div>
+<div class="st">STEP 03</div>
+<div class="h" style="font-size:190px">Give it <i>one job.</i></div>
+<div class="s">Start a chat in the project and send this. Then paste any customer message you got today.</div>
+<div class="win"><div class="wbar"><i></i><i></i><i></i><span>NEW CHAT</span></div>
+<div class="wb" style="padding:44px 44px"><div class="field" style="font-size:38px">Your job: reply to customer messages. When I paste one, write my reply in under 80 words. If it's a price question, use our prices. If you're unsure, tell me what to ask.</div></div></div>
+<div class="s" style="font-size:34px">One clear job beats ten vague ones. Add more jobs later.</div>
+<div class="ft"><span>05 / 08</span><b>SWIPE →</b></div></div>
+
+<!-- 6 step 4 schedule -->
+<div class="k" id="g6"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></span></div>
+<div class="st">STEP 04 · PAID PLANS</div>
+<div class="h" style="font-size:170px">Put it on a <i>schedule.</i></div>
+<div class="s">Connect your email in settings. In <b>Cowork</b>, open <b>Scheduled</b>, tap <b>New task</b>, and paste:</div>
+<div class="win"><div class="wbar"><i></i><i></i><i></i><span>NEW SCHEDULED TASK</span></div>
+<div class="wb"><div class="field" style="font-size:36px">Every weekday at 7 AM: read my new emails, list who needs a reply, and draft each reply. Don't send anything.</div>
+<div style="margin-top:22px"><span class="chip">HOURLY</span><span class="chip on">WEEKDAYS</span><span class="chip">WEEKLY</span></div></div></div>
+<div class="ft"><span>06 / 08</span><b>SWIPE →</b></div></div>
+
+<!-- 7 step 5 rules -->
+<div class="k" id="g7"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i></span></div>
+<div class="st">STEP 05</div>
+<div class="h" style="font-size:170px">Keep it on a <i>short leash.</i></div>
+<div style="margin-top:44px">
+<div class="rule"><div class="n">01</div><div class="t">It drafts. You send.<small>Nothing goes out without your tap.</small></div></div>
+<div class="rule"><div class="n">02</div><div class="t">Check everything for 2 weeks<small>Fix its mistakes in the instructions.</small></div></div>
+<div class="rule"><div class="n">03</div><div class="t">Keep private stuff out<small>No passwords, no card numbers.</small></div></div></div>
+<div class="ft"><span>07 / 08</span><b>SWIPE →</b></div></div>
+
+<!-- 8 cta -->
+<div class="k" id="g8"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i></span></div>
+<div class="st" style="margin-top:110px">STUCK ON STEP 02?</div>
+<div class="h" style="font-size:150px">Answer 15 questions.<br><i>Get it filled in.</i></div>
+<div class="s">The free Business Brain turns your answers into ready instructions for your project, plus 10 prompts.</div>
+<div class="st" style="margin-top:70px;color:#8C8C88">COMMENT</div>
+<div class="kw">BRAIN</div>
+<div class="ft"><span>08 / 08</span><b>FREE</b></div></div>
+</body></html>

@@ -1,5 +1,23 @@
 [
  {
+  "id": "guide-01",
+  "at": "2026-10-30T12:30:00-04:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/6.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/7.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/8.jpg"
+  ],
+  "topic": "AI Tools",
+  "ig": false,
+  "text": "Most people use Claude like a search bar. Here's how to turn it into an agent that knows your business and does one job for you every morning.\n\n5 steps, about 10 minutes. Every prompt you need is on the slides.\n\nComment BRAIN and I'll send the free tool that fills in step 2 for you."
+ },
+ {
   "id": "auto1030-01",
   "at": "2026-11-04T12:30:00-05:00",
   "kind": "video",
