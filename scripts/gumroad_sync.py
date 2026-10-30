@@ -32,7 +32,7 @@ def upload(path, name):
 def main():
     if not TOK: print("No GUMROAD_TOKEN yet"); return
     try:
-        DBG.append(["token_len", len(TOK), TOK[:4]])
+        DBG.append(["token_len", len(TOK)])
         u = urllib.request.urlopen(API + "/user?" + urllib.parse.urlencode({"access_token": TOK}), timeout=60).read().decode(); DBG.append(["user", "ok"])
         print("::notice title=Gumroad user::" + json.loads(u)["user"].get("name", "ok"))
     except urllib.error.HTTPError as e: m = e.read().decode()[:200]; DBG.append(["user", e.code, m]); print(f"::warning title=Gumroad user check {e.code}::" + m)
