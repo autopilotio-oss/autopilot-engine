@@ -18,5 +18,20 @@
   "id": "x6n2xi-MW0lqHI5dXfS10g==",
   "url": "https://autopilotoi.gumroad.com/l/money-agents",
   "published": true
+ },
+ "subs-agent": {
+  "id": null,
+  "url": "https://autopilotoi.gumroad.com/l/subs-agent",
+  "published": true
+ },
+ "refund-agent": {
+  "id": null,
+  "url": "https://autopilotoi.gumroad.com/l/refund-agent",
+  "published": true
+ },
+ "raise-agent": {
+  "id": null,
+  "url": "https://autopilotoi.gumroad.com/l/raise-agent",
+  "published": true
  }
 }
