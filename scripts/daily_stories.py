@@ -72,7 +72,7 @@ def quiz_a(item, now, out):
 def poll(item, now, out):
     im, d = canvas("QUICK POLL · REPLY A OR B", now)
     y = T.headline(d, item["q"], 80, 410, 920, 140)
-    options(d, item["o"], y + 70); footer(d, "I READ EVERY REPLY"); im.save(out, quality=94)
+    options(d, item["o"], y + 70); footer(d, "REPLY A OR B"); im.save(out, quality=94)
 
 def main():
     now = dt.datetime.now(ET); day = now.date().isoformat(); n = now.toordinal()

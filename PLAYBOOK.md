@@ -57,3 +57,6 @@ Every Instagram carousel is also posted on X as a text thread (one tweet per sli
 
 ## Type system (Seb approved Oct 30)
 Headlines: Barlow Condensed Black Italic, UPPERCASE, emphasis words in lime (mark with {braces}). Body: Geist Medium/SemiBold. Labels: Geist Mono, uppercase, wide tracking. No serif, no thin weights, no glow. Pure black backgrounds with hairline rules and a header (logo, AUTOPILOT.OI, date, issue number). Helpers: scripts/typeset.py (headline, rich, label).
+
+## Voice (Seb: "nothing cringe")
+Write like a sharp operator texting a busy owner: calm, plain, specific, short. Never use: "they don't want you to know" (except the one carousel Seb named), "nobody tells you", "imagine", "be honest", "serious question", "secret", "hack", "game changer", "unlock", "level up", "AI employee", "zero/no tech words", hype emojis (👀🔥🚀), "it's live", "save this before", "most underrated". No fake urgency, no claims we can't back. One clear CTA. Read every line out loud: if it sounds like an ad or a guru, rewrite it.

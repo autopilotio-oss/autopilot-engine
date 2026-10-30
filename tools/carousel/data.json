@@ -1,31 +1,153 @@
 {
-"secrets":{"title":"THE 3 THINGS THEY DON'T WANT YOU TO KNOW ABOUT AI","slides":[
- {"hook":true,"t":"The 3 things they don't want you to know about AI.","s":"Nobody selling you a $2,000 course will say these out loud 👇"},
- {"n":"1","t":"The free version is enough to start.","s":"You don't need a paid plan, a course or a \"prompt pack\" to get real work done today. Open it and type."},
- {"n":"2","t":"AI is only as smart as what you tell it.","s":"\"Write an email\" = generic junk.","x":"\"I own a bakery. A customer is mad her order was late. Write a kind reply and offer 10% off.\"","s2":"= a reply you'd actually send."},
- {"n":"3","t":"You can make AI ask YOU the questions.","s":"Add this to the end of anything:","x":"\"Before you answer, ask me 5 questions so you get this right.\"","s2":"Most underrated trick there is."},
- {"n":"+","t":"Bonus: it makes things up sometimes.","s":"Always read before you hit send. It's your assistant, not your boss."},
- {"cta":true,"t":"Want AI that already knows your business?","s":"Comment BRAIN and I'll send you my free Business Brain builder. 5 minutes. $0."}]},
-"prompts":{"title":"TOP AI PROMPTS OF 2026","slides":[
- {"hook":true,"t":"The top AI prompts of 2026 for small business owners.","s":"Copy and paste. Works in Claude or ChatGPT. Save this 👇"},
- {"n":"1","t":"The reply writer","x":"\"Reply to this customer. Friendly, short, answer their question and offer a time to book: [paste message]\""},
- {"n":"2","t":"The follow up","x":"\"Write a 2 sentence follow up for a quote I sent 3 days ago. No pressure, just checking in.\""},
- {"n":"3","t":"The review ask","x":"\"Write a short text asking a happy customer for a Google review. Make it sound like me, not a robot.\""},
- {"n":"4","t":"The price defender","x":"\"A customer says I'm too expensive. Help me explain my price in a kind, confident way.\""},
- {"n":"5","t":"The day planner","x":"\"Here's my to do list. Put it in order of what makes me money first: [paste list]\""},
- {"n":"6","t":"The bad review fixer","x":"\"Help me reply to this bad review calmly and professionally: [paste review]\""},
- {"n":"7","t":"The caption machine","x":"\"Give me 5 short Instagram captions about [what I did today]. Sound human.\""},
- {"n":"8","t":"The secret one","x":"\"Ask me 5 questions about my business. Then write instructions so you always answer like my best employee.\"","s2":"That's how you build a Business Brain."},
- {"cta":true,"t":"Save this so you don't lose it.","s":"Want all of these filled in with YOUR business info? Comment BRAIN and I'll send it free."}]},
-"beginner":{"title":"HOW TO USE CLAUDE (TOTAL BEGINNER)","slides":[
- {"hook":true,"t":"How to use Claude if you've never touched AI.","s":"10 slides. Zero tech words. 👇"},
- {"n":"1","t":"Go to claude.ai or get the Claude app.","s":"Sign up free with your email. That's the whole setup."},
- {"n":"2","t":"Talk to it like texting a smart new employee.","s":"No special words. No \"prompt engineering.\" Just say what you need."},
- {"n":"3","t":"Tell it who you are.","x":"\"I own a cleaning business in Miami.\"","s2":"One sentence like this changes every answer."},
- {"n":"4","t":"Paste stuff in.","s":"Emails, reviews, your menu, even a photo of a receipt. It reads all of it."},
- {"n":"5","t":"Don't like the answer? Say so.","s":"\"Shorter.\" \"Friendlier.\" \"More like me.\" It rewrites in seconds."},
- {"n":"6","t":"Make it ask you questions first.","x":"\"Ask me 3 questions before you answer.\"","s2":"Better questions = better answers."},
- {"n":"7","t":"Save your business info once.","s":"Put it in a Project so you never repeat yourself again."},
- {"n":"8","t":"Read before you send.","s":"It's fast, not perfect. You're still the boss."},
- {"cta":true,"t":"Want the shortcut?","s":"Comment BRAIN and I'll send you a free tool that writes your business info for you in 5 minutes."}]}
+ "secrets": {
+  "title": "THE 3 THINGS",
+  "slides": [
+   {
+    "hook": true,
+    "t": "The 3 things they don't want you to know about AI.",
+    "s": "Swipe. Takes 30 seconds."
+   },
+   {
+    "n": "1",
+    "t": "The free version is enough to start.",
+    "s": "You don't need a paid plan or a course to get real work done today."
+   },
+   {
+    "n": "2",
+    "t": "It's only as good as what you tell it.",
+    "s": "\"Write an email\" gets you something generic.",
+    "x": "\"I own a bakery. A customer's order was late. Write a short apology and offer 10% off.\"",
+    "s2": "gets you something you'd actually send."
+   },
+   {
+    "n": "3",
+    "t": "Make it ask you questions first.",
+    "s": "Add this to any request:",
+    "x": "\"Before you answer, ask me 3 questions.\"",
+    "s2": "The answer gets noticeably better."
+   },
+   {
+    "n": "+",
+    "t": "It can be wrong.",
+    "s": "It sounds confident either way. Read everything before you send it."
+   },
+   {
+    "cta": true,
+    "t": "Want it to know your business?",
+    "s": "Comment BRAIN and I'll send the free Business Brain builder. Takes 5 minutes."
+   }
+  ]
+ },
+ "prompts": {
+  "title": "PROMPTS",
+  "slides": [
+   {
+    "hook": true,
+    "t": "The prompts small business owners actually use.",
+    "s": "Copy, paste, fill in the brackets. Works in Claude or ChatGPT."
+   },
+   {
+    "n": "1",
+    "t": "Reply to a customer",
+    "x": "\"Reply to this customer. Short and friendly. Answer the question and offer a time to book: [message]\""
+   },
+   {
+    "n": "2",
+    "t": "Follow up on a quote",
+    "x": "\"Write a 2 sentence follow up on a quote I sent 3 days ago. No pressure.\""
+   },
+   {
+    "n": "3",
+    "t": "Ask for a review",
+    "x": "\"Write a short text asking a happy customer for a Google review. Keep it casual.\""
+   },
+   {
+    "n": "4",
+    "t": "Handle a price objection",
+    "x": "\"A customer says I'm too expensive. Help me explain my price clearly and politely.\""
+   },
+   {
+    "n": "5",
+    "t": "Plan the day",
+    "x": "\"Here's my to do list. Order it by what brings in money first: [list]\""
+   },
+   {
+    "n": "6",
+    "t": "Answer a bad review",
+    "x": "\"Write a calm, professional reply to this review: [review]\""
+   },
+   {
+    "n": "7",
+    "t": "Write captions",
+    "x": "\"Give me 5 short captions about [what I did today]. Plain language, no hashtags.\""
+   },
+   {
+    "n": "8",
+    "t": "Set it up once",
+    "x": "\"Ask me 5 questions about my business, then write instructions so you always answer the way I would.\"",
+    "s2": "That's a Business Brain."
+   },
+   {
+    "cta": true,
+    "t": "Save this.",
+    "s": "Comment BRAIN and I'll send these back with your business details filled in."
+   }
+  ]
+ },
+ "beginner": {
+  "title": "BEGINNER",
+  "slides": [
+   {
+    "hook": true,
+    "t": "How to use Claude if you've never used AI.",
+    "s": "10 slides. No tech terms."
+   },
+   {
+    "n": "1",
+    "t": "Go to claude.ai or download the app.",
+    "s": "Sign up free with your email."
+   },
+   {
+    "n": "2",
+    "t": "Write like you're texting a capable assistant.",
+    "s": "No special wording needed. Say what you need."
+   },
+   {
+    "n": "3",
+    "t": "Tell it who you are.",
+    "x": "\"I run a cleaning business in Miami.\"",
+    "s2": "One line of context changes every answer."
+   },
+   {
+    "n": "4",
+    "t": "Paste things in.",
+    "s": "Emails, reviews, your menu, a photo of a receipt. It can read them."
+   },
+   {
+    "n": "5",
+    "t": "Ask for changes.",
+    "s": "\"Shorter.\" \"Friendlier.\" \"More like how I talk.\" It rewrites in seconds."
+   },
+   {
+    "n": "6",
+    "t": "Have it ask questions first.",
+    "x": "\"Ask me 3 questions before you answer.\""
+   },
+   {
+    "n": "7",
+    "t": "Save your details once.",
+    "s": "Put them in a Project so every chat already knows them."
+   },
+   {
+    "n": "8",
+    "t": "Check before you send.",
+    "s": "It's fast, not perfect. Read every word."
+   },
+   {
+    "cta": true,
+    "t": "Want a head start?",
+    "s": "Comment BRAIN for a free tool that writes your business details for you in 5 minutes."
+   }
+  ]
+ }
 }

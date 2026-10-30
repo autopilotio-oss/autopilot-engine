@@ -51,6 +51,6 @@ def from_carousel(slides):
         parts = [p for p in [(f"{s['n']}. " if s.get("n") and s["n"].isdigit() else "") + s["t"], s.get("s", ""), s.get("x", ""), s.get("s2", "")] if p]
         t = "\n\n".join(parts)
         if s.get("hook"): t = t.rstrip(" 👇") + " 🧵👇"
-        if s.get("cta"): t = t.replace("Comment BRAIN and I'll send you", "Get").replace("Comment BRAIN and I'll send it free.", "Get it free:") + "\n\nautopilotio-oss.github.io/autopilot-engine"
+        if s.get("cta"): t = s["t"] + "\n\nFree Business Brain builder, 5 minutes:\nautopilotio-oss.github.io/autopilot-engine"
         out.append(t)
     return out
