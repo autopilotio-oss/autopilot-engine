@@ -1,0 +1,35 @@
+[
+ {
+  "id": "auto1030-01",
+  "at": "2026-11-04T12:30:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/late-night-dm.mp4"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "11:48 PM. A lead asks if you're free Saturday.\n\nYou see it at 8 AM. They already booked someone else.\n\nAn agent can draft the reply the minute the message lands, so answering takes one tap.\n\nComment BRAIN and I'll send the free first step."
+ },
+ {
+  "id": "auto1030-02",
+  "at": "2026-11-05T09:00:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/reviews.jpg"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "Most happy customers never leave a review. Usually nobody asked them.\n\nThe ask works best the day after the job, while they still remember you. An agent can draft one for every finished job.\n\nComment BRAIN for the free first step."
+ },
+ {
+  "id": "auto1030-03",
+  "at": "2026-11-05T12:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/week.jpg"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "Same jobs. Same week. Less admin.\n\nReplies sit as drafts, follow ups are queued, invoices are ready. You read them and tap approve.\n\nThat's THE WORKSPACE: 7 Claude agents, about an hour to set up, $49 once.\n\nComment WORKSPACE for the link."
+ }
+]

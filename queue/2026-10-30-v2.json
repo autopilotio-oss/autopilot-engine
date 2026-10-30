@@ -7,7 +7,7 @@
    "https://autopilotio-oss.github.io/autopilot-engine/media/objections.mp4"
   ],
   "topic": "Small Business",
-  "text": "Seven AI agents, one setup. Here's how it handles the three things everyone worries about: sounding like you, setup, and sending something wrong.\n\nComment BRAIN for the free first step.",
+  "text": "Three worries stop most owners from trying AI:\n\nIt won't sound like me. Setup will take forever. It'll send something wrong.\n\nThis shows how each one is handled.\n\nComment BRAIN and I'll send the free first step.",
   "ig": false
  },
  {
@@ -15,15 +15,15 @@
   "at": "2026-10-30T12:30:00-04:00",
   "kind": "image",
   "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/launch.jpg"
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/ws2.jpg"
   ],
   "topic": "AI Tools",
-  "text": "THE WORKSPACE is out.\n\nIt sets up 7 Claude agents for a small business: replies drafted, jobs booked, quotes followed up, invoices made, reviews requested, and a brief every morning.\n\nAbout an hour to set up. Nothing sends without your approval.\n\n$49 once. Full refund within 30 days if it doesn't save you time.\n\nComment WORKSPACE for the link.",
+  "text": "Answering DMs at 11 PM is not the job you signed up for.\n\nTHE WORKSPACE sets up 7 Claude agents that draft your replies, quote follow ups, invoices and review asks. You approve every send.\n\nAbout an hour to set up. $49 once, 30 day refund.\n\nComment WORKSPACE for the link.",
   "ig": false
  },
  {
   "id": "v2-03",
-  "at": "2026-10-31T10:00:00-04:00",
+  "at": "2026-10-31T09:00:00-04:00",
   "kind": "image",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/cards/vs.jpg"
@@ -34,18 +34,18 @@
  },
  {
   "id": "v2-04",
-  "at": "2026-10-31T13:00:00-04:00",
+  "at": "2026-10-31T12:30:00-04:00",
   "kind": "image",
   "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/q1.jpg"
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/q2.jpg"
   ],
   "topic": "Small Business",
-  "text": "If you could hand off one task tomorrow, which one would it be?\n\nReply with it. I'll answer with how I'd set it up.",
+  "text": "One task off your plate tomorrow. Which one do you pick?\n\nReply with it and I'll answer with how I'd hand it off.",
   "ig": false
  },
  {
   "id": "v2-05",
-  "at": "2026-11-01T10:00:00-05:00",
+  "at": "2026-11-01T09:00:00-05:00",
   "kind": "video",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/morning-brief.mp4"
@@ -56,7 +56,7 @@
  },
  {
   "id": "v2-06",
-  "at": "2026-11-01T13:00:00-05:00",
+  "at": "2026-11-01T12:30:00-05:00",
   "kind": "image",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/cards/slow.jpg"
