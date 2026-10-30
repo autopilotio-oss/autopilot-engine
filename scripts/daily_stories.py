@@ -75,20 +75,23 @@ def poll(item, now, out):
     options(d, item["o"], y + 70); footer(d, "REPLY A OR B"); im.save(out, quality=94)
 
 def fact(item, num, now, out):
-    im, d = canvas("AI FACT · NO. " + str(num).zfill(3), now)
+    im, d = canvas("EVERYDAY FIX · NO. " + str(num).zfill(3), now)
     # giant outlined number as texture
     big = T.font("SairaSemiCondensed-BlackItalic.otf", 700)
     d.text((W + 40, 1640), str(num).zfill(2), font=big, fill=BG, stroke_width=4, stroke_fill=(34, 40, 14), anchor="rs")
-    T.label(d, "DID YOU KNOW", 80, 420, 24, SOFT)
-    y = T.headline(d, item["f"], 80, 470, 920, 132)
+    T.label(d, "THE PROBLEM", 80, 400, 24, SOFT)
+    T.rich(d, item.get("p", ""), 80, 452, 920, 44, (205, 207, 204), INK, sans="Geist-Medium.otf")
+    d.line((80, 500, W - 80, 500), fill=(40, 42, 38), width=2)
+    T.label(d, "THE FIX", 80, 560, 24, LIME)
+    y = T.headline(d, item["f"], 80, 610, 920, 124)
     d.rectangle((80, y + 30, 240, y + 38), fill=LIME)
     y = T.rich(d, item["more"], 80, y + 80, 900, 48, (205, 207, 204), INK, sans="Geist-Medium.otf", lead=1.3)
     if item.get("try"):
         top = y + 50
-        T.label(d, "TRY THIS", 120, top + 34, 22, LIME)
+        T.label(d, "SAY THIS TO CLAUDE", 120, top + 34, 22, LIME)
         yb = T.rich(d, item["try"], 120, top + 80, 840, 46, INK, LIME, sans="Geist-SemiBold.otf", lead=1.25)
         d.rounded_rectangle((80, top, W - 80, yb + 36), 28, fill=(14, 16, 10), outline=(80, 96, 30), width=2)
-        T.label(d, "TRY THIS", 120, top + 34, 22, LIME)
+        T.label(d, "SAY THIS TO CLAUDE", 120, top + 34, 22, LIME)
         T.rich(d, item["try"], 120, top + 80, 840, 46, INK, LIME, sans="Geist-SemiBold.otf", lead=1.25)
     footer(d, "SAVE THIS · SHARE IT"); im.save(out, quality=94)
 
@@ -109,7 +112,7 @@ def main():
     items += [("tip", "10:30", f"{day}-tip.jpg", "AI tip: " + plain(t["t"]) + " " + plain(t["x"])),
               ("quiz", "12:30", f"{day}-quiz.jpg", "Quiz: " + plain(q["q"])),
               ("answer", "14:30", f"{day}-answer.jpg", "Quiz answer: " + q["o"][q["a"]] + ". " + q["why"]),
-              ("fact", "16:30", f"{day}-fact.jpg", "AI fact: " + plain(fc["f"]) + " " + fc["more"]),
+              ("fact", "16:30", f"{day}-fact.jpg", "Everyday fix: " + plain(fc["f"]) + " " + fc["more"]),
               ("poll", "18:00", f"{day}-poll.jpg", "Poll: " + plain(p["q"]) + " A) " + p["o"][0] + " B) " + p["o"][1])]
     queue = []
     for k, hm, f, text in items:

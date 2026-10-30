@@ -67,3 +67,6 @@ Quality bar for every tip, quiz, poll and fact: it must teach something useful o
 
 ## Trust first (Seb, Oct 30)
 For now we teach, we don't sell. Instagram runs the "AI for Beginners" lesson series (Lesson 1, 2, 3... one a day, CTA = save/follow for the next lesson, no product pitches). Threads CTAs point only to the free Business Brain or a question, never THE WORKSPACE, until Seb says to start selling.
+
+## Everyday fix story (Seb, Oct 30)
+The 4:30 PM story is an "Everyday fix": a real problem normal people deal with (a bill, a lease, dinner, a hard email, homework) + how Claude solves it + the exact sentence to say to Claude. No trivia, no history, no scare facts. Never promise medical, legal or money outcomes; for health, "use it to prepare questions for your doctor".

@@ -177,88 +177,124 @@
  ],
  "facts": [
   {
-   "f": "Claude can read a {screenshot.}",
-   "more": "Send it a photo of a confusing bill, an error message or a menu in another language.",
-   "try": "\"What does this mean, and what should I do?\""
+   "p": "A bill you don't understand",
+   "f": "Claude can explain any {bill} from a photo.",
+   "more": "Snap the medical bill, phone bill or bank statement. It explains every line in plain English and flags charges that look off.",
+   "try": "\"Explain this bill line by line. Anything I should question?\""
   },
   {
-   "f": "AI can clone a voice from {under a minute} of audio.",
-   "more": "Scammers use this to fake calls from family. Agree on a code word with yours.",
-   "try": "Ask a weird personal question only they'd know."
+   "p": "Calling to cancel a subscription",
+   "f": "Claude can write the {cancel} message for you.",
+   "more": "Tell it the company and what you want. You get a short, firm message that's hard to argue with.",
+   "try": "\"Write a firm message to cancel my gym membership today.\""
   },
   {
-   "f": "Claude can read an entire {contract} in one go.",
-   "more": "Paste or upload the whole thing and get the parts that matter.",
+   "p": "Fighting a charge or fee",
+   "f": "Claude can write your {dispute} letter.",
+   "more": "Give it the date, the amount and what went wrong. It writes a clear, polite letter that gets read.",
+   "try": "\"Write a dispute for a $45 late fee. I paid on time.\""
+  },
+  {
+   "p": "A lease or contract to sign",
+   "f": "Claude can find the {catch} in a contract.",
+   "more": "Upload it before you sign. Ask what could cost you money or lock you in.",
    "try": "\"List anything in here that could cost me money.\""
   },
   {
-   "f": "AI can read {handwriting.}",
-   "more": "Snap a photo of a whiteboard, a note or an old notebook page.",
-   "try": "\"Type this up and turn it into a to do list.\""
+   "p": "Dinner with nothing in the fridge",
+   "f": "Claude can plan dinner from a {fridge} photo.",
+   "more": "Take a picture of what you have. It gives you meals you can make tonight without a store run.",
+   "try": "\"What can I cook in 30 minutes with this?\""
   },
   {
-   "f": "Without web search on, a chatbot {doesn't know today's news.}",
-   "more": "It only knows what it learned in training, up to a cutoff date.",
-   "try": "\"When does your knowledge end?\""
+   "p": "The weekly grocery run",
+   "f": "Claude can turn a week of meals into one {list.}",
+   "more": "Tell it your budget and how many people. It plans the meals and sorts the list by store aisle.",
+   "try": "\"Plan 5 cheap dinners for 4 people and make the grocery list.\""
   },
   {
-   "f": "AI can write a spreadsheet formula from {plain English.}",
-   "more": "No more googling how VLOOKUP works.",
-   "try": "\"Give me a formula that adds column C only when column B says paid.\""
+   "p": "An email you're dreading",
+   "f": "Claude can write the {hard} email for you.",
+   "more": "Asking for a raise, saying no, chasing money you're owed. Tell it the situation and the tone.",
+   "try": "\"Help me ask my boss for a raise. Confident, not pushy.\""
   },
   {
-   "f": "AI writes in {dozens of languages.}",
-   "more": "Reply to a customer in Spanish, Portuguese or Korean in seconds.",
-   "try": "\"Reply to this in their language, friendly and short.\""
+   "p": "Your kid's homework",
+   "f": "Claude can explain {homework} like you're 10.",
+   "more": "Snap the problem. Ask it to teach the steps, not just give the answer, so you can help.",
+   "try": "\"Explain how to solve this step by step for a 10 year old.\""
   },
   {
-   "f": "Claude can build a working {calculator or mini app} from one sentence.",
-   "more": "No code from you. It writes it and shows it right in the chat.",
-   "try": "\"Build me a quote calculator for my cleaning prices.\""
+   "p": "A letter from the IRS or the city",
+   "f": "Claude can explain {official} letters.",
+   "more": "Upload the letter. It tells you what it means, the deadline and what to do next.",
+   "try": "\"What is this letter asking me to do, and by when?\""
   },
   {
-   "f": "AI {forgets} your last chat unless you save context.",
-   "more": "Memory and Projects fix that. Otherwise every chat starts fresh.",
-   "try": "Save your business info in a Project once."
+   "p": "A doctor's note full of jargon",
+   "f": "Claude can explain your {lab results.}",
+   "more": "Paste them in. Use it to prepare questions, then ask your doctor.",
+   "try": "\"Explain this in plain English. What should I ask my doctor?\""
   },
   {
-   "f": "Chatbots don't read words. They read {tokens.}",
-   "more": "In English, one token is roughly three quarters of a word."
+   "p": "A messy budget",
+   "f": "Claude can sort your {spending} for you.",
+   "more": "Paste a month of transactions. It groups them and shows where the money actually went.",
+   "try": "\"Group these by category and show my top 3 money leaks.\""
   },
   {
-   "f": "AI can sound {100% sure} and still be wrong.",
-   "more": "It's called a hallucination. It's why you read before you send.",
-   "try": "\"How confident are you? What should I double check?\""
+   "p": "A trip to plan",
+   "f": "Claude can build a full {trip} in minutes.",
+   "more": "Give it the city, the days and your budget. You get a day by day plan you can edit.",
+   "try": "\"Plan 3 days in Miami for 2 people, $800 total.\""
   },
   {
-   "f": "AI will tell you why your plan {could fail,} if you ask.",
-   "more": "By default it tends to agree with you. Ask it to push back.",
-   "try": "\"Argue against this plan. Be specific.\""
+   "p": "A resume that gets ignored",
+   "f": "Claude can tailor your {resume} to the job.",
+   "more": "Paste your resume and the job post. It rewrites your bullets to match what they're asking for.",
+   "try": "\"Rewrite my resume bullets to fit this job post.\""
   },
   {
-   "f": "AI can turn a {voice note} into a clean email.",
-   "more": "Talk for a minute, paste the transcript, let it write.",
-   "try": "\"Turn this rambling into a short, clear email.\""
+   "p": "A text you don't know how to answer",
+   "f": "Claude can help you {reply} without the drama.",
+   "more": "Paste the message and say what you want to happen. It gives you a calm reply.",
+   "try": "\"Help me reply to this. Calm, short, and I want to say no.\""
   },
   {
-   "f": "Faces made by AI can look {completely real.}",
-   "more": "Don't trust a profile picture alone before you send money or info."
+   "p": "A sign in another language",
+   "f": "Claude can {translate} a photo.",
+   "more": "Menus, signs, labels, instructions. Snap it and ask what it says.",
+   "try": "\"What does this say, and is there anything I should know?\""
   },
   {
-   "f": "ChatGPT hit an estimated {100 million users} in about two months.",
-   "more": "Analysts called it the fastest growing consumer app at the time."
+   "p": "Something broken at home",
+   "f": "Claude can help you {fix} it from a photo.",
+   "more": "Leaky faucet, tripped breaker, error code on the washer. Show it and ask for the steps.",
+   "try": "\"What's wrong here and how do I fix it myself safely?\""
   },
   {
-   "f": "In 2016, AI beat the world's best Go player with a move experts called {impossible.}",
-   "more": "AlphaGo's makers estimated a human would play Move 37 about 1 time in 10,000."
+   "p": "A review you need to answer",
+   "f": "Claude can reply to a bad {review} for you.",
+   "more": "Paste the review. It writes a reply that sounds human, owns the problem and fixes it.",
+   "try": "\"Write a calm, short reply to this 1 star review.\""
   },
   {
-   "f": "AI has predicted the shape of {200 million proteins.}",
-   "more": "Work that used to take scientists years per protein. It won a Nobel Prize in 2024."
+   "p": "Comparing two options",
+   "f": "Claude can {compare} anything side by side.",
+   "more": "Two phones, two quotes, two insurance plans. Paste both and ask for a simple table.",
+   "try": "\"Compare these two quotes in a table. Which is better value?\""
   },
   {
-   "f": "The first chatbot was built in {1966.}",
-   "more": "It was called ELIZA. People confided in it, even though it mostly repeated their words back."
+   "p": "A 40 page report you won't read",
+   "f": "Claude can {summarize} a long document in seconds.",
+   "more": "Paste the report, the transcript or the PDF. Ask for the points that matter.",
+   "try": "\"Give me the 5 points that matter, in plain English.\""
+  },
+  {
+   "p": "Writing a toast or a speech",
+   "f": "Claude can write a {speech} that sounds like you.",
+   "more": "Give it names, two stories and how long you have. Then ask it to make it sound more like you.",
+   "try": "\"Write a 1 minute toast for my brother's wedding. Funny, not cheesy.\""
   }
  ]
 }
