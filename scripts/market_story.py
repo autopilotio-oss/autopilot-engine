@@ -54,25 +54,26 @@ def frame(t, ctx):
     hero, items, lines, now = ctx["hero"], ctx["items"], ctx["lines"], ctx["now"]
     im = ctx["base"].copy(); d = ImageDraw.Draw(im)
     up = hero["chg"] >= 0; col = LIME if up else RED
-    # header (tweet style)
-    a = ease(t / 0.4)
-    im.paste(ctx["logo"], (80, int(150 - 20 * (1 - a))), ctx["mask"])
-    d.text((200, 160), "AUTOPILOT.OI", font=font("InterDisplay-SemiBold.otf", 38), fill=WHITE)
-    d.text((200, 206), "@autopilot.oi · " + now.strftime("%b %d"), font=font("Inter-Medium.otf", 32), fill=GREY)
-    d.text((80, 300), "gm. your 30 second market check", font=font("InterDisplay-Medium.otf", 46), fill=WHITE) if t > 0.2 else None
-    # hero: biggest mover
-    hp = ease((t - 0.5) / 0.6)
+    import typeset as T
+    INK, SOFT, LINE = (244, 244, 240), (150, 152, 150), (38, 38, 40)
+    im.paste(ctx["logo"].resize((76, 76)), (80, 170), ctx["mask"].resize((76, 76)))
+    d.text((176, 182), "AUTOPILOT.OI", font=T.font("Geist-SemiBold.otf", 32), fill=INK)
+    T.label(d, now.strftime("%b %d · %Y"), 176, 224, 20, SOFT)
+    T.label(d, "NO. " + str(now.timetuple().tm_yday).zfill(3), W - 80, 200, 20, SOFT, anchor="ra")
+    d.line([(80, 300), (W - 80, 300)], fill=LINE, width=2)
+    T.label(d, "MARKET CHECK · 30 SECONDS", 80, 340, 24, LIME)
+    hp = ease((t - 0.3) / 0.6)
     if hp > 0:
-        d.text((80, 410), f"TODAY'S BIG MOVE · {hero['span']}", font=font("SpaceMono-Bold.ttf", 28), fill=GREY)
-        d.text((80, 460), hero["name"], font=font("InterDisplay-Medium.otf", 88), fill=WHITE)
-        shown = hero["chg"] * ease((t - 0.7) / 1.2)
-        d.text((70, 560), pct(shown), font=font("InterDisplay-Light.otf", 230), fill=col)
-        d.text((W - 80, 486), money(hero["price"]), font=font("InterDisplay-Light.otf", 60), fill=WHITE, anchor="ra")
+        T.label(d, f"TODAY'S BIGGEST MOVE · {hero['span']}", 80, 420, 22, SOFT)
+        d.text((76, 590), hero["name"].upper(), font=T.font("BarlowCondensed-BlackItalic.otf", 140), fill=INK, anchor="ls")
+        T.label(d, money(hero["price"]), W - 80, 548, 30, SOFT, track=0.04, anchor="ra")
+        shown = hero["chg"] * ease((t - 0.6) / 1.2)
+        d.text((70, 840), pct(shown), font=T.font("BarlowCondensed-BlackItalic.otf", 280), fill=col, anchor="ls")
     # sparkline draws in
     hist = hero.get("hist") or []
     sp = ease((t - 1.0) / 1.6)
     if len(hist) > 2 and sp > 0:
-        x0, x1, y0, y1 = 80, W - 80, 880, 1080
+        x0, x1, y0, y1 = 80, W - 80, 900, 1090
         lo, hi = min(hist), max(hist); rng = (hi - lo) or 1
         pts = [(x0 + (x1 - x0) * i / (len(hist) - 1), y1 - (y1 - y0) * (v - lo) / rng) for i, v in enumerate(hist)]
         n = max(2, int(len(pts) * sp + 1)); seg = pts[:n]
@@ -81,7 +82,7 @@ def frame(t, ctx):
         ld.polygon(fill_poly, fill=col + (22,)); im.paste(layer, (0, 0), layer); d = ImageDraw.Draw(im)
         d.line(seg, fill=col, width=5, joint="curve")
         d.ellipse((seg[-1][0] - 10, seg[-1][1] - 10, seg[-1][0] + 10, seg[-1][1] + 10), fill=col)
-        d.text((80, 1122), "LAST 7 DAYS", font=font("SpaceMono-Bold.ttf", 24), fill=GREY)
+        T.label(d, "LAST 7 DAYS", 80, 1124, 20, (150, 152, 150))
     # ticker chips slide in
     y = 1190
     for i, it in enumerate(items):
@@ -89,16 +90,18 @@ def frame(t, ctx):
         if p <= 0: continue
         cx = 80 + (i % 4) * 236; cy = y + (i // 4) * 132 + int(60 * (1 - p))
         c = LIME if it["chg"] >= 0 else RED
-        d.rounded_rectangle((cx, cy, cx + 216, cy + 112), 20, fill=(8, 8, 9), outline=(44, 44, 46), width=2)
-        d.text((cx + 22, cy + 18), it["sym"], font=font("SpaceMono-Bold.ttf", 26), fill=(170, 170, 166))
-        d.text((cx + 22, cy + 56), pct(it["chg"]), font=font("InterDisplay-Medium.otf", 38), fill=c)
+        d.rounded_rectangle((cx, cy, cx + 216, cy + 112), 20, outline=(60, 60, 62), width=2)
+        T.label(d, it["sym"], cx + 22, cy + 20, 22, (150, 152, 150))
+        d.text((cx + 22, cy + 50), pct(it["chg"]), font=T.font("BarlowCondensed-BlackItalic.otf", 50), fill=c)
     # plain english, line by line
     for i, l in enumerate(lines):
         p = ease((t - 3.6 - i * 0.55) / 0.4)
         if p <= 0: continue
-        d.text((80 + int(30 * (1 - p)), 1490 + 62 * i), l, font=font("InterDisplay-Medium.otf", 36), fill=tuple(int(v * p) for v in WHITE))
+        d.text((80 + int(30 * (1 - p)), 1490 + 60 * i), l, font=T.font("Geist-Medium.otf", 38), fill=tuple(int(v * p) for v in WHITE))
     if t > 5.6:
-        d.text((80, 1712), "Not financial advice. Prices as of " + now.strftime("%I:%M %p").lstrip("0") + " ET.", font=font("Inter-Medium.otf", 28), fill=GREY)
+        d.line([(80, 1660), (W - 80, 1660)], fill=(38, 38, 40), width=2)
+        T.label(d, "NOT FINANCIAL ADVICE · " + now.strftime("%I:%M %p").lstrip("0") + " ET", 80, 1686, 22, (150, 152, 150))
+        T.label(d, "@AUTOPILOT.OI", W - 80, 1686, 22, (150, 152, 150), anchor="ra")
     return im
 
 def soundtrack(path, green, n_items, n_lines, sr=44100):

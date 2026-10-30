@@ -54,3 +54,6 @@ Every Instagram carousel is also posted on X as a text thread (one tweet per sli
 
 ## 5 Instagram stories a day (all black)
 .github/workflows/market.yml ("Daily stories", about 7 AM ET) runs scripts/daily_stories.py: 8:30 market check video, 10:30 AI tip, 12:30 quiz question, 14:30 quiz answer, 18:00 poll (ET). Pure black background, InterDisplay type, lime accents. The API can't add real poll or quiz stickers, so stories ask people to reply A, B or C. Content rotates from tools/story/pool.json: keep adding fresh, true tips, quizzes and polls there (never repeat within 2 weeks). Seb approves all 5 with one YES (they share a "group").
+
+## Type system (Seb approved Oct 30)
+Headlines: Barlow Condensed Black Italic, UPPERCASE, emphasis words in lime (mark with {braces}). Body: Geist Medium/SemiBold. Labels: Geist Mono, uppercase, wide tracking. No serif, no thin weights, no glow. Pure black backgrounds with hairline rules and a header (logo, AUTOPILOT.OI, date, issue number). Helpers: scripts/typeset.py (headline, rich, label).
