@@ -25,11 +25,11 @@ jobs:
             -d client_id="$APP_ID" -d client_secret="$THREADS_APP_SECRET" \
             -d grant_type=authorization_code -d redirect_uri="$REDIRECT" -d code="$CODE")
           SHORT=$(echo "$R" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
-          if [ -z "$SHORT" ]; then echo "::error title=Code swap failed::$R"; exit 1; fi
+          if [ -z "$SHORT" ]; then echo "::error title=Code swap failed::$(echo "$R" | tr -d '\n' | head -c 400) codelen=${#CODE} secretlen=${#THREADS_APP_SECRET}"; exit 1; fi
           echo "::add-mask::$SHORT"
           R=$(curl -s "https://graph.threads.net/access_token?grant_type=th_exchange_token&client_secret=$THREADS_APP_SECRET&access_token=$SHORT")
           LONG=$(echo "$R" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
-          if [ -z "$LONG" ]; then echo "::error title=Long key failed::$(echo "$R" | head -c 300)"; exit 1; fi
+          if [ -z "$LONG" ]; then echo "::error title=Long key failed::$(echo "$R" | tr -d '\n' | head -c 300)"; exit 1; fi
           echo "::add-mask::$LONG"
           ME=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$LONG")
           echo "::notice title=Connected::$ME"
