@@ -314,7 +314,7 @@ $('kitf').addEventListener('submit',function(e){e.preventDefault();const em=$('k
  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
  b.disabled=true;b.textContent='SENDING...';const fd=new FormData();fd.append('email_address',em);
  fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){
-  $('kitf').style.display='none';m.innerHTML='<b>You\u2019re in.</b> Check your inbox and tap confirm so the tips reach you.';
+  $('kitf').style.display='none';m.innerHTML='<b>You\u2019re in.</b> Check your inbox, your first tip is on its way.';
  }).catch(function(){b.disabled=false;b.textContent='SEND ME FREE TIPS';m.textContent='Something went wrong. Try again in a moment.'})});
 </script>
 </body></html>
