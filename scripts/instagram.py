@@ -58,9 +58,11 @@ def wait_ready(cid, token, tries=40, gap=10):
     raise IGError(f"container {cid} never finished")
 
 def post(uid, token, kind, caption, urls):
-    """kind: video | image | carousel. Text only posts are skipped (Instagram needs media)."""
+    """kind: video | image | carousel | story. Text only posts are skipped (Instagram needs media)."""
     if kind == "video":
         cid = _req("POST", f"/{uid}/media", {"media_type": "REELS", "video_url": urls[0], "caption": caption, "share_to_feed": "true"}, token)["id"]
+    elif kind == "story":
+        cid = _req("POST", f"/{uid}/media", {"media_type": "STORIES", "image_url": urls[0]}, token)["id"]
     elif kind == "image":
         cid = _req("POST", f"/{uid}/media", {"image_url": urls[0], "caption": caption}, token)["id"]
     elif kind == "carousel":

@@ -48,3 +48,6 @@ To make one: add a new key to tools/carousel/data.json, run node r.js inside too
 
 ## X (Twitter)
 Every Instagram carousel is also posted on X as a text thread (one tweet per slide) at the same time, kind "x_thread" with a "tweets" list. Build it with scripts/xpost.py from_carousel(). Only the last tweet has a link (links cost more on X). Threads posts never go to Instagram; Instagram posts never go to Threads.
+
+## Daily market story (Instagram Stories only)
+.github/workflows/market.yml runs every morning (about 8 AM ET), pulls crypto (CoinGecko) and stock (Stooq) prices, renders docs/media/stories/<date>.jpg with scripts/market_story.py and queues it as an Instagram story an hour later. It waits for Seb's YES like everything else. Numbers only from the data, plain English, always "Not financial advice". Never predict prices or tell people what to buy.
