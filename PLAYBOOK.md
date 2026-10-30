@@ -51,3 +51,6 @@ Every Instagram carousel is also posted on X as a text thread (one tweet per sli
 
 ## Daily market story (Instagram Stories only)
 .github/workflows/market.yml runs every morning (about 8 AM ET), pulls crypto (CoinGecko) and stock (Stooq) prices, renders an animated 9 second story video docs/media/stories/<date>.mp4 (tweet style, biggest mover as the hero with a 7 day chart, green or red mood) with scripts/market_story.py and queues it as an Instagram story an hour later. It waits for Seb's YES like everything else. Numbers only from the data, plain English, always "Not financial advice". Never predict prices or tell people what to buy.
+
+## 5 Instagram stories a day (all black)
+.github/workflows/market.yml ("Daily stories", about 7 AM ET) runs scripts/daily_stories.py: 8:30 market check video, 10:30 AI tip, 12:30 quiz question, 14:30 quiz answer, 18:00 poll (ET). Pure black background, InterDisplay type, lime accents. The API can't add real poll or quiz stickers, so stories ask people to reply A, B or C. Content rotates from tools/story/pool.json: keep adding fresh, true tips, quizzes and polls there (never repeat within 2 weeks). Seb approves all 5 with one YES (they share a "group").

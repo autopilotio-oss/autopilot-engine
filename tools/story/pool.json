@@ -1,0 +1,34 @@
+{
+"tips":[
+ {"t":"Paste any long email into Claude and type:","x":"\"Explain this in 3 sentences. What do I need to do?\""},
+ {"t":"Add this to the end of any request:","x":"\"Ask me 3 questions before you answer.\""},
+ {"t":"Want it to sound like you? Paste 2 of your old messages and say:","x":"\"Write like this.\""},
+ {"t":"Snap a photo of a receipt and ask:","x":"\"Turn this into an expense list.\""},
+ {"t":"Stuck on a reply? Type:","x":"\"Give me 3 versions: short, friendly, firm.\""},
+ {"t":"After any plan, ask:","x":"\"What am I missing?\""},
+ {"t":"Save your business info in a Claude Project once.","x":"Every chat inside it remembers your prices and rules."},
+ {"t":"Got a bad review? Paste it and say:","x":"\"Write a calm, professional reply.\""},
+ {"t":"Paste your to do list and ask:","x":"\"Put this in order. What makes me money first?\""},
+ {"t":"Rule number one:","x":"Always read before you send. AI can be confidently wrong."}
+],
+"quizzes":[
+ {"q":"Which prompt gets the better answer?","o":["\"Write an email\"","\"Write a friendly 3 line email to a customer whose order is late. Offer 10% off.\""],"a":1,"why":"Details in, quality out. Tell it who, what and how."},
+ {"q":"Can Claude read a photo of a handwritten note?","o":["Yes","No"],"a":0,"why":"It can read images, including handwriting. Double check names and numbers."},
+ {"q":"What should you ALWAYS do before sending an AI reply?","o":["Send it fast","Read it first","Add emojis"],"a":1,"why":"AI drafts. You decide. Read every word before it goes out."},
+ {"q":"Is the free version of Claude enough to start?","o":["Yes","No, you need to pay"],"a":0,"why":"Free is plenty to learn and do real work. Upgrade only when you hit limits."},
+ {"q":"Chatbot vs agent. What's the difference?","o":["Same thing","A chatbot answers. An agent does a task."],"a":1,"why":"Agents take action, like drafting every reply in your inbox."},
+ {"q":"Best way to make AI sound like you?","o":["Ask nicely","Paste examples of how you write","Type in all caps"],"a":1,"why":"Show, don't tell. Two real examples beat any description."},
+ {"q":"AI stated a fact that's wrong. What happened?","o":["It's broken","It hallucinated"],"a":1,"why":"AI can sound sure and still be wrong. Always check facts that matter."},
+ {"q":"How long does a Business Brain take to make?","o":["5 minutes","5 hours"],"a":0,"why":"15 questions, about 5 minutes. Comment BRAIN on any post for the free tool."}
+],
+"polls":[
+ {"q":"What eats more of your week?","o":["Answering messages","Chasing payments"]},
+ {"q":"Would you let AI draft your replies?","o":["Yes, if I approve","No way"]},
+ {"q":"Claude or ChatGPT?","o":["Claude","ChatGPT"]},
+ {"q":"When do you do admin work?","o":["Early morning","Late at night"]},
+ {"q":"What would you automate first?","o":["Bookings","Reviews"]},
+ {"q":"Do you reply to new leads within 1 hour?","o":["Always","Not really"]},
+ {"q":"AI in your business this year?","o":["Already using it","Starting now"]},
+ {"q":"Which hurts more?","o":["A bad review","A lost lead"]}
+]
+}

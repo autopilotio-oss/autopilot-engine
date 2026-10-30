@@ -43,7 +43,7 @@ def main(now=None):
         at = dt.datetime.fromisoformat(p["at"])
         if at <= now and (now - at) < dt.timedelta(hours=6):
             if gate:
-                st = approval.status(p["id"])
+                st = approval.status(approval.key(p))
                 if st == "rejected":
                     posted[p["id"]] = {"media_id": None, "skipped": "rejected by Seb", "at": now.isoformat(), "kind": p["kind"]}
                     approval.finish(p["id"], "Skipped. It will not be posted.")
@@ -51,7 +51,7 @@ def main(now=None):
                 if st != "approved":
                     print("waiting for approval", p["id"]); continue
             due.append(p)
-        elif gate and at <= now and approval.status(p["id"]) == "waiting":
+        elif gate and at <= now and approval.status(approval.key(p)) == "waiting":
             posted[p["id"]] = {"media_id": None, "skipped": "no approval in time", "at": now.isoformat(), "kind": p["kind"]}
             approval.finish(p["id"], "Expired without approval, so it was not posted.")
             json.dump(posted, open(STATE, "w"), indent=1)
@@ -93,7 +93,7 @@ def post_x(now):
             if not (at <= now and (now - at) < dt.timedelta(hours=6)): continue
             if DRY:
                 print("DRY X", p["id"], len(p["tweets"]), "tweets"); continue
-            if approval.required() and approval.status(p["id"]) != "approved":
+            if approval.required() and approval.status(approval.key(p)) != "approved":
                 print("waiting for approval", p["id"]); continue
             try:
                 tid = xpost.thread(p["tweets"])
@@ -123,7 +123,7 @@ def cross_post_instagram(raw, now):
     for p in sorted(due, key=lambda x: x["at"])[:MAX_PER_RUN]:
         if p["id"] in done or p.get("kind") in ("text", "x_thread") or p.get("ig") is False:
             continue
-        if approval.required() and not DRY and approval.status(p["id"]) != "approved":
+        if approval.required() and not DRY and approval.status(approval.key(p)) != "approved":
             continue
         urls = [m if m.startswith("http") else raw + m for m in p.get("media", [])]
         if DRY:
@@ -133,7 +133,8 @@ def cross_post_instagram(raw, now):
             mid = instagram.post(uid, token, p["kind"], instagram.ig_caption(p["text"]), urls)
             done[p["id"]] = {"media_id": mid, "at": now.isoformat(), "kind": p["kind"]}
             print("instagram", p["id"], mid)
-            if p.get("threads") is False: approval.finish(p["id"], "Posted on Instagram ✅")
+            if p.get("threads") is False and not p.get("group"): approval.finish(p["id"], "Posted on Instagram ✅")
+            if p.get("group") and p["id"].endswith("-poll"): approval.finish(p["group"], "All stories posted ✅")
         except instagram.IGError as e:
             print("IG FAILED", p["id"], e)
     if not DRY:

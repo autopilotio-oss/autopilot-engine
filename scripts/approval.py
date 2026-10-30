@@ -75,19 +75,36 @@ def _body(p, ig_caption):
 _No answer = it waits and does not post. Want changes? Tell Claude in chat._
 """
 
+def key(p):
+    return p.get("group") or p["id"]
+
+def _group_body(members):
+    parts = ["## Reply **YES** to approve ALL of these, or **NO** to skip them all.\n"]
+    for i, p in enumerate(sorted(members, key=lambda x: x["at"]), 1):
+        m = (p.get("media") or [""])[0]
+        pv = m.rsplit(".", 1)[0] + "-poster.jpg" if m.endswith(".mp4") else m
+        parts.append(f"### {i}. {p['at'][11:16]} ET · Instagram story\n" + (f"[▶️ Watch]({m})\n\n" if m.endswith(".mp4") else "") + f"![story {i}]({pv})\n")
+    parts.append("_No answer = none of them post. Want one changed? Tell Claude in chat._")
+    return "\n".join(parts)
+
 def request_upcoming(posts, now, ig_caption, posted_ids, lead_minutes=75):
     """Open an approval issue for each post due within the next ~hour."""
     import datetime as dt
     s = _load(); changed = False
     for p in posts:
-        if p["id"] in s or p["id"] in posted_ids: continue
+        k = key(p)
+        if k in s or p["id"] in posted_ids: continue
         at = dt.datetime.fromisoformat(p["at"])
         if now < at <= now + dt.timedelta(minutes=lead_minutes) or (at <= now and now - at < dt.timedelta(hours=6)):
             try:
-                iss = _gh("POST", "/issues", {"title": f"Approve post · {at.strftime('%a %b %d %I:%M %p')} ET · {p['id']}",
-                                              "body": _body(p, ig_caption(p["text"])), "assignees": [_owner()]})
-                s[p["id"]] = {"issue": iss["number"], "status": "waiting"}; changed = True
-                print("approval requested", p["id"], "issue", iss["number"])
+                if p.get("group"):
+                    members = [x for x in posts if x.get("group") == k]
+                    title = f"Approve today's {len(members)} stories · {at.strftime('%a %b %d')}"; body = _group_body(members)
+                else:
+                    title = f"Approve post · {at.strftime('%a %b %d %I:%M %p')} ET · {p['id']}"; body = _body(p, ig_caption(p["text"]))
+                iss = _gh("POST", "/issues", {"title": title, "body": body, "assignees": [_owner()]})
+                s[k] = {"issue": iss["number"], "status": "waiting"}; changed = True
+                print("approval requested", k, "issue", iss["number"])
             except Exception as e:
                 print("could not open approval issue", p["id"], e)
     if changed: _save(s)

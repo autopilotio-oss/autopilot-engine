@@ -52,8 +52,7 @@ def back(x):
 
 def frame(t, ctx):
     hero, items, lines, now = ctx["hero"], ctx["items"], ctx["lines"], ctx["now"]
-    z = 1 + 0.06 * (t / DUR); bw, bh = int(W / z), int(H / z)
-    im = ctx["base"].crop(((W - bw) // 2, H - bh, (W + bw) // 2, H)).resize((W, H)); d = ImageDraw.Draw(im)
+    im = ctx["base"].copy(); d = ImageDraw.Draw(im)
     up = hero["chg"] >= 0; col = LIME if up else RED
     # header (tweet style)
     a = ease(t / 0.4)
@@ -168,11 +167,7 @@ def build(crypto, stocks, now, out_mp4, out_jpg):
     hero = max(allm, key=lambda x: abs(x["chg"]))
     items = [x for x in allm if x is not hero]
     lines = lines_for(crypto, stocks, now.weekday() >= 5 or now.weekday() == 0)
-    base = Image.open(os.path.join(ROOT, "tools", "story", "bg_green.png" if hero["chg"] >= 0 else "bg_red.png")).convert("RGB").resize((W, H))
-    shade = Image.new("L", (W, H), 0); sd = ImageDraw.Draw(shade)
-    for y in range(1120, 1800):
-        a = min(1, (y - 1120) / 120) * min(1, (1800 - y) / 160); sd.line([(0, y), (W, y)], fill=int(175 * a))
-    base = Image.composite(Image.new("RGB", (W, H), BG), base, shade)
+    base = Image.new("RGB", (W, H), BG)
     logo = Image.open(os.path.join(ROOT, "tools", "story", "logo.png")).convert("RGB").resize((100, 100))
     mask = Image.new("L", (100, 100), 0); ImageDraw.Draw(mask).ellipse((0, 0, 100, 100), fill=255)
     ctx = {"hero": hero, "items": items, "lines": lines, "now": now, "base": base, "logo": logo, "mask": mask}
