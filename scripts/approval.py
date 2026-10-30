@@ -44,13 +44,15 @@ def _body(p, ig_caption):
     if p.get("kind") == "video":
         poster = m.rsplit(".", 1)[0] + "-poster.jpg"
         media = f"### ▶️ [Watch the reel]({m})\n\n![preview]({poster})"
+    elif p.get("kind") == "carousel":
+        media = "\n".join(f"**Slide {i}**\n\n![slide {i}]({u})\n" for i, u in enumerate(p.get("media", []), 1))
     elif m:
         media = f"![post]({m})"
     else:
         media = "_Text only (Threads only)_"
     return f"""## Reply **YES** to post it, or **NO** to skip it.
 
-**Goes out:** {p['at']} (US Eastern) · **Where:** Threads{'' if p.get('kind') == 'text' or p.get('ig') is False else ' + Instagram'}
+**Goes out:** {p['at']} (US Eastern) · **Where:** {'Instagram only' if p.get('threads') is False else ('Threads' + ('' if p.get('kind') == 'text' or p.get('ig') is False else ' + Instagram'))}
 
 {media}
 

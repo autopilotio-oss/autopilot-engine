@@ -1,0 +1,55 @@
+[
+ {
+  "id": "ig-c01",
+  "at": "2026-10-30T19:00:00-04:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/secrets/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/secrets/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/secrets/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/secrets/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/secrets/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/secrets/6.jpg"
+  ],
+  "threads": false,
+  "text": "The 3 things they don't want you to know about AI 👀\n\nSwipe through. Number 3 is the one nobody uses.\n\nComment BRAIN and I'll send you my free Business Brain builder."
+ },
+ {
+  "id": "ig-c02",
+  "at": "2026-10-31T11:30:00-04:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/6.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/7.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/8.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/9.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/prompts/10.jpg"
+  ],
+  "threads": false,
+  "text": "The top AI prompts of 2026 for small business owners.\n\nSave this so you have them when you need them. Works in Claude or ChatGPT.\n\nComment BRAIN and I'll send them filled in with your business info, free."
+ },
+ {
+  "id": "ig-c03",
+  "at": "2026-11-01T11:30:00-05:00",
+  "kind": "carousel",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/1.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/2.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/3.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/4.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/5.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/6.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/7.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/8.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/9.jpg",
+   "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/beginner/10.jpg"
+  ],
+  "threads": false,
+  "text": "Never used AI? Start here.\n\nHow to use Claude in 10 slides, zero tech words.\n\nSend this to the friend who still does everything by hand. Comment BRAIN for the free shortcut."
+ }
+]

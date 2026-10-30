@@ -38,7 +38,7 @@ def main(now=None):
         approval.request_upcoming(allposts, now, instagram.ig_caption, set(posted))
     due = []
     for p in allposts:
-        if p["id"] in posted: continue
+        if p["id"] in posted or p.get("threads") is False: continue
         at = dt.datetime.fromisoformat(p["at"])
         if at <= now and (now - at) < dt.timedelta(hours=6):
             if gate:
@@ -50,7 +50,7 @@ def main(now=None):
                 if st != "approved":
                     print("waiting for approval", p["id"]); continue
             due.append(p)
-        elif gate and at <= now and p["id"] not in posted and approval.status(p["id"]) == "waiting":
+        elif gate and at <= now and approval.status(p["id"]) == "waiting":
             posted[p["id"]] = {"media_id": None, "skipped": "no approval in time", "at": now.isoformat(), "kind": p["kind"]}
             approval.finish(p["id"], "Expired without approval, so it was not posted.")
             json.dump(posted, open(STATE, "w"), indent=1)
@@ -105,6 +105,7 @@ def cross_post_instagram(raw, now):
             mid = instagram.post(uid, token, p["kind"], instagram.ig_caption(p["text"]), urls)
             done[p["id"]] = {"media_id": mid, "at": now.isoformat(), "kind": p["kind"]}
             print("instagram", p["id"], mid)
+            if p.get("threads") is False: approval.finish(p["id"], "Posted on Instagram ✅")
         except instagram.IGError as e:
             print("IG FAILED", p["id"], e)
     if not DRY:
