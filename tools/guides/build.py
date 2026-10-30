@@ -56,8 +56,9 @@ def page(slug, g):
     out.append(f"""<h2>Make it automatic</h2><div class="ag"><span class="tag">YOUR {e(a['name']).upper()}</span>
 <p style="margin-top:12px;font-size:19px">{e(a['what'])}</p><ol>{''.join(f'<li>{e(x)}</li>' for x in a['setup'])}</ol>
 <div class="pr" id="ag">{e(a['instr'])}<button class="cp" data-c="ag">COPY</button></div>
-<div class="dfy"><h3>Want it set up for you?</h3><p>Done for you {e(a['name'])} setups are coming soon. Get on the list and you'll hear first.</p>
-<form id="kf"><input type="email" id="ke" placeholder="your@email.com" required autocomplete="email"><button id="kb">JOIN THE LIST</button></form><p id="km" style="margin:10px 0 0;font-size:14px"></p></div></div>""")
+<div class="dfy"><h3>Get the full {e(a['name'])}</h3><p>The complete master prompt, 5 starter prompts, the tracker and the 10 minute setup. $10, or all 3 money agents for $24.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="https://autopilotoi.gumroad.com/l/{slug}-agent" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">GET IT · $10</a><a href="https://autopilotoi.gumroad.com/l/money-agents" style="flex:1 1 160px;text-align:center;border:2px solid #0a0a0a;color:#0a0a0a;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:13px">BUNDLE · $24</a></div><p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>
+<form id="kf"><input type="email" id="ke" placeholder="your@email.com" required autocomplete="email"><button id="kb">SEND ME TIPS</button></form><p id="km" style="margin:10px 0 0;font-size:14px"></p></div></div>""")
     out.append('<div class="src">Sources: ' + " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in g["sources"]) + "</div>")
     out.append("""<div class="foot">Educational only. Not financial, legal or medical advice. Check details with the company or a professional before you act. AUTOPILOT.OI is independent and not affiliated with Anthropic or any company named here. Claude is a product of Anthropic.</div></div>
 <div class="toast" id="t">COPIED ✓</div><script>
