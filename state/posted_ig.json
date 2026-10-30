@@ -1,8 +1,86 @@
 {
  "ig-money-credit": {
   "media_id": null,
-  "skipped": "posted manually by Seb (API blocked)",
-  "at": "2026-10-30T15:58:09.056588+00:00",
-  "kind": "video"
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-c01": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-c02": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-c03": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-l2": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-l3": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-l4": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-l5": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-money-bill": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "ig-money-debt": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "story-2026-10-30-quiz": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "story-2026-10-30-answer": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "story-2026-10-30-fact": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
+ },
+ "story-2026-10-30-poll": {
+  "media_id": null,
+  "via": "metricool",
+  "at": "2026-10-30T16:30:00+00:00",
+  "kind": "scheduled"
  }
 }

@@ -109,6 +109,9 @@ IG_STATE = os.path.join(ROOT, "state", "posted_ig.json")
 
 def cross_post_instagram(raw, now):
     """Same posts on Instagram when an Instagram key is connected. Never blocks Threads; retries for 6 hours."""
+    try:
+        if json.load(open(os.path.join(ROOT, "config", "instagram.json"))).get("publisher") == "metricool": return
+    except Exception: pass
     token = "" if DRY else instagram.get_token()
     if not token and not DRY:
         return

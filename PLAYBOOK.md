@@ -88,3 +88,6 @@ Main content now: real money problems solved with Claude, in the AP robot reel f
 - Voices: ElevenLabs "Brian - Deep, Resonant and Comforting" (eleven v4). ALWAYS speed every voice to 1.2x (Seb, Oct 30). Reels use the AP robot template in the money reel engine.
 - Reel captions: Saira SemiCondensed BlackItalic, uppercase, 82px, lime emphasis, placed low just above the robot (eye line, keeps people locked in); visuals sit at the top; card text Geist Bold. Seb, Oct 30.
 - Reel studio look (Seb, Oct 30): segmented progress bar with seconds left at the top, drifting lime light + grain + vignette background (no grid), cards with gradient edges and a shine sweep, 3D tilt and blur entrances, word by word captions with the active word popping, camera kick + flash on scene changes, scenes crossfade (never a blank frame). Source in tools/reel (needs the AP presenter frames and fonts locally).
+
+## Instagram publishing = Metricool (Oct 30)
+Meta blocked our app (every call returns "API access blocked"). Instagram now goes through Metricool (brand id 7761544, connected to @autopilot.oi). Claude schedules IG posts with the Metricool connector (createScheduledPost: REEL needs video + videoThumbnailUrl, carousel = POST with several images, STORY = image with no text). GitHub no longer posts to Instagram (config/instagram.json). Threads still posts from GitHub.
