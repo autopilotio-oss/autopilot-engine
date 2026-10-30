@@ -177,84 +177,88 @@
  ],
  "facts": [
   {
-   "f": "The term {artificial intelligence} was coined in 1955.",
-   "more": "John McCarthy used it in a proposal for a 1956 summer workshop at Dartmouth."
+   "f": "Claude can read a {screenshot.}",
+   "more": "Send it a photo of a confusing bill, an error message or a menu in another language.",
+   "try": "\"What does this mean, and what should I do?\""
   },
   {
-   "f": "In 1950, Alan Turing proposed a test for machine intelligence called {the imitation game.}",
-   "more": "Today we call it the Turing test."
+   "f": "AI can clone a voice from {under a minute} of audio.",
+   "more": "Scammers use this to fake calls from family. Agree on a code word with yours.",
+   "try": "Ask a weird personal question only they'd know."
   },
   {
-   "f": "The first chatbot, {ELIZA,} was built at MIT in 1966.",
-   "more": "Its creator was surprised how many people confided in it. It mostly turned their own words into questions."
+   "f": "Claude can read an entire {contract} in one go.",
+   "more": "Paste or upload the whole thing and get the parts that matter.",
+   "try": "\"List anything in here that could cost me money.\""
   },
   {
-   "f": "Arthur Samuel coined the term {machine learning} in 1959.",
-   "more": "He was teaching an IBM computer to get better at checkers by playing itself."
+   "f": "AI can read {handwriting.}",
+   "more": "Snap a photo of a whiteboard, a note or an old notebook page.",
+   "try": "\"Type this up and turn it into a to do list.\""
   },
   {
-   "f": "In 1958, the Navy showed off the {Perceptron,} an early neural network.",
-   "more": "Press coverage claimed it would one day walk, talk and be conscious of itself."
+   "f": "Without web search on, a chatbot {doesn't know today's news.}",
+   "more": "It only knows what it learned in training, up to a cutoff date.",
+   "try": "\"When does your knowledge end?\""
   },
   {
-   "f": "AI went through two {\"AI winters\"} where funding dried up.",
-   "more": "The first hit in the 1970s, the second in the late 1980s, after big promises didn't pay off."
+   "f": "AI can write a spreadsheet formula from {plain English.}",
+   "more": "No more googling how VLOOKUP works.",
+   "try": "\"Give me a formula that adds column C only when column B says paid.\""
   },
   {
-   "f": "IBM's Deep Blue beat world chess champion {Garry Kasparov} in 1997.",
-   "more": "It was the first time a computer beat a reigning champion in a full match."
+   "f": "AI writes in {dozens of languages.}",
+   "more": "Reply to a customer in Spanish, Portuguese or Korean in seconds.",
+   "try": "\"Reply to this in their language, friendly and short.\""
   },
   {
-   "f": "IBM's {Watson} won Jeopardy! in 2011.",
-   "more": "It beat two of the show's biggest champions, Ken Jennings and Brad Rutter."
+   "f": "Claude can build a working {calculator or mini app} from one sentence.",
+   "more": "No code from you. It writes it and shows it right in the chat.",
+   "try": "\"Build me a quote calculator for my cleaning prices.\""
   },
   {
-   "f": "In 2016, AlphaGo beat Go legend Lee Sedol {4 games to 1.}",
-   "more": "Go has more possible board positions than there are atoms in the observable universe."
-  },
-  {
-   "f": "AlphaGo's famous {Move 37} shocked the experts.",
-   "more": "Its makers estimated a human would play it about 1 time in 10,000."
-  },
-  {
-   "f": "The tech behind today's chatbots came from a 2017 Google paper called {\"Attention Is All You Need.\"}",
-   "more": "It introduced the Transformer. The T in GPT."
-  },
-  {
-   "f": "GPT stands for {Generative Pre-trained Transformer.}",
-   "more": "Generative: it creates text. Pre-trained: it learned from huge amounts of text first."
+   "f": "AI {forgets} your last chat unless you save context.",
+   "more": "Memory and Projects fix that. Otherwise every chat starts fresh.",
+   "try": "Save your business info in a Project once."
   },
   {
    "f": "Chatbots don't read words. They read {tokens.}",
    "more": "In English, one token is roughly three quarters of a word."
   },
   {
-   "f": "A chatbot writes by predicting {the next token,} over and over.",
-   "more": "That's also why it can sound confident while being wrong."
+   "f": "AI can sound {100% sure} and still be wrong.",
+   "more": "It's called a hallucination. It's why you read before you send.",
+   "try": "\"How confident are you? What should I double check?\""
   },
   {
-   "f": "When AI states something false with confidence, it's called a {hallucination.}",
-   "more": "It's the main reason you should read before you send."
+   "f": "AI will tell you why your plan {could fail,} if you ask.",
+   "more": "By default it tends to agree with you. Ask it to push back.",
+   "try": "\"Argue against this plan. Be specific.\""
   },
   {
-   "f": "ChatGPT hit an estimated {100 million users} about two months after launch.",
-   "more": "At the time, analysts called it the fastest growing consumer app ever."
+   "f": "AI can turn a {voice note} into a clean email.",
+   "more": "Talk for a minute, paste the transcript, let it write.",
+   "try": "\"Turn this rambling into a short, clear email.\""
   },
   {
-   "f": "The 2018 Turing Award, computing's top prize, went to three {deep learning} pioneers.",
-   "more": "Geoffrey Hinton, Yann LeCun and Yoshua Bengio."
+   "f": "Faces made by AI can look {completely real.}",
+   "more": "Don't trust a profile picture alone before you send money or info."
   },
   {
-   "f": "In 2024, AI research won {two Nobel Prizes.}",
-   "more": "Physics for neural network foundations, and Chemistry for AlphaFold's protein predictions."
+   "f": "ChatGPT hit an estimated {100 million users} in about two months.",
+   "more": "Analysts called it the fastest growing consumer app at the time."
   },
   {
-   "f": "DeepMind's {AlphaFold} has predicted structures for over 200 million proteins.",
-   "more": "Work that used to take scientists years per protein."
+   "f": "In 2016, AI beat the world's best Go player with a move experts called {impossible.}",
+   "more": "AlphaGo's makers estimated a human would play Move 37 about 1 time in 10,000."
   },
   {
-   "f": "{Claude} is made by Anthropic, an AI safety company founded in 2021.",
-   "more": "It's the AI we use for every setup on this page."
+   "f": "AI has predicted the shape of {200 million proteins.}",
+   "more": "Work that used to take scientists years per protein. It won a Nobel Prize in 2024."
+  },
+  {
+   "f": "The first chatbot was built in {1966.}",
+   "more": "It was called ELIZA. People confided in it, even though it mostly repeated their words back."
   }
  ]
 }
