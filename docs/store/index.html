@@ -1,14 +1,79 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AUTOPILOT.OI · AI Money Agents</title>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Geist+Mono:wght@500&family=Saira+Semi+Condensed:wght@900&display=swap" rel="stylesheet">
-<style>*{box-sizing:border-box;margin:0;padding:0}body{background:radial-gradient(600px 500px at 10% 0%,rgba(212,255,58,.14),transparent 60%),radial-gradient(500px 500px at 100% 100%,rgba(30,120,85,.16),transparent 60%),#040504;color:#fff;font:500 16px/1.5 Geist,system-ui,sans-serif;min-height:100vh}
-.w{max-width:520px;margin:0 auto;padding:34px 18px 60px}.h{text-align:center}.h img{width:84px;height:84px;border-radius:50%;box-shadow:0 0 40px rgba(212,255,58,.4)}
-h1{font:900 italic 40px/1 'Saira Semi Condensed',Impact,sans-serif;margin-top:14px;transform:skewX(-8deg)}.h p{color:#b9bcb4;margin-top:8px}
-h2{font:500 12px 'Geist Mono',monospace;letter-spacing:3px;color:#D4FF3A;margin:30px 4px 10px}
-.p{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;background:linear-gradient(165deg,#1b1e19,#0c0d0b);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:12px;margin-bottom:12px}
-.p.hot{border-color:#D4FF3A;box-shadow:0 0 40px rgba(212,255,58,.2)}.p img{width:70px;height:70px;border-radius:14px}.p b{display:block;font-size:17px}.p span{font-size:13.5px;color:#a8aba4}.p div{flex:1}
-.p i{font:900 italic 24px 'Saira Semi Condensed',Impact,sans-serif;color:#D4FF3A;font-style:normal}
-.f{display:flex;align-items:center;text-decoration:none;color:#fff;border:1px solid rgba(212,255,58,.35);border-radius:16px;padding:15px 16px;margin-bottom:10px;font-weight:600}.f em{margin-left:auto;font:500 11px 'Geist Mono',monospace;letter-spacing:2px;color:#0a0a0a;background:#D4FF3A;border-radius:7px;padding:4px 8px;font-style:normal}
-.n{font-size:12px;color:#6c6f68;text-align:center;margin-top:30px}</style></head><body><div class="w">
-<div class="h"><img src="../logo.png" alt=""><h1>AUTOPILOT.OI</h1><p>Claude agents that fix real money problems.</p></div>
-<h2>AGENT SETUPS</h2><a class="p hot" href="https://autopilotoi.gumroad.com/l/money-agents"><img src="bundle-thumb.png" alt=""><div><b>Money Agents Bundle</b><span>Credit, Bill and Debt Agent. Save $6.</span></div><i>$24</i></a><a class="p" href="https://autopilotoi.gumroad.com/l/credit-agent"><img src="credit-thumb.png" alt=""><div><b>Credit Agent</b><span>Audits your reports, writes disputes, tracks deadlines.</span></div><i>$10</i></a><a class="p" href="https://autopilotoi.gumroad.com/l/bill-agent"><img src="bill-thumb.png" alt=""><div><b>Bill Agent</b><span>Checks every medical bill against your insurance.</span></div><i>$10</i></a><a class="p" href="https://autopilotoi.gumroad.com/l/debt-agent"><img src="debt-thumb.png" alt=""><div><b>Debt Agent</b><span>Rate call scripts, payoff plan, what to pay each payday.</span></div><i>$10</i></a><h2>FREE GUIDES</h2><a class="f" href="https://autopilotio-oss.github.io/autopilot-engine/g/credit/">Fix your credit report yourself<em>FREE</em></a><a class="f" href="https://autopilotio-oss.github.io/autopilot-engine/g/bill/">Cut a medical bill before you pay<em>FREE</em></a><a class="f" href="https://autopilotio-oss.github.io/autopilot-engine/g/debt/">Lower your interest, get out of debt<em>FREE</em></a><a class="f" href="https://autopilotio-oss.github.io/autopilot-engine/brain/">Free AI Front Desk<em>FREE</em></a>
-<p class="n">Education only, not financial advice. Independent, not affiliated with Anthropic.</p></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AUTOPILOT.OI · Money Agents</title>
+<meta name="description" content="7 Claude agents that answer customers, book jobs, chase quotes and brief you every morning. Set up once in about an hour.">
+<meta property="og:title" content="AUTOPILOT.OI · Stop doing the busy work">
+<meta property="og:description" content="7 AI agents that handle your busy work while you sleep. $49, one time.">
+<meta property="og:image" content="https://autopilotoi.app/logo.png">
+<meta property="og:url" content="https://autopilotoi.app/">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600;14..32,700;14..32,900&display=swap" rel="stylesheet">
+<style>
+:root{--l:#B6F35A;--line:#1c1d1b;--mut:#8f928b;--card:#0c0d0c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden}
+body{background:#000;color:#fff;font:500 16px/1.5 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.w{max-width:520px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.glow{position:fixed;width:520px;height:520px;left:50%;margin-left:-260px;top:-300px;border-radius:50%;background:rgba(182,243,90,.16);filter:blur(100px);z-index:0;pointer-events:none}
+.H{font-family:Inter,system-ui,sans-serif;font-variation-settings:"opsz" 32;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.95}
+.H em{font-style:normal;color:var(--l)}
+.tag{font:600 11px Inter;letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}
+.top{text-align:center;padding:40px 0 30px}
+.top img{width:76px;height:76px;border-radius:50%;box-shadow:0 0 0 4px #000,0 0 0 5px rgba(182,243,90,.5)}
+.top h1{font-size:clamp(40px,11.5vw,56px);margin:18px 0 12px}
+.top p{color:rgba(255,255,255,.72);font-size:16px;max-width:360px;margin:0 auto}
+.lbl{margin:28px 2px 12px}
+.card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;margin-bottom:10px;transition:transform .12s}
+.card:active{transform:scale(.98)}
+.card .ic{width:48px;height:48px;border-radius:14px;background:#161815;display:flex;align-items:center;justify-content:center;font-size:24px;flex:none}
+.card div{flex:1;min-width:0}
+.card b{display:block;font:700 16px/1.25 Inter}
+.card p{color:var(--mut);font-size:13.5px;margin-top:2px}
+.card .go{flex:none;font:900 11px Inter;letter-spacing:.14em;background:var(--l);color:#000;border-radius:30px;padding:7px 11px}
+.card.hero{background:var(--l);color:#000;border:none;flex-direction:column;align-items:stretch;padding:22px 20px}
+.card.hero .tag{color:rgba(0,0,0,.6)}
+.card.hero .H{font-size:34px;margin:10px 0 8px}
+.card.hero p{color:rgba(0,0,0,.72);font-size:15px}
+.card.hero .btn{display:block;text-align:center;background:#000;color:var(--l);border-radius:14px;padding:16px;font:900 15px Inter;text-transform:uppercase;margin-top:18px}
+.card.hero .sm{text-align:center;font:600 12.5px Inter;color:rgba(0,0,0,.6);margin-top:10px}
+.offer{background:var(--card);border:1px solid rgba(182,243,90,.35);border-radius:22px;padding:22px 20px}
+.offer .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.offer .H{font-size:28px}
+.offer .price{font:900 30px Inter;color:var(--l)}
+.offer p{color:rgba(255,255,255,.7);font-size:14.5px;margin:10px 0 16px}
+.offer a{display:block;text-align:center;border:1.5px solid var(--l);color:var(--l);border-radius:14px;padding:14px;font:900 14px Inter;text-transform:uppercase}
+.offer .sm{text-align:center;color:var(--mut);font-size:12.5px;margin-top:10px}
+form{display:flex;gap:8px;margin-top:4px}
+input{flex:1;min-width:0;font:500 16px Inter;color:#fff;background:var(--card);border:1px solid #272825;border-radius:14px;padding:15px 14px;outline:none}
+input:focus{border-color:var(--l)}
+form button{border:0;border-radius:14px;background:#fff;color:#000;font:900 13px Inter;text-transform:uppercase;padding:0 18px}
+#km{color:var(--mut);font-size:12.5px;margin-top:8px}
+.ft{text-align:center;color:#55584f;font-size:12px;padding:40px 0 50px;line-height:1.7}
+.ft a{color:var(--mut)}
+</style></head><body><div class="glow"></div><div class="w">
+<header class="top">
+ <a href="../"><img src="../logo.png" alt="AUTOPILOT.OI"></a>
+ <h1 class="H">Money<br><em>agents.</em></h1>
+ <p>Set up Claude once and let it keep watching your credit, bills and debt. Works with Claude's free or paid plan.</p>
+</header>
+<a class="card hero" href="https://autopilotoi.gumroad.com/l/money-agents">
+ <span class="tag">Best value · all three</span>
+ <span class="H">The Money<br>Agents Bundle</span>
+ <p>Credit, Bill and Debt Agent together. Each with the full master prompt, 5 starter prompts, step by step setup and a tracker.</p>
+ <span class="btn">Get all 3 for $24 →</span>
+ <span class="sm">Save $6 vs buying separately</span>
+</a>
+<div class="tag lbl">Or pick one · $10 each</div>
+<a class="card" href="https://autopilotoi.gumroad.com/l/credit-agent"><span class="ic">💳</span><div><b>Credit Agent</b><p>Audits your reports, writes disputes, tracks every deadline</p></div><span class="go">$10</span></a>
+<a class="card" href="https://autopilotoi.gumroad.com/l/bill-agent"><span class="ic">🧾</span><div><b>Bill Agent</b><p>Checks every medical bill against your insurance</p></div><span class="go">$10</span></a>
+<a class="card" href="https://autopilotoi.gumroad.com/l/debt-agent"><span class="ic">💸</span><div><b>Debt Agent</b><p>Rate call scripts, payoff plan, what to pay each payday</p></div><span class="go">$10</span></a>
+<div class="tag lbl">Not sure yet? Start free</div>
+<a class="card" href="../g/credit/"><span class="ic">📘</span><div><b>Free guides first</b><p>Credit, bill and debt guides with the exact prompts</p></div><span class="go">FREE</span></a>
+<div class="ft"><a href="../">autopilotoi.app</a><br>Education only, not financial, legal or medical advice.<br>Independent, not affiliated with Anthropic.</div>
+</div></body></html>
