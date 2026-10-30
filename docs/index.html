@@ -202,11 +202,15 @@ details[open] summary:before{content:"− "}
   <div class="mono" style="font-weight:700;letter-spacing:2px;font-size:13px">NEXT LEVEL</div>
   <h2 style="color:#06120a;margin-top:10px">Make your Brain work on its own.</h2>
   <p style="margin-top:10px;font-size:18px;color:#163010">Right now you ask, it answers. THE WORKSPACE turns this same Brain into 7 agents that clock in by themselves: inbox replies drafted overnight, jobs booked, quotes followed up, reviews requested and a brief every morning. About an hour to set up, $49.</p>
-  <div style="margin-top:20px"><span class="btn" style="background:#06120a;color:var(--lime);display:inline-block">LAUNCHING SOON</span></div>
+  <form id="kitf" style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+   <input type="email" id="kite" required placeholder="your@email.com" autocomplete="email" style="flex:1 1 220px;font:500 16px Inter;color:#fff;background:#06120a;border:0;border-radius:12px;padding:14px 16px;outline:none">
+   <button class="btn" type="submit" id="kitb" style="flex:1 1 160px;background:#06120a;color:var(--lime);box-shadow:none;padding:14px 20px">GET EARLY ACCESS</button>
+  </form>
+  <p id="kitm" class="small" style="margin-top:10px;color:#163010">One email when it launches, plus setup tips. No spam. Unsubscribe anytime.</p>
  </div>
  <p class="small mut" style="margin-top:16px;text-align:center"><a href="#quiz" id="redo">Edit my answers</a></p>
 </section>
-<div class="foot">AUTOPILOT.OI · YOUR ANSWERS STAY IN THIS BROWSER. INDEPENDENT GUIDE, NOT AFFILIATED WITH ANTHROPIC OR OPENAI.</div>
+<div class="foot">AUTOPILOT.OI · YOUR ANSWERS STAY IN THIS BROWSER. ONLY AN EMAIL YOU CHOOSE TO SHARE IS SAVED. INDEPENDENT GUIDE, NOT AFFILIATED WITH ANTHROPIC OR OPENAI.</div>
 </div>
 <div class="toast" id="toast">COPIED</div>
 <script>
@@ -303,5 +307,12 @@ ${v('goal','Book more jobs')}. When it fits naturally, steer conversations towar
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b)copy($(b.dataset.copy).textContent)});
 rq();
+
+$('kitf').addEventListener('submit',function(e){e.preventDefault();const em=$('kite').value.trim(),b=$('kitb'),m=$('kitm');
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
+ b.disabled=true;b.textContent='SENDING...';const fd=new FormData();fd.append('email_address',em);
+ fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){
+  $('kitf').style.display='none';m.innerHTML='<b>You\u2019re on the list.</b> Check your inbox and tap confirm so the launch email reaches you.';
+ }).catch(function(){b.disabled=false;b.textContent='GET EARLY ACCESS';m.textContent='Something went wrong. Try again in a moment.'})});
 </script>
 </body></html>
