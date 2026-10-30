@@ -1,6 +1,7 @@
 {
  "v2-01": {
   "issue": 1,
-  "status": "waiting"
+  "status": "approved",
+  "closed": true
  }
 }
