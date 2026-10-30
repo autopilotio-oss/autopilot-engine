@@ -1,0 +1,41 @@
+name: Connect Instagram
+on:
+  workflow_dispatch:
+    inputs:
+      app_id:
+        description: "Instagram app ID (from Meta app, Instagram, API setup)"
+        required: true
+      code:
+        description: "Paste the code from the Connect page"
+        required: true
+permissions:
+  contents: write
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swap the code for a 60 day key and save it encrypted
+        env:
+          CODE: ${{ inputs.code }}
+          APP_ID: ${{ inputs.app_id }}
+          IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
+          REDIRECT: "https://autopilotio-oss.github.io/autopilot-engine/auth.html"
+        run: |
+          export IG_APP_SECRET="$(printf %s "$IG_APP_SECRET" | tr -d '[:space:]')"
+          if [ -z "$IG_APP_SECRET" ]; then echo "::error title=Missing::Add the IG_APP_SECRET secret first"; exit 1; fi
+          CODE="${CODE%%#_}"; CODE="$(echo -n "$CODE" | tr -d '[:space:]')"; APP_ID="$(echo -n "$APP_ID" | tr -d '[:space:]')"
+          R=$(curl -s -X POST https://api.instagram.com/oauth/access_token -F client_id="$APP_ID" -F client_secret="$IG_APP_SECRET" -F grant_type=authorization_code -F redirect_uri="$REDIRECT" -F code="$CODE")
+          SHORT=$(echo "$R" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$SHORT" ]; then echo "::error title=Code swap failed::$(echo "$R" | tr -d '\n' | head -c 400)"; exit 1; fi
+          echo "::add-mask::$SHORT"
+          R=$(curl -s "https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=$IG_APP_SECRET&access_token=$SHORT")
+          LONG=$(echo "$R" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$LONG" ]; then echo "::error title=Long key failed::$(echo "$R" | tr -d '\n' | head -c 300)"; exit 1; fi
+          echo "::add-mask::$LONG"
+          ME=$(curl -s "https://graph.instagram.com/v21.0/me?fields=username&access_token=$LONG")
+          echo "::notice title=Connected::$ME"
+          mkdir -p state
+          printf %s "$LONG" | K="$IG_APP_SECRET" openssl enc -aes-256-cbc -pbkdf2 -a -A -salt -pass env:K -out state/ig_token.enc
+          git config user.name "autopilot-bot"; git config user.email "bot@users.noreply.github.com"
+          git add state/ig_token.enc; git commit -m "Connect Instagram"; git pull --rebase; git push

@@ -35,3 +35,6 @@ queue/*.json is a list of {"id","at","kind":"text|image|video|carousel","media":
 
 ## Learning loop
 state/insights.json has views/likes/replies per posted id. Each day: find the top 2 and bottom 2 posts, write more like the top, stop doing what the bottom did. Log what you learned in LEARNINGS.md (date, finding, change made).
+
+## Instagram
+When Instagram is connected (state/ig_token.enc exists), every image, video and carousel post is also published to Instagram automatically. Text only posts stay on Threads. Links become "Link in bio." and hashtags are added. Set "ig": false on a post to keep it Threads only. Reels do best on Instagram, so favor video.
