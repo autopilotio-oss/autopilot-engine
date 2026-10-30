@@ -1,7 +1,7 @@
 [
  {
   "id": "guide-01",
-  "at": "2026-10-30T12:30:00-04:00",
+  "at": "2026-11-02T12:30:00-05:00",
   "kind": "carousel",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/carousels/first-agent/1.jpg",
@@ -15,7 +15,7 @@
   ],
   "topic": "AI Tools",
   "ig": false,
-  "text": "Most people use Claude like a search bar. Here's how to turn it into an agent that knows your business and does one job for you every morning.\n\n5 steps, about 10 minutes. Every prompt you need is on the slides.\n\nComment BRAIN and I'll send the free tool that fills in step 2 for you."
+  "text": "Most people use Claude like a search bar. Here's how to turn it into an agent that knows your business and does one job for you every morning.\n\n5 steps, about 10 minutes. Every prompt you need is on the slides.\n\nStuck on step 2? The free tool fills it in for you: autopilotoi.app/brain"
  },
  {
   "id": "auto1030-01",
