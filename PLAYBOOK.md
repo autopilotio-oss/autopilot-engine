@@ -106,3 +106,7 @@ Stories are paused by default. No story is scheduled in Metricool unless it pass
 3. Verified with 2 sources when it states a fact.
 4. If in doubt, don't post. Zero stories on a day is fine. Filler stories are worse than none.
 The automatic 5 a day story set (tip, quiz, answer, fact, poll) no longer goes to Metricool on autopilot.
+
+
+## Threads publishing = Metricool (Oct 30)
+Threads is connected in Metricool (brand 7761544). GitHub no longer posts to Threads (config/threads.json paused). The daily "Instagram + Threads loader" scheduled task schedules Threads queue items into Metricool and records them in state/posted.json. Our bot can't read or reply to Threads comments anymore and ManyChat doesn't cover Threads, so on Threads never ask people to comment a keyword: put the direct link in the post instead (free guide or /free/ page). Comment keywords are for Instagram only, where ManyChat answers them.

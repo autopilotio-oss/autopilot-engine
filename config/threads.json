@@ -1,1 +1,6 @@
-{"paused": true, "why": "Meta returns API access blocked for our Threads app since Oct 30 ~1 PM ET. Threads posts go through Metricool once Seb connects Threads there."}
+{
+ "paused": true,
+ "why": "Meta blocked our Threads app (API access blocked) Oct 30. Threads is connected in Metricool since Oct 30 5 PM ART; the daily Metricool loader scheduled task schedules Threads queue items and records them in state/posted.json.",
+ "publisher": "metricool",
+ "metricool_blog_id": "7761544"
+}
