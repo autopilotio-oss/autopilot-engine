@@ -1,0 +1,37 @@
+# AUTOPILOT.OI content playbook (read this before writing any post)
+
+## The business
+- Brand: AUTOPILOT.OI (@autopilot.oi on Threads). Faceless. Mascot: AP, a lime robot with a black screen face.
+- Free lead magnet: THE BUSINESS BRAIN, https://autopilotio-oss.github.io/autopilot-engine/ (keyword BRAIN)
+- Paid: THE WORKSPACE, $49 one time, 30 day refund, 7 Claude agents set up in about an hour, https://autopilotio-oss.github.io/autopilot-engine/workspace/ (keyword WORKSPACE). Checkout: https://autopilotoi.gumroad.com/l/ttdat
+- Audience: small business owners (trades, salons, shops, cleaners, bakers, roofers), not tech people.
+
+## Hard rules
+- Honest only. No fake testimonials, no invented results, no income claims, no fake scarcity or countdowns. Example numbers inside a demo must be clearly an example business.
+- No dashes (" - ", " — ") anywhere in captions or graphics.
+- Every post ends with ONE action: Comment BRAIN, Comment WORKSPACE, or a real question to reply to.
+- Copy formats, hooks and structures from what works for others. Never copy their actual words, visuals or claims.
+- Posts are 500 characters max. Times are US Eastern: -04:00 before Nov 1 2026, -05:00 after.
+- Max 6 posts a day (bot limit). Default rhythm: 2 a day, ~9:00 and ~12:30 ET (Threads is a morning platform).
+- Every post has an image or video. Text only is the weakest format on Threads.
+- Mix: about 60% BRAIN (free), 30% WORKSPACE (paid), 10% pure conversation questions.
+- Add "topic": "Small Business" or "AI Tools" to each post.
+
+## Formats that convert (ranked)
+1. Objection reel: "This Claude setup gives you X. First you might think... Second... Third..." each answered with a demo. CTA comment keyword.
+2. Before/after or chatbot vs agent comparisons.
+3. "Hard truth" money leak cards (slow replies, quotes with no follow up, no review asks).
+4. Frameworks people save ("An AI agent is a new hire. It needs 4 things").
+5. Honest limits / anti hype posts (build trust, sell WORKSPACE).
+6. Questions that get owners talking about their busy work.
+
+## How to make a card
+Templates live in tools/cards/c.html (1080x1350, black #0A0A0A, lime #D4FF3A, Bebas Neue headline, Space Mono labels, Inter body, lime pill CTA at bottom).
+Copy one `<div class="k" id="...">` block, change the words, then run `node tools/cards/render.js <id>` from tools/cards (outputs out/<id>.jpg) and copy to docs/media/cards/.
+Media URL pattern: https://autopilotio-oss.github.io/autopilot-engine/media/cards/<file>.jpg
+
+## Queue format
+queue/*.json is a list of {"id","at","kind":"text|image|video|carousel","media":[urls],"topic","text"}. ids must be unique forever (posted ones are tracked in state/posted.json).
+
+## Learning loop
+state/insights.json has views/likes/replies per posted id. Each day: find the top 2 and bottom 2 posts, write more like the top, stop doing what the bottom did. Log what you learned in LEARNINGS.md (date, finding, change made).
