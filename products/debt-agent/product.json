@@ -1,0 +1,15 @@
+{
+ "name": "AUTOPILOT.OI Debt Agent",
+ "price_cents": 1000,
+ "permalink": "debt-agent",
+ "filename": "AUTOPILOT.OI Debt Agent Setup.pdf",
+ "description_html": "<p><strong>Turn Claude into your Debt Agent in 10 minutes.</strong></p><p>Writes your lower rate call scripts, builds your fastest payoff plan and tells you exactly what to pay every payday.</p><p>Inside: the full master prompt, 5 starter prompts, a step by step setup and your tracker. Works with Claude's free or paid plan.</p><p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/debt-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "personal finance",
+  "ai agent",
+  "money"
+ ]
+}

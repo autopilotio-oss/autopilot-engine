@@ -1,0 +1,15 @@
+{
+ "name": "AUTOPILOT.OI Credit Agent",
+ "price_cents": 1000,
+ "permalink": "credit-agent",
+ "filename": "AUTOPILOT.OI Credit Agent Setup.pdf",
+ "description_html": "<p><strong>Turn Claude into your Credit Agent in 10 minutes.</strong></p><p>Audits your credit reports, writes your disputes, tracks every deadline and tells you your next move every month.</p><p>Inside: the full master prompt, 5 starter prompts, a step by step setup and your tracker. Works with Claude's free or paid plan.</p><p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/credit-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "personal finance",
+  "ai agent",
+  "money"
+ ]
+}

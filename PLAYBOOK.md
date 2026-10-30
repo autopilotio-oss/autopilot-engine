@@ -94,3 +94,6 @@ Meta blocked our app (every call returns "API access blocked"). Instagram now go
 
 ## Morning trend scout (Seb, Oct 30)
 Every morning find what's viral or trending that we can genuinely help with: AI agent news, new AI features normal people can use, and money or everyday problems trending (scams, fees, price hikes, tax deadlines, bills). Only post when we add real value (a fix, a prompt, a clear explanation). Never fake news, never hype, always check 2 sources, name the source on the card. Card: python scripts/daily_stories.py trend '<json>' docs/media/trends/<date>-<slug>.jpg  (keys: tag, h with {lime} words, what, do, do_label, src).
+
+## Products (Gumroad, automatic)
+Paid kits: $10 per agent, bundles $24. A product = products/<permalink>/product.json + sealed file (bash tools/kits/seal.sh <pdf> products/<permalink>). Pushing it runs .github/workflows/gumroad.yml, which creates and publishes it on Gumroad (secrets GUMROAD_TOKEN, KIT_PRIVATE_KEY) and writes state/products.json. Never commit an unsealed paid PDF (tools/kits/out is gitignored). Kit PDF: python tools/kits/build.py <kit.json> <out.pdf> (keys: name, price, tag, promise, setup[], master, starters[[title,prompt]], tracker[], links[[title,url]]). Cover: tools/kits/covers.py style, saved to docs/store/<key>-cover.png. Add every new product to docs/store/index.html.

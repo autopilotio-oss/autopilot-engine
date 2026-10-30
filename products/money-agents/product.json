@@ -1,0 +1,15 @@
+{
+ "name": "AUTOPILOT.OI Money Agents Bundle",
+ "price_cents": 2400,
+ "permalink": "money-agents",
+ "filename": "AUTOPILOT.OI Money Agents Bundle.pdf",
+ "description_html": "<p><strong>Turn Claude into your Money Agents in 10 minutes.</strong></p><p>All 3: Credit Agent, Bill Agent and Debt Agent. Three Claude agents that check your credit, your bills and your debt.</p><p>Inside: the full master prompts, 5 starter prompts per agent, a step by step setup and your trackers. Works with Claude's free or paid plan.</p><p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/bundle-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "personal finance",
+  "ai agent",
+  "money"
+ ]
+}

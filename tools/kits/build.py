@@ -1,5 +1,10 @@
 import html, os, sys, asyncio
-from kits import K
+import json
+try:
+    from kits import K
+except ImportError:
+    K = {}
+ONE = json.load(open(sys.argv[1])) if len(sys.argv) > 1 else None  # build one kit from a JSON file (same keys as kits.py)
 e = html.escape
 F = "file:///home/claude/autopilot-engine/tools/story/fonts/"
 CSS = f"""@font-face{{font-family:SA;src:url({F}SairaSemiCondensed-BlackItalic.otf)}}@font-face{{font-family:GE;font-weight:600;src:url({F}Geist-SemiBold.otf)}}@font-face{{font-family:GE;font-weight:700;src:url({F}Geist-Bold.otf)}}@font-face{{font-family:GE;font-weight:500;src:url({F}Geist-Medium.otf)}}@font-face{{font-family:M;src:url({F}GeistMono-Medium.otf)}}
@@ -37,6 +42,10 @@ async def main():
     from playwright.async_api import async_playwright
     async with async_playwright() as p:
         b = await p.chromium.launch(); pg = await b.new_page()
+        if ONE:
+            open("out/one.html", "w").write(doc(kit_html("one", ONE)))
+            await pg.goto(f"file://{os.getcwd()}/out/one.html"); await pg.wait_for_timeout(500)
+            await pg.pdf(path=sys.argv[2], print_background=True, prefer_css_page_size=True); await b.close(); return
         for k, g in K.items():
             open(f"out/{k}.html", "w").write(doc(kit_html(k, g)))
             await pg.goto(f"file://{os.getcwd()}/out/{k}.html"); await pg.wait_for_timeout(500)
