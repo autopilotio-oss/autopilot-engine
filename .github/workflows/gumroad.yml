@@ -1,4 +1,5 @@
 name: Gumroad products
+# run
 on:
   workflow_dispatch:
   push:
