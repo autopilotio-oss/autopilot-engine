@@ -7,7 +7,7 @@ class ThreadsError(Exception):
     pass
 
 def _req(method, path, params, token):
-    params = dict(params or {}); params["access_token"] = token
+    params = dict(params or {}); params["access_token"] = (token or "").strip()
     data = urllib.parse.urlencode(params).encode()
     if method == "GET":
         req = urllib.request.Request(f"{BASE}{path}?{data.decode()}")
@@ -17,7 +17,9 @@ def _req(method, path, params, token):
         with urllib.request.urlopen(req, timeout=60) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        raise ThreadsError(f"{e.code} {e.read().decode()[:400]}")
+        msg = f"{e.code} {e.read().decode()[:400]}"
+        print(f"::error title=Threads API::{msg}", flush=True)
+        raise ThreadsError(msg)
 
 def me(token):
     return _req("GET", "/me", {"fields": "id,username"}, token)
