@@ -70,3 +70,6 @@ For now we teach, we don't sell. Instagram runs the "AI for Beginners" lesson se
 
 ## Everyday fix story (Seb, Oct 30)
 The 4:30 PM story is an "Everyday fix": a real problem normal people deal with (a bill, a lease, dinner, a hard email, homework) + how Claude solves it + the exact sentence to say to Claude. No trivia, no history, no scare facts. Never promise medical, legal or money outcomes; for health, "use it to prepare questions for your doctor".
+
+## Approval OFF (Seb, Oct 30 10:14)
+Seb: "I don't wanna approve, just post, we are behind." config/approval.json is false. Everything posts automatically at its slot, so the quality bar is on us: render and look at every image, reread every caption against the banned list before queuing. Seb can turn approval back on by asking.

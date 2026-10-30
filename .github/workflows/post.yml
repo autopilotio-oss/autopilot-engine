@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["queue/**", ".github/workflows/post.yml"]
+    paths: ["queue/**", "config/**", ".github/workflows/post.yml"]
 permissions:
   contents: write
   issues: write
