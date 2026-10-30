@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THE WORKSPACE · Stop doing busy work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040506;--lime:#D4FF3A;--lime2:#9BE15D;--ink:#fff;--mut:rgba(255,255,255,.62);--dim:rgba(255,255,255,.38);--card:rgba(255,255,255,.035);--line:rgba(255,255,255,.09);--gl:rgba(212,255,58,.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;z-index:0}
+.glowbg{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+a{color:var(--lime)}
+.wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0 22px}
+.mono{font-family:'Space Mono',monospace}
+.bebas{font-family:'Bebas Neue',sans-serif;font-weight:400}
+.spark{display:inline-block;width:18px;height:18px;background:var(--lime);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);filter:drop-shadow(0 0 6px var(--lime));vertical-align:-2px}
+.mk{width:38px;height:38px;border-radius:50%;background:var(--lime);color:#040506;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;letter-spacing:-1px;box-shadow:0 0 24px rgba(212,255,58,.5);flex:none}
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(4,5,6,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand b{font-family:'Bebas Neue';font-weight:400;font-size:24px;letter-spacing:3px}
+.prog{margin-left:auto;display:flex;align-items:center;gap:12px}
+.bar{width:140px;height:8px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--lime);box-shadow:0 0 14px var(--lime);transition:width .5s}
+.prog span{font:700 12px 'Space Mono';color:var(--lime);letter-spacing:1px;white-space:nowrap}
+.nav{display:flex;gap:8px;overflow-x:auto;padding:10px 22px 12px;max-width:980px;margin:0 auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;text-decoration:none;color:var(--mut);font:700 12px 'Space Mono';letter-spacing:1px;padding:8px 13px;border:1px solid var(--line);border-radius:30px;background:var(--card)}
+.nav a.on{color:#06120a;background:var(--lime);border-color:var(--lime)}
+/* hero */
+.hero{padding:80px 0 50px;text-align:center;position:relative}
+.kick{display:inline-flex;align-items:center;gap:10px;font:700 13px 'Space Mono';letter-spacing:3px;color:var(--lime);margin-bottom:22px}
+h1{font-family:'Bebas Neue';font-weight:400;font-size:clamp(84px,17vw,170px);line-height:.88;letter-spacing:2px;text-shadow:0 0 60px rgba(212,255,58,.25)}
+.hero p.sub{font-size:clamp(20px,3.4vw,26px);font-weight:600;margin:20px auto 0;max-width:640px;color:#fff;letter-spacing:-.3px}
+.hero p.sub em{font-style:normal;color:var(--lime)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.chip{font:700 12px 'Space Mono';letter-spacing:1.5px;padding:10px 16px;border-radius:30px;border:1px solid var(--gl);color:#fff;background:rgba(212,255,58,.06)}
+.arc{position:relative;height:150px;margin-top:40px;overflow:hidden}
+.arc:before{content:"";position:absolute;left:50%;top:40px;width:1400px;height:1400px;margin-left:-700px;border-radius:50%;border-top:2px solid rgba(235,255,150,.9);box-shadow:0 -10px 50px rgba(212,255,58,.55),inset 0 10px 60px rgba(212,255,58,.35);background:radial-gradient(circle at 50% 8%,rgba(212,255,58,.16),transparent 30%)}
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line);position:relative}
+.lnum{font:700 13px 'Space Mono';letter-spacing:3px;color:var(--lime);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.lnum .t{margin-left:auto;color:var(--dim);letter-spacing:1px}
+h2{font-size:clamp(34px,6vw,52px);font-weight:800;letter-spacing:-1.8px;line-height:1.05}
+h2 em{font-style:normal;color:var(--lime)}
+h3{font-size:22px;font-weight:700;letter-spacing:-.4px;margin-bottom:6px}
+.lead{color:var(--mut);font-size:19px;margin-top:14px;max-width:700px}
+.card{background:linear-gradient(180deg,rgba(28,34,26,.55),rgba(12,14,13,.7));border:1px solid var(--line);border-radius:22px;padding:24px;position:relative}
+.card.lit{border-color:var(--gl);box-shadow:0 0 50px rgba(212,255,58,.08)}
+.hot{background:linear-gradient(135deg,#E4FF6A,#B8F23A 55%,#7EE07A);color:#06120a;border:none;box-shadow:0 0 60px rgba(212,255,58,.35)}
+.hot p,.hot .mut{color:#163010}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+@media(max-width:820px){.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g2,.g4{grid-template-columns:1fr}}
+.ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(212,255,58,.1);color:var(--lime);margin-bottom:14px}
+.ic svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mut{color:var(--mut)}
+.small{font-size:14px}
+.tag{display:inline-block;font:700 11px 'Space Mono';letter-spacing:1.5px;padding:5px 10px;border-radius:8px;background:rgba(212,255,58,.12);color:var(--lime)}
+/* steps */
+.steps{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.step{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border-radius:18px;border:1px solid var(--line);background:var(--card);cursor:pointer;transition:border-color .2s,background .2s}
+.step:hover{border-color:var(--gl)}
+.step .ck{flex:none;width:30px;height:30px;border-radius:9px;border:2px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;margin-top:1px;transition:all .2s}
+.step.done{border-color:rgba(212,255,58,.35);background:rgba(212,255,58,.05)}
+.step.done .ck{background:var(--lime);border-color:var(--lime)}
+.step.done .ck:after{content:"";width:12px;height:7px;border-left:3px solid #06120a;border-bottom:3px solid #06120a;transform:rotate(-45deg) translate(1px,-1px)}
+.step b{font-weight:700}
+.step .d{color:var(--mut);font-size:15.5px;margin-top:3px}
+.step .d a{word-break:break-word}
+kbd{font:700 13px 'Space Mono';background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-bottom-width:2px;border-radius:6px;padding:1px 7px;color:#fff;white-space:nowrap}
+/* prompt box */
+.pbox{margin-top:18px;border-radius:18px;border:1px solid var(--gl);background:#07090a;overflow:hidden}
+.phead{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);font:700 12px 'Space Mono';letter-spacing:1.5px;color:var(--lime)}
+.phead button{margin-left:auto}
+pre{white-space:pre-wrap;word-wrap:break-word;font:400 14px/1.6 'Space Mono';color:rgba(255,255,255,.85);padding:18px;max-height:340px;overflow:auto}
+.btn{font:700 13px 'Space Mono';letter-spacing:1.5px;border:none;border-radius:12px;padding:11px 18px;cursor:pointer;background:var(--lime);color:#06120a;box-shadow:0 0 24px rgba(212,255,58,.35);transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:none}
+.btn.big{font-size:15px;padding:18px 26px;border-radius:16px;width:100%}
+/* compare */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+@media(max-width:560px){.vs{grid-template-columns:1fr}}
+.vs ul{list-style:none;margin-top:10px}
+.vs li{padding:7px 0 7px 26px;position:relative;font-size:15.5px}
+.vs li:before{content:"";position:absolute;left:2px;top:15px;width:12px;height:2px;background:var(--dim)}
+.vs .hot li:before{content:"";width:12px;height:7px;background:none;border-left:2.5px solid #06120a;border-bottom:2.5px solid #06120a;transform:rotate(-45deg);top:12px}
+/* mock screens */
+.screens{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-top:26px;align-items:end}
+@media(max-width:640px){.screens{grid-template-columns:1fr}}
+.desk{border-radius:16px;border:1px solid rgba(255,255,255,.12);background:#0b0d0e;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 40px rgba(212,255,58,.06)}
+.desk .tb{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#121416;border-bottom:1px solid var(--line)}
+.desk .tb i{width:10px;height:10px;border-radius:50%;background:#2a2d31}
+.desk .body{display:flex;min-height:230px}
+.side{width:34%;border-right:1px solid var(--line);padding:12px;display:flex;flex-direction:column;gap:7px}
+.side div{font:600 12px Inter;color:var(--mut);padding:7px 9px;border-radius:8px}
+.side div.on{background:rgba(212,255,58,.12);color:var(--lime)}
+.main{flex:1;padding:14px;display:flex;flex-direction:column;gap:8px}
+.row{height:30px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--line);display:flex;align-items:center;padding:0 10px;font:600 11.5px Inter;color:var(--mut);gap:8px}
+.row .on{margin-left:auto;font:700 10px 'Space Mono';color:var(--lime)}
+.phone{width:100%;max-width:240px;justify-self:center;border-radius:34px;border:1px solid rgba(255,255,255,.14);background:#0b0d0e;padding:14px 12px 18px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.phone .notch{width:70px;height:18px;border-radius:12px;background:#000;margin:0 auto 12px}
+.bub{border-radius:16px;padding:9px 12px;font-size:12.5px;line-height:1.4;margin-bottom:8px}
+.bub.u{background:rgba(255,255,255,.08);margin-left:22px}
+.bub.a{background:linear-gradient(135deg,#E4FF6A,#9BE15D);color:#06120a;margin-right:22px;font-weight:600}
+.cap{font:700 11px 'Space Mono';letter-spacing:1.5px;color:var(--dim);text-align:center;margin-top:10px}
+/* quiz */
+.quiz{margin-top:28px}
+.qhead{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.qbar{flex:1;height:8px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden}
+.qbar i{display:block;height:100%;background:var(--lime);box-shadow:0 0 12px var(--lime);transition:width .35s}
+.qcount{font:700 13px 'Space Mono';color:var(--lime);letter-spacing:1px}
+.qcard{min-height:330px}
+.qcard .qn{font:700 12px 'Space Mono';letter-spacing:2px;color:var(--lime)}
+.qcard .qq{font-size:clamp(24px,4.4vw,32px);font-weight:800;letter-spacing:-.8px;line-height:1.15;margin:8px 0 6px}
+.qcard .qh{color:var(--mut);font-size:15px;margin-bottom:18px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{font:600 15px Inter;padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03);color:#fff;cursor:pointer;transition:all .15s}
+.opt.sel{background:var(--lime);color:#06120a;border-color:var(--lime);box-shadow:0 0 20px rgba(212,255,58,.35)}
+textarea,input[type=text]{width:100%;font:500 16px Inter;color:#fff;background:#07090a;border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 16px;outline:none;resize:vertical}
+textarea:focus,input[type=text]:focus{border-color:var(--lime);box-shadow:0 0 0 3px rgba(212,255,58,.12)}
+textarea{min-height:110px}
+.qnav{display:flex;gap:10px;margin-top:20px}
+.qnav .btn{flex:1}
+.ex{font:500 13px Inter;color:var(--dim);margin-top:10px}
+/* agents */
+.agent{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.agent .ic{margin:0;width:58px;height:58px;border-radius:18px}
+.agent .ic svg{width:30px;height:30px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+details{margin-top:12px}
+summary{cursor:pointer;font:700 12px 'Space Mono';letter-spacing:1.5px;color:var(--lime);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"+ "}
+details[open] summary:before{content:"− "}
+/* commands */
+.cmds{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+@media(max-width:640px){.cmds{grid-template-columns:1fr}}
+.cmd{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:15px;transition:border-color .2s}
+.cmd:hover{border-color:var(--gl)}
+.cmd .n{font:700 12px 'Space Mono';color:var(--lime);flex:none;margin-top:3px}
+.cmd.copied{border-color:var(--lime)}
+.cg{font:700 13px 'Space Mono';letter-spacing:2px;color:#fff;margin-top:34px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(120px);background:var(--lime);color:#06120a;font:700 13px 'Space Mono';letter-spacing:1.5px;padding:14px 22px;border-radius:14px;box-shadow:0 0 40px rgba(212,255,58,.5);z-index:50;transition:transform .3s}
+.toast.on{transform:translateX(-50%) translateY(0)}
+.faq{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font:700 18px Inter;letter-spacing:-.3px;color:#fff}
+.faq summary:before{color:var(--lime)}
+.faq p{color:var(--mut);margin-top:10px}
+.rule{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.rule .n{font-family:'Bebas Neue';font-size:40px;line-height:1;color:var(--lime);width:44px;flex:none}
+.end{text-align:center;padding:80px 0 120px}
+.foot{text-align:center;color:var(--dim);font:700 12px 'Space Mono';letter-spacing:1.5px;padding:30px 0 60px}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+.flow .f{flex:1;min-width:150px;text-align:center;padding:16px 12px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.flow .f b{display:block;font-family:'Bebas Neue';font-weight:400;font-size:30px;letter-spacing:1px;color:var(--lime);line-height:1}
+.flow .ar{color:var(--lime);font-weight:900}
+@media(max-width:560px){.flow .ar{display:none}}
+
+@media(max-width:700px){#how3{grid-template-columns:1fr!important}}
+</style></head><body><div class="glowbg" style="width:700px;height:700px;left:50%;margin-left:-350px;top:-300px;background:rgba(212,255,58,.13)"></div>
+<div class="top"><div class="wrap"><a class="brand" href="#top"><span class="mk">ap.</span><b>AUTOPILOT.OI</b></a><a class="btn" href="https://autopilotoi.gumroad.com/l/ttdat" style="margin-left:auto;text-decoration:none">GET IT · $49</a></div></div>
+<div class="wrap" id="top">
+<header class="hero">
+ <div class="kick"><span class="spark"></span>THE WORKSPACE · FOR ANY BUSINESS</div>
+ <h1 style="font-size:clamp(64px,13vw,128px)">STOP DOING<br><span style="color:var(--lime)">BUSY WORK.</span></h1>
+ <p class="sub">Set up 7 AI agents that answer your email, keep your calendar, chase quotes, ask for reviews and brief you every morning. <em>You answer 20 questions. Claude sets up the rest.</em></p>
+ <div style="max-width:420px;margin:30px auto 0"><a class="btn big" href="https://autopilotoi.gumroad.com/l/ttdat" style="display:block;text-decoration:none">GET THE WORKSPACE · $49</a><p class="small mut" style="margin-top:12px">One payment. Lifetime updates. 30 day guarantee.</p></div>
+ <div class="chips"><span class="chip">ABOUT 1 HOUR SETUP</span><span class="chip">NO CODE</span><span class="chip">PHONE + COMPUTER</span></div>
+ <div class="arc"></div>
+</header>
+
+<!-- interactive pain calculator -->
+<section id="count">
+ <div class="lnum">COUNT IT</div>
+ <h2>How much of your week is <em>busy work?</em></h2>
+ <p class="lead">Tap what you do every week. Be honest. This is your number, not ours.</p>
+ <div id="calc" style="display:flex;flex-direction:column;gap:10px;margin-top:24px"></div>
+ <div class="card hot" style="margin-top:16px;text-align:center"><div class="mono" style="font-weight:700;letter-spacing:2px;font-size:13px">YOUR BUSY WORK</div><div class="bebas" style="font-size:96px;line-height:1" id="hrs">0 HRS</div><div style="font-weight:700" id="hrs2">a week you could hand to your agents</div></div>
+</section>
+
+<section>
+ <div class="lnum">THE IDEA</div>
+ <h2>Not a chatbot. <em>A team.</em></h2>
+ <p class="lead">A chatbot waits for questions. An agent has a job and shows up on its own. Every agent in The Workspace gets four things, just like a new hire.</p>
+ <div class="g4">
+  <div class="card"><span class="tag">THE JOB</span><p class="mut small" style="margin-top:10px">Clear instructions for what to do and what done looks like.</p></div>
+  <div class="card"><span class="tag">THE TRAINING</span><p class="mut small" style="margin-top:10px">Your Business Brain: prices, rules, hours and voice.</p></div>
+  <div class="card"><span class="tag">THE KEYS</span><p class="mut small" style="margin-top:10px">Secure access to your email, calendar and files.</p></div>
+  <div class="card"><span class="tag">THE SHIFT</span><p class="mut small" style="margin-top:10px">A schedule. It clocks in by itself, even overnight.</p></div>
+ </div>
+</section>
+
+<section>
+ <div class="lnum">A DAY WITH YOUR TEAM</div>
+ <h2>Here's what <em>tomorrow</em> looks like.</h2>
+ <div id="day" style="margin-top:24px;display:flex;flex-direction:column;gap:10px"></div>
+ <p class="small mut" style="margin-top:12px">Example schedule. Claude sets yours around your own hours.</p>
+</section>
+
+<section>
+ <div class="lnum">HOW IT WORKS</div>
+ <h2>Three steps. <em>That's the whole setup.</em></h2>
+ <div class="g2" style="grid-template-columns:repeat(3,1fr)" id="how3"></div>
+ <div class="vs" style="margin-top:18px">
+  <div class="card"><h3>You do</h3><ul class="mut"><li>Download two apps</li><li>Answer 20 questions</li><li>Paste one prompt, tap allow</li></ul></div>
+  <div class="card hot"><h3>Claude does</h3><ul><li>Writes your Business Brain</li><li>Connects and tests your apps with you</li><li>Builds, names and schedules your 7 agents</li><li>Sets up your phone and runs a test</li></ul></div>
+ </div>
+</section>
+
+<section>
+ <div class="lnum">ANY BUSINESS</div>
+ <h2>Same course. <em>Your own team.</em></h2>
+ <p class="lead">The quiz reshapes every agent around your business. A few examples of what Claude builds:</p>
+ <div class="cmds" id="biz"></div>
+</section>
+
+<section>
+ <div class="lnum">WHAT YOU GET</div>
+ <h2>Everything inside <em>The Workspace</em></h2>
+ <div class="steps" id="inside"></div>
+</section>
+
+<section>
+ <div class="lnum">THE HONEST PART</div>
+ <h2>What you should know <em>before you buy</em></h2>
+ <p class="lead">We'd rather lose a sale than surprise you later.</p>
+ <div style="margin-top:14px" id="honest"></div>
+</section>
+
+<section>
+ <div class="lnum">IS IT FOR YOU</div>
+ <div class="vs">
+  <div class="card hot"><h3>Perfect if you</h3><ul><li>Run a small business or work for yourself</li><li>Lose hours to messages, booking and follow ups</li><li>Use Gmail and Google Calendar (or will)</li><li>Want help today, not a 6 week course</li></ul></div>
+  <div class="card"><h3>Not for you if you</h3><ul class="mut"><li>Want AI to send messages with no review</li><li>Don't have a computer you can leave on</li><li>Want a custom built app or chatbot</li><li>Expect money without doing the work</li></ul></div>
+ </div>
+</section>
+
+<section id="get">
+ <div class="card lit" style="text-align:center;padding:40px 24px">
+  <span class="mk" style="width:70px;height:70px;font-size:30px">ap.</span>
+  <h2 style="margin-top:20px">THE <em>WORKSPACE</em></h2>
+  <div class="bebas" style="font-size:110px;line-height:1;margin-top:10px;color:var(--lime);text-shadow:0 0 40px rgba(212,255,58,.4)">$49</div>
+  <p class="mut">One payment. Lifetime updates when the apps change.</p>
+  <div style="max-width:420px;margin:24px auto 0"><a class="btn big" href="https://autopilotoi.gumroad.com/l/ttdat" style="display:block;text-decoration:none">GET THE WORKSPACE · $49</a></div>
+  <div class="card" style="margin-top:22px;text-align:left"><b>30 day "it works" guarantee.</b><p class="mut small" style="margin-top:6px">Follow the setup. If your agents aren't working for you within 30 days, email us and get a full refund. No forms, no hoops.</p></div>
+ </div>
+</section>
+
+<section>
+ <div class="lnum">QUESTIONS</div>
+ <div id="sfaq"></div>
+</section>
+<div class="foot">AUTOPILOT.OI · THE WORKSPACE IS AN INDEPENDENT COURSE AND IS NOT AFFILIATED WITH OR ENDORSED BY ANTHROPIC.<br>CLAUDE IS A PRODUCT OF ANTHROPIC. ILLUSTRATIONS ARE EXAMPLES. RESULTS DEPEND ON YOUR BUSINESS.</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const T=[['Answering customer emails',3],['Replying to DMs and texts',3],['Booking, rescheduling, reminders',2],['Chasing quotes that went quiet',1],['Making quotes and invoices',1.5],['Asking for reviews',0.5],['Planning my day',1]];
+let on=new Set();
+function calc(){let h=0;on.forEach(i=>h+=T[i][1]);$('hrs').textContent=(Math.round(h*2)/2)+' HRS';$('hrs2').textContent=h?'a week you could hand to your agents. That\'s about '+Math.round(h*52)+' hours a year.':'tap the tasks above';
+ $('calc').innerHTML=T.map((t,i)=>`<div class="step ${on.has(i)?'done':''}" data-i="${i}"><div class="ck"></div><div style="flex:1"><b>${t[0]}</b></div><span class="mono small" style="color:var(--lime)">~${t[1]} hr/wk</span></div>`).join('');
+ document.querySelectorAll('#calc .step').forEach(e=>e.onclick=()=>{const i=+e.dataset.i;on.has(i)?on.delete(i):on.add(i);calc()})}
+calc();
+const D=[['6:00 AM','Morning Brief','Today\'s jobs, new leads and anything urgent, waiting on your phone.'],['7:00 AM','Inbox Agent','Every customer email has a reply drafted in your voice with your real prices.'],['10:00 AM','Follow Up Agent','Quotes from last week that went quiet get one friendly nudge, ready to send.'],['2:15 PM','You, on your phone','"Book Dre, full detail, Saturday 1pm." Done, with a confirmation drafted.'],['7:00 PM','Review Agent','Everyone you finished today gets a thank you that asks for 5 stars.'],['8:00 PM','Booking Agent','Tomorrow\'s customers get their reminders drafted. You go home.']];
+$('day').innerHTML=D.map((d,i)=>`<div class="card ${i==3?'hot':''}" style="display:flex;gap:18px;align-items:flex-start;padding:18px 20px"><div class="mono" style="font-weight:700;font-size:13px;min-width:78px;color:${i==3?'#06120a':'var(--lime)'};margin-top:3px">${d[0]}</div><div><b>${d[1]}</b><div class="${i==3?'':'mut'} small" style="margin-top:2px">${d[2]}</div></div></div>`).join('');
+const H=[['01','Get Claude','Two downloads, one login. 5 minutes.'],['02','Take the quiz','20 questions about your business. 5 minutes.'],['03','Paste one prompt','Claude builds and schedules your team with you.']];
+$('how3').innerHTML=H.map(h=>`<div class="card"><div class="bebas" style="font-size:56px;color:var(--lime);line-height:1">${h[0]}</div><h3 style="margin-top:6px">${h[1]}</h3><p class="mut small">${h[2]}</p></div>`).join('');
+const B=[['Barber or salon','Booking Agent fills your chair and texts reminders the night before.'],['Detailer or cleaner','Quote Agent prices jobs from your list, Follow Up Agent closes them.'],['Contractor or roofer','Intake Agent sorts real jobs from tire kickers and books site visits.'],['Restaurant or cafe','Reservations and Catering Agents answer inquiries in your voice.'],['Realtor','Lead Agent replies to every inquiry and books showings.'],['Coach or trainer','Session Agent books clients and drafts check ins.'],['Photographer','Inquiry Agent sends packages and holds dates.'],['Online seller','Support Agent drafts replies to order questions.']];
+$('biz').innerHTML=B.map(b=>`<div class="cmd" style="cursor:default"><span class="n">→</span><span><b>${b[0]}</b><br><span class="mut small">${b[1]}</span></span></div>`).join('');
+const IN=[['The 20 question quiz','Builds your personal Builder prompt as you answer.'],['The Builder prompt','Turns Claude into your setup tech. It does the work with you step by step.'],['7 ready agents','Morning Brief, Inbox, Booking, Follow Up, Invoice, Review and DM Assistant, reshaped for your business.'],['Your Business Brain','One file with your prices, rules and voice that every agent reads.'],['50 phone commands','Tap to copy. Run your business from a text message.'],['The Night Shift setup','How to keep your agents working overnight.'],['Fix It guide and safety rules','What to do when something looks off, and how to stay in control.'],['Lifetime updates','When the apps change, the course gets updated.']];
+$('inside').innerHTML=IN.map(i=>`<div class="step done" style="cursor:default"><div class="ck"></div><div><b>${i[0]}</b><div class="d">${i[1]}</div></div></div>`).join('');
+const HO=[['You need Claude Pro.','About $20 a month, paid to Anthropic, not us. Scheduled agents and phone control need it.'],['Your computer has to be on.','Scheduled agents run while your computer is awake and the Claude app is open. We show you how to set that up. If it\'s asleep, the agent runs when it wakes.'],['Agents draft. You send.','Emails and messages wait for your OK. That\'s on purpose: it keeps every reply accurate and sounding like you.'],['Social DMs are assisted, not automatic.','Claude can write replies in your Instagram or Facebook inbox through Chrome, but you review and tap send.'],['Apps change.','Claude adds features all the time. When screens change, we update the course.']];
+$('honest').innerHTML=HO.map((h,i)=>`<div class="rule"><div class="n">0${i+1}</div><div><b>${h[0]}</b><div class="mut">${h[1]}</div></div></div>`).join('');
+const FQ=[['Do I need to be good with tech?','No. If you can download an app and copy and paste, you can do this. The Builder prompt tells you exactly what to tap, and you can type "I\'m stuck" anytime.'],['Is my business data safe?','Your agents connect through Google\'s secure sign in. You never type a password into a chat, Claude asks before it sends or deletes anything, and you can disconnect in seconds.'],['How long does setup really take?','Most of it is Claude working. Plan on about an hour start to finish, including the quiz.'],['What if I use Outlook or something else?','The quiz asks what you use, and Claude designs around it. Check Claude\'s Connectors list for your apps.'],['Will it work for my type of business?','If you get customers through email, messages or bookings, yes. The quiz reshapes every agent for your industry.'],['What if it doesn\'t work for me?','Email us within 30 days for a full refund.']];
+$('sfaq').innerHTML=FQ.map(f=>`<details class="faq"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
+</script>
+</body></html>
