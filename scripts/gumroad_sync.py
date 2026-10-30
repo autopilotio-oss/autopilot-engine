@@ -34,7 +34,7 @@ def main():
     try:
         DBG.append(["token_len", len(TOK)])
         u = urllib.request.urlopen(API + "/user?" + urllib.parse.urlencode({"access_token": TOK}), timeout=60).read().decode(); DBG.append(["user", "ok"])
-        print("::notice title=Gumroad user::" + json.loads(u)["user"].get("name", "ok"))
+        print("::notice title=Gumroad user::connected")
     except urllib.error.HTTPError as e: m = e.read().decode()[:200]; DBG.append(["user", e.code, m]); print(f"::warning title=Gumroad user check {e.code}::" + m)
     sp = os.path.join(ROOT, "state", "products.json"); st = json.load(open(sp)) if os.path.exists(sp) else {}
     for f in sorted(glob.glob(os.path.join(ROOT, "products", "*", "product.json"))):
