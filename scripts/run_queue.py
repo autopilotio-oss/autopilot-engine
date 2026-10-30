@@ -22,7 +22,7 @@ def load(p, d):
 def main(now=None):
     if os.path.exists(os.path.join(ROOT, "PAUSE")):
         print("PAUSE file present, nothing posted."); return []
-    token = os.environ.get("THREADS_TOKEN", "")
+    token = threads.get_token()
     repo = os.environ.get("GITHUB_REPOSITORY", "OWNER/autopilot-engine")
     branch = os.environ.get("BRANCH", "main")
     raw = f"https://raw.githubusercontent.com/{repo}/{branch}/"

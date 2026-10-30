@@ -16,13 +16,13 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Send queued comment replies
-        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}" }
+        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}", THREADS_APP_SECRET: "${{ secrets.THREADS_APP_SECRET }}" }
         run: python scripts/send_replies.py
       - name: Collect views and comments
-        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}" }
+        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}", THREADS_APP_SECRET: "${{ secrets.THREADS_APP_SECRET }}" }
         run: python scripts/collect.py
       - name: Reply to keyword comments
-        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}" }
+        env: { THREADS_TOKEN: "${{ secrets.THREADS_TOKEN }}", THREADS_APP_SECRET: "${{ secrets.THREADS_APP_SECRET }}" }
         run: python scripts/keyword_replies.py
       - name: Save
         run: |

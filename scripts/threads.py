@@ -1,5 +1,5 @@
 """Minimal client for the official Threads API (graph.threads.net)."""
-import os, time, json, urllib.request, urllib.parse
+import os, time, json, subprocess, urllib.request, urllib.parse
 
 BASE = "https://graph.threads.net/v1.0"
 
@@ -75,3 +75,18 @@ def replies(media_id, token):
 def refresh(token):
     r = urllib.request.urlopen(f"https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token={token}", timeout=60)
     return json.loads(r.read())
+
+ENC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "state", "token.enc")
+
+def get_token():
+    """THREADS_TOKEN secret if it looks real, else the encrypted token saved by the Connect workflow."""
+    t = (os.environ.get("THREADS_TOKEN") or "").strip()
+    if t.startswith("TH"):
+        return t
+    key = os.environ.get("THREADS_APP_SECRET", "")
+    if key and os.path.exists(ENC):
+        r = subprocess.run(["openssl", "enc", "-d", "-aes-256-cbc", "-pbkdf2", "-a", "-A", "-pass", "env:THREADS_APP_SECRET", "-in", ENC],
+                           capture_output=True, text=True)
+        if r.returncode == 0 and r.stdout.strip():
+            return r.stdout.strip()
+    return t

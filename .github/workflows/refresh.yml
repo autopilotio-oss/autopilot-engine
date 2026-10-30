@@ -3,15 +3,27 @@ on:
   schedule:
     - cron: "41 6 * * 0"
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Refresh token (needs GH_PAT secret to save it)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Refresh the key and save it encrypted
         env:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+          THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
         run: |
-          NEW=$(curl -s "https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$THREADS_TOKEN" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
-          if [ -z "$NEW" ]; then echo "refresh failed"; exit 1; fi
-          if [ -n "$GH_TOKEN" ]; then gh secret set THREADS_TOKEN --body "$NEW" --repo "$GITHUB_REPOSITORY"; echo "saved"; else echo "No GH_PAT: refreshed key not saved. Claude will remind you."; fi
+          OLD=$(python3 -c "import sys;sys.path.insert(0,'scripts');import threads;print(threads.get_token())")
+          echo "::add-mask::$OLD"
+          R=$(curl -s "https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$OLD")
+          NEW=$(echo "$R" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$NEW" ]; then echo "::error title=Refresh failed::$(echo "$R" | head -c 300)"; exit 1; fi
+          echo "::add-mask::$NEW"
+          if [ -z "$THREADS_APP_SECRET" ]; then echo "::warning::No THREADS_APP_SECRET, refreshed key not saved"; exit 0; fi
+          printf %s "$NEW" | openssl enc -aes-256-cbc -pbkdf2 -a -A -salt -pass env:THREADS_APP_SECRET -out state/token.enc
+          git config user.name "autopilot-bot"; git config user.email "bot@users.noreply.github.com"
+          git add state/token.enc; git diff --cached --quiet || (git commit -m "refresh key" && git push)

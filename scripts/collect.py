@@ -7,7 +7,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def load(p, d):
     try: return json.load(open(os.path.join(ROOT, p)))
     except Exception: return d
-token = os.environ.get("THREADS_TOKEN", "")
+token = threads.get_token()
 if not token:
     print("No THREADS_TOKEN yet, skipping."); sys.exit(0)
 posted = load("state/posted.json", {})

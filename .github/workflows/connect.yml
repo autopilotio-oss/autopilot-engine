@@ -1,0 +1,39 @@
+name: Connect Threads
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "Paste the code from the Connect page"
+        required: true
+permissions:
+  contents: write
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swap the code for a 60 day key and save it encrypted
+        env:
+          CODE: ${{ inputs.code }}
+          THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
+          APP_ID: "1855368409231001"
+          REDIRECT: "https://autopilotio-oss.github.io/autopilot-engine/auth.html"
+        run: |
+          if [ -z "$THREADS_APP_SECRET" ]; then echo "::error title=Missing::Add the THREADS_APP_SECRET secret first"; exit 1; fi
+          CODE="${CODE%%#_}"; CODE="$(echo -n "$CODE" | tr -d '[:space:]')"
+          R=$(curl -s -X POST https://graph.threads.net/oauth/access_token \
+            -d client_id="$APP_ID" -d client_secret="$THREADS_APP_SECRET" \
+            -d grant_type=authorization_code -d redirect_uri="$REDIRECT" -d code="$CODE")
+          SHORT=$(echo "$R" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$SHORT" ]; then echo "::error title=Code swap failed::$R"; exit 1; fi
+          echo "::add-mask::$SHORT"
+          R=$(curl -s "https://graph.threads.net/access_token?grant_type=th_exchange_token&client_secret=$THREADS_APP_SECRET&access_token=$SHORT")
+          LONG=$(echo "$R" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$LONG" ]; then echo "::error title=Long key failed::$(echo "$R" | head -c 300)"; exit 1; fi
+          echo "::add-mask::$LONG"
+          ME=$(curl -s "https://graph.threads.net/v1.0/me?fields=username&access_token=$LONG")
+          echo "::notice title=Connected::$ME"
+          mkdir -p state
+          printf %s "$LONG" | openssl enc -aes-256-cbc -pbkdf2 -a -A -salt -pass env:THREADS_APP_SECRET -out state/token.enc
+          git config user.name "autopilot-bot"; git config user.email "bot@users.noreply.github.com"
+          git add state/token.enc; git commit -m "Connect Threads"; git push
