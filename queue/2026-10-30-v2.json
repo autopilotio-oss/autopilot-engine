@@ -7,7 +7,7 @@
    "https://autopilotio-oss.github.io/autopilot-engine/media/objections.mp4"
   ],
   "topic": "Small Business",
-  "text": "Three worries stop most owners from trying AI:\n\nIt won't sound like me. Setup will take forever. It'll send something wrong.\n\nThis shows how each one is handled.\n\nComment BRAIN and I'll send the free first step.",
+  "text": "\"It'll sound like a robot.\"\n\"Setup will take forever.\"\n\"It'll send something dumb.\"\n\nFair worries. This shows how each one gets handled.\n\nComment BRAIN and I'll send the free first step.",
   "ig": false
  },
  {
@@ -15,10 +15,10 @@
   "at": "2026-10-30T12:30:00-04:00",
   "kind": "image",
   "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-ws.jpg"
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/n-handoff.jpg"
   ],
   "topic": "AI Tools",
-  "text": "Answering DMs at 11 PM is not the job you signed up for.\n\nTHE WORKSPACE sets up 7 Claude agents that draft your replies, quote follow ups, invoices and review asks. You approve every send.\n\nAbout an hour to set up. $49 once, 30 day refund.\n\nComment WORKSPACE for the link.",
+  "text": "If you run a small business, this is probably your list at midnight.\n\nAll five can be drafted by AI agents while you're on a job. You check them in the morning and tap approve.\n\nTHE WORKSPACE sets up 7 of them in about an hour. $49 once, 30 day refund.\n\nComment WORKSPACE and I'll send it.",
   "ig": false
  },
  {
@@ -37,10 +37,10 @@
   "at": "2026-10-31T12:30:00-04:00",
   "kind": "image",
   "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-q.jpg"
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/n-question.jpg"
   ],
   "topic": "Small Business",
-  "text": "One task off your plate tomorrow. Which one do you pick?\n\nReply with it and I'll answer with how I'd hand it off.",
+  "text": "If you could hand off one of these tomorrow, which one would it be?\n\nReply with yours. I'll answer with how I'd set it up.",
   "ig": false
  },
  {

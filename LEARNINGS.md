@@ -6,3 +6,4 @@
 - 2026-10-30: Changed: rewrote v2-01 and v2-02 hooks, shortened the launch post, replaced the q1 card (it said "AI EMPLOYEE", a banned phrase) with q2, new ws2 offer card, moved Oct 31 and Nov 1 posts to 9:00 and 12:30 ET.
 - 2026-10-30: Added queue/2026-10-30-auto.json (Nov 4 PM late-night-dm reel, Nov 5 reviews card, Nov 5 week before/after card). Mix now 8 BRAIN, 4 WORKSPACE, 2 questions.
 - 2026-10-30: Seb: the still images looked too AI made. Rebuilt all 10 queued cards in a poster style (tools/cards/p.html): flat black, no glow or grid, one huge headline, phone style message bubbles. The glowing c.html cards are retired.
+- 2026-10-30: Seb wanted more reach. Swapped today's 12:30 and tomorrow's question to native phone Notes screenshots (tools/cards/notes.html): they look like something a person posted, not an ad. 9:00 reel caption now opens with the three worries as quotes.
