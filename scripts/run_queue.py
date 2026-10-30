@@ -48,7 +48,7 @@ def main(now=None):
         else:
             uid = uid or threads.me(token)["id"]
             try:
-                mid = threads.post(uid, token, p["kind"], p["text"], urls)
+                mid = threads.post(uid, token, p["kind"], p["text"], urls, p.get("topic"))
             except threads.ThreadsError as e:
                 print("FAILED", p["id"], e); continue
         posted[p["id"]] = {"media_id": mid, "at": now.isoformat(), "kind": p["kind"]}

@@ -12,7 +12,8 @@ token = threads.get_token()
 if not token:
     print("No THREADS_TOKEN yet, skipping."); sys.exit(0)
 cfg = load("config/keywords.json", {})
-words = [w.upper() for w in cfg.get("keywords", [])]
+rules = {k.upper(): v for k, v in cfg.get("replies", {}).items()} or {w.upper(): cfg.get("reply", "") for w in cfg.get("keywords", [])}
+words = list(rules)
 com = load("state/comments.json", {}); sent = load("state/replied.json", {})
 me = threads.me(token); uid = me["id"]; myname = (me.get("username") or "").lower()
 n = 0
@@ -20,10 +21,11 @@ for pid, items in com.items():
     for c in items:
         cid, txt, who = c.get("id"), (c.get("text") or ""), (c.get("username") or "").lower()
         if not cid or cid in sent or who == myname: continue
-        if not any(re.search(r"\b" + re.escape(w) + r"\b", txt.upper()) for w in words): continue
+        hit = next((w for w in words if re.search(r"\b" + re.escape(w) + r"\b", txt.upper())), None)
+        if not hit: continue
         if n >= cfg.get("max_per_run", 20): break
         try:
-            sent[cid] = threads.reply(uid, token, cid, cfg["reply"]); n += 1; print("keyword reply", cid)
+            sent[cid] = threads.reply(uid, token, cid, rules[hit]); n += 1; print("keyword reply", cid)
         except threads.ThreadsError as e:
             print("fail", cid, e)
 json.dump(sent, open(os.path.join(ROOT, "state/replied.json"), "w"), indent=1)

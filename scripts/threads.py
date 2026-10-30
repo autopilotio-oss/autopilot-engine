@@ -40,21 +40,29 @@ def container(uid, token, **p):
 def publish(uid, token, cid):
     return _req("POST", f"/{uid}/threads_publish", {"creation_id": cid}, token)["id"]
 
-def post(uid, token, kind, text, urls=()):
-    """kind: text | image | video | carousel. urls: public media URLs."""
+def post(uid, token, kind, text, urls=(), topic=None):
+    """kind: text | image | video | carousel. urls: public media URLs. topic: optional topic tag (retried without it if refused)."""
+    if topic:
+        try:
+            return _post(uid, token, kind, text, urls, {"topic_tag": topic})
+        except ThreadsError as e:
+            print("topic tag refused, posting without it:", str(e)[:120])
+    return _post(uid, token, kind, text, urls, {})
+
+def _post(uid, token, kind, text, urls, extra):
     if kind == "text":
-        cid = container(uid, token, media_type="TEXT", text=text)
+        cid = container(uid, token, media_type="TEXT", text=text, **extra)
     elif kind == "image":
-        cid = container(uid, token, media_type="IMAGE", image_url=urls[0], text=text)
+        cid = container(uid, token, media_type="IMAGE", image_url=urls[0], text=text, **extra)
     elif kind == "video":
-        cid = container(uid, token, media_type="VIDEO", video_url=urls[0], text=text)
+        cid = container(uid, token, media_type="VIDEO", video_url=urls[0], text=text, **extra)
     elif kind == "carousel":
         kids = []
         for u in urls[:20]:
             t = "VIDEO" if u.lower().endswith((".mp4", ".mov")) else "IMAGE"
             k = container(uid, token, media_type=t, is_carousel_item="true", **({"video_url": u} if t == "VIDEO" else {"image_url": u}))
             wait_ready(k, token); kids.append(k)
-        cid = container(uid, token, media_type="CAROUSEL", children=",".join(kids), text=text)
+        cid = container(uid, token, media_type="CAROUSEL", children=",".join(kids), text=text, **extra)
     else:
         raise ValueError(kind)
     wait_ready(cid, token)
