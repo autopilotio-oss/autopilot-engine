@@ -3,13 +3,14 @@ GUMROAD_TOKEN and KIT_PRIVATE_KEY. Records results in state/products.json."""
 import os, sys, json, glob, subprocess, urllib.request, urllib.parse, tempfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 API = "https://api.gumroad.com/v2"; TOK = os.environ.get("GUMROAD_TOKEN", "").strip()
+DBG = []
 def call(method, path, data=None, raw=False):
     data = dict(data or {}); data["access_token"] = TOK
     body = urllib.parse.urlencode(data, doseq=True).encode()
     req = urllib.request.Request(API + path, data=body, method=method, headers={"Content-Type": "application/x-www-form-urlencoded"})
     try: r = urllib.request.urlopen(req, timeout=120).read().decode(); return json.loads(r)
     except urllib.error.HTTPError as e:
-        msg = e.read().decode()[:300].replace(TOK, "***"); print(f"::warning title=Gumroad {method} {path} {e.code}::{msg}"); raise
+        msg = e.read().decode()[:300].replace(TOK, "***"); DBG.append([method, path, e.code, msg]); print(f"::warning title=Gumroad {method} {path} {e.code}::{msg}"); raise
 def unseal(d):
     pk = os.environ["KIT_PRIVATE_KEY"]; tmp = tempfile.mkdtemp()
     open(tmp + "/pk.pem", "w").write(pk)
@@ -31,9 +32,10 @@ def upload(path, name):
 def main():
     if not TOK: print("No GUMROAD_TOKEN yet"); return
     try:
-        u = urllib.request.urlopen(API + "/user?" + urllib.parse.urlencode({"access_token": TOK}), timeout=60).read().decode()
+        DBG.append(["token_len", len(TOK)])
+        u = urllib.request.urlopen(API + "/user?" + urllib.parse.urlencode({"access_token": TOK}), timeout=60).read().decode(); DBG.append(["user", "ok"])
         print("::notice title=Gumroad user::" + json.loads(u)["user"].get("name", "ok"))
-    except urllib.error.HTTPError as e: print(f"::warning title=Gumroad user check {e.code}::" + e.read().decode()[:200])
+    except urllib.error.HTTPError as e: m = e.read().decode()[:200]; DBG.append(["user", e.code, m]); print(f"::warning title=Gumroad user check {e.code}::" + m)
     sp = os.path.join(ROOT, "state", "products.json"); st = json.load(open(sp)) if os.path.exists(sp) else {}
     for f in sorted(glob.glob(os.path.join(ROOT, "products", "*", "product.json"))):
         d = os.path.dirname(f); slug = os.path.basename(d); p = json.load(open(f))
@@ -50,6 +52,7 @@ def main():
             st[slug] = {"id": pid, "url": r["product"].get("short_url") or f"https://autopilotoi.gumroad.com/l/{p['permalink']}", "published": True}
             print(f"::notice title=Gumroad live::{p['name']} {st[slug]['url']}")
         except Exception as e:
-            print(f"::warning title=Gumroad failed::{slug} {str(e)[:300]}")
+            DBG.append(["fail", slug, repr(e)[:300]]); print(f"::warning title=Gumroad failed::{slug} {str(e)[:300]}")
     json.dump(st, open(sp, "w"), indent=1)
+    json.dump(DBG, open(os.path.join(ROOT, "state", "gumroad_debug.json"), "w"), indent=1)
 main()
