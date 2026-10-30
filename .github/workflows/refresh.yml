@@ -17,6 +17,7 @@ jobs:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
           THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
         run: |
+          export THREADS_APP_SECRET="$(printf %s "$THREADS_APP_SECRET" | tr -d '[:space:]')"
           OLD=$(python3 -c "import sys;sys.path.insert(0,'scripts');import threads;print(threads.get_token())")
           echo "::add-mask::$OLD"
           R=$(curl -s "https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$OLD")

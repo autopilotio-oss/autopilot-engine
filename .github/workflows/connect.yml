@@ -19,6 +19,7 @@ jobs:
           APP_ID: "1855368409231001"
           REDIRECT: "https://autopilotio-oss.github.io/autopilot-engine/auth.html"
         run: |
+          export THREADS_APP_SECRET="$(printf %s "$THREADS_APP_SECRET" | tr -d '[:space:]')"
           if [ -z "$THREADS_APP_SECRET" ]; then echo "::error title=Missing::Add the THREADS_APP_SECRET secret first"; exit 1; fi
           CODE="${CODE%%#_}"; CODE="$(echo -n "$CODE" | tr -d '[:space:]')"
           R=$(curl -s -X POST https://graph.threads.net/oauth/access_token \

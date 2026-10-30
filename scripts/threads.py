@@ -83,10 +83,10 @@ def get_token():
     t = (os.environ.get("THREADS_TOKEN") or "").strip()
     if t.startswith("TH"):
         return t
-    key = os.environ.get("THREADS_APP_SECRET", "")
+    key = "".join(os.environ.get("THREADS_APP_SECRET", "").split())
     if key and os.path.exists(ENC):
         r = subprocess.run(["openssl", "enc", "-d", "-aes-256-cbc", "-pbkdf2", "-a", "-A", "-pass", "env:THREADS_APP_SECRET", "-in", ENC],
-                           capture_output=True, text=True)
+                           capture_output=True, text=True, env={**os.environ, "THREADS_APP_SECRET": key})
         if r.returncode == 0 and r.stdout.strip():
             return r.stdout.strip()
     return t
