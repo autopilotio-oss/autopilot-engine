@@ -1,0 +1,118 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/* Poster cards (Seb, Oct 30: less AI looking, more impact). Pure black, no glow, no gradients, no grid.
+   Barlow Condensed Black Italic headlines, Geist body, Geist Mono labels, hairline rules. Render: node render.js <id> p.html */
+@font-face{font-family:B;src:url(f/BarlowCondensed-BlackItalic.otf)}
+@font-face{font-family:G;font-weight:500;src:url(f/Geist-Medium.otf)}@font-face{font-family:G;font-weight:600;src:url(f/Geist-SemiBold.otf)}@font-face{font-family:G;font-weight:700;src:url(f/Geist-Bold.otf)}
+@font-face{font-family:M;src:url(f/GeistMono-Medium.otf)}
+*{box-sizing:border-box;margin:0;padding:0}body{background:#222}
+.k{position:relative;width:1080px;height:1350px;overflow:hidden;display:flex;flex-direction:column;padding:64px 72px 64px;background:#000;color:#F2F2EE;font-family:G,sans-serif;margin-bottom:20px}
+.hd{display:flex;align-items:center;gap:16px;font:20px M;letter-spacing:4px;color:#8C8C88;padding-bottom:26px;border-bottom:1px solid #2A2A2A}
+.hd img{width:40px;height:40px;border-radius:10px}.hd b{color:#F2F2EE;font-weight:400}.hd span{margin-left:auto}.hd em{font-style:normal;color:#D4FF3A}
+.h{margin:44px 0 0 -4px;font-family:B;text-transform:uppercase;line-height:.84;letter-spacing:-1px}
+.h i{font-style:normal;color:#D4FF3A}
+.s{font-size:40px;font-weight:500;line-height:1.3;color:#BDBDB7;letter-spacing:-.4px}
+.rows{margin-top:48px}
+.r{display:flex;gap:30px;align-items:baseline;padding:24px 0;border-top:1px solid #2A2A2A}
+.r:last-child{border-bottom:1px solid #2A2A2A}
+.r .n{font:24px M;color:#D4FF3A;letter-spacing:2px;width:56px;flex:none}
+.r .t{font-size:42px;font-weight:600;letter-spacing:-.6px}.r .t small{display:block;font-size:30px;font-weight:500;color:#8C8C88;margin-top:6px;letter-spacing:-.2px}
+.ft{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;padding-top:28px;border-top:1px solid #2A2A2A}
+.ft .c{font:20px M;letter-spacing:4px;color:#8C8C88}.ft .w{font-family:B;font-size:120px;line-height:.8;color:#D4FF3A;margin-top:14px;text-transform:uppercase}
+.ft .x{font:20px M;letter-spacing:4px;color:#8C8C88;text-align:right;line-height:1.6}
+/* phone-style messages */
+.msgs{margin-top:48px;display:flex;flex-direction:column;gap:14px}
+.ts{font:600 24px G;color:#7A7A76;text-align:center;margin:6px 0}
+.b{max-width:78%;padding:22px 30px;border-radius:38px;font-size:36px;line-height:1.3;font-weight:500;letter-spacing:-.3px}
+.in{background:#262628;color:#F2F2EE;align-self:flex-start;border-bottom-left-radius:10px}
+.out{background:#D4FF3A;color:#0A0A0A;align-self:flex-end;border-bottom-right-radius:10px}
+.rd{font:600 22px G;color:#7A7A76;align-self:flex-end;margin-top:-6px}
+.tag{font:20px M;letter-spacing:4px;color:#8C8C88;margin-bottom:6px}
+.cols{margin-top:48px;display:flex;border-top:1px solid #2A2A2A;border-bottom:1px solid #2A2A2A}
+.cols>div{flex:1;padding:30px 0}.cols>div+div{border-left:1px solid #2A2A2A;padding-left:36px}
+.cols h3{font:20px M;letter-spacing:4px;color:#8C8C88;font-weight:400;margin-bottom:18px}.cols .on h3{color:#D4FF3A}
+.cols p{font-size:var(--p,38px);font-weight:600;line-height:1.25;margin-top:14px;letter-spacing:-.5px;padding-right:20px}
+.cols div:first-child p{color:#8C8C88;text-decoration:line-through;text-decoration-color:#555;text-decoration-thickness:2px}
+</style></head><body>
+
+<!-- WORKSPACE offer -->
+<div class="k" id="p-ws"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>THE WORKSPACE</em> · NO. 001</span></div>
+<div class="h" style="font-size:220px">7 agents.<br><i>1 hour.</i><br>$49.</div>
+<div class="rows">
+<div class="r"><div class="n">01</div><div class="t">Drafts replies, follow ups, invoices</div></div>
+<div class="r"><div class="n">02</div><div class="t">You approve every send</div></div>
+<div class="r"><div class="n">03</div><div class="t">One time. 30 day refund.</div></div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Workspace</div></div><div class="x">FOR THE<br>LINK</div></div></div>
+
+<!-- chatbot vs agent -->
+<div class="k" id="p-vs"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>AI 101</em> · NO. 002</span></div>
+<div class="h" style="font-size:195px">You're using<br>AI like a<br><i>search bar.</i></div>
+<div class="cols"><div><h3>MOST PEOPLE</h3><p>Ask a question.</p><p>Close the tab.</p></div>
+<div class="on"><h3>WHAT WORKS</h3><p>Give it a job.</p><p>Give it your business details.</p></div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Brain</div></div><div class="x">FREE<br>SETUP</div></div></div>
+
+<!-- question -->
+<div class="k" id="p-q"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>QUESTION</em> · NO. 003</span></div>
+<div class="h" style="font-size:200px;margin-top:90px">One task<br>off your plate<br><i>tomorrow.</i></div>
+<div class="s" style="margin-top:56px;font-size:48px;color:#F2F2EE">Which one do you pick?<br><span style="color:#8C8C88;font-size:38px">Reply and I'll tell you how I'd hand it off.</span></div>
+<div class="ft"><div><div class="c">YOUR TURN</div><div class="w">Reply below</div></div></div></div>
+
+<!-- slow replies -->
+<div class="k" id="p-slow"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>HARD TRUTH</em> · NO. 004</span></div>
+<div class="h" style="font-size:150px">Slow replies<br>lose more<br>jobs than<br><i>bad work.</i></div>
+<div class="msgs"><div class="ts">Thu 11:48 PM</div>
+<div class="b in">Hi, how much for this Saturday?</div>
+<div class="ts">Fri 8:02 AM</div>
+<div class="b in">Never mind, found someone. Thanks anyway</div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Brain</div></div><div class="x">FREE<br>FIX</div></div></div>
+
+<!-- new hire -->
+<div class="k" id="p-hire"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>FRAMEWORK</em> · NO. 005</span></div>
+<div class="h" style="font-size:170px">An AI agent<br>is a <i>new hire.</i></div>
+<div class="rows">
+<div class="r"><div class="n">01</div><div class="t">A job<small>Clear instructions</small></div></div>
+<div class="r"><div class="n">02</div><div class="t">Training<small>Your prices, rules and voice</small></div></div>
+<div class="r"><div class="n">03</div><div class="t">Keys<small>Access to email and calendar</small></div></div>
+<div class="r"><div class="n">04</div><div class="t">A shift<small>A schedule it runs on</small></div></div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Brain</div></div><div class="x">START<br>WITH 02</div></div></div>
+
+<!-- 3 steps -->
+<div class="k" id="p-steps"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>THE WORKSPACE</em> · NO. 006</span></div>
+<div class="h" style="font-size:230px">7 agents.<br><i>3 steps.</i></div>
+<div class="rows">
+<div class="r"><div class="n">01</div><div class="t">Make a Claude account<small>We show you where to tap</small></div></div>
+<div class="r"><div class="n">02</div><div class="t">Answer a short quiz<small>About your business, prices and voice</small></div></div>
+<div class="r"><div class="n">03</div><div class="t">Paste one prompt<small>Claude builds each agent with you</small></div></div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Workspace</div></div><div class="x">NO CODE<br>NO TECH PERSON</div></div></div>
+
+<!-- quotes -->
+<div class="k" id="p-quotes"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>MONEY LEAK</em> · NO. 007</span></div>
+<div class="h" style="font-size:168px">Most quotes<br>don't die.<br><i>Nobody follows up.</i></div>
+<div class="msgs"><div class="tag">EXAMPLE · DAY 3 FOLLOW UP</div>
+<div class="b out">Hi Maria, just checking in on the kitchen quote. Happy to answer questions or hold a spot for next week.</div>
+<div class="rd">Delivered</div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Brain</div></div><div class="x">FREE<br>FIRST STEP</div></div></div>
+
+<!-- honest limits -->
+<div class="k" id="p-honest"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>NO HYPE</em> · NO. 008</span></div>
+<div class="h" style="font-size:175px">What AI agents<br><i>don't</i> do.</div>
+<div class="rows">
+<div class="r"><div class="n">✕</div><div class="t">Make decisions<small>They draft. You tap send.</small></div></div>
+<div class="r"><div class="n">✕</div><div class="t">Read your mind<small>You teach them your business once.</small></div></div>
+<div class="r"><div class="n">✕</div><div class="t">Run with your computer off<small>Still saves hours every week.</small></div></div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Workspace</div></div><div class="x">$49<br>ONE TIME</div></div></div>
+
+<!-- reviews -->
+<div class="k" id="p-reviews"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>MONEY LEAK</em> · NO. 009</span></div>
+<div class="h" style="font-size:150px">Happy customers<br>rarely review.<br><i>Nobody asked.</i></div>
+<div class="msgs"><div class="tag">EXAMPLE · THE DAY AFTER THE JOB</div>
+<div class="b out">Thanks again for having us out, Dana. If you were happy with the work, a quick review would mean a lot. Here's the link.</div>
+<div class="rd">Delivered</div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Brain</div></div><div class="x">FREE<br>FIRST STEP</div></div></div>
+
+<!-- week before/after -->
+<div class="k" id="p-week"><div class="hd"><img src="logo.png"><b>AUTOPILOT.OI</b><span><em>BEFORE / AFTER</em> · NO. 010</span></div>
+<div class="h" style="font-size:205px">Same week.<br><i style="white-space:nowrap">Less admin.</i></div>
+<div class="cols" style="margin-top:70px;--p:48px"><div><h3>BEFORE</h3><p>DMs answered at midnight</p><p>Quotes nobody chased</p><p>Invoices on Sunday</p></div>
+<div class="on"><h3>AFTER</h3><p>Replies waiting as drafts</p><p>Follow ups queued</p><p style="color:#D4FF3A">You tap approve</p></div></div>
+<div class="ft"><div><div class="c">COMMENT</div><div class="w">Workspace</div></div><div class="x">$49<br>ONE TIME</div></div></div>
+</body></html>

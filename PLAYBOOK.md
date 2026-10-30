@@ -26,8 +26,8 @@
 6. Questions that get owners talking about their busy work.
 
 ## How to make a card
-Templates live in tools/cards/c.html (1080x1350, black #0A0A0A, lime #D4FF3A, Bebas Neue headline, Space Mono labels, Inter body, lime pill CTA at bottom).
-Copy one `<div class="k" id="...">` block, change the words, then run `node tools/cards/render.js <id>` from tools/cards (outputs out/<id>.jpg) and copy to docs/media/cards/.
+Use tools/cards/p.html (poster style, Seb Oct 30: "less AI looking, more impact"). Pure black, no glow, no gradients, no grid. One huge Barlow Condensed Black Italic headline (one {lime} phrase), Geist body, Geist Mono labels, hairline rules, phone style message bubbles for examples, big lime keyword in the footer.
+Copy one `<div class="k" id="p-...">` block, change the words, run `PAGE=p.html node render.js <id>` then `node check.js` (every card must show gap >= 0 and footer_inside=true) from tools/cards, and copy out/<id>.jpg to docs/media/cards/. The old glowing c.html cards are retired.
 Media URL pattern: https://autopilotio-oss.github.io/autopilot-engine/media/cards/<file>.jpg
 
 ## Queue format
