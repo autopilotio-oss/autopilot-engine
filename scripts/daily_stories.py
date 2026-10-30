@@ -74,11 +74,19 @@ def poll(item, now, out):
     y = T.headline(d, item["q"], 80, 410, 920, 140)
     options(d, item["o"], y + 70); footer(d, "REPLY A OR B"); im.save(out, quality=94)
 
+def fact(item, num, now, out):
+    im, d = canvas("REAL FACT · NO. " + str(num).zfill(3), now)
+    y = T.rich(d, item["f"], 80, 430, 900, 76, INK, LIME, sans="Geist-SemiBold.otf", lead=1.16)
+    d.line([(80, y + 50), (200, y + 50)], fill=LIME, width=4)
+    T.rich(d, item["more"], 80, y + 90, 890, 46, (190, 192, 190), INK, sans="Geist-Medium.otf", lead=1.3)
+    footer(d, "FACT NO. " + str(num).zfill(3)); im.save(out, quality=94)
+
 def main():
     now = dt.datetime.now(ET); day = now.date().isoformat(); n = now.toordinal()
     pool = json.load(open(os.path.join(ROOT, "tools", "story", "pool.json")))
     out = os.path.join(ROOT, "docs", "media", "stories"); os.makedirs(out, exist_ok=True)
     t = pool["tips"][n % len(pool["tips"])]; q = pool["quizzes"][n % len(pool["quizzes"])]; p = pool["polls"][n % len(pool["polls"])]
+    fi = n % len(pool["facts"]); fc = pool["facts"][fi]; fact(fc, fi + 1, now, f"{out}/{day}-fact.jpg")
     tip(t, now, f"{out}/{day}-tip.jpg"); quiz_q(q, now, f"{out}/{day}-quiz.jpg"); quiz_a(q, now, f"{out}/{day}-answer.jpg"); poll(p, now, f"{out}/{day}-poll.jpg")
     items = []
     try:
@@ -90,6 +98,7 @@ def main():
     items += [("tip", "10:30", f"{day}-tip.jpg", "AI tip: " + plain(t["t"]) + " " + plain(t["x"])),
               ("quiz", "12:30", f"{day}-quiz.jpg", "Quiz: " + plain(q["q"])),
               ("answer", "14:30", f"{day}-answer.jpg", "Quiz answer: " + q["o"][q["a"]] + ". " + q["why"]),
+              ("fact", "16:30", f"{day}-fact.jpg", "Real fact: " + plain(fc["f"]) + " " + fc["more"]),
               ("poll", "18:00", f"{day}-poll.jpg", "Poll: " + plain(p["q"]) + " A) " + p["o"][0] + " B) " + p["o"][1])]
     queue = []
     for k, hm, f, text in items:

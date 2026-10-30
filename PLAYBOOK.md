@@ -60,3 +60,7 @@ Headlines: Barlow Condensed Black Italic, UPPERCASE, emphasis words in lime (mar
 
 ## Voice (Seb: "nothing cringe")
 Write like a sharp operator texting a busy owner: calm, plain, specific, short. Never use: "they don't want you to know" (except the one carousel Seb named), "nobody tells you", "imagine", "be honest", "serious question", "secret", "hack", "game changer", "unlock", "level up", "AI employee", "zero/no tech words", hype emojis (👀🔥🚀), "it's live", "save this before", "most underrated". No fake urgency, no claims we can't back. One clear CTA. Read every line out loud: if it sounds like an ad or a guru, rewrite it.
+
+## Real Facts (Snapple style) and quality bar for everything generated
+Daily story at 4:30 PM ET: "REAL FACT · NO. 0xx" from tools/story/pool.json "facts" (fact line with one {lime} phrase + one line of context). Facts must be true and checkable: only add one after confirming it with a reliable source in a web search, and keep the wording precise (say "first recorded", "commonly credited" when that's the honest version). Topics: AI, computers, the internet, tech history, famous companies, business. No stats you can't source, no "studies show".
+Quality bar for every tip, quiz, poll and fact: it must teach something useful or surprising in one read. If it's generic, obvious, preachy or sounds like an ad, don't use it.

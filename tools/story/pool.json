@@ -174,5 +174,71 @@
     "A lost lead"
    ]
   }
+ ],
+ "facts": [
+  {
+   "f": "The word {robot} comes from the Czech \"robota\", meaning forced labor.",
+   "more": "It first appeared in a 1920 play called R.U.R."
+  },
+  {
+   "f": "The first recorded computer {bug} was a real moth.",
+   "more": "Engineers found it stuck in a Harvard Mark II relay in 1947 and taped it into the logbook."
+  },
+  {
+   "f": "The term {artificial intelligence} was coined in 1955.",
+   "more": "It was written for a proposal for a 1956 summer workshop at Dartmouth."
+  },
+  {
+   "f": "In 1950, Alan Turing proposed a test for machine intelligence he called {the imitation game.}",
+   "more": "Today we call it the Turing test."
+  },
+  {
+   "f": "A 1966 chatbot named {ELIZA} convinced some people it understood them.",
+   "more": "It mostly rephrased their own words back as questions."
+  },
+  {
+   "f": "IBM's Deep Blue beat world chess champion {Garry Kasparov} in 1997.",
+   "more": "It was the first time a computer beat a reigning champion in a full match."
+  },
+  {
+   "f": "The first text message ever sent said {\"Merry Christmas\".}",
+   "more": "It was sent from a computer to a phone in December 1992."
+  },
+  {
+   "f": "The first webcam watched a {coffee pot.}",
+   "more": "Cambridge researchers set it up in 1991 so they'd stop walking to an empty pot."
+  },
+  {
+   "f": "{Bluetooth} is named after a 10th century Danish king.",
+   "more": "Harald \"Bluetooth\" Gormsson united Danish tribes. The tech unites devices."
+  },
+  {
+   "f": "{CAPTCHA} is an acronym.",
+   "more": "Completely Automated Public Turing test to tell Computers and Humans Apart."
+  },
+  {
+   "f": "The first item sold on eBay was a {broken laser pointer.}",
+   "more": "The buyer said he collected broken laser pointers."
+  },
+  {
+   "f": "{Google} is named after \"googol\", a 1 followed by 100 zeros.",
+   "more": "The founders wanted a name that meant a huge amount of information."
+  },
+  {
+   "f": "The first domain name ever registered was {symbolics.com.}",
+   "more": "It was registered in March 1985."
+  },
+  {
+   "f": "{Nintendo} was founded in 1889.",
+   "more": "It started as a company making playing cards."
+  },
+  {
+   "f": "The first YouTube video is called {\"Me at the zoo\".}",
+   "more": "It's 19 seconds long and was uploaded in April 2005."
+  },
+  {
+   "f": "Ray Tomlinson sent the first network email in 1971 and picked the {@ symbol} to separate names from computers.",
+   "more": "He said he chose it because it wasn't used in anyone's name."
+  }
  ]
 }
