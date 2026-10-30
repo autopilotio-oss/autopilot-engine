@@ -1,5 +1,5 @@
 """Minimal client for the official Threads API (graph.threads.net)."""
-import os, time, json, subprocess, urllib.request, urllib.parse
+import os, json, time, json, subprocess, urllib.request, urllib.parse
 
 BASE = "https://graph.threads.net/v1.0"
 
@@ -87,7 +87,11 @@ def refresh(token):
 ENC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "state", "token.enc")
 
 def get_token():
-    """THREADS_TOKEN secret if it looks real, else the encrypted token saved by the Connect workflow."""
+    """THREADS_TOKEN secret if it looks real, else the encrypted token saved by the Connect workflow.
+    Returns None while config/threads.json says the API is paused (Meta blocked our app; posting goes through Metricool)."""
+    try:
+        if json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "threads.json"))).get("paused"): return None
+    except Exception: pass
     t = (os.environ.get("THREADS_TOKEN") or "").strip()
     if t.startswith("TH"):
         return t
