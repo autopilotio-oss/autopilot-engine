@@ -69,5 +69,78 @@
     "btn": "COMMENT CREDIT"
    }
   ]
+ },
+ "busy-texts": {
+  "slides": [
+   {
+    "type": "hook",
+    "tag": "AI for business owners",
+    "tr": "Free|5 minutes",
+    "h": [
+     "Stop answering",
+     "the same texts",
+     "*all day."
+    ],
+    "s": "Here's how to make AI reply for you, in your voice. Free, in <b>5 minutes.</b>",
+    "size": 104
+   },
+   {
+    "type": "step",
+    "tag": "The problem",
+    "h": [
+     "Same 10",
+     "questions.",
+     "*Every week."
+    ],
+    "s": "Prices. Hours. <b>\"Are you free Saturday?\"</b> That's hours you don't get back."
+   },
+   {
+    "type": "tweet",
+    "tag": "The fix",
+    "t": "AI can answer those for you. But only if it knows your business: your prices, your rules and how you talk.",
+    "tm": "Teach it once \u00b7 use it forever"
+   },
+   {
+    "type": "prompt",
+    "tag": "Step 01",
+    "h": [
+     "Teach it",
+     "*once."
+    ],
+    "p": "You are the assistant for [business name]. My services and prices: [list]. My hours: [hours]. My rules: [rules]. Reply short and friendly, and always offer to book."
+   },
+   {
+    "type": "step",
+    "tag": "Step 02",
+    "h": [
+     "Paste any",
+     "*customer",
+     "*message."
+    ],
+    "s": "Get a reply in your voice in seconds. <b>You read it, you send it.</b>"
+   },
+   {
+    "type": "lime",
+    "tag": "Step 03",
+    "h": [
+     "We wrote",
+     "step 1",
+     "for you."
+    ],
+    "note": "free!",
+    "s": "Our free <b>Business Brain</b> asks you 15 questions and builds it for you. Works with free Claude or ChatGPT.",
+    "st": "Answer|Paste|Done"
+   },
+   {
+    "type": "cta",
+    "h": [
+     "Get your",
+     "*free Brain."
+    ],
+    "s": "Link in our bio. No sign up, no card.",
+    "btn": "TAP OUR PROFILE",
+    "st": "Follow for|daily AI|lessons"
+   }
+  ]
  }
 }
