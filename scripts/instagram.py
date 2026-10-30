@@ -2,7 +2,7 @@
 Publishes reels, single images and carousels to a professional Instagram account."""
 import os, time, json, subprocess, urllib.request, urllib.parse
 
-BASE = "https://graph.instagram.com/v21.0"
+BASE = os.environ.get("IG_API_BASE", "https://graph.facebook.com/v21.0")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENC = os.path.join(ROOT, "state", "ig_token.enc")
 
@@ -23,6 +23,10 @@ def _req(method, path, params, token):
         raise IGError(msg)
 
 def get_token():
+    """System user token from the IG_TOKEN secret (never expires). Falls back to an encrypted Instagram Login key."""
+    t = "".join(os.environ.get("IG_TOKEN", "").split())
+    if t:
+        return t
     key = "".join(os.environ.get("IG_APP_SECRET", "").split())
     if not key or not os.path.exists(ENC):
         return ""
@@ -30,8 +34,18 @@ def get_token():
                        capture_output=True, text=True, env={**os.environ, "K": key})
     return r.stdout.strip() if r.returncode == 0 else ""
 
-def me(token):
-    return _req("GET", "/me", {"fields": "user_id,username"}, token)
+def user_id(token):
+    """Instagram account id: IG_USER_ID if set, otherwise discovered from the token."""
+    uid = "".join(os.environ.get("IG_USER_ID", "").split())
+    if uid:
+        return uid
+    try:
+        for pg in _req("GET", "/me/accounts", {"fields": "instagram_business_account"}, token).get("data", []):
+            if pg.get("instagram_business_account"):
+                return pg["instagram_business_account"]["id"]
+    except IGError:
+        pass
+    return _req("GET", "/me", {"fields": "user_id"}, token).get("user_id")
 
 def wait_ready(cid, token, tries=40, gap=10):
     for _ in range(tries):

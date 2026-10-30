@@ -82,7 +82,7 @@ def cross_post_instagram(raw, now):
         if DRY:
             print("DRY IG", p["id"], p["kind"]); continue
         try:
-            uid = uid or instagram.me(token)["user_id"]
+            uid = uid or instagram.user_id(token)
             mid = instagram.post(uid, token, p["kind"], instagram.ig_caption(p["text"]), urls)
             done[p["id"]] = {"media_id": mid, "at": now.isoformat(), "kind": p["kind"]}
             print("instagram", p["id"], mid)

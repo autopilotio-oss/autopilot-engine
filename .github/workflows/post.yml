@@ -20,6 +20,8 @@ jobs:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
           THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
           IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: python scripts/run_queue.py
       - name: Save what was posted
         run: |
