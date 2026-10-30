@@ -1,20 +1,34 @@
 name: Check Instagram
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/check_ig.yml"]
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Who is connected
+      - name: Diagnose
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: |
           python3 - <<'PY'
-          import sys; sys.path.insert(0, "scripts"); import instagram
-          t = instagram.get_token()
-          if not t: print("::error title=Missing::Add the IG_TOKEN secret"); sys.exit(1)
+          import sys, json, urllib.request, urllib.parse
+          sys.path.insert(0, "scripts"); import instagram
+          t = instagram.get_token(); B = instagram.BASE
+          def get(path, **p):
+              p["access_token"] = t
+              try:
+                  r = urllib.request.urlopen(B + path + "?" + urllib.parse.urlencode(p), timeout=30).read().decode()
+                  print(f"::notice title=OK {path}::{r[:400]}")
+              except urllib.error.HTTPError as e:
+                  print(f"::warning title=FAIL {path}::{e.read().decode()[:400]}")
+          get("/me", fields="id,name")
+          get("/debug_token", input_token=t)
           uid = instagram.user_id(t)
-          info = instagram._req("GET", f"/{uid}", {"fields": "username"}, t)
-          print(f"::notice title=Instagram connected::{info}")
+          get(f"/{uid}", fields="username,followers_count")
+          get(f"/{uid}/content_publishing_limit", fields="quota_usage,config")
+          get(f"/{uid}/media", fields="id", limit=1)
           PY
