@@ -75,7 +75,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#050605}
 
 <div class="sc blk" id="s10">
  <div class="card" id="ag" style="position:absolute;left:90px;right:90px;top:210px;padding-bottom:12px;border-color:rgba(212,255,58,.55)">
-  <div style="display:flex;align-items:center;padding:34px 40px 6px"><span class="h" style="font-size:66px;color:var(--l);font-style:italic">✳ BILL AGENT</span><span class="m" style="margin-left:auto;font-size:20px;background:var(--l);color:var(--d);padding:8px 14px;border-radius:999px">ON</span></div>
+  <div style="display:flex;align-items:center;padding:34px 40px 6px"><span class="h" style="font-size:66px;color:var(--l);font-style:italic">✳ SUBS AGENT</span><span class="m" style="margin-left:auto;font-size:20px;background:var(--l);color:var(--d);padding:8px 14px;border-radius:999px">ON</span></div>
   <div class="m" style="padding:0 40px 18px;font-size:22px;color:#8a8d86">Monthly subscriptions</div>
   <div class="h" style="font-size:120px;padding:0 40px 18px" id="agt">$133</div>
   <div class="row" data-k="0"><span class="ic">G</span><span class="nm">Gym · used 2×</span><span class="p">$50</span></div>
@@ -91,7 +91,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#050605}
 <div class="sc lime" id="s11">
  <div class="m" style="position:absolute;left:0;right:0;top:520px;text-align:center;font-size:34px">Want the full setup?</div>
  <div class="h" style="position:absolute;left:0;right:0;top:640px;text-align:center;font-size:150px">Comment</div>
- <div style="position:absolute;left:0;right:0;top:830px;text-align:center"><span id="kw" class="h" style="display:inline-block;background:var(--d);color:var(--l);font-size:260px;padding:20px 70px 0;border-radius:48px">BILL</span></div>
+ <div style="position:absolute;left:0;right:0;top:830px;text-align:center"><span id="kw" class="h" style="display:inline-block;background:var(--d);color:var(--l);font-size:260px;padding:20px 70px 0;border-radius:48px">SUBS</span></div>
  <div class="h" style="position:absolute;left:0;right:0;top:1230px;text-align:center;font-size:64px">Free. In your DMs.</div>
  <div class="m" style="position:absolute;left:0;right:0;top:1660px;text-align:center;font-size:30px">@autopilot.oi</div>
 </div>
@@ -154,7 +154,7 @@ function render(t){
  [l]=sceneT('s10',t);
  if(l>=0&&l<4.8){const amt=[50,32,20,15];let tot=133;document.querySelectorAll('#s10 [data-k]').forEach((e,i)=>{const ts=.9+i*.5,s=l>ts;e.style.opacity=s?.45:1;e.querySelector('.nm').style.textDecoration=s?'line-through':'none';e.querySelector('.nm').style.textDecorationColor=G;e.querySelector('.p').style.color=s?G:'';e.querySelector('.p').textContent=s?'cut':'$'+amt[i];if(s)tot-=amt[i]});
   $('agt').innerHTML=l>3.1?`$${tot}<span class="m" style="font-size:30px;color:var(--l);margin-left:24px">saves $1,404/yr</span>`:'$'+tot;$('msg').style.opacity=l>3.3?1:0;
-  typed($('s10t'),"Your Bill Agent finds them <span class=hi>every month.</span>",l-.3,.035);
+  typed($('s10t'),"Your Subscription Agent finds them <span class=hi>every month.</span>",l-.3,.035);
   if(SCR.length){const k=Math.floor(t*30)%SCR.length;$('pf').src='../reel/fr/'+String(k+1).padStart(4,'0')+'.jpg';const [cx,cy,sw,sh,an]=SCR[k];const W=sw*1.03,H=sh*1.04,s=$('scr');s.style.cssText=`left:${180+cx-W/2}px;top:${1260+cy-60-H/2}px;width:${W}px;height:${H}px;transform:rotate(${an}deg);border-radius:${W*.16}px`;s.innerHTML=face(l>3.1?'happy':'wide',(l%3.3)>3.15?1:0,l>3.1?.5:.15)}}
  [l]=sceneT('s11',t);
  if(l>=0&&l<3.6){$('kw').style.transform=`scale(${eb((l-.3)/.45)}) rotate(${-3+Math.sin(l*3)*1.5}deg)`}
