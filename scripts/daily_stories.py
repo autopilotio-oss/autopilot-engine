@@ -2,7 +2,7 @@
 1 market check (video)  2 AI tip  3 quiz question  4 quiz answer  5 poll (reply A or B)
 Instagram's API can't add real poll or quiz stickers, so quizzes and polls ask people to reply A, B or C
 (replies land in DMs, which also helps reach). Content rotates from tools/story/pool.json."""
-import os, json, textwrap, datetime as dt
+import os, sys, json, textwrap, datetime as dt
 from zoneinfo import ZoneInfo
 from PIL import Image, ImageDraw, ImageFont
 import market_story as ms
@@ -166,5 +166,26 @@ def main():
     json.dump(queue, open(os.path.join(ROOT, "queue", f"{day}-stories.json"), "w"), indent=1, ensure_ascii=False)
     print("stories ready", [i[0] for i in items])
 
+
+def trend(item, now, out):
+    """Trending story/card: {"tag": "TRENDING", "h": "headline with {lime} words", "what": "what happened", "do": "what to do / the prompt", "src": "Source name"}"""
+    im, d = canvas(item.get("tag", "TRENDING NOW").upper(), now)
+    y = T.headline(d, item["h"], 80, 420, 920, 112)
+    y = T.rich(d, item["what"], 80, y + 50, 920, 44, (205, 207, 204), INK, sans="Geist-Medium.otf", lead=1.3)
+    if item.get("do"):
+        top = y + 50; probe = ImageDraw.Draw(Image.new("RGB", (W, 900)))
+        hb = T.rich(probe, item["do"], 0, 80, 840, 44, INK, LIME, sans="Geist-SemiBold.otf", lead=1.25)
+        card(im, (80, top, W - 80, top + hb + 40), lit=True)
+        T.label(d, item.get("do_label", "WHAT TO DO"), 120, top + 34, 22, LIME)
+        T.rich(d, item["do"], 120, top + 80, 840, 44, INK, LIME, sans="Geist-SemiBold.otf", lead=1.25)
+    if item.get("src"): T.label(d, "SOURCE: " + item["src"].upper(), 80, 1610, 18, SOFT)
+    footer(d, "FOLLOW FOR ONE AI FIX A DAY"); im.save(out, quality=94)
+
+
+def trend_cli():
+    """python scripts/daily_stories.py trend '<json item>' <out.jpg>"""
+    item = json.loads(sys.argv[2]); trend(item, dt.datetime.now(ET), sys.argv[3])
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 3 and sys.argv[1] == "trend": trend_cli()
+    else: main()

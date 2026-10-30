@@ -91,3 +91,6 @@ Main content now: real money problems solved with Claude, in the AP robot reel f
 
 ## Instagram publishing = Metricool (Oct 30)
 Meta blocked our app (every call returns "API access blocked"). Instagram now goes through Metricool (brand id 7761544, connected to @autopilot.oi). Claude schedules IG posts with the Metricool connector (createScheduledPost: REEL needs video + videoThumbnailUrl, carousel = POST with several images, STORY = image with no text). GitHub no longer posts to Instagram (config/instagram.json). Threads still posts from GitHub.
+
+## Morning trend scout (Seb, Oct 30)
+Every morning find what's viral or trending that we can genuinely help with: AI agent news, new AI features normal people can use, and money or everyday problems trending (scams, fees, price hikes, tax deadlines, bills). Only post when we add real value (a fix, a prompt, a clear explanation). Never fake news, never hype, always check 2 sources, name the source on the card. Card: python scripts/daily_stories.py trend '<json>' docs/media/trends/<date>-<slug>.jpg  (keys: tag, h with {lime} words, what, do, do_label, src).
