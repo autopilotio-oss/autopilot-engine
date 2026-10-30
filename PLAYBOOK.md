@@ -110,3 +110,7 @@ The automatic 5 a day story set (tip, quiz, answer, fact, poll) no longer goes t
 
 ## Threads publishing = Metricool (Oct 30)
 Threads is connected in Metricool (brand 7761544). GitHub no longer posts to Threads (config/threads.json paused). The daily "Instagram + Threads loader" scheduled task schedules Threads queue items into Metricool and records them in state/posted.json. Our bot can't read or reply to Threads comments anymore and ManyChat doesn't cover Threads, so on Threads never ask people to comment a keyword: put the direct link in the post instead (free guide or /free/ page). Comment keywords are for Instagram only, where ManyChat answers them.
+
+
+## Rename (Seb, Oct 30)
+The free lead magnet at /brain/ is now called **The AI Front Desk** (was THE BUSINESS BRAIN). Use the new name in all new posts, emails and pages. The URL stays /brain/ and the comment keyword stays BRAIN (it already works in ManyChat and old posts). Inside the paid Workspace the setup file can still be called the Business Brain.
