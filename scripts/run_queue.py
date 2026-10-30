@@ -9,6 +9,7 @@ import os, sys, json, glob, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 import threads
 import instagram
+import approval
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "state", "posted.json")
@@ -31,13 +32,28 @@ def main(now=None):
     posted = load(STATE, {})
     today = now.date().isoformat()
     today_count = sum(1 for v in posted.values() if v.get("at", "").startswith(today))
+    allposts = [p for f in sorted(glob.glob(os.path.join(ROOT, "queue", "*.json"))) for p in load(f, [])]
+    gate = approval.required() and not DRY
+    if gate:
+        approval.request_upcoming(allposts, now, instagram.ig_caption, set(posted))
     due = []
-    for f in sorted(glob.glob(os.path.join(ROOT, "queue", "*.json"))):
-        for p in load(f, []):
-            if p["id"] in posted: continue
-            at = dt.datetime.fromisoformat(p["at"])
-            if at <= now and (now - at) < dt.timedelta(hours=6):
-                due.append(p)
+    for p in allposts:
+        if p["id"] in posted: continue
+        at = dt.datetime.fromisoformat(p["at"])
+        if at <= now and (now - at) < dt.timedelta(hours=6):
+            if gate:
+                st = approval.status(p["id"])
+                if st == "rejected":
+                    posted[p["id"]] = {"media_id": None, "skipped": "rejected by Seb", "at": now.isoformat(), "kind": p["kind"]}
+                    approval.finish(p["id"], "Skipped. It will not be posted.")
+                    json.dump(posted, open(STATE, "w"), indent=1); continue
+                if st != "approved":
+                    print("waiting for approval", p["id"]); continue
+            due.append(p)
+        elif gate and at <= now and p["id"] not in posted and approval.status(p["id"]) == "waiting":
+            posted[p["id"]] = {"media_id": None, "skipped": "no approval in time", "at": now.isoformat(), "kind": p["kind"]}
+            approval.finish(p["id"], "Expired without approval, so it was not posted.")
+            json.dump(posted, open(STATE, "w"), indent=1)
     done = []
     uid = None
     for p in sorted(due, key=lambda x: x["at"])[:MAX_PER_RUN]:
@@ -54,6 +70,7 @@ def main(now=None):
                 print("FAILED", p["id"], e); continue
         posted[p["id"]] = {"media_id": mid, "at": now.isoformat(), "kind": p["kind"]}
         today_count += 1; done.append(p["id"]); print("posted", p["id"], mid)
+        if gate: approval.finish(p["id"], "Posted ✅")
     if done and not DRY:
         os.makedirs(os.path.dirname(STATE), exist_ok=True)
         json.dump(posted, open(STATE, "w"), indent=1)
@@ -77,6 +94,8 @@ def cross_post_instagram(raw, now):
     uid = None
     for p in sorted(due, key=lambda x: x["at"])[:MAX_PER_RUN]:
         if p["id"] in done or p.get("kind") == "text" or p.get("ig") is False:
+            continue
+        if approval.required() and not DRY and approval.status(p["id"]) != "approved":
             continue
         urls = [m if m.startswith("http") else raw + m for m in p.get("media", [])]
         if DRY:

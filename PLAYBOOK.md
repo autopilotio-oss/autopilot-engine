@@ -38,3 +38,6 @@ state/insights.json has views/likes/replies per posted id. Each day: find the to
 
 ## Instagram
 When Instagram is connected (state/ig_token.enc exists), every image, video and carousel post is also published to Instagram automatically. Text only posts stay on Threads. Links become "Link in bio." and hashtags are added. Set "ig": false on a post to keep it Threads only. Reels do best on Instagram, so favor video.
+
+## Seb approves every post
+About 1 hour before each post, the bot opens a GitHub issue with the exact media and both captions and assigns it to Seb. It only posts after he replies YES. NO or no answer means it never posts. So every post must be elite: strong hook in the first line, a visual that stops the scroll, one clear CTA. Every new video needs a matching <name>-poster.jpg next to it in docs/media (used for the preview).

@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  issues: write
 concurrency:
   group: autopilot-post
   cancel-in-progress: false
@@ -22,6 +23,7 @@ jobs:
           IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/run_queue.py
       - name: Save what was posted
         run: |
