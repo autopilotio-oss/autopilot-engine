@@ -73,3 +73,12 @@ The 4:30 PM story is an "Everyday fix": a real problem normal people deal with (
 
 ## Approval OFF (Seb, Oct 30 10:14)
 Seb: "I don't wanna approve, just post, we are behind." config/approval.json is false. Everything posts automatically at its slot, so the quality bar is on us: render and look at every image, reread every caption against the banned list before queuing. Seb can turn approval back on by asking.
+
+## Posting cadence (set Oct 30, research based)
+New account, so we run hot but never past where each post starts eating the next one's reach.
+- Threads: 4 a day, all before 4 PM ET (evenings 6 to 11 PM are the weakest slots in Buffer's 2.5M post data). Slots ET: 7:30 text tip, 9:00 main post (video or image), 12:30 second post, 3:30 Everyday Fix card. Never more than 5 (dilution). Replying to comments lifts engagement ~42%, so keyword replies stay on.
+- Instagram feed: 1 carousel every day (lessons), target 10+ feed posts a week once reels exist (Buffer: 10+/week = fastest follower growth). Reels 3 to 4 a week when we have voice or footage.
+- Instagram stories: 6 a day (already above the 2 to 5 baseline; brands posting 30+ frames a week had the best completion).
+- X: every IG carousel as a thread + 2 to 3 single posts a day once X is connected.
+- API ceilings are not a factor: Instagram 100 posts per 24h, Threads 250 per 24h.
+If a slot's posts score in the bottom 3 for a week, move or drop that slot.
