@@ -65,7 +65,7 @@ def page(slug, g):
 const $=i=>document.getElementById(i);
 document.querySelectorAll('.cp').forEach(b=>b.onclick=()=>{const el=$(b.dataset.c).cloneNode(true);el.querySelector('.cp').remove();navigator.clipboard.writeText(el.textContent.trim());$('t').classList.add('on');setTimeout(()=>$('t').classList.remove('on'),1200)});
 $('kf').addEventListener('submit',ev=>{ev.preventDefault();const em=$('ke').value.trim();if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(em)){$('km').textContent='Check that email and try again.';return}
-$('kb').disabled=true;const fd=new FormData();fd.append('email_address',em);
+$('kb').disabled=true;const fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',(location.pathname.match(/\\/g\\/([^\\/]+)/)||[])[1]||'guide');
 fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(()=>{$('kf').style.display='none';$('km').innerHTML='<b>You’re on the list.</b> Check your inbox.'}).catch(()=>{$('kb').disabled=false;$('km').textContent='Something went wrong. Try again.'})});
 </script></body></html>""")
     d = os.path.join(ROOT, "docs", "g", slug); os.makedirs(d, exist_ok=True)

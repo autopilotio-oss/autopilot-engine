@@ -100,7 +100,7 @@ form button{border:0;border-radius:14px;background:#fff;color:#000;font:900 13px
  var f=document.getElementById('kf'),m=document.getElementById('km'),b=document.getElementById('kb');
  f.addEventListener('submit',function(e){e.preventDefault();var em=document.getElementById('ke').value.trim();
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
-  b.disabled=true;b.textContent='...';var fd=new FormData();fd.append('email_address',em);
+  b.disabled=true;b.textContent='...';var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]','home');
   fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){f.style.display='none';m.innerHTML='<b style="color:#fff">You\u2019re in.</b> Check your inbox within the hour.'}).catch(function(){b.disabled=false;b.textContent='Join';m.textContent='Something went wrong. Try again.'})});
 })();
 </script>
