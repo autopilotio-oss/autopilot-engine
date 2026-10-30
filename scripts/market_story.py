@@ -1,16 +1,17 @@
-"""Daily market brief for Instagram Stories: crypto (24h) and stocks (last close), in plain English.
-Prices come from public data (CoinGecko, Stooq). Not financial advice. Writes docs/media/stories/<date>.jpg
-and a queue entry (Instagram story, waits for Seb's YES like every post)."""
-import os, sys, json, csv, io, urllib.request, datetime as dt
+"""Daily market check for Instagram Stories: a short animated video in the AUTOPILOT.OI tweet style.
+Crypto (24h, CoinGecko) and stocks (last close, Stooq). Plain English, never advice.
+Writes docs/media/stories/<date>.mp4 (+ -poster.jpg) and a queue entry that waits for Seb's YES."""
+import os, json, csv, io, math, subprocess, urllib.request, datetime as dt
 from zoneinfo import ZoneInfo
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F = os.path.join(ROOT, "tools", "story", "fonts")
 ET = ZoneInfo("America/New_York")
-LIME, BG, RED, GREY, WHITE = (212, 255, 58), (10, 10, 10), (255, 107, 107), (138, 138, 132), (244, 244, 240)
+LIME, BG, RED, GREY, WHITE, DIM = (212, 255, 58), (0, 0, 0), (255, 107, 107), (113, 118, 123), (231, 233, 234), (22, 24, 28)
 CRYPTO = [("bitcoin", "BTC", "Bitcoin"), ("ethereum", "ETH", "Ethereum"), ("solana", "SOL", "Solana")]
 STOCKS = [("spy.us", "SPY", "The S&P 500"), ("qqq.us", "QQQ", "The Nasdaq"), ("nvda.us", "NVDA", "Nvidia"), ("aapl.us", "AAPL", "Apple"), ("tsla.us", "TSLA", "Tesla")]
+W, H, FPS, DUR = 1080, 1920, 30, 9.0
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 autopilot-brief"})
@@ -20,84 +21,119 @@ def get(url):
 def fetch():
     ids = ",".join(c[0] for c in CRYPTO)
     cg = json.loads(get(f"https://api.coingecko.com/api/v3/simple/price?ids={ids}&vs_currencies=usd&include_24hr_change=true"))
-    crypto = [{"sym": s, "name": n, "price": cg[i]["usd"], "chg": cg[i]["usd_24h_change"]} for i, s, n in CRYPTO]
+    crypto = []
+    for i, s, n in CRYPTO:
+        try: hist = [p[1] for p in json.loads(get(f"https://api.coingecko.com/api/v3/coins/{i}/market_chart?vs_currency=usd&days=7&interval=daily"))["prices"]]
+        except Exception: hist = []
+        crypto.append({"sym": s, "name": n, "price": cg[i]["usd"], "chg": cg[i]["usd_24h_change"], "hist": hist, "span": "24H"})
     stocks = []
     for code, sym, name in STOCKS:
         rows = [r for r in csv.DictReader(io.StringIO(get(f"https://stooq.com/q/d/l/?s={code}&i=d"))) if r.get("Close")]
-        a, b = float(rows[-2]["Close"]), float(rows[-1]["Close"])
-        stocks.append({"sym": sym, "name": name, "price": b, "chg": (b / a - 1) * 100, "date": rows[-1]["Date"]})
+        closes = [float(r["Close"]) for r in rows[-8:]]
+        stocks.append({"sym": sym, "name": name, "price": closes[-1], "chg": (closes[-1] / closes[-2] - 1) * 100, "hist": closes, "span": "1D"})
     return crypto, stocks
 
-def money(v):
-    return f"${v:,.0f}" if v >= 1000 else f"${v:,.2f}"
+def money(v): return f"${v:,.0f}" if v >= 1000 else f"${v:,.2f}"
+def pct(v): return f"{'+' if v >= 0 else '-'}{abs(v):.1f}%"
 
-def plain(crypto, stocks, weekend):
-    lines = []
-    btc = crypto[0]
-    lines.append(f"Bitcoin is {'up' if btc['chg'] >= 0 else 'down'} {abs(btc['chg']):.1f}% in the last 24 hours.")
-    big = max(crypto[1:], key=lambda c: abs(c["chg"]))
-    lines.append(f"{big['name']} moved the most: {'+' if big['chg'] >= 0 else '-'}{abs(big['chg']):.1f}%.")
-    spx = stocks[0]
-    when = "On Friday" if weekend else "Yesterday"
-    lines.append(f"{when}, the S&P 500 (SPY) closed {'up' if spx['chg'] >= 0 else 'down'} {abs(spx['chg']):.1f}%.")
+def lines_for(crypto, stocks, weekend):
+    btc, eth = crypto[0], crypto[1]; spx = stocks[0]
     top = max(stocks[2:], key=lambda s: abs(s["chg"]))
-    lines.append(f"Biggest big tech move: {top['name']} {'+' if top['chg'] >= 0 else '-'}{abs(top['chg']):.1f}%.")
-    return lines
+    when = "Friday" if weekend else "Yesterday"
+    return [f"Bitcoin {pct(btc['chg'])}, Ethereum {pct(eth['chg'])} overnight.",
+            f"{when} the S&P 500 closed {pct(spx['chg'])}.",
+            f"{top['name']} was the big tech move at {pct(top['chg'])}."]
 
 def font(name, size): return ImageFont.truetype(os.path.join(F, name), size)
+ease = lambda x: 1 - (1 - max(0, min(1, x))) ** 3
+def back(x):
+    x = max(0, min(1, x)); c = 1.7
+    return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2
 
-def render(crypto, stocks, lines, now, out):
-    W, H = 1080, 1920
-    im = Image.new("RGB", (W, H), BG)
-    glow = Image.new("RGB", (W, H), BG); g = ImageDraw.Draw(glow)
-    g.ellipse((140, -380, 940, 420), fill=(48, 62, 12)); glow = glow.filter(ImageFilter.GaussianBlur(160))
-    im.paste(glow); d = ImageDraw.Draw(im)
-    for x in range(0, W, 80): d.line([(x, 0), (x, H)], fill=(18, 18, 18))
-    for y in range(0, H, 80): d.line([(0, y), (W, y)], fill=(18, 18, 18))
-    logo = Image.open(os.path.join(ROOT, "tools", "story", "logo.png")).resize((88, 88))
-    m = Image.new("L", (88, 88), 0); ImageDraw.Draw(m).ellipse((0, 0, 88, 88), fill=255); im.paste(logo, (80, 90), m)
-    d.text((190, 98), "AUTOPILOT.OI", font=font("SpaceMono-Bold.ttf", 30), fill=WHITE)
-    d.text((190, 138), "@autopilot.oi", font=font("Inter-Medium.otf", 28), fill=GREY)
-    d.text((80, 220), "MARKET BRIEF", font=font("BebasNeue-Regular.ttf", 128), fill=WHITE)
-    d.text((80, 338), now.strftime("%a %b %d").upper(), font=font("BebasNeue-Regular.ttf", 92), fill=LIME)
-    d.text((80, 440), "EXPLAINED LIKE YOU'RE BUSY", font=font("SpaceMono-Bold.ttf", 28), fill=GREY)
-    def section(y, title, items, label):
-        d.text((80, y), title, font=font("SpaceMono-Bold.ttf", 28), fill=LIME)
-        d.text((W - 80, y), label, font=font("SpaceMono-Bold.ttf", 22), fill=GREY, anchor="ra")
-        y += 46
-        for it in items:
-            d.rounded_rectangle((80, y, W - 80, y + 80), 22, fill=(20, 22, 24), outline=(40, 42, 44), width=2)
-            d.text((112, y + 40), it["sym"], font=font("Inter-ExtraBold.otf", 38), fill=WHITE, anchor="lm")
-            d.text((560, y + 40), money(it["price"]), font=font("Inter-SemiBold.otf", 36), fill=(200, 200, 194), anchor="rm")
-            up = it["chg"] >= 0; col = LIME if up else RED
-            txt = f"{'▲' if up else '▼'} {abs(it['chg']):.2f}%"
-            d.rounded_rectangle((W - 330, y + 13, W - 104, y + 67), 28, fill=(32, 44, 10) if up else (52, 22, 22))
-            d.text((W - 217, y + 40), txt, font=font("Inter-Bold.otf", 32), fill=col, anchor="mm")
-            y += 90
-        return y
-    y = section(510, "CRYPTO", crypto, "LAST 24H")
-    y = section(y + 24, "STOCKS", stocks, "LAST CLOSE")
-    y += 20
-    d.rounded_rectangle((80, y, W - 80, y + 66 + 50 * len(lines)), 28, fill=(28, 38, 8), outline=(120, 150, 30), width=2)
-    d.text((112, y + 26), "IN PLAIN ENGLISH", font=font("SpaceMono-Bold.ttf", 24), fill=LIME)
+def frame(t, ctx):
+    hero, items, lines, now = ctx["hero"], ctx["items"], ctx["lines"], ctx["now"]
+    im = ctx["base"].copy(); d = ImageDraw.Draw(im)
+    up = hero["chg"] >= 0; col = LIME if up else RED
+    # header (tweet style)
+    a = ease(t / 0.4)
+    im.paste(ctx["logo"], (80, int(150 - 20 * (1 - a))), ctx["mask"])
+    d.text((200, 156), "AUTOPILOT.OI", font=font("Inter-ExtraBold.otf", 40), fill=WHITE)
+    d.text((200, 206), "@autopilot.oi · " + now.strftime("%b %d"), font=font("Inter-Medium.otf", 32), fill=GREY)
+    d.text((80, 300), "gm. your 30 second market check", font=font("Inter-Bold.otf", 46), fill=WHITE) if t > 0.2 else None
+    # hero: biggest mover
+    hp = ease((t - 0.5) / 0.6)
+    if hp > 0:
+        d.text((80, 410), f"TODAY'S BIG MOVE · {hero['span']}", font=font("SpaceMono-Bold.ttf", 28), fill=GREY)
+        d.text((80, 452), hero["name"].upper(), font=font("BebasNeue-Regular.ttf", 120), fill=WHITE)
+        shown = hero["chg"] * ease((t - 0.7) / 1.2)
+        d.text((80, 560), pct(shown), font=font("BebasNeue-Regular.ttf", 250), fill=col)
+        d.text((W - 80, 640), money(hero["price"]), font=font("Inter-Bold.otf", 52), fill=WHITE, anchor="ra")
+    # sparkline draws in
+    hist = hero.get("hist") or []
+    sp = ease((t - 1.0) / 1.6)
+    if len(hist) > 2 and sp > 0:
+        x0, x1, y0, y1 = 80, W - 80, 880, 1080
+        lo, hi = min(hist), max(hist); rng = (hi - lo) or 1
+        pts = [(x0 + (x1 - x0) * i / (len(hist) - 1), y1 - (y1 - y0) * (v - lo) / rng) for i, v in enumerate(hist)]
+        n = max(2, int(len(pts) * sp + 1)); seg = pts[:n]
+        fill_poly = seg + [(seg[-1][0], y1 + 30), (x0, y1 + 30)]
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(layer)
+        ld.polygon(fill_poly, fill=col + (38,)); im.paste(layer, (0, 0), layer); d = ImageDraw.Draw(im)
+        d.line(seg, fill=col, width=8, joint="curve")
+        d.ellipse((seg[-1][0] - 14, seg[-1][1] - 14, seg[-1][0] + 14, seg[-1][1] + 14), fill=col)
+        d.text((80, 1122), "LAST 7 DAYS", font=font("SpaceMono-Bold.ttf", 24), fill=GREY)
+    # ticker chips slide in
+    y = 1190
+    for i, it in enumerate(items):
+        p = back((t - 2.2 - i * 0.12) / 0.45)
+        if p <= 0: continue
+        cx = 80 + (i % 4) * 236; cy = y + (i // 4) * 132 + int(60 * (1 - p))
+        c = LIME if it["chg"] >= 0 else RED
+        d.rounded_rectangle((cx, cy, cx + 216, cy + 112), 24, fill=DIM)
+        d.text((cx + 22, cy + 16), it["sym"], font=font("Inter-ExtraBold.otf", 32), fill=WHITE)
+        d.text((cx + 22, cy + 60), pct(it["chg"]), font=font("Inter-Bold.otf", 34), fill=c)
+    # plain english, line by line
     for i, l in enumerate(lines):
-        d.text((112, y + 70 + 50 * i), l, font=font("Inter-SemiBold.otf", 29), fill=WHITE)
-    d.text((W // 2, y + 120 + 50 * len(lines)), f"Prices as of {now.strftime('%I:%M %p').lstrip('0')} ET. Not financial advice.", font=font("Inter-Medium.otf", 26), fill=GREY, anchor="mm")
-    im.save(out, quality=92)
+        p = ease((t - 3.6 - i * 0.55) / 0.4)
+        if p <= 0: continue
+        d.text((80 + int(30 * (1 - p)), 1490 + 62 * i), l, font=font("Inter-SemiBold.otf", 36), fill=tuple(int(v * p) for v in WHITE))
+    if t > 5.6:
+        d.text((80, 1712), "Not financial advice. Prices as of " + now.strftime("%I:%M %p").lstrip("0") + " ET.", font=font("Inter-Medium.otf", 28), fill=GREY)
+    return im
+
+def build(crypto, stocks, now, out_mp4, out_jpg):
+    allm = crypto + stocks
+    hero = max(allm, key=lambda x: abs(x["chg"]))
+    items = [x for x in allm if x is not hero]
+    lines = lines_for(crypto, stocks, now.weekday() >= 5 or now.weekday() == 0)
+    base = Image.new("RGB", (W, H), BG)
+    glow = Image.new("RGB", (W, H), BG); g = ImageDraw.Draw(glow)
+    gc = (40, 52, 8) if hero["chg"] >= 0 else (52, 16, 16)
+    g.ellipse((100, 300, 980, 1100), fill=gc); base = Image.blend(base, glow.filter(ImageFilter.GaussianBlur(200)), 1.0)
+    logo = Image.open(os.path.join(ROOT, "tools", "story", "logo.png")).convert("RGB").resize((100, 100))
+    mask = Image.new("L", (100, 100), 0); ImageDraw.Draw(mask).ellipse((0, 0, 100, 100), fill=255)
+    ctx = {"hero": hero, "items": items, "lines": lines, "now": now, "base": base, "logo": logo, "mask": mask}
+    ff = subprocess.Popen(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+                           "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-shortest",
+                           "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-movflags", "+faststart", out_mp4],
+                          stdin=subprocess.PIPE)
+    for i in range(int(DUR * FPS)):
+        f = frame(i / FPS, ctx); ff.stdin.write(f.tobytes())
+        if i == int(7 * FPS): f.save(out_jpg, quality=90)
+    ff.stdin.close(); ff.wait()
+    return hero, lines
 
 def main():
-    now = dt.datetime.now(ET)
-    day = now.date().isoformat()
-    out = os.path.join(ROOT, "docs", "media", "stories", f"{day}.jpg")
+    now = dt.datetime.now(ET); day = now.date().isoformat()
+    d = os.path.join(ROOT, "docs", "media", "stories"); os.makedirs(d, exist_ok=True)
     crypto, stocks = fetch()
-    lines = plain(crypto, stocks, now.weekday() >= 5 or now.weekday() == 0)
-    render(crypto, stocks, lines, now, out)
+    hero, lines = build(crypto, stocks, now, os.path.join(d, f"{day}.mp4"), os.path.join(d, f"{day}-poster.jpg"))
     at = (now + dt.timedelta(minutes=60)).replace(second=0, microsecond=0)
     q = [{"id": f"story-{day}", "at": at.isoformat(), "kind": "story", "threads": False,
-          "media": [f"https://autopilotio-oss.github.io/autopilot-engine/media/stories/{day}.jpg"],
-          "text": "Daily market brief. " + " ".join(lines)}]
+          "media": [f"https://autopilotio-oss.github.io/autopilot-engine/media/stories/{day}.mp4"],
+          "text": f"Market check: {hero['name']} {pct(hero['chg'])}. " + " ".join(lines)}]
     json.dump(q, open(os.path.join(ROOT, "queue", f"{day}-story.json"), "w"), indent=1)
-    print("story ready", day, lines)
+    print("story ready", day, hero["name"], lines)
 
 if __name__ == "__main__":
     main()

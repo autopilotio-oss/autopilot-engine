@@ -48,7 +48,8 @@ def _body(p, ig_caption):
         poster = m.rsplit(".", 1)[0] + "-poster.jpg"
         media = f"### ▶️ [Watch the reel]({m})\n\n![preview]({poster})"
     elif p.get("kind") == "story":
-        media = f"![story]({m})\n\n_Instagram story. Prices are pulled live from public data; double check anything that looks off._"
+        pv = m.rsplit(".", 1)[0] + "-poster.jpg" if m.endswith(".mp4") else m
+        media = (f"### ▶️ [Watch the story]({m})\n\n" if m.endswith(".mp4") else "") + f"![story]({pv})\n\n_Instagram story. Prices are pulled live from public data; double check anything that looks off._"
     elif p.get("kind") == "carousel":
         media = "\n".join(f"**Slide {i}**\n\n![slide {i}]({u})\n" for i, u in enumerate(p.get("media", []), 1))
     elif m:

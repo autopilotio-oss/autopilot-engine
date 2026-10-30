@@ -62,7 +62,8 @@ def post(uid, token, kind, caption, urls):
     if kind == "video":
         cid = _req("POST", f"/{uid}/media", {"media_type": "REELS", "video_url": urls[0], "caption": caption, "share_to_feed": "true"}, token)["id"]
     elif kind == "story":
-        cid = _req("POST", f"/{uid}/media", {"media_type": "STORIES", "image_url": urls[0]}, token)["id"]
+        v = urls[0].lower().endswith((".mp4", ".mov"))
+        cid = _req("POST", f"/{uid}/media", {"media_type": "STORIES", **({"video_url": urls[0]} if v else {"image_url": urls[0]})}, token)["id"]
     elif kind == "image":
         cid = _req("POST", f"/{uid}/media", {"image_url": urls[0], "caption": caption}, token)["id"]
     elif kind == "carousel":
