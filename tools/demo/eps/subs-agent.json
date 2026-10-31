@@ -1,0 +1,13 @@
+{"slug":"subs-agent","name":"Subscription Agent","price":"$10","kw":"SUBS","color":"lime","cover":"subs",
+"problem":"forgotten subscriptions",
+"does_title":"finds every charge you forgot",
+"does":["Lists every recurring charge in your statements","Flags free trials that turned paid","Drafts the cancel messages for you"],
+"beats":[
+{"step":"intro","say":"You're probably paying for a subscription you forgot about. So we built an agent for it."},
+{"step":"upload","chip":"upload","banner":"Upload your statements","label":"Upload 3 months of statements","files":["checking_aug.pdf","checking_sep.pdf","card_oct.csv"],"say":"Upload three months of bank statements. Black out the account numbers first."},
+{"step":"prompt","chip":"ask","banner":"Type one line","label":"Then type","text":"monthly sweep","say":"Then type monthly sweep."},
+{"step":"work","chip":"work","banner":"It reads every charge","label":"Reading every charge","lines":["3 statements read","matching charges that repeat","checking yearly renewals","checking trials that turned paid"],"say":"It reads every charge, matches the ones that repeat, and catches the yearly renewals and the free trials that quietly turned paid."},
+{"step":"result","chip":"result","banner":"Every subscription, one list","title":"Monthly sweep","cols":["Merchant","Every","Yearly"],"rows":[["Gym","Month","$600"],["Photo app","Month","$120"],["Music, 2nd plan","Month","$144"],["Trial turned paid","Month","$84"],["Cloud storage","Year","$30"]],"foot":"4 to cancel  ·  drafts ready","say":"You get one list with the yearly cost of each, so you can decide what stays."},
+{"step":"draft","chip":"draft","banner":"Cancel messages, drafted","title":"Cancel request","text":"Hi, please cancel my membership effective today and confirm in writing.\nPlease also confirm no further charges will be made to my card.\nThank you.","say":"Then it writes the cancel messages. You check them and send them yourself."},
+{"step":"cta","say":"The Subscription Agent is a ten dollar Claude prompt kit. Comment SUBS for the free guide."}
+]}

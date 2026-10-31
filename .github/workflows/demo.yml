@@ -1,0 +1,75 @@
+name: Agent demo videos
+on:
+  workflow_dispatch:
+    inputs:
+      ep: { description: "Episode in tools/demo/eps without .json (blank = newest without a video)", required: false }
+  push:
+    branches: [main]
+    paths: ["tools/demo/eps/*.json", "tools/demo/engine.html", ".github/workflows/demo.yml"]
+permissions:
+  contents: write
+concurrency: demo
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      ep: ${{ steps.pick.outputs.ep }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick episode
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.ep }}" ]; then E="${{ github.event.inputs.ep }}"; else
+            E=""; for f in $(ls -t tools/demo/eps/*.json); do n=$(basename "$f" .json); [ -f "docs/media/demo/$n.mp4" ] || { E="$n"; break; }; done; fi
+          echo "ep=$E" >> "$GITHUB_OUTPUT"; echo "Episode: ${E:-none}"
+      - if: steps.pick.outputs.ep != ''
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy
+      - if: steps.pick.outputs.ep != ''
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: bash tools/demo/make.sh prep "${{ steps.pick.outputs.ep }}"
+      - if: steps.pick.outputs.ep != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: prep
+          path: |
+            tools/demo/${{ steps.pick.outputs.ep }}.html
+            tools/demo/${{ steps.pick.outputs.ep }}_mix.wav
+            tools/demo/${{ steps.pick.outputs.ep }}.words.json
+  render:
+    needs: prep
+    if: needs.prep.outputs.ep != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      matrix: { k: [0, 1, 2, 3, 4] }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: prep, path: tools/demo }
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm i -g --silent playwright@1 && npx playwright install --with-deps chromium
+          echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
+      - run: RANGE=${{ matrix.k }}/5 bash tools/demo/make.sh chunk "${{ needs.prep.outputs.ep }}"
+      - uses: actions/upload-artifact@v4
+        with: { name: "chunk-${{ matrix.k }}", path: "tools/demo/${{ needs.prep.outputs.ep }}_chunk_${{ matrix.k }}.mp4" }
+  final:
+    needs: [prep, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: prep, path: tools/demo }
+      - uses: actions/download-artifact@v4
+        with: { pattern: "chunk-*", path: tools/demo, merge-multiple: true }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: bash tools/demo/make.sh final "${{ needs.prep.outputs.ep }}"
+      - name: Commit
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add docs/media/demo tools/demo/${{ needs.prep.outputs.ep }}.words.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Demo video: ${{ needs.prep.outputs.ep }}"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
