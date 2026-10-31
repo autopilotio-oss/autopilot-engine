@@ -30,6 +30,15 @@
   var gc = document.createElement('script'); gc.async = true; gc.src = 'https://gc.zgo.at/count.js';
   gc.setAttribute('data-goatcounter', 'https://autopilotoi.goatcounter.com/count'); document.head.appendChild(gc);
   function ev(name) { try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: name, title: name, event: true }); } catch (e) {} }
+  var LAUNCH = { code: 'LAUNCH30', until: Date.parse('2026-11-11T03:00:00Z'), slugs: ['subs-agent', 'refund-agent', 'bill-agent', 'all-money-agents', 'raise-agent', 'debt-agent', 'shop-agent', 'video-agent', 'sell-agent', 'deposit-agent', 'workspace'] };
+  LAUNCH.on = Date.now() < LAUNCH.until;
+  function banner() {
+    if (!LAUNCH.on || !document.querySelector('a[href*="gumroad.com/l/"]') || document.getElementById('ap-launch')) return;
+    var b = document.createElement('div'); b.id = 'ap-launch';
+    b.style.cssText = 'position:sticky;top:0;z-index:50;background:#D4FF3A;color:#050505;text-align:center;font:600 13px/1.3 "Chakra Petch",system-ui,sans-serif;padding:9px 12px;letter-spacing:.02em';
+    b.textContent = 'Launch week: 30% off every agent with code LAUNCH30, applied at checkout. Ends Nov 10.';
+    document.body.insertBefore(b, document.body.firstChild);
+  }
   function slugOf(a) { var m = (a.getAttribute('href') || '').match(/gumroad\.com\/l\/([a-z0-9-]+)/i); return m ? m[1] : null; }
   function wire() {
     var links = Array.prototype.slice.call(document.querySelectorAll('a[href*="gumroad.com/l/"]'));
@@ -37,6 +46,8 @@
       var slug = slugOf(a); if (!slug || a.dataset.apWired) return; a.dataset.apWired = '1';
       try {
         var u = new URL(a.href);
+        // FIRST SALES MODE launch code (Seb approved, list prices unchanged): Gumroad applies /l/<slug>/<CODE> at checkout.
+        if (LAUNCH.on && LAUNCH.slugs.indexOf(slug) > -1 && u.pathname.split('/').filter(Boolean).length === 2) u.pathname = u.pathname.replace(/\/$/, '') + '/' + LAUNCH.code;
         // Gumroad keeps these on the sale (url_params), which is how orders get joined to content.
         u.searchParams.set('utm_source', src || 'site'); u.searchParams.set('utm_medium', cur.utm_medium || (src ? 'organic_social' : 'site'));
         u.searchParams.set('utm_campaign', camp || page); u.searchParams.set('utm_content', cur.utm_content || ('site_' + page.replace(/[^a-z0-9]+/gi, '_').toLowerCase()));
@@ -58,7 +69,7 @@
     // Email opt-ins (every Kit form on the site uses id kf).
   }
   function init() {
-    wire();
+    banner(); wire();
     var f = document.getElementById('kf'); if (f) f.addEventListener('submit', function () { ev('optin/' + page + '/' + (src || 'direct')); });
     // Quiz: results are drawn after the last answer, so wire their links then and count the completion.
     var out = document.getElementById('out');

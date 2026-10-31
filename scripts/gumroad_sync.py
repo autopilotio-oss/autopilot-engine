@@ -48,6 +48,12 @@ def reconcile(st):
             if not st[perm].get("id"): st[perm]["id"] = pr.get("id"); DBG.append(["id_filled", perm])
             st[perm]["live"] = bool(pr.get("published"))
     for k, v in st.items():
+        if v.get("published") and k not in live and v.get("id"):
+            # The list endpoint does not return every product: ask for this one directly before calling it unpublished.
+            try:
+                g = call_get(f"/products/{v['id']}?" + urllib.parse.urlencode({"access_token": TOK})).get("product", {})
+                if g.get("published") and not g.get("deleted"): live.append(k); v["live"] = True; continue
+            except Exception as e: DBG.append(["product_get_fail", k, repr(e)[:120]])
         if v.get("published") and k not in live:
             DBG.append(["not_live_on_gumroad", k]); v["live"] = False
     json.dump({"live": sorted(live), "checked": __import__("datetime").datetime.utcnow().isoformat(timespec="seconds") + "Z"},
@@ -64,7 +70,7 @@ def heal_unpublished(st):
         try:
             r = call("PUT", f"/products/{v['id']}/enable", {})
             g = call_get(f"/products/{v['id']}?" + urllib.parse.urlencode({"access_token": TOK})).get("product", {})
-            DBG.append(["re_enabled", k, str(r)[:160], {x: g.get(x) for x in ("published", "deleted", "custom_permalink", "short_url", "price", "file_info", "is_tiered_membership")}])
+            DBG.append(["re_enabled", k, bool(g.get("published"))])
             v["live"] = bool(g.get("published")); print(f"::notice title=Gumroad re-enable::{k} published={g.get('published')}")
         except Exception as e: DBG.append(["re_enable_fail", k, repr(e)[:200]])
 def sync_offer_code(st):
