@@ -3,7 +3,7 @@
   "id": "v4ojUqG-COND0xuYUgMaZA==",
   "url": "https://autopilotoi.gumroad.com/l/bill-agent",
   "published": true,
-  "live": true,
+  "live": false,
   "version": 2,
   "cover_v": 3
  },
@@ -18,7 +18,7 @@
   "id": "eVhfNcly_sJA3bhXkwbujQ==",
   "url": "https://autopilotoi.gumroad.com/l/debt-agent",
   "published": true,
-  "live": true,
+  "live": false,
   "version": 2,
   "cover_v": 3
  },

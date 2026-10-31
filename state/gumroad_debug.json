@@ -16,9 +16,75 @@
   "debt-agent"
  ],
  [
-  "update",
+  "not_live_on_gumroad",
+  "bill-agent"
+ ],
+ [
+  "not_live_on_gumroad",
+  "debt-agent"
+ ],
+ [
+  "re_enabled",
+  "bill-agent"
+ ],
+ [
+  "re_enabled",
+  "debt-agent"
+ ],
+ [
+  "offer_code_created",
+  "subs-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "refund-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "bill-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
   "all-money-agents",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI All 5 Money Agents', 'description': '<p><strong>All 5 Money Agents for Claude, now with the Money Agents Pro setup pack. $50 separately, $39 here.</strong></p><ul>\\n<li>\\n<strong>Bill Agent:</strong> checks a medical bill against your insurance bef"
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "raise-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "debt-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "shop-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "video-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "sell-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "deposit-agent",
+  "LAUNCH30"
+ ],
+ [
+  "offer_code_created",
+  "workspace",
+  "LAUNCH30"
  ],
  [
   "not_live_on_gumroad",
