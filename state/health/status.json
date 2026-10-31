@@ -28,7 +28,7 @@
   "severity": "SEV-2"
  },
  "page:home": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-2"
  },
  "page:store": {
