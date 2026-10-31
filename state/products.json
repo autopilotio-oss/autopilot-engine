@@ -2,53 +2,71 @@
  "bill-agent": {
   "id": "v4ojUqG-COND0xuYUgMaZA==",
   "url": "https://autopilotoi.gumroad.com/l/bill-agent",
-  "published": true
+  "published": true,
+  "live": true,
+  "version": 2
  },
  "credit-agent": {
   "id": "foI8-MiTn-D_fGDn6BTG-A==",
   "url": "https://autopilotoi.gumroad.com/l/credit-agent",
-  "published": true
+  "published": false,
+  "live": false,
+  "retired": true
  },
  "debt-agent": {
   "id": "eVhfNcly_sJA3bhXkwbujQ==",
   "url": "https://autopilotoi.gumroad.com/l/debt-agent",
-  "published": true
+  "published": true,
+  "live": true,
+  "version": 2
  },
  "money-agents": {
   "id": "x6n2xi-MW0lqHI5dXfS10g==",
   "url": "https://autopilotoi.gumroad.com/l/money-agents",
-  "published": true
+  "published": false,
+  "live": false,
+  "retired": true
  },
  "subs-agent": {
-  "id": null,
+  "id": "KjY5shoCXE92dQacqWGptg==",
   "url": "https://autopilotoi.gumroad.com/l/subs-agent",
-  "published": true
+  "published": true,
+  "live": true,
+  "version": 2
  },
  "refund-agent": {
-  "id": null,
+  "id": "CayudpoEYLqNtawHm8nGIw==",
   "url": "https://autopilotoi.gumroad.com/l/refund-agent",
-  "published": true
+  "published": true,
+  "live": true,
+  "version": 2
  },
  "raise-agent": {
-  "id": null,
+  "id": "kLaDgPTtWVpuxwJoKv995g==",
   "url": "https://autopilotoi.gumroad.com/l/raise-agent",
-  "published": true
+  "published": true,
+  "live": true,
+  "version": 2
  },
  "all-money-agents": {
   "id": "46txwcc0xEUbjJR-kM3Yfw==",
   "url": "https://autopilotoi.gumroad.com/l/all-money-agents",
-  "published": true
+  "published": true,
+  "live": true,
+  "version": 2
  },
  "sell-agent": {
   "id": "3ovGglfKChBYmztor4awjw==",
   "url": "https://autopilotoi.gumroad.com/l/sell-agent",
   "published": true,
-  "version": 2
+  "version": 3,
+  "live": true
  },
  "shop-agent": {
   "id": "8z26hcuQJVrhG506xb7zxg==",
   "url": "https://autopilotoi.gumroad.com/l/shop-agent",
   "published": true,
-  "version": 2
+  "version": 3,
+  "live": true
  }
 }

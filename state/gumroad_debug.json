@@ -8,6 +8,63 @@
   "ok"
  ],
  [
+  "id_filled",
+  "subs-agent"
+ ],
+ [
+  "id_filled",
+  "refund-agent"
+ ],
+ [
+  "id_filled",
+  "raise-agent"
+ ],
+ [
+  "update",
+  "all-money-agents",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI All 6 Money Agents', 'description': \"<p><strong>All 6 Money Agents for Claude. $60 separately, $39 here.</strong></p><ul>\\n<li>\\n<strong>Lower Bills Agent:</strong> compares internet, phone and insurance offers and writes your call scripts</li>\\n<l"
+ ],
+ [
+  "update",
+  "bill-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Bill Agent', 'description': \"<p><strong>Check a medical bill before you pay it.</strong></p><p>Compares your itemized bill with your insurance statement, points out charges that don't match, writes your call script and keeps a list of every bill un"
+ ],
+ [
+  "update",
+  "debt-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Debt Agent', 'description': '<p><strong>A payoff plan and the script to ask for a lower rate.</strong></p><p>Builds your payoff plan from your balances, writes the call script to ask for a lower interest rate, and when you check in on payday tells "
+ ],
+ [
+  "create_no_product",
+  "lower-agent",
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
+ ],
+ [
+  "update",
+  "raise-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Raise Agent', 'description': '<p><strong>Walk into your pay conversation prepared.</strong></p><p>Keeps the list of wins you give it, reads public pay data for your job and city, helps you pick your ask, target and minimum, and rehearses the conver"
+ ],
+ [
+  "update",
+  "refund-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Refund Agent', 'description': \"<p><strong>Ask for the money you're owed, the right way.</strong></p><p>Spots charges that may be refundable in the statements you upload, drafts refund requests that name your rights (like the DOT airline refund rule"
+ ],
+ [
+  "update",
+  "sell-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Sales Agent', 'description': \"<p><strong>Turn TikTok attention into honest sales.</strong></p><p>Learns your product from your notes, drafts videos that sell without feeling like ads, scripts your LIVEs, and drafts replies to comments and DMs in yo"
+ ],
+ [
+  "update",
+  "shop-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Shop Agent', 'description': \"<p><strong>Plan a TikTok Shop that can make a profit.</strong></p><p>Helps you compare product ideas, checks your profit after fees before you list, drafts listings that follow TikTok's rules, drafts creator outreach me"
+ ],
+ [
+  "update",
+  "subs-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Subscription Agent', 'description': '<p><strong>Find every subscription you pay for.</strong></p><p>Lists every recurring charge from the statements you upload, helps you sort keep and cut, and drafts the cancel and refund messages. Upload new stat"
+ ],
+ [
   "create_no_product",
   "tiktok-agents",
   "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
