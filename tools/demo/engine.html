@@ -263,7 +263,7 @@ function drawPanel(t,b,lt){const x=px;x.clearRect(0,0,PW,PH);
  ptex.needsUpdate=true}
 // ---------- camera ----------
 const B=DATA.beats;
-const VIEW={intro:{p:new THREE.Vector3(5.6,6.4,5.6),h:15.2,el:18,az:36},wide:{p:new THREE.Vector3(5.7,6.35,5.7),h:13.6,el:10,az:45},panel:{p:new THREE.Vector3(5.7,6.45,5.7),h:13.0,el:8,az:45},cta:{p:new THREE.Vector3(5.7,6.35,5.7),h:13.8,el:10,az:50}};
+const VIEW={intro:{p:new THREE.Vector3(5.6,6.9,5.6),h:15.8,el:18,az:36},wide:{p:new THREE.Vector3(5.7,7.2,5.7),h:14.4,el:10,az:45},panel:{p:new THREE.Vector3(5.7,7.3,5.7),h:13.8,el:8,az:45},cta:{p:new THREE.Vector3(5.7,7.25,5.7),h:14.4,el:10,az:50}};
 const vk=s=>s==='intro'?'intro':s==='cta'?'cta':(s==='result'||s==='draft'||s==='prompt')?'panel':'wide';
 const segs=B.map((b,i)=>({t:i?b.s-.35:0,k:vk(b.step)}));
 function camAt(t){let i=0;while(i+1<segs.length&&t>=segs[i+1].t)i++;const cur=VIEW[segs[i].k];
