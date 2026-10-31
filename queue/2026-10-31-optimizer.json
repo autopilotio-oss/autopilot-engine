@@ -1,0 +1,42 @@
+[
+ {
+  "id": "never-paste-test",
+  "at": "2026-11-01T12:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/never-paste-test.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "3 things I'd never paste into any AI chat, Claude included.\n\nNot because AI is evil. A chat is saved on a company's servers, like an email.\n\nThe list is in the thread below.",
+  "descendants": [
+   "1. Passwords and login codes.\n\nNo real task needs them. If anything asks you to paste a password into a chat, close it.",
+   "2. Full card, bank or Social Security numbers.\n\nBlack them out before you upload a statement. AI reads the charges just fine with ████ where the numbers were.",
+   "3. Other people's private details.\n\nA client's health info, a coworker's address. Use initials or \"Client A\". The answer is just as good.\n\nEverything else, like bills, leases, emails and resumes, is where AI saves you hours. Save this."
+  ]
+ },
+ {
+  "id": "subs-dd",
+  "at": "2026-11-02T09:00:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-subs.mp4"
+  ],
+  "poster": "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-subs-poster.jpg",
+  "topic": "AI",
+  "ig": false,
+  "text": "You're probably paying for a subscription you forgot about.\n\nThe app you opened once. A second streaming service. A free trial that quietly turned paid.\n\nUpload 3 months of bank statements to Claude (black out the account numbers) and type:\n\"Find every recurring charge and what I save by canceling.\"\n\nIt lists each one with the yearly cost, then writes the cancel messages.\n\nNo need to comment. Free guide: https://autopilotoi.app/g/subs/"
+ },
+ {
+  "id": "refund-dd",
+  "at": "2026-11-03T12:30:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/series/day-02-refund.mp4"
+  ],
+  "poster": "https://autopilotio-oss.github.io/autopilot-engine/media/series/day-02-refund-poster.jpg",
+  "topic": "AI",
+  "ig": false,
+  "text": "Money you might be owed right now:\n\nA double charge on your card.\nAn order that never showed up.\nA flight the airline canceled.\n\nFlights: if a US airline cancels and you turn down the new one, DOT rules say you get your money back, not just a voucher.\n\nPaste the receipt into Claude and ask for a short refund request that names your rights.\n\nNo need to comment. Free guide: https://autopilotoi.app/g/refund/"
+ }
+]

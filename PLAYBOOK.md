@@ -109,7 +109,7 @@ The automatic 5 a day story set (tip, quiz, answer, fact, poll) no longer goes t
 
 
 ## Threads publishing = Metricool (Oct 30)
-Threads is connected in Metricool (brand 7761544). GitHub no longer posts to Threads (config/threads.json paused). The daily "Instagram + Threads loader" scheduled task schedules Threads queue items into Metricool and records them in state/posted.json. Our bot can't read or reply to Threads comments anymore and ManyChat doesn't cover Threads, so on Threads never ask people to comment a keyword: put the direct link in the post instead (free guide or /free/ page). Comment keywords are for Instagram only, where ManyChat answers them.
+Threads is connected in Metricool (brand 7761544). GitHub no longer posts to Threads (config/threads.json paused). The "Instagram + Threads loader" task only loads Instagram (and cross-posts videos). Threads queue items are scheduled into Metricool by the daily content optimizer for the next 3 days and recorded in state/posted.json (Oct 31). Items in queue/hold/ are parked and never loaded. Threads posts with "descendants" go out as a native multi-post thread. Our bot can't read or reply to Threads comments anymore and ManyChat doesn't cover Threads, so on Threads never ask people to comment a keyword: put the direct link in the post instead (free guide or /free/ page). Comment keywords are for Instagram only, where ManyChat answers them.
 
 
 ## Rename (Seb, Oct 30)

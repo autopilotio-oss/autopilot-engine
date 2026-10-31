@@ -41,7 +41,7 @@
   ],
   "ig": false,
   "topic": "AI",
-  "text": "Never pay a medical bill before you check it. Itemized bill + your insurance statement + one Claude prompt. Then a Bill Agent checks every bill before you pay.\n\nComment BILL and I'll send you the free guide."
+  "text": "Never pay a medical bill before you check it. Itemized bill + your insurance statement + one Claude prompt. Then a Bill Agent checks every bill before you pay.\n\nFree guide: https://autopilotoi.app/g/bill/"
  },
  {
   "id": "ig-money-debt",
@@ -56,13 +56,13 @@
  },
  {
   "id": "th-money-debt",
-  "at": "2026-11-02T10:30:00-05:00",
+  "at": "2026-11-04T10:30:00-05:00",
   "kind": "video",
   "media": [
    "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-debt.mp4"
   ],
   "ig": false,
   "topic": "AI",
-  "text": "Most people never call to ask for a lower rate. Claude writes the script, builds your payoff plan, and a Debt Agent tells you what to pay every payday.\n\nComment DEBT and I'll send you the free guide."
+  "text": "Most people never call to ask for a lower rate. Claude writes the script, builds your payoff plan, and a Debt Agent tells you what to pay every payday.\n\nFree guide: https://autopilotoi.app/g/debt/"
  }
 ]
