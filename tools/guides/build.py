@@ -1,6 +1,13 @@
 import os, html, json, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from guides import G
+# Agents rebuilt as full agent packs (tools/packs): the guide's buy box describes the pack.
+PACK_TXT = {
+    "shop-agent": "The full agent pack (15 page PDF): a setup builder that installs it with you, 10 commands, the profit calculator, a product scorecard, creator scripts and a 30 day tracker.",
+    "video-agent": "The full agent pack (14 page PDF): a setup builder that installs it with you, 9 commands, a hook bank, an edit plan template and a 30 day tracker.",
+    "sell-agent": "The full agent pack (13 page PDF): a setup builder that installs it with you, a Sales Sheet template, 6 commands, honest objection answers and a weekly tracker.",
+    "deposit-agent": "The full agent pack (13 page PDF): a setup builder that builds your case with you, 6 commands, letter templates, an evidence checklist and a case tracker.",
+}
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 e = html.escape
 CSS = """
@@ -59,7 +66,9 @@ def page(slug, g):
     out.append('<h2>Watch out</h2><div class="warn"><ul>' + "".join(f"<li>{e(x)}</li>" for x in g["warn"]) + "</ul></div>")
     a = g["agent"]
     if g.get("paid", True):
-        DFY = f"""<div class="dfy"><h3>Get the full {e(a['name'])}</h3><p>A Claude prompt kit (PDF): the full master prompt, 5 starter prompts, a tracker and the 10 minute setup. You run it in Claude yourself, on the free plan or paid. It drafts, you decide and send. {g.get('bundle_txt','$10, or all 5 money agents for $39.')}</p>
+        _perm = g.get('permalink', slug + '-agent')
+        _kit = PACK_TXT.get(_perm, "A Claude prompt kit (PDF): the full master prompt, 5 starter prompts, a tracker and the 10 minute setup.")
+        DFY = f"""<div class="dfy"><h3>Get the full {e(a['name'])}</h3><p>{_kit} You run it in Claude yourself, on the free plan or paid. It drafts, you decide and send. {g.get('bundle_txt','$10, or all 5 money agents for $39.')}</p>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="https://autopilotoi.gumroad.com/l/{g.get('permalink', slug + '-agent')}" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">GET IT · $10</a>{'<a href="https://autopilotoi.gumroad.com/l/'+g.get('bundle_link','all-money-agents')+'" style="flex:1 1 160px;text-align:center;border:2px solid #0a0a0a;color:#0a0a0a;text-decoration:none;font:700 14px &#39;Geist Mono&#39;,monospace;letter-spacing:1.5px;border-radius:12px;padding:13px">'+g.get('bundle_btn','ALL 5 · $39')+'</a>' if g.get('bundle_btn','ALL 5 · $39') else ''}</div><p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>
 """
     else:
