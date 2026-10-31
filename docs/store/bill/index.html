@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bill Agent · $10 · AUTOPILOT.OI</title>
+<meta name="description" content="Upload your itemized bill and your insurer&#x27;s explanation of benefits. Claude lines them up, points out what doesn&#x27;t match, and writes your call script so you know exactly what to ask.">
+<meta property="og:title" content="Check a medical bill before you pay it"><meta property="og:description" content="Upload your itemized bill and your insurer&#x27;s explanation of benefits. Claude lines them up, points out what doesn&#x27;t match, and writes your call script so you know exactly what to ask.">
+<meta property="og:image" content="https://autopilotoi.app/logo.png"><link rel="canonical" href="https://autopilotoi.app/store/bill/">
+<meta name="theme-color" content="#000000"><link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600;14..32,700;14..32,900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--l:#D4FF3A;--line:#1c1d1b;--mut:#8f928b;--card:#0c0d0c}
+*{box-sizing:border-box;margin:0;padding:0}html{overflow-x:hidden}
+body{background:#000;color:#fff;font:500 16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}.w{max-width:560px;margin:0 auto;padding:0 20px 60px;position:relative;z-index:1}
+.glow{position:fixed;width:520px;height:520px;left:50%;margin-left:-260px;top:-300px;border-radius:50%;background:rgba(212,255,58,.15);filter:blur(100px);pointer-events:none}
+.hd{display:flex;align-items:center;gap:10px;padding:20px 0}.hd img{width:34px;height:34px;border-radius:50%}.hd b{font-weight:900;letter-spacing:.04em}.hd a.bk{margin-left:auto;color:var(--mut);font-size:14px;text-decoration:none}
+.tag{font:700 11px 'Space Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:var(--l)}
+h1{font:900 clamp(34px,9vw,48px)/.98 Inter;text-transform:uppercase;letter-spacing:-.02em;margin:10px 0 14px}
+.lead{color:rgba(255,255,255,.8);font-size:17px}
+.buy{display:block;text-align:center;background:var(--l);color:#000;text-decoration:none;font:900 16px Inter;text-transform:uppercase;border-radius:16px;padding:18px;margin:22px 0 8px}
+.sm{text-align:center;color:var(--mut);font-size:13px}
+h2{font:900 13px 'Space Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:34px 0 12px}
+ul{padding-left:20px}li{margin:6px 0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.note{font-size:13px;color:var(--mut);margin-bottom:10px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font:400 12.5px 'Space Mono',monospace}
+th{text-align:left;color:var(--l);font-weight:700;border-bottom:1px solid #2a2d27;padding:6px 6px 6px 0;white-space:nowrap}td{border-bottom:1px solid #1a1c19;padding:7px 6px 7px 0;vertical-align:top}
+.after p{margin-top:10px;font-size:14.5px;color:rgba(255,255,255,.85)}
+.two{display:grid;grid-template-columns:1fr;gap:12px}.no li::marker{content:"✕  ";color:#ff6b6b}.yes li::marker{content:"✓  ";color:var(--l)}
+details{border-bottom:1px solid var(--line);padding:12px 0}summary{font-weight:700;cursor:pointer}details p{color:rgba(255,255,255,.75);margin-top:6px;font-size:15px}
+.free{text-align:center;margin-top:14px;color:var(--mut)}.free a{color:var(--l)}
+.ft{color:#5d6059;font-size:12px;text-align:center;margin-top:36px}
+</style></head><body><div class="glow"></div><div class="w">
+<div class="hd"><a href="/"><img src="/logo.png" alt=""></a><b>AUTOPILOT.OI</b><a class="bk" href="/store/">← Store</a></div>
+<div class="tag">Claude prompt kit · $10</div>
+<h1>Check a medical bill before you pay it</h1>
+<p class="lead">Upload your itemized bill and your insurer&#x27;s explanation of benefits. Claude lines them up, points out what doesn&#x27;t match, and writes your call script so you know exactly what to ask.</p>
+<a class="buy" href="https://autopilotoi.gumroad.com/l/bill-agent">Get the Bill Agent · $10</a>
+<p class="sm">Instant download · works on Claude's free plan</p>
+<h2>It's for you if</h2><ul><li>You got a medical or dental bill and aren&#x27;t sure it&#x27;s right</li><li>The bill doesn&#x27;t match what your insurance says you owe</li><li>You want a script before you call the billing office</li></ul>
+<h2>What it looks like</h2><div class="box"><p class="note">Sample output from a test run on a made-up bill and EOB. Your results depend on your documents.</p>
+<div class="tbl"><table><tr><th>Line</th><th>Billed</th><th>EOB says</th><th>Ask</th></tr><tr><td>Office visit</td><td>$310.00</td><td>You owe $40 copay</td><td>Why am I billed more than my copay?</td></tr><tr><td>Lab panel, twice same day</td><td>$96 x2</td><td>Listed once</td><td>Is this a duplicate charge?</td></tr><tr><td>Facility fee</td><td>$185.00</td><td>Not listed</td><td>Was this sent to my insurance?</td></tr><tr><td>Total due</td><td>$687.00</td><td>Your share $63.40</td><td>Can you rebill to match the EOB?</td></tr></table></div>
+<div class="after"><p>Call script opener: &quot;Hi, I&#x27;m calling about my bill from [date]. Before I pay, I&#x27;d like to review a few lines that don&#x27;t match my insurance statement.&quot;</p><p>It also reminds you to ask whether the hospital has a financial assistance policy, and to get any agreement in writing.</p></div></div>
+<h2>What it does</h2><ul class="yes"><li>Compares your bill to your EOB line by line</li><li>Lists questions and possible errors in a table</li><li>Writes your call script and follow up email</li><li>Keeps a log of every bill until it&#x27;s settled</li></ul>
+<h2>What it doesn't do</h2><ul class="no"><li>Call anyone for you</li><li>Give medical or legal advice</li><li>Guarantee a lower bill</li></ul>
+<h2>What you need</h2><ul><li>Your itemized bill (ask the billing office for it)</li><li>The EOB from your insurer for that visit</li><li>A Claude account (free works)</li></ul>
+<h2>What you get</h2><p>A PDF with the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p>
+<h2>Questions</h2><details><summary>What if I don&#x27;t have an itemized bill?</summary><p>Call the billing office and ask for one with every charge and its billing code. The kit includes the exact words to use.</p></details><details><summary>Is this an app?</summary><p>No. It&#x27;s a PDF prompt kit. You paste the master prompt into a Claude Project once, then run it whenever you need it.</p></details><details><summary>Do I need a paid Claude plan?</summary><p>No. Claude&#x27;s free plan works and lets you create up to 5 Projects. A paid plan gives you more usage.</p></details><details><summary>Can it log into my accounts or send things for me?</summary><p>No. It reads what you upload and drafts. You check it, decide and send.</p></details><details><summary>What about my private info?</summary><p>Black out full account, card and member numbers before you upload. Claude only needs merchant names, dates and amounts.</p></details>
+<a class="buy" href="https://autopilotoi.gumroad.com/l/bill-agent">Get the Bill Agent · $10</a>
+<p class="free">Not ready to buy? <a href="/g/bill/">Try the free guide first</a>.</p>
+<div class="ft">Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</div>
+</div><script src="/assets/ap.js" defer></script></body></html>

@@ -83,5 +83,5 @@ for k, g in G.items(): page(k, g); print("built", k)
 
 # sitemap for Google (every guide + main pages)
 import datetime
-_u = ["", "free/", "store/", "brain/", "workspace/"] + [f"g/{k}/" for k in G if not G[k].get("draft")]
+_u = ["", "free/", "store/", "store/money/", "store/subs/", "store/bill/", "brain/", "workspace/"] + [f"g/{k}/" for k in G if not G[k].get("draft")]
 open(os.path.join(ROOT, "docs", "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>https://autopilotoi.app/{u}</loc><lastmod>{datetime.date.today().isoformat()}</lastmod></url>\n" for u in _u) + "</urlset>\n")
