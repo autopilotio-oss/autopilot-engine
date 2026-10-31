@@ -61,7 +61,11 @@ def heal_unpublished(st):
         if not (v.get("published") and v.get("live") is False and v.get("id") and os.path.exists(f)): continue
         p = json.load(open(f))
         if p.get("retired") or p.get("draft"): continue
-        try: call("PUT", f"/products/{v['id']}/enable", {}); v["live"] = True; DBG.append(["re_enabled", k]); print(f"::notice title=Gumroad re-enabled::{k}")
+        try:
+            r = call("PUT", f"/products/{v['id']}/enable", {})
+            g = call_get(f"/products/{v['id']}?" + urllib.parse.urlencode({"access_token": TOK})).get("product", {})
+            DBG.append(["re_enabled", k, str(r)[:160], {x: g.get(x) for x in ("published", "deleted", "custom_permalink", "short_url", "price", "file_info", "is_tiered_membership")}])
+            v["live"] = bool(g.get("published")); print(f"::notice title=Gumroad re-enable::{k} published={g.get('published')}")
         except Exception as e: DBG.append(["re_enable_fail", k, repr(e)[:200]])
 def sync_offer_code(st):
     """Owner approved launch code (config/growthos/campaign.json offer_code): create it on each listed product while
