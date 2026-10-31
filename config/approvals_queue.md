@@ -14,3 +14,13 @@ QA: all pass, see config/qa/2026-10-31-refund-v2.md (sources opened, no dashes, 
 Preview: docs/g/refund-v2/index.html (noindex, not linked, not in sitemap) · cover: none (no new product, live refund cover unchanged).
 On APPROVED: copy G["refund-v2"] fields over G["refund"] in tools/guides/guides.py (drop draft/base), delete the refund-v2 entry and docs/g/refund-v2/, rebuild.
 Status: AWAITING APPROVAL
+
+## 2026-10-31 · lead-followup-pro · Lead Follow-Up Pro ($99 Claude Skill test) · IDEA GATE ONLY, nothing built
+What: installable Claude Skill that sorts a business's leads by urgency, drafts follow-ups for the owner to approve, and keeps a tracker.
+Evidence:
+- Problem is real: 36% of customers say they wouldn't rehire a small business because it was slow or hard to reach (HoneyBook + Harris Poll, 503 owners and 1,002 customers, released May 2026) https://news.honeybook.com/news/honeybook-research-poor-communication-top-reason-customers-leave-small-businesses
+- Owners on the job can't reply fast ("the plumber is under a sink when the lead comes in", r/Entrepreneur, Mar 2026)
+- But free and cheap versions already exist: free follow-up skills (e.g. humanizerai follow-up skill, 204 installs) https://claudemarketplaces.com/skills/humanizerai/agent-skills/follow-up ; Anthropic's free Sales plugin; Gumroad follow-up kits at $5 to $19 (e.g. https://workdash.gumroad.com/l/plug-and-ping-email-prompts , https://munemomark.gumroad.com/l/pwpmkg)
+Score: demand 2 · fit 1 (our audience is mostly consumers; The Workspace $49 already includes a Follow up agent, so this would compete with our own product) · free value 1 · better than free 0 · safe 2 · measurable 2 = 8/12 with a zero.
+Result: FAILS the gate. Not recommended. Better move: sell the follow-up job through The Workspace we already have.
+Status: NOT PITCHED FOR BUILD
