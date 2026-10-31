@@ -1,0 +1,15 @@
+{
+ "name": "AUTOPILOT.OI Sales Agent",
+ "price_cents": 1000,
+ "permalink": "sell-agent",
+ "filename": "AUTOPILOT.OI Sales Agent Setup.pdf",
+ "description_html": "<p><strong>Turn TikTok attention into honest sales.</strong></p><p>Turn Claude into your TikTok Sales Agent in 10 minutes. Learns your product, writes videos that sell without feeling like ads, scripts your LIVEs, drafts replies to every comment and DM in your voice, and follows up after the sale.</p><p>Inside: the full master prompt, 5 starter prompts, a step by step setup and your tracker. Works with Claude's free or paid plan.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/sell-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "tiktok",
+  "tiktok shop",
+  "ai agent"
+ ]
+}

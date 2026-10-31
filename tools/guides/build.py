@@ -47,7 +47,7 @@ def page(slug, g):
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600;700&family=Saira+Semi+Condensed:wght@900&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><div class="w">
 <div class="top"><img src="../../logo.png" alt=""><b>AUTOPILOT.OI</b><span>FREE GUIDE</span></div>
-<div class="hero"><span class="tag">MONEY × AI · {e(g['kw'])}</span><h1>{e(g['title'])}</h1><p class="sub">{e(g['sub'])}</p>
+<div class="hero"><span class="tag">{e(g.get('cat','MONEY × AI'))} · {e(g['kw'])}</span><h1>{e(g['title'])}</h1><p class="sub">{e(g['sub'])}</p>
 <div class="meta"><div><b>TIME</b>{e(g['time'])}</div><div><b>YOU NEED</b>{e(g['need'])}</div><div><b>COST</b>Free</div></div></div>
 <div class="why">{e(g['why'])}</div><h2>Step by step</h2>"""]
     for i, (h, p, prompt, links) in enumerate(g["steps"], 1):
@@ -60,8 +60,8 @@ def page(slug, g):
     out.append(f"""<h2>Make it automatic</h2><div class="ag"><span class="tag">YOUR {e(a['name']).upper()}</span>
 <p style="margin-top:12px;font-size:19px">{e(a['what'])}</p><ol>{''.join(f'<li>{e(x)}</li>' for x in a['setup'])}</ol>
 <div class="pr" id="ag">{e(a['instr'])}<button class="cp" data-c="ag">COPY</button></div>
-<div class="dfy"><h3>Get the full {e(a['name'])}</h3><p>The complete master prompt, 5 starter prompts, the tracker and the 10 minute setup. $10, or all 6 money agents for $39.</p>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="https://autopilotoi.gumroad.com/l/{slug}-agent" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">GET IT · $10</a>{'<a href="https://autopilotoi.gumroad.com/l/all-money-agents" style="flex:1 1 160px;text-align:center;border:2px solid #0a0a0a;color:#0a0a0a;text-decoration:none;font:700 14px &#39;Geist Mono&#39;,monospace;letter-spacing:1.5px;border-radius:12px;padding:13px">ALL 6 · $39</a>' if True else ''}</div><p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>
+<div class="dfy"><h3>Get the full {e(a['name'])}</h3><p>The complete master prompt, 5 starter prompts, the tracker and the 10 minute setup. {g.get('bundle_txt','$10, or all 6 money agents for $39.')}</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="https://autopilotoi.gumroad.com/l/{slug}-agent" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">GET IT · $10</a>{'<a href="https://autopilotoi.gumroad.com/l/'+g.get('bundle_link','all-money-agents')+'" style="flex:1 1 160px;text-align:center;border:2px solid #0a0a0a;color:#0a0a0a;text-decoration:none;font:700 14px &#39;Geist Mono&#39;,monospace;letter-spacing:1.5px;border-radius:12px;padding:13px">'+g.get('bundle_btn','ALL 6 · $39')+'</a>' if True else ''}</div><p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>
 <form id="kf"><input type="email" id="ke" placeholder="your@email.com" required autocomplete="email"><button id="kb">SEND ME TIPS</button></form><p id="km" style="margin:10px 0 0;font-size:14px"></p></div></div>""")
     out.append('<div class="src">Sources: ' + " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in g["sources"]) + "</div>")
     out.append("""<div class="foot">Educational only. Not financial, legal or medical advice. Check details with the company or a professional before you act. AUTOPILOT.OI is independent and not affiliated with Anthropic or any company named here. Claude is a product of Anthropic.</div></div>

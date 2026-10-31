@@ -1,0 +1,20 @@
+{
+ "name": "AUTOPILOT.OI TikTok Agents Bundle",
+ "price_cents": 2400,
+ "permalink": "tiktok-agents",
+ "filename": "(bundle)",
+ "bundle_of": [
+  "video-agent",
+  "shop-agent",
+  "sell-agent"
+ ],
+ "description_html": "<p><strong>All 3 TikTok agents for Claude. $30 separately, $24 here.</strong></p><ul><li><strong>Video Agent:</strong> scripts, edit plans for CapCut, captions, scheduling and weekly reviews</li><li><strong>Shop Agent:</strong> product research, profit checks, compliant listings, creator outreach</li><li><strong>Sales Agent:</strong> videos that sell, LIVE scripts, replies to every comment and DM</li></ul><p>Each: the full master prompt, 5 starter prompts, a 10 minute setup and a tracker. Works with Claude's free or paid plan.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/tiktok-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "tiktok",
+  "tiktok shop",
+  "ai agent"
+ ]
+}

@@ -9,7 +9,10 @@
   "DEBT": "Here you go 💸 The call script to ask for a lower rate, your payoff plan, and a Debt Agent that keeps you on track. Free: https://autopilotio-oss.github.io/autopilot-engine/g/debt/",
   "SUBS": "Here you go ✂️ Find every forgotten subscription in 10 minutes with Claude, plus the cancel messages. Free: https://autopilotoi.app/g/subs/",
   "REFUND": "Here you go ↩️ Get your money back: the refund rules, the exact request to send, and what to do if they say no. Free: https://autopilotoi.app/g/refund/",
-  "RAISE": "Here you go 📈 Real pay data, your number, and a practice run with Claude before you ask. Free: https://autopilotoi.app/g/raise/"
+  "RAISE": "Here you go 📈 Real pay data, your number, and a practice run with Claude before you ask. Free: https://autopilotoi.app/g/raise/",
+  "VIDEO": "Here you go 🎬 How to make TikToks with AI that plans every edit and posts for you. Free: https://autopilotoi.app/g/video/",
+  "SHOP": "Here you go 🛍️ Start selling on TikTok Shop: pick a product, check your profit, write the listing, get creators. Free: https://autopilotoi.app/g/shop/",
+  "SELL": "Here you go 💬 Build an AI sales agent for your TikTok: videos that sell, LIVE scripts, replies to every DM. Free: https://autopilotoi.app/g/sell/"
  },
  "max_per_run": 20
 }
