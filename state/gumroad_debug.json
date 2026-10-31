@@ -8,18 +8,39 @@
   "ok"
  ],
  [
+  "not_live_on_gumroad",
+  "bill-agent"
+ ],
+ [
+  "not_live_on_gumroad",
+  "debt-agent"
+ ],
+ [
   "create_no_product",
   "workspace",
-  "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day. and Custom permalink is already used by another one of your products'}"
+ ],
+ [
+  "create_no_product",
+  "deposit-agent",
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day. and Custom permalink is already used by another one of your products'}"
  ],
  [
   "create_no_product",
   "tiktok-agents",
-  "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day. and Custom permalink is already used by another one of your products'}"
  ],
  [
   "create_no_product",
   "video-agent",
-  "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day. and Custom permalink is already used by another one of your products'}"
+ ],
+ [
+  "not_live_on_gumroad",
+  "bill-agent"
+ ],
+ [
+  "not_live_on_gumroad",
+  "debt-agent"
  ]
 ]
