@@ -1,0 +1,20 @@
+{
+ "id": "subs-agent",
+ "ep": "001-subs-agent",
+ "kind": "product",
+ "hook": [
+  "This AI agent takes 10 min to set up",
+  "and finds every subscription you forgot"
+ ],
+ "keyword": "SUBS",
+ "video": "https://autopilotoi.app/media/freel/subs-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/subs-agent-poster.jpg",
+ "caption": {
+  "ig": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Comment SUBS and I'll send you the free guide.\n\n#ai #claude #aiagents #subscriptions #moneytips",
+  "other": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Free guide at the link in bio.\n\n#ai #claude #aiagents #subscriptions #moneytips"
+ },
+ "rendered_at": "2026-10-31T20:10:26+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}

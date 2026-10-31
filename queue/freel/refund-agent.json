@@ -1,0 +1,20 @@
+{
+ "id": "refund-agent",
+ "ep": "002-refund-agent",
+ "kind": "product",
+ "hook": [
+  "Flight cancelled? This 10 min AI agent",
+  "writes your refund request for you"
+ ],
+ "keyword": "REFUND",
+ "video": "https://autopilotoi.app/media/freel/refund-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/refund-agent-poster.jpg",
+ "caption": {
+  "ig": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Comment REFUND and I'll send you the free guide.\n\n#ai #claude #refund #travel #moneytips",
+  "other": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Free guide at the link in bio.\n\n#ai #claude #refund #travel #moneytips"
+ },
+ "rendered_at": "2026-10-31T20:10:28+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
