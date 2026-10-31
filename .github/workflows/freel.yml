@@ -4,10 +4,12 @@ on:
     inputs:
       eps: { description: "Episode stems in tools/freel/eps (space separated). Blank = next ones without a video", required: false }
       n: { description: "How many to render when eps is blank", required: false, default: "2" }
+      voice_run: { description: "Reuse the voice tracks from an earlier run id (no new voice spend)", required: false }
   schedule:
     - cron: "7 9 * * *"
 permissions:
   contents: write
+  actions: read
 concurrency: freel
 jobs:
   plan:
@@ -40,6 +42,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy
+      - name: Reuse voice from an earlier run
+        if: github.event.inputs.voice_run != ''
+        uses: actions/download-artifact@v4
+        with: { name: "prep-${{ matrix.ep }}", path: tools/freel, run-id: "${{ github.event.inputs.voice_run }}", github-token: "${{ github.token }}" }
       - name: Voice + build + mix
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}

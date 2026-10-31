@@ -96,5 +96,11 @@
     "url": "autopilotoi.app"
    }
   }
- ]
+ ],
+ "stat": {
+  "count": 5,
+  "suffix": " AGENTS",
+  "label": "one job each",
+  "note": "sample results"
+ }
 }

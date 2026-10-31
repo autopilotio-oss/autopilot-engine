@@ -56,10 +56,11 @@ def send(_):
 def msg(i):
     t = ts(.25); return (np.sin(2 * np.pi * 1318 * t) * env(t, .001, .05) + np.sin(2 * np.pi * 1976 * t) * env(np.maximum(t - .06, 0), .001, .07) * (t > .06)) * .7
 def cta(_): return S(chord([659, 988, 1318, 1976], 2.0, .7) * .8, whoosh(.6, False) * .3)
+def stat(_): return S(impact(1) * .8, chord([523.25, 659.25, 783.99, 1046.5], 1.6, .55) * .7, whoosh(.4, False) * .3)
 def trans(_): return S(whoosh(.5) * .6, impact(4) * .18)
 G = {"impact": (impact, .55), "whoosh": (lambda _: whoosh(.6), .45), "trans": (trans, .45), "key": (key, .16), "send": (send, .3),
      "drop": (drop, .3), "blip": (blip, .14), "tick": (tick, .22), "row": (row, .2), "win": (win, .3), "stamp_ok": (stamp_ok, .42),
-     "stamp_no": (stamp_no, .42), "deny": (deny, .22), "msg": (msg, .28), "cta": (cta, .3)}
+     "stamp_no": (stamp_no, .42), "deny": (deny, .22), "msg": (msg, .28), "cta": (cta, .3), "stat": (stat, .5)}
 for k, t, i in M["events"]:
     f, g = G[k]; add(f(i), t, g, pan=(((len(k) * 3 + i) % 7) - 3) * .06)
 sfx = np.stack([L, R], 1)

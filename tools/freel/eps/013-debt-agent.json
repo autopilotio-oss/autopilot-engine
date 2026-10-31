@@ -88,5 +88,11 @@
     "topic": "Kill the debt"
    }
   }
- ]
+ ],
+ "stat": {
+  "count": 33,
+  "suffix": " MONTHS",
+  "label": "sooner · about $2,333 less interest",
+  "note": "sample numbers"
+ }
 }

@@ -11,7 +11,7 @@ dur = round(beats[-1]["e"] + 2.4, 2)
 ORDER = ['viral','gate','owner','studio','dm','email','store','ledger','support','health','vault','command']
 NAMES = {'viral':'Viral Lab','gate':'Proof Gate','owner':"Owner's Desk",'studio':'Studio','dm':'DM Room','email':'Email Room','store':'The Store','ledger':'Ledger','support':'Support Desk','health':'Health Room','vault':'The Vault','command':'Growth Commander'}
 data = {"reel": True, "room": E["room"], "roomNo": ORDER.index(E["room"]) + 1, "roomName": NAMES[E["room"]], "agent": E["agent"],
-        "hook": E["hook"], "hookLines": E.get("hook_lines") or E["hook"], "beats": beats, "words": W, "cta": beats[-1]["s"], "dur": dur, "title": E["hook"]}
+        "hook": E["hook"], "hookLines": E.get("hook_lines") or E["hook"], "stat": E.get("stat"), "beats": beats, "words": W, "cta": beats[-1]["s"], "dur": dur, "title": E["hook"]}
 h = open(f"{ROOT}/tools/office/engine.html").read()
 P = [  # reel mode patches on the office engine
  ('"./vendor/', '"/tools/office/vendor/'),
@@ -23,7 +23,7 @@ P = [  # reel mode patches on the office engine
  ('new THREE.Vector2(360,640)', 'new THREE.Vector2(360,337)'),
  ('w=h*1080/1920', 'w=h*1080/TOPH'),
  ('const zoom=cl((60-h)/30);const sh=(.07*zoom-.05*(1-zoom))*h;', 'const sh=.24*h;'),
- ('function camAt(t){', 'function camAt(t){if(DATA.reel){const st=camState(DATA.room);st.h=13.5;const u=ease(cl(t/2.6));return{...st,h:st.h*(1.5-.5*u)*(1-.04*cl((t-3)/20)),az:36+9*u+Math.sin(t*.3)*2,k:DATA.room,u:1}}'),
+ ('function camAt(t){', 'function camAt(t){if(DATA.reel){const st=camState(DATA.room);st.h=13.5;const u=ease(cl(t/2.6));const BB=DATA.beats;let bi=0;while(bi+1<BB.length&&t>=BB[bi+1].s-.15)bi++;const OA=[0,7,-6,4,-3],OH=[1,.9,.96,1.06,.92];const k=ease(cl((t-(bi?BB[bi].s-.15:0))/.9));const pa=bi?OA[(bi-1)%5]:0,ph=bi?OH[(bi-1)%5]:1;const ca=pa+(OA[bi%5]-pa)*k,chh=ph+(OH[bi%5]-ph)*k;return{...st,h:st.h*(1.5-.5*u)*chh,az:36+9*u+ca*u+Math.sin(t*.3)*1.5,k:DATA.room,u:1}}'),
  ('dom(t,c);comp.render()', '(window.reelDom||dom)(t);comp.render()'),
  ("await document.fonts.load('40px ID');", "await document.fonts.load('100px AN');await document.fonts.load('500 20px CP');await document.fonts.load('700 20px CP');await document.fonts.load('40px ID');"),
  ("function tagTex(name,c){return ctex(512,128,(x,w,h)=>{x.font='600 34px JB';", "function tagTex(name,c){return ctex(512,128,(x,w,h)=>{x.font='700 36px CP';"),
@@ -37,7 +37,7 @@ open(f"{D}/{ep}.html", "w").write(h)
 def events():
     ev = [["impact", i * .11, i] for i in range(len(data["hookLines"]))] + [["whoosh", 2.45, 0]]
     for bi, b in enumerate(beats):
-        bs = b["s"] - .15 if bi else 0; be = beats[bi + 1]["s"] - .15 if bi + 1 < len(beats) else dur; L = max(.5, be - bs); sc = b["screen"]; T = lambda p: bs + p * L
+        bs = b["s"] - .15 if bi else 2.55; be = beats[bi + 1]["s"] - .15 if bi + 1 < len(beats) else dur; L = max(.5, be - bs); sc = b["screen"]; T = lambda p: bs + p * L
         if bi: ev.append(["trans", bs, bi])
         k = sc["type"]
         if k == "ask":
@@ -64,6 +64,7 @@ def events():
             n = len(sc["msgs"])
             for i in range(n): ev.append(["msg", T(i * .7 / n), i])
         elif k == "cta": ev.append(["cta", T(0) + .05, 0])
+        if k in ("table", "checks") and data.get("stat"): ev.append(["stat", T(.72), 0])
     return [e for e in ev if 0 <= e[1] < dur]
 json.dump({"dur": dur, "cuts": [b["s"] for b in beats[1:]], "beats": beats, "events": events()}, open(f"{D}/{ep}.meta.json", "w"))
 print("built", ep, dur, "s")

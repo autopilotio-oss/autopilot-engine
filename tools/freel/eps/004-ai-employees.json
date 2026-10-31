@@ -82,5 +82,11 @@
     "url": "autopilotoi.app/workspace"
    }
   }
- ]
+ ],
+ "stat": {
+  "count": 3,
+  "suffix": " THINGS",
+  "label": "need you today",
+  "note": "the rest is drafted · sample business"
+ }
 }

@@ -88,5 +88,10 @@
   "*underpaid?*",
   "this AI agent",
   "builds the *proof*"
- ]
+ ],
+ "stat": {
+  "big": "+8%",
+  "label": "your ask, backed by data",
+  "note": "sample notes"
+ }
 }

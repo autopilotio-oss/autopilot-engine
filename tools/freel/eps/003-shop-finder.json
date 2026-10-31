@@ -86,5 +86,12 @@
     "url": "autopilotoi.app"
    }
   }
- ]
+ ],
+ "stat": {
+  "count": 9.4,
+  "dec": 2,
+  "prefix": "$",
+  "label": "you keep per sale",
+  "note": "sample numbers · fees counted"
+ }
 }

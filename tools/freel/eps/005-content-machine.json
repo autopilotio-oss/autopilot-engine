@@ -90,5 +90,11 @@
     "url": "autopilotoi.app"
    }
   }
- ]
+ ],
+ "stat": {
+  "count": 5,
+  "suffix": " VIDEOS",
+  "label": "planned from one idea",
+  "note": "scripts, cuts, captions"
+ }
 }

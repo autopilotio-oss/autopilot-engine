@@ -89,5 +89,11 @@
   "might have *errors*",
   "AI finds them",
   "in *seconds*"
- ]
+ ],
+ "stat": {
+  "count": 521,
+  "prefix": "$",
+  "label": "worth questioning",
+  "note": "sample bill"
+ }
 }
