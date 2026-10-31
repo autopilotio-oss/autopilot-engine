@@ -17,18 +17,8 @@
  ],
  [
   "update",
-  "workspace",
-  "{'success': True, 'product': {'name': 'THE WORKSPACE by AUTOPILOT.OI', 'description': \"<p><strong>Set up 7 Claude agents for your business in about an hour.</strong></p><p>Morning Brief, Inbox, Booking, Follow Up, Invoice, Review and DM Assistant. They draft your email replies, booking reminders, qu"
- ],
- [
-  "update",
-  "shop-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Shop Agent', 'description': '<p><strong>Your TikTok Shop agent: find products, do the profit math, check the rules, get creators posting.</strong></p><p>A Claude agent that finds product ideas for your niche and budget, scores them, works out what "
- ],
- [
-  "update",
-  "video-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Video Agent', 'description': '<p><strong>Your TikTok video agent: one idea in, a week of videos planned.</strong></p><p>A Claude agent that finds the patterns in your niche from videos you paste, plans 7 videos a week, writes scripts in your voice,"
+  "all-money-agents",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI All 5 Money Agents', 'description': '<p><strong>All 5 Money Agents for Claude, now with the Money Agents Pro setup pack. $50 separately, $39 here.</strong></p><ul>\\n<li>\\n<strong>Bill Agent:</strong> checks a medical bill against your insurance bef"
  ],
  [
   "not_live_on_gumroad",
