@@ -1,0 +1,62 @@
+{
+ "dead_letters": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "event_store_chain": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "gumroad_errors": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "gumroad_sync_fresh": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:brain": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:free": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_subs": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:home": {
+  "ok": false,
+  "severity": "SEV-2"
+ },
+ "page:store": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:workspace": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "paid_but_undelivered": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "queue_backlog": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "revenue_ledger_fresh": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "viral_audit_chain": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "viral_queue_guard": {
+  "ok": true,
+  "severity": "SEV-1"
+ }
+}
