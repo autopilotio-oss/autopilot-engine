@@ -9,12 +9,12 @@
 ## Hard rules
 - Honest only. No fake testimonials, no invented results, no income claims, no fake scarcity or countdowns. Example numbers inside a demo must be clearly an example business.
 - No dashes (" - ", " — ") anywhere in captions or graphics.
-- Every post ends with ONE action: Comment BRAIN, Comment WORKSPACE, or a real question to reply to.
+- Every post ends with ONE action. Threads: the free guide link for that week's agent (Friday: the kit). Instagram: Comment <AGENT KEYWORD>. See "Sales strategy".
 - Copy formats, hooks and structures from what works for others. Never copy their actual words, visuals or claims.
 - Posts are 500 characters max. Times are US Eastern: -04:00 before Nov 1 2026, -05:00 after.
 - Max 6 posts a day (bot limit). Default rhythm: 2 a day, ~9:00 and ~12:30 ET (Threads is a morning platform).
 - Every post has an image or video. Text only is the weakest format on Threads.
-- Mix: about 60% BRAIN (free), 30% WORKSPACE (paid), 10% pure conversation questions.
+- Mix (Oct 31): 4 teaching posts that link to a free guide for every 1 post that sells a $10 agent kit. BRAIN and WORKSPACE posts only for the business owner weeks.
 - Add "topic": "Small Business" or "AI Tools" to each post.
 
 ## Formats that convert (ranked)
@@ -66,8 +66,29 @@ Write like a sharp operator texting a busy owner: calm, plain, specific, short. 
 Daily story at 4:30 PM ET: "AI FACT · NO. 0xx" from tools/story/pool.json "facts": a "whoa, AI can do that?" fact people can use today (most of them), with one {lime} phrase, one line of context and an optional "try" line (a prompt to copy). Only a few history facts, and only the jaw-dropping ones. Facts must be true and checkable: only add one after confirming it with a reliable source in a web search, and keep the wording precise (say "first recorded", "commonly credited" when that's the honest version). Topics: AI ONLY (history of AI, how chatbots and models work, milestones, AI companies and tools). No general tech or random trivia. No stats you can't source, no "studies show".
 Quality bar for every tip, quiz, poll and fact: it must teach something useful or surprising in one read. If it's generic, obvious, preachy or sounds like an ad, don't use it.
 
-## Trust first (Seb, Oct 30)
-For now we teach, we don't sell. Instagram runs the "AI for Beginners" lesson series (Lesson 1, 2, 3... one a day, CTA = save/follow for the next lesson, no product pitches). Threads CTAs point only to the free Business Brain or a question, never THE WORKSPACE, until Seb says to start selling.
+## Sales strategy: teach Claude, sell the agent (Seb, Oct 31: "focus on selling agent prompts, teach people how to use Claude but make sure they visit the site")
+Replaces "Trust first". We now sell, but only by teaching first.
+
+The ladder (every piece of content sits on one step and points to the next):
+1. POST teaches one real result in Claude: the problem, why it matters (a number or a rule), and prompt #1 that works on its own. Never bait: the post must be useful even if nobody clicks.
+2. FREE GUIDE (autopilotoi.app/g/<agent>/) has the full walkthrough: every prompt with copy buttons, the official links, the free short agent setup and the email signup. This is where every post sends people.
+3. $10 AGENT KIT (Gumroad, linked from the "Get the full ... Agent" box in each guide): full master prompt, 5 starter prompts, tracker, 10 minute setup, the monthly check. Bundle $39 (6 money agents) as the upsell, $49 WORKSPACE for business owners.
+
+Why they click: the post gives prompt #1 of 4 or 5. The guide has the rest, the copy buttons (long prompts are a pain to copy off an image) and the "make it automatic" setup. Say it plainly at the end of the post: "All 5 prompts, ready to copy: autopilotoi.app/g/credit/". Never hide the one prompt that makes the post useful, never paste the full paid master prompt in a post.
+
+What we teach (a Claude skill in every post, taught through a money task): uploading several PDFs and comparing them (credit reports, statements), black out before you upload, Projects that remember your files, project instructions = the agent, a scheduled task or a "monthly check" phrase, asking Claude to check its own work, turning a chat into a reusable prompt.
+
+One agent per week (credit, bill, subs, refund, debt, raise, then sell, shop, video). Threads, 2 to 3 posts a day max, all must pass the Threads value standard:
+- Mon: the problem post (stakes + prompt #1) -> guide link.
+- Tue: the Day series reel for that agent -> guide link.
+- Wed: walkthrough (screens of what Claude finds, step by step) -> guide link.
+- Thu: the Claude skill behind it (e.g. how Projects remember your files) -> guide link.
+- Fri: the one sell post of the week: "turn this into an agent that checks every month", show what's inside the kit, price stated plainly ($10), direct Gumroad link plus the free guide link for people who want to do it by hand.
+- Weekend: trend scout post if something clears the bar, or honest limits ("what this agent can't do").
+Ratio: 4 teaching posts to 1 sell post. Teaching posts link to the free guide, never straight to Gumroad.
+Instagram: same weekly agent, Comment <AGENT KEYWORD> -> ManyChat DMs the guide link (guide first, never the checkout link in the DM).
+Email: guide signups go to Kit; the sequence teaches the next prompt and offers the kit once.
+Measure weekly in SCOREBOARD: Gumroad sales per kit, Kit signups, which post drove the most link clicks (Metricool). A week's agent that gets clicks but no sales -> fix the guide's kit box; no clicks -> fix the posts.
 
 ## Everyday fix story (Seb, Oct 30)
 The 4:30 PM story is an "Everyday fix": a real problem normal people deal with (a bill, a lease, dinner, a hard email, homework) + how Claude solves it + the exact sentence to say to Claude. No trivia, no history, no scare facts. Never promise medical, legal or money outcomes; for health, "use it to prepare questions for your doctor".
