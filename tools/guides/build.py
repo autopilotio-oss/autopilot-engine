@@ -37,9 +37,10 @@ h2{font:900 italic 34px/1 'Saira Semi Condensed',Impact,sans-serif;text-transfor
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--l);color:#0a0a0a;font:700 13px 'Geist Mono',ui-monospace,monospace;padding:12px 18px;border-radius:12px;transition:transform .3s}.toast.on{transform:translate(-50%,0)}
 """
 def page(slug, g):
+    pslug = slug; slug = g.get("base", slug)  # drafts reuse the live guide's canonical, og and kit links
     out = [f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(g['title'])} · Free guide · AUTOPILOT.OI</title><meta name="description" content="{e(g['sub'])}">
-<link rel="canonical" href="https://autopilotoi.app/g/{slug}/"><meta property="og:type" content="article"><meta property="og:site_name" content="AUTOPILOT.OI">
+{'<meta name="robots" content="noindex,nofollow">' if g.get("draft") else ''}<link rel="canonical" href="https://autopilotoi.app/g/{slug}/"><meta property="og:type" content="article"><meta property="og:site_name" content="AUTOPILOT.OI">
 <meta property="og:title" content="{e(g['title'])} (free guide)"><meta property="og:description" content="{e(g['sub'])}"><meta property="og:url" content="https://autopilotoi.app/g/{slug}/">
 <meta property="og:image" content="https://autopilotoi.app/g/{slug}/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://autopilotoi.app/g/{slug}/og.png">
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"HowTo","name":g['title'],"description":g['sub'],"totalTime":"PT30M","tool":[{"@type":"HowToTool","name":"Claude"}],"step":[{"@type":"HowToStep","position":i+1,"name":h,"text":p_} for i,(h,p_,_,__) in enumerate(g['steps'])]})}</script>
@@ -76,11 +77,11 @@ $('kf').addEventListener('submit',ev=>{ev.preventDefault();const em=$('ke').valu
 $('kb').disabled=true;const fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',(location.pathname.match(/\\/g\\/([^\\/]+)/)||[])[1]||'guide');
 fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(()=>{$('kf').style.display='none';$('km').innerHTML='<b>You’re on the list.</b> Check your inbox.'}).catch(()=>{$('kb').disabled=false;$('km').textContent='Something went wrong. Try again.'})});
 </script><script src="/assets/ap.js" defer></script></body></html>""")
-    d = os.path.join(ROOT, "docs", "g", slug); os.makedirs(d, exist_ok=True)
+    d = os.path.join(ROOT, "docs", "g", pslug); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w").write("\n".join(out))
 for k, g in G.items(): page(k, g); print("built", k)
 
 # sitemap for Google (every guide + main pages)
 import datetime
-_u = ["", "free/", "store/", "brain/", "workspace/"] + [f"g/{k}/" for k in sorted(os.listdir(os.path.join(ROOT, "docs", "g"))) if os.path.isdir(os.path.join(ROOT, "docs", "g", k))]
+_u = ["", "free/", "store/", "brain/", "workspace/"] + [f"g/{k}/" for k in sorted(os.listdir(os.path.join(ROOT, "docs", "g"))) if os.path.isdir(os.path.join(ROOT, "docs", "g", k)) and not G.get(k, {}).get("draft")]
 open(os.path.join(ROOT, "docs", "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>https://autopilotoi.app/{u}</loc><lastmod>{datetime.date.today().isoformat()}</lastmod></url>\n" for u in _u) + "</urlset>\n")
