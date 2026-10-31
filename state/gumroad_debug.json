@@ -17,8 +17,13 @@
  ],
  [
   "update",
-  "all-money-agents",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI All 5 Money Agents', 'description': '<p><strong>All 5 Money Agents for Claude, now with the Money Agents Pro setup pack. $50 separately, $39 here.</strong></p><ul>\\n<li>\\n<strong>Bill Agent:</strong> checks a medical bill against your insurance bef"
+  "deposit-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Deposit Agent', 'description': \"<p><strong>Get back the security deposit your landlord kept.</strong></p><p>A Claude agent that reads your lease, your move in and move out photos and the landlord's list, sorts every deduction into fair, normal wear"
+ ],
+ [
+  "update",
+  "sell-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Sales Agent', 'description': '<p><strong>Your sales agent: every comment and DM answered in your voice, videos that sell, LIVE plans and real reviews.</strong></p><p>A Claude agent that learns your product from a one page Sales Sheet and drafts a r"
  ],
  [
   "not_live_on_gumroad",
