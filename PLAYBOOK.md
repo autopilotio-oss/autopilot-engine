@@ -186,3 +186,8 @@ Rejected so far (don't bring back): the Money Leak Check quiz (Oct 31), the Lowe
 
 ## Instagram CTA rule (Oct 31, Revenue Engine 2.0)
 ManyChat can't be changed from here (no API). An Instagram caption may say "Comment <KEYWORD>" only if the keyword is in config/manychat.json "confirmed". Every other post says "Free guide: tap the link in our bio" and the guide must be listed on the home page (autopilotoi.app) and /free/. New agents (agent factory) use link in bio by default.
+
+## TikTok video rule (Oct 31)
+The first TikTok (subs, Oct 31 1:45 PM ET) published without voice even though our file has it. Every TikTok video now uses a TikTok safe copy in docs/media/tiktok/ (AAC 44.1 kHz stereo, -14 LUFS, faststart), made with:
+ffmpeg -i in.mp4 -map 0:v:0 -map 0:a:0 -c:v copy -af "loudnorm=I=-14:TP=-1.5:LRA=11" -c:a aac -b:a 160k -ar 44100 -ac 2 -movflags +faststart docs/media/tiktok/<name>.mp4
+Schedule TikTok with media = https://autopilotoi.app/media/tiktok/<name>.mp4 and tiktokData.autoAddMusic false.
