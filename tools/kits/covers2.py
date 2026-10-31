@@ -96,17 +96,17 @@ def stack_html(p, cx, cy, sc=1.0):
 
 def sticker(p, x, y, size=150):
     was = f'<s>{p["was"]}</s>' if p.get("was") else ""
-    return f'<div class="st" style="left:{x}px;top:{y}px;width:{size}px;height:{size}px">{was}<b>{p["price"]}</b><span>{"BUNDLE" if p.get("was") else "PROMPT KIT"}</span></div>'
+    return f'<div class="st" style="left:{x}px;top:{y}px;width:{size}px;height:{size}px">{was}<b>{p["price"]}</b><span>{p.get("st") or ("BUNDLE" if p.get("was") else "PROMPT KIT")}</span></div>'
 
 def cover(k, p):
     right = stack_html(p, 930, 410, 0.85) if "stack" in p else paper_html(p, 690, 120, 470, 520, -4)
     return f"""<!DOCTYPE html><html><head><style>{CSS} body{{width:1280px;height:720px}}</style></head><body><div class="grain"></div><div class="vig"></div>
-<div class="bar"><b>AUTOPILOT.OI</b><span>CLAUDE PROMPT KIT · {'NO. ' if p['no'].isdigit() else ''}{p['no']}</span></div>
+<div class="bar"><b>AUTOPILOT.OI</b><span>{e(p.get('kind', 'CLAUDE PROMPT KIT'))} · {'NO. ' if p['no'].isdigit() else ''}{p['no']}</span></div>
 <div style="position:absolute;left:56px;top:128px;width:600px">
 <div class="cat">{e(p['cat'])}</div>
 <div class="h" style="font-size:{150 if len(p['t1'])<10 else 118}px;margin-top:18px"><div class="a">{e(p['t1'])}</div><div class="b">{e(p['t2'])}</div></div>
 <div class="sub" style="font-size:24px;margin-top:22px;max-width:540px">{e(p['sub'])}</div></div>
-<div class="inc" style="position:absolute;left:56px;bottom:46px"><span>INSIDE</span> · Master prompt · 5 starter prompts · Tracker · 10 min setup</div>
+<div class="inc" style="position:absolute;left:56px;bottom:46px"><span>INSIDE</span> · {e(p.get('inc', 'Master prompt · 5 starter prompts · Tracker · 10 min setup'))}</div>
 {right}{sticker(p, 590 if 'stack' not in p else 1080, 455 if 'stack' not in p else 96)}
 </body></html>"""
 

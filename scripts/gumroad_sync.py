@@ -57,7 +57,8 @@ def main():
     except urllib.error.HTTPError as e: m = e.read().decode()[:200]; DBG.append(["user", e.code, m]); print(f"::warning title=Gumroad user check {e.code}::" + m)
     sp = os.path.join(ROOT, "state", "products.json"); st = json.load(open(sp)) if os.path.exists(sp) else {}
     reconcile(st)
-    for f in sorted(glob.glob(os.path.join(ROOT, "products", "*", "product.json"))):
+    # "priority": higher first, so the most important new product gets the daily create slots (Gumroad: 10 new/day)
+    for f in sorted(glob.glob(os.path.join(ROOT, "products", "*", "product.json")), key=lambda x: (-json.load(open(x)).get("priority", 0), x)):
         d = os.path.dirname(f); slug = os.path.basename(d); p = json.load(open(f))
         if p.get("retired"):
             # Owner-approved retirement: unpublish on Gumroad, keep the record (reversible: set retired false + enable).

@@ -7,7 +7,6 @@ from ids import offer_id
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 EXTERNAL = {  # offers sold on Gumroad but not managed in products/ (created by hand)
-    "ttdat": {"name": "THE WORKSPACE", "price_cents": 4900, "kind": "course", "offer_id": "workspace", "page": "workspace/"},
 }
 
 

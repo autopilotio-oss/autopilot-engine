@@ -257,17 +257,16 @@
   },
   {
    "offer_id": "workspace",
-   "permalink": "ttdat",
-   "name": "THE WORKSPACE",
+   "permalink": "workspace",
+   "name": "THE WORKSPACE by AUTOPILOT.OI",
    "price_cents": 4900,
    "currency": "USD",
-   "kind": "course",
+   "kind": "kit",
    "components": [],
    "status": "not_live",
-   "checkout_url": "https://autopilotoi.gumroad.com/l/ttdat",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/workspace",
    "guides": [],
-   "page": "workspace/",
-   "managed_by": "gumroad (manual)"
+   "managed_by": "products/"
   }
  ],
  "keywords": [

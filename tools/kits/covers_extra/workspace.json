@@ -1,0 +1,14 @@
+{
+ "cat": "ANY BUSINESS",
+ "no": "WS",
+ "kind": "CLAUDE AGENT COURSE",
+ "t1": "THE",
+ "t2": "WORKSPACE",
+ "sub": "Set up 7 Claude agents that draft your replies, chase quotes and brief you every morning.",
+ "inc": "20 questions · Builder prompt · 7 agents · 50 phone commands",
+ "doc": "Your team", "st": "ONE TIME",
+ "table": {"head": ["Agent", "When", "Drafts"],
+  "rows": [["Morning Brief", "6:00 AM", "Your day"], ["Inbox", "3x daily", "4 replies"], ["Follow Up", "10:00 AM", "2 nudges"], ["Review", "7:00 PM", "3 asks"]],
+  "foot": "Drafts wait for your OK"},
+ "price": "$49"
+}
