@@ -16,11 +16,13 @@ jobs:
       ep: ${{ steps.pick.outputs.ep }}
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - name: Pick episode
         id: pick
         run: |
+          git fetch -q origin main
           if [ -n "${{ github.event.inputs.ep }}" ]; then E="${{ github.event.inputs.ep }}"; else
-            E=""; for f in $(ls -t tools/demo/eps/*.json); do n=$(basename "$f" .json); [ -f "docs/media/demo/$n.mp4" ] || { E="$n"; break; }; done; fi
+            E=""; for f in $(git log --diff-filter=A --format= --name-only origin/main -- tools/demo/eps/ | grep json); do n=$(basename "$f" .json); git cat-file -e "origin/main:docs/media/demo/$n.mp4" 2>/dev/null || { E="$n"; break; }; done; fi
           echo "ep=$E" >> "$GITHUB_OUTPUT"; echo "Episode: ${E:-none}"
       - if: steps.pick.outputs.ep != ''
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy
