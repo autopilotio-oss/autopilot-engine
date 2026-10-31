@@ -11,7 +11,7 @@ import datetime as dt, json, os, sys, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from events import Store, ROOT, now  # noqa: E402
 
-PAGES = [("home", "https://autopilotoi.app/", "gumroad.com/l/"), ("free", "https://autopilotoi.app/free/", "/g/subs/"),
+PAGES = [("home", "https://autopilotoi.app/", "href=\"g/subs/\""), ("free", "https://autopilotoi.app/free/", "/g/subs/"),
          ("store", "https://autopilotoi.app/store/", "gumroad.com/l/"), ("workspace", "https://autopilotoi.app/workspace/", "gumroad.com/l/workspace"),
          ("guide_subs", "https://autopilotoi.app/g/subs/", "gumroad.com/l/subs-agent"), ("brain", "https://autopilotoi.app/brain/", "kit.com")]
 HDIR = os.path.join(ROOT, "state", "health")
