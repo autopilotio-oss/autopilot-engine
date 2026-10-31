@@ -6,5 +6,15 @@
  [
   "user",
   "ok"
+ ],
+ [
+  "fail",
+  "tiktok-agents",
+  "KeyError('product')"
+ ],
+ [
+  "fail",
+  "video-agent",
+  "KeyError('product')"
  ]
 ]
