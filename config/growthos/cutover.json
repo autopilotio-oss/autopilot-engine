@@ -1,14 +1,7 @@
 {
- "status": "PENDING OWNER AUTHORIZATION",
+ "status": "EXECUTED 2026-10-31 on owner instruction (see growth-os/operations/decision-log.md)",
  "policy": "NO PROOF, NO POST (Viral Validation V2) is priority 1. These workers can currently put content or email out without the gate.",
- "ungated_publishers": [
-  {"task": "AUTOPILOT.OI Instagram + Threads loader (Metricool)", "id": "trig_01HqqymQ1qoM33TdFynzKQC1", "effect": "schedules queue items + cross posts to TikTok/YouTube/Facebook"},
-  {"task": "AUTOPILOT.OI morning trend scout", "id": "trig_01RjuAqCLMe4Mbk5qD6tewo7", "effect": "schedules Threads posts and stories"},
-  {"task": "AUTOPILOT.OI daily content upgrade", "id": "trig_01SGuLjRjNMGQWubzgYk9fN4", "effect": "writes posts into queue/ that the loader publishes"},
-  {"task": "AUTOPILOT.OI Day series writer", "id": "trig_01A5KWTmCkjmGW1xBMvXqUvi", "effect": "renders and schedules a daily reel"},
-  {"task": "AUTOPILOT.OI voiced reel maker (ElevenLabs)", "id": "trig_017Cnrk8RUypiA3kWpgMNhk7", "effect": "renders and schedules reels Mon/Thu"},
-  {"task": "AUTOPILOT.OI weekly email newsletter", "id": "trig_0121PAuTLGcrctYGfqmtXrKC", "effect": "schedules a Kit broadcast to all subscribers"}
- ],
+ "ungated_publishers": [],
  "plan": [
   "Snapshot every prompt above to growth-os/rollback/ (exact text) before changing anything.",
   "Research and drafting workers keep running but write drafts only (viral/concepts, queue/drafts).",

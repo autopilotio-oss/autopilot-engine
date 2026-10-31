@@ -1,0 +1,95 @@
+{
+ "note": "Expected heartbeat per worker. A worker is late when its last heartbeat is older than max_gap_hours (or none since 'since'). GitHub workflows are checked through their output freshness in health.py.",
+ "workers": {
+  "daily_pulse": {
+   "task": "trig_01BS2kUkKkcYGCqHPR8tnCUW",
+   "cadence": "daily 08:13 ART",
+   "max_gap_hours": 30,
+   "severity": "SEV-2",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "viral_lab": {
+   "task": "trig_01SGuLjRjNMGQWubzgYk9fN4",
+   "cadence": "daily 03:47 ART",
+   "max_gap_hours": 30,
+   "severity": "SEV-3",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "weekly_sprint": {
+   "task": "(created at cutover)",
+   "cadence": "Sunday",
+   "max_gap_hours": 192,
+   "severity": "SEV-2",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "monthly_review": {
+   "task": "(created at cutover)",
+   "cadence": "1st of month",
+   "max_gap_hours": 840,
+   "severity": "SEV-3",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "kit_sync": {
+   "task": "trig_01JueAhYdT9qTGfjVDuCL8gm",
+   "cadence": "every 3h",
+   "max_gap_hours": 8,
+   "severity": "SEV-2",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "trend_scout": {
+   "task": "trig_01RjuAqCLMe4Mbk5qD6tewo7",
+   "cadence": "daily",
+   "max_gap_hours": 30,
+   "severity": "SEV-3",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "publisher": {
+   "task": "trig_01HqqymQ1qoM33TdFynzKQC1",
+   "cadence": "daily 09:23 ART",
+   "max_gap_hours": 30,
+   "severity": "SEV-2",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "day_series": {
+   "task": "trig_01A5KWTmCkjmGW1xBMvXqUvi",
+   "cadence": "daily",
+   "max_gap_hours": 30,
+   "severity": "SEV-3",
+   "since": "2026-10-31T18:43:09+00:00",
+   "enabled": false,
+   "why_disabled": "cannot publish under NO PROOF, NO POST; renders/drafts without a path to approval waste money. Re-enable from growth-os/rollback."
+  },
+  "reel_maker": {
+   "task": "trig_017Cnrk8RUypiA3kWpgMNhk7",
+   "cadence": "Mon, Thu",
+   "max_gap_hours": 100,
+   "severity": "SEV-3",
+   "since": "2026-10-31T18:43:09+00:00",
+   "enabled": false,
+   "why_disabled": "cannot publish under NO PROOF, NO POST; renders/drafts without a path to approval waste money. Re-enable from growth-os/rollback."
+  },
+  "newsletter": {
+   "task": "trig_0121PAuTLGcrctYGfqmtXrKC",
+   "cadence": "Sunday",
+   "max_gap_hours": 192,
+   "severity": "SEV-3",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "tiktok_intel": {
+   "task": "trig_01Wq8cECTayFZUz1Xrfz5HiH",
+   "cadence": "Wednesday",
+   "max_gap_hours": 192,
+   "severity": "SEV-4",
+   "since": "2026-10-31T18:43:09+00:00"
+  },
+  "agent_factory": {
+   "task": "trig_015tEKz5vpiqz7PAtDmfV1rn",
+   "cadence": "daily",
+   "max_gap_hours": 30,
+   "severity": "SEV-4",
+   "since": "2026-10-31T18:43:09+00:00",
+   "enabled": false,
+   "why_disabled": "cannot publish under NO PROOF, NO POST; renders/drafts without a path to approval waste money. Re-enable from growth-os/rollback."
+  }
+ }
+}

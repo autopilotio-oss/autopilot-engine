@@ -1,0 +1,3 @@
+experiment_id,created,hypothesis,segment,control_hash,variant_hash,primary_metric,guardrails,min_sample,start,end,approval_id,status,decision,evidence
+subs_hook_001,2026-10-31,"Annual cost reveal hook beats plain tip hook for Subscription posts",instagram+tiktok,,,"guide visits per 1000 views","complaints, unsubscribes",see experiments/experiments.jsonl,,,,draft,,experiments/experiments.jsonl
+deposit_cta_001,2026-10-31,"Link in bio CTA vs comment keyword for Deposit",instagram,,,"guide visits per 1000 views","none",see experiments/experiments.jsonl,,,,draft,,experiments/experiments.jsonl

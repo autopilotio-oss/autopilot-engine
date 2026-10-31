@@ -164,7 +164,16 @@ if __name__ == "__main__":
     st = Store(); res = check_pages() + check_files()
     ps = os.path.join(ROOT, "state", "products.json")
     res += check_fulfillment(st, json.load(open(ps)) if os.path.exists(ps) else {}) + check_integrity(st) + check_jobs(Queue())
+    import heartbeat
+    res += heartbeat.check()
+    if os.environ.get("SIMULATE_FAILURE"):
+        res.append({"check": "simulated_failure", "ok": False, "severity": "SEV-2", "detail": "drill: " + os.environ["SIMULATE_FAILURE"]})
     alerts = record(st, res)
+    if os.environ.get("GITHUB_TOKEN"):
+        try:
+            print("github issues opened/closed:", heartbeat.push_alerts(os.path.join(HDIR, "alerts.jsonl"), st, os.environ.get("ALERT_ASSIGNEE", "autopilotio-oss")))
+        except Exception as e:
+            print("alert push failed:", str(e)[:150])
     os.makedirs(HDIR, exist_ok=True)
     json.dump({"at": now(), "results": res, "failing": [r["check"] for r in res if not r["ok"]], "new_alerts": len(alerts)},
               open(os.path.join(HDIR, "latest.json"), "w"), indent=1)

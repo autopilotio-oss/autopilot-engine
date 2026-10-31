@@ -401,11 +401,17 @@ def check_queue(root=None, qdir=None):
     (or later) with an unchanged approved version. Returns a list of problems."""
     probs = []; start = POLICY["enforce_from"]
     qdir = qdir or os.path.join(ROOT, "queue")
+    legacy = set()
+    for f in ("posted.json", "posted_ig.json"):  # scheduled in Metricool before the cutover (2026-10-31)
+        try:
+            legacy |= {k for k, v in json.load(open(os.path.join(ROOT, "state", f))).items() if str(v.get("at", "")) < "2026-10-31T19"}
+        except Exception:
+            pass
     for f in sorted(os.listdir(qdir)) if os.path.isdir(qdir) else []:
         if not f.endswith(".json"):
             continue
         for p in json.load(open(os.path.join(qdir, f))):
-            if str(p.get("at", ""))[:10] < start or p.get("format") in POLICY["exempt_formats"]:
+            if str(p.get("at", ""))[:10] < start or p.get("format") in POLICY["exempt_formats"] or p.get("id") in legacy:
                 continue
             cid = p.get("content_id")
             if not cid:

@@ -1,0 +1,220 @@
+[
+ {
+  "id": "auto1030-01",
+  "at": "2026-11-04T12:30:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/late-night-dm.mp4"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "11:48 PM. A lead asks if you're free Saturday.\n\nYou see it at 8 AM. They already booked someone else.\n\nAn agent can draft the reply the minute the message lands, so answering takes one tap.\n\nStart free: https://autopilotoi.app/brain/",
+  "_held": {
+   "from": "2026-10-30-auto.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "auto1030-02",
+  "at": "2026-11-05T09:00:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-reviews.jpg"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "Most happy customers never leave a review. Usually nobody asked them.\n\nThe ask works best the day after the job, while they still remember you. An agent can draft one for every finished job.\n\nStart free: https://autopilotoi.app/brain/",
+  "_held": {
+   "from": "2026-10-30-auto.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "th-money-debt",
+  "at": "2026-11-04T10:30:00-05:00",
+  "kind": "video",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/reels/money-debt.mp4"
+  ],
+  "ig": false,
+  "topic": "AI",
+  "text": "Most people never call to ask for a lower rate. Claude writes the script, builds your payoff plan, and a Debt Agent tells you what to pay every payday.\n\nFree guide: https://autopilotoi.app/g/debt/",
+  "_held": {
+   "from": "2026-10-30-money.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "v2-06",
+  "at": "2026-11-06T12:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-slow.jpg"
+  ],
+  "topic": "Small Business",
+  "text": "How long does a new lead wait for your reply?\n\nIn most service businesses the first one to answer gets the job, not the best one.\n\nStart free: https://autopilotoi.app/brain/",
+  "ig": false,
+  "_held": {
+   "from": "2026-10-30-v2.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "v2-07",
+  "at": "2026-11-07T09:00:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-hire.jpg"
+  ],
+  "topic": "AI Tools",
+  "text": "Every AI agent needs four things: a job, your business details, access to the right apps, and a schedule.\n\nMost setups skip the second one. That's why the replies sound generic.\n\nStart free: https://autopilotoi.app/brain/",
+  "ig": false,
+  "_held": {
+   "from": "2026-10-30-v2.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "v2-08",
+  "at": "2026-11-06T09:00:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-steps.jpg"
+  ],
+  "topic": "AI Tools",
+  "text": "You don't need a developer to set up AI agents.\n\nThree steps, about an hour. You answer questions about your business and Claude handles the technical part.\n\nStart free: https://autopilotoi.app/brain/",
+  "ig": false,
+  "_held": {
+   "from": "2026-10-30-v2.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "v2-10",
+  "at": "2026-11-07T12:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-quotes.jpg"
+  ],
+  "topic": "Small Business",
+  "text": "Check your sent folder for quotes that never got a reply.\n\nA short follow up three days later brings a lot of them back. Most people never send it.\n\nAn agent can draft every one. Start free: https://autopilotoi.app/brain/",
+  "ig": false,
+  "_held": {
+   "from": "2026-10-30-v2.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "v2-11",
+  "at": "2026-11-04T09:00:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-honest2.jpg"
+  ],
+  "topic": "AI Tools",
+  "text": "What AI agents actually do: draft, sort, remind, summarize.\n\nWhat they don't do: run your business or make decisions for you.\n\nWhich of those four would save you the most time?",
+  "ig": false,
+  "_held": {
+   "from": "2026-10-30-v2.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "x-c03",
+  "at": "2026-11-01T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "AI for beginners. Lesson 1: how to use Claude.\n\n10 steps. No tech terms. 🧵",
+   "1. Go to claude.ai or download the app.\n\nSign up free with your email.",
+   "2. Write like you're texting a capable assistant.\n\nNo special wording needed. Say what you need.",
+   "3. Tell it who you are.\n\n\"I run a cleaning business in Miami.\"\n\nOne line of context changes every answer.",
+   "4. Paste things in.\n\nEmails, reviews, your menu, a photo of a receipt. It can read them.",
+   "5. Ask for changes.\n\n\"Shorter.\" \"Friendlier.\" \"More like how I talk.\" It rewrites in seconds.",
+   "6. Have it ask questions first.\n\n\"Ask me 3 questions before you answer.\"",
+   "7. Save your details once.\n\nPut them in a Project so every chat already knows them.",
+   "8. Check before you send.\n\nIt's fast, not perfect. Read every word.",
+   "That's lesson 1.\n\nBookmark this so you can follow along. Lesson 2 tomorrow: how to write a prompt that works."
+  ],
+  "_held": {
+   "from": "2026-10-30-x-threads.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "x-l2",
+  "at": "2026-11-02T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 2: how to write a prompt that actually works.\n\nFour parts. Use them every time. 🧵",
+   "1. Say who you are.\n\n\"I run a small landscaping business.\"\n\nContext changes everything that comes after.",
+   "2. Say exactly what you want.\n\nNot \"write something\". Name the thing.\n\n\"Write a text to a customer whose job is delayed by rain.\"",
+   "3. Add the details only you know.\n\n\"New date is Thursday. No extra charge. Keep it friendly.\"",
+   "4. Say how it should look.\n\n\"Under 50 words. No emojis.\"",
+   "Put together:\n\n\"I run a small landscaping business. Write a text to a customer whose job is delayed by rain. New date is Thursday, no extra charge. Friendly, under 50 words, no emojis.\"",
+   "That's lesson 2.\n\nBookmark it and try it on your next real message. Lesson 3: five things to try with AI today."
+  ],
+  "_held": {
+   "from": "2026-10-30-x-threads.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "x-l3",
+  "at": "2026-11-03T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 3: five things to try with AI today.\n\nEach one takes under a minute. 🧵",
+   "1. Explain a confusing email.\n\n\"Explain this in 3 sentences. What do I need to do?\"",
+   "2. Answer a hard message.\n\n\"Help me reply to this. Polite, short, firm.\"",
+   "3. Read a photo.\n\nSnap a receipt, a whiteboard or a handwritten note.\n\n\"Type this up as a list.\"",
+   "4. Plan your day.\n\n\"Here's my to do list. Order it by what matters most.\"",
+   "5. Get a second opinion.\n\n\"Here's my plan. What could go wrong?\"",
+   "That's lesson 3.\n\nPick one and do it today. Lesson 4: how to make AI sound like you."
+  ],
+  "_held": {
+   "from": "2026-10-30-x-threads.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "x-l4",
+  "at": "2026-11-04T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 4: how to make AI sound like you.\n\nSo nobody can tell. 🧵",
+   "1. Show, don't describe.\n\nPaste 2 or 3 messages you actually wrote.\n\n\"Write like this.\"",
+   "2. Ban the AI words.\n\n\"Don't use: delve, elevate, seamless, I hope this finds you well.\"",
+   "3. Set the length.\n\nAI rambles by default. Give it a limit.\n\n\"Two sentences max.\"",
+   "4. Ask it to rewrite casually.\n\n\"Make this sound like a text, not an email.\"",
+   "5. Save it once.\n\nPut your examples in a Claude Project so every chat starts in your voice.",
+   "That's lesson 4.\n\nBookmark this. Lesson 5: how to check AI's work before you trust it."
+  ],
+  "_held": {
+   "from": "2026-10-30-x-threads.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ },
+ {
+  "id": "x-l5",
+  "at": "2026-11-05T11:30:00-05:00",
+  "kind": "x_thread",
+  "text": "",
+  "tweets": [
+   "Lesson 5: how to check AI's work.\n\nIt can sound sure and still be wrong. 🧵",
+   "1. Check names, numbers and dates.\n\nThat's where mistakes hide.",
+   "2. Ask how sure it is.\n\n\"How confident are you? What should I double check?\"",
+   "3. Ask where it got that.\n\n\"What's your source for this?\"\n\nIf it can't say, verify it yourself.",
+   "4. Turn on web search for anything recent.\n\nWithout it, AI only knows what it learned up to a cutoff date.",
+   "5. You send it, you own it.\n\nRead every word before it goes to a customer.",
+   "That's lesson 5.\n\nYou now know more than most people using AI. Bookmark this one."
+  ],
+  "_held": {
+   "from": "2026-10-30-x-threads.json",
+   "why": "NO PROOF, NO POST cutover 2026-10-31: no verified evidence, score or owner approval"
+  }
+ }
+]

@@ -34,7 +34,7 @@
   "you will get your money back",
   "proven viral"
  ],
- "enforce_from": "2026-11-04",
+ "enforce_from": "2026-11-01",
  "exempt_formats": [],
  "priority_agents": [
   "subscription",
@@ -44,6 +44,6 @@
   "deal"
  ],
  "note": "Thresholds are AUTOPILOT.OI internal screening defaults, not platform benchmarks. Raise them with our own history. Never invent a median.",
- "active": false,
- "active_note": "Enforcement on publishers starts when Seb authorizes the cutover (config/growthos/cutover.json). Until then check-queue reports what WOULD be held."
+ "active": true,
+ "active_note": "Active since 2026-10-31 on owner instruction (\"Nothing gets scheduled without verified evidence, an 85/100 quality score, and my approval\"; \"Keep publishing approval-based\"). Posts already in Metricool before the cutover are legacy and listed in state/posted*.json."
 }

@@ -4,11 +4,17 @@ name: Growth OS health checks
 # and revenue syncs when they are stale. Never changes public content.
 on:
   workflow_dispatch:
+    inputs:
+      simulate:
+        description: "Failure drill: text for a simulated SEV-2 check (empty = normal run)"
+        required: false
+        default: ""
   schedule:
     - cron: "11 * * * *"
 permissions:
   contents: write
   actions: write
+  issues: write
 concurrency: health
 jobs:
   probe:
@@ -16,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Probe
-        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", SIMULATE_FAILURE: "${{ github.event.inputs.simulate }}" }
         run: |
           python3 scripts/growthos/health.py run --recover
       - name: Save

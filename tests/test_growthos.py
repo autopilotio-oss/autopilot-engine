@@ -301,3 +301,39 @@ def test_P0_10_synthetic_funnel_journey_traceable(env):
 def test_event_store_rejects_pii(env):
     with pytest.raises(EventError):
         env["store"].append("support.opened", {"case_id": "c", "category": "access", "severity": "SEV-3", "from": "a@b.com"}, "support", "p1")
+
+
+def test_heartbeat_late_and_failed_workers(env):
+    import heartbeat, datetime as dt
+    hb = str(env["tmp"] / "hb.jsonl"); wp = str(env["tmp"] / "w.json")
+    json.dump({"workers": {"daily_pulse": {"max_gap_hours": 30, "severity": "SEV-2", "since": "2026-10-30T00:00:00+00:00"},
+                           "kit_sync": {"max_gap_hours": 8, "severity": "SEV-2", "since": "2026-10-31T00:00:00+00:00"},
+                           "viral_lab": {"max_gap_hours": 30, "severity": "SEV-3", "since": "2026-10-31T00:00:00+00:00"}}}, open(wp, "w"))
+    heartbeat.beat("kit_sync", "failed", "Kit 500", hb)
+    heartbeat.beat("viral_lab", "ok", "", hb)
+    at = dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=1)
+    r = {x["check"]: x for x in heartbeat.check(hb, wp, at)}
+    assert not r["worker:daily_pulse"]["ok"] and "overdue" in r["worker:daily_pulse"]["detail"]
+    assert not r["worker:kit_sync"]["ok"] and r["worker:viral_lab"]["ok"]
+
+
+def test_out_of_band_alert_opens_one_issue_and_closes_on_recovery(env, monkeypatch):
+    import heartbeat
+    monkeypatch.setattr(health, "HDIR", str(env["tmp"] / "health"))
+    st = env["store"]; calls = []
+    def gh(method, path, body=None):
+        calls.append((method, path)); return {"number": 7}
+    bad = [{"check": "simulated_failure", "ok": False, "severity": "SEV-2", "detail": "drill"}]
+    health.record(st, bad, day=TODAY)
+    ap = str(env["tmp"] / "health" / "alerts.jsonl")
+    assert heartbeat.push_alerts(ap, st, "autopilotio-oss", gh) == (1, 0)
+    assert heartbeat.push_alerts(ap, st, "autopilotio-oss", gh) == (0, 0)      # no duplicate issue
+    health.record(st, [{**bad[0], "ok": True}], day=TODAY)
+    assert heartbeat.push_alerts(ap, st, "autopilotio-oss", gh) == (0, 1)
+    assert [c for c in calls if c[0] == "POST" and c[1] == "/issues"] == [("POST", "/issues")]
+    def down(*a, **k):
+        raise RuntimeError("GitHub down")
+    health.record(st, [{"check": "x", "ok": False, "severity": "SEV-1", "detail": "d"}], day=TODAY)
+    heartbeat.push_alerts(ap, st, "o", down)
+    rows = [json.loads(l) for l in open(ap)]
+    assert [r for r in rows if r["check"] == "x"][0]["sent"] is False   # never claims it was sent

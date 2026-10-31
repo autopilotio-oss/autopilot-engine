@@ -16,27 +16,5 @@
   "topic": "AI Tools",
   "ig": false,
   "text": "Most people use Claude like a search bar. Here's how to turn it into an agent that knows your business and does one job for you every morning.\n\n5 steps, about 10 minutes. Every prompt you need is on the slides.\n\nStuck on step 2? The free tool fills it in for you: autopilotoi.app/brain"
- },
- {
-  "id": "auto1030-01",
-  "at": "2026-11-04T12:30:00-05:00",
-  "kind": "video",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/late-night-dm.mp4"
-  ],
-  "topic": "Small Business",
-  "ig": false,
-  "text": "11:48 PM. A lead asks if you're free Saturday.\n\nYou see it at 8 AM. They already booked someone else.\n\nAn agent can draft the reply the minute the message lands, so answering takes one tap.\n\nStart free: https://autopilotoi.app/brain/"
- },
- {
-  "id": "auto1030-02",
-  "at": "2026-11-05T09:00:00-05:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-reviews.jpg"
-  ],
-  "topic": "Small Business",
-  "ig": false,
-  "text": "Most happy customers never leave a review. Usually nobody asked them.\n\nThe ask works best the day after the job, while they still remember you. An agent can draft one for every finished job.\n\nStart free: https://autopilotoi.app/brain/"
  }
 ]

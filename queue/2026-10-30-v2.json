@@ -44,39 +44,6 @@
   "ig": false
  },
  {
-  "id": "v2-06",
-  "at": "2026-11-06T12:30:00-05:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-slow.jpg"
-  ],
-  "topic": "Small Business",
-  "text": "How long does a new lead wait for your reply?\n\nIn most service businesses the first one to answer gets the job, not the best one.\n\nStart free: https://autopilotoi.app/brain/",
-  "ig": false
- },
- {
-  "id": "v2-07",
-  "at": "2026-11-07T09:00:00-05:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-hire.jpg"
-  ],
-  "topic": "AI Tools",
-  "text": "Every AI agent needs four things: a job, your business details, access to the right apps, and a schedule.\n\nMost setups skip the second one. That's why the replies sound generic.\n\nStart free: https://autopilotoi.app/brain/",
-  "ig": false
- },
- {
-  "id": "v2-08",
-  "at": "2026-11-06T09:00:00-05:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-steps.jpg"
-  ],
-  "topic": "AI Tools",
-  "text": "You don't need a developer to set up AI agents.\n\nThree steps, about an hour. You answer questions about your business and Claude handles the technical part.\n\nStart free: https://autopilotoi.app/brain/",
-  "ig": false
- },
- {
   "id": "v2-09",
   "at": "2026-11-03T09:00:00-05:00",
   "kind": "video",
@@ -85,28 +52,6 @@
   ],
   "topic": "Small Business",
   "text": "Some owners do everything themselves and are done by Tuesday. Others hand off the admin and spend the week on the actual work.\n\nWhich week are you having?",
-  "ig": false
- },
- {
-  "id": "v2-10",
-  "at": "2026-11-07T12:30:00-05:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-quotes.jpg"
-  ],
-  "topic": "Small Business",
-  "text": "Check your sent folder for quotes that never got a reply.\n\nA short follow up three days later brings a lot of them back. Most people never send it.\n\nAn agent can draft every one. Start free: https://autopilotoi.app/brain/",
-  "ig": false
- },
- {
-  "id": "v2-11",
-  "at": "2026-11-04T09:00:00-05:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/cards/p-honest2.jpg"
-  ],
-  "topic": "AI Tools",
-  "text": "What AI agents actually do: draft, sort, remind, summarize.\n\nWhat they don't do: run your business or make decisions for you.\n\nWhich of those four would save you the most time?",
   "ig": false
  }
 ]

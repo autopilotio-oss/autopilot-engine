@@ -212,5 +212,5 @@ def test_queue_guard(reg, tmp_path):
     assert gate.check_queue(root, str(q))            # concept not queued yet
     run_to(root, CID, "QUALITY_PASSED"); gate.approve(CID, "Seb", "chat", "approve", root, TODAY); gate.advance(CID, "p", root, TODAY)
     assert gate.check_queue(root, str(q)) == []
-    json.dump([{"id": "old", "at": "2026-11-02T09:00:00-05:00"}], open(q / "a.json", "w"))
+    json.dump([{"id": "old", "at": "2026-10-30T09:00:00-05:00"}], open(q / "a.json", "w"))
     assert gate.check_queue(root, str(q)) == []       # before enforcement date
