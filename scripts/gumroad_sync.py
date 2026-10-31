@@ -39,7 +39,15 @@ def main():
     sp = os.path.join(ROOT, "state", "products.json"); st = json.load(open(sp)) if os.path.exists(sp) else {}
     for f in sorted(glob.glob(os.path.join(ROOT, "products", "*", "product.json"))):
         d = os.path.dirname(f); slug = os.path.basename(d); p = json.load(open(f))
-        if slug in st and st[slug].get("published"): continue
+        if slug in st and st[slug].get("published"):
+            if p.get("version", 1) != st[slug].get("version", 1) and st[slug].get("id") and not p.get("bundle_of"):
+                try:
+                    fu = upload(unseal(d), p["filename"])
+                    r = call("PUT", f"/products/{st[slug]['id']}", {"files[][url]": fu, "description": p["description_html"]})
+                    DBG.append(["update", slug, str(r)[:300]])
+                    if r.get("success"): st[slug]["version"] = p.get("version", 1); print(f"::notice title=Gumroad updated::{slug}")
+                except Exception as e: DBG.append(["update_fail", slug, repr(e)[:300]])
+            continue
         try:
             if p.get("bundle_of"):
                 fu = []
@@ -50,12 +58,13 @@ def main():
                 fu = upload(unseal(d), p["filename"])
             r = call("POST", "/products", {"name": p["name"], "price": p["price_cents"], "price_currency_type": "usd", "native_type": "digital",
                      "description": p["description_html"], "custom_permalink": p["permalink"], "tags[]": p.get("tags", []), "files[][url]": fu})
+            if "product" not in r: DBG.append(["create_no_product", slug, str(r)[:400]]); print(f"::warning title=Gumroad create::{slug} {str(r)[:300]}"); continue
             pid = r["product"]["id"]
             if p.get("cover_url"):
                 try: call("POST", f"/products/{pid}/covers", {"url": p["cover_url"]})
                 except Exception: pass
             call("PUT", f"/products/{pid}/enable", {})
-            st[slug] = {"id": pid, "url": r["product"].get("short_url") or f"https://autopilotoi.gumroad.com/l/{p['permalink']}", "published": True}
+            st[slug] = {"id": pid, "url": r["product"].get("short_url") or f"https://autopilotoi.gumroad.com/l/{p['permalink']}", "published": True, "version": p.get("version", 1)}
             print(f"::notice title=Gumroad live::{p['name']} {st[slug]['url']}")
         except Exception as e:
             DBG.append(["fail", slug, repr(e)[:300]]); print(f"::warning title=Gumroad failed::{slug} {str(e)[:300]}")

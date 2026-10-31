@@ -125,3 +125,7 @@ The free lead magnet at /brain/ is now called **The AI Front Desk** (was THE BUS
 - One agent per episode, Day 01, 02, 03... Brian voice at 1.2x with word timestamps, word by word captions with lime highlight boxes on key words, dark minimal app screens, a white "here's the smart part" beat, a PRO TIP, and a Follow + comment KEYWORD ending that teases tomorrow's day.
 - Write tools/series/eps/day-NN-<slug>.json (beats: say, em words, scene: title / card / prompt / list / big / white / fan / tip / cta) and push. The "Day series" workflow voices and renders it to docs/media/series/<ep>.mp4 + poster.
 - Keyword in the cta must exist in ManyChat and config/keywords.json. Facts in the script must match the free guide.
+
+## TikTok line (VIDEO, SHOP, SELL)
+- Every TikTok guide, kit, reel, Day episode and caption follows TIKTOK_SHOP_PLAYBOOK.md. Read it first. Never state a TikTok fee, limit or threshold as fact without "check Seller Center"; update the playbook first when the weekly TikTok Shop intel task finds a change.
+- Funnels: VIDEO, SHOP, SELL guides (tools/guides/guides.py, cat "TIKTOK × AI"), $10 agents, $24 TikTok bundle. Emails: Kit sequence 2951663 "TikTok guides · Agents".
