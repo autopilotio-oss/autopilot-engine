@@ -77,7 +77,7 @@ form button{border:0;border-radius:12px;background:#fff;color:#000;font:900 13px
 <script>
 const L={
  subs:{k:"Forgotten subscriptions",t:"Find and kill forgotten subscriptions",p:"Recurring charges hide in plain sight. One sweep of your statements usually finds something to cancel.",g:"../g/subs/",a:"https://autopilotoi.gumroad.com/l/subs-agent"},
- credit:{k:"Credit report errors",t:"Fix your credit report yourself",p:"Errors on credit reports are common and can raise what you pay for loans and cards. Checking is free.",g:"../g/credit/",a:"https://autopilotoi.gumroad.com/l/credit-agent"},
+ credit:{k:"Credit report errors",t:"Fix your credit report yourself",p:"Errors on credit reports are common and can raise what you pay for loans and cards. Checking is free.",g:"../g/credit/",a:null},
  debt:{k:"Interest you don't need to pay",t:"Lower your interest, get out of debt faster",p:"A balance you carry costs interest every month. A call script and a payoff plan can cut that.",g:"../g/debt/",a:"https://autopilotoi.gumroad.com/l/debt-agent"},
  bill:{k:"Medical bill errors",t:"Cut a medical bill before you pay it",p:"Medical bills often have errors, and many hospitals have financial assistance programs people never ask about.",g:"../g/bill/",a:"https://autopilotoi.gumroad.com/l/bill-agent"},
  refund:{k:"Money you're owed",t:"Get your money back",p:"Double charges, canceled flights and orders that never came. You may have a right to a refund you haven't claimed.",g:"../g/refund/",a:"https://autopilotoi.gumroad.com/l/refund-agent"},
@@ -98,15 +98,15 @@ function show(id){["intro","quiz","out"].forEach(s=>$(s).classList.toggle("hide"
 function draw(){const [q,o]=Q[i];$("qn").textContent="Question "+(i+1)+" of "+Q.length;$("pb").style.width=(i/Q.length*100)+"%";$("qt").textContent=q;
  $("opts").innerHTML="";o.forEach(([t,s])=>{const b=document.createElement("button");b.className="opt";b.textContent=t;b.onclick=()=>{for(const k in s)S[k]=(S[k]||0)+s[k];i++;i<Q.length?draw():result()};$("opts").appendChild(b)})}
 function result(){$("pb").style.width="100%";let top=Object.entries(S).sort((a,b)=>b[1]-a[1]).slice(0,2).map(x=>x[0]);if(!top.length)top=["subs","refund"];if(top.length<2)top.push(top[0]=="subs"?"refund":"subs");
- $("results").innerHTML=top.map((k,n)=>{const r=L[k];return `<div class="res"><div class="k">Leak ${n+1} · ${r.k}</div><h3>${r.t}</h3><p>${r.p}</p><div class="row"><a class="a1" href="${r.g}">Free guide →</a><a class="a2" href="${r.a}">Done for you · $10</a></div></div>`}).join("")+
+ $("results").innerHTML=top.map((k,n)=>{const r=L[k];return `<div class="res"><div class="k">Leak ${n+1} · ${r.k}</div><h3>${r.t}</h3><p>${r.p}</p><div class="row"><a class="a1" href="${r.g}">Free guide →</a>${r.a?`<a class="a2" href="${r.a}">Prompt kit · $10</a>`:``}</div></div>`}).join("")+
  (top[0]=="shop"
- ?`<div class="res" style="border-color:#2a2d27"><div class="k">The full TikTok kit</div><h3>All 3 TikTok Agents</h3><p>Video Agent, Shop Agent and Sell Agent: edit, post and sell with Claude. $30 separately.</p><div class="row"><a class="a1" href="https://autopilotoi.gumroad.com/l/tiktok-agents">Get all 3 · $24</a></div></div>`
- :`<div class="res" style="border-color:#2a2d27"><div class="k">Fix them all</div><h3>All 6 Money Agents</h3><p>Credit, Bill, Debt, Subscription, Refund and Raise Agent: set up once in Claude and keep them working. $60 separately.</p><div class="row"><a class="a1" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 6 · $39</a></div></div>`);
+ ?`<div class="res" style="border-color:#2a2d27"><div class="k">The full TikTok kit</div><h3>All 3 TikTok Agents</h3><p>Video, Shop and Sales Agent: Claude prompt kits that draft your scripts, listings and replies. $30 separately.</p><div class="row"><a class="a1" href="https://autopilotoi.gumroad.com/l/tiktok-agents">Get all 3 · $24</a></div></div>`
+ :`<div class="res" style="border-color:#2a2d27"><div class="k">Fix them all</div><h3>All 6 Money Agents</h3><p>Lower Bills, Bill, Debt, Subscription, Refund and Raise Agent: six Claude prompt kits you run when you need them. $60 separately.</p><div class="row"><a class="a1" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 6 · $39</a></div></div>`);
  window._top=top;show("out")}
 $("start").onclick=()=>{i=0;S={};draw();show("quiz")};$("again").onclick=()=>{i=0;S={};draw();show("quiz")};
 $("kf").addEventListener("submit",e=>{e.preventDefault();const em=$("ke").value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){$("km").textContent="Check that email and try again.";return}
  $("kb").disabled=true;const fd=new FormData();fd.append("email_address",em);fd.append("fields[source]",(window._top&&window._top[0])||"quiz");
  fetch("https://app.kit.com/forms/10118407/subscriptions",{method:"POST",body:fd,mode:"no-cors"}).then(()=>{$("kf").style.display="none";$("km").innerHTML="<b>You're in.</b> Check your inbox."}).catch(()=>{$("kb").disabled=false;$("km").textContent="Something went wrong. Try again."})});
 </script>
-</body>
+<script src="/assets/ap.js" defer></script></body>
 </html>

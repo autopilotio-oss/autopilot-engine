@@ -30,7 +30,7 @@ h2{font:900 italic 34px/1 'Saira Semi Condensed',Impact,sans-serif;text-transfor
 .dfy{margin-top:22px;background:var(--l);color:#0a0a0a;border-radius:22px;padding:24px}
 .dfy h3{font:900 italic 30px/1 'Saira Semi Condensed',Impact,sans-serif;text-transform:uppercase}
 .dfy p{margin:8px 0 14px;font-weight:500}
-.dfy form{display:flex;gap:10px;flex-wrap:wrap}.dfy input{flex:1 1 220px;font:500 16px Geist,system-ui,sans-serif;border:0;border-radius:12px;padding:14px;background:#0a0a0a;color:#fff;outline:none}
+.dfy form{display:flex;gap:10px;flex-wrap:wrap}.dfy input{flex:1 1 180px;min-width:0;max-width:100%;box-sizing:border-box;font:500 16px Geist,system-ui,sans-serif;border:0;border-radius:12px;padding:14px;background:#0a0a0a;color:#fff;outline:none}
 .dfy button{flex:1 1 150px;font:700 13px 'Geist Mono',ui-monospace,monospace;letter-spacing:1.5px;border:2px solid #0a0a0a;background:transparent;color:#0a0a0a;border-radius:12px;padding:12px;cursor:pointer}
 .src{margin:40px 0 10px;font-size:14px;color:var(--dim)}.src a{color:var(--mut)}
 .foot{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 50px;font-size:13px;color:var(--dim)}
@@ -57,12 +57,16 @@ def page(slug, g):
         out.append(s + "</div>")
     out.append('<h2>Watch out</h2><div class="warn"><ul>' + "".join(f"<li>{e(x)}</li>" for x in g["warn"]) + "</ul></div>")
     a = g["agent"]
-    out.append(f"""<h2>Make it automatic</h2><div class="ag"><span class="tag">YOUR {e(a['name']).upper()}</span>
+    if g.get("paid", True):
+        DFY = f"""<div class="dfy"><h3>Get the full {e(a['name'])}</h3><p>A Claude prompt kit (PDF): the full master prompt, 5 starter prompts, a tracker and the 10 minute setup. You run it in Claude yourself, on the free plan or paid. It drafts, you decide and send. {g.get('bundle_txt','$10, or all 6 money agents for $39.')}</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="https://autopilotoi.gumroad.com/l/{slug}-agent" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">GET IT · $10</a>{'<a href="https://autopilotoi.gumroad.com/l/'+g.get('bundle_link','all-money-agents')+'" style="flex:1 1 160px;text-align:center;border:2px solid #0a0a0a;color:#0a0a0a;text-decoration:none;font:700 14px &#39;Geist Mono&#39;,monospace;letter-spacing:1.5px;border-radius:12px;padding:13px">'+g.get('bundle_btn','ALL 6 · $39')+'</a>' if True else ''}</div><p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>
+"""
+    else:
+        DFY = """<div class="dfy"><h3>Want to find your other money leaks?</h3><p>This guide is free and stays free. Take the 60 second Money Leak Check to see where else you might be overpaying.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="/quiz/" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">MONEY LEAK CHECK</a></div><p style="margin:0 0 8px;font-size:15px">Or get one useful money tip a week:</p>"""
+    out.append(f"""<h2>Make it repeatable</h2><div class="ag"><span class="tag">YOUR {e(a['name']).upper()}</span>
 <p style="margin-top:12px;font-size:19px">{e(a['what'])}</p><ol>{''.join(f'<li>{e(x)}</li>' for x in a['setup'])}</ol>
 <div class="pr" id="ag">{e(a['instr'])}<button class="cp" data-c="ag">COPY</button></div>
-<div class="dfy"><h3>Get the full {e(a['name'])}</h3><p>The complete master prompt, 5 starter prompts, the tracker and the 10 minute setup. {g.get('bundle_txt','$10, or all 6 money agents for $39.')}</p>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="https://autopilotoi.gumroad.com/l/{slug}-agent" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">GET IT · $10</a>{'<a href="https://autopilotoi.gumroad.com/l/'+g.get('bundle_link','all-money-agents')+'" style="flex:1 1 160px;text-align:center;border:2px solid #0a0a0a;color:#0a0a0a;text-decoration:none;font:700 14px &#39;Geist Mono&#39;,monospace;letter-spacing:1.5px;border-radius:12px;padding:13px">'+g.get('bundle_btn','ALL 6 · $39')+'</a>' if True else ''}</div><p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>
-<form id="kf"><input type="email" id="ke" placeholder="your@email.com" required autocomplete="email"><button id="kb">SEND ME TIPS</button></form><p id="km" style="margin:10px 0 0;font-size:14px"></p></div></div>""")
+{DFY}<form id="kf"><input type="email" id="ke" placeholder="your@email.com" required autocomplete="email"><button id="kb">SEND ME TIPS</button></form><p id="km" style="margin:10px 0 0;font-size:14px"></p></div></div>""")
     out.append('<div class="src">Sources: ' + " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in g["sources"]) + "</div>")
     out.append("""<div class="foot">Educational only. Not financial, legal or medical advice. Check details with the company or a professional before you act. AUTOPILOT.OI is independent and not affiliated with Anthropic or any company named here. Claude is a product of Anthropic.</div></div>
 <div class="toast" id="t">COPIED ✓</div><script>
@@ -71,7 +75,7 @@ document.querySelectorAll('.cp').forEach(b=>b.onclick=()=>{const el=$(b.dataset.
 $('kf').addEventListener('submit',ev=>{ev.preventDefault();const em=$('ke').value.trim();if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(em)){$('km').textContent='Check that email and try again.';return}
 $('kb').disabled=true;const fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',(location.pathname.match(/\\/g\\/([^\\/]+)/)||[])[1]||'guide');
 fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(()=>{$('kf').style.display='none';$('km').innerHTML='<b>You’re on the list.</b> Check your inbox.'}).catch(()=>{$('kb').disabled=false;$('km').textContent='Something went wrong. Try again.'})});
-</script></body></html>""")
+</script><script src="/assets/ap.js" defer></script></body></html>""")
     d = os.path.join(ROOT, "docs", "g", slug); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w").write("\n".join(out))
 for k, g in G.items(): page(k, g); print("built", k)

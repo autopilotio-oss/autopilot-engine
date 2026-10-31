@@ -1,0 +1,16 @@
+{
+ "name": "AUTOPILOT.OI Lower Bills Agent",
+ "price_cents": 1000,
+ "permalink": "lower-agent",
+ "filename": "AUTOPILOT.OI Lower Bills Agent Setup.pdf",
+ "description_html": "<p><strong>Pay less for internet, phone and insurance.</strong></p><p>Reads your bills and policy pages, compares offers like for like (price after promos, fees, coverage), writes your call scripts and practices them with you, and drafts fee refund requests to your bank.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not call providers, switch plans, cancel coverage or guarantee a lower price on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your latest bills and insurance declarations pages.</p><p><em>Education only, not financial, legal or insurance advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/lower-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "personal finance",
+  "save money",
+  "bills"
+ ],
+ "version": 1
+}

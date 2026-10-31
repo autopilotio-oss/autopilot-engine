@@ -20,5 +20,5 @@ jobs:
       - name: Save
         run: |
           git config user.name "autopilot-bot"; git config user.email "bot@users.noreply.github.com"
-          git pull --rebase || true; git add state || true
+          git pull --rebase || true; git add state docs/live.json || true
           git diff --cached --quiet || git commit -m "gumroad products"; for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 7; done

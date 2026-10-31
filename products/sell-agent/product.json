@@ -3,7 +3,7 @@
  "price_cents": 1000,
  "permalink": "sell-agent",
  "filename": "AUTOPILOT.OI Sales Agent Setup.pdf",
- "description_html": "<p><strong>Turn TikTok attention into honest sales.</strong></p><p>Turn Claude into your TikTok Sales Agent in 10 minutes. Learns your product, writes videos that sell without feeling like ads, scripts your LIVEs, drafts replies to every comment and DM in your voice, and follows up after the sale.</p><p>Inside: the full master prompt, 5 starter prompts, a step by step setup and your tracker. Works with Claude's free or paid plan.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
+ "description_html": "<p><strong>Turn TikTok attention into honest sales.</strong></p><p>Learns your product from your notes, drafts videos that sell without feeling like ads, scripts your LIVEs, and drafts replies to comments and DMs in your voice for you to send.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not post, go LIVE or reply to anyone on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and notes on your product and a few examples of how you talk.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
  "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/sell-cover.png",
  "tags": [
   "ai",
@@ -12,5 +12,5 @@
   "tiktok shop",
   "ai agent"
  ],
- "version": 2
+ "version": 3
 }

@@ -1,0 +1,4 @@
+{
+ "live": ["all-money-agents", "bill-agent", "credit-agent", "debt-agent", "money-agents", "raise-agent", "refund-agent", "sell-agent", "shop-agent", "subs-agent", "ttdat"],
+ "checked": "seed 2026-10-31, replaced by the Gumroad sync on its next run"
+}

@@ -29,6 +29,25 @@ def upload(path, name):
     call("POST", "/files/complete", {"upload_id": pre["upload_id"], "key": pre["key"],
          "parts[][part_number]": [x["part_number"] for x in parts], "parts[][etag]": [x["etag"] for x in parts]})
     return pre["file_url"]
+def reconcile(st):
+    """Read what is actually on Gumroad: fill missing ids, record live state, and publish docs/live.json
+    (the list of buyable permalinks the site uses to hide buttons for products that are not live)."""
+    try: r = call_get("/products?" + urllib.parse.urlencode({"access_token": TOK}))
+    except Exception as e: DBG.append(["reconcile_fail", repr(e)[:200]]); return
+    live = []
+    for pr in r.get("products", []):
+        perm = pr.get("custom_permalink") or (pr.get("short_url") or "").rstrip("/").split("/")[-1]
+        if not perm: continue
+        if pr.get("published"): live.append(perm)
+        if perm in st:
+            if not st[perm].get("id"): st[perm]["id"] = pr.get("id"); DBG.append(["id_filled", perm])
+            st[perm]["live"] = bool(pr.get("published"))
+    for k, v in st.items():
+        if v.get("published") and k not in live: DBG.append(["not_live_on_gumroad", k])
+    json.dump({"live": sorted(live), "checked": __import__("datetime").datetime.utcnow().isoformat(timespec="seconds") + "Z"},
+              open(os.path.join(ROOT, "docs", "live.json"), "w"), indent=1)
+def call_get(path):
+    return json.loads(urllib.request.urlopen(API + path, timeout=60).read().decode())
 def main():
     if not TOK: print("No GUMROAD_TOKEN yet"); return
     try:
@@ -37,12 +56,26 @@ def main():
         print("::notice title=Gumroad user::connected")
     except urllib.error.HTTPError as e: m = e.read().decode()[:200]; DBG.append(["user", e.code, m]); print(f"::warning title=Gumroad user check {e.code}::" + m)
     sp = os.path.join(ROOT, "state", "products.json"); st = json.load(open(sp)) if os.path.exists(sp) else {}
+    reconcile(st)
     for f in sorted(glob.glob(os.path.join(ROOT, "products", "*", "product.json"))):
         d = os.path.dirname(f); slug = os.path.basename(d); p = json.load(open(f))
-        if slug in st and st[slug].get("published"):
-            if p.get("version", 1) != st[slug].get("version", 1) and st[slug].get("id") and not p.get("bundle_of"):
+        if p.get("retired"):
+            # Owner-approved retirement: unpublish on Gumroad, keep the record (reversible: set retired false + enable).
+            if slug in st and st[slug].get("published") and st[slug].get("id"):
                 try:
-                    fu = upload(unseal(d), p["filename"])
+                    call("PUT", f"/products/{st[slug]['id']}/disable", {}); st[slug]["published"] = False; st[slug]["retired"] = True
+                    print(f"::notice title=Gumroad retired::{slug}")
+                except Exception as e: DBG.append(["retire_fail", slug, repr(e)[:300]])
+            continue
+        if p.get("draft"):
+            continue  # not approved for release yet (agent factory QA gate)
+        if slug in st and st[slug].get("published"):
+            if p.get("version", 1) != st[slug].get("version", 1) and st[slug].get("id"):
+                try:
+                    if p.get("bundle_of"):
+                        fu = [upload(unseal(os.path.join(ROOT, "products", sub)), json.load(open(os.path.join(ROOT, "products", sub, "product.json")))["filename"]) for sub in p["bundle_of"]]
+                    else:
+                        fu = upload(unseal(d), p["filename"])
                     r = call("PUT", f"/products/{st[slug]['id']}", {"files[][url]": fu, "description": p["description_html"]})
                     DBG.append(["update", slug, str(r)[:300]])
                     if r.get("success"): st[slug]["version"] = p.get("version", 1); print(f"::notice title=Gumroad updated::{slug}")
@@ -68,6 +101,7 @@ def main():
             print(f"::notice title=Gumroad live::{p['name']} {st[slug]['url']}")
         except Exception as e:
             DBG.append(["fail", slug, repr(e)[:300]]); print(f"::warning title=Gumroad failed::{slug} {str(e)[:300]}")
+    reconcile(st)
     json.dump(st, open(sp, "w"), indent=1)
     json.dump(DBG, open(os.path.join(ROOT, "state", "gumroad_debug.json"), "w"), indent=1)
 try:
