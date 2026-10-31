@@ -1,0 +1,5 @@
+{
+ "note": "Keywords Seb has confirmed are in the ManyChat 'Auto-DM links from comments' list (Instagram). ManyChat has no API or connector we can use, so only Seb can add keywords. Instagram posts may say 'Comment <KEYWORD>' ONLY for keywords in this list; every other post uses 'Free guide: tap the link in our bio'.",
+ "confirmed": ["CREDIT", "BILL", "DEBT", "SUBS", "REFUND", "RAISE"],
+ "dm_link": "https://autopilotoi.app/free/"
+}

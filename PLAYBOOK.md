@@ -183,3 +183,6 @@ Score each 0 to 2. It needs 10 of 12 and no zeros:
 6. Measurable: one success number and a date to judge it (keep, fix or kill).
 Write the pitch as: what it is, who it's for, the evidence links, the score, the success number and date. Put it in config/approvals_queue.md as "AWAITING APPROVAL" and message Seb. Build only after he says yes.
 Rejected so far (don't bring back): the Money Leak Check quiz (Oct 31), the Lower Bills Agent (Oct 31).
+
+## Instagram CTA rule (Oct 31, Revenue Engine 2.0)
+ManyChat can't be changed from here (no API). An Instagram caption may say "Comment <KEYWORD>" only if the keyword is in config/manychat.json "confirmed". Every other post says "Free guide: tap the link in our bio" and the guide must be listed on the home page (autopilotoi.app) and /free/. New agents (agent factory) use link in bio by default.
