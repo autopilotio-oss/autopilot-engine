@@ -1,0 +1,95 @@
+{
+ "checked": "2026-10-31T17:44:17Z",
+ "products": [
+  {
+   "permalink": "all-money-agents",
+   "name": "AUTOPILOT.OI All 5 Money Agents",
+   "published": true,
+   "price_cents": 3900,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "bill-agent",
+   "name": "AUTOPILOT.OI Bill Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "credit-agent",
+   "name": "AUTOPILOT.OI Credit Agent",
+   "published": false,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "debt-agent",
+   "name": "AUTOPILOT.OI Debt Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "money-agents",
+   "name": "AUTOPILOT.OI Money Agents Bundle",
+   "published": false,
+   "price_cents": 2400,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "raise-agent",
+   "name": "AUTOPILOT.OI Raise Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "refund-agent",
+   "name": "AUTOPILOT.OI Refund Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "sell-agent",
+   "name": "AUTOPILOT.OI Sales Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "shop-agent",
+   "name": "AUTOPILOT.OI Shop Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "subs-agent",
+   "name": "AUTOPILOT.OI Subscription Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  }
+ ]
+}

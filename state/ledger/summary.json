@@ -1,0 +1,28 @@
+{
+ "generated": "2026-10-31T17:44:17Z",
+ "verified_orders_all_time": 0,
+ "last_1d": {
+  "orders": 0,
+  "by_currency": {}
+ },
+ "last_7d": {
+  "orders": 0,
+  "by_currency": {}
+ },
+ "last_30d": {
+  "orders": 0,
+  "by_currency": {}
+ },
+ "by_offer": {},
+ "by_source": {},
+ "attribution_coverage": null,
+ "refunds_all_time": 0,
+ "currencies": [],
+ "notes": "Gumroad is the source of truth. Net = gross - Gumroad fee - refunds. Taxes are not included. Currencies are never mixed.",
+ "sync": {
+  "ran": "2026-10-31T17:44:17Z",
+  "sales_api": "ok (1 page(s))",
+  "products_api": "ok (10 products)",
+  "new_events": 0
+ }
+}
