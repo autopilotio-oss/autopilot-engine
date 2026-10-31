@@ -24,8 +24,33 @@ def main():
               for o in cat["offers"] if o["status"] != "retired"]
     json.dump({"rows": offers}, open(f"{OUT}/offers.json", "w"), indent=1)
     social = json.load(open(sys.argv[1])) if len(sys.argv) > 1 else {}
-    dec = [{"n": i + 1, "decision": d} for i, d in enumerate((social.get("decisions") or [])[:3])]
-    json.dump({"rows": dec}, open(f"{OUT}/decisions.json", "w"), indent=1)
+    sys.path.insert(0, os.path.join(ROOT, "scripts", "growthos"))
+    import commander, costs, adapters
+    from events import Store
+    st = Store(); cmd = commander.run(st)
+    dec = [d if isinstance(d, str) else (d.get("decision") or d.get("title") or json.dumps(d)) for d in (social.get("decisions") or [])]
+    dec += [f"{p['title']}: {p['action']}" for p in cmd["top3"] if p["needs_owner"]]
+    seen = []
+    [seen.append(d) for d in dec if d not in seen]
+    json.dump({"rows": [{"n": i + 1, "decision": d} for i, d in enumerate(seen[:3])]}, open(f"{OUT}/decisions.json", "w"), indent=1)
+    # Growth OS operations: health checks, controls, integrations
+    hs = {}
+    try:
+        hs = json.load(open(os.path.join(ROOT, "state", "health", "status.json")))
+    except Exception:
+        pass
+    json.dump({"rows": [{"check": k, "status": "ok" if v["ok"] else "FAILING", "severity": v["severity"]} for k, v in sorted(hs.items())]},
+              open(f"{OUT}/ops_health.json", "w"), indent=1)
+    flags = json.load(open(os.path.join(ROOT, "config", "growthos", "flags.json")))
+    g = costs.guard(st); vp = json.load(open(os.path.join(ROOT, "viral", "policy.json")))
+    rows = [{"item": "Publishing", "value": "ON" if flags["outbound_publishing"] else "STOPPED", "note": "kill switch"},
+            {"item": "Messaging (email, DMs)", "value": "ON" if flags["messaging"] else "STOPPED", "note": "kill switch"},
+            {"item": "Paid services", "value": "ON" if flags["paid_services"] else "PAUSED", "note": "kill switch"},
+            {"item": "AI spend caps", "value": g["status"], "note": f"spent today ${g['spent_today_minor'] / 100:.2f} recorded"},
+            {"item": "NO PROOF, NO POST", "value": "ENFORCED" if vp.get("active") else "REPORT ONLY", "note": "publishers cut over only with your OK"},
+            {"item": "Bottleneck today", "value": cmd["bottleneck"], "note": "Growth Commander"}]
+    rows += [{"item": f"Integration: {k}", "value": v["status"], "note": v["how"][:90]} for k, v in adapters.matrix().items()]
+    json.dump({"rows": rows}, open(f"{OUT}/ops_controls.json", "w"), indent=1)
     print("dashboard files in", OUT, datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
 
 
