@@ -1,0 +1,95 @@
+{
+ "id": "listing-check",
+ "kind": "product",
+ "room": "gate",
+ "agent": "Shop Agent",
+ "lane": "make money",
+ "hook": [
+  "Your TikTok Shop listing",
+  "could get flagged"
+ ],
+ "hook_lines": [
+  "Your *TikTok Shop*",
+  "listing could",
+  "get *flagged*"
+ ],
+ "caption": {
+  "ig": "One bad claim can get a TikTok Shop listing flagged. Before you list, this agent checks the product and every claim against the rules you confirm on TikTok's policy page, and rewrites what's risky. Sample listing shown. Shop Agent at the link in bio.\n\n#tiktokshop #ecommerce #ai #claude #sidehustle",
+  "other": "One bad claim can get a TikTok Shop listing flagged. Before you list, this agent checks the product and every claim against the rules you confirm on TikTok's policy page, and rewrites what's risky. Sample listing shown. Shop Agent at the link in bio.\n\n#tiktokshop #ecommerce #ai #claude #sidehustle"
+ },
+ "stat": {
+  "count": 2,
+  "suffix": " FIXES",
+  "label": "before you hit publish",
+  "note": "sample listing"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Your TikTok Shop listing could get flagged, and one bad claim is all it takes. Paste it in before you publish.",
+   "screen": {
+    "type": "ask",
+    "text": "rules check my posture corrector listing"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It checks the product and every claim, and flags anything you can't prove.",
+   "screen": {
+    "type": "work",
+    "title": "Checking the rules",
+    "lines": [
+     "read the title and bullets",
+     "flag medical claims",
+     "flag promises you can't prove",
+     "rewrite what's risky"
+    ]
+   }
+  },
+  {
+   "chip": "verdict",
+   "say": "Two claims to fix before you list. It rewrites them for you. Sample listing shown.",
+   "screen": {
+    "type": "checks",
+    "title": "Rules check",
+    "rows": [
+     [
+      "\"Fixes back pain\"",
+      "MEDICAL",
+      0
+     ],
+     [
+      "\"Results in 1 day\"",
+      "CAN'T PROVE",
+      0
+     ],
+     [
+      "Sizes and materials",
+      "OK",
+      1
+     ],
+     [
+      "Photos match product",
+      "OK",
+      1
+     ]
+    ],
+    "verdict": "FIX FIRST  ·  2 REWRITES READY",
+    "ok": false
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the full Shop Agent at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Shop Agent",
+    "sub": "the full agent pack",
+    "cover": "shop",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}

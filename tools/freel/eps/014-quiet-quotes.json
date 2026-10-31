@@ -1,0 +1,97 @@
+{
+ "id": "quiet-quotes",
+ "kind": "product",
+ "room": "email",
+ "agent": "Follow Up Agent",
+ "lane": "ai employees",
+ "hook": [
+  "That quote you never followed up on",
+  "is money you left on the table"
+ ],
+ "hook_lines": [
+  "That quote you",
+  "never *followed up*",
+  "on is money",
+  "left on the *table*"
+ ],
+ "caption": {
+  "ig": "Quotes that go quiet are money left on the table. This agent finds every quote with no reply, drafts one friendly nudge in your voice, and waits for your OK before anything is sent. Sample business shown. Set it up with The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity",
+  "other": "Quotes that go quiet are money left on the table. This agent finds every quote with no reply, drafts one friendly nudge in your voice, and waits for your OK before anything is sent. Sample business shown. Set it up with The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
+ },
+ "stat": {
+  "count": 3,
+  "suffix": " NUDGES",
+  "label": "drafted and waiting for your OK",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "wake",
+   "say": "That quote you never followed up on is money left on the table. This agent checks every morning.",
+   "screen": {
+    "type": "ask",
+    "text": "find quotes with no reply after 3 days",
+    "by": "schedule"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It finds every quote that went quiet and drafts one friendly nudge in your voice.",
+   "screen": {
+    "type": "work",
+    "title": "Checking your quotes",
+    "lines": [
+     "read sent quotes from your inbox",
+     "no reply after 3 days",
+     "skip anyone already nudged",
+     "draft one friendly nudge each"
+    ]
+   }
+  },
+  {
+   "chip": "drafts",
+   "say": "Three nudges, ready for your OK. Nothing sends without you. Sample business shown.",
+   "screen": {
+    "type": "table",
+    "title": "Quotes to nudge",
+    "sample": true,
+    "cols": [
+     "Customer",
+     "Quote",
+     "Quiet for"
+    ],
+    "rows": [
+     [
+      "Maria R.",
+      "$1,850",
+      "4 days"
+     ],
+     [
+      "Dan's Cafe",
+      "$640",
+      "6 days"
+     ],
+     [
+      "J. Patel",
+      "$2,300",
+      "5 days"
+     ]
+    ],
+    "foot": "3 nudges drafted  ·  you tap OK to send"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Set this up with The Workspace. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "The Workspace",
+    "sub": "7 agents for your business",
+    "cover": "workspace",
+    "price": "$49",
+    "url": "autopilotoi.app/workspace"
+   }
+  }
+ ]
+}

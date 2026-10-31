@@ -159,7 +159,7 @@ window.reelDom=function(t){const D=window.DATA;const B=D.beats;
   document.getElementById('wag').textContent=D.agent;document.getElementById('wsub').textContent='CLAUDE AGENT · AUTOPILOT.OI';
   document.getElementById('rail').innerHTML=B.map(b=>`<div><s><i></i></s><span>${esc(b.chip||b.screen.type)}</span></div>`).join('');RL=[...document.querySelectorAll('#rail div')];
   spill=document.getElementById('spill').getContext('2d');grainInit();
-  if(D.stat){const st=document.getElementById('stat');st.querySelector('.s').textContent=D.stat.label;st.querySelector('.n').textContent=D.stat.note||''}}
+  if(D.stat){const st=document.getElementById('stat');st.querySelector('.s').textContent=D.stat.label;st.querySelector('.n').textContent=D.stat.note||'';const v=st.querySelector('.v');v.textContent=D.stat.count!=null?(D.stat.prefix||'')+D.stat.count.toLocaleString('en-US',{minimumFractionDigits:D.stat.dec||0,maximumFractionDigits:D.stat.dec||0})+(D.stat.suffix||''):D.stat.big;st.style.opacity=1;const w=v.getBoundingClientRect().width;v.style.fontSize=Math.min(200,200*800/Math.max(1,w))+'px';st.style.opacity=0}}
  document.getElementById('rclk').textContent=hhmmss(3*3600+47*60+t);
  try{spill.filter='blur(6px) saturate(1.4)';spill.drawImage(document.getElementById('gl'),0,600,1080,410,0,0,270,228)}catch(e){}
  gx.putImageData(gimg[Math.floor(t*24)%4],0,0);
@@ -179,7 +179,7 @@ window.reelDom=function(t){const D=window.DATA;const B=D.beats;
  document.getElementById('hdim').style.opacity=.66-.46*sh;
  const w=document.getElementById('win');const wa=cl((t-2.35)/.5);w.style.opacity=wa;w.style.transform=`translateY(${(1-eout(wa))*60}px) scale(${.96+.04*eout(wa)})`;
  const st=document.getElementById('stat'),fl=document.getElementById('flash');let so=0,fo=0;
- if(D.stat){const rb=B.findIndex(x=>x.screen.type==='table'||x.screen.type==='checks');if(rb>=0){const r=B[rb];const rs=rb?r.s-.15:0,re=rb+1<B.length?B[rb+1].s-.15:D.dur;const t0=rs+(re-rs)*.72,t1=re-.1;
+ if(D.stat){const rb=B.findIndex((x,i)=>i>0&&['table','checks','doc','dm'].includes(x.screen.type)&&x.screen.type!=='cta'&&i===B.length-2);if(rb>=0){const r=B[rb];const rs=rb?r.s-.15:0,re=rb+1<B.length?B[rb+1].s-.15:D.dur;const t0=rs+(re-rs)*.72,t1=re-.1;
    if(t>=t0&&t<t1){const a=cl((t-t0)/.18),o=cl((t1-t)/.2);so=Math.min(a,o);const c=cl((t-t0)/.7);
     const val=D.stat.count!=null?(D.stat.prefix||'')+(D.stat.count*(c>.97?1:eout(c))).toLocaleString('en-US',{minimumFractionDigits:D.stat.dec||0,maximumFractionDigits:D.stat.dec||0})+(D.stat.suffix||''):D.stat.big;
     const v=st.querySelector('.v');v.textContent=val;v.style.transform=`scale(${1.25-.25*back(a)})`;fo=Math.max(0,.3-(t-t0)*2)}}}

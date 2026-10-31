@@ -1,0 +1,92 @@
+{
+ "id": "dm-sales",
+ "kind": "product",
+ "room": "dm",
+ "agent": "Sales Agent",
+ "lane": "make money",
+ "hook": [
+  "You're losing sales in your DMs",
+  "AI drafts every reply"
+ ],
+ "hook_lines": [
+  "You're losing",
+  "*sales* in",
+  "your *DMs*"
+ ],
+ "caption": {
+  "ig": "Buyers ask the same questions in your DMs and comments, and slow answers lose sales. This agent learns your product and drafts a reply to every question in your voice, for you to send. Sample shop shown. Sales Agent at the link in bio.\n\n#tiktokshop #smallbusiness #ai #claude #sales",
+  "other": "Buyers ask the same questions in your DMs and comments, and slow answers lose sales. This agent learns your product and drafts a reply to every question in your voice, for you to send. Sample shop shown. Sales Agent at the link in bio.\n\n#tiktokshop #smallbusiness #ai #claude #sales"
+ },
+ "stat": {
+  "count": 12,
+  "suffix": " REPLIES",
+  "label": "drafted in your voice",
+  "note": "sample shop · you send"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "You're losing sales in your DMs, because slow answers kill the sale. Paste the questions buyers send you.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "dms_and_comments.txt"
+    ],
+    "text": "draft replies to all of these in my voice"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It knows your product, your prices and your shipping, and drafts a reply to every single one.",
+   "screen": {
+    "type": "work",
+    "title": "Drafting replies",
+    "lines": [
+     "read 12 questions",
+     "match each to your product facts",
+     "answer price, size and shipping",
+     "write it in your voice"
+    ]
+   }
+  },
+  {
+   "chip": "replies",
+   "say": "Every buyer gets a fast, clear answer. You just hit send. Sample shop shown.",
+   "screen": {
+    "type": "dm",
+    "title": "Replies ready",
+    "msgs": [
+     [
+      "them",
+      "does it fit a 15 inch laptop?"
+     ],
+     [
+      "us",
+      "Yes! It fits up to 16 inch laptops, with a padded sleeve. Ships in 2 days."
+     ],
+     [
+      "them",
+      "how long is shipping to Texas?"
+     ],
+     [
+      "us",
+      "Usually 3 to 5 days to Texas, and you'll get tracking as soon as it ships."
+     ]
+    ]
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the Sales Agent at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Sales Agent",
+    "sub": "the full agent",
+    "cover": "sell",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}

@@ -64,7 +64,7 @@ def events():
             n = len(sc["msgs"])
             for i in range(n): ev.append(["msg", T(i * .7 / n), i])
         elif k == "cta": ev.append(["cta", T(0) + .05, 0])
-        if k in ("table", "checks") and data.get("stat"): ev.append(["stat", T(.72), 0])
+        if k in ("table", "checks", "doc", "dm") and bi == len(beats) - 2 and data.get("stat"): ev.append(["stat", T(.72), 0])
     return [e for e in ev if 0 <= e[1] < dur]
 json.dump({"dur": dur, "cuts": [b["s"] for b in beats[1:]], "beats": beats, "events": events()}, open(f"{D}/{ep}.meta.json", "w"))
 print("built", ep, dur, "s")

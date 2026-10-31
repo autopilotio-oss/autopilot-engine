@@ -1,0 +1,83 @@
+{
+ "id": "review-agent",
+ "kind": "product",
+ "room": "support",
+ "agent": "Review Agent",
+ "lane": "ai employees",
+ "hook": [
+  "More Google reviews",
+  "without the awkward ask"
+ ],
+ "hook_lines": [
+  "More *Google*",
+  "*reviews* without",
+  "the awkward",
+  "*ask*"
+ ],
+ "caption": {
+  "ig": "Every evening this agent writes a short thank you to each customer you finished that day, with your review link, ready for you to send. No awkward asks, no fake reviews. Sample business shown. Part of The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity",
+  "other": "Every evening this agent writes a short thank you to each customer you finished that day, with your review link, ready for you to send. No awkward asks, no fake reviews. Sample business shown. Part of The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
+ },
+ "stat": {
+  "count": 4,
+  "suffix": " READY",
+  "label": "thank yous with your review link",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "wake",
+   "say": "Want more Google reviews without the awkward ask? Every evening this agent looks at who you finished today.",
+   "screen": {
+    "type": "ask",
+    "text": "thank today's customers and ask for a review",
+    "by": "schedule"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It writes each one a short, personal thank you with your review link.",
+   "screen": {
+    "type": "work",
+    "title": "Today's customers",
+    "lines": [
+     "find jobs finished today",
+     "skip anyone with a complaint",
+     "write a personal thank you",
+     "add your review link"
+    ]
+   }
+  },
+  {
+   "chip": "ready",
+   "say": "Four messages ready for you to send. Real reviews, no fake ones. Sample business shown.",
+   "screen": {
+    "type": "dm",
+    "title": "Ready to send",
+    "msgs": [
+     [
+      "us",
+      "Hi Sam, thanks for having us out today! If you have a minute, a quick Google review would mean a lot: [your link]"
+     ],
+     [
+      "us",
+      "Hi Priya, loved working on your car. If you're happy with it, would you leave us a review? [your link]"
+     ]
+    ]
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "It's one of seven agents in The Workspace. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "The Workspace",
+    "sub": "7 agents for your business",
+    "cover": "workspace",
+    "price": "$49",
+    "url": "autopilotoi.app/workspace"
+   }
+  }
+ ]
+}

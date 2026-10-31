@@ -1,0 +1,92 @@
+{
+ "id": "first-2-seconds",
+ "kind": "product",
+ "room": "studio",
+ "agent": "Video Agent",
+ "lane": "content machine",
+ "hook": [
+  "Your first 2 seconds",
+  "are killing your views"
+ ],
+ "hook_lines": [
+  "Your first",
+  "*2 seconds* are",
+  "*killing* your",
+  "views"
+ ],
+ "caption": {
+  "ig": "Most people scroll in the first 2 seconds. Paste your script and this agent writes 10 new opening lines in different styles and ranks the best 3 for your audience. Sample shown. Video Agent at the link in bio.\n\n#contentcreator #tiktoktips #ai #claude #creator",
+  "other": "Most people scroll in the first 2 seconds. Paste your script and this agent writes 10 new opening lines in different styles and ranks the best 3 for your audience. Sample shown. Video Agent at the link in bio.\n\n#contentcreator #tiktoktips #ai #claude #creator"
+ },
+ "stat": {
+  "count": 10,
+  "suffix": " HOOKS",
+  "label": "top 3 ranked for your audience",
+  "note": "sample script"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Your first two seconds are killing your views, because most people scroll right there. Paste your script into this agent.",
+   "screen": {
+    "type": "ask",
+    "text": "hooks for my phone bill video"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It writes ten new first lines in different styles: a question, a mistake, a number, the result first.",
+   "screen": {
+    "type": "work",
+    "title": "Writing hooks",
+    "lines": [
+     "question",
+     "mistake you're making",
+     "a number",
+     "result first"
+    ]
+   }
+  },
+  {
+   "chip": "best 3",
+   "say": "Then it ranks the best three for your audience. Sample shown.",
+   "screen": {
+    "type": "table",
+    "title": "Top 3 hooks",
+    "sample": true,
+    "cols": [
+     "#",
+     "Hook"
+    ],
+    "rows": [
+     [
+      "1",
+      "Your phone bill has a fee you never agreed to"
+     ],
+     [
+      "2",
+      "I asked AI to read my phone bill"
+     ],
+     [
+      "3",
+      "Stop paying $14 a month for this"
+     ]
+    ],
+    "foot": "film the top one first"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the full Video Agent at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Video Agent",
+    "sub": "the full agent pack",
+    "cover": "video",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}

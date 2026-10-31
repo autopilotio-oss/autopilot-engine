@@ -1,0 +1,78 @@
+{
+ "id": "charged-twice",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Refund Agent",
+ "lane": "money traps",
+ "hook": [
+  "Charged twice?",
+  "AI writes the refund request"
+ ],
+ "hook_lines": [
+  "Charged",
+  "*twice?*",
+  "AI writes the",
+  "*refund* request"
+ ],
+ "caption": {
+  "ig": "Charged twice for the same order? This agent finds duplicate charges on your statement and drafts a short refund request with the details, for you to send. Sample statement shown. All 5 Money Agents at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Charged twice for the same order? This agent finds duplicate charges on your statement and drafts a short refund request with the details, for you to send. Sample statement shown. All 5 Money Agents at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "stat": {
+  "count": 74.95,
+  "dec": 2,
+  "prefix": "$",
+  "label": "duplicate charge found",
+  "note": "sample statement"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Charged twice for the same order? Give this agent your card statement and one line, and let it look.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "card_statement.csv"
+    ],
+    "text": "find any duplicate charges"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It finds the same merchant, same amount, same day, and pulls the details you need.",
+   "screen": {
+    "type": "work",
+    "title": "Checking for duplicates",
+    "lines": [
+     "read every charge",
+     "same merchant, same amount",
+     "same day or next day",
+     "pull order details"
+    ]
+   }
+  },
+  {
+   "chip": "request",
+   "say": "Then it writes the refund request for you to send. Sample statement shown.",
+   "screen": {
+    "type": "doc",
+    "title": "Refund request",
+    "sub": "sample statement  ·  ready for you to send",
+    "text": "Hi,\n\nI was charged twice for order 4471 on Aug 4 ($74.95 each).\n\nPlease refund the duplicate charge of $74.95 to my card. My statement is attached with the account number hidden.\n\nThank you."
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get all five Money Agents at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "All 5 Money Agents",
+    "sub": "5 agents, one bundle",
+    "cover": "all6",
+    "price": "$39",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}
