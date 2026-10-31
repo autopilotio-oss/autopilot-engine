@@ -1,4 +1,48 @@
 {
+ "checkout:all-money-agents": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:bill-agent": {
+  "ok": false,
+  "severity": "SEV-1"
+ },
+ "checkout:deposit-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:raise-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:refund-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:sell-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:shop-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:subs-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:tiktok-agents": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:video-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:workspace": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "dead_letters": {
   "ok": true,
   "severity": "SEV-3"
@@ -23,7 +67,31 @@
   "ok": true,
   "severity": "SEV-2"
  },
+ "page:guide_bill": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_raise": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_refund": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_sell": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_shop": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
  "page:guide_subs": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_video": {
   "ok": true,
   "severity": "SEV-2"
  },
