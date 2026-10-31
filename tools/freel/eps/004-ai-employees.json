@@ -15,8 +15,8 @@
   "while you *work*"
  ],
  "caption": {
-  "ig": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Free guide at the link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity",
-  "other": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Free guide at the link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
+  "ig": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Set up all 7 with The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity",
+  "other": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Set up all 7 with The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
  },
  "beats": [
   {
@@ -71,15 +71,15 @@
   },
   {
    "chip": "get it",
-   "say": "Free guides to set this up are at the link in bio.",
+   "say": "Set up all seven with The Workspace. Link in bio.",
    "screen": {
     "type": "cta",
-    "name": "Free AI agent guides",
-    "sub": "set up your own crew",
+    "product": true,
+    "name": "The Workspace",
+    "sub": "7 agents for your business",
     "cover": "workspace",
-    "price": "FREE",
-    "url": "autopilotoi.app/free",
-    "topic": "Hire AI agents"
+    "price": "$49",
+    "url": "autopilotoi.app/workspace"
    }
   }
  ]

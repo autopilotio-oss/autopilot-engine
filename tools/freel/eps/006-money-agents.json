@@ -1,0 +1,100 @@
+{
+ "id": "money-agents",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Money Agents",
+ "lane": "money traps",
+ "hook": [
+  "5 AI agents that find money",
+  "you're losing"
+ ],
+ "hook_lines": [
+  "5 AI agents",
+  "that find *money*",
+  "you're *losing*"
+ ],
+ "caption": {
+  "ig": "Five AI agents that find money you might be losing: forgotten subscriptions, medical bill errors, airline refunds, a faster debt payoff and your case for a raise. Sample results shown. All 5 Money Agents at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Five AI agents that find money you might be losing: forgotten subscriptions, medical bill errors, airline refunds, a faster debt payoff and your case for a raise. Sample results shown. All 5 Money Agents at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Five AI agents that find money you're losing. Give them your statements and bills.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "bank_statement.csv",
+     "medical_bill.pdf",
+     "flight_booking.pdf"
+    ],
+    "text": "find money I'm losing"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "Each agent takes one job. Subscriptions, medical bills, refunds, debt and your paycheck.",
+   "screen": {
+    "type": "work",
+    "title": "5 agents at work",
+    "lines": [
+     "Subscription Agent: recurring charges",
+     "Bill Agent: bill vs insurance",
+     "Refund Agent: what you're owed",
+     "Debt Agent: faster payoff",
+     "Raise Agent: your case"
+    ]
+   }
+  },
+  {
+   "chip": "found",
+   "say": "Here's what they found on our sample. Your numbers will be different, but the agents work the same way.",
+   "screen": {
+    "type": "checks",
+    "title": "What they found",
+    "rows": [
+     [
+      "Forgotten subscriptions",
+      "$146/mo",
+      1
+     ],
+     [
+      "Medical bill lines to question",
+      "$521",
+      1
+     ],
+     [
+      "Cancelled flight refund",
+      "$412",
+      1
+     ],
+     [
+      "Debt paid off sooner",
+      "33 MONTHS",
+      1
+     ],
+     [
+      "Raise case",
+      "READY",
+      1
+     ]
+    ],
+    "verdict": "SAMPLE RESULTS  ·  YOURS WILL DIFFER",
+    "ok": true
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get all five Money Agents at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "All 5 Money Agents",
+    "sub": "5 agents, one bundle",
+    "cover": "all6",
+    "price": "$39",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}

@@ -1,18 +1,19 @@
 {
-  "name": "THE WORKSPACE by AUTOPILOT.OI",
-  "price_cents": 4900,
-  "permalink": "workspace",
-  "filename": "THE WORKSPACE by AUTOPILOT.OI.pdf",
-  "description_html": "<p><strong>Set up 7 Claude agents for your business in about an hour.</strong></p><p>Morning Brief, Inbox, Booking, Follow Up, Invoice, Review and DM Assistant. They draft your email replies, booking reminders, quote nudges, invoices and review asks from one Business Brain with your prices, rules and voice. You answer 20 questions and Claude does the setup with you.</p><p><strong>What you get:</strong> an 18 page course (PDF): the starter prompt, the 20 questions, the Builder prompt that turns Claude into your setup tech, the Business Brain template, 7 agent prompts with schedules and sample drafts, 50 phone commands, the Night Shift setup, a Fix It guide and safety rules. Lifetime updates when Claude's screens change.</p><p><strong>How it works:</strong> every agent drafts and you approve. Nothing goes to a customer without your OK. It does not send messages, charge customers or change your calendar on its own. It's a setup guide, not a custom app.</p><p><strong>You need:</strong> a Claude account. Scheduled agents need a paid Claude plan (Pro or up, paid to Anthropic). Gmail and Google Calendar work best.</p><p><strong>30 day refund:</strong> follow the setup. If your agents aren't working for you within 30 days, reply to your receipt for a full refund.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Results depend on your business.</em></p>",
-  "cover_url": "https://autopilotoi.app/store/workspace-cover.png?v=1",
-  "tags": [
-    "ai",
-    "claude",
-    "ai agent",
-    "small business",
-    "automation"
-  ],
-  "version": 1,
-  "cover_v": 1,
-  "priority": 10
+ "name": "THE WORKSPACE by AUTOPILOT.OI",
+ "price_cents": 4900,
+ "permalink": "workspace",
+ "filename": "THE WORKSPACE by AUTOPILOT.OI.pdf",
+ "description_html": "<p><strong>Set up 7 Claude agents for your business in about an hour.</strong></p><p>Morning Brief, Inbox, Booking, Follow Up, Invoice, Review and DM Assistant. They draft your email replies, booking reminders, quote nudges, invoices and review asks from one Business Brain with your prices, rules and voice. You answer 20 questions and Claude does the setup with you.</p><p><strong>What you get:</strong> an 18 page course (PDF): the starter prompt, the 20 questions, the Builder prompt that turns Claude into your setup tech, the Business Brain template, 7 agent prompts with schedules and sample drafts, 50 phone commands, the Night Shift setup, a Fix It guide and safety rules. Lifetime updates when Claude's screens change.</p><p><strong>How it works:</strong> every agent drafts and you approve. Nothing goes to a customer without your OK. It does not send messages, charge customers or change your calendar on its own. It's a setup guide, not a custom app.</p><p><strong>You need:</strong> a Claude account. Scheduled agents need a paid Claude plan (Pro or up, paid to Anthropic). Gmail and Google Calendar work best.</p><p><strong>30 day refund:</strong> follow the setup. If your agents aren't working for you within 30 days, reply to your receipt for a full refund.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Results depend on your business.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/workspace-cover.png?v=1",
+ "tags": [
+  "ai",
+  "claude",
+  "ai agent",
+  "small business",
+  "automation"
+ ],
+ "version": 1,
+ "cover_v": 1,
+ "priority": 10,
+ "landing": "workspace/"
 }

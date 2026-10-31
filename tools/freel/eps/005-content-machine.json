@@ -15,8 +15,8 @@
   "*edits planned*"
  ],
  "caption": {
-  "ig": "This AI agent turns one idea into a week of TikToks: hooks, scripts, every cut and caption planned. You just film. Sample week shown. Free guide at the link in bio.\n\n#contentcreator #tiktoktips #ai #claude #creator",
-  "other": "This AI agent turns one idea into a week of TikToks: hooks, scripts, every cut and caption planned. You just film. Sample week shown. Free guide at the link in bio.\n\n#contentcreator #tiktoktips #ai #claude #creator"
+  "ig": "This AI agent turns one idea into a week of TikToks: hooks, scripts, every cut and caption planned. You just film. Sample week shown. The full Video Agent is at the link in bio, with a free guide too.\n\n#contentcreator #tiktoktips #ai #claude #creator",
+  "other": "This AI agent turns one idea into a week of TikToks: hooks, scripts, every cut and caption planned. You just film. Sample week shown. The full Video Agent is at the link in bio, with a free guide too.\n\n#contentcreator #tiktoktips #ai #claude #creator"
  },
  "beats": [
   {
@@ -79,15 +79,15 @@
   },
   {
    "chip": "get it",
-   "say": "The free guide is at the link in bio.",
+   "say": "Get the full Video Agent at the link in bio.",
    "screen": {
     "type": "cta",
-    "name": "Free AI Video Guide",
-    "sub": "a week of TikToks",
+    "product": true,
+    "name": "Video Agent",
+    "sub": "the full agent pack",
     "cover": "video",
-    "price": "FREE",
-    "url": "autopilotoi.app/g/video",
-    "topic": "A week of TikToks"
+    "price": "$10",
+    "url": "autopilotoi.app"
    }
   }
  ]

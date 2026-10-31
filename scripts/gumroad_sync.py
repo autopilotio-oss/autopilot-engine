@@ -39,6 +39,11 @@ def reconcile(st):
         perm = pr.get("custom_permalink") or (pr.get("short_url") or "").rstrip("/").split("/")[-1]
         if not perm: continue
         if pr.get("published"): live.append(perm)
+        if perm not in st and os.path.exists(os.path.join(ROOT, "products", perm, "product.json")):
+            # Product exists on Gumroad (e.g. an earlier create that never got recorded): adopt it instead of
+            # failing forever with "custom permalink is already used". version 0 forces a file + description update.
+            st[perm] = {"id": pr.get("id"), "url": pr.get("short_url") or f"https://autopilotoi.gumroad.com/l/{perm}", "published": bool(pr.get("published")), "version": 0, "adopted": True}
+            DBG.append(["adopted", perm, bool(pr.get("published"))])
         if perm in st:
             if not st[perm].get("id"): st[perm]["id"] = pr.get("id"); DBG.append(["id_filled", perm])
             st[perm]["live"] = bool(pr.get("published"))
@@ -70,6 +75,20 @@ def main():
             continue
         if p.get("draft"):
             continue  # not approved for release yet (agent factory QA gate)
+        if slug in st and st[slug].get("adopted") and not st[slug].get("published") and st[slug].get("id"):
+            # Adopted from Gumroad: push the current file, description and cover, then publish it.
+            try:
+                fu = ([upload(unseal(os.path.join(ROOT, "products", sub)), json.load(open(os.path.join(ROOT, "products", sub, "product.json")))["filename"]) for sub in p["bundle_of"]]
+                      if p.get("bundle_of") else upload(unseal(d), p["filename"]))
+                r = call("PUT", f"/products/{st[slug]['id']}", {"files[][url]": fu, "description": p["description_html"], "name": p["name"], "price": p["price_cents"]})
+                DBG.append(["adopt_update", slug, str(r)[:300]])
+                if p.get("cover_url"):
+                    try: call("POST", f"/products/{st[slug]['id']}/covers", {"url": p["cover_url"]}); st[slug]["cover_v"] = p.get("cover_v")
+                    except Exception: pass
+                call("PUT", f"/products/{st[slug]['id']}/enable", {})
+                st[slug].update({"published": True, "version": p.get("version", 1)}); print(f"::notice title=Gumroad live (adopted)::{slug}")
+            except Exception as e: DBG.append(["adopt_fail", slug, repr(e)[:300]])
+            continue
         if slug in st and st[slug].get("published"):
             # Cover refresh: bump "cover_v" in product.json to (re)upload its cover_url to Gumroad.
             if p.get("cover_v") and p.get("cover_url") and st[slug].get("id") and p["cover_v"] != st[slug].get("cover_v"):

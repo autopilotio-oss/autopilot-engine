@@ -1,17 +1,17 @@
 {
-  "name": "AUTOPILOT.OI Shop Agent",
-  "price_cents": 1000,
-  "permalink": "shop-agent",
-  "filename": "AUTOPILOT.OI Shop Agent Setup.pdf",
-  "description_html": "<p><strong>Plan a TikTok Shop that can make a profit.</strong></p><p>Helps you compare product ideas, checks your profit after fees before you list, drafts listings that follow TikTok's rules, drafts creator outreach messages and runs a weekly review from the numbers you paste in.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not log into Seller Center, list products or message creators on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your product ideas, costs and TikTok Shop fees.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
-  "cover_url": "https://autopilotoi.app/store/shop-cover.png?v=3",
-  "tags": [
-    "ai",
-    "claude",
-    "tiktok",
-    "tiktok shop",
-    "ai agent"
-  ],
-  "version": 3,
-  "cover_v": 3
+ "name": "AUTOPILOT.OI Shop Agent",
+ "price_cents": 1000,
+ "permalink": "shop-agent",
+ "filename": "AUTOPILOT.OI Shop Agent Setup.pdf",
+ "description_html": "<p><strong>Your TikTok Shop agent: find products, do the profit math, check the rules, get creators posting.</strong></p><p>A Claude agent that finds product ideas for your niche and budget, scores them, works out what you keep per order after fees, shipping and creator commission, checks products and claims against TikTok Shop rules before you buy stock, writes your listing, plans your videos, drafts creator invites and runs a weekly review from your numbers.</p><p><strong>What you get (15 page agent pack, PDF):</strong> a setup builder that installs the agent with you in about 30 minutes, 12 setup questions, full agent instructions with 10 commands, the worked example from our reel, a product scorecard, a profit calculator, creator scripts and a 30 day launch tracker.</p><p><strong>How it works:</strong> it runs inside a Claude Project. It drafts, calculates and checks. It does not sign you up, buy stock, list products or message creators on its own, and it does not promise sales. Fees and rules change: it always uses the numbers from your Seller Center.</p><p><strong>You need:</strong> a Claude account (the free plan works) and a TikTok account.</p><p><em>Education only. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/shop-cover.png?v=3",
+ "tags": [
+  "ai",
+  "claude",
+  "tiktok",
+  "tiktok shop",
+  "ai agent"
+ ],
+ "version": 4,
+ "cover_v": 3
 }

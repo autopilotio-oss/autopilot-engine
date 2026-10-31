@@ -37,7 +37,7 @@ def build():
             "price_cents": p.get("price_cents"), "currency": "USD", "kind": "bundle" if p.get("bundle_of") else "kit",
             "components": [offer_id(x) for x in p.get("bundle_of", [])], "status": status,
             "checkout_url": f"https://autopilotoi.gumroad.com/l/{perm}",
-            "guides": guide_by_perm.get(perm, []), "managed_by": "products/",
+            "guides": guide_by_perm.get(perm, []) or ([{"guide": "landing", "path": p["landing"], "keyword": None, "paid": True}] if p.get("landing") else []), "managed_by": "products/",
         })
     for perm, e in EXTERNAL.items():
         offers.append({"offer_id": e["offer_id"], "permalink": perm, "name": e["name"], "price_cents": e["price_cents"], "currency": "USD",

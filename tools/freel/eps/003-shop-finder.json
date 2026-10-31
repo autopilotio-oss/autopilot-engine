@@ -15,8 +15,8 @@
   "AI does the *math*"
  ],
  "caption": {
-  "ig": "Stop guessing what to sell on TikTok Shop. This AI agent checks the price, the fees and shipping, and works out what you'd actually keep on every sale before you buy any stock. Sample numbers shown. Free guide at the link in bio.\n\n#tiktokshop #ai #claude #sidehustle #ecommerce",
-  "other": "Stop guessing what to sell on TikTok Shop. This AI agent checks the price, the fees and shipping, and works out what you'd actually keep on every sale before you buy any stock. Sample numbers shown. Free guide at the link in bio.\n\n#tiktokshop #ai #claude #sidehustle #ecommerce"
+  "ig": "Stop guessing what to sell on TikTok Shop. This AI agent checks the price, the fees and shipping, and works out what you'd actually keep on every sale before you buy any stock. Sample numbers shown. The full Shop Agent is at the link in bio, with a free guide too.\n\n#tiktokshop #ai #claude #sidehustle #ecommerce",
+  "other": "Stop guessing what to sell on TikTok Shop. This AI agent checks the price, the fees and shipping, and works out what you'd actually keep on every sale before you buy any stock. Sample numbers shown. The full Shop Agent is at the link in bio, with a free guide too.\n\n#tiktokshop #ai #claude #sidehustle #ecommerce"
  },
  "beats": [
   {
@@ -75,15 +75,15 @@
   },
   {
    "chip": "get it",
-   "say": "The free guide is at the link in bio.",
+   "say": "Get the full Shop Agent at the link in bio.",
    "screen": {
     "type": "cta",
-    "name": "Free TikTok Shop Guide",
-    "sub": "pick a product that pays",
+    "product": true,
+    "name": "Shop Agent",
+    "sub": "the full agent pack",
     "cover": "shop",
-    "price": "FREE",
-    "url": "autopilotoi.app/g/shop",
-    "topic": "Sell on TikTok Shop"
+    "price": "$10",
+    "url": "autopilotoi.app"
    }
   }
  ]
