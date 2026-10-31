@@ -166,8 +166,8 @@ if __name__ == "__main__":
     res += check_fulfillment(st, json.load(open(ps)) if os.path.exists(ps) else {}) + check_integrity(st) + check_jobs(Queue())
     import heartbeat
     res += heartbeat.check()
-    if os.environ.get("SIMULATE_FAILURE"):
-        res.append({"check": "simulated_failure", "ok": False, "severity": "SEV-2", "detail": "drill: " + os.environ["SIMULATE_FAILURE"]})
+    drill = os.environ.get("SIMULATE_FAILURE")
+    res.append({"check": "simulated_failure", "ok": not drill, "severity": "SEV-2", "detail": ("drill: " + drill) if drill else "no drill running"})
     alerts = record(st, res)
     if os.environ.get("GITHUB_TOKEN"):
         try:

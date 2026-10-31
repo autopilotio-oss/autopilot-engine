@@ -16,15 +16,15 @@
    "since": "2026-10-31T18:43:09+00:00"
   },
   "weekly_sprint": {
-   "task": "(created at cutover)",
-   "cadence": "Sunday",
+   "task": "trig_01QG2AkbC1ZZEDuVTiAbT29c",
+   "cadence": "Monday 09:37 ART",
    "max_gap_hours": 192,
    "severity": "SEV-2",
    "since": "2026-10-31T18:43:09+00:00"
   },
   "monthly_review": {
-   "task": "(created at cutover)",
-   "cadence": "1st of month",
+   "task": "trig_01WHWmgzdVJ6e7z56hGKLAfu",
+   "cadence": "1st of month 10:17 ART",
    "max_gap_hours": 840,
    "severity": "SEV-3",
    "since": "2026-10-31T18:43:09+00:00"
