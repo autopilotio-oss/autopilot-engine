@@ -1,0 +1,22 @@
+{
+ "name": "NO PROOF, NO POST (Viral Evidence Gate v2, Oct 31 2026)",
+ "owners": ["Seb"],
+ "approval_channels": ["chat", "approval_page"],
+ "reference": {
+  "min_refs": 3,
+  "min_creators": 2,
+  "min_views": 100000,
+  "min_outperformance": 3.0,
+  "median_min_sample": 10,
+  "fresh_days": 90,
+  "max_age_days": 180,
+  "evidence_valid_days": 14
+ },
+ "pass_score": 85,
+ "revise_score": 70,
+ "banned_phrases": ["guarantee", "guaranteed", "100% safe", "always works", "free money", "passive income", "get rich", "delete bad credit", "remove accurate", "fix your credit score", "will save you", "you will get your money back", "proven viral"],
+ "enforce_from": "2026-11-04",
+ "exempt_formats": [],
+ "priority_agents": ["subscription", "refund", "bill", "scam", "deal"],
+ "note": "Thresholds are AUTOPILOT.OI internal screening defaults, not platform benchmarks. Raise them with our own history. Never invent a median."
+}
