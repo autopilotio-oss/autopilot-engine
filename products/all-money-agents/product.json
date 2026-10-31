@@ -1,17 +1,16 @@
 {
- "name": "AUTOPILOT.OI All 6 Money Agents",
+ "name": "AUTOPILOT.OI All 5 Money Agents",
  "price_cents": 3900,
  "permalink": "all-money-agents",
  "filename": "(bundle)",
  "bundle_of": [
-  "lower-agent",
   "bill-agent",
   "debt-agent",
   "subs-agent",
   "refund-agent",
   "raise-agent"
  ],
- "description_html": "<p><strong>All 6 Money Agents for Claude. $60 separately, $39 here.</strong></p><ul><li><strong>Lower Bills Agent:</strong> compares internet, phone and insurance offers and writes your call scripts</li><li><strong>Bill Agent:</strong> checks a medical bill against your insurance before you pay</li><li><strong>Debt Agent:</strong> payoff plan and the script to ask for a lower rate</li><li><strong>Subscription Agent:</strong> lists every recurring charge and drafts the cancel messages</li><li><strong>Refund Agent:</strong> drafts refund requests that name your rights</li><li><strong>Raise Agent:</strong> pay data, your number and a practice run</li></ul><p><strong>What you get:</strong> 6 Claude prompt kits (PDFs), each with the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste each prompt into a Claude Project and run it when you need it. It drafts, you check, decide and send. Nothing logs into your accounts or sends anything on its own.</p><p><strong>You need:</strong> a Claude account. The free plan allows up to 5 Projects, so for all 6 at once you'd need a paid plan or to reuse one Project.</p><p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "description_html": "<p><strong>All 5 Money Agents for Claude. $50 separately, $39 here.</strong></p><ul><li><strong>Bill Agent:</strong> checks a medical bill against your insurance before you pay</li><li><strong>Debt Agent:</strong> payoff plan and the script to ask for a lower rate</li><li><strong>Subscription Agent:</strong> lists every recurring charge and drafts the cancel messages</li><li><strong>Refund Agent:</strong> drafts refund requests that name your rights</li><li><strong>Raise Agent:</strong> pay data, your number and a practice run</li></ul><p><strong>What you get:</strong> 5 Claude prompt kits (PDFs), each with the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste each prompt into a Claude Project and run it when you need it. It drafts, you check, decide and send. Nothing logs into your accounts or sends anything on its own.</p><p><strong>You need:</strong> a Claude account. The free plan allows up to 5 Projects, enough for all 5.</p><p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
  "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/all6-cover.png",
  "tags": [
   "ai",
@@ -20,5 +19,5 @@
   "ai agent",
   "money"
  ],
- "version": 2
+ "version": 3
 }

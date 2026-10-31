@@ -181,4 +181,4 @@ Score each 0 to 2. It needs 10 of 12 and no zeros:
 5. Safe and honest: no conflict with Gumroad, Meta or TikTok rules; no outcome, income or "runs on its own" promises; no regulated advice.
 6. Measurable: one success number and a date to judge it (keep, fix or kill).
 Write the pitch as: what it is, who it's for, the evidence links, the score, the success number and date. Put it in config/approvals_queue.md as "AWAITING APPROVAL" and message Seb. Build only after he says yes.
-Rejected so far (don't bring back): the Money Leak Check quiz (Oct 31).
+Rejected so far (don't bring back): the Money Leak Check quiz (Oct 31), the Lower Bills Agent (Oct 31).

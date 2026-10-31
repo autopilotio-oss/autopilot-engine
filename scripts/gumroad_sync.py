@@ -76,7 +76,7 @@ def main():
                         fu = [upload(unseal(os.path.join(ROOT, "products", sub)), json.load(open(os.path.join(ROOT, "products", sub, "product.json")))["filename"]) for sub in p["bundle_of"]]
                     else:
                         fu = upload(unseal(d), p["filename"])
-                    r = call("PUT", f"/products/{st[slug]['id']}", {"files[][url]": fu, "description": p["description_html"]})
+                    r = call("PUT", f"/products/{st[slug]['id']}", {"files[][url]": fu, "description": p["description_html"], "name": p["name"]})
                     DBG.append(["update", slug, str(r)[:300]])
                     if r.get("success"): st[slug]["version"] = p.get("version", 1); print(f"::notice title=Gumroad updated::{slug}")
                 except Exception as e: DBG.append(["update_fail", slug, repr(e)[:300]])
