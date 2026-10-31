@@ -1,0 +1,112 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:D;src:url(../carousel/f/InterDisplay-Black.otf)}
+@font-face{font-family:DX;src:url(../carousel/f/InterDisplay-ExtraBold.otf)}
+@font-face{font-family:B;src:url(../carousel/f/Inter-Bold.otf)}
+@font-face{font-family:SB;src:url(../carousel/f/Inter-SemiBold.otf)}
+@font-face{font-family:MD;src:url(../carousel/f/Inter-Medium.otf)}
+@font-face{font-family:M;src:url(../carousel/f/SpaceMono-Regular.ttf)}
+@font-face{font-family:SA;src:url(../reel/SairaSemiCondensed-BlackItalic.otf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0a0b0a}
+:root{--l:#D4FF3A;--ink:#F2F2EE;--mut:#8b8e88;--card:#121411;--line:rgba(255,255,255,.09)}
+#R{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0a0b0a;transition:none}
+#bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:72px 72px;-webkit-mask-image:radial-gradient(70% 55% at 50% 52%,#000 30%,transparent 80%)}
+#glow{position:absolute;left:140px;top:760px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(212,255,58,.10),transparent 65%)}
+#white{position:absolute;inset:0;background:radial-gradient(90% 70% at 50% 45%,#F7F7F3,#E6E6E0);opacity:0}
+#cap{position:absolute;left:70px;right:70px;top:420px;height:200px;display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:0 20px;font:68px/1.25 SB;color:#8f938c;letter-spacing:-1px;z-index:20}
+#cap .w{display:inline-block;will-change:filter,opacity,transform}
+#cap .w.on{color:#F4F4F0}
+#cap .em{position:relative;font:78px/1.15 SA;color:var(--l);padding:0 14px;letter-spacing:0}
+#cap .em{isolation:isolate}#cap .em i{z-index:-1;position:absolute;inset:-4px -2px 0;border:2.5px solid var(--l);background:rgba(212,255,58,.12);border-radius:6px}
+#cap .em i:before,#cap .em i:after,#cap .em b:before,#cap .em b:after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:#0a0b0a;border:2.5px solid var(--l)}
+#cap .em i:before{left:-8px;top:-8px}#cap .em i:after{right:-8px;bottom:-8px}
+.lightm #cap{color:#7a7d76}.lightm #cap .w.on{color:#151714}.lightm #cap .em{color:#151714!important}.lightm #cap .em i{border-color:#151714;background:rgba(212,255,58,.85)}.lightm #cap .em i:before,.lightm #cap .em i:after{background:#E8E8E2;border-color:#151714}
+#stage{position:absolute;left:0;right:0;top:700px;height:1020px;z-index:10}
+.sc{position:absolute;inset:0;display:none}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:30px;box-shadow:0 40px 90px rgba(0,0,0,.55);color:var(--ink)}
+.mono{font-family:M;letter-spacing:1px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:12px;padding:8px 14px;font:24px SB;color:#c9ccc5}
+.chip.l{background:var(--l);color:#0a0b0a;border-color:var(--l)}
+.row{display:flex;align-items:center;gap:22px;padding:24px 28px;border:2px dashed rgba(255,255,255,.12);border-radius:22px;margin:16px 0;font:34px SB;color:var(--ink)}
+.row .sub{font:22px M;color:var(--mut);margin-top:4px}
+.row .tg{margin-left:auto;font:22px M;padding:8px 14px;border-radius:10px;white-space:nowrap}
+.tg.r{background:rgba(255,77,77,.14);color:#ff7a6e;border:1.5px solid rgba(255,77,77,.4)}
+.tg.l{background:rgba(212,255,58,.12);color:var(--l);border:1.5px solid rgba(212,255,58,.45)}
+.tg.g{color:var(--mut);border:1.5px solid var(--line)}
+.ico{width:72px;height:72px;border-radius:20px;background:#1c2116;border:1.5px solid rgba(212,255,58,.35);display:flex;align-items:center;justify-content:center;font:36px SA;color:var(--l);flex:none}
+.node{position:absolute;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;background:#10130d;border:3px solid rgba(212,255,58,.55);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(212,255,58,.18)}
+.node span{position:absolute;top:162px;left:50%;transform:translateX(-50%);white-space:nowrap;font:26px SB;color:#d6d9d2}
+.lbl{font:24px M;color:var(--mut);letter-spacing:2px;text-transform:uppercase}
+#top{position:absolute;left:60px;right:60px;top:80px;display:flex;align-items:center;gap:16px;font:26px M;letter-spacing:3px;color:#9a9d96;z-index:30}
+#top img{width:54px;height:54px;border-radius:14px}
+#top .d{margin-left:auto;border:1.5px solid rgba(212,255,58,.5);color:var(--l);border-radius:10px;padding:6px 12px}
+.lightm #top{color:#555}.lightm #top .d{color:#151714;border-color:#151714}.lightm #prog{background:rgba(0,0,0,.1)}.lightm #prog i{background:#151714}
+#prog{position:absolute;left:60px;right:60px;top:40px;height:5px;border-radius:3px;background:rgba(255,255,255,.08);z-index:30}#prog i{display:block;height:100%;background:var(--l);border-radius:3px}
+#grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;z-index:40;pointer-events:none}
+#vig{position:absolute;inset:0;background:radial-gradient(120% 85% at 50% 48%,transparent 55%,rgba(0,0,0,.5) 100%);pointer-events:none;z-index:39}
+</style></head><body><div id="R"><div id="bg"></div><div id="glow"></div><div id="white"></div>
+<div id="prog"><i></i></div><div id="top"><img src="logo.png"><span>AUTOPILOT.OI</span><span class="d" id="dtag"></span></div>
+<div id="cap"></div><div id="stage"></div><div id="vig"></div><div id="grain"></div></div>
+<script>
+const DATA=/*DATA*/;
+const DUR=DATA.dur;const $=i=>document.getElementById(i),cl=x=>Math.max(0,Math.min(1,x)),eo=x=>1-Math.pow(1-cl(x),3),eb=x=>{x=cl(x);const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)},ei=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const pad=n=>String(n).padStart(2,'0');$('dtag').textContent='DAY '+pad(DATA.day);
+const BOT=`<svg viewBox="0 0 48 48" width="62" height="62"><rect x="9" y="14" width="30" height="24" rx="8" fill="none" stroke="#D4FF3A" stroke-width="3.2"/><circle cx="19" cy="26" r="3" fill="#D4FF3A"/><circle cx="29" cy="26" r="3" fill="#D4FF3A"/><path d="M24 14V8" stroke="#D4FF3A" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="7" r="2.6" fill="#D4FF3A"/></svg>`;
+function dots(n,cur,lt){let h='';for(let i=1;i<=7;i++){const done=i<cur,on=i==cur,p=eb((lt-.3-i*.07)/.35);h+=`<div style="width:96px;height:120px;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transform:scale(${p});background:${on?'#D4FF3A':'#151813'};border:1.5px solid ${on?'#D4FF3A':'rgba(255,255,255,.1)'};color:${on?'#0a0b0a':done?'#F2F2EE':'#4a4d47'}"><span class="mono" style="font-size:16px;opacity:.7">DAY</span><b style="font:46px D">${i}</b>${done?'<span style="width:14px;height:14px;border-radius:50%;background:#3ddc6a;position:absolute;margin-top:-104px"></span>':''}</div>`}return `<div style="display:flex;gap:16px;justify-content:center">${h}</div>`}
+const S={
+title(e,d,lt){const p=eb(lt/.45);e.innerHTML=`<div class="card" style="position:absolute;left:110px;right:110px;top:40px;padding:44px 40px 46px;transform:scale(${.85+.15*p});opacity:${cl(lt/.2)}">
+ <div style="display:flex;align-items:center;gap:16px"><img src="logo.png" style="width:56px;height:56px;border-radius:50%"><b style="font:30px B">autopilot.oi</b><span style="width:26px;height:26px;border-radius:50%;background:#D4FF3A;display:inline-flex;align-items:center;justify-content:center;font:16px B;color:#0a0b0a">✓</span><span class="mono" style="margin-left:auto;color:var(--l);font-size:20px;letter-spacing:3px">DAILY AGENTS</span></div>
+ <div style="text-align:center;margin:44px 0 10px"><span style="font:150px SA;color:var(--ink)">Day </span><span style="font:190px D;letter-spacing:-8px;color:var(--l)">${pad(DATA.day)}</span></div>
+ <div style="text-align:center;font:34px SB;color:#c9ccc5;margin-bottom:40px">${d.sub}</div>${dots(7,DATA.day,lt)}</div>`},
+card(e,d,lt){const p=eb(lt/.45);e.innerHTML=`<div class="card" style="position:absolute;left:100px;right:100px;top:60px;padding:40px;transform:translateY(${(1-p)*120}px) scale(${.92+.08*p});opacity:${cl(lt/.2)}">
+ <div style="display:flex;align-items:center;gap:22px"><div class="ico" style="width:96px;height:96px;font-size:52px">✳</div><div><div class="mono" style="font-size:22px;color:var(--mut)">autopilot.oi /</div><div style="font:48px D;letter-spacing:-1px">${d.name}</div></div><span class="chip" style="margin-left:auto;align-self:flex-start">Claude Project</span></div>
+ <p style="font:32px/1.4 MD;color:#c9ccc5;margin:30px 0">${d.desc}</p>
+ <div style="display:flex;gap:12px;flex-wrap:wrap">${d.chips.map((c,i)=>`<span class="chip ${i==d.chips.length-1?'l':''}" style="opacity:${cl((lt-.6-i*.15)/.2)}">${c}</span>`).join('')}</div>
+ <div style="margin-top:34px;border-top:1.5px solid var(--line);padding-top:24px">${d.files.map((f,i)=>`<div class="mono" style="font-size:26px;color:#aeb1aa;margin:10px 0;opacity:${cl((lt-1-i*.2)/.25)}">▸ ${f}</div>`).join('')}</div></div>`},
+prompt(e,d,lt,dur){const ty=Math.max(.9,dur*.42),n=Math.floor(d.text.length*cl((lt-.25)/ty)),sent=lt>ty+.45;
+ const rows=(d.rows||[]).map((r,i)=>{const p=eo((lt-ty-.7-i*((dur-ty-1.2)/Math.max(1,d.rows.length)))/.3);return `<div class="row" style="opacity:${p};transform:translateX(${(1-p)*60}px);border-style:solid;border-color:rgba(255,255,255,.08);background:#151813"><div><div>${r.t}</div>${r.sub?`<div class="sub">${r.sub}</div>`:''}</div>${r.tag?`<span class="tg ${r.tone||'l'}">${r.tag}</span>`:''}</div>`}).join('');
+ e.innerHTML=`<div class="card" style="position:absolute;left:80px;right:80px;top:20px;padding:0;overflow:hidden;opacity:${cl(lt/.2)}">
+ <div style="display:flex;align-items:center;gap:10px;padding:20px 26px;border-bottom:1.5px solid var(--line)"><i style="width:14px;height:14px;border-radius:50%;background:#3a3d37"></i><i style="width:14px;height:14px;border-radius:50%;background:#3a3d37"></i><i style="width:14px;height:14px;border-radius:50%;background:#3a3d37"></i><span class="mono" style="margin-left:14px;font-size:22px;color:var(--mut)">${d.app}</span></div>
+ <div style="padding:28px 30px;font:34px/1.45 MD;min-height:150px;color:#e9ece4">${d.text.slice(0,n)}<span style="display:inline-block;width:3px;height:40px;background:var(--l);vertical-align:-8px;opacity:${sent?0:(lt*2%1<.55?1:0)}"></span></div>
+ <div style="display:flex;align-items:center;padding:0 26px 24px"><span class="mono" style="font-size:20px;color:var(--mut)">${d.files||''}</span><span style="margin-left:auto;width:66px;height:66px;border-radius:18px;background:${sent?'#D4FF3A':'#2a2e25'};display:flex;align-items:center;justify-content:center;font:34px B;color:#0a0b0a;transform:scale(${sent?1-.15*Math.sin(cl((lt-ty-.45)/.25)*Math.PI):1})">↑</span></div></div>
+ <div style="position:absolute;left:80px;right:80px;top:${d.rows&&d.rows.length>3?320:340}px">${rows}</div>`},
+list(e,d,lt,dur){const st=(dur-.8)/Math.max(1,d.rows.length);e.innerHTML=`<div class="card" style="position:absolute;left:80px;right:80px;top:30px;padding:30px 32px;opacity:${cl(lt/.2)}">
+ <div style="display:flex;align-items:center;margin-bottom:10px"><b style="font:36px B">${d.title}</b><span class="tg g mono" style="margin-left:auto;font-size:20px;padding:8px 14px;border-radius:10px">${d.badge}</span></div>
+ ${d.rows.map((r,i)=>{const p=eo((lt-.3-i*st)/.3);return `<div class="row" style="opacity:${p};transform:translateY(${(1-p)*30}px)"><div class="ico">${r.i||'✳'}</div><div><div>${r.t}</div>${r.sub?`<div class="sub">${r.sub}</div>`:''}</div>${r.tag?`<span class="tg ${r.tone||'l'}">${r.tag}</span>`:''}</div>`}).join('')}</div>`},
+fan(e,d,lt){const N=d.nodes.length,cx=540,cy=430,R=330;let h=`<svg style="position:absolute;inset:0" width="1080" height="1020"><circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="rgba(212,255,58,.25)" stroke-width="2.5" stroke-dasharray="8 12" opacity="${cl(lt/.4)}"/>`;
+ d.nodes.forEach((n,i)=>{const a=-Math.PI/2+i/N*Math.PI*2,x=cx+Math.cos(a)*R,y=cy+Math.sin(a)*R,p=cl((lt-.4-i*.22)/.3);h+=`<line x1="${cx}" y1="${cy}" x2="${cx+(x-cx)*p}" y2="${cy+(y-cy)*p}" stroke="rgba(212,255,58,.4)" stroke-width="2.5"/>`});h+='</svg>';
+ h+=`<div class="card" style="position:absolute;left:${cx-190}px;top:${cy-115}px;width:380px;height:230px;padding:24px;transform:scale(${eb(lt/.4)});border-color:rgba(212,255,58,.45)"><div class="mono" style="font-size:20px;color:var(--l)">✳ ${d.center}</div><div style="height:16px;border-radius:8px;background:#262a22;margin:22px 0 14px;width:80%"></div><div style="height:16px;border-radius:8px;background:#262a22;width:60%"></div><div style="margin-top:28px;width:150px;height:40px;border-radius:12px;background:#D4FF3A"></div></div>`;
+ d.nodes.forEach((n,i)=>{const a=-Math.PI/2+i/N*Math.PI*2,x=cx+Math.cos(a)*R,y=cy+Math.sin(a)*R,p=eb((lt-.55-i*.22)/.35);h+=`<div class="node" style="left:${x}px;top:${y}px;transform:scale(${p})">${BOT}<span>${n}</span></div>`});e.innerHTML=h},
+big(e,d,lt,dur){const v=Math.round(d.n*ei((lt-.15)/Math.min(1.4,dur*.5)));e.innerHTML=`<div style="position:absolute;left:0;right:0;top:120px;text-align:center"><div class="lbl" style="opacity:${cl(lt/.3)}">${d.label}</div>
+ <div style="font:280px D;letter-spacing:-12px;color:var(--ink);margin-top:20px;transform:scale(${.9+.1*eb(lt/.4)})">${d.pre||''}${v.toLocaleString('en-US')}<span style="font:90px SA;color:var(--l);letter-spacing:0">${d.suf||''}</span></div>
+ <div style="font:32px MD;color:#aeb1aa;margin-top:10px;opacity:${cl((lt-1)/.3)}">${d.note||''}</div></div>`},
+white(e,d,lt){const p=eb(lt/.5);e.innerHTML=`<div style="position:absolute;left:390px;top:200px;width:300px;height:300px;border-radius:50%;background:#fff;box-shadow:0 40px 80px rgba(0,0,0,.12);transform:scale(${p});display:flex;align-items:center;justify-content:center;font:110px SA;color:#151714">✳</div>`},
+tip(e,d,lt){const p=eb(lt/.45);e.innerHTML=`<div style="position:absolute;left:0;right:0;top:40px;text-align:center;transform:scale(${p})"><div style="display:inline-flex;width:150px;height:150px;border-radius:50%;background:#1c2116;border:3px solid #D4FF3A;align-items:center;justify-content:center;font:70px B;color:#D4FF3A;box-shadow:0 0 70px rgba(212,255,58,.35)">!</div><div class="mono" style="margin-top:24px;font-size:30px;color:var(--l);letter-spacing:6px">PRO TIP</div></div>
+ <div class="card" style="position:absolute;left:110px;right:110px;top:330px;padding:36px 40px;font:38px/1.4 SB;opacity:${cl((lt-.5)/.3)};transform:translateY(${(1-eo((lt-.5)/.4))*40}px)">${d.text}</div>`},
+cta(e,d,lt,dur){const f=lt>dur*.22,c1=cl((lt-dur*.45)/.25),c2=cl((lt-dur*.62)/.25);const typed=d.kw.slice(0,Math.floor(d.kw.length*cl((lt-dur*.45)/.4)));
+ e.innerHTML=`<div class="card" style="position:absolute;left:100px;right:100px;top:0;padding:34px;opacity:${cl(lt/.2)}"><div style="display:flex;align-items:center;gap:22px"><img src="logo.png" style="width:110px;height:110px;border-radius:50%"><div><div style="font:40px D">autopilot.oi <span style="display:inline-flex;width:30px;height:30px;border-radius:50%;background:#D4FF3A;align-items:center;justify-content:center;font:18px B;color:#0a0b0a;vertical-align:4px">✓</span></div><div style="font:26px MD;color:var(--mut)">AI agents that do the boring stuff</div></div></div>
+ <div style="margin-top:28px;height:84px;border-radius:18px;display:flex;align-items:center;justify-content:center;font:32px B;background:${f?'#1d201a':'#D4FF3A'};color:${f?'#F2F2EE':'#0a0b0a'};border:1.5px solid ${f?'rgba(255,255,255,.12)':'#D4FF3A'};transform:scale(${f?1-.06*Math.sin(cl((lt-dur*.22)/.2)*Math.PI):1})">${f?'Following ⌄':'Follow'}</div>
+ <div style="margin-top:24px;display:flex;align-items:center;gap:14px;opacity:${f?1:.35}"><span class="mono" style="font-size:22px;color:var(--mut)">NEXT</span><span class="chip l">Day ${pad(DATA.day+1)} · ${d.next}</span><span class="mono" style="font-size:22px;color:var(--mut)">drops tomorrow</span></div></div>
+ <div class="card" style="position:absolute;left:100px;right:100px;top:470px;padding:30px;opacity:${cl((lt-dur*.38)/.2)}"><div class="mono" style="font-size:22px;color:var(--mut);margin-bottom:20px">COMMENTS</div>
+ <div style="display:flex;gap:18px;align-items:center;opacity:${c1>0?1:0}"><div style="width:64px;height:64px;border-radius:50%;background:#2a2e25"></div><div><div class="mono" style="font-size:18px;color:var(--mut)">you · now</div><b style="font:40px D;color:var(--l)">${typed}</b></div></div>
+ <div style="display:flex;gap:18px;align-items:center;margin:22px 0 0 60px;opacity:${c2};transform:translateY(${(1-c2)*20}px)"><img src="logo.png" style="width:56px;height:56px;border-radius:50%"><div><div class="mono" style="font-size:18px;color:var(--mut)">autopilot.oi · reply</div><div style="font:32px SB">Sent! Check your DMs 📩</div></div></div>
+ <div style="margin-top:26px;height:70px;border-radius:999px;border:1.5px solid var(--line);display:flex;align-items:center;padding:0 26px;font:26px MD;color:#5d6059">Add a comment…</div></div>`}
+};
+// build captions: chunks per beat
+const W=DATA.words,B=DATA.beats,CH=[];
+B.forEach((b,bi)=>{const ch=[];let cur=[];for(let k=b.w0;k<b.w1;k++){cur.push(k);const w=W[k][0],left=b.w1-k-1;if((/[.,:!?]$/.test(w)&&cur.length>=2&&left!=1)||(cur.length>=5&&left>=2)||k==b.w1-1){ch.push(cur);cur=[]}}if(cur.length)ch.push(cur);
+ for(let i=ch.length-1;i>0;i--){if(ch[i].length==1&&ch[i-1].length<=6){ch[i-1]=ch[i-1].concat(ch[i]);ch.splice(i,1)}}CH.push(...ch)});
+const st=$('stage');B.forEach((b,i)=>{const d=document.createElement('div');d.className='sc';d.id='b'+i;st.appendChild(d)});
+function render(t){
+ $('prog').firstChild.style.width=(cl(t/DUR)*100)+'%';
+ $('grain').style.backgroundImage=`url(../reel/grain${Math.floor(t*24)%6}.png)`;
+ let bi=0;B.forEach((b,i)=>{if(t>=b.s)bi=i});const b=B[bi];
+ const wb=b.scene.type=='white'||b.scene.light;const wp=wb?eo((t-b.s)/.35):0;$('white').style.opacity=wp;$('R').classList.toggle('lightm',wp>.5);
+ B.forEach((x,i)=>{const e=$('b'+i);if(i!=bi){e.style.display='none';return}e.style.display='block';const lt=t-x.s,dur=x.e-x.s;const inn=eo(lt/.3),out=x.e-t<.18&&i<B.length-1?1-(x.e-t)/.18:0;
+  e.style.opacity=1-out;e.style.filter=`blur(${(1-inn)*18+out*16}px)`;e.style.transform=`translateY(${(1-inn)*50}px)`;S[x.scene.type](e,x.scene,lt,dur)});
+ let ci=0;CH.forEach((c,i)=>{if(t>=W[c[0]][1]-.08)ci=i});const ch=CH[ci];
+ $('cap').innerHTML=ch.map(k=>{const [w,s]=W[k],p=cl((t-s+.08)/.16),em=DATA.em[k];const txt=w.replace(/&/g,'&amp;');
+  return em?`<span class="w em" style="opacity:${p};filter:blur(${(1-p)*10}px);transform:scale(${.85+.15*eb(p)})"><i style="opacity:${cl((t-s)/.15)}"></i>${txt}</span>`:`<span class="w ${p>=1?'on':''}" style="opacity:${.25+.75*p};filter:blur(${(1-p)*8}px)">${txt}</span>`}).join('');
+}
+render(0);
+</script></body></html>

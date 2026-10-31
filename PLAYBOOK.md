@@ -120,3 +120,8 @@ The free lead magnet at /brain/ is now called **The AI Front Desk** (was THE BUS
 - To make a reel: add tools/reel/<name>.py (copy credit.py: PHRASES, GROUPS, MOODS, SCENES) and push. The "Voiced reels" workflow renders every spec without a reel into docs/media/reels/money-<name>.mp4 + poster and commits it.
 - Needs repo secret ELEVENLABS_API_KEY. Robot body frames live in tools/reel/fr/ (241 frames, rebuilt from the first 3 reels). The face screen is drawn on top.
 - Post the mp4 to IG/Threads through Metricool as a REEL, using the poster as the cover.
+
+## Day series: "AI agents that pay you back" (voiced, like the viral "Day 05: repos you should know" format)
+- One agent per episode, Day 01, 02, 03... Brian voice at 1.2x with word timestamps, word by word captions with lime highlight boxes on key words, dark minimal app screens, a white "here's the smart part" beat, a PRO TIP, and a Follow + comment KEYWORD ending that teases tomorrow's day.
+- Write tools/series/eps/day-NN-<slug>.json (beats: say, em words, scene: title / card / prompt / list / big / white / fan / tip / cta) and push. The "Day series" workflow voices and renders it to docs/media/series/<ep>.mp4 + poster.
+- Keyword in the cta must exist in ManyChat and config/keywords.json. Facts in the script must match the free guide.

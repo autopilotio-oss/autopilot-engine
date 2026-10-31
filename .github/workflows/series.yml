@@ -1,0 +1,43 @@
+name: Day series (ElevenLabs Brian 1.2x)
+on:
+  workflow_dispatch:
+    inputs:
+      ep: { description: "Episode file name in tools/series/eps without .json (blank = every episode without a video)", required: false }
+  push:
+    branches: [main]
+    paths: ["tools/series/eps/*.json", "tools/series/engine.html", ".github/workflows/series.yml"]
+permissions:
+  contents: write
+concurrency: series
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick episodes
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.ep }}" ]; then L="${{ github.event.inputs.ep }}"; else
+            L=""; for f in tools/series/eps/*.json; do n=$(basename "$f" .json); [ -f "docs/media/series/$n.mp4" ] || L="$L $n"; done; fi
+          echo "list=$L" >> "$GITHUB_OUTPUT"; echo "Episodes: ${L:-none}"
+      - name: Install tools
+        if: steps.pick.outputs.list != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q numpy
+          npm i -g --silent playwright@1 && npx playwright install --with-deps chromium
+          echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
+      - name: Render
+        if: steps.pick.outputs.list != ''
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: for n in ${{ steps.pick.outputs.list }}; do bash tools/series/make.sh "$n"; done
+      - name: Commit
+        if: steps.pick.outputs.list != ''
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add docs/media/series tools/series/*.words.json
+          git diff --cached --quiet && exit 0
+          git commit -m "New Day series episodes:${{ steps.pick.outputs.list }}"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
