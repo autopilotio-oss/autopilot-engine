@@ -34,9 +34,9 @@ def reconcile(st):
     (the list of buyable permalinks the site uses to hide buttons for products that are not live)."""
     try: r = call_get("/products?" + urllib.parse.urlencode({"access_token": TOK}))
     except Exception as e: DBG.append(["reconcile_fail", repr(e)[:200]]); return
-    live = []
+    live = []; by_id = {v.get("id"): k for k, v in st.items() if v.get("id")}
     for pr in r.get("products", []):
-        perm = pr.get("custom_permalink") or (pr.get("short_url") or "").rstrip("/").split("/")[-1]
+        perm = by_id.get(pr.get("id")) or pr.get("custom_permalink") or (pr.get("short_url") or "").rstrip("/").split("/")[-1]
         if not perm: continue
         if pr.get("published"): live.append(perm)
         if perm not in st and os.path.exists(os.path.join(ROOT, "products", perm, "product.json")):
@@ -48,11 +48,45 @@ def reconcile(st):
             if not st[perm].get("id"): st[perm]["id"] = pr.get("id"); DBG.append(["id_filled", perm])
             st[perm]["live"] = bool(pr.get("published"))
     for k, v in st.items():
-        if v.get("published") and k not in live: DBG.append(["not_live_on_gumroad", k])
+        if v.get("published") and k not in live:
+            DBG.append(["not_live_on_gumroad", k]); v["live"] = False
     json.dump({"live": sorted(live), "checked": __import__("datetime").datetime.utcnow().isoformat(timespec="seconds") + "Z"},
               open(os.path.join(ROOT, "docs", "live.json"), "w"), indent=1)
 def call_get(path):
     return json.loads(urllib.request.urlopen(API + path, timeout=60).read().decode())
+def heal_unpublished(st):
+    """A product we released (published in state, not retired or draft) that Gumroad shows as unpublished gets re-enabled."""
+    for k, v in st.items():
+        f = os.path.join(ROOT, "products", k, "product.json")
+        if not (v.get("published") and v.get("live") is False and v.get("id") and os.path.exists(f)): continue
+        p = json.load(open(f))
+        if p.get("retired") or p.get("draft"): continue
+        try: call("PUT", f"/products/{v['id']}/enable", {}); v["live"] = True; DBG.append(["re_enabled", k]); print(f"::notice title=Gumroad re-enabled::{k}")
+        except Exception as e: DBG.append(["re_enable_fail", k, repr(e)[:200]])
+def sync_offer_code(st):
+    """Owner approved launch code (config/growthos/campaign.json offer_code): create it on each listed product while
+    active, delete it after 'until'. List prices never change."""
+    cf = os.path.join(ROOT, "config", "growthos", "campaign.json")
+    if not os.path.exists(cf): return
+    oc = json.load(open(cf)).get("offer_code") or {}
+    if not oc.get("name"): return
+    import datetime as _dt
+    active = _dt.datetime.now(_dt.timezone.utc) < _dt.datetime.fromisoformat(oc["until"].replace("Z", "+00:00"))
+    for slug in oc.get("products", []):
+        pid = (st.get(slug) or {}).get("id")
+        if not pid or not (st.get(slug) or {}).get("published"): continue
+        try:
+            have = [c for c in call_get(f"/products/{pid}/offer_codes?" + urllib.parse.urlencode({"access_token": TOK})).get("offer_codes", [])
+                    if (c.get("name") or "").upper() == oc["name"].upper()]
+            if active and not have:
+                call("POST", f"/products/{pid}/offer_codes", {"name": oc["name"], "amount_off": oc["percent_off"], "offer_type": "percent",
+                     "max_purchase_count": oc.get("max_purchase_count", 100)})
+                DBG.append(["offer_code_created", slug, oc["name"]])
+            elif not active:
+                for c in have:
+                    call("DELETE", f"/products/{pid}/offer_codes/{c['id']}", {}); DBG.append(["offer_code_deleted", slug, oc["name"]])
+            else: DBG.append(["offer_code_ok", slug])
+        except Exception as e: DBG.append(["offer_code_fail", slug, repr(e)[:200]])
 def main():
     if not TOK: print("No GUMROAD_TOKEN yet"); return
     try:
@@ -128,6 +162,9 @@ def main():
             print(f"::notice title=Gumroad live::{p['name']} {st[slug]['url']}")
         except Exception as e:
             DBG.append(["fail", slug, repr(e)[:300]]); print(f"::warning title=Gumroad failed::{slug} {str(e)[:300]}")
+    reconcile(st)
+    heal_unpublished(st)
+    sync_offer_code(st)
     reconcile(st)
     json.dump(st, open(sp, "w"), indent=1)
     json.dump(DBG, open(os.path.join(ROOT, "state", "gumroad_debug.json"), "w"), indent=1)

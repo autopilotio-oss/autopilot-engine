@@ -1,0 +1,53 @@
+{
+ "name": "FIRST SALES MODE",
+ "goal": "First 10 verified customers (Gumroad orders, not refunded) by Nov 10 2026",
+ "start": "2026-11-01",
+ "end": "2026-11-10",
+ "final_report": "2026-11-11T09:13-03:00",
+ "baseline": {"verified_orders": 0, "revenue_usd": 0, "at": "2026-10-31T20:34-03:00"},
+ "phases": [
+  {"days": "Nov 1 to Nov 2", "name": "build and test", "work": "Audit site, products, checkout, delivery, tracking and every scheduled agent. Fix what is broken."},
+  {"days": "Nov 3 to Nov 4", "name": "flagship funnels", "work": "Subscription Leak Hunter (subs-agent), Refund Fighter (refund-agent), Bill Lowering Coach (bill-agent): landing pages, demos, the All 5 Money Agents bundle, launch code in every CTA."},
+  {"days": "Nov 5 to Nov 7", "name": "viral distribution", "work": "Evidence backed formats, original factory reels (2 a day, autopost after the 85/100 gate), lead capture, Meta ad test behind the verified winner."},
+  {"days": "Nov 8 to Nov 10", "name": "optimize", "work": "Real traffic and sales only: fix the weakest funnel step, double down on verified winners, cut losers."}
+ ],
+ "flagships": {
+  "subs-agent": {"display": "Subscription Leak Hunter", "keyword": "SUBS", "guide": "https://autopilotoi.app/g/subs/"},
+  "refund-agent": {"display": "Refund Fighter", "keyword": "REFUND", "guide": "https://autopilotoi.app/g/refund/"},
+  "bill-agent": {"display": "Bill Lowering Coach", "keyword": "BILL", "guide": "https://autopilotoi.app/g/bill/"},
+  "bundle": "all-money-agents"
+ },
+ "offer_code": {
+  "name": "LAUNCH30",
+  "percent_off": 30,
+  "products": ["subs-agent", "refund-agent", "bill-agent", "all-money-agents", "raise-agent", "debt-agent", "shop-agent", "video-agent", "sell-agent", "deposit-agent", "workspace"],
+  "max_purchase_count": 100,
+  "until": "2026-11-11T03:00:00Z",
+  "link_format": "https://autopilotoi.gumroad.com/l/<permalink>/LAUNCH30",
+  "note": "List prices stay the same. The Gumroad sync creates the code on each product and deletes it after 'until'."
+ },
+ "ads": {
+  "platform": "Meta (Adspirer, account 1615960133613424)",
+  "daily_usd": 10,
+  "cap_usd": 60,
+  "from": "2026-11-05",
+  "rule": "Boost only the verified winning reel (best purchases, then guide clicks, then retention). Traffic or sales objective to the guide page, never engagement. Pause at the cap, on Nov 10 23:59 ART, or if 3 days spend gives zero guide clicks."
+ },
+ "approvals": [
+  {"what": "Standing autopost: factory reels that pass the 85/100 gate post 2 a day without per post approval, Nov 1 to Nov 10 only, then back to approval based", "quote": "Yes, 10 days only (Recommended)"},
+  {"what": "Push fixes and content to autopilotoi.app, landing pages and Gumroad product descriptions without asking each time, Nov 1 to Nov 10, no price changes", "quote": "Yes, 10 days only (Recommended)"},
+  {"what": "Meta ads, $10 a day, $60 total cap, behind the best performing reel from day 5", "quote": "$10/day, $60 cap"},
+  {"what": "Launch discount code up to 30% off until Nov 10, list prices unchanged", "quote": "Yes, up to 30% (Recommended)"}
+ ],
+ "approved_by": "Seb",
+ "approved_at": "2026-10-31T20:36-03:00",
+ "channel": "chat",
+ "still_needs_seb": ["Any list price change", "Any new paid tool or subscription", "Ad spend above $60", "Email broadcasts to the Kit list", "Refunds and customer disputes", "Autopost after Nov 10"],
+ "rules": [
+  "Purchases and profit over views. Every reel sells a live product or a flagship.",
+  "Keep the factory reel format: black and neon green factory top half, agent working live bottom half, strong hook, real demonstration, sample data labeled, product or free guide CTA.",
+  "85/100 quality gate before any post. Never fabricate metrics; missing data is MISSING.",
+  "No new agents or infrastructure unless a check proves something is broken.",
+  "Instagram 'Comment X' only for keywords in config/manychat.json; TikTok, Threads and X use link in bio or a direct link."
+ ]
+}

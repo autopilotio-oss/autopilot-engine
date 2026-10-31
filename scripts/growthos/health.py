@@ -13,7 +13,11 @@ from events import Store, ROOT, now  # noqa: E402
 
 PAGES = [("home", "https://autopilotoi.app/", "href=\"g/subs/\""), ("free", "https://autopilotoi.app/free/", "/g/subs/"),
          ("store", "https://autopilotoi.app/store/", "gumroad.com/l/"), ("workspace", "https://autopilotoi.app/workspace/", "gumroad.com/l/workspace"),
-         ("guide_subs", "https://autopilotoi.app/g/subs/", "gumroad.com/l/subs-agent"), ("brain", "https://autopilotoi.app/brain/", "kit.com")]
+         ("guide_subs", "https://autopilotoi.app/g/subs/", "gumroad.com/l/subs-agent"), ("brain", "https://autopilotoi.app/brain/", "kit.com"),
+         ("guide_refund", "https://autopilotoi.app/g/refund/", "gumroad.com/l/refund-agent"), ("guide_bill", "https://autopilotoi.app/g/bill/", "gumroad.com/l/bill-agent"),
+         ("guide_shop", "https://autopilotoi.app/g/shop/", "gumroad.com/l/shop-agent"), ("guide_video", "https://autopilotoi.app/g/video/", "gumroad.com/l/video-agent"),
+         ("guide_sell", "https://autopilotoi.app/g/sell/", "gumroad.com/l/sell-agent"), ("guide_raise", "https://autopilotoi.app/g/raise/", "gumroad.com/l/raise-agent")]
+CHECKOUT = "https://autopilotoi.gumroad.com/l/{}"
 HDIR = os.path.join(ROOT, "state", "health")
 
 
@@ -40,6 +44,39 @@ def check_pages(fetch=http_get):
     return out
 
 
+def check_checkout(fetch=http_get, root=ROOT):
+    """Every product the site sells (docs/live.json) must open a working Gumroad checkout page."""
+    out = []
+    try: live = json.load(open(os.path.join(root, "docs", "live.json")))["live"]
+    except Exception as e: return [{"check": "checkout:live_json", "ok": False, "severity": "SEV-1", "detail": str(e)[:120]}]
+    for slug in ["subs-agent", "refund-agent", "bill-agent"]:
+        if slug not in live:
+            out.append({"check": f"checkout:{slug}", "ok": False, "severity": "SEV-1", "detail": "flagship not live on Gumroad"})
+    for slug in live:
+        try:
+            code, body = fetch(CHECKOUT.format(slug))
+            out.append({"check": f"checkout:{slug}", "ok": code == 200 and "gumroad" in body.lower(), "severity": "SEV-1", "detail": f"{code}"})
+        except Exception as e:
+            out.append({"check": f"checkout:{slug}", "ok": False, "severity": "SEV-1", "detail": str(e)[:120]})
+    return out
+
+
+def approved_post_uuids(root=ROOT):
+    """Metricool uuids and ids of posts Seb approved (factory reel queue, incl. the campaign standing approval)."""
+    import glob
+    ids = set()
+    for f in glob.glob(os.path.join(root, "queue", "freel", "*.json")):
+        q = json.load(open(f))
+        if not (q.get("approval") or {}).get("quote"): continue
+        for p in q.get("posts", []):
+            for k in ("uuid", "metricool_id"):
+                if p.get(k) is not None: ids.add(str(p[k]))
+    try:
+        for v in json.load(open(os.path.join(root, "viral", "staged.json"))).values(): ids.add(str(v.get("metricool_uuid")))
+    except Exception: pass
+    return ids
+
+
 def check_files(root=ROOT):
     out = []
     try:
@@ -55,7 +92,7 @@ def check_files(root=ROOT):
         out.append({"check": "revenue_ledger_fresh", "ok": False, "severity": "SEV-2", "detail": str(e)[:120]})
     try:
         dbg = json.load(open(os.path.join(root, "state", "gumroad_debug.json")))
-        errs = [d for d in dbg if d and d[0] in ("fail", "crash", "update_fail", "cover_fail")]
+        errs = [d for d in dbg if d and d[0] in ("fail", "crash", "update_fail", "cover_fail", "re_enable_fail", "offer_code_fail", "adopt_fail")]
         out.append({"check": "gumroad_errors", "ok": not errs, "severity": "SEV-3", "detail": f"{len(errs)} error(s)"})
     except Exception:
         pass
@@ -161,7 +198,7 @@ def recover(results, dispatch):
 
 if __name__ == "__main__":
     from jobs import Queue
-    st = Store(); res = check_pages() + check_files()
+    st = Store(); res = check_pages() + check_checkout() + check_files()
     ps = os.path.join(ROOT, "state", "products.json")
     res += check_fulfillment(st, json.load(open(ps)) if os.path.exists(ps) else {}) + check_integrity(st) + check_jobs(Queue())
     import heartbeat
