@@ -83,6 +83,10 @@
   "ok": true,
   "severity": "SEV-2"
  },
+ "worker:support_agent": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
  "worker:tiktok_intel": {
   "ok": true,
   "severity": "SEV-4"
