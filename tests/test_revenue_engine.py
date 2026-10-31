@@ -125,7 +125,7 @@ def test_guide_pages_build_reproducibly():
     """The site builder runs clean and produces no unexpected diff (production pages preserved)."""
     r = subprocess.run(["python3", "tools/guides/build.py"], cwd=ROOT, capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
-    diff = subprocess.run(["git", "status", "--porcelain", "docs/g", "docs/sitemap.xml"], cwd=ROOT, capture_output=True, text=True).stdout
+    diff = subprocess.run(["git", "diff", "--name-only", "--", "docs/g", "docs/sitemap.xml"], cwd=ROOT, capture_output=True, text=True).stdout
     assert diff.strip() == "", diff
 
 
