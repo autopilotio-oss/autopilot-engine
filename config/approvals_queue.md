@@ -13,7 +13,7 @@ Why now: the refund-dd Threads post (Nov 3 12:30 ET) sends people to this guide,
 QA: all pass, see config/qa/2026-10-31-refund-v2.md (sources opened, no dashes, no promises, reader reviews and sends everything, 5 prompts tested on a synthetic case, disclaimer present). Kit PDF unchanged.
 Preview: docs/g/refund-v2/index.html (noindex, not linked, not in sitemap) · cover: none (no new product, live refund cover unchanged).
 On APPROVED: copy G["refund-v2"] fields over G["refund"] in tools/guides/guides.py (drop draft/base), delete the refund-v2 entry and docs/g/refund-v2/, rebuild.
-Status: AWAITING APPROVAL
+Status: APPROVED by Seb Oct 31, RELEASED Oct 31 (live at /g/refund/)
 
 ## 2026-10-31 · lead-followup-pro · Lead Follow-Up Pro ($99 Claude Skill test) · IDEA GATE ONLY, nothing built
 What: installable Claude Skill that sorts a business's leads by urgency, drafts follow-ups for the owner to approve, and keeps a tracker.

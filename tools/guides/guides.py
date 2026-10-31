@@ -74,6 +74,7 @@ G["subs"] = dict(
   instr="You are my Subscription Agent. When I say 'monthly sweep', read the statements I upload, list every recurring charge, and compare it to my keep list. Flag: new subscriptions, price increases, free trials that turned paid, duplicates, and anything I said I canceled that is still charging. For each flag, write the cancel or refund message ready to send. End with my total per month and per year, and how much I saved since I started. Keep it short."),
  sources=[("CFPB: disputing a credit card charge","https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-a-charge-on-my-credit-card-bill-en-61/"),("FTC: report a company that won't let you cancel","https://reportfraud.ftc.gov")],
 )
+# Original refund entry: its agent name/setup are reused by the approved rewrite below, which replaces it.
 G["refund"] = dict(
  kw="REFUND", bundle=False, title="Get your money back", sub="Canceled flights, double charges, things that never arrived. You often have a legal right to a refund. Here's how to claim it with Claude.",
  time="About 10 minutes per refund", need="The receipt or booking, any emails, and Claude",
@@ -169,8 +170,7 @@ G["sell"] = dict(TT,
 # DRAFT (Oct 31 2026 factory run): improved REFUND guide. Not linked anywhere. On Seb's APPROVED,
 # copy these fields over G["refund"] and delete this entry. Sources opened Oct 31 2026: DOT refunds page
 # (updated Nov 7 2025), FTC "Using Credit Cards and Disputing Charges", CFPB ask-cfpb 61 and 1017.
-G["refund-v2"] = dict(
- draft=True, base="refund",
+G["refund"] = dict(
  kw="REFUND", bundle=False, title="Get your money back", sub="Canceled flights, double charges, things that never arrived. You often have a legal right to a refund. Here's how to claim it with Claude.",
  time="About 10 minutes per refund", need="The receipt or booking, any emails, and Claude",
  why="Companies don't always refund you on their own. A short written request that names the rule is easy for them to approve, and it starts the paper trail you need if you have to escalate.",
