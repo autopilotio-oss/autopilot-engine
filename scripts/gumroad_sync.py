@@ -41,7 +41,13 @@ def main():
         d = os.path.dirname(f); slug = os.path.basename(d); p = json.load(open(f))
         if slug in st and st[slug].get("published"): continue
         try:
-            fu = upload(unseal(d), p["filename"])
+            if p.get("bundle_of"):
+                fu = []
+                for sub in p["bundle_of"]:
+                    sd = os.path.join(ROOT, "products", sub); sp_ = json.load(open(os.path.join(sd, "product.json")))
+                    fu.append(upload(unseal(sd), sp_["filename"]))
+            else:
+                fu = upload(unseal(d), p["filename"])
             r = call("POST", "/products", {"name": p["name"], "price": p["price_cents"], "price_currency_type": "usd", "native_type": "digital",
                      "description": p["description_html"], "custom_permalink": p["permalink"], "tags[]": p.get("tags", []), "files[][url]": fu})
             pid = r["product"]["id"]

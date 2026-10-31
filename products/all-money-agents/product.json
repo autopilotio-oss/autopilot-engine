@@ -1,0 +1,23 @@
+{
+ "name": "AUTOPILOT.OI All 6 Money Agents",
+ "price_cents": 3900,
+ "permalink": "all-money-agents",
+ "filename": "(bundle)",
+ "bundle_of": [
+  "credit-agent",
+  "bill-agent",
+  "debt-agent",
+  "subs-agent",
+  "refund-agent",
+  "raise-agent"
+ ],
+ "description_html": "<p><strong>All 6 Money Agents for Claude. $60 if bought separately, $39 here.</strong></p><ul><li><strong>Credit Agent:</strong> audits your credit reports, writes disputes, tracks every deadline</li><li><strong>Bill Agent:</strong> checks medical bills against your insurance before you pay</li><li><strong>Debt Agent:</strong> lower rate call scripts, payoff plan, what to pay every payday</li><li><strong>Subscription Agent:</strong> finds every recurring charge and writes the cancel messages</li><li><strong>Refund Agent:</strong> finds money you're owed and writes refunds and disputes</li><li><strong>Raise Agent:</strong> logs your wins, finds your number with real pay data, rehearses the talk</li></ul><p>Each one: the full master prompt, 5 starter prompts, a step by step 10 minute setup and a tracker. Works with Claude's free or paid plan.</p><p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/all6-cover.png",
+ "tags": [
+  "ai",
+  "claude",
+  "personal finance",
+  "ai agent",
+  "money"
+ ]
+}
