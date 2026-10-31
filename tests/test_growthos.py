@@ -172,6 +172,8 @@ def test_T09_hard_cost_cap_pauses_optional_ai(env):
 
 
 def test_T09b_unset_caps_are_reported_not_invented(env):
+    bp = os.path.join(env["cfg"], "budget.json"); b = json.load(open(bp))
+    b.update({"ai_daily_soft_cap": None, "ai_daily_hard_cap": None}); json.dump(b, open(bp, "w"))
     assert costs.guard(env["store"], env["cfg"])["status"].startswith("UNCAPPED")
     r = costs.report(env["store"], orders.money(env["store"], set()))
     assert r["contribution_status"].startswith("INCOMPLETE") and "Metricool" in r["unknown_costs"]

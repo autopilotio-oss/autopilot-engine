@@ -1,7 +1,14 @@
 {
  "currency": "USD",
- "ai_daily_soft_cap": null,
- "ai_daily_hard_cap": null,
- "monthly_services_cap": null,
- "status": "NOT SET: owner must approve dollar caps (Growth OS 07: do not invent cap amounts). Until set, optional costed work is allowed but every run's cost is recorded and flagged UNCAPPED."
+ "monthly_usage_cap": 3000,
+ "ai_daily_soft_cap": 100,
+ "ai_daily_hard_cap": 200,
+ "render_quota_per_day": 1,
+ "approved": {
+  "by": "Seb",
+  "at": "2026-10-31T15:52-03:00",
+  "channel": "chat",
+  "quote": "$30 a month (Recommended)"
+ },
+ "scope": "Usage based tools: ElevenLabs voice renders and any paid API. Amounts in cents. Soft cap throttles noncritical work, hard cap pauses optional renders and AI calls. Fixed subscriptions (Kit, ManyChat, Metricool, Claude) are tracked in costs.py, not capped here. No new spend or subscriptions without Seb."
 }

@@ -90,6 +90,13 @@
    "since": "2026-10-31T18:43:09+00:00",
    "enabled": false,
    "why_disabled": "cannot publish under NO PROOF, NO POST; renders/drafts without a path to approval waste money. Re-enable from growth-os/rollback."
+  },
+  "support_agent": {
+   "task": "trig_011cCwkeqTFGxnBvMWyEQsSQ",
+   "cadence": "10:07 and 16:07 ART",
+   "max_gap_hours": 16,
+   "severity": "SEV-3",
+   "since": "2026-10-31T18:54:38+00:00"
   }
  }
 }
