@@ -9,5 +9,6 @@
 - Oct 30: Metricool could not publish one Instagram post: "The Instagram account is restricted." Later Instagram posts published fine on Oct 31, so it looks lifted; watch for repeats.
 - Oct 30: Meta rejected the boosted credit report post (Discriminatory Practices policy). Credit is a special ad category on Meta; the paid Credit Agent is retired. Do not boost credit posts.
 - Oct 31 11:32 ART: TikTok new login alert from Safari, Buenos Aires (Seb's own setup; informational).
+- Support agent run Oct 31 19:10 UTC: incidents recorded inc:email:1a18dab9 (SEV-2 Metricool/IG restricted post), inc:email:1a18e451 + inc:email:1a18e44f (SEV-2 credit ad rejected). Oct 30-31 logins (Google, Kit, Metricool, Porkbun, Meta password change) all iOS/Argentina during setup: SEV-3 informational, not recorded.
 ## Support this week
-- 0 buyer emails (no orders yet).
+- 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
