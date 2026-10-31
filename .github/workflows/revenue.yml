@@ -1,0 +1,30 @@
+name: Revenue ledger (Gumroad + site numbers)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "53 */3 * * *"
+permissions:
+  contents: write
+concurrency: revenue
+jobs:
+  ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gumroad orders, refunds and product inventory (no personal data stored)
+        env: { GUMROAD_TOKEN: "${{ secrets.GUMROAD_TOKEN }}" }
+        run: python3 scripts/revenue/ledger.py sync
+      - name: Website numbers (GoatCounter, aggregate only)
+        env: { GOATCOUNTER_TOKEN: "${{ secrets.GOATCOUNTER_TOKEN }}" }
+        run: python3 scripts/revenue/goatcounter.py
+      - name: Catalog + quality gate
+        run: |
+          python3 scripts/revenue/catalog.py
+          python3 scripts/revenue/quality.py || echo "::warning::quality gate found problems"
+      - name: Save
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add state/ledger config/catalog.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Revenue ledger update"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done

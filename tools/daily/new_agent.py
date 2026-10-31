@@ -58,7 +58,8 @@ desc = (f"<p><strong>{e(S['headline'])}</strong></p><p>{e(S['what'])}</p>"
         f"<p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>")
 prod = {"name": f"AUTOPILOT.OI {name}", "price_cents": 1000, "permalink": slug, "filename": f"AUTOPILOT.OI {name} Setup.pdf",
         "description_html": desc, "cover_url": f"https://autopilotoi.app/store/{key}-cover.png?v=1",
-        "tags": S.get("tags", ["ai", "claude", "ai agent"]), "version": 1, "cover_v": 1}
+        "tags": S.get("tags", ["ai", "claude", "ai agent"]), "version": 1, "cover_v": 1,
+        "draft": True}  # Revenue Engine 2.0: paid publication needs Seb's approval (scripts/revenue/release.py)
 json.dump(prod, open(os.path.join(ROOT, "products", slug, "product.json"), "w"), indent=2, ensure_ascii=False)
 
 # ---------- cover + thumb ----------
@@ -66,7 +67,7 @@ json.dump(S["cover"] | {"price": "$10"}, open(os.path.join(ROOT, "tools", "kits"
 run(["python3", "tools/kits/covers2.py", key])
 
 # ---------- guide ----------
-gd = S["guide"] | {"kw": S["kw"], "permalink": slug, "bundle_btn": S["guide"].get("bundle_btn", "")}
+gd = S["guide"] | {"kw": S["kw"], "permalink": slug, "bundle_btn": S["guide"].get("bundle_btn", ""), "draft": True}
 json.dump(gd, open(os.path.join(ROOT, "tools", "guides", "extra", f"{key}.json"), "w"), indent=1, ensure_ascii=False)
 run(["python3", "tools/guides/build.py"])
 
@@ -85,6 +86,11 @@ json.dump({"date": d, "slug": slug, "name": name, "kw": S["kw"], "gate": S["gate
            "links": {"guide": f"https://autopilotoi.app/g/{key}/", "gumroad": f"https://autopilotoi.gumroad.com/l/{slug}",
                      "video": f"https://autopilotoi.app/media/demo/{slug}.mp4"}},
           open(os.path.join(ROOT, "docs", "daily", f"{d}-{slug}.json"), "w"), indent=1, ensure_ascii=False)
+sys.path.insert(0, os.path.join(ROOT, "scripts", "revenue")); import quality
+qa = quality.check(slug)
 with open(os.path.join(ROOT, "config", "approvals_queue.md"), "a") as f:
-    f.write(f"\n- {d} {name} ({slug}): AUTO RELEASED, gate {sum(sc.values())}/12. Seb chose fully automatic daily agents on Oct 31 2026.\n")
-print("ready:", slug, "→ commit + push, then wait for the Gumroad sync and the demo video")
+    f.write(f"\n## {d} {name} ({slug})\nProblem: {S['headline']}\nGate: {sum(sc.values())}/12 {json.dumps(sc)}\n"
+            f"Evidence: {', '.join(g.get('problem_sources', []))}\nQA: {'PASS' if not qa else '; '.join(qa)}\n"
+            f"Preview: docs/g/{key}/ (noindex draft), docs/store/{key}-cover.png, docs/media/demo/{slug}.mp4 (after render)\n"
+            f"Approve: python3 scripts/revenue/release.py {slug} --approved-by \"Seb, <date>\"\nStatus: AWAITING APPROVAL\n")
+print("drafted:", slug, "QA", "PASS" if not qa else qa, "→ commit + push (Gumroad sync skips drafts), then ask Seb")

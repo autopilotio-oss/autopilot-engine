@@ -2,10 +2,30 @@
    and a guard that greys out buy buttons for products not live on Gumroad (docs/live.json, written by the Gumroad sync). */
 (function () {
   var page = (location.pathname.replace(/^\/|\/$/g, '') || 'home').replace(/\//g, '-');
-  // Keep the visitor's first traffic source for the whole visit.
-  var q = new URLSearchParams(location.search), src = null;
-  try { src = q.get('utm_source') || sessionStorage.getItem('ap_src'); if (q.get('utm_source')) sessionStorage.setItem('ap_src', q.get('utm_source')); } catch (e) {}
-  var camp = null; try { camp = q.get('utm_campaign') || sessionStorage.getItem('ap_camp'); if (q.get('utm_campaign')) sessionStorage.setItem('ap_camp', q.get('utm_campaign')); } catch (e) {}
+  // Attribution (Revenue Engine 2.0): keep the inbound UTM set for the visit (session) and the first known touch (local).
+  // Missing values stay empty, so orders without a source are reported as "unknown", never guessed.
+  var q = new URLSearchParams(location.search), K = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'], cur = {}, first = null;
+  try {
+    if (q.get('utm_source')) { K.forEach(function (k) { if (q.get(k)) sessionStorage.setItem('ap_' + k, q.get(k)); }); }
+    K.forEach(function (k) { var v = sessionStorage.getItem('ap_' + k); if (v) cur[k] = v; });
+    first = JSON.parse(localStorage.getItem('ap_first') || 'null');
+    if (!first && cur.utm_source) { first = { s: cur.utm_source, c: cur.utm_campaign || '', t: new Date().toISOString().slice(0, 10) }; localStorage.setItem('ap_first', JSON.stringify(first)); }
+  } catch (e) {}
+  var src = cur.utm_source || null, camp = cur.utm_campaign || null;
+  // Lead attribution: every Kit opt-in on the site posts a FormData to app.kit.com. Add the visit's UTM set and first touch
+  // as Kit custom fields (utm_source, utm_campaign, utm_content, first_touch). Empty values are simply not sent.
+  try {
+    var _f = window.fetch;
+    window.fetch = function (url, opt) {
+      try {
+        if (typeof url === 'string' && url.indexOf('app.kit.com/forms/') > -1 && opt && opt.body instanceof FormData) {
+          ['utm_source', 'utm_campaign', 'utm_content'].forEach(function (k) { if (cur[k] && !opt.body.has('fields[' + k + ']')) opt.body.append('fields[' + k + ']', cur[k]); });
+          if (first && first.s) opt.body.append('fields[first_touch]', first.s + (first.c ? ':' + first.c : '') + '@' + first.t);
+        }
+      } catch (e) {}
+      return _f.apply(this, arguments);
+    };
+  } catch (e) {}
   // GoatCounter (no cookies). Page views are automatic.
   var gc = document.createElement('script'); gc.async = true; gc.src = 'https://gc.zgo.at/count.js';
   gc.setAttribute('data-goatcounter', 'https://autopilotoi.goatcounter.com/count'); document.head.appendChild(gc);
@@ -17,11 +37,13 @@
       var slug = slugOf(a); if (!slug || a.dataset.apWired) return; a.dataset.apWired = '1';
       try {
         var u = new URL(a.href);
-        u.searchParams.set('utm_source', src || 'site'); u.searchParams.set('utm_medium', 'site');
-        u.searchParams.set('utm_campaign', camp || page); u.searchParams.set('utm_content', slug);
+        // Gumroad keeps these on the sale (url_params), which is how orders get joined to content.
+        u.searchParams.set('utm_source', src || 'site'); u.searchParams.set('utm_medium', cur.utm_medium || (src ? 'organic_social' : 'site'));
+        u.searchParams.set('utm_campaign', camp || page); u.searchParams.set('utm_content', cur.utm_content || ('site_' + page.replace(/[^a-z0-9]+/gi, '_').toLowerCase()));
+        if (first && first.s) u.searchParams.set('ft', first.s + (first.c ? ':' + first.c : ''));
         a.href = u.toString();
       } catch (e) {}
-      a.addEventListener('click', function () { ev('checkout-click/' + slug + '/' + page); });
+      a.addEventListener('click', function () { ev('checkout-click/' + slug.replace(/-/g, '_') + '/' + page + '/' + (src || 'direct')); });
     });
     // Hide buy buttons for products that are not live yet. Fails open: if live.json can't load, links stay as they are.
     fetch('/live.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
@@ -37,7 +59,7 @@
   }
   function init() {
     wire();
-    var f = document.getElementById('kf'); if (f) f.addEventListener('submit', function () { ev('optin/' + page); });
+    var f = document.getElementById('kf'); if (f) f.addEventListener('submit', function () { ev('optin/' + page + '/' + (src || 'direct')); });
     // Quiz: results are drawn after the last answer, so wire their links then and count the completion.
     var out = document.getElementById('out');
     if (out && window.MutationObserver) new MutationObserver(function () { if (!out.classList.contains('hide')) { ev('quiz-complete'); wire(); } }).observe(out, { attributes: true, attributeFilter: ['class'] });

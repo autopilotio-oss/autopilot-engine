@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Business Agent Setup · Pilot · AUTOPILOT.OI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040506;--l:#D4FF3A;--mut:rgba(255,255,255,.64);--line:rgba(255,255,255,.1);--card:rgba(255,255,255,.035)}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:#fff;font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.w{max-width:760px;margin:0 auto;padding:0 22px}.top{display:flex;align-items:center;gap:10px;padding:20px 0;border-bottom:1px solid var(--line)}
+.top b{font:24px 'Bebas Neue';letter-spacing:3px}.top span{margin-left:auto;font:700 12px 'Space Mono';letter-spacing:2px;color:var(--l)}
+.tag{display:inline-block;font:700 12px 'Space Mono';letter-spacing:2px;background:var(--l);color:#06120a;padding:6px 10px;border-radius:8px;margin-top:48px}
+h1{font:clamp(58px,12vw,104px)/.9 'Bebas Neue';letter-spacing:1px;margin:16px 0}h1 em{font-style:normal;color:var(--l)}
+.sub{font-size:20px;color:var(--mut);max-width:620px}h2{font:34px 'Bebas Neue';letter-spacing:1px;margin:46px 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:12px 0}
+ul{margin-left:20px}li{margin:6px 0;color:var(--mut)}li b{color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.mono{font:700 12px 'Space Mono';letter-spacing:2px;color:var(--l)}
+form{display:grid;gap:10px;margin-top:14px}input,textarea,select{width:100%;background:#0c0e0b;border:1px solid var(--line);border-radius:12px;color:#fff;padding:14px;font:16px Inter}
+button{background:var(--l);color:#06120a;border:0;border-radius:12px;padding:16px;font:700 14px 'Space Mono';letter-spacing:2px;cursor:pointer}
+label.c{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--mut)}label.c input{width:auto;margin-top:4px}
+.foot{color:rgba(255,255,255,.38);font-size:13px;margin:60px 0 40px}
+</style></head><body><div class="w">
+<div class="top"><b>AUTOPILOT.OI</b><span>PILOT</span></div>
+<span class="tag">BUSINESS AGENT SETUP · PILOT</span>
+<h1>We set up your <em>first AI agent</em> with you.</h1>
+<p class="sub">For small business owners who want Claude handling one repeat task, like customer replies, quotes or follow ups, without figuring it out alone.</p>
+
+<h2>What the pilot includes</h2>
+<div class="grid">
+ <div class="card"><div class="mono">01 · FIT CALL</div><p>30 minutes to pick the one task worth automating first and check Claude can do it well.</p></div>
+ <div class="card"><div class="mono">02 · BUILD</div><p>We write your agent's instructions, your prices, rules and voice, and test it on your real examples.</p></div>
+ <div class="card"><div class="mono">03 · HANDOFF</div><p>A 45 minute walkthrough, a one page how to, and 14 days of email questions.</p></div>
+ <div class="card"><div class="mono">04 · YOU STAY IN CONTROL</div><p>It drafts. You approve and send. Nothing posts, pays or emails customers on its own.</p></div>
+</div>
+
+<h2>What it is not</h2>
+<ul><li>Not unlimited work or ongoing management.</li><li>Not a promise of more sales or saved hours. We show you what it does on your own examples before you decide.</li><li>No access to your bank, payments or passwords.</li></ul>
+
+<h2>Apply for a spot</h2>
+<p class="mut" style="color:var(--mut)">We reply by email within 2 business days. No payment now.</p>
+<form id="pf">
+ <input id="pe" type="email" required placeholder="Your email" autocomplete="email">
+ <input id="pb" required placeholder="Your business (what you sell, where)">
+ <textarea id="pt" required rows="3" placeholder="The one task you'd hand off first"></textarea>
+ <label class="c"><input type="checkbox" id="pc" required> Email me about this pilot. I can unsubscribe any time.</label>
+ <button id="pbn">APPLY</button><p id="pm" style="font-size:14px"></p>
+</form>
+<p class="foot">Draft pilot page, not public. Scope, price and refund terms are set by the owner before launch. AUTOPILOT.OI is independent and not affiliated with Anthropic.</p>
+</div>
+<script>
+const $=i=>document.getElementById(i);
+$('pf').addEventListener('submit',ev=>{ev.preventDefault();if(!$('pc').checked)return;$('pbn').disabled=true;const fd=new FormData();
+fd.append('email_address',$('pe').value.trim());fd.append('fields[source]','pilot');
+fd.append('fields[inquiry]',($('pb').value+' | '+$('pt').value).slice(0,240));
+fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(()=>{$('pf').innerHTML='<p><b>Got it.</b> We will email you within 2 business days.</p>';try{goatcounter.count({path:'inquiry/pilot',event:true})}catch(e){}}).catch(()=>{$('pbn').disabled=false;$('pm').textContent='Something went wrong. Try again.'})});
+</script><script src="/assets/ap.js" defer></script></body></html>

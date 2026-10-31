@@ -1,0 +1,369 @@
+{
+ "offers": [
+  {
+   "offer_id": "all_money_agents",
+   "permalink": "all-money-agents",
+   "name": "All 5 Money Agents",
+   "price_cents": 3900,
+   "currency": "USD",
+   "kind": "bundle",
+   "components": [
+    "bill_agent",
+    "debt_agent",
+    "subs_agent",
+    "refund_agent",
+    "raise_agent"
+   ],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/all-money-agents",
+   "guides": [],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "bill_agent",
+   "permalink": "bill-agent",
+   "name": "Bill Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/bill-agent",
+   "guides": [
+    {
+     "guide": "bill",
+     "path": "g/bill/",
+     "keyword": "BILL",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "credit_agent",
+   "permalink": "credit-agent",
+   "name": "Credit Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "retired",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/credit-agent",
+   "guides": [
+    {
+     "guide": "credit",
+     "path": "g/credit/",
+     "keyword": "CREDIT",
+     "paid": false
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "debt_agent",
+   "permalink": "debt-agent",
+   "name": "Debt Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/debt-agent",
+   "guides": [
+    {
+     "guide": "debt",
+     "path": "g/debt/",
+     "keyword": "DEBT",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "deposit_agent",
+   "permalink": "deposit-agent",
+   "name": "Deposit Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "draft",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/deposit-agent",
+   "guides": [],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "lower_agent",
+   "permalink": "lower-agent",
+   "name": "Lower Bills Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "retired",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/lower-agent",
+   "guides": [],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "money_agents",
+   "permalink": "money-agents",
+   "name": "Money Agents Bundle",
+   "price_cents": 2400,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "retired",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/money-agents",
+   "guides": [],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "raise_agent",
+   "permalink": "raise-agent",
+   "name": "Raise Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/raise-agent",
+   "guides": [
+    {
+     "guide": "raise",
+     "path": "g/raise/",
+     "keyword": "RAISE",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "refund_agent",
+   "permalink": "refund-agent",
+   "name": "Refund Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/refund-agent",
+   "guides": [
+    {
+     "guide": "refund",
+     "path": "g/refund/",
+     "keyword": "REFUND",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "sell_agent",
+   "permalink": "sell-agent",
+   "name": "Sales Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/sell-agent",
+   "guides": [
+    {
+     "guide": "sell",
+     "path": "g/sell/",
+     "keyword": "SELL",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "shop_agent",
+   "permalink": "shop-agent",
+   "name": "Shop Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/shop-agent",
+   "guides": [
+    {
+     "guide": "shop",
+     "path": "g/shop/",
+     "keyword": "SHOP",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "subs_agent",
+   "permalink": "subs-agent",
+   "name": "Subscription Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/subs-agent",
+   "guides": [
+    {
+     "guide": "subs",
+     "path": "g/subs/",
+     "keyword": "SUBS",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "tiktok_agents",
+   "permalink": "tiktok-agents",
+   "name": "TikTok Agents Bundle",
+   "price_cents": 2400,
+   "currency": "USD",
+   "kind": "bundle",
+   "components": [
+    "video_agent",
+    "shop_agent",
+    "sell_agent"
+   ],
+   "status": "not_live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/tiktok-agents",
+   "guides": [],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "video_agent",
+   "permalink": "video-agent",
+   "name": "Video Agent",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "not_live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/video-agent",
+   "guides": [
+    {
+     "guide": "video",
+     "path": "g/video/",
+     "keyword": "VIDEO",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "workspace",
+   "permalink": "ttdat",
+   "name": "THE WORKSPACE",
+   "price_cents": 4900,
+   "currency": "USD",
+   "kind": "course",
+   "components": [],
+   "status": "not_live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/ttdat",
+   "guides": [],
+   "page": "workspace/",
+   "managed_by": "gumroad (manual)"
+  }
+ ],
+ "keywords": [
+  {
+   "keyword": "WORKSPACE",
+   "links": [
+    "workspace/"
+   ]
+  },
+  {
+   "keyword": "BRAIN",
+   "links": [
+    "brain/"
+   ]
+  },
+  {
+   "keyword": "AGENTS",
+   "links": [
+    "brain/"
+   ]
+  },
+  {
+   "keyword": "AGENT",
+   "links": [
+    "brain/"
+   ]
+  },
+  {
+   "keyword": "CREDIT",
+   "links": [
+    "g/credit/"
+   ]
+  },
+  {
+   "keyword": "BILL",
+   "links": [
+    "g/bill/"
+   ]
+  },
+  {
+   "keyword": "DEBT",
+   "links": [
+    "g/debt/"
+   ]
+  },
+  {
+   "keyword": "SUBS",
+   "links": [
+    "g/subs/"
+   ]
+  },
+  {
+   "keyword": "REFUND",
+   "links": [
+    "g/refund/"
+   ]
+  },
+  {
+   "keyword": "RAISE",
+   "links": [
+    "g/raise/"
+   ]
+  },
+  {
+   "keyword": "VIDEO",
+   "links": [
+    "g/video/"
+   ]
+  },
+  {
+   "keyword": "SHOP",
+   "links": [
+    "g/shop/"
+   ]
+  },
+  {
+   "keyword": "SELL",
+   "links": [
+    "g/sell/"
+   ]
+  },
+  {
+   "keyword": "DEPOSIT",
+   "links": [
+    "g/deposit/"
+   ]
+  }
+ ],
+ "live": [
+  "all-money-agents",
+  "bill-agent",
+  "debt-agent",
+  "raise-agent",
+  "refund-agent",
+  "sell-agent",
+  "shop-agent",
+  "subs-agent"
+ ]
+}
