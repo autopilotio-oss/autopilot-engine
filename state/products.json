@@ -4,7 +4,8 @@
   "url": "https://autopilotoi.gumroad.com/l/bill-agent",
   "published": true,
   "live": true,
-  "version": 2
+  "version": 2,
+  "cover_v": 3
  },
  "credit-agent": {
   "id": "foI8-MiTn-D_fGDn6BTG-A==",
@@ -18,7 +19,8 @@
   "url": "https://autopilotoi.gumroad.com/l/debt-agent",
   "published": true,
   "live": true,
-  "version": 2
+  "version": 2,
+  "cover_v": 3
  },
  "money-agents": {
   "id": "x6n2xi-MW0lqHI5dXfS10g==",
@@ -33,7 +35,7 @@
   "published": true,
   "live": true,
   "version": 2,
-  "cover_v": 2
+  "cover_v": 3
  },
  "refund-agent": {
   "id": "CayudpoEYLqNtawHm8nGIw==",
@@ -41,7 +43,7 @@
   "published": true,
   "live": true,
   "version": 2,
-  "cover_v": 2
+  "cover_v": 3
  },
  "raise-agent": {
   "id": "kLaDgPTtWVpuxwJoKv995g==",
@@ -49,27 +51,30 @@
   "published": true,
   "live": true,
   "version": 2,
-  "cover_v": 2
+  "cover_v": 3
  },
  "all-money-agents": {
   "id": "46txwcc0xEUbjJR-kM3Yfw==",
   "url": "https://autopilotoi.gumroad.com/l/all-money-agents",
   "published": true,
   "live": true,
-  "version": 3
+  "version": 3,
+  "cover_v": 3
  },
  "sell-agent": {
   "id": "3ovGglfKChBYmztor4awjw==",
   "url": "https://autopilotoi.gumroad.com/l/sell-agent",
   "published": true,
   "version": 3,
-  "live": true
+  "live": true,
+  "cover_v": 3
  },
  "shop-agent": {
   "id": "8z26hcuQJVrhG506xb7zxg==",
   "url": "https://autopilotoi.gumroad.com/l/shop-agent",
   "published": true,
   "version": 3,
-  "live": true
+  "live": true,
+  "cover_v": 3
  }
 }

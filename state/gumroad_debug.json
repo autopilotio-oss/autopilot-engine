@@ -9,6 +9,21 @@
  ],
  [
   "cover",
+  "all-money-agents",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/kdumtwfiuqcmnfdf1lxdm5wwm4td', 'original_url': 'https://public-files.gumroad.com/kdumtwfiuqcmnfdf1lxdm5wwm4td', 'thumbnail': None"
+ ],
+ [
+  "cover",
+  "bill-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/7dmhfwzdjotxwi7akb5jxervfi9s', 'original_url': 'https://public-files.gumroad.com/koi7ha3jo7badtma2g8e4zd0fjft', 'thumbnail': None"
+ ],
+ [
+  "cover",
+  "debt-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/xexcs6emkjer7mxw3xnew84xmy01', 'original_url': 'https://public-files.gumroad.com/6kf6mf4d2i3hopg3s8kqze95ht69', 'thumbnail': None"
+ ],
+ [
+  "cover",
   "raise-agent",
   "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/3c2596rgqip7po2svvbq0ojay2h4', 'original_url': 'https://public-files.gumroad.com/y6v5x8mypuil2fo9nspd9chizr23', 'thumbnail': None"
  ],
@@ -19,8 +34,18 @@
  ],
  [
   "cover",
+  "sell-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/ly3d1facpc6c39w0tywzi6rznvvi', 'original_url': 'https://public-files.gumroad.com/ly3d1facpc6c39w0tywzi6rznvvi', 'thumbnail': None"
+ ],
+ [
+  "cover",
+  "shop-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/3flj2jci71apq4piigrqlo56azm0', 'original_url': 'https://public-files.gumroad.com/3flj2jci71apq4piigrqlo56azm0', 'thumbnail': None"
+ ],
+ [
+  "cover",
   "subs-agent",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/kt044cvfnhqqewk6p04q2s6euv5b', 'original_url': 'https://public-files.gumroad.com/kt044cvfnhqqewk6p04q2s6euv5b', 'thumbnail': None"
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/aimty59soi07g8rk0izk4rymq38x', 'original_url': 'https://public-files.gumroad.com/kt044cvfnhqqewk6p04q2s6euv5b', 'thumbnail': None"
  ],
  [
   "create_no_product",
