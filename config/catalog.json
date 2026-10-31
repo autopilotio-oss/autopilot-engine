@@ -272,7 +272,14 @@
    "components": [],
    "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/workspace",
-   "guides": [],
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "workspace/",
+     "keyword": null,
+     "paid": true
+    }
+   ],
    "managed_by": "products/"
   }
  ],
