@@ -118,5 +118,10 @@
   "via": "metricool",
   "at": "2026-10-31T12:05:00+00:00",
   "kind": "scheduled"
+ },
+ "quiz-launch": {
+  "via": "metricool",
+  "at": "2026-10-31T12:25:56Z",
+  "kind": "scheduled"
  }
 }
