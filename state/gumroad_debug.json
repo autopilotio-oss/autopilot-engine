@@ -8,6 +8,11 @@
   "ok"
  ],
  [
+  "update",
+  "all-money-agents",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI All 5 Money Agents', 'description': '<p><strong>All 5 Money Agents for Claude. $50 separately, $39 here.</strong></p><ul>\\n<li>\\n<strong>Bill Agent:</strong> checks a medical bill against your insurance before you pay</li>\\n<li>\\n<strong>Debt Agent"
+ ],
+ [
   "create_no_product",
   "tiktok-agents",
   "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
