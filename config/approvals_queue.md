@@ -34,4 +34,4 @@ QA: PASS (scripts/revenue/quality.py). Kit PDF, cover, guide and demo video chec
 Preview: docs/g/deposit/ (noindex draft), docs/store/deposit-cover.png, docs/media/demo/deposit-agent.mp4
 Note: built under the Oct 31 "fully automatic" decision, then put back to draft by Revenue Engine 2.0 (paid publication needs approval). Posts for it are scheduled Nov 1 (TikTok + IG 10:30 ET, X 11:30 ET) and Nov 2 (Threads 11:00 ET); they point to the free guide only.
 Approve: python3 scripts/revenue/release.py deposit-agent --approved-by "Seb, <date>"
-Status: AWAITING APPROVAL
+Status: APPROVED (Seb (Oct 31 chat: finish everything yourself)), RELEASED 2026-10-31
