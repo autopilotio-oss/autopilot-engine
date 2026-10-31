@@ -12,3 +12,5 @@
 | 2026-10-31 15:52 | Keep the 13 posts scheduled in Metricool before the cutover | Seb (chat) | Legacy posts Nov 1 to 3 | One time |
 | 2026-10-31 15:52 | GitHub issue alerts confirmed received | Seb (chat) | Alert channel 1 | Standing |
 | 2026-10-31 15:52 | Seb will connect Gmail so the support agent can draft replies (drafts only) | Seb (chat) | Support inbox | Standing |
+| 2026-10-31 15:56 | "Use Gmail for this": Gmail connected; Support + inbox monitor runs with Gmail (drafts only, alerts as incidents) | Seb (chat) | Business inbox | Standing |
+| 2026-10-31 15:56 | "TikTok is good now": voice fix confirmed on the subs repost | Seb (chat) | TikTok video rule | Standing |

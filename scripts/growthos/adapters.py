@@ -12,7 +12,7 @@ STATUS = {
     "elevenlabs": {"status": "LIVE", "how": "ELEVENLABS_API_KEY in GitHub Actions"},
     "manychat":  {"status": "LIVE_BLOCKED", "how": "no API or connector available; owner edits keywords in the app", "smallest_ask": "none possible today; keep CTA rule (config/manychat.json)"},
     "goatcounter": {"status": "LIVE_BLOCKED", "how": "script on site, no API token", "smallest_ask": "GOATCOUNTER_TOKEN repo secret (read only API key)"},
-    "support_inbox": {"status": "LIVE_BLOCKED", "how": "buyer replies go to Seb's email; no email connector", "smallest_ask": "connect Gmail in Claude settings (read + draft) or forward support mail"},
+    "support_inbox": {"status": "LIVE", "how": "Gmail connector (business inbox) in the Support + inbox monitor task; drafts only, verified 2026-10-31"},
 }
 
 

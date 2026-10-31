@@ -32,7 +32,7 @@ Disabled at cutover (rollback ready): Day series writer, voiced reel maker, agen
 ## BLOCKED (and the smallest ask)
 - Website visits: GoatCounter API token missing (read only token as repo secret GOATCOUNTER_TOKEN).
 - ManyChat: no API or connector; keyword edits stay manual.
-- Support inbox: Seb is connecting Gmail; the Support agent records "blocked" until the connector is attached to its task.
+- Support inbox: LIVE since 15:56 ART (Gmail attached to the Support + inbox monitor task).
 - Claude worker heartbeats: first heartbeats arrive with tomorrow's runs; a check at 10:40 ART Nov 1 verifies them and logs proof here.
 - Viral references: research is running; until 3 qualifying references exist, no concept can pass, so nothing new publishes.
 
