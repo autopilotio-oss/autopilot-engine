@@ -1,0 +1,20 @@
+{
+ "id": "debt-agent",
+ "ep": "013-debt-agent",
+ "kind": "product",
+ "hook": [
+  "Paying only the minimum?",
+  "AI shows what it really costs"
+ ],
+ "keyword": "DEBT",
+ "video": "https://autopilotoi.app/media/freel/debt-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/debt-agent-poster.jpg",
+ "caption": {
+  "ig": "Paying only the minimums? This agent takes your balances, rates and minimums and builds a payoff plan. On this sample, $200 extra a month pays it off 33 months sooner and saves about $2,300 in interest. Comment DEBT and I'll send you the free guide.\n\nEducation only, not financial advice.\n\n#ai #claude #debtfree #personalfinance #moneytips",
+  "other": "Paying only the minimums? This agent takes your balances, rates and minimums and builds a payoff plan. On this sample, $200 extra a month pays it off 33 months sooner and saves about $2,300 in interest. Free guide at the link in bio.\n\nEducation only, not financial advice.\n\n#ai #claude #debtfree #personalfinance #moneytips"
+ },
+ "rendered_at": "2026-10-31T20:57:28+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}

@@ -1,0 +1,20 @@
+{
+ "id": "raise-agent",
+ "ep": "011-raise-agent",
+ "kind": "product",
+ "hook": [
+  "Think you're underpaid?",
+  "This AI agent builds the proof"
+ ],
+ "keyword": "RAISE",
+ "video": "https://autopilotoi.app/media/freel/raise-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/raise-agent-poster.jpg",
+ "caption": {
+  "ig": "Dump your messy work notes into this agent. It turns them into clear wins with numbers, checks real pay data, and helps you pick a number to ask for. Sample notes shown. Comment RAISE and I'll send you the free guide.\n\n#ai #claude #career #raise #salary",
+  "other": "Dump your messy work notes into this agent. It turns them into clear wins with numbers, checks real pay data, and helps you pick a number to ask for. Sample notes shown. Free guide at the link in bio.\n\n#ai #claude #career #raise #salary"
+ },
+ "rendered_at": "2026-10-31T20:57:26+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}

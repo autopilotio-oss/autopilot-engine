@@ -1,0 +1,20 @@
+{
+ "id": "ai-employees",
+ "ep": "004-ai-employees",
+ "kind": "product",
+ "hook": [
+  "7 AI agents that do your busywork",
+  "while you do the real work"
+ ],
+ "keyword": null,
+ "video": "https://autopilotoi.app/media/freel/ai-employees.mp4",
+ "poster": "https://autopilotoi.app/media/freel/ai-employees-poster.jpg",
+ "caption": {
+  "ig": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Set up all 7 with The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity",
+  "other": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Set up all 7 with The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
+ },
+ "rendered_at": "2026-10-31T20:57:22+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}

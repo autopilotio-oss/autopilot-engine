@@ -1,0 +1,20 @@
+{
+ "id": "bill-agent",
+ "ep": "012-bill-agent",
+ "kind": "product",
+ "hook": [
+  "Your medical bill might have errors",
+  "AI finds them in seconds"
+ ],
+ "keyword": "BILL",
+ "video": "https://autopilotoi.app/media/freel/bill-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/bill-agent-poster.jpg",
+ "caption": {
+  "ig": "Medical bills often have errors. Upload the itemized bill and your insurance EOB, and this agent compares them line by line and writes the questions to ask billing. Sample bill shown. Comment BILL and I'll send you the free guide.\n\n#ai #claude #medicalbills #moneytips #healthcare",
+  "other": "Medical bills often have errors. Upload the itemized bill and your insurance EOB, and this agent compares them line by line and writes the questions to ask billing. Sample bill shown. Free guide at the link in bio.\n\n#ai #claude #medicalbills #moneytips #healthcare"
+ },
+ "rendered_at": "2026-10-31T20:57:27+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
