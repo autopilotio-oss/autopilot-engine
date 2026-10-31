@@ -39,6 +39,10 @@ h2{font:900 italic 34px/1 'Saira Semi Condensed',Impact,sans-serif;text-transfor
 def page(slug, g):
     out = [f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(g['title'])} · Free guide · AUTOPILOT.OI</title><meta name="description" content="{e(g['sub'])}">
+<link rel="canonical" href="https://autopilotoi.app/g/{slug}/"><meta property="og:type" content="article"><meta property="og:site_name" content="AUTOPILOT.OI">
+<meta property="og:title" content="{e(g['title'])} (free guide)"><meta property="og:description" content="{e(g['sub'])}"><meta property="og:url" content="https://autopilotoi.app/g/{slug}/">
+<meta property="og:image" content="https://autopilotoi.app/g/{slug}/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://autopilotoi.app/g/{slug}/og.png">
+<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"HowTo","name":g['title'],"description":g['sub'],"totalTime":"PT30M","tool":[{"@type":"HowToTool","name":"Claude"}],"step":[{"@type":"HowToStep","position":i+1,"name":h,"text":p_} for i,(h,p_,_,__) in enumerate(g['steps'])]})}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600;700&family=Saira+Semi+Condensed:wght@900&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><div class="w">
@@ -71,3 +75,8 @@ fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,
     d = os.path.join(ROOT, "docs", "g", slug); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w").write("\n".join(out))
 for k, g in G.items(): page(k, g); print("built", k)
+
+# sitemap for Google (every guide + main pages)
+import datetime
+_u = ["", "free/", "store/", "brain/", "workspace/"] + [f"g/{k}/" for k in sorted(os.listdir(os.path.join(ROOT, "docs", "g"))) if os.path.isdir(os.path.join(ROOT, "docs", "g", k))]
+open(os.path.join(ROOT, "docs", "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>https://autopilotoi.app/{u}</loc><lastmod>{datetime.date.today().isoformat()}</lastmod></url>\n" for u in _u) + "</urlset>\n")
