@@ -1,0 +1,11 @@
+{"date": "2026-10-31", "source": "Metricool getAnalyticsDataByMetrics (brand 7761544) + Kit get_growth_stats, pulled 2026-10-31 17:30 UTC",
+ "kit": {"subscribers": 0, "new_7d": 0},
+ "goatcounter": null,
+ "social": {"instagram": {"followers": 34, "posts_7d": 4, "interactions_7d": 5, "reel_views_7d": 10},
+            "threads": {"followers": 0, "posts_7d": 3, "views_7d": 9},
+            "tiktok": {"status": "connected, analytics not pulled yet"},
+            "x": {"status": "connected today"}},
+ "publishing": {"published": 4, "queued": 40, "failed": 0},
+ "decisions": ["Publish or recreate THE WORKSPACE ($49) on Gumroad: /workspace/ links to gumroad.com/l/ttdat, which is not in your Gumroad account, so every business owner CTA ends at 'Coming soon'.",
+               "Approve or reject the Deposit Agent (draft, gate 11/12, QA pass). Its free guide posts go out Nov 1 either way unless you say cancel.",
+               "Approve deploying the attribution upgrade to the live site (branch feat/revenue-engine-v2: ap.js UTM passthrough + Kit UTM fields; pilot page stays hidden)."]}

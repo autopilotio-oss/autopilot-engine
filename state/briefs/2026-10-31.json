@@ -1,0 +1,11 @@
+{
+ "date": "2026-10-31",
+ "tz": "America/Argentina/Buenos_Aires",
+ "markdown": "# Revenue brief, 2026-10-31 (America/Argentina/Buenos_Aires)\n\n## Executive summary\n- Yesterday: 0 verified orders, $0.00 net.\n- Last 7 days: 0 verified orders, $0.00 net.\n- Attribution coverage: n/a (no orders)\n- Email leads: 0 subscribers total, 0 new in 7 days\n- Website visits: UNKNOWN (GoatCounter API token not connected)\n\n## Funnel health\n- 0 verified orders in 7 days. Priority: reach, guide visits, opt ins and checkout click debugging, not new products.\n- Not purchasable right now: tiktok_agents, video_agent, workspace (buttons show 'Coming soon').\n- Live offers: 8.\n\n## Content outcomes\n- instagram: followers 34, posts_7d 4, interactions_7d 5, reel_views_7d 10\n- threads: followers 0, posts_7d 3, views_7d 9\n- tiktok: status connected, analytics not pulled yet\n- x: status connected today\n- Publishing: 4 published, 40 queued, 0 failed in the last 24h\n\n## Customer and product signals\n- No SKU sales yet.\n\n## Operational issues\n- None reported.\n\n## Owner decisions\n1. Publish or recreate THE WORKSPACE ($49) on Gumroad: /workspace/ links to gumroad.com/l/ttdat, which is not in your Gumroad account, so every business owner CTA ends at 'Coming soon'.\n2. Approve or reject the Deposit Agent (draft, gate 11/12, QA pass). Its free guide posts go out Nov 1 either way unless you say cancel.\n3. Approve deploying the attribution upgrade to the live site (branch feat/revenue-engine-v2: ap.js UTM passthrough + Kit UTM fields; pilot page stays hidden).\n",
+ "orders_7d": 0,
+ "not_live": [
+  "tiktok_agents",
+  "video_agent",
+  "workspace"
+ ]
+}
