@@ -1,0 +1,14 @@
+{"title":["THE AI AGENTS","RUNNING AUTOPILOT.OI"],
+"show":[["Autopilot","O.I.","AUTOPILOT.OI"],["autopilot","O.I.","dot","app.","autopilotoi.app"]],
+"beats":[
+{"cam":"all","say":"These are the AI agents running Autopilot O.I. right now."},
+{"cam":"content","say":"The content desk writes the scripts and schedules every post to TikTok, Instagram, Threads and X."},
+{"cam":"dm","say":"Comment a keyword like SUBS, and the DM desk sends you the free guide."},
+{"cam":"guides","say":"Nine free guides. Bills, refunds, debt, raises, TikTok. The whole process, step by step."},
+{"cam":"money","say":"Want it done faster? The store has the agents. Five money agents, ten bucks each."},
+{"cam":"tiktok","say":"Three TikTok agents for your videos, shop listings and DM sales."},
+{"cam":"biz","say":"And a business workspace that drafts your morning brief, follow ups and inbox replies."},
+{"cam":"store","say":"Every six hours the store syncs itself and checks every buy link."},
+{"cam":"email","say":"The email desk follows up with useful tips. No spam."},
+{"cam":"core","say":"Every agent is a Claude prompt kit you set up in about ten minutes. We help you set up yours. Comment AGENT, or go to autopilot O.I. dot app."}
+]}
