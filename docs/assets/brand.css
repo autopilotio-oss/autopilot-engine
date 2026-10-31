@@ -1,0 +1,19 @@
+/* AUTOPILOT.OI brand type (Oct 31 2026): Anton for headlines, Chakra Petch for labels and UI.
+   Older pages name other families; these aliases swap them site wide without touching each page. */
+@font-face{font-family:Anton;src:url(/assets/fonts/Anton-Regular.ttf) format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:'Saira Semi Condensed';src:url(/assets/fonts/Anton-Regular.ttf) format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:'Bebas Neue';src:url(/assets/fonts/Anton-Regular.ttf) format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url(/assets/fonts/Anton-Regular.ttf) format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:'Chakra Petch';src:url(/assets/fonts/ChakraPetch-Regular.ttf) format("truetype");font-weight:100 449;font-display:swap}
+@font-face{font-family:'Chakra Petch';src:url(/assets/fonts/ChakraPetch-Medium.ttf) format("truetype");font-weight:450 549;font-display:swap}
+@font-face{font-family:'Chakra Petch';src:url(/assets/fonts/ChakraPetch-SemiBold.ttf) format("truetype");font-weight:550 649;font-display:swap}
+@font-face{font-family:'Chakra Petch';src:url(/assets/fonts/ChakraPetch-Bold.ttf) format("truetype");font-weight:650 900;font-display:swap}
+@font-face{font-family:'Geist Mono';src:url(/assets/fonts/ChakraPetch-Medium.ttf) format("truetype");font-weight:100 549;font-display:swap}
+@font-face{font-family:'Geist Mono';src:url(/assets/fonts/ChakraPetch-Bold.ttf) format("truetype");font-weight:550 900;font-display:swap}
+@font-face{font-family:'Space Mono';src:url(/assets/fonts/ChakraPetch-Medium.ttf) format("truetype");font-weight:100 549;font-display:swap}
+@font-face{font-family:'Space Mono';src:url(/assets/fonts/ChakraPetch-Bold.ttf) format("truetype");font-weight:550 900;font-display:swap}
+*{font-synthesis:none}
+h1,h2,.dfy h3{transform:none!important;font-style:normal!important;letter-spacing:.005em}
+/* pages that use Inter for headlines and pills */
+.H{font-family:Anton,Impact,sans-serif!important;font-weight:400!important;letter-spacing:.01em!important}
+.tag,.go,.btn,.chip,.kw,.lbl,.price,form button,.cp,.toast{font-family:'Chakra Petch',system-ui,sans-serif!important}

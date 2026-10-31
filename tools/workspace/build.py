@@ -5,7 +5,7 @@ from content import QUIZ, BUILDER, BRAIN, AGENTS, COMMANDS, NIGHT, FIX, SAFETY, 
 e = html.escape
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 F = f"file://{ROOT}/tools/story/fonts/"
-CSS = f"""@font-face{{font-family:SA;src:url({F}SairaSemiCondensed-BlackItalic.otf)}}@font-face{{font-family:GE;font-weight:500;src:url({F}Geist-Medium.otf)}}@font-face{{font-family:GE;font-weight:600;src:url({F}Geist-SemiBold.otf)}}@font-face{{font-family:GE;font-weight:700;src:url({F}Geist-Bold.otf)}}@font-face{{font-family:M;src:url({F}GeistMono-Medium.otf)}}
+CSS = f"""@font-face{{font-family:SA;src:url({F}../../office/fonts/Anton-Regular.ttf)}}@font-face{{font-family:GE;font-weight:500;src:url({F}Geist-Medium.otf)}}@font-face{{font-family:GE;font-weight:600;src:url({F}Geist-SemiBold.otf)}}@font-face{{font-family:GE;font-weight:700;src:url({F}Geist-Bold.otf)}}@font-face{{font-family:M;src:url({F}../../office/fonts/ChakraPetch-SemiBold.ttf)}}
 @page{{size:Letter;margin:0}}*{{box-sizing:border-box;margin:0;padding:0}}
 body{{font:500 13px/1.5 GE;color:#ececE6;background:#050605;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 .pg{{width:8.5in;height:11in;overflow:hidden;padding:.6in .7in .7in;position:relative;page-break-after:always;background:radial-gradient(700px 520px at 12% 6%,rgba(212,255,58,.11),transparent 60%),radial-gradient(600px 500px at 95% 100%,rgba(30,110,80,.13),transparent 60%),#050605}}

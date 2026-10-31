@@ -45,8 +45,8 @@ def page(slug, g):
 <meta property="og:image" content="https://autopilotoi.app/g/{slug}/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://autopilotoi.app/g/{slug}/og.png">
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"HowTo","name":g['title'],"description":g['sub'],"totalTime":"PT30M","tool":[{"@type":"HowToTool","name":"Claude"}],"step":[{"@type":"HowToStep","position":i+1,"name":h,"text":p_} for i,(h,p_,_,__) in enumerate(g['steps'])]})}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600;700&family=Saira+Semi+Condensed:wght@900&display=swap" rel="stylesheet">
-<style>{CSS}</style></head><body><div class="w">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>{CSS}</style><link rel="stylesheet" href="/assets/brand.css"></head><body><div class="w">
 <div class="top"><img src="../../logo.png" alt=""><b>AUTOPILOT.OI</b><span>FREE GUIDE</span></div>
 <div class="hero"><span class="tag">{e(g.get('cat','MONEY × AI'))} · {e(g['kw'])}</span><h1>{e(g['title'])}</h1><p class="sub">{e(g['sub'])}</p>
 <div class="meta"><div><b>TIME</b>{e(g['time'])}</div><div><b>YOU NEED</b>{e(g['need'])}</div><div><b>COST</b>Free</div></div></div>

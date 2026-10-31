@@ -25,7 +25,10 @@ P = [  # reel mode patches on the office engine
  ('const zoom=cl((60-h)/30);const sh=(.07*zoom-.05*(1-zoom))*h;', 'const sh=.24*h;'),
  ('function camAt(t){', 'function camAt(t){if(DATA.reel){const st=camState(DATA.room);st.h=13.5;const u=ease(cl(t/2.6));return{...st,h:st.h*(1.5-.5*u)*(1-.04*cl((t-3)/20)),az:36+9*u+Math.sin(t*.3)*2,k:DATA.room,u:1}}'),
  ('dom(t,c);comp.render()', '(window.reelDom||dom)(t);comp.render()'),
- ("await document.fonts.load('40px ID');", "await document.fonts.load('100px AN');await document.fonts.load('40px ID');"),
+ ("await document.fonts.load('40px ID');", "await document.fonts.load('100px AN');await document.fonts.load('500 20px CP');await document.fonts.load('700 20px CP');await document.fonts.load('40px ID');"),
+ ("function tagTex(name,c){return ctex(512,128,(x,w,h)=>{x.font='600 34px JB';", "function tagTex(name,c){return ctex(512,128,(x,w,h)=>{x.font='700 36px CP';"),
+ ("function bubbleTex(text,bg,fg){return ctex(640,160,(x,w,h)=>{x.font='600 44px JB';", "function bubbleTex(text,bg,fg){return ctex(640,160,(x,w,h)=>{x.font='700 46px CP';"),
+ ("function chipTex(text,c){return ctex(512,112,(x,w,h)=>{x.font='700 40px JB';", "function chipTex(text,c){return ctex(512,112,(x,w,h)=>{x.font='700 42px CP';"),
 ]
 for a, b in P:
     assert a in h, a; h = h.replace(a, b)
