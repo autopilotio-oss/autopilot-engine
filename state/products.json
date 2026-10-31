@@ -42,11 +42,13 @@
  "sell-agent": {
   "id": "3ovGglfKChBYmztor4awjw==",
   "url": "https://autopilotoi.gumroad.com/l/sell-agent",
-  "published": true
+  "published": true,
+  "version": 2
  },
  "shop-agent": {
   "id": "8z26hcuQJVrhG506xb7zxg==",
   "url": "https://autopilotoi.gumroad.com/l/shop-agent",
-  "published": true
+  "published": true,
+  "version": 2
  }
 }

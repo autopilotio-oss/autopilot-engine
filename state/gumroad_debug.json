@@ -8,13 +8,23 @@
   "ok"
  ],
  [
-  "fail",
-  "tiktok-agents",
-  "KeyError('product')"
+  "update",
+  "sell-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Sales Agent', 'description': \"<p><strong>Turn TikTok attention into honest sales.</strong></p><p>Turn Claude into your TikTok Sales Agent in 10 minutes. Learns your product, writes videos that sell without feeling like ads, scripts your LIVEs, draf"
  ],
  [
-  "fail",
+  "update",
+  "shop-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Shop Agent', 'description': \"<p><strong>Build a TikTok Shop that makes real profit.</strong></p><p>Turn Claude into your TikTok Shop Agent in 10 minutes. Picks products that can win, checks your profit before you list, writes compliant listings, re"
+ ],
+ [
+  "create_no_product",
+  "tiktok-agents",
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
+ ],
+ [
+  "create_no_product",
   "video-agent",
-  "KeyError('product')"
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
  ]
 ]
