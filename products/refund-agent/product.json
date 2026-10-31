@@ -1,17 +1,17 @@
 {
-  "name": "AUTOPILOT.OI Refund Agent",
-  "price_cents": 1000,
-  "permalink": "refund-agent",
-  "filename": "AUTOPILOT.OI Refund Agent Setup.pdf",
-  "description_html": "<p><strong>Ask for the money you're owed, the right way.</strong></p><p>Spots charges that may be refundable in the statements you upload, drafts refund requests that name your rights (like the DOT airline refund rule and the 60 day card dispute window) and keeps a list of every open claim and its deadline.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not send requests, file disputes or guarantee a refund on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and receipts, bookings or statements for the charge.</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
-  "cover_url": "https://autopilotoi.app/store/refund-cover.png?v=3",
-  "tags": [
-    "ai",
-    "claude",
-    "personal finance",
-    "ai agent",
-    "money"
-  ],
-  "version": 2,
-  "cover_v": 3
+ "name": "AUTOPILOT.OI Refund Agent",
+ "price_cents": 1000,
+ "permalink": "refund-agent",
+ "filename": "AUTOPILOT.OI Refund Agent Setup.pdf",
+ "description_html": "<p><strong>Get your money back: flights, double charges, missing orders.</strong></p><p>A Claude agent that finds possible refunds on your statements, works out which rule or policy likely applies and what to confirm, drafts a short request that names it, writes the next step if they say no, and tracks every deadline.</p><p><strong>What you get (12 page agent pack, PDF):</strong> a setup builder that installs the agent with you, setup questions, full agent instructions, the worked example from our reel, templates and a tracker.</p><p><strong>How it works:</strong> it runs inside a Claude Project. It finds, checks and drafts; you send. It does not contact companies or file disputes on its own, and it does not guess laws or deadlines.</p><p><strong>You need:</strong> a Claude account (the free plan works) and your receipts, bookings or statements.</p><p><em>Education only, not legal or financial advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/refund-cover.png?v=3",
+ "tags": [
+  "ai",
+  "claude",
+  "personal finance",
+  "ai agent",
+  "money"
+ ],
+ "version": 3,
+ "cover_v": 3
 }

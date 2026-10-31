@@ -1,17 +1,17 @@
 {
-  "name": "AUTOPILOT.OI Raise Agent",
-  "price_cents": 1000,
-  "permalink": "raise-agent",
-  "filename": "AUTOPILOT.OI Raise Agent Setup.pdf",
-  "description_html": "<p><strong>Walk into your pay conversation prepared.</strong></p><p>Keeps the list of wins you give it, reads public pay data for your job and city, helps you pick your ask, target and minimum, and rehearses the conversation with realistic pushback.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not contact your employer or guarantee a raise on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your job title, city and a few recent wins.</p><p><em>Education only, not career, financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
-  "cover_url": "https://autopilotoi.app/store/raise-cover.png?v=3",
-  "tags": [
-    "ai",
-    "claude",
-    "career",
-    "ai agent",
-    "money"
-  ],
-  "version": 2,
-  "cover_v": 3
+ "name": "AUTOPILOT.OI Raise Agent",
+ "price_cents": 1000,
+ "permalink": "raise-agent",
+ "filename": "AUTOPILOT.OI Raise Agent Setup.pdf",
+ "description_html": "<p><strong>Build your case for a raise and practice until it feels easy.</strong></p><p>A Claude agent that turns your messy notes into clear wins with numbers, shows you where to find real pay data for your job and city, helps you pick a specific number, writes your one page case and the meeting email, and plays your manager with realistic pushback.</p><p><strong>What you get (14 page agent pack, PDF):</strong> a setup builder that installs the agent with you, setup questions, full agent instructions, the worked example from our reel, templates and a tracker.</p><p><strong>How it works:</strong> it runs inside a Claude Project. It builds the case and coaches; you have the conversation. It does not contact anyone and does not guarantee a result.</p><p><strong>You need:</strong> a Claude account (the free plan works) and your notes about this year's work.</p><p><em>Education only. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/raise-cover.png?v=3",
+ "tags": [
+  "ai",
+  "claude",
+  "career",
+  "ai agent",
+  "money"
+ ],
+ "version": 3,
+ "cover_v": 3
 }

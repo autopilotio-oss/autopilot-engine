@@ -6,6 +6,9 @@ PACK_TXT = {
     "shop-agent": "The full agent pack (15 page PDF): a setup builder that installs it with you, 10 commands, the profit calculator, a product scorecard, creator scripts and a 30 day tracker.",
     "video-agent": "The full agent pack (14 page PDF): a setup builder that installs it with you, 9 commands, a hook bank, an edit plan template and a 30 day tracker.",
     "sell-agent": "The full agent pack (13 page PDF): a setup builder that installs it with you, a Sales Sheet template, 6 commands, honest objection answers and a weekly tracker.",
+    "subs-agent": "The full agent pack (12 page PDF): a setup builder that installs it with you, 6 commands, cancel and dispute scripts, a monthly check and a savings tracker.",
+    "refund-agent": "The full agent pack (12 page PDF): a setup builder that installs it with you, 5 commands, request templates, next steps if they say no and a deadline tracker.",
+    "raise-agent": "The full agent pack (14 page PDF): a setup builder that installs it with you, 8 commands, pushback answers, email templates and a win log.",
     "deposit-agent": "The full agent pack (13 page PDF): a setup builder that builds your case with you, 6 commands, letter templates, an evidence checklist and a case tracker.",
 }
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
