@@ -17,18 +17,8 @@
  ],
  [
   "update",
-  "raise-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Raise Agent', 'description': \"<p><strong>Build your case for a raise and practice until it feels easy.</strong></p><p>A Claude agent that turns your messy notes into clear wins with numbers, shows you where to find real pay data for your job and ci"
- ],
- [
-  "update",
-  "refund-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Refund Agent', 'description': '<p><strong>Get your money back: flights, double charges, missing orders.</strong></p><p>A Claude agent that finds possible refunds on your statements, works out which rule or policy likely applies and what to confirm,"
- ],
- [
-  "update",
-  "subs-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Subscription Agent', 'description': \"<p><strong>Find every subscription you forgot and cut the ones you don't use.</strong></p><p>A Claude agent that reads your statements, finds every recurring charge (even renamed ones, yearly renewals and app st"
+  "all-money-agents",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI All 5 Money Agents', 'description': '<p><strong>All 5 Money Agents for Claude, now with the Money Agents Pro setup pack. $50 separately, $39 here.</strong></p><ul>\\n<li>\\n<strong>Bill Agent:</strong> checks a medical bill against your insurance bef"
  ],
  [
   "not_live_on_gumroad",
