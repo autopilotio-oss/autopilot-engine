@@ -1,0 +1,28 @@
+name: Growth OS health checks
+# Hourly read only probes (site pages, Gumroad sync, revenue ledger, fulfillment, audit chains, job queue).
+# Opens and resolves incidents in state/events; writes state/health. Safe recovery only: re-dispatches the Gumroad
+# and revenue syncs when they are stale. Never changes public content.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "11 * * * *"
+permissions:
+  contents: write
+  actions: write
+concurrency: health
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+        run: |
+          python3 scripts/growthos/health.py run --recover
+      - name: Save
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add state/health/status.json state/health/alerts.jsonl state/events 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Health check"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done

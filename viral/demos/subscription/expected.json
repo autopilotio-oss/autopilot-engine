@@ -1,0 +1,42 @@
+{
+ "recurring": [
+  {
+   "merchant": "MEALKIT TRIAL>PLAN",
+   "monthly": 59.94,
+   "yearly": 719.28
+  },
+  {
+   "merchant": "FITCLUB GYM",
+   "monthly": 29.99,
+   "yearly": 359.88
+  },
+  {
+   "merchant": "MUSICBOX FAMILY",
+   "monthly": 16.99,
+   "yearly": 203.88
+  },
+  {
+   "merchant": "STREAMFLIX",
+   "monthly": 15.49,
+   "yearly": 185.88
+  },
+  {
+   "merchant": "CLOUDDRIVE 2TB",
+   "monthly": 9.99,
+   "yearly": 119.88
+  },
+  {
+   "merchant": "PHOTOEDIT PRO",
+   "monthly": 8.99,
+   "yearly": 107.88
+  },
+  {
+   "merchant": "NEWSDAILY DIGITAL",
+   "monthly": 4.99,
+   "yearly": 59.88
+  }
+ ],
+ "monthly_total": 146.38,
+ "yearly_total": 1756.56,
+ "note": "SAMPLE DATA. Recurring = same merchant, amount within 5%, every 25 to 35 days. The user decides what to cancel."
+}

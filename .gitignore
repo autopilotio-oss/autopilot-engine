@@ -2,3 +2,4 @@ __pycache__/
 tools/kits/out/
 tools/kits/kits.py
 .dash/
+state/health/latest.json

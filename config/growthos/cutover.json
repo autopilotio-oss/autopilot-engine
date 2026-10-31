@@ -1,0 +1,21 @@
+{
+ "status": "PENDING OWNER AUTHORIZATION",
+ "policy": "NO PROOF, NO POST (Viral Validation V2) is priority 1. These workers can currently put content or email out without the gate.",
+ "ungated_publishers": [
+  {"task": "AUTOPILOT.OI Instagram + Threads loader (Metricool)", "id": "trig_01HqqymQ1qoM33TdFynzKQC1", "effect": "schedules queue items + cross posts to TikTok/YouTube/Facebook"},
+  {"task": "AUTOPILOT.OI morning trend scout", "id": "trig_01RjuAqCLMe4Mbk5qD6tewo7", "effect": "schedules Threads posts and stories"},
+  {"task": "AUTOPILOT.OI daily content upgrade", "id": "trig_01SGuLjRjNMGQWubzgYk9fN4", "effect": "writes posts into queue/ that the loader publishes"},
+  {"task": "AUTOPILOT.OI Day series writer", "id": "trig_01A5KWTmCkjmGW1xBMvXqUvi", "effect": "renders and schedules a daily reel"},
+  {"task": "AUTOPILOT.OI voiced reel maker (ElevenLabs)", "id": "trig_017Cnrk8RUypiA3kWpgMNhk7", "effect": "renders and schedules reels Mon/Thu"},
+  {"task": "AUTOPILOT.OI weekly email newsletter", "id": "trig_0121PAuTLGcrctYGfqmtXrKC", "effect": "schedules a Kit broadcast to all subscribers"}
+ ],
+ "plan": [
+  "Snapshot every prompt above to growth-os/rollback/ (exact text) before changing anything.",
+  "Research and drafting workers keep running but write drafts only (viral/concepts, queue/drafts).",
+  "One Publisher worker schedules ONLY concepts that gate.py marks QUEUED, after policy.authorize(publisher, content.schedule) passes.",
+  "Newsletter drafts the broadcast as a Kit draft; Seb approves before it is scheduled.",
+  "Already scheduled Metricool posts (made before the policy) stay as they are unless Seb says to hold them.",
+  "Daily reconcile: any pending Metricool post without an approved content_id is flagged SEV-1 and set to draft."
+ ],
+ "rollback": "Restore the snapshot prompts with update_trigger; gate code stays (it is inert without the cutover)."
+}

@@ -1,7 +1,12 @@
 {
  "name": "NO PROOF, NO POST (Viral Evidence Gate v2, Oct 31 2026)",
- "owners": ["Seb"],
- "approval_channels": ["chat", "approval_page"],
+ "owners": [
+  "Seb"
+ ],
+ "approval_channels": [
+  "chat",
+  "approval_page"
+ ],
  "reference": {
   "min_refs": 3,
   "min_creators": 2,
@@ -14,9 +19,31 @@
  },
  "pass_score": 85,
  "revise_score": 70,
- "banned_phrases": ["guarantee", "guaranteed", "100% safe", "always works", "free money", "passive income", "get rich", "delete bad credit", "remove accurate", "fix your credit score", "will save you", "you will get your money back", "proven viral"],
+ "banned_phrases": [
+  "guarantee",
+  "guaranteed",
+  "100% safe",
+  "always works",
+  "free money",
+  "passive income",
+  "get rich",
+  "delete bad credit",
+  "remove accurate",
+  "fix your credit score",
+  "will save you",
+  "you will get your money back",
+  "proven viral"
+ ],
  "enforce_from": "2026-11-04",
  "exempt_formats": [],
- "priority_agents": ["subscription", "refund", "bill", "scam", "deal"],
- "note": "Thresholds are AUTOPILOT.OI internal screening defaults, not platform benchmarks. Raise them with our own history. Never invent a median."
+ "priority_agents": [
+  "subscription",
+  "refund",
+  "bill",
+  "scam",
+  "deal"
+ ],
+ "note": "Thresholds are AUTOPILOT.OI internal screening defaults, not platform benchmarks. Raise them with our own history. Never invent a median.",
+ "active": false,
+ "active_note": "Enforcement on publishers starts when Seb authorizes the cutover (config/growthos/cutover.json). Until then check-queue reports what WOULD be held."
 }

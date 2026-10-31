@@ -1,0 +1,10 @@
+{
+ "version": "2026-10-31",
+ "source": "Product descriptions in products/*/product.json, the kit PDFs and tools/workspace content (current versions).",
+ "escalation_reply": "Thanks for reaching out. I want to get this right, so I'm checking it personally and will reply within one business day. Seb, AUTOPILOT.OI",
+ "answers": {
+  "access": {"reply": "Your kit is a PDF that Gumroad delivers right after checkout. You'll find it two ways: the download button in your Gumroad receipt email, or in your Gumroad library (sign in at gumroad.com with the email you bought with). If it isn't there, reply with the email you used and I'll check the order.", "link": "https://gumroad.com/library"},
+  "setup": {"reply": "Quick setup: 1) In Claude, open Projects and create a new project. 2) Open the kit PDF and copy the master prompt into the project's instructions. 3) Start a chat inside the project and run one of the 5 starter prompts. Every agent drafts; you check and decide. If a step looks different on your screen, tell me which step and what you see.", "link": "https://autopilotoi.app/free/"},
+  "plan": {"reply": "The $10 agent kits work on Claude's free plan (projects and pasted prompts). The Workspace's scheduled agents need a paid Claude plan (Pro or higher), which is paid to Anthropic, not us. Features and plans change, so claude.com/pricing has the current details.", "link": "https://claude.com/pricing"}
+ }
+}

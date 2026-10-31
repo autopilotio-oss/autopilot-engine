@@ -1,0 +1,7 @@
+{
+ "currency": "USD",
+ "ai_daily_soft_cap": null,
+ "ai_daily_hard_cap": null,
+ "monthly_services_cap": null,
+ "status": "NOT SET: owner must approve dollar caps (Growth OS 07: do not invent cap amounts). Until set, optional costed work is allowed but every run's cost is recorded and flagged UNCAPPED."
+}

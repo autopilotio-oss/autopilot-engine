@@ -1,0 +1,7 @@
+{
+ "outbound_publishing": true,
+ "messaging": true,
+ "paid_services": true,
+ "optional_llm": true,
+ "note": "Kill switches. STOP ALL OUTBOUND = outbound_publishing false + messaging false. PAUSE EXPENSES = paid_services false + optional_llm false. Sales fulfillment (Gumroad delivery) and receipt data are never switched off."
+}

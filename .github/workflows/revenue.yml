@@ -21,10 +21,12 @@ jobs:
         run: |
           python3 scripts/revenue/catalog.py
           python3 scripts/revenue/quality.py || echo "::warning::quality gate found problems"
+      - name: Growth OS event store (orders, refunds, reconciliation against Gumroad)
+        run: python3 scripts/growthos/orders.py sync > /dev/null
       - name: Save
         run: |
           git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
-          git add state/ledger config/catalog.json
+          git add state/ledger config/catalog.json state/events
           git diff --cached --quiet && exit 0
           git commit -m "Revenue ledger update"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
