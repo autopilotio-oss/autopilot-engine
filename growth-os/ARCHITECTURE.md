@@ -48,11 +48,14 @@ and is used once. Editing the content changes the hash and voids it.
 | P0-05 dashboard | private dashboard (ops sections) | done |
 | P0-06 durable queue | scripts/growthos/jobs.py | done (library; workers adopt it gradually) |
 | P0-07 policy and action registry | scripts/growthos/policy.py, config/growthos/policy.json | done |
-| P0-08 viral gate on all publishers | scripts/viral/gate.py | built and tested; **publisher cutover needs owner authorization** |
-| P0-09 approval UX | Approval Queue page + chat approvals | page built; publishes when the first concept is ready |
+| P0-08 viral gate on all publishers | scripts/viral/gate.py, scripts/growthos/publish.py | ACTIVE since 2026-10-31 (owner instruction); one Publisher worker, others draft only |
+| P0-09 approval UX | Approval Queue page + chat approvals (publish.py approve) | built; page goes up with the first concept |
 | P0-10 guide to delivery test | tests/test_growthos.py::test_P0_10 (synthetic) | synthetic PASS; live purchase test needs approval (spends $10) |
 | P1-11 support | scripts/growthos/support.py, support_kb.json | triage done; inbound channel LIVE_BLOCKED |
 | P1-12 health, alerts, kill switches | health.py, health.yml, flags.json | live hourly |
 | P1-13 unit economics, caps | costs.py, budget.json | built; caps need owner numbers |
 | P1-14 experiments | scripts/revenue/experiments.py (Revenue Engine 2.0) | exists; 2 drafts |
 | P1-15 cutover, rollback, manual | RUNBOOKS.md, RELEASE.md, cutover.json | done |
+
+## Continuous Improvement pack (6 PDFs)
+Daily Pulse, Weekly Sprint, Monthly Review, Viral Content Lab and Reliability are scheduled workers; see growth-os/AUTONOMY.md. Shared state lives in growth-os/operations/ (decision log, experiment ledger, weekly priorities, next actions, run history).
