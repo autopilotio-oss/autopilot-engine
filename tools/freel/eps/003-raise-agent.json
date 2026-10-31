@@ -4,8 +4,8 @@
  "room": "store",
  "agent": "Raise Agent",
  "hook": [
-  "This AI agent takes 10 min to set up",
-  "and builds your whole case for a raise"
+  "Think you're underpaid?",
+  "This AI agent builds the proof"
  ],
  "caption": {
   "ig": "Dump your messy work notes into this agent. It turns them into clear wins with numbers, checks real pay data, and helps you pick a number to ask for. Sample notes shown. Comment RAISE and I'll send you the free guide.\n\n#ai #claude #career #raise #salary",
@@ -14,7 +14,7 @@
  "beats": [
   {
    "chip": "ask",
-   "say": "This AI agent takes ten minutes to set up, and it builds your whole case for a raise. Give it your messy notes from the year.",
+   "say": "Think you're underpaid? This AI agent builds the proof. Give it your messy notes from the year.",
    "screen": {
     "type": "ask",
     "files": [
@@ -84,9 +84,9 @@
   }
  ],
  "hook_lines": [
-  "This AI agent",
-  "takes *10 min* to set up",
-  "and builds your case",
-  "for a *raise*"
+  "Think you're",
+  "*underpaid?*",
+  "this AI agent",
+  "builds the *proof*"
  ]
 }

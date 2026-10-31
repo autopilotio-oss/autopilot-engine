@@ -1,0 +1,92 @@
+{
+ "id": "debt-agent",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Debt Agent",
+ "hook": [
+  "Paying only the minimum?",
+  "AI shows what it really costs"
+ ],
+ "hook_lines": [
+  "Paying only",
+  "the *minimum?*",
+  "AI shows what",
+  "it *really costs*"
+ ],
+ "caption": {
+  "ig": "Paying only the minimums? This agent takes your balances, rates and minimums and builds a payoff plan. On this sample, $200 extra a month pays it off 33 months sooner and saves about $2,300 in interest. Comment DEBT and I'll send you the free guide.\n\nEducation only, not financial advice.\n\n#ai #claude #debtfree #personalfinance #moneytips",
+  "other": "Paying only the minimums? This agent takes your balances, rates and minimums and builds a payoff plan. On this sample, $200 extra a month pays it off 33 months sooner and saves about $2,300 in interest. Free guide at the link in bio.\n\nEducation only, not financial advice.\n\n#ai #claude #debtfree #personalfinance #moneytips"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Paying only the minimum? This AI agent shows what it really costs. Give it your balances and one line.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "my_debts.csv"
+    ],
+    "text": "make me a payoff plan with $200 extra a month"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It runs the math month by month, highest interest first, and compares it to paying only the minimums.",
+   "screen": {
+    "type": "work",
+    "title": "Running the math",
+    "lines": [
+     "read 3 balances and rates",
+     "minimums only, month by month",
+     "add $200 a month, highest rate first",
+     "compare the two"
+    ]
+   }
+  },
+  {
+   "chip": "plan",
+   "say": "Minimums only takes almost five years. The plan takes twenty five months and saves about twenty three hundred dollars. Sample numbers.",
+   "screen": {
+    "type": "table",
+    "title": "Your payoff plan",
+    "sample": true,
+    "cols": [
+     "Debt",
+     "Rate",
+     "Paid off"
+    ],
+    "rows": [
+     [
+      "Card A  $3,200",
+      "24.99%",
+      "month 13"
+     ],
+     [
+      "Card B  $1,150",
+      "19.99%",
+      "month 16"
+     ],
+     [
+      "Car loan  $8,400",
+      "7.5%",
+      "month 25"
+     ]
+    ],
+    "foot": "25 months, not 58  ·  about $2,333 less interest"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment DEBT and I'll send you the free guide.",
+   "screen": {
+    "type": "cta",
+    "name": "Free Debt Guide",
+    "sub": "your payoff plan",
+    "cover": "debt",
+    "price": "FREE",
+    "kw": "DEBT",
+    "topic": "Kill the debt"
+   }
+  }
+ ]
+}

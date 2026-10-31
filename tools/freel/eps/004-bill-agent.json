@@ -4,8 +4,8 @@
  "room": "dm",
  "agent": "Bill Agent",
  "hook": [
-  "Never pay a medical bill",
-  "before this AI agent checks it"
+  "Your medical bill might have errors",
+  "AI finds them in seconds"
  ],
  "caption": {
   "ig": "Medical bills often have errors. Upload the itemized bill and your insurance EOB, and this agent compares them line by line and writes the questions to ask billing. Sample bill shown. Comment BILL and I'll send you the free guide.\n\n#ai #claude #medicalbills #moneytips #healthcare",
@@ -14,7 +14,7 @@
  "beats": [
   {
    "chip": "ask",
-   "say": "Never pay a medical bill before this AI agent checks it. Give it the itemized bill and your insurance statement.",
+   "say": "Your medical bill might have errors, and this AI agent finds them in seconds. Give it the itemized bill and your insurance statement.",
    "screen": {
     "type": "ask",
     "files": [
@@ -85,9 +85,9 @@
   }
  ],
  "hook_lines": [
-  "*Never* pay",
-  "a medical bill",
-  "before this *AI agent*",
-  "checks it"
+  "Your medical bill",
+  "might have *errors*",
+  "AI finds them",
+  "in *seconds*"
  ]
 }
