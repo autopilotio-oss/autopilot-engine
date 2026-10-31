@@ -27,7 +27,7 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "live",
+   "status": "not_live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/bill-agent",
    "guides": [
     {
@@ -67,7 +67,7 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "live",
+   "status": "not_live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/debt-agent",
    "guides": [
     {
@@ -87,7 +87,7 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "not_live",
+   "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/deposit-agent",
    "guides": [
     {
@@ -237,7 +237,7 @@
     "shop_agent",
     "sell_agent"
    ],
-   "status": "not_live",
+   "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/tiktok-agents",
    "guides": [],
    "managed_by": "products/"
@@ -250,7 +250,7 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "not_live",
+   "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/video-agent",
    "guides": [
     {
@@ -270,7 +270,7 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "not_live",
+   "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/workspace",
    "guides": [],
    "managed_by": "products/"
@@ -364,12 +364,14 @@
  ],
  "live": [
   "all-money-agents",
-  "bill-agent",
-  "debt-agent",
+  "deposit-agent",
   "raise-agent",
   "refund-agent",
   "sell-agent",
   "shop-agent",
-  "subs-agent"
+  "subs-agent",
+  "tiktok-agents",
+  "video-agent",
+  "workspace"
  ]
 }
