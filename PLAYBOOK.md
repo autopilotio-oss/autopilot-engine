@@ -172,7 +172,8 @@ Order of attack: 1) reach, 2) capture emails, 3) sell by email, not in posts.
 - Discounts: not running one. With near zero traffic a sale has nobody to see it; revisit once a post passes 1,000 views.
 
 ## Idea gate (Seb, Oct 31: "make sure everything we make is a good idea")
-Nothing new gets built until it passes this gate and Seb approves a one paragraph pitch. "New" means a product, funnel, page, tool, content series or campaign. Small fixes, honest copy edits and improvements to things that already exist don't need the gate.
+Nothing new gets built until it passes this gate and Seb approves a one paragraph pitch.
+Exception (Seb, Oct 31): the daily agent drop (tools/daily/DAILY.md) ships one new $10 agent a day FULLY AUTOMATIC when it passes this gate at 10/12 with no zeros, plus a robot demo video (tools/demo). No approval step for those. "New" means a product, funnel, page, tool, content series or campaign. Small fixes, honest copy edits and improvements to things that already exist don't need the gate.
 Score each 0 to 2. It needs 10 of 12 and no zeros:
 1. Demand evidence: at least 2 linked signs real people want this now (searches, Reddit or forum threads, comments on our posts, competitors that sell it). Our own guess is a 0.
 2. Fit: it serves one of our three buyers (save money, grow on TikTok, run a business) and leads to an offer we already sell.
