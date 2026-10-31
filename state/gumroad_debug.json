@@ -8,26 +8,6 @@
   "ok"
  ],
  [
-  "adopted",
-  "video-agent",
-  true
- ],
- [
-  "adopted",
-  "tiktok-agents",
-  true
- ],
- [
-  "adopted",
-  "deposit-agent",
-  true
- ],
- [
-  "adopted",
-  "workspace",
-  true
- ],
- [
   "not_live_on_gumroad",
   "bill-agent"
  ],
@@ -36,44 +16,14 @@
   "debt-agent"
  ],
  [
-  "cover",
-  "workspace",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/u76ew7zwdwmdt34xjuv6z3qx1m3l', 'original_url': 'https://public-files.gumroad.com/u76ew7zwdwmdt34xjuv6z3qx1m3l', 'thumbnail': None"
- ],
- [
   "update",
   "workspace",
   "{'success': True, 'product': {'name': 'THE WORKSPACE by AUTOPILOT.OI', 'description': \"<p><strong>Set up 7 Claude agents for your business in about an hour.</strong></p><p>Morning Brief, Inbox, Booking, Follow Up, Invoice, Review and DM Assistant. They draft your email replies, booking reminders, qu"
  ],
  [
-  "cover",
-  "deposit-agent",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/tm5n7bhopcke13ytnqyze77tls3a', 'original_url': 'https://public-files.gumroad.com/lqsjx0saw9vtlras124ue3jqojs4', 'thumbnail': None"
- ],
- [
-  "update",
-  "deposit-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Deposit Agent', 'description': \"<p><strong>Get back the security deposit your landlord kept.</strong></p><p>Reads your lease, your move in and move out photos and the landlord's list of deductions. Sorts every charge into fair, normal wear and tear"
- ],
- [
   "update",
   "shop-agent",
   "{'success': True, 'product': {'name': 'AUTOPILOT.OI Shop Agent', 'description': '<p><strong>Your TikTok Shop agent: find products, do the profit math, check the rules, get creators posting.</strong></p><p>A Claude agent that finds product ideas for your niche and budget, scores them, works out what "
- ],
- [
-  "cover",
-  "tiktok-agents",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/mdt6p1szkr4e6ao6nf5f6mp5pj8x', 'original_url': 'https://public-files.gumroad.com/keazm6163xliji202485u42za64p', 'thumbnail': None"
- ],
- [
-  "update",
-  "tiktok-agents",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI TikTok Agents Bundle', 'description': \"<p><strong>All 3 TikTok agents for Claude. $30 separately, $24 here.</strong></p><ul>\\n<li>\\n<strong>Video Agent:</strong> scripts, CapCut edit plans, captions and a posting schedule</li>\\n<li>\\n<strong>Shop A"
- ],
- [
-  "cover",
-  "video-agent",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/0ll8ftu1hd1cez9d4k0bmc33t89q', 'original_url': 'https://public-files.gumroad.com/rx3ptg9nzb4ne1udsseymb0n2nrt', 'thumbnail': None"
  ],
  [
   "update",
