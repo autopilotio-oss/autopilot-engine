@@ -1,17 +1,17 @@
 {
-  "name": "AUTOPILOT.OI Deposit Agent",
-  "price_cents": 1000,
-  "permalink": "deposit-agent",
-  "filename": "AUTOPILOT.OI Deposit Agent Setup.pdf",
-  "description_html": "<p><strong>Get back the security deposit your landlord kept.</strong></p><p>Reads your lease, your move in and move out photos and the landlord&#x27;s list of deductions. Sorts every charge into fair, normal wear and tear, or no proof, checks it against the deadline and rules you look up for your state, and drafts the demand letter for the charges you dispute.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not send anything, contact your landlord, or give legal advice.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects), your lease, move in and move out photos, and the landlord&#x27;s list of deductions.</p><p><em>Education only, not financial, legal or medical advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
-  "cover_url": "https://autopilotoi.app/store/deposit-cover.png?v=1",
-  "tags": [
-    "ai",
-    "claude",
-    "renters",
-    "security deposit",
-    "money"
-  ],
-  "version": 1,
-  "cover_v": 1
+ "name": "AUTOPILOT.OI Deposit Agent",
+ "price_cents": 1000,
+ "permalink": "deposit-agent",
+ "filename": "AUTOPILOT.OI Deposit Agent Setup.pdf",
+ "description_html": "<p><strong>Get back the security deposit your landlord kept.</strong></p><p>A Claude agent that reads your lease, your move in and move out photos and the landlord's list, sorts every deduction into fair, normal wear and tear, pre existing or no proof with the evidence, checks the timing against the rule you look up for your state, and drafts the demand letter, the follow up and your small claims notes.</p><p><strong>What you get (13 page agent pack, PDF):</strong> a setup builder that builds your case with you in about 20 minutes, 10 setup questions, full agent instructions with 6 commands, a worked example, letter templates, an evidence checklist, a move in kit and a case tracker.</p><p><strong>How it works:</strong> it runs inside a Claude Project. It sorts, checks and drafts; you decide and send. It does not contact your landlord or file anything, and it does not guess laws or deadlines.</p><p><strong>You need:</strong> a Claude account (the free plan works), your lease, photos and the landlord's list.</p><p><em>Education only, not legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/deposit-cover.png?v=1",
+ "tags": [
+  "ai",
+  "claude",
+  "renters",
+  "security deposit",
+  "money"
+ ],
+ "version": 2,
+ "cover_v": 1
 }

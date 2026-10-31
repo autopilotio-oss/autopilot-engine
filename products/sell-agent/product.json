@@ -1,17 +1,17 @@
 {
-  "name": "AUTOPILOT.OI Sales Agent",
-  "price_cents": 1000,
-  "permalink": "sell-agent",
-  "filename": "AUTOPILOT.OI Sales Agent Setup.pdf",
-  "description_html": "<p><strong>Turn TikTok attention into honest sales.</strong></p><p>Learns your product from your notes, drafts videos that sell without feeling like ads, scripts your LIVEs, and drafts replies to comments and DMs in your voice for you to send.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not post, go LIVE or reply to anyone on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and notes on your product and a few examples of how you talk.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
-  "cover_url": "https://autopilotoi.app/store/sell-cover.png?v=3",
-  "tags": [
-    "ai",
-    "claude",
-    "tiktok",
-    "tiktok shop",
-    "ai agent"
-  ],
-  "version": 3,
-  "cover_v": 3
+ "name": "AUTOPILOT.OI Sales Agent",
+ "price_cents": 1000,
+ "permalink": "sell-agent",
+ "filename": "AUTOPILOT.OI Sales Agent Setup.pdf",
+ "description_html": "<p><strong>Your sales agent: every comment and DM answered in your voice, videos that sell, LIVE plans and real reviews.</strong></p><p>A Claude agent that learns your product from a one page Sales Sheet and drafts a reply to every buyer question in your voice, flags complaints for you, answers hesitations honestly, writes product videos, plans your LIVEs, follows up for honest reviews the allowed way, and reads your numbers every Friday.</p><p><strong>What you get (13 page agent pack, PDF):</strong> a setup builder that installs the agent with you in about 30 minutes, 12 setup questions, full agent instructions with 6 commands, the worked example from our reel, a Sales Sheet template, honest objection answers and a weekly tracker.</p><p><strong>How it works:</strong> it runs inside a Claude Project. It drafts; you read every reply and send it. It does not send messages, post or contact buyers on its own, and it never writes fake reviews.</p><p><strong>You need:</strong> a Claude account (the free plan works) and your product facts.</p><p><em>Education only. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/sell-cover.png?v=3",
+ "tags": [
+  "ai",
+  "claude",
+  "tiktok",
+  "tiktok shop",
+  "ai agent"
+ ],
+ "version": 4,
+ "cover_v": 3
 }
