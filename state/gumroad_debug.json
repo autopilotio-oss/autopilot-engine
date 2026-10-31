@@ -8,9 +8,19 @@
   "ok"
  ],
  [
-  "update",
-  "all-money-agents",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI All 5 Money Agents', 'description': '<p><strong>All 5 Money Agents for Claude. $50 separately, $39 here.</strong></p><ul>\\n<li>\\n<strong>Bill Agent:</strong> checks a medical bill against your insurance before you pay</li>\\n<li>\\n<strong>Debt Agent"
+  "cover",
+  "raise-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/3c2596rgqip7po2svvbq0ojay2h4', 'original_url': 'https://public-files.gumroad.com/y6v5x8mypuil2fo9nspd9chizr23', 'thumbnail': None"
+ ],
+ [
+  "cover",
+  "refund-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/m59xaz6ahrqzhyzhzl9rpndh7n8p', 'original_url': 'https://public-files.gumroad.com/b1cco4wkq0el3n3514sy0s4mnfy0', 'thumbnail': None"
+ ],
+ [
+  "cover",
+  "subs-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/kt044cvfnhqqewk6p04q2s6euv5b', 'original_url': 'https://public-files.gumroad.com/kt044cvfnhqqewk6p04q2s6euv5b', 'thumbnail': None"
  ],
  [
   "create_no_product",

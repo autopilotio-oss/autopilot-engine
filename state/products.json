@@ -32,21 +32,24 @@
   "url": "https://autopilotoi.gumroad.com/l/subs-agent",
   "published": true,
   "live": true,
-  "version": 2
+  "version": 2,
+  "cover_v": 2
  },
  "refund-agent": {
   "id": "CayudpoEYLqNtawHm8nGIw==",
   "url": "https://autopilotoi.gumroad.com/l/refund-agent",
   "published": true,
   "live": true,
-  "version": 2
+  "version": 2,
+  "cover_v": 2
  },
  "raise-agent": {
   "id": "kLaDgPTtWVpuxwJoKv995g==",
   "url": "https://autopilotoi.gumroad.com/l/raise-agent",
   "published": true,
   "live": true,
-  "version": 2
+  "version": 2,
+  "cover_v": 2
  },
  "all-money-agents": {
   "id": "46txwcc0xEUbjJR-kM3Yfw==",
