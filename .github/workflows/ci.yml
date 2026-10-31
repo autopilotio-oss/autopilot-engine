@@ -1,0 +1,13 @@
+name: Tests
+on:
+  push:
+    paths: ["scripts/**", "tools/guides/**", "tools/daily/**", "tests/**", "products/**", "config/**", ".github/workflows/ci.yml"]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q pytest
+      - run: python3 -m pytest -q tests/
+      - run: python3 scripts/revenue/quality.py

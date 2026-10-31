@@ -1,0 +1,7 @@
+{"_about": "Accounts to benchmark (analogous audiences and offers, not celebrity scale). Fill via Metricool Competitors (Instagram/Threads give likes, comments, interactions; views only where the API provides them) or manual public counts with provenance. Weekly job: Competitor Intelligence.",
+ "pillars": ["money leaks", "everyday AI", "small business operations", "seller growth"],
+ "accounts": [],
+ "rules": ["Use authorized sources only (Metricool competitor API, public pages read manually). No scraping, no logins to other accounts.",
+           "Record the post URL, capture date and where each number came from.",
+           "Outlier = post value / creator median of the last 10 to 20 comparable posts. Fewer than 5 posts = unbenchmarked.",
+           "Rewrite the principle in our own format. Never copy captions, footage or claims."]}
