@@ -14,7 +14,35 @@
   "other": "Dump your messy work notes into this agent. It turns them into clear wins with numbers, checks real pay data, and helps you pick a number to ask for. Sample notes shown. Free guide at the link in bio.\n\n#ai #claude #career #raise #salary"
  },
  "rendered_at": "2026-10-31T20:57:26+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412474281,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-02T12:30-03:00"
+  },
+  {
+   "metricool_id": 412474306,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-02T12:30-03:00"
+  },
+  {
+   "metricool_id": 412474322,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-02T12:30-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T18:14-03:00",
+  "quote": "Post 2 tonight, rest 2 a day"
+ }
 }

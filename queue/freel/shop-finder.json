@@ -14,7 +14,35 @@
   "other": "Stop guessing what to sell on TikTok Shop. This AI agent checks the price, the fees and shipping, and works out what you'd actually keep on every sale before you buy any stock. Sample numbers shown. The full Shop Agent is at the link in bio, with a free guide too.\n\n#tiktokshop #ai #claude #sidehustle #ecommerce"
  },
  "rendered_at": "2026-10-31T20:57:20+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412473817,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-10-31T21:15-03:00"
+  },
+  {
+   "metricool_id": 412473878,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-10-31T21:15-03:00"
+  },
+  {
+   "metricool_id": 412473898,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-10-31T21:15-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T18:14-03:00",
+  "quote": "Post 2 tonight, rest 2 a day"
+ }
 }

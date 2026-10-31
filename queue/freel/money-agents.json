@@ -14,7 +14,35 @@
   "other": "Five AI agents that find money you might be losing: forgotten subscriptions, medical bill errors, airline refunds, a faster debt payoff and your case for a raise. Sample results shown. All 5 Money Agents at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
  },
  "rendered_at": "2026-10-31T20:57:24+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412474132,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T20:30-03:00"
+  },
+  {
+   "metricool_id": 412474149,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T20:30-03:00"
+  },
+  {
+   "metricool_id": 412474187,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T20:30-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T18:14-03:00",
+  "quote": "Post 2 tonight, rest 2 a day"
+ }
 }

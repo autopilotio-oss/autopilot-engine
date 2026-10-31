@@ -14,7 +14,35 @@
   "other": "Medical bills often have errors. Upload the itemized bill and your insurance EOB, and this agent compares them line by line and writes the questions to ask billing. Sample bill shown. Free guide at the link in bio.\n\n#ai #claude #medicalbills #moneytips #healthcare"
  },
  "rendered_at": "2026-10-31T20:57:27+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412474533,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-03T12:30-03:00"
+  },
+  {
+   "metricool_id": 412474552,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-03T12:30-03:00"
+  },
+  {
+   "metricool_id": 412474568,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-03T12:30-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T18:14-03:00",
+  "quote": "Post 2 tonight, rest 2 a day"
+ }
 }

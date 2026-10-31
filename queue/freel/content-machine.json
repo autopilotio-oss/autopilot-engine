@@ -14,7 +14,35 @@
   "other": "This AI agent turns one idea into a week of TikToks: hooks, scripts, every cut and caption planned. You just film. Sample week shown. The full Video Agent is at the link in bio, with a free guide too.\n\n#contentcreator #tiktoktips #ai #claude #creator"
  },
  "rendered_at": "2026-10-31T20:57:23+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412474040,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T12:30-03:00"
+  },
+  {
+   "metricool_id": 412474060,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T12:30-03:00"
+  },
+  {
+   "metricool_id": 412474087,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T12:30-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T18:14-03:00",
+  "quote": "Post 2 tonight, rest 2 a day"
+ }
 }

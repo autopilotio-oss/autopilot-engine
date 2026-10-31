@@ -14,7 +14,35 @@
   "other": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Set up all 7 with The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
  },
  "rendered_at": "2026-10-31T20:57:22+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412473925,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-10-31T23:00-03:00"
+  },
+  {
+   "metricool_id": 412473941,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-10-31T23:00-03:00"
+  },
+  {
+   "metricool_id": 412473973,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-10-31T23:00-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T18:14-03:00",
+  "quote": "Post 2 tonight, rest 2 a day"
+ }
 }

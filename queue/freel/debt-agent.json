@@ -14,7 +14,35 @@
   "other": "Paying only the minimums? This agent takes your balances, rates and minimums and builds a payoff plan. On this sample, $200 extra a month pays it off 33 months sooner and saves about $2,300 in interest. Free guide at the link in bio.\n\nEducation only, not financial advice.\n\n#ai #claude #debtfree #personalfinance #moneytips"
  },
  "rendered_at": "2026-10-31T20:57:28+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412474354,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-02T20:30-03:00"
+  },
+  {
+   "metricool_id": 412474384,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-02T20:30-03:00"
+  },
+  {
+   "metricool_id": 412474414,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-02T20:30-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T18:14-03:00",
+  "quote": "Post 2 tonight, rest 2 a day"
+ }
 }
