@@ -1,0 +1,161 @@
+[
+ {
+  "id": "fix-2026-10-31",
+  "at": "2026-10-31T15:30:00-04:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-10-31-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "A messy budget?\n\nClaude can sort your spending for you. Paste a month of transactions. It groups them and shows where the money actually went.\n\nSay this: \"Group these by category and show my top 3 money leaks.\"\n\nHave you tried this yet?",
+  "note": "Parked Oct 31: its 15:30 Metricool slot went to the trend scout post (tap card scam). Evergreen, reuse any day with a free slot."
+ },
+ {
+  "id": "fix-2026-10-30",
+  "at": "2026-10-30T15:30:00-04:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-10-30-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "A doctor's note full of jargon?\n\nClaude can explain your lab results. Paste them in. Use it to prepare questions, then ask your doctor.\n\nSay this: \"Explain this in plain English. What should I ask my doctor?\"\n\nWhat would you use it for first?",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "tip-2026-10-31",
+  "at": "2026-10-31T07:30:00-04:00",
+  "kind": "text",
+  "topic": "AI",
+  "ig": false,
+  "text": "Snap a photo of a receipt and ask:\n\n\"Turn this into an expense list.\"\n\nTakes 10 seconds. Try it today.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "fix-2026-11-01",
+  "at": "2026-11-01T15:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-11-01-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "A trip to plan?\n\nClaude can build a full trip in minutes. Give it the city, the days and your budget. You get a day by day plan you can edit.\n\nSay this: \"Plan 3 days in Miami for 2 people, $800 total.\"\n\nSave this for the next time it happens.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "tip-2026-11-01",
+  "at": "2026-11-01T07:30:00-05:00",
+  "kind": "text",
+  "topic": "AI",
+  "ig": false,
+  "text": "Stuck on a reply? Type:\n\n\"Give me 3 versions: short, friendly, firm.\"\n\nSave this one.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "fix-2026-11-02",
+  "at": "2026-11-02T15:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-11-02-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "A resume that gets ignored?\n\nClaude can tailor your resume to the job. Paste your resume and the job post. It rewrites your bullets to match what they're asking for.\n\nSay this: \"Rewrite my resume bullets to fit this job post.\"\n\nWhich problem should I do next?",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "tip-2026-11-02",
+  "at": "2026-11-02T07:30:00-05:00",
+  "kind": "text",
+  "topic": "AI",
+  "ig": false,
+  "text": "After any plan, ask:\n\n\"What am I missing?\"\n\nTry it on the next one you get.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "fix-2026-11-03",
+  "at": "2026-11-03T15:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-11-03-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "A text you don't know how to answer?\n\nClaude can help you reply without the drama. Paste the message and say what you want to happen. It gives you a calm reply.\n\nSay this: \"Help me reply to this. Calm, short, and I want to say no.\"\n\nSave this for the next time it happens.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "tip-2026-11-03",
+  "at": "2026-11-03T07:30:00-05:00",
+  "kind": "text",
+  "topic": "AI",
+  "ig": false,
+  "text": "Save your business info once in a Claude Project.\n\nEvery chat inside it remembers your prices and rules.\n\nTakes 10 seconds. Try it today.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "fix-2026-11-04",
+  "at": "2026-11-04T15:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-11-04-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "A sign in another language?\n\nClaude can translate a photo. Menus, signs, labels, instructions. Snap it and ask what it says.\n\nSay this: \"What does this say, and is there anything I should know?\"\n\nWhat would you use it for first?",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "tip-2026-11-04",
+  "at": "2026-11-04T07:30:00-05:00",
+  "kind": "text",
+  "topic": "AI",
+  "ig": false,
+  "text": "Got a bad review? Paste it and say:\n\n\"Write a calm, professional reply.\"\n\nSave this one.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "fix-2026-11-05",
+  "at": "2026-11-05T15:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-11-05-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "Something broken at home?\n\nClaude can help you fix it from a photo. Leaky faucet, tripped breaker, error code on the washer. Show it and ask for the steps.\n\nSay this: \"What's wrong here and how do I fix it myself safely?\"\n\nHave you tried this yet?",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "tip-2026-11-05",
+  "at": "2026-11-05T07:30:00-05:00",
+  "kind": "text",
+  "topic": "AI",
+  "ig": false,
+  "text": "Paste your to do list and ask:\n\n\"Put this in order. What makes me money first?\"\n\nTry it on the next one you get.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "fix-2026-11-06",
+  "at": "2026-11-06T15:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-11-06-fix.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "A review you need to answer?\n\nClaude can reply to a bad review for you. Paste the review. It writes a reply that sounds human, owns the problem and fixes it.\n\nSay this: \"Write a calm, short reply to this 1 star review.\"\n\nSave this for the next time it happens.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ },
+ {
+  "id": "tip-2026-11-06",
+  "at": "2026-11-06T07:30:00-05:00",
+  "kind": "text",
+  "topic": "AI",
+  "ig": false,
+  "text": "Rule number one:\n\nAlways read before you send. AI can be confidently wrong.\n\nTakes 10 seconds. Try it today.",
+  "note": "Parked Oct 31: Seb said the Threads posts were bad. Generic prompt tip, fails the Threads value standard (PLAYBOOK)."
+ }
+]

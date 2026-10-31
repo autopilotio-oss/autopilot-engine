@@ -108,6 +108,17 @@ Stories are paused by default. No story is scheduled in Metricool unless it pass
 The automatic 5 a day story set (tip, quiz, answer, fact, poll) no longer goes to Metricool on autopilot.
 
 
+## Threads value standard (Seb, Oct 31: "the Threads posts are bad, fix the posting style to things of value and importance")
+Every Threads post must pass ALL of these, or it doesn't go out:
+1. Real stakes: money, safety, time or a deadline a normal person faces right now (a scam going around, a fee, a refund right, a bill to check, a rule change, a free thing they're missing). "Claude can also do X" is not stakes.
+2. Specific: a number, a rule, a named source or a real situation. No generic one line prompt tips ("Ask: what am I missing?", "Takes 10 seconds. Try it today").
+3. One concrete action they can take today, written out in full (the exact steps or the exact prompt).
+4. Facts checked with 2 sources, source named.
+5. No engagement bait ("Which week are you having?", "What would you use it for first?"), no promises we can't keep ("reply and I'll set it up": we can't read Threads replies), no promo only posts. A free guide link at the end of a value post is fine.
+6. Fewer is better: 1 to 3 strong posts a day beat 5 weak ones. Empty slots are fine. Never fill a slot just because it exists.
+Retired: EVERYDAY FIX cards that restate a generic prompt, 7:30 one line tips, opinion or question posts with no takeaway, "fill" queue files.
+Good examples: tap card bank call scam (Oct 31), health plan ad scam (Oct 30), credit report errors, check a medical bill, airline refund rule, "3 things I'd never paste into AI".
+
 ## Threads publishing = Metricool (Oct 30)
 Threads is connected in Metricool (brand 7761544). GitHub no longer posts to Threads (config/threads.json paused). The "Instagram + Threads loader" task only loads Instagram (and cross-posts videos). Threads queue items are scheduled into Metricool by the daily content optimizer for the next 3 days and recorded in state/posted.json (Oct 31). Items in queue/hold/ are parked and never loaded. Threads posts with "descendants" go out as a native multi-post thread. Our bot can't read or reply to Threads comments anymore and ManyChat doesn't cover Threads, so on Threads never ask people to comment a keyword: put the direct link in the post instead (free guide or /free/ page). Comment keywords are for Instagram only, where ManyChat answers them.
 

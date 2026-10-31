@@ -103,5 +103,10 @@
   "via": "metricool",
   "at": "2026-10-31T06:56:00+00:00",
   "kind": "scheduled"
+ },
+ "trend-2026-10-31-tap-card-scam": {
+  "via": "metricool",
+  "at": "2026-10-31T11:50:00+00:00",
+  "kind": "scheduled"
  }
 }
