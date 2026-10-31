@@ -73,8 +73,44 @@
   "id": "8z26hcuQJVrhG506xb7zxg==",
   "url": "https://autopilotoi.gumroad.com/l/shop-agent",
   "published": true,
-  "version": 3,
+  "version": 4,
   "live": true,
   "cover_v": 3
+ },
+ "video-agent": {
+  "id": "HO6TBwbYC3KpVc4VJFYLUg==",
+  "url": "https://autopilotoi.gumroad.com/l/video-agent",
+  "published": true,
+  "version": 3,
+  "adopted": true,
+  "live": true,
+  "cover_v": 3
+ },
+ "tiktok-agents": {
+  "id": "rRDPrOXhP7sxK2pG-XXuzQ==",
+  "url": "https://autopilotoi.gumroad.com/l/tiktok-agents",
+  "published": true,
+  "version": 1,
+  "adopted": true,
+  "live": true,
+  "cover_v": 3
+ },
+ "deposit-agent": {
+  "id": "XUlcW8MPCFTzUR4GDIq2Zw==",
+  "url": "https://autopilotoi.gumroad.com/l/deposit-agent",
+  "published": true,
+  "version": 1,
+  "adopted": true,
+  "live": true,
+  "cover_v": 1
+ },
+ "workspace": {
+  "id": "TU4m2U6Yau-RyJWQbsN8mw==",
+  "url": "https://autopilotoi.gumroad.com/l/workspace",
+  "published": true,
+  "version": 1,
+  "adopted": true,
+  "live": true,
+  "cover_v": 1
  }
 }
