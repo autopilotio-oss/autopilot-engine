@@ -4,7 +4,7 @@
  "permalink": "raise-agent",
  "filename": "AUTOPILOT.OI Raise Agent Setup.pdf",
  "description_html": "<p><strong>Walk into your pay conversation prepared.</strong></p><p>Keeps the list of wins you give it, reads public pay data for your job and city, helps you pick your ask, target and minimum, and rehearses the conversation with realistic pushback.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not contact your employer or guarantee a raise on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your job title, city and a few recent wins.</p><p><em>Education only, not career, financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
- "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/raise-cover.png",
+ "cover_url": "https://autopilotoi.app/store/raise-cover.png",
  "tags": [
   "ai",
   "claude",
@@ -12,5 +12,6 @@
   "ai agent",
   "money"
  ],
- "version": 2
+ "version": 2,
+ "cover_v": 2
 }

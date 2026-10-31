@@ -70,6 +70,13 @@ def main():
         if p.get("draft"):
             continue  # not approved for release yet (agent factory QA gate)
         if slug in st and st[slug].get("published"):
+            # Cover refresh: bump "cover_v" in product.json to (re)upload its cover_url to Gumroad.
+            if p.get("cover_v") and p.get("cover_url") and st[slug].get("id") and p["cover_v"] != st[slug].get("cover_v"):
+                try:
+                    r = call("POST", f"/products/{st[slug]['id']}/covers", {"url": p["cover_url"]})
+                    DBG.append(["cover", slug, str(r)[:200]])
+                    if r.get("success", True): st[slug]["cover_v"] = p["cover_v"]
+                except Exception as e: DBG.append(["cover_fail", slug, repr(e)[:300]])
             if p.get("version", 1) != st[slug].get("version", 1) and st[slug].get("id"):
                 try:
                     if p.get("bundle_of"):

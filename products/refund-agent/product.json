@@ -4,7 +4,7 @@
  "permalink": "refund-agent",
  "filename": "AUTOPILOT.OI Refund Agent Setup.pdf",
  "description_html": "<p><strong>Ask for the money you're owed, the right way.</strong></p><p>Spots charges that may be refundable in the statements you upload, drafts refund requests that name your rights (like the DOT airline refund rule and the 60 day card dispute window) and keeps a list of every open claim and its deadline.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not send requests, file disputes or guarantee a refund on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and receipts, bookings or statements for the charge.</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
- "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/refund-cover.png",
+ "cover_url": "https://autopilotoi.app/store/refund-cover.png",
  "tags": [
   "ai",
   "claude",
@@ -12,5 +12,6 @@
   "ai agent",
   "money"
  ],
- "version": 2
+ "version": 2,
+ "cover_v": 2
 }
