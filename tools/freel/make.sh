@@ -6,7 +6,11 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"; H="$ROOT/tools/freel"; MODE="$1"; EP="$2"
 ID=$(python3 -c "import json;print(json.load(open('$H/eps/$EP.json'))['id'])")
-prep(){ python3 "$H/voice.py" "$EP" ${1:-}; python3 "$H/build.py" "$EP"; python3 "$H/mix.py" "$EP"; }
+prep(){ mkdir -p "$H/voice"
+  if [ -z "${1:-}" ] && [ -f "$H/voice/$EP.wav" ] && [ "$(cat "$H/voice/$EP.sha" 2>/dev/null)" = "$(sayhash)" ]; then cp "$H/voice/$EP.wav" "$H/$EP.wav"; cp "$H/voice/$EP.words.json" "$H/$EP.words.json"; echo "reusing saved voice"
+  else python3 "$H/voice.py" "$EP" ${1:-}; if [ -z "${1:-}" ]; then cp "$H/$EP.wav" "$H/voice/"; cp "$H/$EP.words.json" "$H/voice/"; sayhash > "$H/voice/$EP.sha"; fi; fi
+  python3 "$H/build.py" "$EP"; python3 "$H/mix.py" "$EP"; }
+sayhash(){ python3 -c "import json,hashlib;print(hashlib.sha1(' '.join(b['say'] for b in json.load(open('$H/eps/$EP.json'))['beats']).encode()).hexdigest()[:12])"; }
 chunk(){ (cd "$ROOT" && python3 -m http.server 8778 >/dev/null 2>&1 & echo $! > /tmp/srv_$EP.pid); sleep 1
   K="${RANGE%/*}"
   node "$ROOT/tools/office/rend.js" "tools/freel/$EP.html" "$H/${EP}_chunk_$K.mp4"; kill "$(cat /tmp/srv_$EP.pid)" || true; }

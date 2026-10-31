@@ -11,3 +11,5 @@ tools/freel/*.words.json
 tools/freel/*.mp4
 tools/freel/*_chunks.txt
 tools/office/hq*
+!tools/freel/voice/*.wav
+!tools/freel/voice/*.words.json

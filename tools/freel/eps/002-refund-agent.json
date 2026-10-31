@@ -61,5 +61,11 @@
     "topic": "Get your refund"
    }
   }
+ ],
+ "hook_lines": [
+  "Flight *cancelled?*",
+  "Don't take the voucher",
+  "this *AI agent* writes",
+  "your *refund* request"
  ]
 }

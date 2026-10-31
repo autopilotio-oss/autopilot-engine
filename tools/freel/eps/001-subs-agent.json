@@ -102,5 +102,11 @@
     "topic": "Cancel the subs"
    }
   }
+ ],
+ "hook_lines": [
+  "This AI agent",
+  "takes *10 min* to set up",
+  "and finds every",
+  "*subscription* you forgot"
  ]
 }

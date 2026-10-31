@@ -82,5 +82,11 @@
     "topic": "Get the raise"
    }
   }
+ ],
+ "hook_lines": [
+  "This AI agent",
+  "takes *10 min* to set up",
+  "and builds your case",
+  "for a *raise*"
  ]
 }

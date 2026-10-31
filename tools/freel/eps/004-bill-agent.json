@@ -83,5 +83,11 @@
     "topic": "Cut the bill"
    }
   }
+ ],
+ "hook_lines": [
+  "*Never* pay",
+  "a medical bill",
+  "before this *AI agent*",
+  "checks it"
  ]
 }

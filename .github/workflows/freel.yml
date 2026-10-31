@@ -45,7 +45,7 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: bash tools/freel/make.sh prep ${{ matrix.ep }}
       - uses: actions/upload-artifact@v4
-        with: { name: "prep-${{ matrix.ep }}", path: "tools/freel/${{ matrix.ep }}.html\ntools/freel/${{ matrix.ep }}_mix.wav\ntools/freel/${{ matrix.ep }}.words.json\ntools/freel/${{ matrix.ep }}.meta.json" }
+        with: { name: "prep-${{ matrix.ep }}", path: "tools/freel/${{ matrix.ep }}.html\ntools/freel/${{ matrix.ep }}_mix.wav\ntools/freel/${{ matrix.ep }}.words.json\ntools/freel/${{ matrix.ep }}.meta.json\ntools/freel/voice/${{ matrix.ep }}.*" }
   render:
     needs: [plan, prep]
     runs-on: ubuntu-latest
@@ -83,7 +83,7 @@ jobs:
       - name: Commit
         run: |
           git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
-          git add docs/media/freel queue/freel
+          git add docs/media/freel queue/freel tools/freel/voice
           git diff --cached --quiet && exit 0
           git commit -m "Factory reels rendered"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
