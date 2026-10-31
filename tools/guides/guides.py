@@ -189,3 +189,10 @@ G["refund"] = dict(
  agent=G["refund"]["agent"] | dict(instr="You are my Refund Agent. When I say 'get my money back', read what I upload, tell me if I likely have a right to a refund and why, then write the request ready for me to review and send. If the merchant says no on a credit card charge, write a Fair Credit Billing Act billing error letter for the billing inquiries address. When I say 'refund scan', check my statements for duplicate charges, canceled services still billing, and fees I didn't agree to. Keep a log of every claim (company, amount, statement date, date sent, deadline, status) and remind me of the next step and any deadline, like the 60 day written dispute window. Never invent facts or promise an outcome. Keep it short."),
  sources=[("DOT: airline refunds","https://www.transportation.gov/individuals/aviation-consumer-protection/refunds"),("FTC: using credit cards and disputing charges","https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges"),("CFPB: disputing a credit card charge","https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-a-charge-on-my-credit-card-bill-en-61/"),("CFPB: unauthorized bank or debit transactions","https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-my-money-back-after-i-discover-an-unauthorized-transaction-or-money-missing-from-my-bank-account-en-1017/")],
 )
+
+# Daily agents (tools/daily/new_agent.py) add guides as JSON files in tools/guides/extra/<key>.json
+import os as _os, json as _json, glob as _glob
+for _f in sorted(_glob.glob(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "extra", "*.json"))):
+    _g = _json.load(open(_f)); _k = _os.path.basename(_f)[:-5]
+    _g["steps"] = [tuple(s) for s in _g.get("steps", [])]; _g["sources"] = [tuple(s) for s in _g.get("sources", [])]
+    G[_k] = _g

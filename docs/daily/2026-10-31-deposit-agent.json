@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-31",
+ "slug": "deposit-agent",
+ "name": "Deposit Agent",
+ "kw": "DEPOSIT",
+ "gate": {
+  "scores": {
+   "real_problem": 2,
+   "honest_claim": 2,
+   "easy_to_run": 2,
+   "fits_brand": 2,
+   "sellable": 2,
+   "not_done_before": 1
+  },
+  "notes": "Common, costly problem with clear official rules (CA 21 days, NY 14 days). Agent only sorts and drafts; user sends. not_done_before 1: deposit letter templates exist, but none sort charges against your own photos.",
+  "problem_sources": [
+   "https://gothamist.com/news/nearly-5000-new-york-renters-filed-complaints-for-missing-security-deposits-heres-how-to-get-yours-back",
+   "https://ag.ny.gov/press-release/2023/attorney-general-james-recovers-over-422000-hundreds-long-island-tenants",
+   "https://selfhelp.courts.ca.gov/guide-security-deposits"
+  ]
+ },
+ "posts": {
+  "tiktok": "Your landlord kept part of your deposit? Worn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list. This robot shows exactly what the Deposit Agent does: it sorts every charge against your photos and drafts the letter. You review it and send it yourself. Comment DEPOSIT for the free guide. #renters #securitydeposit #claudeai #tenantrights",
+  "instagram": "Your landlord kept part of your deposit?\n\nWorn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list of what they kept.\n\nThe Deposit Agent sorts every charge against your photos and drafts the letter. You review it and send it yourself.\n\nComment DEPOSIT and I'll send you the free guide.\n\n#renters #securitydeposit #tenantrights #claudeai",
+  "threads": "Your landlord kept part of your deposit?\n\nWorn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list of what they kept.\n\nUpload your lease, move out photos and their list to Claude. It sorts every charge and drafts the letter. You review and send.\n\nFree guide: https://autopilotoi.app/g/deposit/",
+  "x": "Your landlord kept part of your deposit?\n\nWorn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list of what they kept.\n\nUpload your lease, move out photos and their list to Claude. It sorts every charge and drafts the letter. You review and send.\n\nFree guide: https://autopilotoi.app/g/deposit/"
+ },
+ "links": {
+  "guide": "https://autopilotoi.app/g/deposit/",
+  "gumroad": "https://autopilotoi.gumroad.com/l/deposit-agent",
+  "video": "https://autopilotoi.app/media/demo/deposit-agent.mp4"
+ }
+}

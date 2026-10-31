@@ -1,0 +1,106 @@
+{
+ "color": "cyan",
+ "problem": "a kept security deposit",
+ "does_title": "checks every deduction",
+ "does": [
+  "Sorts each charge: fair, wear and tear, no proof",
+  "Checks the deadline for your state",
+  "Drafts the letter for you to send"
+ ],
+ "beats": [
+  {
+   "step": "intro",
+   "say": "Your landlord kept part of your deposit? We built an agent for that."
+  },
+  {
+   "step": "upload",
+   "chip": "upload",
+   "banner": "Upload your proof",
+   "label": "Lease, photos and their list",
+   "files": [
+    "lease_2025.pdf",
+    "move_out_photos.zip",
+    "deductions_list.pdf"
+   ],
+   "say": "Upload your lease, your move out photos, and the landlord's list of deductions."
+  },
+  {
+   "step": "prompt",
+   "chip": "ask",
+   "banner": "Type one line",
+   "label": "Then type",
+   "text": "check my deposit",
+   "say": "Then type check my deposit."
+  },
+  {
+   "step": "work",
+   "chip": "work",
+   "banner": "It checks every charge",
+   "label": "Checking every charge",
+   "lines": [
+    "lease and photos read",
+    "matching charges to photos",
+    "wear and tear or damage",
+    "deadline from your notes"
+   ],
+   "say": "It checks each charge against your photos, sorts wear and tear from real damage, and checks the deadline for your state."
+  },
+  {
+   "step": "result",
+   "chip": "result",
+   "banner": "Every charge, sorted",
+   "title": "Deposit check",
+   "cols": [
+    "Deduction",
+    "Charged",
+    "Call"
+   ],
+   "rows": [
+    [
+     "Carpet",
+     "$450",
+     "Wear and tear"
+    ],
+    [
+     "Repaint",
+     "$300",
+     "Wear and tear"
+    ],
+    [
+     "Deep clean",
+     "$150",
+     "Check photos"
+    ],
+    [
+     "Broken blind",
+     "$40",
+     "Fair"
+    ],
+    [
+     "Lock change",
+     "$75",
+     "No proof"
+    ]
+   ],
+   "foot": "$825 to dispute  ·  letter ready",
+   "say": "You get every deduction marked fair, wear and tear, or no proof."
+  },
+  {
+   "step": "draft",
+   "chip": "draft",
+   "banner": "The letter, drafted",
+   "title": "Deposit request",
+   "text": "Hi, I moved out on Sept 30 and returned the keys that day.\nYour list charges $750 for carpet and paint, which is normal wear and tear, and $75 for a lock change with no receipt.\nPlease return $825 by Oct 28. Thank you.",
+   "say": "Then it drafts the letter for the charges you dispute. You review it and send it yourself."
+  },
+  {
+   "step": "cta",
+   "say": "The Deposit Agent is a ten dollar Claude prompt kit. Comment DEPOSIT for the free guide."
+  }
+ ],
+ "slug": "deposit-agent",
+ "name": "Deposit Agent",
+ "price": "$10",
+ "kw": "DEPOSIT",
+ "cover": "deposit"
+}

@@ -118,6 +118,14 @@ def thumb(k, p):
 <div class="h" style="font-size:{t1}px;margin-top:10px"><span class="a">{e(p['t1'])}</span> <span class="b">{e(p['t2'])}</span></div></div>
 {right}{sticker(p, 40, 440, 116) if 'stack' not in p else sticker(p, 452, 452, 112)}</body></html>"""
 
+# Daily agents add covers as JSON in tools/kits/covers_extra/<key>.json:
+# {"cat","no","t1","t2","sub","doc","price", "table":{"head":[],"rows":[[]],"foot":""} or "letter":[lines]}
+import json as _json, glob as _glob
+for _f in sorted(_glob.glob(os.path.join(ROOT, "tools", "kits", "covers_extra", "*.json"))):
+    _c = _json.load(open(_f)); _k = os.path.basename(_f)[:-5]
+    _c["body"] = table(_c["table"]["head"], _c["table"]["rows"], _c["table"].get("foot")) if "table" in _c else letter(_c["letter"])
+    P[_k] = {k: v for k, v in _c.items() if k not in ("table", "letter")}
+
 async def main(keys):
     from playwright.async_api import async_playwright
     out = os.path.join(ROOT, "docs", "store"); tmp = "/tmp/cov2"; os.makedirs(tmp, exist_ok=True)

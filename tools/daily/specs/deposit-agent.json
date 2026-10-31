@@ -1,0 +1,108 @@
+{
+ "key": "deposit",
+ "slug": "deposit-agent",
+ "name": "Deposit Agent",
+ "kw": "DEPOSIT",
+ "cat": "MONEY",
+ "price_cents": 1000,
+ "headline": "Get back the security deposit your landlord kept.",
+ "what": "Reads your lease, your move in and move out photos and the landlord's list of deductions. Sorts every charge into fair, normal wear and tear, or no proof, checks it against the deadline and rules you look up for your state, and drafts the demand letter for the charges you dispute.",
+ "need": "a Claude account (the free plan works, up to 5 Projects), your lease, move in and move out photos, and the landlord's list of deductions.",
+ "doesnt": "It does not send anything, contact your landlord, or give legal advice.",
+ "tags": ["ai", "claude", "renters", "security deposit", "money"],
+ "kit": {
+  "tag": "MONEY",
+  "promise": "Check every deduction from your security deposit and draft the letter to ask for back what was kept unfairly.",
+  "setup": [
+   "Create a new Claude Project named Deposit Agent.",
+   "Paste the master prompt below into the Project instructions.",
+   "Upload your lease and your move in checklist or photos to the Project files.",
+   "Look up your state's security deposit page on an official site (attorney general or state courts). Add a note with the deadline and what the landlord must send you.",
+   "When the landlord's list arrives, upload it with your move out photos and type: check my deposit."
+  ],
+  "master": "You are my Deposit Agent. You help me get back money a landlord kept from my security deposit unfairly. You draft, I decide and I send everything myself.\n\nWhen I say 'check my deposit':\n1. Read my lease, my move in checklist and photos, my move out photos and the landlord's itemized list of deductions.\n2. Make a table with one row per deduction: item, amount charged, your call (Fair, Normal wear and tear, Pre-existing, No proof, Too high), and the evidence for your call (photo name, lease clause or date).\n3. Normal wear and tear means deterioration from ordinary use, like worn carpet in walkways, faded paint, small nail holes or light scuffs. Damage means harm beyond ordinary use, like burns, large holes, pet stains or broken fixtures. If you can't tell from my photos, say so and ask me.\n4. Check timing: compare my move out date and key return date with the date I received the list, using the deadline in my Project notes for my state. If my notes don't have my state's deadline, tell me to look it up on my state's official site before we go on. Never guess a law, a deadline or a penalty.\n5. Total what I could fairly dispute.\n\nWhen I say 'write the letter': draft a short, polite, firm demand letter to my landlord. Include my move out date, the deposit amount, each disputed charge with one line on why, the total I'm asking for, my forwarding address, and a clear reply date (14 days unless I say otherwise). Mention my state's rule only if it is in my notes, in plain words. No threats, no legal jargon, no invented facts.\n\nWhen I say 'they said no' or 'no answer': help me plan the next step, like a follow up letter or preparing for small claims court, and list the evidence to bring. Remind me that rules differ by state and city and that local legal aid can help for free.\n\nRules: never invent facts, dates, receipts or laws. Keep everything short. Use my documents as the only source of facts about my case. I review and send everything myself. You are not a lawyer and this is not legal advice.",
+  "starters": [
+   ["CHECK MY DEPOSIT", "check my deposit. My move out date was [date], I returned the keys on [date] and I received the landlord's list on [date]. The deposit was $[amount]."],
+   ["DEADLINE CHECK", "Based on the deadline in my notes, did my landlord send the itemized list on time? Show me the dates you used."],
+   ["WRITE THE LETTER", "write the letter for the charges marked Normal wear and tear, Pre-existing and No proof. My forwarding address is [address]."],
+   ["FOLLOW UP", "no answer. It has been [number] days since I sent the letter on [date]. Draft a short follow up and tell me my options."],
+   ["SMALL CLAIMS PREP", "they said no. Help me organize my evidence for small claims court: a timeline, the photo list and a one page summary of each disputed charge."]
+  ],
+  "links": [
+   ["California courts: security deposits", "https://selfhelp.courts.ca.gov/guide-security-deposits"],
+   ["California AG: know your rights", "https://www.oag.ca.gov/system/files/media/Know-Your-Rights-Security-Deposits-English.pdf"],
+   ["New York AG: tenant protections", "https://ag.ny.gov/press-release/2022/attorney-general-james-recovers-nearly-300000-illegally-withheld-security"],
+   ["Free legal aid near you", "https://www.lawhelp.org/"]
+  ],
+  "tracker": ["Deduction", "Charged", "Call", "Proof", "Disputed", "Status"]
+ },
+ "guide": {
+  "title": "Get your security deposit back",
+  "sub": "Your landlord kept part of your deposit? Here's how to check every charge and ask for the money back in writing, with Claude doing the sorting and the drafting.",
+  "time": "About 30 minutes",
+  "need": "Your lease, move in and move out photos, the landlord's list of deductions, and Claude",
+  "why": "Landlords can usually deduct for unpaid rent and real damage, but generally not for normal wear and tear, and most states set a deadline to return the deposit or send an itemized list. In New York, thousands of renters have filed complaints about missing deposits. A clear, polite letter with your photos is often enough to get money back.",
+  "steps": [
+   ["Find your state's deadline", "Search your state's official site (attorney general or state courts) for 'security deposit'. Write down how many days the landlord has after you move out, and what they must send you. For example, California gives landlords 21 days and New York gives 14. Some cities have extra rules.", null, []],
+   ["Gather your proof", "Put these in one folder: your lease, the move in checklist, move in and move out photos with dates, the landlord's itemized list, any receipts they sent, and the date you moved out and returned the keys.", null, []],
+   ["Have Claude sort every deduction", "Upload everything to one Claude chat and paste this:", "I uploaded my lease, my move in and move out photos and my landlord's list of deductions from my security deposit. Make a table with one row per deduction: item, amount, and your call: Fair, Normal wear and tear, Pre-existing, No proof, or Too high, with the photo or lease clause that supports it. Normal wear and tear is deterioration from ordinary use, like worn carpet or faded paint. If you can't tell from the photos, say so. Don't guess any law or deadline. Then total what I could fairly dispute.", []],
+   ["Check the timing", "Compare your move out date with the date the list arrived. If it came after your state's deadline, or never came, note it. Paste this:", "My state is [state]. The official deadline is [number] days and the landlord must send [what your state requires]. I moved out on [date] and got the list on [date or never]. Was it on time? Show your math.", []],
+   ["Write the demand letter", "Ask Claude for a short, polite, firm letter. Read it, fix anything that isn't exactly true, and send it yourself.", "Write a short demand letter to my landlord. Include my move out date, the deposit amount, each disputed charge with one line on why, the total I'm asking for, my forwarding address and a reply date 14 days from today. No threats, no legal jargon, nothing I didn't tell you.", []],
+   ["Send it so you can prove it", "Email it and also send it by certified mail with tracking. Keep copies of everything. If there's no answer by your date, look up small claims court on your state's courts site. Many deposit cases are handled there without a lawyer, and local legal aid can help for free.", null, []]
+  ],
+  "warn": [
+   "Deadlines, rules and penalties are different in every state and some cities. Check your state's official page before you send anything.",
+   "This guide is education, not legal advice. For a large amount or a complicated case, contact local legal aid or a tenant rights group.",
+   "Never add damage, dates or receipts that aren't real. Your photos and documents are what make your case."
+  ],
+  "agent": {
+   "name": "Deposit Agent",
+   "what": "A Claude Project that sorts every deposit deduction against your photos and lease, checks the timing against your state's rule, and drafts the letter.",
+   "setup": ["Create a new Claude Project named Deposit Agent.", "Paste the instructions below.", "Upload your lease and move in photos, and add a note with your state's deadline from its official site.", "When the landlord's list arrives, upload it with your move out photos and type: check my deposit."],
+   "instr": "You are my Deposit Agent. When I say 'check my deposit', read my lease, my move in and move out photos and the landlord's list of deductions, and make a table: item, amount, and your call (Fair, Normal wear and tear, Pre-existing, No proof, Too high) with the evidence. Check if the list arrived within the deadline in my notes. Never guess a law or deadline. When I say 'write the letter', draft a short, polite demand letter for the disputed charges with a reply date. Never invent facts. I review and send everything myself."
+  },
+  "sources": [
+   ["California Courts: guide to security deposits", "https://selfhelp.courts.ca.gov/guide-security-deposits"],
+   ["California Attorney General: security deposits", "https://www.oag.ca.gov/system/files/media/Know-Your-Rights-Security-Deposits-English.pdf"],
+   ["New York Attorney General: withheld security deposits", "https://ag.ny.gov/press-release/2022/attorney-general-james-recovers-nearly-300000-illegally-withheld-security"],
+   ["Gothamist: nearly 5,000 New York renters filed complaints over deposits", "https://gothamist.com/news/nearly-5000-new-york-renters-filed-complaints-for-missing-security-deposits-heres-how-to-get-yours-back"]
+  ]
+ },
+ "cover": {
+  "cat": "MONEY", "no": "09", "t1": "DEPOSIT", "t2": "AGENT",
+  "sub": "Check every deduction. Ask for back what was kept unfairly.",
+  "doc": "Deposit check",
+  "table": {"head": ["Deduction", "Charged", "Call"], "rows": [["Carpet replacement", "$450", "Wear and tear"], ["Repaint unit", "$300", "Wear and tear"], ["Broken blind", "$40", "Fair"], ["Lock change", "$75", "No proof"]], "foot": "$825 to dispute · letter ready"}
+ },
+ "demo": {
+  "color": "cyan",
+  "problem": "a kept security deposit",
+  "does_title": "checks every deduction",
+  "does": ["Sorts each charge: fair, wear and tear, no proof", "Checks the deadline for your state", "Drafts the letter for you to send"],
+  "beats": [
+   {"step": "intro", "say": "Your landlord kept part of your deposit? We built an agent for that."},
+   {"step": "upload", "chip": "upload", "banner": "Upload your proof", "label": "Lease, photos and their list", "files": ["lease_2025.pdf", "move_out_photos.zip", "deductions_list.pdf"], "say": "Upload your lease, your move out photos, and the landlord's list of deductions."},
+   {"step": "prompt", "chip": "ask", "banner": "Type one line", "label": "Then type", "text": "check my deposit", "say": "Then type check my deposit."},
+   {"step": "work", "chip": "work", "banner": "It checks every charge", "label": "Checking every charge", "lines": ["lease and photos read", "matching charges to photos", "wear and tear or damage", "deadline from your notes"], "say": "It checks each charge against your photos, sorts wear and tear from real damage, and checks the deadline for your state."},
+   {"step": "result", "chip": "result", "banner": "Every charge, sorted", "title": "Deposit check", "cols": ["Deduction", "Charged", "Call"], "rows": [["Carpet", "$450", "Wear and tear"], ["Repaint", "$300", "Wear and tear"], ["Deep clean", "$150", "Check photos"], ["Broken blind", "$40", "Fair"], ["Lock change", "$75", "No proof"]], "foot": "$825 to dispute  ·  letter ready", "say": "You get every deduction marked fair, wear and tear, or no proof."},
+   {"step": "draft", "chip": "draft", "banner": "The letter, drafted", "title": "Deposit request", "text": "Hi, I moved out on Sept 30 and returned the keys that day.\nYour list charges $750 for carpet and paint, which is normal wear and tear, and $75 for a lock change with no receipt.\nPlease return $825 by Oct 28. Thank you.", "say": "Then it drafts the letter for the charges you dispute. You review it and send it yourself."},
+   {"step": "cta", "say": "The Deposit Agent is a ten dollar Claude prompt kit. Comment DEPOSIT for the free guide."}
+  ]
+ },
+ "reply": "Here's your free guide 🏠 How to get your security deposit back, step by step with Claude: https://autopilotoi.app/g/deposit/",
+ "gate": {
+  "scores": {"real_problem": 2, "honest_claim": 2, "easy_to_run": 2, "fits_brand": 2, "sellable": 2, "not_done_before": 1},
+  "notes": "Common, costly problem with clear official rules (CA 21 days, NY 14 days). Agent only sorts and drafts; user sends. not_done_before 1: deposit letter templates exist, but none sort charges against your own photos.",
+  "problem_sources": [
+   "https://gothamist.com/news/nearly-5000-new-york-renters-filed-complaints-for-missing-security-deposits-heres-how-to-get-yours-back",
+   "https://ag.ny.gov/press-release/2023/attorney-general-james-recovers-over-422000-hundreds-long-island-tenants",
+   "https://selfhelp.courts.ca.gov/guide-security-deposits"
+  ]
+ },
+ "posts": {
+  "tiktok": "Your landlord kept part of your deposit? Worn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list. This robot shows exactly what the Deposit Agent does: it sorts every charge against your photos and drafts the letter. You review it and send it yourself. Comment DEPOSIT for the free guide. #renters #securitydeposit #claudeai #tenantrights",
+  "instagram": "Your landlord kept part of your deposit?\n\nWorn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list of what they kept.\n\nThe Deposit Agent sorts every charge against your photos and drafts the letter. You review it and send it yourself.\n\nComment DEPOSIT and I'll send you the free guide.\n\n#renters #securitydeposit #tenantrights #claudeai",
+  "threads": "Your landlord kept part of your deposit?\n\nWorn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list of what they kept.\n\nUpload your lease, move out photos and their list to Claude. It sorts every charge and drafts the letter. You review and send.\n\nFree guide: https://autopilotoi.app/g/deposit/",
+  "x": "Your landlord kept part of your deposit?\n\nWorn carpet and faded paint are usually normal wear and tear, and most states give landlords a deadline to send you an itemized list of what they kept.\n\nUpload your lease, move out photos and their list to Claude. It sorts every charge and drafts the letter. You review and send.\n\nFree guide: https://autopilotoi.app/g/deposit/"
+ }
+}

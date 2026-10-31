@@ -1,0 +1,39 @@
+{
+ "cat": "MONEY",
+ "no": "09",
+ "t1": "DEPOSIT",
+ "t2": "AGENT",
+ "sub": "Check every deduction. Ask for back what was kept unfairly.",
+ "doc": "Deposit check",
+ "table": {
+  "head": [
+   "Deduction",
+   "Charged",
+   "Call"
+  ],
+  "rows": [
+   [
+    "Carpet replacement",
+    "$450",
+    "Wear and tear"
+   ],
+   [
+    "Repaint unit",
+    "$300",
+    "Wear and tear"
+   ],
+   [
+    "Broken blind",
+    "$40",
+    "Fair"
+   ],
+   [
+    "Lock change",
+    "$75",
+    "No proof"
+   ]
+  ],
+  "foot": "$825 to dispute · letter ready"
+ },
+ "price": "$10"
+}

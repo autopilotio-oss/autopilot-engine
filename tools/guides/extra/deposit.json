@@ -1,0 +1,82 @@
+{
+ "title": "Get your security deposit back",
+ "sub": "Your landlord kept part of your deposit? Here's how to check every charge and ask for the money back in writing, with Claude doing the sorting and the drafting.",
+ "time": "About 30 minutes",
+ "need": "Your lease, move in and move out photos, the landlord's list of deductions, and Claude",
+ "why": "Landlords can usually deduct for unpaid rent and real damage, but generally not for normal wear and tear, and most states set a deadline to return the deposit or send an itemized list. In New York, thousands of renters have filed complaints about missing deposits. A clear, polite letter with your photos is often enough to get money back.",
+ "steps": [
+  [
+   "Find your state's deadline",
+   "Search your state's official site (attorney general or state courts) for 'security deposit'. Write down how many days the landlord has after you move out, and what they must send you. For example, California gives landlords 21 days and New York gives 14. Some cities have extra rules.",
+   null,
+   []
+  ],
+  [
+   "Gather your proof",
+   "Put these in one folder: your lease, the move in checklist, move in and move out photos with dates, the landlord's itemized list, any receipts they sent, and the date you moved out and returned the keys.",
+   null,
+   []
+  ],
+  [
+   "Have Claude sort every deduction",
+   "Upload everything to one Claude chat and paste this:",
+   "I uploaded my lease, my move in and move out photos and my landlord's list of deductions from my security deposit. Make a table with one row per deduction: item, amount, and your call: Fair, Normal wear and tear, Pre-existing, No proof, or Too high, with the photo or lease clause that supports it. Normal wear and tear is deterioration from ordinary use, like worn carpet or faded paint. If you can't tell from the photos, say so. Don't guess any law or deadline. Then total what I could fairly dispute.",
+   []
+  ],
+  [
+   "Check the timing",
+   "Compare your move out date with the date the list arrived. If it came after your state's deadline, or never came, note it. Paste this:",
+   "My state is [state]. The official deadline is [number] days and the landlord must send [what your state requires]. I moved out on [date] and got the list on [date or never]. Was it on time? Show your math.",
+   []
+  ],
+  [
+   "Write the demand letter",
+   "Ask Claude for a short, polite, firm letter. Read it, fix anything that isn't exactly true, and send it yourself.",
+   "Write a short demand letter to my landlord. Include my move out date, the deposit amount, each disputed charge with one line on why, the total I'm asking for, my forwarding address and a reply date 14 days from today. No threats, no legal jargon, nothing I didn't tell you.",
+   []
+  ],
+  [
+   "Send it so you can prove it",
+   "Email it and also send it by certified mail with tracking. Keep copies of everything. If there's no answer by your date, look up small claims court on your state's courts site. Many deposit cases are handled there without a lawyer, and local legal aid can help for free.",
+   null,
+   []
+  ]
+ ],
+ "warn": [
+  "Deadlines, rules and penalties are different in every state and some cities. Check your state's official page before you send anything.",
+  "This guide is education, not legal advice. For a large amount or a complicated case, contact local legal aid or a tenant rights group.",
+  "Never add damage, dates or receipts that aren't real. Your photos and documents are what make your case."
+ ],
+ "agent": {
+  "name": "Deposit Agent",
+  "what": "A Claude Project that sorts every deposit deduction against your photos and lease, checks the timing against your state's rule, and drafts the letter.",
+  "setup": [
+   "Create a new Claude Project named Deposit Agent.",
+   "Paste the instructions below.",
+   "Upload your lease and move in photos, and add a note with your state's deadline from its official site.",
+   "When the landlord's list arrives, upload it with your move out photos and type: check my deposit."
+  ],
+  "instr": "You are my Deposit Agent. When I say 'check my deposit', read my lease, my move in and move out photos and the landlord's list of deductions, and make a table: item, amount, and your call (Fair, Normal wear and tear, Pre-existing, No proof, Too high) with the evidence. Check if the list arrived within the deadline in my notes. Never guess a law or deadline. When I say 'write the letter', draft a short, polite demand letter for the disputed charges with a reply date. Never invent facts. I review and send everything myself."
+ },
+ "sources": [
+  [
+   "California Courts: guide to security deposits",
+   "https://selfhelp.courts.ca.gov/guide-security-deposits"
+  ],
+  [
+   "California Attorney General: security deposits",
+   "https://www.oag.ca.gov/system/files/media/Know-Your-Rights-Security-Deposits-English.pdf"
+  ],
+  [
+   "New York Attorney General: withheld security deposits",
+   "https://ag.ny.gov/press-release/2022/attorney-general-james-recovers-nearly-300000-illegally-withheld-security"
+  ],
+  [
+   "Gothamist: nearly 5,000 New York renters filed complaints over deposits",
+   "https://gothamist.com/news/nearly-5000-new-york-renters-filed-complaints-for-missing-security-deposits-heres-how-to-get-yours-back"
+  ]
+ ],
+ "kw": "DEPOSIT",
+ "permalink": "deposit-agent",
+ "bundle_btn": ""
+}

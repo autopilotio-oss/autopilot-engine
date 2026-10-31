@@ -24,3 +24,5 @@ Evidence:
 Score: demand 2 · fit 1 (our audience is mostly consumers; The Workspace $49 already includes a Follow up agent, so this would compete with our own product) · free value 1 · better than free 0 · safe 2 · measurable 2 = 8/12 with a zero.
 Result: FAILS the gate. Not recommended. Better move: sell the follow-up job through The Workspace we already have.
 Status: NOT PITCHED FOR BUILD
+
+- 2026-10-31 Deposit Agent (deposit-agent): AUTO RELEASED, gate 11/12. Seb chose fully automatic daily agents on Oct 31 2026.
