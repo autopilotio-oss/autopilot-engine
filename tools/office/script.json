@@ -1,0 +1,15 @@
+{"title":["THE AI OFFICE","THAT RUNS AUTOPILOT.OI"],
+"show":[["Autopilot","O.I.","AUTOPILOT.OI"]],
+"beats":[
+{"cam":"all","say":"This is the office that runs Autopilot O.I. Every one of these little guys is an AI agent."},
+{"cam":"lab","say":"It starts in the idea lab. Agents find what people actually struggle with, and score every idea before it gets built."},
+{"cam":"owner","say":"Only the best ones reach my desk. Nothing ships without my yes."},
+{"cam":"studio","say":"Then the content studio writes the scripts, cuts the videos, and schedules posts to TikTok, Instagram, Threads and X."},
+{"cam":"dm","say":"Someone comments a keyword, and the DM room sends them the free guide."},
+{"cam":"library","say":"The guide library keeps every guide free, and checks the facts before anything goes out."},
+{"cam":"email","say":"The email room follows up with tips. No spam."},
+{"cam":"store","say":"Want the full kit? The store syncs itself every six hours and checks every buy link."},
+{"cam":"data","say":"The data room tracks what people click, and sends it back to the idea lab."},
+{"cam":"engine","say":"And the engine room keeps all of it running on schedule, day and night."},
+{"cam":"all","say":"That's the loop. We help you set up agents like these. Comment AGENT."}
+]}
