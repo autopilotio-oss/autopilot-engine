@@ -11,17 +11,6 @@
   "text": "A doctor's note full of jargon?\n\nClaude can explain your lab results. Paste them in. Use it to prepare questions, then ask your doctor.\n\nSay this: \"Explain this in plain English. What should I ask my doctor?\"\n\nWhat would you use it for first?"
  },
  {
-  "id": "fix-2026-10-31",
-  "at": "2026-10-31T15:30:00-04:00",
-  "kind": "image",
-  "media": [
-   "https://autopilotio-oss.github.io/autopilot-engine/media/fixes/2026-10-31-fix.jpg"
-  ],
-  "topic": "AI",
-  "ig": false,
-  "text": "A messy budget?\n\nClaude can sort your spending for you. Paste a month of transactions. It groups them and shows where the money actually went.\n\nSay this: \"Group these by category and show my top 3 money leaks.\"\n\nHave you tried this yet?"
- },
- {
   "id": "tip-2026-10-31",
   "at": "2026-10-31T07:30:00-04:00",
   "kind": "text",
