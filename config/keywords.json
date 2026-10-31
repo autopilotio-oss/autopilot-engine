@@ -2,17 +2,17 @@
  "replies": {
   "WORKSPACE": "Here it is ⚡ THE WORKSPACE: 7 AI agents that handle your busy work, set up in about an hour. $49 one time, 30 day refund if it doesn't save you time. https://autopilotoi.app/workspace/",
   "BRAIN": "Here you go 🧠 Your free AI Front Desk: answer 15 questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
-  "AGENTS": "Here you go 🧠 Start with the free AI Front Desk: answer 15 questions and get an AI that knows your business. https://autopilotoi.app/brain/",
-  "AGENT": "Here you go 🧠 Start with the free AI Front Desk: answer 15 questions and get an AI that knows your business. https://autopilotoi.app/brain/",
-  "CREDIT": "Here you go 💳 Fix your credit report yourself with Claude: the exact prompts and the dispute letter you send yourself. Free: https://autopilotoi.app/g/credit/",
-  "BILL": "Here you go 🧾 How to check and cut a medical bill with Claude, with the call script and a Bill Agent. Free: https://autopilotoi.app/g/bill/",
+  "AGENTS": "Here you go 🧠 Your free AI Front Desk: answer 15 questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
+  "AGENT": "Here you go 🧠 Your free AI Front Desk: answer 15 questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
+  "CREDIT": "Here you go 💳 Check your credit report yourself with Claude: the exact prompts and the dispute letter you send yourself. Free: https://autopilotoi.app/g/credit/",
+  "BILL": "Here you go 🧾 How to check a medical bill with Claude before you pay, with the call script. Free: https://autopilotoi.app/g/bill/",
   "DEBT": "Here you go 💸 The call script to ask for a lower rate and a payoff plan you can check in on each payday. Free: https://autopilotoi.app/g/debt/",
   "SUBS": "Here you go ✂️ Find every forgotten subscription in 10 minutes with Claude, plus the cancel messages. Free: https://autopilotoi.app/g/subs/",
   "REFUND": "Here you go ↩️ Get your money back: the refund rules, the exact request to send, and what to do if they say no. Free: https://autopilotoi.app/g/refund/",
   "RAISE": "Here you go 📈 Real pay data, your number, and a practice run with Claude before you ask. Free: https://autopilotoi.app/g/raise/",
   "VIDEO": "Here you go 🎬 How to plan TikToks with AI: scripts, CapCut edit plans and a posting schedule. Free: https://autopilotoi.app/g/video/",
   "SHOP": "Here you go 🛍️ Start selling on TikTok Shop: pick a product, check your profit, write the listing, get creators. Free: https://autopilotoi.app/g/shop/",
-  "SELL": "Here you go 💬 Build an AI sales agent for your TikTok: videos that sell, LIVE scripts, replies to every DM. Free: https://autopilotoi.app/g/sell/"
+  "SELL": "Here you go 💬 Use AI to sell on TikTok: videos that sell, LIVE scripts and replies to your DMs. Free: https://autopilotoi.app/g/sell/"
  },
  "max_per_run": 20
 }
