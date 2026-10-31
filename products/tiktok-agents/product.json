@@ -1,20 +1,21 @@
 {
- "name": "AUTOPILOT.OI TikTok Agents Bundle",
- "price_cents": 2400,
- "permalink": "tiktok-agents",
- "filename": "(bundle)",
- "bundle_of": [
-  "video-agent",
-  "shop-agent",
-  "sell-agent"
- ],
- "description_html": "<p><strong>All 3 TikTok agents for Claude. $30 separately, $24 here.</strong></p><ul><li><strong>Video Agent:</strong> scripts, CapCut edit plans, captions and a posting schedule</li><li><strong>Shop Agent:</strong> product research, profit checks, compliant listing drafts, creator outreach drafts</li><li><strong>Sales Agent:</strong> sales video drafts, LIVE scripts, comment and DM reply drafts</li></ul><p><strong>What you get:</strong> 3 Claude prompt kits (PDFs), each with the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you run them in Claude Projects. They draft and plan; you edit, post and reply. They don't log into TikTok, edit video or post on their own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects).</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
- "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/tiktok-cover.png",
- "tags": [
-  "ai",
-  "claude",
-  "tiktok",
-  "tiktok shop",
-  "ai agent"
- ]
+  "name": "AUTOPILOT.OI TikTok Agents Bundle",
+  "price_cents": 2400,
+  "permalink": "tiktok-agents",
+  "filename": "(bundle)",
+  "bundle_of": [
+    "video-agent",
+    "shop-agent",
+    "sell-agent"
+  ],
+  "description_html": "<p><strong>All 3 TikTok agents for Claude. $30 separately, $24 here.</strong></p><ul><li><strong>Video Agent:</strong> scripts, CapCut edit plans, captions and a posting schedule</li><li><strong>Shop Agent:</strong> product research, profit checks, compliant listing drafts, creator outreach drafts</li><li><strong>Sales Agent:</strong> sales video drafts, LIVE scripts, comment and DM reply drafts</li></ul><p><strong>What you get:</strong> 3 Claude prompt kits (PDFs), each with the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you run them in Claude Projects. They draft and plan; you edit, post and reply. They don't log into TikTok, edit video or post on their own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects).</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
+  "cover_url": "https://autopilotoi.app/store/tiktok-cover.png?v=3",
+  "tags": [
+    "ai",
+    "claude",
+    "tiktok",
+    "tiktok shop",
+    "ai agent"
+  ],
+  "cover_v": 3
 }

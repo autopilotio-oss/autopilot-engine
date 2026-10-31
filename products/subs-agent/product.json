@@ -1,17 +1,17 @@
 {
- "name": "AUTOPILOT.OI Subscription Agent",
- "price_cents": 1000,
- "permalink": "subs-agent",
- "filename": "AUTOPILOT.OI Subscription Agent Setup.pdf",
- "description_html": "<p><strong>Find every subscription you pay for.</strong></p><p>Lists every recurring charge from the statements you upload, helps you sort keep and cut, and drafts the cancel and refund messages. Upload new statements once a month and it flags new charges and price hikes.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not cancel anything, see your bank account or send messages on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and 2 to 3 months of statements (account numbers blacked out).</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
- "cover_url": "https://autopilotoi.app/store/subs-cover.png",
- "tags": [
-  "ai",
-  "claude",
-  "personal finance",
-  "ai agent",
-  "money"
- ],
- "version": 2,
- "cover_v": 2
+  "name": "AUTOPILOT.OI Subscription Agent",
+  "price_cents": 1000,
+  "permalink": "subs-agent",
+  "filename": "AUTOPILOT.OI Subscription Agent Setup.pdf",
+  "description_html": "<p><strong>Find every subscription you pay for.</strong></p><p>Lists every recurring charge from the statements you upload, helps you sort keep and cut, and drafts the cancel and refund messages. Upload new statements once a month and it flags new charges and price hikes.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not cancel anything, see your bank account or send messages on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and 2 to 3 months of statements (account numbers blacked out).</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+  "cover_url": "https://autopilotoi.app/store/subs-cover.png?v=3",
+  "tags": [
+    "ai",
+    "claude",
+    "personal finance",
+    "ai agent",
+    "money"
+  ],
+  "version": 2,
+  "cover_v": 3
 }

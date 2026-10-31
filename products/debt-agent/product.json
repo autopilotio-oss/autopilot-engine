@@ -1,16 +1,17 @@
 {
- "name": "AUTOPILOT.OI Debt Agent",
- "price_cents": 1000,
- "permalink": "debt-agent",
- "filename": "AUTOPILOT.OI Debt Agent Setup.pdf",
- "description_html": "<p><strong>A payoff plan and the script to ask for a lower rate.</strong></p><p>Builds your payoff plan from your balances, writes the call script to ask for a lower interest rate, and when you check in on payday tells you what to pay next.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not call your card company, move money or guarantee a lower rate on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your card and loan balances, rates and minimums.</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
- "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/debt-cover.png",
- "tags": [
-  "ai",
-  "claude",
-  "personal finance",
-  "ai agent",
-  "money"
- ],
- "version": 2
+  "name": "AUTOPILOT.OI Debt Agent",
+  "price_cents": 1000,
+  "permalink": "debt-agent",
+  "filename": "AUTOPILOT.OI Debt Agent Setup.pdf",
+  "description_html": "<p><strong>A payoff plan and the script to ask for a lower rate.</strong></p><p>Builds your payoff plan from your balances, writes the call script to ask for a lower interest rate, and when you check in on payday tells you what to pay next.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not call your card company, move money or guarantee a lower rate on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your card and loan balances, rates and minimums.</p><p><em>Education only, not financial or legal advice. AUTOPILOT.OI is independent and not affiliated with Anthropic.</em></p>",
+  "cover_url": "https://autopilotoi.app/store/debt-cover.png?v=3",
+  "tags": [
+    "ai",
+    "claude",
+    "personal finance",
+    "ai agent",
+    "money"
+  ],
+  "version": 2,
+  "cover_v": 3
 }

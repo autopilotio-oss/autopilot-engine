@@ -1,16 +1,17 @@
 {
- "name": "AUTOPILOT.OI Shop Agent",
- "price_cents": 1000,
- "permalink": "shop-agent",
- "filename": "AUTOPILOT.OI Shop Agent Setup.pdf",
- "description_html": "<p><strong>Plan a TikTok Shop that can make a profit.</strong></p><p>Helps you compare product ideas, checks your profit after fees before you list, drafts listings that follow TikTok's rules, drafts creator outreach messages and runs a weekly review from the numbers you paste in.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not log into Seller Center, list products or message creators on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your product ideas, costs and TikTok Shop fees.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
- "cover_url": "https://autopilotio-oss.github.io/autopilot-engine/store/shop-cover.png",
- "tags": [
-  "ai",
-  "claude",
-  "tiktok",
-  "tiktok shop",
-  "ai agent"
- ],
- "version": 3
+  "name": "AUTOPILOT.OI Shop Agent",
+  "price_cents": 1000,
+  "permalink": "shop-agent",
+  "filename": "AUTOPILOT.OI Shop Agent Setup.pdf",
+  "description_html": "<p><strong>Plan a TikTok Shop that can make a profit.</strong></p><p>Helps you compare product ideas, checks your profit after fees before you list, drafts listings that follow TikTok's rules, drafts creator outreach messages and runs a weekly review from the numbers you paste in.</p><p><strong>What you get:</strong> a Claude prompt kit (PDF): the master prompt, 5 starter prompts, a 10 minute setup guide and a tracker.</p><p><strong>How it works:</strong> you paste the prompt into a Claude Project and run it whenever you need it. It reads what you upload and drafts. You check it, decide and send. It does not log into Seller Center, list products or message creators on its own.</p><p><strong>You need:</strong> a Claude account (the free plan works, up to 5 Projects) and your product ideas, costs and TikTok Shop fees.</p><p><em>Education only. Confirm TikTok's current rules and fees in the app. AUTOPILOT.OI is independent and not affiliated with Anthropic or TikTok.</em></p>",
+  "cover_url": "https://autopilotoi.app/store/shop-cover.png?v=3",
+  "tags": [
+    "ai",
+    "claude",
+    "tiktok",
+    "tiktok shop",
+    "ai agent"
+  ],
+  "version": 3,
+  "cover_v": 3
 }
