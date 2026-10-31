@@ -1,1 +1,2 @@
 {"worker": "support_agent", "status": "ok", "at": "2026-10-31T19:10:25+00:00", "note": "0 drafted, 0 escalated, 3 alerts (SEV-2, all Oct 30, already known); logins Argentina/iOS informational"}
+{"worker": "kit_sync", "status": "ok", "at": "2026-10-31T21:33:06+00:00", "note": "0 routed"}
