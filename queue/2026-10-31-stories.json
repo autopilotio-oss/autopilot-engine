@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-10-31-tip",
+  "group": "stories-2026-10-31",
+  "at": "2026-10-31T10:30:00-04:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-10-31-tip.jpg"
+  ],
+  "text": "AI tip: Paste any long email into Claude and type: \"Explain this in 3 sentences. What do I need to do?\""
+ },
+ {
+  "id": "story-2026-10-31-quiz",
+  "group": "stories-2026-10-31",
+  "at": "2026-10-31T12:30:00-04:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-10-31-quiz.jpg"
+  ],
+  "text": "Quiz: How often can you check your credit reports for free?"
+ },
+ {
+  "id": "story-2026-10-31-answer",
+  "group": "stories-2026-10-31",
+  "at": "2026-10-31T14:30:00-04:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-10-31-answer.jpg"
+  ],
+  "text": "Quiz answer: Every week. Every week, from all 3 bureaus, at {AnnualCreditReport.com.} Claude can read them and find errors."
+ },
+ {
+  "id": "story-2026-10-31-fact",
+  "group": "stories-2026-10-31",
+  "at": "2026-10-31T16:30:00-04:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-10-31-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can explain any bill from a photo. Snap the medical bill, phone bill or bank statement. It explains every line in plain English and flags charges that look off."
+ },
+ {
+  "id": "story-2026-10-31-poll",
+  "group": "stories-2026-10-31",
+  "at": "2026-10-31T18:00:00-04:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-10-31-poll.jpg"
+  ],
+  "text": "Poll: What eats more of your week? A) Answering messages B) Chasing payments"
+ }
+]
