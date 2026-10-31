@@ -9,6 +9,11 @@
  ],
  [
   "create_no_product",
+  "workspace",
+  "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
+ ],
+ [
+  "create_no_product",
   "tiktok-agents",
   "{'success': False, 'message': 'Sorry, you can only create 10 products per day.'}"
  ],
