@@ -8,56 +8,6 @@
   "ok"
  ],
  [
-  "not_live_on_gumroad",
-  "bill-agent"
- ],
- [
-  "not_live_on_gumroad",
-  "debt-agent"
- ],
- [
-  "not_live_on_gumroad",
-  "bill-agent"
- ],
- [
-  "not_live_on_gumroad",
-  "debt-agent"
- ],
- [
-  "re_enabled",
-  "bill-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Bill Agent', 'description': \"<p><strong>Check a medical bill before you pay it.</strong></p><p>Compares your",
-  {
-   "published": true,
-   "deleted": false,
-   "custom_permalink": "bill-agent",
-   "short_url": "https://autopilotoi.gumroad.com/l/bill-agent",
-   "price": 1000,
-   "file_info": {
-    "Size": "341 KB",
-    "Length": "4 pages"
-   },
-   "is_tiered_membership": false
-  }
- ],
- [
-  "re_enabled",
-  "debt-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Debt Agent', 'description': '<p><strong>A payoff plan and the script to ask for a lower rate.</strong></p><p",
-  {
-   "published": true,
-   "deleted": false,
-   "custom_permalink": "debt-agent",
-   "short_url": "https://autopilotoi.gumroad.com/l/debt-agent",
-   "price": 1000,
-   "file_info": {
-    "Size": "382 KB",
-    "Length": "4 pages"
-   },
-   "is_tiered_membership": false
-  }
- ],
- [
   "offer_code_ok",
   "subs-agent"
  ],
@@ -100,13 +50,5 @@
  [
   "offer_code_ok",
   "workspace"
- ],
- [
-  "not_live_on_gumroad",
-  "bill-agent"
- ],
- [
-  "not_live_on_gumroad",
-  "debt-agent"
  ]
 ]
