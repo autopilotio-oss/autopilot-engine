@@ -17,13 +17,18 @@
  ],
  [
   "update",
-  "deposit-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Deposit Agent', 'description': \"<p><strong>Get back the security deposit your landlord kept.</strong></p><p>A Claude agent that reads your lease, your move in and move out photos and the landlord's list, sorts every deduction into fair, normal wear"
+  "raise-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Raise Agent', 'description': \"<p><strong>Build your case for a raise and practice until it feels easy.</strong></p><p>A Claude agent that turns your messy notes into clear wins with numbers, shows you where to find real pay data for your job and ci"
  ],
  [
   "update",
-  "sell-agent",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Sales Agent', 'description': '<p><strong>Your sales agent: every comment and DM answered in your voice, videos that sell, LIVE plans and real reviews.</strong></p><p>A Claude agent that learns your product from a one page Sales Sheet and drafts a r"
+  "refund-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Refund Agent', 'description': '<p><strong>Get your money back: flights, double charges, missing orders.</strong></p><p>A Claude agent that finds possible refunds on your statements, works out which rule or policy likely applies and what to confirm,"
+ ],
+ [
+  "update",
+  "subs-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Subscription Agent', 'description': \"<p><strong>Find every subscription you forgot and cut the ones you don't use.</strong></p><p>A Claude agent that reads your statements, finds every recurring charge (even renamed ones, yearly renewals and app st"
  ],
  [
   "not_live_on_gumroad",

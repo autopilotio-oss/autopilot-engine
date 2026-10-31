@@ -34,7 +34,7 @@
   "url": "https://autopilotoi.gumroad.com/l/subs-agent",
   "published": true,
   "live": true,
-  "version": 2,
+  "version": 3,
   "cover_v": 3
  },
  "refund-agent": {
@@ -42,7 +42,7 @@
   "url": "https://autopilotoi.gumroad.com/l/refund-agent",
   "published": true,
   "live": true,
-  "version": 2,
+  "version": 3,
   "cover_v": 3
  },
  "raise-agent": {
@@ -50,7 +50,7 @@
   "url": "https://autopilotoi.gumroad.com/l/raise-agent",
   "published": true,
   "live": true,
-  "version": 2,
+  "version": 3,
   "cover_v": 3
  },
  "all-money-agents": {
