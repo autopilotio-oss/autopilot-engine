@@ -161,3 +161,12 @@ The free lead magnet at /brain/ is now called **The AI Front Desk** (was THE BUS
 ## TikTok line (VIDEO, SHOP, SELL)
 - Every TikTok guide, kit, reel, Day episode and caption follows TIKTOK_SHOP_PLAYBOOK.md. Read it first. Never state a TikTok fee, limit or threshold as fact without "check Seller Center"; update the playbook first when the weekly TikTok Shop intel task finds a change.
 - Funnels: VIDEO, SHOP, SELL guides (tools/guides/guides.py, cat "TIKTOK × AI"), $10 agents, $24 TikTok bundle. Emails: Kit sequence 2951663 "TikTok guides · Agents".
+
+## Growth plan (Oct 31 marketing audit)
+Diagnosis: products, guides, emails and checkout all work. The bottleneck is REACH (about 10 Threads views, 0 IG reel views, 4 followers, 0 sales), then turning the few visitors into email subscribers.
+Order of attack: 1) reach, 2) capture emails, 3) sell by email, not in posts.
+- Entry point: Money Leak Check quiz at autopilotoi.app/quiz/ (keywords QUIZ, LEAK). Tags signups with their top leak as Kit source, so the right sequence fires.
+- Reach: Instagram Trial Reels ("trial": true queue items, loader publishes TRIAL_REEL) 3x a week to test hooks on non-followers; every reel cross-posts to TikTok, YouTube Shorts, Facebook and Pinterest once Seb connects them in Metricool.
+- One CTA per post. Posts give the free thing; paid agents are sold by the guides and the email sequences.
+- Weekly newsletter every Sunday 10 AM ET (scheduled task), one verified tip plus one guide button and a soft P.S. for the matching agent.
+- Discounts: not running one. With near zero traffic a sale has nobody to see it; revisit once a post passes 1,000 views.
