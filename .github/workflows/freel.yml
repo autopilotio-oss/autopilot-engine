@@ -1,0 +1,89 @@
+name: Factory reels (split screen agent demos)
+on:
+  workflow_dispatch:
+    inputs:
+      eps: { description: "Episode stems in tools/freel/eps (space separated). Blank = next ones without a video", required: false }
+      n: { description: "How many to render when eps is blank", required: false, default: "2" }
+  schedule:
+    - cron: "7 9 * * *"
+permissions:
+  contents: write
+concurrency: freel
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      eps: ${{ steps.pick.outputs.eps }}
+      any: ${{ steps.pick.outputs.any }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: pick
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, glob
+          want = "${{ github.event.inputs.eps }}".split(); n = int("${{ github.event.inputs.n }}" or 2)
+          b = json.load(open("config/growthos/budget.json")); n = min(n, int(b.get("reel_render_quota_per_day", 2)))
+          if not want:
+              for f in sorted(glob.glob("tools/freel/eps/*.json")):
+                  j = json.load(open(f))
+                  if not os.path.exists(f"docs/media/freel/{j['id']}.mp4"): want.append(os.path.basename(f)[:-5])
+              want = want[:n]
+          print("eps=" + json.dumps(want)); print("any=" + ("1" if want else ""))
+          PY
+          cat "$GITHUB_OUTPUT"
+  prep:
+    needs: plan
+    if: needs.plan.outputs.any == '1'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: { ep: "${{ fromJson(needs.plan.outputs.eps) }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy
+      - name: Voice + build + mix
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: bash tools/freel/make.sh prep ${{ matrix.ep }}
+      - uses: actions/upload-artifact@v4
+        with: { name: "prep-${{ matrix.ep }}", path: "tools/freel/${{ matrix.ep }}.html\ntools/freel/${{ matrix.ep }}_mix.wav\ntools/freel/${{ matrix.ep }}.words.json\ntools/freel/${{ matrix.ep }}.meta.json" }
+  render:
+    needs: [plan, prep]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      matrix: { ep: "${{ fromJson(needs.plan.outputs.eps) }}", k: [0, 1, 2, 3] }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: "prep-${{ matrix.ep }}", path: tools/freel }
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm i -g --silent playwright@1 && npx playwright install --with-deps chromium
+          echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
+      - run: RANGE=${{ matrix.k }}/4 bash tools/freel/make.sh chunk ${{ matrix.ep }}
+      - uses: actions/upload-artifact@v4
+        with: { name: "chunk-${{ matrix.ep }}-${{ matrix.k }}", path: "tools/freel/${{ matrix.ep }}_chunk_${{ matrix.k }}.mp4" }
+  final:
+    needs: [plan, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { pattern: "prep-*", path: tools/freel, merge-multiple: true }
+      - uses: actions/download-artifact@v4
+        with: { pattern: "chunk-*", path: tools/freel, merge-multiple: true }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Join + write queue entries
+        run: |
+          for E in $(echo '${{ needs.plan.outputs.eps }}' | python3 -c "import json,sys;print(' '.join(json.load(sys.stdin)))"); do
+            bash tools/freel/make.sh final "$E"
+            python3 tools/freel/queue.py add "$E"
+          done
+      - name: Commit
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add docs/media/freel queue/freel
+          git diff --cached --quiet && exit 0
+          git commit -m "Factory reels rendered"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done

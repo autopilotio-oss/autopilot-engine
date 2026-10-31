@@ -3,3 +3,11 @@ tools/kits/out/
 tools/kits/kits.py
 .dash/
 state/health/latest.json
+tools/freel/*.html
+!tools/freel/reel.html
+tools/freel/*.wav
+tools/freel/*.meta.json
+tools/freel/*.words.json
+tools/freel/*.mp4
+tools/freel/*_chunks.txt
+tools/office/hq*

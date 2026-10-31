@@ -1,0 +1,87 @@
+{
+ "id": "bill-agent",
+ "kind": "product",
+ "room": "dm",
+ "agent": "Bill Agent",
+ "hook": [
+  "Never pay a medical bill",
+  "before this AI agent checks it"
+ ],
+ "caption": {
+  "ig": "Medical bills often have errors. Upload the itemized bill and your insurance EOB, and this agent compares them line by line and writes the questions to ask billing. Sample bill shown. Comment BILL and I'll send you the free guide.\n\n#ai #claude #medicalbills #moneytips #healthcare",
+  "other": "Medical bills often have errors. Upload the itemized bill and your insurance EOB, and this agent compares them line by line and writes the questions to ask billing. Sample bill shown. Free guide at the link in bio.\n\n#ai #claude #medicalbills #moneytips #healthcare"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Never pay a medical bill before this AI agent checks it. Give it the itemized bill and your insurance statement.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "itemized_bill.pdf",
+     "insurance_eob.pdf"
+    ],
+    "text": "check this bill against my insurance"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It compares them line by line, looking for duplicates, charges insurance should have covered, and amounts that don't match.",
+   "screen": {
+    "type": "work",
+    "title": "Comparing line by line",
+    "lines": [
+     "read every line item",
+     "match it to the insurance statement",
+     "flag duplicates",
+     "flag amounts that don't match"
+    ]
+   }
+  },
+  {
+   "chip": "result",
+   "say": "Here it found three lines worth asking about. Sample bill, but yours works the same way.",
+   "screen": {
+    "type": "table",
+    "title": "Lines to question",
+    "sample": true,
+    "cols": [
+     "Line item",
+     "Amount",
+     "Why"
+    ],
+    "rows": [
+     [
+      "Office visit",
+      "$240",
+      "billed twice"
+     ],
+     [
+      "Lab panel",
+      "$185",
+      "insurance says covered"
+     ],
+     [
+      "Supplies",
+      "$96",
+      "not on the EOB"
+     ]
+    ],
+    "foot": "$521 to ask about  ·  questions ready for billing"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment BILL and I'll send you the free guide.",
+   "screen": {
+    "type": "cta",
+    "name": "Free Medical Bill Guide",
+    "sub": "check it before you pay",
+    "cover": "bill",
+    "price": "FREE",
+    "kw": "BILL",
+    "topic": "Cut the bill"
+   }
+  }
+ ]
+}

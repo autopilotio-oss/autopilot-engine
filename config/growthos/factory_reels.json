@@ -1,0 +1,25 @@
+{
+ "series": "factory-reels",
+ "source": "tools/freel",
+ "per_day": 2,
+ "decisions": [
+  {
+   "at": "2026-10-31T16:48-03:00",
+   "by": "Seb",
+   "quote": "Yes, auto post 2/day (Recommended)",
+   "what": "standing auto posting of factory reels, 2 a day"
+  },
+  {
+   "at": "2026-10-31T16:53-03:00",
+   "by": "Seb",
+   "quote": "Apply our verified viral research standards and test content before scaling. Do not claim the systems are functional unless independently verified.",
+   "what": "supersedes the auto posting: each reel concept must pass the proof gate, run a small test first, scale only on results"
+  }
+ ],
+ "rules": [
+  "Nothing posts while queue/freel/<id>.json gate != pass (3 verified references, 2+ creators, 85+ score)",
+  "Test phase: at most 2 reels live before reading results; scale to 2 a day only after the test read",
+  "Everyday problems only, sample data labeled on screen, free guide CTA; Instagram 'Comment X' only for confirmed ManyChat keywords",
+  "No claims that our internal systems work unless independently verified; ops clips parked in tools/freel/eps_hold"
+ ]
+}

@@ -1,0 +1,13 @@
+{"id":"vault","kind":"ops","room":"vault","agent":"Budget Guard","when":"ALWAYS ON",
+ "hook":["This AI won't let my agents","spend my money"],
+ "caption":{"ig":"Agents that run 24/7 can burn money. This one guards the budget: a $30 monthly cap on usage, a daily hard stop, and kill switches for posting, messages and spending. Any new spend needs my yes. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #smallbusiness #automation","other":"Agents that run 24/7 can burn money. This one guards the budget: a $30 monthly cap on usage, a daily hard stop, and kill switches for posting, messages and spending. Any new spend needs my yes. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #smallbusiness #automation"},
+ "beats":[
+  {"chip":"ask","say":"AI agents that run all day can burn money fast. So one agent's only job is guarding the budget.",
+   "screen":{"type":"ask","text":"can the video agent render 5 more today?"}},
+  {"chip":"check","say":"Every request goes through it first. The monthly cap, the daily limit, and whether I already said yes.",
+   "screen":{"type":"work","title":"Checking the budget","lines":["monthly usage cap","today's render limit","is this new spend?","did the owner approve it?"]}},
+  {"chip":"verdict","say":"Five more renders would break the daily limit, so it says no. Anything new needs my yes.",
+   "screen":{"type":"checks","title":"Budget check","rows":[["Monthly cap","$30",1],["Daily hard stop","ON",1],["Renders today","2 of 2",0],["Kill switches","ARMED",1]],"verdict":"DENIED  ·  OVER TODAY'S LIMIT","ok":false}},
+  {"chip":"you","say":"Want agents with guardrails like this? Free guides at the link in bio.",
+   "screen":{"type":"cta","name":"Free AI guides","sub":"set up agents like this","cover":"all6","price":"FREE","url":"autopilotoi.app/free"}}
+ ]}

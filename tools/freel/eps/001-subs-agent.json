@@ -1,0 +1,106 @@
+{
+ "id": "subs-agent",
+ "kind": "product",
+ "room": "store",
+ "agent": "Subscription Agent",
+ "hook": [
+  "This AI agent takes 10 min to set up",
+  "and finds every subscription you forgot"
+ ],
+ "caption": {
+  "ig": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Comment SUBS and I'll send you the free guide.\n\n#ai #claude #aiagents #subscriptions #moneytips",
+  "other": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Free guide at the link in bio.\n\n#ai #claude #aiagents #subscriptions #moneytips"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "This AI agent takes ten minutes to set up, and it finds every subscription you forgot about. Give it your bank statement and one line.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "statement_aug_oct.csv"
+    ],
+    "text": "find every subscription on this statement"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It groups every charge by merchant and finds the ones that come back every month.",
+   "screen": {
+    "type": "work",
+    "title": "Reading 3 months",
+    "lines": [
+     "read 57 transactions",
+     "group them by merchant",
+     "same amount every 25 to 35 days",
+     "skip one time buys"
+    ]
+   }
+  },
+  {
+   "chip": "result",
+   "say": "Seven subscriptions, a hundred forty six dollars a month. Sample data, but yours works the same way.",
+   "screen": {
+    "type": "table",
+    "title": "Recurring charges",
+    "sample": true,
+    "cols": [
+     "Merchant",
+     "Monthly",
+     "Yearly"
+    ],
+    "rows": [
+     [
+      "Mealkit plan",
+      "$59.94",
+      "$719.28"
+     ],
+     [
+      "FitClub gym",
+      "$29.99",
+      "$359.88"
+     ],
+     [
+      "Musicbox family",
+      "$16.99",
+      "$203.88"
+     ],
+     [
+      "Streamflix",
+      "$15.49",
+      "$185.88"
+     ],
+     [
+      "Clouddrive 2TB",
+      "$9.99",
+      "$119.88"
+     ],
+     [
+      "Photoedit Pro",
+      "$8.99",
+      "$107.88"
+     ],
+     [
+      "Newsdaily",
+      "$4.99",
+      "$59.88"
+     ]
+    ],
+    "foot": "$146.38 a month  ·  $1,756.56 a year"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment SUBS and I'll send you the free guide.",
+   "screen": {
+    "type": "cta",
+    "name": "Free Subscription Guide",
+    "sub": "step by step with Claude",
+    "cover": "subs",
+    "price": "FREE",
+    "kw": "SUBS",
+    "topic": "Cancel the subs"
+   }
+  }
+ ]
+}

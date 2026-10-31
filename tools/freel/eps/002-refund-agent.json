@@ -1,0 +1,65 @@
+{
+ "id": "refund-agent",
+ "kind": "product",
+ "room": "dm",
+ "agent": "Refund Agent",
+ "hook": [
+  "Flight cancelled? This 10 min AI agent",
+  "writes your refund request for you"
+ ],
+ "caption": {
+  "ig": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Comment REFUND and I'll send you the free guide.\n\n#ai #claude #refund #travel #moneytips",
+  "other": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Free guide at the link in bio.\n\n#ai #claude #refund #travel #moneytips"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Flight cancelled? This AI agent takes ten minutes to set up, and it writes your refund request for you. Give it the booking.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "booking_confirmation.pdf",
+     "cancellation_email.pdf"
+    ],
+    "text": "get my money back for this flight"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "In the U.S., if they cancel and you turn down the other options, you can ask for a cash refund. It checks that for you.",
+   "screen": {
+    "type": "work",
+    "title": "Reading the booking",
+    "lines": [
+     "find the cancelled flight",
+     "you turned down the voucher",
+     "check the DOT refund rule",
+     "draft the request"
+    ]
+   }
+  },
+  {
+   "chip": "draft",
+   "say": "Then it writes the request for you to send. Short, polite, and it names the rule.",
+   "screen": {
+    "type": "doc",
+    "title": "Refund request",
+    "sub": "sample booking  ·  ready for you to send",
+    "text": "Hello,\n\nYou cancelled my flight on Oct 12 (booking K7Q2PX). I did not accept the voucher or a new flight.\n\nUnder U.S. DOT rules I am requesting a full refund of $412.60 to my original card.\n\nThank you."
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment REFUND and I'll send you the free guide.",
+   "screen": {
+    "type": "cta",
+    "name": "Free Refund Guide",
+    "sub": "get your money back",
+    "cover": "refund",
+    "price": "FREE",
+    "kw": "REFUND",
+    "topic": "Get your refund"
+   }
+  }
+ ]
+}

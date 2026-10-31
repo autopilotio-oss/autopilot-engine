@@ -1,0 +1,13 @@
+{"id":"dm-room","kind":"ops","room":"dm","agent":"DM Replier","when":"EVERY COMMENT",
+ "hook":["You comment one word","and an AI sends you the guide"],
+ "caption":{"ig":"Comment a keyword on any of our posts and this agent sends you the free guide in your DMs. Try it now: comment SUBS.\n\n#ai #claude #aiagents #instagramtips #automation","other":"On Instagram, comment a keyword on our posts and this agent sends you the free guide in your DMs. Every guide is also free at the link in bio.\n\n#ai #claude #aiagents #instagramtips #automation"},
+ "beats":[
+  {"chip":"comment","say":"Someone comments one word on a post. That's all they do.",
+   "screen":{"type":"dm","title":"Comments","msgs":[["them","SUBS"]]}},
+  {"chip":"match","say":"The DM agent sees it, matches the keyword to the right guide, and checks they haven't already got it.",
+   "screen":{"type":"work","title":"New comment","lines":["read the comment","match SUBS to the right guide","check it wasn't sent already","write the DM"]}},
+  {"chip":"sent","say":"A few seconds later, the free guide lands in their DMs.",
+   "screen":{"type":"dm","title":"Direct message","msgs":[["them","SUBS"],["us","Here's your free subscription guide, step by step with Claude:"],["us","autopilotoi.app/g/subs"]]}},
+  {"chip":"you","say":"Try it now. Comment SUBS on Instagram and watch it happen.",
+   "screen":{"type":"cta","name":"Subscription guide","sub":"free, step by step","cover":"subs","price":"FREE","kw":"SUBS"}}
+ ]}

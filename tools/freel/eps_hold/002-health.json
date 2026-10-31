@@ -1,0 +1,13 @@
+{"id":"health-check","kind":"ops","room":"health","agent":"Health Monitor","when":"EVERY HOUR",
+ "hook":["Every hour, this AI checks","my whole business"],
+ "caption":{"ig":"Every hour, without me, this agent checks every page, the store, the revenue ledger and every other agent. If something breaks, it tries to fix it and alerts me if it can't. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #automation #smallbusiness","other":"Every hour, without me, this agent checks every page, the store, the revenue ledger and every other agent. If something breaks, it tries to fix it and alerts me if it can't. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #automation #smallbusiness"},
+ "beats":[
+  {"chip":"wake","say":"Every hour, without me, this agent runs a health check on my entire business.",
+   "screen":{"type":"ask","text":"run the hourly health check","by":"schedule"}},
+  {"chip":"work","say":"It opens every page, checks the store and the revenue ledger, and makes sure every other agent showed up for work.",
+   "screen":{"type":"work","title":"Hourly check","lines":["open every page","check the store sync","check the revenue ledger","check every agent's heartbeat"]}},
+  {"chip":"result","say":"All green. If something breaks, it tries to fix it, and alerts me if it can't.",
+   "screen":{"type":"checks","title":"Health check","rows":[["Home page","OK",1],["Free guides","OK",1],["Store page","OK",1],["Gumroad sync","FRESH",1],["Revenue ledger","FRESH",1],["Agent heartbeats","ALL IN",1],["Record chain","INTACT",1]],"verdict":"ALL CLEAR","ok":true}},
+  {"chip":"you","say":"This is one of the agents that runs Autopilot O.I. Free AI guides at the link in bio.",
+   "screen":{"type":"cta","name":"Free AI guides","sub":"set up agents like this","cover":"all6","price":"FREE","url":"autopilotoi.app/free"}}
+ ]}

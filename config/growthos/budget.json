@@ -10,5 +10,15 @@
   "channel": "chat",
   "quote": "$30 a month (Recommended)"
  },
- "scope": "Usage based tools: ElevenLabs voice renders and any paid API. Amounts in cents. Soft cap throttles noncritical work, hard cap pauses optional renders and AI calls. Fixed subscriptions (Kit, ManyChat, Metricool, Claude) are tracked in costs.py, not capped here. No new spend or subscriptions without Seb."
+ "scope": "Usage based tools: ElevenLabs voice renders and any paid API. Amounts in cents. Soft cap throttles noncritical work, hard cap pauses optional renders and AI calls. Fixed subscriptions (Kit, ManyChat, Metricool, Claude) are tracked in costs.py, not capped here. No new spend or subscriptions without Seb.",
+ "reel_render_quota_per_day": 2,
+ "approvals": [
+  {
+   "by": "Seb",
+   "at": "2026-10-31T16:48-03:00",
+   "channel": "chat",
+   "what": "Voiced factory reels, up to 2 renders a day (ElevenLabs)",
+   "quote": "Voice, allow 2/day (Recommended)"
+  }
+ ]
 }

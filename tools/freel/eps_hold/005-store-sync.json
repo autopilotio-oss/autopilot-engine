@@ -1,0 +1,13 @@
+{"id":"store-sync","kind":"ops","room":"store","agent":"Store Sync","when":"EVERY 6 HOURS",
+ "hook":["This AI checks my whole store","every 6 hours"],
+ "caption":{"ig":"Every 6 hours this agent wakes up on its own, pulls every product from Gumroad, matches prices and covers, and opens every buy link. If something breaks, it flags it before a buyer finds it. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #ecommerce #automation","other":"Every 6 hours this agent wakes up on its own, pulls every product from Gumroad, matches prices and covers, and opens every buy link. If something breaks, it flags it before a buyer finds it. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #ecommerce #automation"},
+ "beats":[
+  {"chip":"wake","say":"This is the agent that runs my store. Every six hours it wakes up on its own.",
+   "screen":{"type":"ask","text":"sync the store and test every buy link","by":"schedule"}},
+  {"chip":"work","say":"It pulls every product from Gumroad, matches the prices and covers, and opens every single buy link.",
+   "screen":{"type":"work","title":"Syncing with Gumroad","lines":["pull every product","match prices and covers","open every buy link","log anything broken"]}},
+  {"chip":"result","say":"If something breaks, it flags it before a buyer ever finds it.",
+   "screen":{"type":"table","title":"Store check","cols":["Product","Price","Link"],"rows":[["Subscription Agent","$10","OK"],["Bill Agent","$10","OK"],["Refund Agent","$10","OK"],["Raise Agent","$10","OK"],["Debt Agent","$10","OK"],["All 5 Money Agents","$39","OK"]],"foot":"every buy link working  ·  next check in 6h"}},
+  {"chip":"you","say":"Want agents like this working for you? Free AI guides at the link in bio.",
+   "screen":{"type":"cta","name":"Free AI guides","sub":"set up agents like this","cover":"all6","price":"FREE","url":"autopilotoi.app/free"}}
+ ]}

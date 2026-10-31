@@ -1,0 +1,13 @@
+{"id":"proof-gate","kind":"ops","room":"gate","agent":"Proof Gate","when":"EVERY TREND",
+ "hook":["My AI won't copy a trend","without proof"],
+ "caption":{"ig":"Before we jump on any trend, this agent asks for proof: 3 real videos, from 2 different creators, that beat their normal views. Right now it has zero, so the trend is blocked. No proof, no post. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #contentcreator #automation","other":"Before we jump on any trend, this agent asks for proof: 3 real videos, from 2 different creators, that beat their normal views. Right now it has zero, so the trend is blocked. No proof, no post. Free AI guides at the link in bio.\n\n#ai #claude #aiagents #contentcreator #automation"},
+ "beats":[
+  {"chip":"ask","say":"Before we jump on any trend, this agent asks one question. Where's the proof?",
+   "screen":{"type":"ask","text":"should we post the subscription trend?"}},
+  {"chip":"work","say":"It wants three real videos that already worked. A hundred thousand views, three times the creator's normal, from at least two creators.",
+   "screen":{"type":"work","title":"Checking the proof","lines":["find videos that already worked","100K views or more","3x the creator's normal","from 2 different creators"]}},
+  {"chip":"verdict","say":"Right now it has zero. So it's blocked. No proof, no post. That's how we stop guessing.",
+   "screen":{"type":"checks","title":"Subscription trend","rows":[["Verified references","0 of 3",0],["Different creators","0 of 2",0],["Claims checked","PASS",1],["Rights clear","PASS",1]],"verdict":"BLOCKED  ·  NO PROOF, NO POST","ok":false}},
+  {"chip":"you","say":"Want agents that think like this? Free guides at the link in bio.",
+   "screen":{"type":"cta","name":"Free AI guides","sub":"set up agents like this","cover":"all6","price":"FREE","url":"autopilotoi.app/free"}}
+ ]}

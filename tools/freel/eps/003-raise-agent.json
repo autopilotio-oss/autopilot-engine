@@ -1,0 +1,86 @@
+{
+ "id": "raise-agent",
+ "kind": "product",
+ "room": "store",
+ "agent": "Raise Agent",
+ "hook": [
+  "This AI agent takes 10 min to set up",
+  "and builds your whole case for a raise"
+ ],
+ "caption": {
+  "ig": "Dump your messy work notes into this agent. It turns them into clear wins with numbers, checks real pay data, and helps you pick a number to ask for. Sample notes shown. Comment RAISE and I'll send you the free guide.\n\n#ai #claude #career #raise #salary",
+  "other": "Dump your messy work notes into this agent. It turns them into clear wins with numbers, checks real pay data, and helps you pick a number to ask for. Sample notes shown. Free guide at the link in bio.\n\n#ai #claude #career #raise #salary"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "This AI agent takes ten minutes to set up, and it builds your whole case for a raise. Give it your messy notes from the year.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "my_year_notes.txt"
+    ],
+    "text": "turn this into my case for a raise"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It turns them into clear wins with numbers, and checks real pay data for your job and city.",
+   "screen": {
+    "type": "work",
+    "title": "Building your case",
+    "lines": [
+     "find your biggest wins",
+     "add the number to each one",
+     "check BLS pay data",
+     "pick a number to ask for"
+    ]
+   }
+  },
+  {
+   "chip": "case",
+   "say": "Your whole case on one page, with a number to ask for. Sample notes shown.",
+   "screen": {
+    "type": "table",
+    "title": "Your case",
+    "sample": true,
+    "cols": [
+     "Win",
+     "Proof"
+    ],
+    "rows": [
+     [
+      "Cut supplier costs",
+      "saved $18K"
+     ],
+     [
+      "Trained 3 new hires",
+      "onboarding 2 wks faster"
+     ],
+     [
+      "Took over the Hill account",
+      "+$40K a year"
+     ],
+     [
+      "Fixed the late invoices",
+      "paid 12 days sooner"
+     ]
+    ],
+    "foot": "ask for 8%  ·  backed by market pay data"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment RAISE and I'll send you the free guide.",
+   "screen": {
+    "type": "cta",
+    "name": "Free Raise Guide",
+    "sub": "build your case",
+    "cover": "raise",
+    "price": "FREE",
+    "kw": "RAISE",
+    "topic": "Get the raise"
+   }
+  }
+ ]
+}
