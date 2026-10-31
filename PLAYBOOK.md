@@ -165,8 +165,20 @@ The free lead magnet at /brain/ is now called **The AI Front Desk** (was THE BUS
 ## Growth plan (Oct 31 marketing audit)
 Diagnosis: products, guides, emails and checkout all work. The bottleneck is REACH (about 10 Threads views, 0 IG reel views, 4 followers, 0 sales), then turning the few visitors into email subscribers.
 Order of attack: 1) reach, 2) capture emails, 3) sell by email, not in posts.
-- Entry point: Money Leak Check quiz at autopilotoi.app/quiz/ (keywords QUIZ, LEAK). Tags signups with their top leak as Kit source, so the right sequence fires.
+- Entry points: the free guides (one per keyword) and the free AI Front Desk. The Money Leak Check quiz was removed Oct 31 (Seb didn't like it); don't bring it back.
 - Reach: Instagram Trial Reels ("trial": true queue items, loader publishes TRIAL_REEL) 3x a week to test hooks on non-followers; every reel cross-posts to TikTok, YouTube Shorts, Facebook and Pinterest once Seb connects them in Metricool.
 - One CTA per post. Posts give the free thing; paid agents are sold by the guides and the email sequences.
 - Weekly newsletter every Sunday 10 AM ET (scheduled task), one verified tip plus one guide button and a soft P.S. for the matching agent.
 - Discounts: not running one. With near zero traffic a sale has nobody to see it; revisit once a post passes 1,000 views.
+
+## Idea gate (Seb, Oct 31: "make sure everything we make is a good idea")
+Nothing new gets built until it passes this gate and Seb approves a one paragraph pitch. "New" means a product, funnel, page, tool, content series or campaign. Small fixes, honest copy edits and improvements to things that already exist don't need the gate.
+Score each 0 to 2. It needs 10 of 12 and no zeros:
+1. Demand evidence: at least 2 linked signs real people want this now (searches, Reddit or forum threads, comments on our posts, competitors that sell it). Our own guess is a 0.
+2. Fit: it serves one of our three buyers (save money, grow on TikTok, run a business) and leads to an offer we already sell.
+3. Real value: a stranger gets a concrete result in under 10 minutes without paying.
+4. Better than what exists: clearly better or simpler than the top free result on Google or YouTube for the same need.
+5. Safe and honest: no conflict with Gumroad, Meta or TikTok rules; no outcome, income or "runs on its own" promises; no regulated advice.
+6. Measurable: one success number and a date to judge it (keep, fix or kill).
+Write the pitch as: what it is, who it's for, the evidence links, the score, the success number and date. Put it in config/approvals_queue.md as "AWAITING APPROVAL" and message Seb. Build only after he says yes.
+Rejected so far (don't bring back): the Money Leak Check quiz (Oct 31).

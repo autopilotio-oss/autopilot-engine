@@ -62,7 +62,7 @@ def page(slug, g):
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="https://autopilotoi.gumroad.com/l/{slug}-agent" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">GET IT · $10</a>{'<a href="https://autopilotoi.gumroad.com/l/'+g.get('bundle_link','all-money-agents')+'" style="flex:1 1 160px;text-align:center;border:2px solid #0a0a0a;color:#0a0a0a;text-decoration:none;font:700 14px &#39;Geist Mono&#39;,monospace;letter-spacing:1.5px;border-radius:12px;padding:13px">'+g.get('bundle_btn','ALL 6 · $39')+'</a>' if True else ''}</div><p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>
 """
     else:
-        DFY = """<div class="dfy"><h3>Want to find your other money leaks?</h3><p>This guide is free and stays free. Take the 60 second Money Leak Check to see where else you might be overpaying.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="/quiz/" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">MONEY LEAK CHECK</a></div><p style="margin:0 0 8px;font-size:15px">Or get one useful money tip a week:</p>"""
+        DFY = """<div class="dfy"><h3>More free money guides</h3><p>This guide is free and stays free. The others are too: medical bills, debt, subscriptions, refunds, raises and lowering your bills.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"><a href="/free/" style="flex:1 1 160px;text-align:center;background:#0a0a0a;color:#D4FF3A;text-decoration:none;font:700 14px 'Geist Mono',monospace;letter-spacing:1.5px;border-radius:12px;padding:15px">SEE THE FREE GUIDES</a></div><p style="margin:0 0 8px;font-size:15px">Or get one useful money tip a week:</p>"""
     out.append(f"""<h2>Make it repeatable</h2><div class="ag"><span class="tag">YOUR {e(a['name']).upper()}</span>
 <p style="margin-top:12px;font-size:19px">{e(a['what'])}</p><ol>{''.join(f'<li>{e(x)}</li>' for x in a['setup'])}</ol>
 <div class="pr" id="ag">{e(a['instr'])}<button class="cp" data-c="ag">COPY</button></div>
@@ -82,5 +82,5 @@ for k, g in G.items(): page(k, g); print("built", k)
 
 # sitemap for Google (every guide + main pages)
 import datetime
-_u = ["", "quiz/", "free/", "store/", "brain/", "workspace/"] + [f"g/{k}/" for k in sorted(os.listdir(os.path.join(ROOT, "docs", "g"))) if os.path.isdir(os.path.join(ROOT, "docs", "g", k))]
+_u = ["", "free/", "store/", "brain/", "workspace/"] + [f"g/{k}/" for k in sorted(os.listdir(os.path.join(ROOT, "docs", "g"))) if os.path.isdir(os.path.join(ROOT, "docs", "g", k))]
 open(os.path.join(ROOT, "docs", "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>https://autopilotoi.app/{u}</loc><lastmod>{datetime.date.today().isoformat()}</lastmod></url>\n" for u in _u) + "</urlset>\n")
