@@ -8,6 +8,7 @@ on:
     paths: ["tools/demo/eps/*.json", "tools/demo/engine.html", ".github/workflows/demo.yml"]
 permissions:
   contents: write
+  actions: write
 concurrency: demo
 jobs:
   prep:
@@ -75,3 +76,10 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Demo video: ${{ needs.prep.outputs.ep }}"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
+      - name: Queue the next episode without a video
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch -q origin main
+          for f in $(git log --diff-filter=A --format= --name-only origin/main -- tools/demo/eps/ | grep json); do n=$(basename "$f" .json)
+            git cat-file -e "origin/main:docs/media/demo/$n.mp4" 2>/dev/null || { gh api -X POST repos/${{ github.repository }}/actions/workflows/demo.yml/dispatches -f ref=main -f "inputs[ep]=$n"; echo "queued $n"; break; }; done
