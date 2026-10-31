@@ -8,6 +8,29 @@
   ],
   "topic": "AI",
   "ig": false,
-  "text": "Your bank will never ask you to tap your card on your phone.\n\nDutch police say AI voiced fake bank calls got 170 people to install an app and hold their card to their phone. The app copied the card. About €380,000 was drained in three weeks.\n\nIf a \"bank\" calls you: hang up and call the number on the back of your card. Never install an app or tap your card for a caller.\n\nSend this to the person in your family who always picks up. Have you gotten a call like this?"
+  "text": "Your bank will never ask you to tap your card on your phone.\n\nDutch police say AI voiced fake bank calls got 170 people to install an app and hold their card to their phone. The app copied the card. About €380,000 gone in three weeks.\n\nIf a \"bank\" calls: hang up and call the number on the back of your card.\n\nGot a weird text? Paste it into Claude: \"Is this a scam? List every red flag.\" Then still call your bank yourself.\n\nSend this to someone who always picks up."
+ },
+ {
+  "id": "credit-wk-2026-10-31-skill",
+  "at": "2026-10-31T15:30:00-04:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/trends/2026-10-31-claude-3-reports.jpg"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "Most people upload one file to Claude at a time. You can attach up to 20 in one chat, and it reads them together.\n\nThat's how you catch credit report errors: an account or late payment that shows on one bureau but not the other two.\n\n\"Compare these 3 credit reports. List every account, balance or late payment that doesn't match across them.\"\n\nAll 5 credit prompts, free: autopilotoi.app/g/credit/"
+ },
+ {
+  "id": "credit-wk-2026-10-31-problem",
+  "at": "2026-10-31T10:30:00-04:00",
+  "kind": "video",
+  "media": [
+   "https://static.metricool.com/planner/202610/7761544-file-995662738425602867.mp4"
+  ],
+  "topic": "AI",
+  "ig": false,
+  "text": "1 in 5 people have an error on at least one credit report (FTC study). One wrong late payment can cost you on loans, cards and rent.\n\nGet all 3 reports free at AnnualCreditReport.com, black out your Social Security number, upload them to Claude and paste:\n\n\"Make a table of anything that could be wrong or hurting me across these 3 reports, and what proof I'd need to dispute it.\"\n\nThat's prompt 1 of 5. The dispute letter and the rest, ready to copy: autopilotoi.app/g/credit/",
+  "note": "Rewrite of the 10:30 credit post already in Metricool"
  }
 ]
