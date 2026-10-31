@@ -1,0 +1,259 @@
+{
+ "A": [
+  {
+   "url": "https://www.youtube.com/shorts/5mWJn66KO2w",
+   "platform": "youtube",
+   "creator": "UNVERIFIED (channel not shown)",
+   "title_or_hook": "I Built an AI Agent Running an Entire Company #shorts #claude #finance #automation #system",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. WebFetch of /shorts/ returned empty shell; watch?v= fetch returned metadata for a different video (Paul J Lipsky, BPwhEth_32g), so nothing about this URL is confirmed. Strong concept match (Claude agent runs a company). Same uploader style as xYBlrBKij9k, rnYfoDydAQU and 3CLV51dpZKA (shared hashtag set), likely one creator."
+  },
+  {
+   "url": "https://www.youtube.com/shorts/rnYfoDydAQU",
+   "platform": "youtube",
+   "creator": "UNVERIFIED (likely same creator as 5mWJn66KO2w)",
+   "title_or_hook": "I Built an AI Financial Operating System for Business #shorts #finance #automation",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Not fetched (budget). Matches busywork/finance automation angle."
+  },
+  {
+   "url": "https://www.youtube.com/shorts/PxIOFAh-xqc",
+   "platform": "youtube",
+   "creator": "UNVERIFIED (channel not shown)",
+   "title_or_hook": "This AI agent runs a real vending machine business #HackerNews #AI #Startup",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Two fetch attempts (shorts + watch): shell page, then mismatched metadata. Different creator style from 5mWJn66KO2w (HackerNews recap channel), useful for the 2+ creators rule if verified."
+  },
+  {
+   "url": "https://www.youtube.com/shorts/awPnBYElVGU",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "How Hermise AI Became My Business Partner #ai #business #shorts",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Not fetched (budget)."
+  },
+  {
+   "url": "https://www.youtube.com/shorts/q9NLp9qvafo",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "AI Agents Running Your Marketplace Operations",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Not fetched (budget)."
+  },
+  {
+   "url": "https://www.tiktok.com/@_caseydanielle/video/7648835349648592158",
+   "platform": "tiktok",
+   "creator": "@_caseydanielle",
+   "title_or_hook": "Showing how I receive text messages with Claude to keep my schedule organized (Claude Cowork tutorial)",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (tiktok.com). Creator handle taken from URL. TikTok fetch is robots_disallowed for this environment, so no views/date. Good fit for 'agent handles your admin' angle."
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=BPwhEth_32g",
+   "platform": "youtube",
+   "creator": "Paul J Lipsky (channel id UCmeU2DYiVy80wMBGZzEWnbw)",
+   "title_or_hook": "How I Use 5 AI Agents To Build Me A Business 24/7 (No Code)",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "2025-10-16 (seen on bot-protection page metadata; attribution to this ID inferred from matching title)",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": false,
+   "notes": "EXCLUDE. Metadata came back (bot-protection page, embedded metadata) when fetching other IDs, title matches this search result: Published 'Oct 16, 2025' (381 days old, over 180 day max), description says sponsored (DeepAgent) so paid, and it is a watch URL (likely long-form). Views not shown."
+  }
+ ],
+ "B": [
+  {
+   "url": "https://www.youtube.com/shorts/yyuJraP8CSI",
+   "platform": "youtube",
+   "creator": "UNVERIFIED (hashtag #shopshark suggests ShopShark brand account)",
+   "title_or_hook": "This AI tool predicts TikTok Shop winning products #tiktokshop #ai #shopshark",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Two attempts (/shorts/ and ?cbrd=1 variant): empty shell page both times. Likely a tool vendor's own channel; check for paid/branded before using."
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=LOP7vukmzjI",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "Kalodata's New AI Finds Winning Products for You in Seconds (TikTok Shop)",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Watch URL, probably long-form not a Short; listed as a topic signal only. Not fetched."
+  }
+ ],
+ "C": [
+  {
+   "url": "https://www.tiktok.com/@sina.growthtech/video/7193481604436643114",
+   "platform": "tiktok",
+   "creator": "@sina.growthtech",
+   "title_or_hook": "How to Use AI to Create TikToks, Shorts & Reels Fast",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED (ID timestamp suggests ~2023-01, i.e. TOO_OLD)",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": false,
+   "notes": "Found via WebSearch (tiktok.com). Video ID 7193481604436643114 decodes to roughly Jan 2023 (TikTok IDs embed creation time), so almost certainly over the 180 day limit; not confirmed on page."
+  }
+ ],
+ "D": [
+  {
+   "url": "https://www.youtube.com/watch?v=gbbPBr3OraQ",
+   "platform": "youtube",
+   "creator": "AI News & Strategy Daily | Nate B Jones",
+   "title_or_hook": "I Gave Meta's Muse The Most Boring Job I Had. It Found $5,350 A Year.",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "2026-09-29 (seen as 'Sep 29, 2026' on bot-protection page metadata)",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Title and channel and date recovered from embedded metadata on a bot-protection page (title matches search result). Views not shown. Watch URL, likely long-form, so format mismatch for a Shorts reference; best used as topic proof only."
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=-dWO7D0ZiHw",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "5 AI Tools That Find Money You Already Lost",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Watch URL, format unknown. Not fetched."
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=2zYu2idbK_I",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "How to Find and Cancel Every Subscription You Forgot About (iPhone & Android)",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Not AI specific; watch URL. Not fetched."
+  }
+ ],
+ "E": [
+  {
+   "url": "https://www.youtube.com/shorts/xYBlrBKij9k",
+   "platform": "youtube",
+   "creator": "UNVERIFIED (likely same creator as A/5mWJn66KO2w)",
+   "title_or_hook": "I Built an Entire Marketing Team With 0 Employees #shorts #claude #automatedsystem #aiagent #ai",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Closest format match to the '37 agent team' hook. Not fetched."
+  },
+  {
+   "url": "https://www.youtube.com/shorts/3CLV51dpZKA",
+   "platform": "youtube",
+   "creator": "UNVERIFIED (likely same creator as xYBlrBKij9k)",
+   "title_or_hook": "I Built Claude AI Agents to Run My Ads Autonomously #shorts #claude #automatedsystem #aiagent",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Not fetched."
+  },
+  {
+   "url": "https://www.youtube.com/shorts/T0scq7zWjvY",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "OpenBot Runs a Full Team of AI Agents on Your Desktop",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Agent team demo format. Not fetched."
+  },
+  {
+   "url": "https://www.youtube.com/shorts/CPqjnXtPnV8",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "Stanford Built a Virtual Biotech Company With 37,000 AI Agents",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. News recap, not a demo; weak format match. Not fetched."
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=LCc7qXRhmiA",
+   "platform": "youtube",
+   "creator": "UNVERIFIED",
+   "title_or_hook": "I Built an Entire Marketing Team with 37 AI Agents (Free Template)",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (youtube.com) result title, 2026-10-31. Exact '37 agents' hook. WebFetch failed (client_error), 1 attempt. Watch URL, probably long-form; check whether creator cut a Short from it."
+  },
+  {
+   "url": "https://www.tiktok.com/@androoagi/video/7680339402475785503",
+   "platform": "tiktok",
+   "creator": "@androoagi",
+   "title_or_hook": "Best Way to Use AI Agents #ai #claude",
+   "views": null,
+   "views_source": "UNVERIFIED: not visible (YouTube served shell/bot-protection page to fetcher; TikTok/IG robots-blocked)",
+   "posted": "UNVERIFIED",
+   "creator_median_last10": null,
+   "median_source": "UNVERIFIED: creator's last 10 videos not viewable from this environment",
+   "meets_policy": "unverified",
+   "notes": "Found via WebSearch (tiktok.com). Fetch robots_disallowed. Video ID suggests a 2026 upload but not confirmed."
+  }
+ ]
+}
