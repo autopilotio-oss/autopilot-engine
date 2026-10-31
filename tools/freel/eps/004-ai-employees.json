@@ -1,0 +1,86 @@
+{
+ "id": "ai-employees",
+ "kind": "product",
+ "room": "command",
+ "agent": "Morning Agent",
+ "lane": "ai employees",
+ "hook": [
+  "7 AI agents that do your busywork",
+  "while you do the real work"
+ ],
+ "hook_lines": [
+  "7 AI agents",
+  "that do your",
+  "*busywork*",
+  "while you *work*"
+ ],
+ "caption": {
+  "ig": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Free guide at the link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity",
+  "other": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged. You get one short list of what actually needs you. Sample business shown. Free guide at the link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
+ },
+ "beats": [
+  {
+   "chip": "wake",
+   "say": "Seven AI agents that do your busywork while you do the real work. Here's one morning.",
+   "screen": {
+    "type": "ask",
+    "text": "good morning, what needs me today?",
+    "by": "schedule"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "They sort your inbox and draft the replies, chase the quotes you forgot, plan your day, and flag the invoice that's late.",
+   "screen": {
+    "type": "work",
+    "title": "Morning run",
+    "lines": [
+     "inbox: 14 emails sorted, 3 replies drafted",
+     "follow ups: 2 open quotes chased",
+     "calendar: today planned",
+     "money: 1 late invoice flagged"
+    ]
+   }
+  },
+  {
+   "chip": "you",
+   "say": "You get one short list of what actually needs you. The rest is drafted and waiting. Sample business shown.",
+   "screen": {
+    "type": "checks",
+    "title": "Needs you today",
+    "rows": [
+     [
+      "Approve 3 reply drafts",
+      "3",
+      1
+     ],
+     [
+      "Call Maria back, quote $1,850",
+      "CALL",
+      1
+     ],
+     [
+      "Invoice 1042 is 12 days late",
+      "LATE",
+      0
+     ]
+    ],
+    "verdict": "THE REST IS DRAFTED FOR YOU",
+    "ok": true
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Free guides to set this up are at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "name": "Free AI agent guides",
+    "sub": "set up your own crew",
+    "cover": "workspace",
+    "price": "FREE",
+    "url": "autopilotoi.app/free",
+    "topic": "Hire AI agents"
+   }
+  }
+ ]
+}

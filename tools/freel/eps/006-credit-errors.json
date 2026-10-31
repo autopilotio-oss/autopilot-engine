@@ -1,0 +1,95 @@
+{
+ "id": "credit-errors",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Credit Agent",
+ "lane": "money traps",
+ "hook": [
+  "Your credit report might be wrong",
+  "AI checks all 3 in one prompt"
+ ],
+ "hook_lines": [
+  "Your *credit report*",
+  "might be *wrong*",
+  "AI checks all 3",
+  "in *one prompt*"
+ ],
+ "caption": {
+  "ig": "Your credit report might be wrong. Attach all 3 bureau reports to one chat and this AI agent lists every account and late payment and flags anything that shows on one bureau but not the others. Sample reports shown. Comment CREDIT and I'll send you the free guide.\n\nEducation only, not financial advice.\n\n#creditscore #credit #ai #claude #moneytips",
+  "other": "Your credit report might be wrong. Attach all 3 bureau reports to one chat and this AI agent lists every account and late payment and flags anything that shows on one bureau but not the others. Sample reports shown. Free guide at the link in bio.\n\nEducation only, not financial advice.\n\n#creditscore #credit #ai #claude #moneytips"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Your credit report might be wrong. This AI agent checks all three bureaus in one prompt.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "experian.pdf",
+     "equifax.pdf",
+     "transunion.pdf"
+    ],
+    "text": "compare these 3 credit reports"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It lists every account and late payment, and flags anything that shows on one bureau but not the others.",
+   "screen": {
+    "type": "work",
+    "title": "Comparing 3 bureaus",
+    "lines": [
+     "read all 3 reports",
+     "list every account",
+     "match them across bureaus",
+     "flag what doesn't match"
+    ]
+   }
+  },
+  {
+   "chip": "found",
+   "say": "Here it found two things worth disputing. Sample reports, but yours work the same way.",
+   "screen": {
+    "type": "checks",
+    "title": "What doesn't match",
+    "rows": [
+     [
+      "Late payment, Experian only",
+      "FLAG",
+      0
+     ],
+     [
+      "Old address, Equifax only",
+      "FLAG",
+      0
+     ],
+     [
+      "Car loan balance",
+      "MATCH",
+      1
+     ],
+     [
+      "Student loan",
+      "MATCH",
+      1
+     ]
+    ],
+    "verdict": "2 ITEMS WORTH DISPUTING",
+    "ok": false
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment CREDIT and I'll send you the free guide.",
+   "screen": {
+    "type": "cta",
+    "name": "Free Credit Report Guide",
+    "sub": "find the errors",
+    "cover": "credit",
+    "price": "FREE",
+    "kw": "CREDIT",
+    "topic": "Fix the report"
+   }
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "id": "shop-finder",
+ "kind": "product",
+ "room": "store",
+ "agent": "Shop Agent",
+ "lane": "make money",
+ "hook": [
+  "Stop guessing what to sell on TikTok Shop",
+  "AI does the math"
+ ],
+ "hook_lines": [
+  "Stop guessing",
+  "what to sell on",
+  "*TikTok Shop*",
+  "AI does the *math*"
+ ],
+ "caption": {
+  "ig": "Stop guessing what to sell on TikTok Shop. This AI agent checks the price, the fees and shipping, and works out what you'd actually keep on every sale before you buy any stock. Sample numbers shown. Free guide at the link in bio.\n\n#tiktokshop #ai #claude #sidehustle #ecommerce",
+  "other": "Stop guessing what to sell on TikTok Shop. This AI agent checks the price, the fees and shipping, and works out what you'd actually keep on every sale before you buy any stock. Sample numbers shown. Free guide at the link in bio.\n\n#tiktokshop #ai #claude #sidehustle #ecommerce"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Stop guessing what to sell on TikTok Shop. Give this AI agent your budget and one line.",
+   "screen": {
+    "type": "ask",
+    "text": "find 3 products I can sell with a $300 budget"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It checks the price, the fees and the shipping, then works out what you'd actually keep on every sale.",
+   "screen": {
+    "type": "work",
+    "title": "Doing the math",
+    "lines": [
+     "find products trending in your niche",
+     "check price, fees and shipping",
+     "work out profit per sale",
+     "rank by what you keep"
+    ]
+   }
+  },
+  {
+   "chip": "result",
+   "say": "Then it ranks them by what you keep. Sample numbers, but you get the real math for yours.",
+   "screen": {
+    "type": "table",
+    "title": "What you keep",
+    "sample": true,
+    "cols": [
+     "Product",
+     "Sells for",
+     "You keep"
+    ],
+    "rows": [
+     [
+      "Posture corrector",
+      "$24.99",
+      "$9.40"
+     ],
+     [
+      "LED desk lamp",
+      "$29.99",
+      "$8.15"
+     ],
+     [
+      "Phone tripod",
+      "$19.99",
+      "$6.70"
+     ]
+    ],
+    "foot": "fees and shipping counted on every sale"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "The free guide is at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "name": "Free TikTok Shop Guide",
+    "sub": "pick a product that pays",
+    "cover": "shop",
+    "price": "FREE",
+    "url": "autopilotoi.app/g/shop",
+    "topic": "Sell on TikTok Shop"
+   }
+  }
+ ]
+}

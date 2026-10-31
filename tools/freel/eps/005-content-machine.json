@@ -1,0 +1,94 @@
+{
+ "id": "content-machine",
+ "kind": "product",
+ "room": "studio",
+ "agent": "Video Agent",
+ "lane": "content machine",
+ "hook": [
+  "One idea into a week of TikToks",
+  "every edit planned"
+ ],
+ "hook_lines": [
+  "1 idea",
+  "into a *week*",
+  "of TikToks",
+  "*edits planned*"
+ ],
+ "caption": {
+  "ig": "This AI agent turns one idea into a week of TikToks: hooks, scripts, every cut and caption planned. You just film. Sample week shown. Free guide at the link in bio.\n\n#contentcreator #tiktoktips #ai #claude #creator",
+  "other": "This AI agent turns one idea into a week of TikToks: hooks, scripts, every cut and caption planned. You just film. Sample week shown. Free guide at the link in bio.\n\n#contentcreator #tiktoktips #ai #claude #creator"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "This AI agent turns one idea into a week of TikToks, with every edit planned.",
+   "screen": {
+    "type": "ask",
+    "text": "turn 'saving money with AI' into 5 TikToks"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It finds what's working in your niche, writes the hooks, scripts every video, and plans every cut and caption.",
+   "screen": {
+    "type": "work",
+    "title": "Planning your week",
+    "lines": [
+     "find what works in your niche",
+     "write 5 hooks",
+     "script every video",
+     "plan every cut and caption"
+    ]
+   }
+  },
+  {
+   "chip": "week",
+   "say": "A full week, ready to film. Sample week shown.",
+   "screen": {
+    "type": "table",
+    "title": "Your week",
+    "sample": true,
+    "cols": [
+     "Day",
+     "Hook"
+    ],
+    "rows": [
+     [
+      "Mon",
+      "3 apps I deleted to save $40"
+     ],
+     [
+      "Tue",
+      "The fee your bank hopes you miss"
+     ],
+     [
+      "Wed",
+      "I asked AI to audit my phone bill"
+     ],
+     [
+      "Thu",
+      "Cancel this before it renews"
+     ],
+     [
+      "Fri",
+      "The 10 second budget check"
+     ]
+    ],
+    "foot": "scripts, cuts and captions ready  ·  you just film"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "The free guide is at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "name": "Free AI Video Guide",
+    "sub": "a week of TikToks",
+    "cover": "video",
+    "price": "FREE",
+    "url": "autopilotoi.app/g/video",
+    "topic": "A week of TikToks"
+   }
+  }
+ ]
+}
