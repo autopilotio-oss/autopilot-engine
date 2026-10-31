@@ -51,6 +51,10 @@
   "ok": true,
   "severity": "SEV-2"
  },
+ "simulated_failure": {
+  "ok": false,
+  "severity": "SEV-2"
+ },
  "viral_audit_chain": {
   "ok": true,
   "severity": "SEV-1"
@@ -58,5 +62,41 @@
  "viral_queue_guard": {
   "ok": true,
   "severity": "SEV-1"
+ },
+ "worker:daily_pulse": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "worker:kit_sync": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "worker:monthly_review": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "worker:newsletter": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "worker:publisher": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "worker:tiktok_intel": {
+  "ok": true,
+  "severity": "SEV-4"
+ },
+ "worker:trend_scout": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "worker:viral_lab": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "worker:weekly_sprint": {
+  "ok": true,
+  "severity": "SEV-2"
  }
 }
