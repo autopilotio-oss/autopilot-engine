@@ -18,7 +18,7 @@ while k < len(W):
             cap.append([m[-1] + p, W[k][1], W[k + len(seq) - 1][2]]); k += len(seq); break
     else:
         cap.append(W[k]); k += 1
-cta = next((w[1] for w in W if norm(w[0]) == "comment" and w[1] > beats[-1]["s"]), beats[-1]["e"] - 3)
+cta = next((w[1] for w in W if norm(w[0]) == "want" and w[1] >= beats[-1]["s"]), beats[-1]["e"] - 4)
 dur = round(beats[-1]["e"] + 2.6, 2)
 data = {"beats": beats, "words": cap, "cta": cta, "dur": dur, "title": S["title"]}
 html = open(f"{D}/engine.html").read().replace("/*DATA*/null", json.dumps(data))

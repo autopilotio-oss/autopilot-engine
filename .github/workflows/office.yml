@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     strategy:
-      matrix: { k: [0, 1, 2, 3, 4, 5] }
+      matrix: { k: [0, 1, 2, 3, 4, 5, 6, 7] }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -35,7 +35,7 @@ jobs:
           npm i -g --silent playwright@1 && npx playwright install --with-deps chromium
           echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
       - name: Render chunk
-        run: RANGE=${{ matrix.k }}/6 bash tools/office/make.sh chunk
+        run: RANGE=${{ matrix.k }}/8 bash tools/office/make.sh chunk
       - uses: actions/upload-artifact@v4
         with: { name: "chunk-${{ matrix.k }}", path: "tools/office/chunk_${{ matrix.k }}.mp4" }
   final:
