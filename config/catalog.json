@@ -87,9 +87,16 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "draft",
+   "status": "not_live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/deposit-agent",
-   "guides": [],
+   "guides": [
+    {
+     "guide": "deposit",
+     "path": "g/deposit/",
+     "keyword": "DEPOSIT",
+     "paid": true
+    }
+   ],
    "managed_by": "products/"
   },
   {

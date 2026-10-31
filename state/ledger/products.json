@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-31T17:44:17Z",
+ "checked": "2026-10-31T18:36:58Z",
  "products": [
   {
    "permalink": "all-money-agents",
@@ -11,37 +11,10 @@
    "deleted": false
   },
   {
-   "permalink": "bill-agent",
-   "name": "AUTOPILOT.OI Bill Agent",
+   "permalink": "deposit-agent",
+   "name": "AUTOPILOT.OI Deposit Agent",
    "published": true,
    "price_cents": 1000,
-   "currency": "usd",
-   "sales_count": 0,
-   "deleted": false
-  },
-  {
-   "permalink": "credit-agent",
-   "name": "AUTOPILOT.OI Credit Agent",
-   "published": false,
-   "price_cents": 1000,
-   "currency": "usd",
-   "sales_count": 0,
-   "deleted": false
-  },
-  {
-   "permalink": "debt-agent",
-   "name": "AUTOPILOT.OI Debt Agent",
-   "published": true,
-   "price_cents": 1000,
-   "currency": "usd",
-   "sales_count": 0,
-   "deleted": false
-  },
-  {
-   "permalink": "money-agents",
-   "name": "AUTOPILOT.OI Money Agents Bundle",
-   "published": false,
-   "price_cents": 2400,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
@@ -87,6 +60,33 @@
    "name": "AUTOPILOT.OI Subscription Agent",
    "published": true,
    "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "tiktok-agents",
+   "name": "AUTOPILOT.OI TikTok Agents Bundle",
+   "published": true,
+   "price_cents": 2400,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "video-agent",
+   "name": "AUTOPILOT.OI Video Agent",
+   "published": true,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "workspace",
+   "name": "THE WORKSPACE by AUTOPILOT.OI",
+   "published": true,
+   "price_cents": 4900,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
