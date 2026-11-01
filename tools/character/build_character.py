@@ -135,11 +135,15 @@ def from_body(name, keep):
 neck_z = eye_z - 0.17
 def keep_bala(v, w, co):
     head = w(v, 'mixamorig:Head') + w(v, 'mixamorig:Neck')
-    if head < 0.35 and co.z < neck_z: return False
-    if co.z < neck_z - 0.04: return False
+    if head < 0.2 and co.z < neck_z - 0.02: return False
+    if co.z < neck_z - 0.085: return False
     if -0.014 < co.z - eye_z < 0.013 and co.y < eye_y + 0.035 and abs(co.x) < 0.066: return False   # eye slit
     return True
 bala = from_body('Human.balaclava', keep_bala)
+bm = bmesh.new(); bm.from_mesh(bala.data)
+edge_v = [v for v in bm.verts if v.is_boundary and abs((bala.matrix_world @ v.co).z - eye_z) < 0.04]
+for _ in range(6): bmesh.ops.smooth_vert(bm, verts=edge_v, factor=0.5, use_axis_x=True, use_axis_y=False, use_axis_z=True)
+bm.to_mesh(bala.data); bm.free()
 offset_along_normals(bala, lambda co: 0.0035)
 sol = bala.modifiers.new('thick', 'SOLIDIFY'); sol.thickness = 0.002; sol.offset = 1
 knit = knit_image('knit_black'); mat = bpy.data.materials.new('balaclava_knit'); mat.use_nodes = True
@@ -150,18 +154,38 @@ bala.data.materials.append(mat); say('balaclava verts', len(bala.data.vertices))
 # 4c. hood: grown from the head and neck, face opening cut, inflated and smoothed into a loose fleece hood
 def keep_hood(v, w, co):
     head = w(v, 'mixamorig:Head') + w(v, 'mixamorig:Neck')
-    if co.z < neck_z - 0.05: return False
-    if head < 0.25 and co.z < neck_z + 0.02: return False
-    if co.y < eye_y + 0.075 and (eye_z - 0.14) < co.z < (eye_z + 0.055) and abs(co.x) < 0.088: return False   # face opening
+    if co.z < neck_z - 0.11: return False
+    if head < 0.1 and co.z < neck_z - 0.03 and co.y < eye_y + 0.12: return False
+    if co.y < eye_y + 0.085 and (eye_z - 0.15) < co.z < (eye_z + 0.07) and abs(co.x) < 0.095: return False   # face opening
     return True
 hood = from_body('Human.hood', keep_hood)
-offset_along_normals(hood, lambda co: 0.022 + max(0.0, co.z - (eye_z - 0.03)) * 0.18 + max(0.0, co.y - (eye_y + 0.1)) * 0.06)
-smooth(hood, 30, 0.6)
+offset_along_normals(hood, lambda co: 0.03 + max(0.0, co.z - (eye_z - 0.05)) * 0.32 + max(0.0, co.y - (eye_y + 0.08)) * 0.12 + max(0.0, (neck_z - co.z)) * 0.5)
+smooth(hood, 45, 0.6)
+offset_along_normals(hood, lambda co: 0.006)
 hs = hood.modifiers.new('thick', 'SOLIDIFY'); hs.thickness = 0.006; hs.offset = 1
 hmat = bpy.data.materials.new('hood_fleece'); hmat.use_nodes = True
 hb = hmat.node_tree.nodes['Principled BSDF']; ht = hmat.node_tree.nodes.new('ShaderNodeTexImage'); ht.image = fleece
 hmat.node_tree.links.new(ht.outputs['Color'], hb.inputs['Base Color']); hb.inputs['Roughness'].default_value = 0.96
 hood.data.materials.append(hmat); say('hood verts', len(hood.data.vertices))
+# 4e. kangaroo pocket (patch grown from the top's belly) and drawstrings
+if top:
+    pk = top.copy(); pk.data = top.data.copy(); pk.name = 'Human.pocket'; bpy.context.scene.collection.objects.link(pk)
+    for m in list(pk.modifiers):
+        if m.type != 'ARMATURE': pk.modifiers.remove(m)
+    bm = bmesh.new(); bm.from_mesh(pk.data)
+    wz = [ (pk.matrix_world @ v.co).z for v in bm.verts ]; zmin = min(wz)
+    kill = [v for v in bm.verts if not ((pk.matrix_world @ v.co).y < -0.02 and zmin + 0.04 < (pk.matrix_world @ v.co).z < zmin + 0.2 and abs((pk.matrix_world @ v.co).x) < 0.12)]
+    bmesh.ops.delete(bm, geom=kill, context='VERTS'); bm.to_mesh(pk.data); bm.free()
+    offset_along_normals(pk, lambda co: 0.007); s2 = pk.modifiers.new('thick', 'SOLIDIFY'); s2.thickness = 0.003
+    say('pocket verts', len(pk.data.vertices))
+    # drawstrings: two thin cords from the hood opening down the chest, skinned to the upper spine
+    for sx in (-0.035, 0.035):
+        bpy.ops.mesh.primitive_cylinder_add(vertices=8, radius=0.0035, depth=0.2, location=(sx, eye_y + 0.05, neck_z - 0.12))
+        cord = bpy.context.active_object; cord.name = 'Human.cord'; cord.rotation_euler = (0.12, 0, 0)
+        bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+        vg = cord.vertex_groups.new(name='mixamorig:Spine2'); vg.add(list(range(len(cord.data.vertices))), 1.0, 'REPLACE')
+        am = cord.modifiers.new('rig', 'ARMATURE'); am.object = rig; cord.parent = rig; cord.matrix_parent_inverse = rig.matrix_world.inverted()
+        cm = bpy.data.materials.new('cord'); cm.use_nodes = True; cm.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value = (0.02, 0.02, 0.022, 1); cord.data.materials.append(cm)
 # 4d. looser fleece body
 if top:
     bm = bmesh.new(); bm.from_mesh(top.data); bmesh.ops.holes_fill(bm, edges=bm.edges, sides=12); bm.to_mesh(top.data); bm.free()
