@@ -35,27 +35,34 @@ jobs:
                   dst = pathlib.Path(u["path"]); dst.parent.mkdir(parents=True, exist_ok=True); dst.write_bytes(get(u["url"]))
               want = spec.get("assets", [])
               got = []
-              for item in want:
+              skipped = []
+              def fetch(item):
                   files = json.loads(get(f"https://api.polyhaven.com/files/{item['id']}"))
                   res = item.get("res", "1k")
                   dest = out / item["id"]; dest.mkdir(exist_ok=True)
                   if item["type"] == "hdri":
-                      f = files["hdri"][res]["hdr"]; (dest / f"{item['id']}_{res}.hdr").write_bytes(get(f["url"])); got.append(item["id"])
+                      f = files["hdri"][res]["hdr"]; (dest / f"{item['id']}_{res}.hdr").write_bytes(get(f["url"]))
                   elif item["type"] == "texture":
                       for m in item.get("maps", ["Diffuse", "nor_gl", "Rough"]):
                           if m in files and res in files[m]:
                               fm = files[m][res].get("jpg") or files[m][res].get("png")
                               ext = "jpg" if "jpg" in files[m][res] else "png"
                               (dest / f"{m}.{ext}").write_bytes(get(fm["url"]))
-                      got.append(item["id"])
-                  elif item["type"] == "model":
-                      g = files["gltf"][res]["gltf"]
+                  else:
+                      if "gltf" not in files:
+                          raise KeyError("no gltf, formats: " + ",".join(files.keys()))
+                      rr = res if res in files["gltf"] else sorted(files["gltf"].keys())[0]
+                      g = files["gltf"][rr]["gltf"]
                       (dest / pathlib.Path(g["url"]).name).write_bytes(get(g["url"]))
                       for rel, inc in g.get("include", {}).items():
-                          p = dest / rel; p.parent.mkdir(parents=True, exist_ok=True); p.write_bytes(get(inc["url"]))
-                      got.append(item["id"])
+                          q = dest / rel; q.parent.mkdir(parents=True, exist_ok=True); q.write_bytes(get(inc["url"]))
+              for item in want:
+                  try:
+                      fetch(item); got.append(item["id"])
+                  except Exception as e:
+                      skipped.append(f"{item['id']}: {e!r}"); print("skip", item["id"], repr(e))
               (out / "CREDITS.md").write_text("# HQ assets\n\nAll from Poly Haven (https://polyhaven.com), license CC0 1.0 (public domain).\n\n" + "\n".join(f"- {i}: https://polyhaven.com/a/{i}" for i in got) + "\n")
-              print("fetched", got)
+              print("fetched", got); print("skipped", skipped)
           PY
       - name: Commit
         run: |
