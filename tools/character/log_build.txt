@@ -30,8 +30,10 @@ darkened Human.cortu_cargo_pants cargo_pants_diff.png
 darkened Human.shoes06 shoes06_diffuse.png
 baked keys Human
 eye ref 1.731 -0.15
-balaclava verts 3849
-hood verts 1709
+shell Human.balaclava helper groups 2 ['HelperGeometry']
+balaclava verts 3078
+shell Human.hood helper groups 2 ['HelperGeometry']
+hood verts 1359
 render full_front.png
 render face_34.png
 render full_34.png
