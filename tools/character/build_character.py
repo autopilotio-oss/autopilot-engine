@@ -245,6 +245,39 @@ for o in skinned:
     for m in o.modifiers:
         if m.type == 'ARMATURE': m.object = rig
 say('normalized frames for', len(skinned), 'meshes')
+# 7c. sanity check: weights for a 'Left' bone must sit on the same side as that bone; swap names if mirrored
+def side_check(o, bone='mixamorig:LeftArm'):
+    g = o.vertex_groups.get(bone)
+    if not g: return None
+    xs = [ (o.matrix_world @ v.co).x for v in o.data.vertices for e in v.groups if e.group == g.index and e.weight > 0.5 ]
+    if not xs: return None
+    bx = (rig.matrix_world @ rig.data.bones[bone].head_local).x
+    return (sum(xs) / len(xs), bx)
+chk = side_check(body); say('side check LeftArm (weights x, bone x)', chk)
+if chk and chk[0] * chk[1] < 0:
+    for o in skinned:
+        names = [g.name for g in o.vertex_groups]
+        for g in o.vertex_groups:
+            if 'Left' in g.name: g.name = g.name.replace('Left', '__R__')
+        for g in o.vertex_groups:
+            if 'Right' in g.name: g.name = g.name.replace('Right', 'Left')
+        for g in o.vertex_groups:
+            if '__R__' in g.name: g.name = g.name.replace('__R__', 'Right')
+    say('swapped Left/Right weight groups on', len(skinned), 'meshes; recheck', side_check(body))
+# 7d. drop MakeHuman helper geometry from the exported body
+bm = bmesh.new(); bm.from_mesh(body.data); dl = bm.verts.layers.deform.active
+hg = [g.index for g in body.vertex_groups if 'helper' in g.name.lower() or g.name.lower().startswith('joint')]
+kill = [v for v in bm.verts if dl and any(v[dl].get(i, 0) > 0 for i in hg)]
+bmesh.ops.delete(bm, geom=kill, context='VERTS'); bm.to_mesh(body.data); bm.free(); say('removed helper verts', len(kill))
+# 7e. opaque cutout materials (MakeHuman flags most materials as blended, which breaks layer order in real-time engines)
+for o in skinned:
+    for slot in o.material_slots:
+        m = slot.material
+        if m:
+            try: m.blend_method = 'CLIP'; m.alpha_threshold = 0.5
+            except Exception: pass
+            try: m.surface_render_method = 'DITHERED'
+            except Exception: pass
 # 8. export (separate glTF so pack_assets.py can embed geometry as .json)
 exp = OUT / 'out' / 'operative'; exp.mkdir(parents=True, exist_ok=True)
 for x in bpy.data.objects: x.select_set(x == rig or x.parent == rig or (x.type == 'MESH' and any(m.type == 'ARMATURE' for m in x.modifiers)))
