@@ -3,7 +3,7 @@
  "kind": "news",
  "status": "scheduled",
  "gate": {
-  "score": "owner reviewed the look",
+  "design": "v3 tabloid + Off-White details, Seb reviewed direction",
   "sources_checked": true
  },
  "approval": {
@@ -13,7 +13,7 @@
  },
  "posts": [
   {
-   "metricool_id": 412604202,
+   "metricool_id": 412607901,
    "uuid": "-6314888142653272579",
    "networks": [
     "instagram"
@@ -21,7 +21,7 @@
    "at": "2026-11-01T10:00-03:00"
   },
   {
-   "metricool_id": 412604222,
+   "metricool_id": 412607931,
    "uuid": "4788677946106791851",
    "networks": [
     "tiktok",
@@ -30,7 +30,7 @@
    "at": "2026-11-01T10:00-03:00"
   },
   {
-   "metricool_id": 412604247,
+   "metricool_id": 412607944,
    "uuid": "-3109439287727601703",
    "networks": [
     "twitter"
