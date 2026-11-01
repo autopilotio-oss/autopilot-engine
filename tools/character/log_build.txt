@@ -1,0 +1,39 @@
+extension installed via package_install_files
+mpfb modules loaded: 546 ['bl_ext.user_default.mpfb', 'bl_ext.user_default.mpfb._classmanager', 'bl_ext.user_default.mpfb._preferences', 'bl_ext.user_default.mpfb.entities', 'bl_ext.user_default.mpfb.entities.clothes']
+addon module bl_ext.user_default.mpfb
+pack makehuman_system_assets top level: ['clothes', 'eyebrows', 'eyelashes', 'eyes', 'hair', 'packs', 'proxymeshes', 'skins', 'teeth', 'tongue']
+pack masks01 top level: ['clothes', 'packs']
+pack hats01 top level: ['clothes', 'packs']
+pack shirts01 top level: ['clothes', 'packs']
+pack pants01 top level: ['clothes', 'packs']
+pack shoes01 top level: ['clothes', 'packs']
+pack skins01 top level: ['packs', 'skins']
+pack eyebrows01 top level: ['eyebrows', 'packs']
+body Human 19158
+find skins young_african_male .mhmat -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/skins/young_african_male/young_african_male.mhmat']
+skin ok
+rig Human.rig 52
+find eyes high-poly .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/eyes/high-poly/high-poly.mhclo']
+added high-poly Human.high-poly 1064
+find eyebrows eyebrow001 .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/eyebrows/eyebrow001/eyebrow001.mhclo']
+added eyebrow001 Human.eyebrow001 124
+find eyelashes eyelashes01 .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/eyelashes/eyelashes01/eyelashes01.mhclo']
+added eyelashes01 Human.eyelashes01 250
+find clothes toigo_fisherman_sweater .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/clothes/toigo_fisherman_sweater/toigo_fisherman_sweater.mhclo']
+added toigo_fisherman_sweater Human.toigo_fisherman_sweater 2126
+find clothes cortu_cargo_pants .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/clothes/cortu_cargo_pants/cortu_cargo_pants.mhclo']
+added cortu_cargo_pants Human.cortu_cargo_pants 211
+find clothes shoes06 .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/clothes/shoes06/shoes06.mhclo']
+added shoes06 Human.shoes06 1594
+find clothes culturalibre_hero_mask_1 .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/clothes/culturalibre_hero_mask_1/culturalibre_hero_mask_1.mhclo']
+added culturalibre_hero_mask_1 Human.culturalibre_hero_mask_1 2450
+find clothes culturalibre_hero-heroine_hood_1 .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/clothes/culturalibre_hero-heroine_hood_1/culturalibre_hero-heroine_hood_1.mhclo']
+added culturalibre_hero-heroine_hood_1 Human.culturalibre_hero-heroine_hood_1 1502
+recolored Human.cortu_cargo_pants cargo_pants_diff.png
+recolored Human.shoes06 shoes06_diffuse.png
+baked keys Human
+render full_front.png
+render face_34.png
+render full_34.png
+exported ['operative_1k.bin', 'operative_1k.gltf', 'textures']
+bones ['mixamorig:Hips', 'mixamorig:LeftUpLeg', 'mixamorig:LeftLeg', 'mixamorig:LeftFoot', 'mixamorig:LeftToeBase', 'mixamorig:RightUpLeg', 'mixamorig:RightLeg', 'mixamorig:RightFoot', 'mixamorig:RightToeBase', 'mixamorig:Spine', 'mixamorig:Spine1', 'mixamorig:Spine2', 'mixamorig:LeftShoulder', 'mixamorig:LeftArm', 'mixamorig:LeftForeArm', 'mixamorig:LeftHand', 'mixamorig:LeftHandIndex1', 'mixamorig:LeftHandIndex2', 'mixamorig:LeftHandIndex3', 'mixamorig:LeftHandMiddle1', 'mixamorig:LeftHandMiddle2', 'mixamorig:LeftHandMiddle3', 'mixamorig:LeftHandPinky1', 'mixamorig:LeftHandPinky2', 'mixamorig:LeftHandPinky3', 'mixamorig:LeftHandRing1', 'mixamorig:LeftHandRing2', 'mixamorig:LeftHandRing3', 'mixamorig:LeftHandThumb1', 'mixamorig:LeftHandThumb2', 'mixamorig:LeftHandThumb3', 'mixamorig:Neck', 'mixamorig:Head', 'mixamorig:RightShoulder', 'mixamorig:RightArm', 'mixamorig:RightForeArm', 'mixamorig:RightHand', 'mixamorig:RightHandIndex1', 'mixamorig:RightHandIndex2', 'mixamorig:RightHandIndex3', 'mixamorig:RightHandMiddle1', 'mixamorig:RightHandMiddle2', 'mixamorig:RightHandMiddle3', 'mixamorig:RightHandPinky1', 'mixamorig:RightHandPinky2', 'mixamorig:RightHandPinky3', 'mixamorig:RightHandRing1', 'mixamorig:RightHandRing2', 'mixamorig:RightHandRing3', 'mixamorig:RightHandThumb1', 'mixamorig:RightHandThumb2', 'mixamorig:RightHandThumb3']
