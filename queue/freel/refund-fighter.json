@@ -6,7 +6,7 @@
   "Airline canceled your flight?",
   "Get cash, not a voucher"
  ],
- "keyword": null,
+ "keyword": "REFUND",
  "video": "https://autopilotoi.app/media/freel/refund-fighter.mp4",
  "poster": "https://autopilotoi.app/media/freel/refund-fighter-poster.jpg",
  "caption": {
@@ -14,7 +14,53 @@
   "other": "If a US airline cancels your flight and you turn down the new one, DOT rules say you can get your money back, not just a voucher. This agent reads your booking, checks what you're owed and writes the refund request for you to send. Sample booking shown. Refund Fighter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
  },
  "rendered_at": "2026-11-01T09:52:31+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": {
+  "score": 92,
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-01T07:20-03:00",
+  "breakdown": {
+   "hook": 24,
+   "demo": 24,
+   "legibility": 12,
+   "honesty": 15,
+   "cta": 9,
+   "brand_sound": 8
+  },
+  "notes": "22.8s, 1080x1920, -15.4 LUFS / +0.4 dBTP (slight overs). Question hook names a canceled flight. Booking read, rights check, verdict and refund letter all legible; sample booking labeled; stat counts up to $412 (matches letter) but holds only ~0.3s at full value, so most viewers see a mid-count number. End card cover reads 'Refund Agent' (old name). DOT cash refund claim is accurate for US airlines when the passenger declines rebooking. IG Comment REFUND is a confirmed keyword."
+ },
+ "posts": [
+  {
+   "metricool_id": 412799053,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-04T12:30-03:00",
+   "uuid": "1925154007606117394"
+  },
+  {
+   "metricool_id": 412799066,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-04T12:30-03:00",
+   "uuid": "-1432169445949879773"
+  },
+  {
+   "metricool_id": 412799096,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-04T12:30-03:00",
+   "uuid": "1933737661485173523"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ },
+ "x_text_link": "https://autopilotoi.app/g/refund/?utm_source=x&utm_medium=social&utm_campaign=first_sales&utm_content=refund-fighter"
 }

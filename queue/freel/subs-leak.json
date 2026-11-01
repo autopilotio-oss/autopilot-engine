@@ -6,7 +6,7 @@
   "You're paying for apps you forgot",
   "AI finds every one"
  ],
- "keyword": null,
+ "keyword": "SUBS",
  "video": "https://autopilotoi.app/media/freel/subs-leak.mp4",
  "poster": "https://autopilotoi.app/media/freel/subs-leak-poster.jpg",
  "caption": {
@@ -14,7 +14,53 @@
   "other": "Most people have at least one subscription they forgot about. This agent reads your bank statement, finds every recurring charge, flags the ones you stopped using and writes the cancel messages for you. Sample statement shown. Subscription Leak Hunter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
  },
  "rendered_at": "2026-11-01T09:52:24+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": {
+  "score": 93,
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-01T07:20-03:00",
+  "breakdown": {
+   "hook": 24,
+   "demo": 24,
+   "legibility": 12,
+   "honesty": 15,
+   "cta": 9,
+   "brand_sound": 9
+  },
+  "notes": "23.1s, 1080x1920, -15.5 LUFS / -1.2 dBTP. Hook names forgotten subscriptions in frame 1. All 4 agent steps legible, sample statement labeled, stat counts to $47.96 (matches table, labeled sample statement). Stat card holds under 1s before the end card: weak. End card cover thumbnail still reads 'Subscription Agent' (old name). IG Comment SUBS is a confirmed ManyChat keyword."
+ },
+ "posts": [
+  {
+   "metricool_id": 412798974,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-03T20:30-03:00",
+   "uuid": "5040088540747285697"
+  },
+  {
+   "metricool_id": 412798989,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-03T20:30-03:00",
+   "uuid": "-6637231356414899122"
+  },
+  {
+   "metricool_id": 412799002,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-03T20:30-03:00",
+   "uuid": "4405027989033076663"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ },
+ "x_text_link": "https://autopilotoi.app/g/subs/?utm_source=x&utm_medium=social&utm_campaign=first_sales&utm_content=subs-leak"
 }
