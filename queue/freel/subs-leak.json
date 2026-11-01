@@ -1,0 +1,20 @@
+{
+ "id": "subs-leak",
+ "ep": "013a-subs-leak",
+ "kind": "product",
+ "hook": [
+  "You're paying for apps you forgot",
+  "AI finds every one"
+ ],
+ "keyword": null,
+ "video": "https://autopilotoi.app/media/freel/subs-leak.mp4",
+ "poster": "https://autopilotoi.app/media/freel/subs-leak-poster.jpg",
+ "caption": {
+  "ig": "Most people have at least one subscription they forgot about. This agent reads your bank statement, finds every recurring charge, flags the ones you stopped using and writes the cancel messages for you. Sample statement shown. Comment SUBS and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Most people have at least one subscription they forgot about. This agent reads your bank statement, finds every recurring charge, flags the ones you stopped using and writes the cancel messages for you. Sample statement shown. Subscription Leak Hunter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "rendered_at": "2026-11-01T09:52:24+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}

@@ -1,0 +1,20 @@
+{
+ "id": "refund-fighter",
+ "ep": "013b-refund-fighter",
+ "kind": "product",
+ "hook": [
+  "Airline canceled your flight?",
+  "Get cash, not a voucher"
+ ],
+ "keyword": null,
+ "video": "https://autopilotoi.app/media/freel/refund-fighter.mp4",
+ "poster": "https://autopilotoi.app/media/freel/refund-fighter-poster.jpg",
+ "caption": {
+  "ig": "If a US airline cancels your flight and you turn down the new one, DOT rules say you can get your money back, not just a voucher. This agent reads your booking, checks what you're owed and writes the refund request for you to send. Sample booking shown. Comment REFUND and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "If a US airline cancels your flight and you turn down the new one, DOT rules say you can get your money back, not just a voucher. This agent reads your booking, checks what you're owed and writes the refund request for you to send. Sample booking shown. Refund Fighter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "rendered_at": "2026-11-01T09:52:31+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
