@@ -1,0 +1,75 @@
+{
+ "kind": "news",
+ "dateline": "NOV 01 2026",
+ "lines": [
+  "Binance reopens",
+  "withdrawals"
+ ],
+ "bg_words": [
+  "BINANCE",
+  "95%"
+ ],
+ "bg_facts": [
+  "Binance reopened withdrawals in phases on Nov 1.",
+  "It says about 95% of stolen assets are replaced."
+ ],
+ "ow": {},
+ "slides": [
+  {
+   "title": "Withdrawals are *back*",
+   "body": "On <b>Sunday, Nov 1</b>, Binance began reopening withdrawals in phases, three days after hackers took about <b>$6.3 billion</b>. The first window ran <b>06:00 to 09:00 UTC</b>, with bitcoin going first."
+  },
+  {
+   "title": "Phase *one*",
+   "body": "Phase one covers <b>BTC, ETH, USDT, USDC, BNB and XRP</b> across <b>15 networks</b>. Each network must pass its own security checks, so they open one by one. There is <b>no date yet</b> for later phases."
+  },
+  {
+   "title": "The money *now*",
+   "body": "Binance says it has replaced about <b>95%</b> of the stolen assets, up from <b>90%</b> on Oct 31 and about <b>80%</b> before that. The last 5% is smaller tokens that take longer to buy.",
+   "num": "95%"
+  },
+  {
+   "title": "Who *pays*",
+   "body": "The money comes from Binance's <b>own treasury</b>, part of its <b>futures insurance fund</b> and its <b>SAFU</b> emergency fund. Binance says the losses <b>will not be passed on to users</b> and plans to refill SAFU to about $1 billion."
+  },
+  {
+   "title": "Who is *behind it*",
+   "body": "The <b>FBI</b> says North Korea was behind the hack. Blockchain firms TRM Labs and Chainalysis name <b>TraderTraitor</b>, a North Korea linked group. Binance says its investigation is <b>still open</b>."
+  },
+  {
+   "title": "What it means *for you*",
+   "body": "If you hold crypto on Binance, check the <b>withdrawal page</b> for your coin and network before you send. Binance said a full <b>proof of reserves</b> would come by Nov 3. Anyone offering to <b>recover your crypto</b> for a fee is a scam."
+  }
+ ],
+ "cta": {
+  "big": "Guard your *money*",
+  "keyword": "AGENTS",
+  "gift": "Here are your 6 free guides to AI agents that save you money.",
+  "small": "Free, right in your DMs. News, *not financial advice.*"
+ },
+ "note": "News, not financial advice.",
+ "sources": [
+  [
+   "CoinDesk",
+   "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack"
+  ],
+  [
+   "Bloomberg",
+   "https://www.bloomberg.com/news/articles/2026-11-01/binance-to-resume-customer-withdrawals-in-phases-after-hack"
+  ],
+  [
+   "CNBC",
+   "https://www.cnbc.com/2026/10/31/binance-hack-asset-coverage-withdrawals.html"
+  ],
+  [
+   "crypto.news",
+   "https://crypto.news/binance-reopens-bitcoin-withdrawals-after-hack/"
+  ]
+ ],
+ "cover_bg": "bg-white",
+ "theme": "dark",
+ "grain": false,
+ "seed": 5,
+ "music": "bright",
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">UPDATE &middot; BINANCE HACK</div>\n<div class=\"fx Mm\" style=\"left:56px;top:150px;font-size:27px;color:#0c0c0c;letter-spacing:1px\">STOLEN ASSETS BINANCE SAYS IT HAS REPLACED</div>\n<div class=\"fx Mm\" style=\"left:56px;top:262px;font-size:22px;color:#0c0c0c99\">100% = ALL OF IT</div>\n<div class=\"fx\" style=\"left:56px;top:300px;width:968px;border-top:3px dashed #0c0c0c66\"></div>\n<div class=\"fx\" style=\"left:56px;top:404px;width:270px;height:376px;background:#0c0c0c;color:#f2f2ee;padding:26px 0 0 26px\"><div class=\"A\" style=\"font-size:104px;color:#f2f2ee\">80%</div></div>\n<div class=\"fx\" style=\"left:405px;top:357px;width:270px;height:423px;background:#0c0c0c;color:#f2f2ee;padding:26px 0 0 26px\"><div class=\"A\" style=\"font-size:104px;color:#f2f2ee\">90%</div></div>\n<div class=\"fx\" style=\"left:754px;top:333px;width:270px;height:447px;background:#D4FF3A;box-shadow:inset 0 0 0 5px #0c0c0c;padding:26px 0 0 26px\"><div class=\"A\" style=\"font-size:104px;color:#0c0c0c\">95%</div></div>\n<div class=\"fx\" style=\"left:56px;top:780px;width:968px;height:4px;background:#0c0c0c\"></div>\n<div class=\"fx Cc\" style=\"left:56px;top:802px;font-size:26px;color:#0c0c0c99\">EARLIER</div>\n<div class=\"fx Cc\" style=\"left:405px;top:802px;font-size:26px;color:#0c0c0c99\">OCT 31</div>\n<div class=\"fx Cc\" style=\"left:754px;top:802px;font-size:26px;color:#0c0c0c\">NOV 1</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"16\" style=\"left:56px;top:880px;font-size:110px;white-space:nowrap;color:#0c0c0c\">Binance reopens withdrawals</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:1000px;font-size:110px;white-space:nowrap;background:#0c0c0c;color:#D4FF3A;padding:10px 22px 0\">after the $6.3B hack</div>\n<div class=\"fx Ii\" data-after=\"h\" data-gap=\"30\" style=\"left:56px;top:1150px;width:860px;font-size:32px;line-height:1.28;color:#0c0c0c\">Bitcoin first, in phases. Binance says users will not pay for the losses. Swipe for what to do &#9656;</div>"
+}
