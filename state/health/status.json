@@ -4,7 +4,11 @@
   "severity": "SEV-1"
  },
  "checkout:bill-agent": {
-  "ok": false,
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:debt-agent": {
+  "ok": true,
   "severity": "SEV-1"
  },
  "checkout:deposit-agent": {
