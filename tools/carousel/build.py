@@ -34,7 +34,7 @@ CSS = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "style.css")
 
 GRAIN = ('<svg class="grain" width="1080" height="1350"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" '
          'numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>')
-BLOBS = ('<svg class="blob" viewBox="0 0 1080 1350" preserveAspectRatio="none"><g fill="#B8F23C">'
+BLOBS = ('<svg class="blob" viewBox="0 0 1080 1350" preserveAspectRatio="none"><defs><radialGradient id="lg" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#F0FF9A"/><stop offset=".55" stop-color="#D4FF3A"/><stop offset="1" stop-color="#B9F01E"/></radialGradient></defs><g fill="url(#lg)">'
          '<path d="M150 230 C330 120 520 210 560 360 C600 500 470 560 520 690 C560 800 420 860 300 800 C170 740 60 660 90 520 C110 420 20 320 150 230Z"/>'
          '<path d="M700 160 C820 100 1010 140 1050 290 C1090 440 960 470 940 590 C920 700 1010 760 980 820 C900 860 780 780 720 680 C650 560 600 230 700 160Z"/></g></svg>')
 
@@ -66,7 +66,7 @@ def evidence(h):
                f'<div class="app">{E(h.get("app", ""))}</div>{inner}</div></div>')
     elif t == "ticker":
         spark = ('<svg width="550" height="90"><polyline points="0,80 60,70 120,74 180,52 240,58 300,36 360,44 420,22 480,28 550,8" '
-                 'fill="none" stroke="#B8F23C" stroke-width="7"/></svg>') if h.get("spark", True) else ""
+                 'fill="none" stroke="#D4FF3A" stroke-width="7"/></svg>') if h.get("spark", True) else ""
         out = (f'<div class="ev" style="left:{x}px;top:{y}px"><div class="tick"><small>{E(h.get("top", ""))}</small>'
                f'<b>{E(h["text"])}</b><i>{E(h.get("bottom", ""))}</i>{spark}</div></div>')
     elif t == "cutout":
@@ -114,6 +114,7 @@ def offwhite(p, n, cover=True):
         zx, zy = ow.get("zip_at", [820, 230])
         out += f'<div class="zip" style="left:{zx}px;top:{zy}px;transform:rotate(9deg)"><div class="str"></div><div class="tg">"{E(ow["zip"])}"<small>AUTOPILOT.OI</small></div></div>'
     if cover:
+        out += '<img class="aplogo" src="/docs/logo.png">'
         out += barcode(48, 1262, seed=int(re.sub(r"\D", "", num) or 7))
     return out
 
@@ -176,17 +177,17 @@ def inner(p, i, n, sl):
         body = (f'<div class="num">PROMPT {i - 1}</div><div class="t">{lime(sl["title"])}</div>'
                 f'<div class="pr"><small>COPY THIS</small>{E(sl["prompt"])}</div>' + (f'<div class="why">{lime(sl["why"])}</div>' if sl.get("why") else ""))
         return (f'<div class="s" id="s{i}"><div class="side" style="opacity:.35">{paper(p)}</div>{GRAIN}<div class="pg">{i}/{n}</div>'
-                f'<div class="in wide"><div class="fit2">{body}</div></div><div class="handle">"SAVE THIS" &nbsp;&middot;&nbsp; @AUTOPILOT.OI &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
+                f'<div class="in wide"><div class="fit2">{body}</div></div><div class="handle"><img class="hlogo" src="/docs/logo.png">"SAVE THIS" &nbsp;&middot;&nbsp; @AUTOPILOT.OI &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
     body = f'<div class="t">{lime(sl["title"])}</div><div class="b">{lime(sl["body"])}</div>'
     ev = evidence(sl["hero"]) if sl.get("hero") else ""
     if sl.get("lite") or (i % 3 == 0 and sl.get("lite") is not False):
         big = f'<div class="bignum">{E(sl["num"])}</div>' if sl.get("num") else ""
         return (f'<div class="s lite" id="s{i}"><div class="haz" style="top:0;height:16px"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
-                f'<div class="in wide"><div class="fit2">{big}{body}</div></div><div class="handle">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div></div>')
+                f'<div class="in wide"><div class="fit2">{big}{body}</div></div><div class="handle"><img class="hlogo" src="/docs/logo.png">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div></div>')
     return (f'<div class="s" id="s{i}"><div class="side">{paper(p)}</div>{ev}'
             f'<div class="shade" style="height:100%;background:linear-gradient(90deg,#0c0c0c 46%,#0c0c0c00 80%)"></div>{GRAIN}'
             f'<div class="pg">{i}/{n}</div><div class="in"><div class="fit2">{body}</div></div>'
-            f'<div class="handle">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
+            f'<div class="handle"><img class="hlogo" src="/docs/logo.png">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
 
 
 def last(p, i, n):
@@ -196,7 +197,7 @@ def last(p, i, n):
     return (f'<div class="s" id="s{i}">{paper(p)}<div style="opacity:.3">{BLOBS}</div><div class="shade" style="height:88%"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
             f'<div class="tagbox"><span class="qm">&ldquo;</span>AUTO<br>PILOT<span class="qm">&rdquo;</span></div><div class="haz" style="top:0"></div><div class="in wide" style="justify-content:flex-end">'
             f'<div class="t">{lime(c["big"])}</div><div class="b">{lime(c["small"])}</div>{note}{src}</div>'
-            f'<div class="handle">FOLLOW @AUTOPILOT.OI &middot; AI NEWS FIRST</div></div>')
+            f'<div class="handle"><img class="hlogo" src="/docs/logo.png">FOLLOW @AUTOPILOT.OI &middot; AI NEWS FIRST</div></div>')
 
 
 FIT = """<script>
