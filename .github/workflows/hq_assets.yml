@@ -1,0 +1,62 @@
+name: HQ assets (Poly Haven CC0)
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "index = list available assets; fetch = download tools/hq-live/assets/wanted.json"
+        default: index
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Index or fetch
+        env:
+          MODE: ${{ github.event.inputs.mode }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, pathlib
+          UA = {"User-Agent": "autopilot-engine-hq/1.0 (CC0 asset fetch)"}
+          def get(u):
+              return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=120).read()
+          out = pathlib.Path("tools/hq-live/assets"); out.mkdir(parents=True, exist_ok=True)
+          if os.environ["MODE"] == "index":
+              idx = {}
+              for t in ("hdris", "textures", "models"):
+                  d = json.loads(get(f"https://api.polyhaven.com/assets?t={t}"))
+                  idx[t] = {k: {"name": v.get("name"), "categories": v.get("categories"), "tags": v.get("tags")} for k, v in d.items()}
+              (out / "polyhaven_index.json").write_text(json.dumps(idx))
+              print({k: len(v) for k, v in idx.items()})
+          else:
+              want = json.loads((out / "wanted.json").read_text())
+              got = []
+              for item in want:
+                  files = json.loads(get(f"https://api.polyhaven.com/files/{item['id']}"))
+                  res = item.get("res", "1k")
+                  dest = out / item["id"]; dest.mkdir(exist_ok=True)
+                  if item["type"] == "hdri":
+                      f = files["hdri"][res]["hdr"]; (dest / f"{item['id']}_{res}.hdr").write_bytes(get(f["url"])); got.append(item["id"])
+                  elif item["type"] == "texture":
+                      for m in item.get("maps", ["Diffuse", "nor_gl", "Rough"]):
+                          if m in files and res in files[m]:
+                              fm = files[m][res].get("jpg") or files[m][res].get("png")
+                              ext = "jpg" if "jpg" in files[m][res] else "png"
+                              (dest / f"{m}.{ext}").write_bytes(get(fm["url"]))
+                      got.append(item["id"])
+                  elif item["type"] == "model":
+                      g = files["gltf"][res]["gltf"]
+                      (dest / pathlib.Path(g["url"]).name).write_bytes(get(g["url"]))
+                      for rel, inc in g.get("include", {}).items():
+                          p = dest / rel; p.parent.mkdir(parents=True, exist_ok=True); p.write_bytes(get(inc["url"]))
+                      got.append(item["id"])
+              (out / "CREDITS.md").write_text("# HQ assets\n\nAll from Poly Haven (https://polyhaven.com), license CC0 1.0 (public domain).\n\n" + "\n".join(f"- {i}: https://polyhaven.com/a/{i}" for i in got) + "\n")
+              print("fetched", got)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add tools/hq-live/assets
+          git commit -m "HQ assets: ${{ github.event.inputs.mode }} (Poly Haven CC0)" || exit 0
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done
