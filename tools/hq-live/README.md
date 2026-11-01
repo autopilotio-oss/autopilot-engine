@@ -1,17 +1,22 @@
 # AUTOPILOT.OI Chicago HQ (live)
 
-A three.js page (published as a claude.ai artifact) that shows the agent workforce as hooded operatives in a converted
-Chicago warehouse. Live data comes from the viewer's own connectors via the artifact `mcp` capability:
+Published as a Claude artifact (private to Seb). Single file, three.js r170 from jsdelivr.
 
-- Claude Code Remote `list_triggers`: every scheduled agent, its last run and next run. State per agent:
-  WORKING (run fired and not finished), COMPLETED (finished in the last 20 min), IDLE, FAILED, PAUSED (disabled).
-  PLANNING / COLLABORATING / REVIEWING / AWAITING APPROVAL are not shown because nothing reports them yet.
-- Metricool `getScheduledPosts` (today, ART): posts out, queued, failed; a packet flies from the creating desk to
-  the wall screen for each published post.
-- Kit `get_growth_stats`: subscribers.
+## What is real
+- Agents = your Claude scheduled tasks (list_triggers). States: WORKING, COMPLETED, IDLE, FAILED, PAUSED. Only states the scheduler reports.
+- Posts today = Metricool getScheduledPosts (brand 7761544). Kit subscribers = get_growth_stats.
+- Run now / Pause / Resume act on the real scheduled task, always after a confirm.
+- Activity log = changes this page observed since it was opened. Replay walks the camera through them.
 
-CEO actions (behind an in-page confirm): Run now (`fire_trigger`), Pause / Resume (`update_trigger enabled`).
-GitHub Actions workers (health, revenue ledger, kit sync) have desks but show NO LIVE FEED until a feed exists.
-Revenue shows "Gumroad not linked" until a Gumroad source reaches the page.
-`#demo` in the address loads clearly labeled SIMULATED data for design checks only.
-Artifact: https://claude.ai/artifact/1u49cT2kQkXCM9WKmApZVM
+## NOT CONNECTED (shown as such, never estimated)
+Revenue (Gumroad), GitHub Actions workers (HEALTH, TILL, POSTMAN), approval queue, Meta ad spend, Metricool analytics, per step progress, 7 day performance.
+
+## DEMO MODE
+Add `#demo` to the address. Separate test dataset, red banner, never mixed with live data.
+
+## Characters
+Procedural placeholders, labeled as such. Upload a rigged GLB as `assets/agent.glb` (clips named Idle, Walk, Typing, Sit) and the page swaps it in for every agent.
+Licensed sources: Adobe Mixamo, Reallusion ActorCore / Character Creator (check export license), Sketchfab Store, CGTrader, TurboSquid (check real time / web use), or a custom ArtStation commission.
+
+## Profiles and keys
+Settings: High end desktop, Standard desktop, Mobile (auto detected). Keys: 1 to 7 cameras, / search, [ ] cycle agents, A W T L views, R replay, Esc close.
