@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-01T22:25:00Z",
+  "at": "2026-11-01T23:25:00Z",
   "posts_today": {
     "threads": {
       "published": 3,
@@ -67,5 +67,5 @@
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "6 to 72h window: Instagram reels (6) re-pulled, all 0 saves and 0 shares, unchanged vs 21:25; top posts ranked by Instagram reach, no winner. TikTok, Threads, X and Instagram feed analytics not pulled this run: MISSING. Threads ERRORs are the 00:52 and 00:59 ART Binance news posts (media container), already listed in next-actions today, reposted 07:40. Kit: 0 subscribers, 0 new today. Revenue feed: 0 verified orders all time (unchanged). No workflow with latest conclusion failure (ci.yml latest success, 9 fails in 24h; daily.yml 2 fails in 24h). HQ feed written to status/hub (v6)."
+  "notes": "6 to 72h window: Instagram reels (6) re-pulled, all 0 saves and 0 shares, unchanged vs 22:25; top posts ranked by Instagram reach, no winner. TikTok, Threads, X and Instagram feed analytics not pulled this run: MISSING. Threads ERRORs are the 00:52 and 00:59 ART Binance news posts (media container), already listed in next-actions today. Kit: 0 subscribers, 0 new today. Revenue feed: 0 verified orders all time (unchanged). No workflow with latest conclusion failure (ci.yml latest success, 9 fails in 24h; daily.yml 2 fails in 24h). HQ feed written to status/hub (v7)."
 }
