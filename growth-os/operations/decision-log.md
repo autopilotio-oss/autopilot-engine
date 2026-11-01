@@ -14,3 +14,4 @@
 | 2026-10-31 15:52 | Seb will connect Gmail so the support agent can draft replies (drafts only) | Seb (chat) | Support inbox | Standing |
 | 2026-10-31 15:56 | "Use Gmail for this": Gmail connected; Support + inbox monitor runs with Gmail (drafts only, alerts as incidents) | Seb (chat) | Business inbox | Standing |
 | 2026-10-31 15:56 | "TikTok is good now": voice fix confirmed on the subs repost | Seb (chat) | TikTok video rule | Standing |
+| 2026-11-01 07:40 | Flagship reels subs-leak and refund-fighter passed the gate (93, 92) and were scheduled after the last queued reel (Nov 3 20:30, Nov 4 12:30 ART); bundle reel charged-twice moved up to render Nov 2 with bill-coach | operator, campaign standing approval | queue/freel | Campaign |
