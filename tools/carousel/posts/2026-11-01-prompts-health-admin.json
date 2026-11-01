@@ -1,0 +1,72 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 01 2026",
+ "cover_bg": "bg-black",
+ "theme": "dark",
+ "music": "dark",
+ "seed": 7,
+ "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">5 PROMPTS &middot; HEALTH ADMIN</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"14\" style=\"left:56px;top:150px;font-size:150px;white-space:nowrap;color:#f2f2ee\">Let Claude read</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:300px;font-size:150px;white-space:nowrap;color:#D4FF3A\">your medical mail</div><div class=\"fx Ii\" data-after=\"h\" data-gap=\"28\" style=\"left:56px;top:460px;width:900px;font-size:34px;line-height:1.25;color:#f2f2ee\">Visits, bills, denials. Copy, paste, done. Black out your ID numbers first. Swipe &#9656;</div><div class=\"fx\" style=\"left:70px;top:690px;position:absolute;width:500px;height:560px;background:#f2f2ee;border-radius:18px;box-shadow:0 30px 70px #000a;transform:rotate(-9deg)\"><div style=\"position:absolute;left:36px;top:36px;width:150px;height:20px;background:#0c0c0c;border-radius:4px\"></div><i style=\"position:absolute;left:36px;top:96px;width:400px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:130px;width:360px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:164px;width:420px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:198px;width:300px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:232px;width:380px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:266px;width:340px;height:12px;background:#0c0c0c22;border-radius:6px\"></i></div><div class=\"fx\" style=\"left:520px;top:670px;position:absolute;width:500px;height:560px;background:#f2f2ee;border-radius:18px;box-shadow:0 30px 70px #000a;transform:rotate(8deg)\"><div style=\"position:absolute;left:36px;top:36px;width:190px;height:20px;background:#0c0c0c;border-radius:4px\"></div><i style=\"position:absolute;left:36px;top:96px;width:420px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:130px;width:380px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:164px;width:300px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:198px;width:410px;height:12px;background:#0c0c0c22;border-radius:6px\"></i><i style=\"position:absolute;left:36px;top:232px;width:360px;height:12px;background:#0c0c0c22;border-radius:6px\"></i></div><div class=\"fx\" style=\"left:250px;top:640px;width:580px;height:600px;background:#f2f2ee;color:#0c0c0c;border-radius:20px;box-shadow:0 40px 90px #000c;transform:rotate(-1.5deg)\"><div class=\"Cc\" style=\"position:absolute;left:40px;top:36px;font-size:22px;color:#0c0c0c99\">SAMPLE &middot; EXPLANATION OF BENEFITS</div><div class=\"Mm\" style=\"position:absolute;left:40px;top:96px;width:500px;font-size:27px;line-height:1.9;white-space:pre\"><div>OFFICE VISIT     $310.00</div><div>PLAN PAID        $70.00</div><div style=\"background:#D4FF3A;margin:0 -14px;padding:0 14px;font-weight:700\">YOU OWE         $240.00</div></div><div class=\"A\" style=\"position:absolute;left:40px;top:330px;font-size:64px;line-height:1;border:6px solid #0c0c0c;padding:12px 18px 4px;transform:rotate(-4deg)\">THIS IS NOT A BILL</div></div>",
+ "slides": [
+  {
+   "title": "Prep your *visit*",
+   "prompt": "I have a short doctor visit about [issue]. Turn my notes below into a one page summary: when it started, what helps or makes it worse, the medicines I take, and my top 3 questions.",
+   "why": "Visits go fast. You walk in <b>organized</b> and leave with answers."
+  },
+  {
+   "title": "Check the *EOB*",
+   "prompt": "Here is my Explanation of Benefits and the bill from my provider. Check the dates, services and the amount I owe. Do they match? List every difference.",
+   "why": "An EOB is <b>not a bill</b>. What it says you owe should match the bill. If the bill comes first, wait for the EOB."
+  },
+  {
+   "title": "Audit the *bill*",
+   "prompt": "Here is my itemized medical bill with my name and ID numbers blacked out. Explain each line in plain words, flag possible duplicates, and list questions for the billing office.",
+   "why": "Ask the billing office for the <b>itemized bill</b>. A summary bill hides the details."
+  },
+  {
+   "title": "Answer a *denial*",
+   "prompt": "My insurer denied this claim. Here is the denial letter. Write a short, polite appeal that answers their exact reason and asks for a full review. Leave blanks for my policy numbers.",
+   "why": "You usually have up to <b>180 days</b> to appeal. The denial is not the last word."
+  },
+  {
+   "title": "Never miss a *step*",
+   "prompt": "Here are my visit notes. Turn them into a simple checklist: each medicine and when to take it, follow up dates, and the warning signs that mean I should call the doctor.",
+   "why": "Notes get lost. A <b>checklist on the fridge</b> does not. Your doctor has the final say."
+  }
+ ],
+ "cta": {
+  "big": "Cut your *medical bill*",
+  "keyword": "BILL",
+  "gift": "Your free bill guide: the steps and Claude prompts to cut a medical bill before you pay.",
+  "small": "Free in your DMs. *Not medical or legal advice.*"
+ },
+ "sources": [
+  [
+   "HealthCare.gov",
+   "https://www.healthcare.gov/how-do-i-appeal-a-health-insurance-companys-decision/internal-appeals/"
+  ],
+  [
+   "CMS",
+   "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/appeals06152012a"
+  ],
+  [
+   "MD Insurance",
+   "https://insurance.maryland.gov/Consumer/Pages/EOB.aspx"
+  ],
+  [
+   "AARP",
+   "https://www.aarp.org/money/personal-finance/explanation-of-benefits/"
+  ]
+ ],
+ "bg_words": [
+  "BILLS",
+  "EOB",
+  "APPEAL",
+  "VISIT"
+ ],
+ "bg_facts": [
+  "An EOB is not a bill.",
+  "Compare what you owe on the EOB with the bill.",
+  "You usually have up to 180 days to appeal a denied claim.",
+  "Ask for the itemized bill."
+ ]
+}

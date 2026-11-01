@@ -1,0 +1,38 @@
+{
+ "id": "2026-11-01-prompts-health-admin",
+ "kind": "prompts",
+ "status": "bank",
+ "cover_idea": "Black cover, headline at the top in two fitted lines (white then lime), fan of three paper sheets below with a SAMPLE Explanation of Benefits in front stamped THIS IS NOT A BILL and YOU OWE highlighted lime.",
+ "theme": "health admin: 5 Claude prompts for doctor visits, EOBs, itemized bills, claim denials and visit notes, tied to bill-agent / BILL guide",
+ "gate": {
+  "score": 90,
+  "notes": "Accuracy 28/30 (EOB is not a bill and should match the provider bill: Maryland Insurance Administration + AARP; up to 180 days for internal appeal: HealthCare.gov + CMS; itemized bill framed as 'ask for it', not as a legal right, since outside Medicare it depends on state law; privacy line to black out IDs). Hook 21/25. Clarity 18/20. Design 13/15 (black bg vs last lime, headline top vs bottom, paper stack visual new, medium headline vs giant number; inner slides use the standard prompt template). CTA 10/10 (BILL confirmed in manychat.json, gift matches the /g/bill guide steps and Claude audit prompt). QA PASS, all 7 slides legible. No prompt repeats earlier posts."
+ },
+ "sources": [
+  [
+   "HealthCare.gov",
+   "https://www.healthcare.gov/how-do-i-appeal-a-health-insurance-companys-decision/internal-appeals/"
+  ],
+  [
+   "CMS",
+   "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/appeals06152012a"
+  ],
+  [
+   "MD Insurance",
+   "https://insurance.maryland.gov/Consumer/Pages/EOB.aspx"
+  ],
+  [
+   "AARP",
+   "https://www.aarp.org/money/personal-finance/explanation-of-benefits/"
+  ]
+ ],
+ "captions": {
+  "ig": "Medical mail is confusing on purpose. Let Claude read it first.\n\n5 prompts to copy:\n1. Prep your visit: a one page summary and your top 3 questions.\n2. Check the EOB: an EOB is not a bill. What it says you owe should match the provider bill.\n3. Audit the itemized bill: plain words, possible duplicates, questions for billing.\n4. Answer a denial: you usually have up to 180 days to appeal.\n5. Turn visit notes into a checklist for the fridge.\n\nBlack out your name and ID numbers before you paste anything.\n\nComment BILL and we will DM you our free bill guide: the steps and Claude prompts to cut a medical bill before you pay.\n\nGeneral info, not medical or legal advice. Sources: HealthCare.gov, CMS, Maryland Insurance Administration, AARP.\n\n#claudeai #aiprompts #medicalbills #healthinsurance #moneytips",
+  "tiktok": "5 Claude prompts for medical bills and visits\n\nCheck your EOB against the bill, audit the itemized bill, answer a denial (you usually have up to 180 days to appeal). Save this. Free bill guide: link in bio.\n\n#claudeai #aiprompts #medicalbills #healthinsurance",
+  "tiktok_title": "5 Claude prompts for medical bills and visits",
+  "threads": "Medical paperwork tip: an EOB is not a bill. What it says you owe should match the bill from your provider. If the bill comes first, wait for the EOB. Paste both into Claude (names and ID numbers blacked out) and ask: do the dates, services and amounts match? List every difference. Denied claim? You usually have up to 180 days to appeal. Free bill guide: autopilotoi.app/g/bill",
+  "x": "An EOB is not a bill. Paste it and your provider bill into Claude (IDs blacked out) and ask: do the dates, services and amounts match? Denied claim? You usually have up to 180 days to appeal. Free guide: autopilotoi.app/g/bill"
+ },
+ "media": "docs/media/car/2026-11-01-prompts-health-admin/",
+ "built_at": "2026-11-01T20:38Z"
+}
