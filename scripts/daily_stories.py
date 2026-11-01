@@ -163,7 +163,9 @@ def main():
         h, m = map(int, hm.split(":"))
         at = now.replace(hour=h, minute=m, second=0, microsecond=0)
         queue.append({"id": f"story-{day}-{k}", "group": f"stories-{day}", "at": at.isoformat(), "kind": "story", "threads": False, "media": [BASE + f], "text": text})
-    json.dump(queue, open(os.path.join(ROOT, "queue", f"{day}-stories.json"), "w"), indent=1, ensure_ascii=False)
+    # NO PROOF, NO POST (owner, Oct 31): auto stories carry no content_id, so they are drafts in queue/hold/,
+    # never in queue/ where the viral queue guard (SEV-1) and loaders read. Monthly review 2026-11-01.
+    json.dump(queue, open(os.path.join(ROOT, "queue", "hold", f"{day}-stories.json"), "w"), indent=1, ensure_ascii=False)
     print("stories ready", [i[0] for i in items])
 
 
