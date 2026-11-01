@@ -20,3 +20,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-01T19:23:20+00:00", "note": "8 posts out today (2 Threads errors, known), top post 0 saves+shares, feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-01T19:51:25+00:00", "note": "fixed failing Tests: sitemap lastmod reproducible; subs and refund guides rebuilt with flagship reels"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-01T20:23:08+00:00", "note": "8 posts out today (2 Threads ERROR, already reported), top post saves+shares 0, feed written yes"}
+{"worker": "draft_factory", "status": "ok", "at": "2026-11-01T20:38:26+00:00", "note": "built 2026-11-01-prompts-health-admin score 90 (bank 2)"}
