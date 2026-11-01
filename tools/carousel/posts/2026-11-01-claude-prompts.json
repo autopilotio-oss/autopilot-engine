@@ -1,0 +1,50 @@
+{
+ "kind": "prompts",
+ "bg": "f09",
+ "bg2": "f05",
+ "bg3": "f11",
+ "lines": [
+  "Stop using Claude",
+  "like *Google*",
+  "[5 prompts that]",
+  "[make it work for you]"
+ ],
+ "slides": [
+  {
+   "title": "Make it *interview you*",
+   "prompt": "Before you answer, ask me 5 questions that would change your answer. Wait for my replies.",
+   "why": "Generic answers come from generic questions. This makes it <b>tailor everything to you</b>."
+  },
+  {
+   "title": "Find your *money leaks*",
+   "prompt": "Here are my last 3 bank statements. List every recurring charge, what it costs per year, and flag the ones I might have forgotten.",
+   "why": "Most people find at least one charge they forgot. <b>Takes 2 minutes</b>."
+  },
+  {
+   "title": "Get a *smart skeptic*",
+   "prompt": "Here is my plan. Argue against it like a sharp skeptic, then give me the one change that fixes the biggest risk.",
+   "why": "It agrees with you too easily. This makes it <b>push back</b>."
+  },
+  {
+   "title": "Make it *write like you*",
+   "prompt": "Here are 3 messages I wrote. Describe my style in 5 rules. Then rewrite this draft using those rules.",
+   "why": "No more robotic replies. <b>Your voice</b>, faster."
+  },
+  {
+   "title": "Get your *money back*",
+   "prompt": "Here is my receipt and what went wrong. Write a short, polite refund request that names my rights and asks for a reply within 7 days.",
+   "why": "Works for double charges, late deliveries and canceled flights."
+  }
+ ],
+ "cta": {
+  "big": "Save this *for later*",
+  "small": "Want the full agent that hunts your forgotten subscriptions every month? Comment <b>SUBS</b> and we will DM it to you."
+ },
+ "note": "Works in Claude, and in ChatGPT too.",
+ "hero": {
+  "type": "chat",
+  "app": "CLAUDE",
+  "you": "Before you answer, ask me 5 questions that would change your answer.",
+  "ai": "Good idea. First: what is the goal, and who is it for?"
+ }
+}

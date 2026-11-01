@@ -1,0 +1,56 @@
+{
+ "kind": "news",
+ "breaking": true,
+ "bg": "f08",
+ "bg2": "f07",
+ "bg3": "f10",
+ "lines": [
+  "The company behind",
+  "*Claude* just filed",
+  "to go *public*",
+  "[here is what is inside]"
+ ],
+ "slides": [
+  {
+   "title": "What *happened*",
+   "body": "Anthropic filed an S-1 with the SEC on <b>Oct 26</b>. It wants to list on the <b>Nasdaq</b> under the ticker <b>ANT</b>."
+  },
+  {
+   "title": "What is *not* set",
+   "body": "No share price, no share count and no IPO date yet. <b>22 banks</b> are on the deal, led by Goldman Sachs and Morgan Stanley."
+  },
+  {
+   "title": "Still *no ads*",
+   "body": "The filing shows money from subscriptions and usage, with <b>no ad business</b>. Anthropic pledged in February that Claude stays ad free."
+  },
+  {
+   "title": "What it means *for you*",
+   "body": "Nothing changes in your Claude today. The <b>free plan</b> still works, and it can already do real work for you, like finding subscriptions you forgot."
+  }
+ ],
+ "cta": {
+  "big": "Use Claude to *save money*",
+  "small": "Comment <b>SUBS</b> and we will DM you the free agent that finds every subscription you forgot."
+ },
+ "note": "News, not financial advice.",
+ "sources": [
+  [
+   "Anthropic announcement",
+   "https://www.anthropic.com"
+  ],
+  [
+   "VKTR",
+   "https://www.vktr.com/ai-market/anthropic-files-public-s1-with-900-net-revenue-retention/"
+  ],
+  [
+   "MacRumors",
+   "https://www.macrumors.com/2026/02/04/anthropic-clause-no-ads"
+  ]
+ ],
+ "hero": {
+  "type": "ticker",
+  "top": "NASDAQ · FILED OCT 26",
+  "text": "ANT",
+  "bottom": "PRICE AND DATE NOT SET"
+ }
+}

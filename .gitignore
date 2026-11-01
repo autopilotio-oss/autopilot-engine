@@ -14,3 +14,4 @@ tools/office/hq*
 !tools/freel/voice/*.wav
 !tools/freel/voice/*.words.json
 tools/packs/content_*.py
+tools/carousel/_*.html
