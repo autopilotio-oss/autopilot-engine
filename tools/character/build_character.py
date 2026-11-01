@@ -229,6 +229,22 @@ shot('face_34.png', (0.55, -1.05, 1.68), 1.6, 70)
 shot('full_34.png', (2.4, -3.2, 1.2), 0.95, 50)
 shot('face_front.png', (0, -1.15, 1.66), 1.62, 70)
 
+# 7b. one shared frame for skeleton and meshes (glTF skinning ignores object transforms, Blender does not)
+import mathutils
+I4 = mathutils.Matrix.Identity(4)
+skinned = [o for o in bpy.data.objects if o.type == 'MESH' and any(m.type == 'ARMATURE' for m in o.modifiers)]
+for o in skinned:
+    mw = o.matrix_world.copy(); o.parent = None; o.data.transform(mw); o.matrix_world = I4.copy()
+for x in bpy.context.selected_objects: x.select_set(False)
+bpy.context.view_layer.objects.active = rig; rig.select_set(True)
+if rig.matrix_world != I4:
+    say('rig world before', [list(map(lambda v: round(v, 3), r)) for r in rig.matrix_world])
+    bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+for o in skinned:
+    o.parent = rig; o.matrix_parent_inverse = I4.copy()
+    for m in o.modifiers:
+        if m.type == 'ARMATURE': m.object = rig
+say('normalized frames for', len(skinned), 'meshes')
 # 8. export (separate glTF so pack_assets.py can embed geometry as .json)
 exp = OUT / 'out' / 'operative'; exp.mkdir(parents=True, exist_ok=True)
 for x in bpy.data.objects: x.select_set(x == rig or x.parent == rig or (x.type == 'MESH' and any(m.type == 'ARMATURE' for m in x.modifiers)))
