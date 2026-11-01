@@ -20,5 +20,7 @@ final(){
   mkdir -p "$ROOT/docs/media/freel"
   ffmpeg -v error -y -i "$H/${EP}_silent.mp4" -i "$H/${EP}_mix.wav" -map 0:v -map 1:a -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k -ar 44100 -ac 2 -shortest -movflags +faststart "$ROOT/docs/media/freel/$ID.mp4"
   ffmpeg -v error -y -ss 0.6 -i "$ROOT/docs/media/freel/$ID.mp4" -frames:v 1 -q:v 3 "$ROOT/docs/media/freel/$ID-poster.jpg"
+  mkdir -p "$ROOT/docs/media/freel/web"
+  ffmpeg -v error -y -i "$ROOT/docs/media/freel/$ID.mp4" -an -vf scale=540:960 -c:v libx264 -preset veryfast -crf 30 -movflags +faststart "$ROOT/docs/media/freel/web/$ID.mp4"
   echo "reel ready: docs/media/freel/$ID.mp4"; }
 case "$MODE" in prep) prep "${3:-}";; chunk) chunk;; final) final;; esac

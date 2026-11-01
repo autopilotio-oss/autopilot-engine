@@ -46,6 +46,26 @@ h2{font:900 italic 34px/1 'Saira Semi Condensed',Impact,sans-serif;text-transfor
 .foot{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 50px;font-size:13px;color:var(--dim)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--l);color:#0a0a0a;font:700 13px 'Geist Mono',ui-monospace,monospace;padding:12px 18px;border-radius:12px;transition:transform .3s}.toast.on{transform:translate(-50%,0)}
 """
+
+# Above the fold product card (FIRST SALES MODE): the agent's factory reel as a muted demo, one line, the buy button.
+REELS = {"subs": ["subs-leak", "subs-agent"], "refund": ["refund-fighter", "refund-agent"], "bill": ["bill-coach", "bill-agent"],
+         "raise": ["raise-agent"], "debt": ["debt-agent"], "shop": ["listing-check", "shop-finder"], "video": ["first-2-seconds", "content-machine"],
+         "sell": ["dm-sales"], "deposit": []}
+NAMES = {"subs": "Subscription Leak Hunter", "refund": "Refund Fighter", "bill": "Bill Lowering Coach"}
+def TOPCARD(slug, g):
+    if not g.get("paid", True): return ""
+    rid = next((r for r in REELS.get(slug, []) if os.path.exists(os.path.join(ROOT, "docs", "media", "freel", "web", r + ".mp4"))), None)
+    perm = g.get("permalink", slug + "-agent"); name = NAMES.get(slug, g["agent"]["name"])
+    vid = (f'<video src="/media/freel/web/{rid}.mp4" poster="/media/freel/{rid}-poster.jpg" autoplay muted loop playsinline preload="metadata" '
+           f'style="width:118px;aspect-ratio:9/16;object-fit:cover;border-radius:12px;flex:0 0 auto;background:#000"></video>') if rid else ""
+    return (f'<div class="topcard" style="display:flex;gap:14px;align-items:center;background:#0e0f0d;border:1px solid #D4FF3A55;border-radius:18px;padding:14px;margin:6px 0 22px">{vid}'
+            f'<div style="min-width:0"><div style="font:700 11px \'Geist Mono\',monospace;letter-spacing:1.5px;color:#D4FF3A">DONE FOR YOU</div>'
+            f'<div style="font-weight:800;font-size:20px;line-height:1.15;margin:4px 0 6px">{e(name)}</div>'
+            f'<div style="font-size:14px;line-height:1.4;opacity:.8;margin-bottom:10px">{e(g["agent"]["what"])}</div>'
+            f'<a href="https://autopilotoi.gumroad.com/l/{perm}" style="display:inline-block;background:#D4FF3A;color:#050505;text-decoration:none;font:700 13px \'Geist Mono\',monospace;letter-spacing:1.2px;border-radius:10px;padding:11px 14px">GET IT · $10</a>'
+            f'<div class="ap-launch-price" style="display:none;font-size:12px;margin-top:6px;color:#D4FF3A">$7 this week with LAUNCH30, applied at checkout</div>'
+            f'<div style="font-size:12px;opacity:.6;margin-top:6px">Or follow the free guide below.</div></div></div>')
+
 def page(slug, g):
     pslug = slug; slug = g.get("base", slug)  # drafts reuse the live guide's canonical, og and kit links
     out = [f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -59,7 +79,7 @@ def page(slug, g):
 <style>{CSS}</style><link rel="stylesheet" href="/assets/brand.css"></head><body><div class="w">
 <div class="top"><img src="../../logo.png" alt=""><b>AUTOPILOT.OI</b><span>FREE GUIDE</span></div>
 <div class="hero"><span class="tag">{e(g.get('cat','MONEY × AI'))} · {e(g['kw'])}</span><h1>{e(g['title'])}</h1><p class="sub">{e(g['sub'])}</p>
-<div class="meta"><div><b>TIME</b>{e(g['time'])}</div><div><b>YOU NEED</b>{e(g['need'])}</div><div><b>COST</b>Free</div></div></div>
+{TOPCARD(slug, g)}<div class="meta"><div><b>TIME</b>{e(g['time'])}</div><div><b>YOU NEED</b>{e(g['need'])}</div><div><b>COST</b>Free</div></div></div>
 <div class="why">{e(g['why'])}</div><h2>Step by step</h2>"""]
     for i, (h, p, prompt, links) in enumerate(g["steps"], 1):
         s = f'<div class="st"><div class="n">{i}</div><h3>{e(h)}</h3><p>{e(p)}</p>'
