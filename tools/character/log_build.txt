@@ -31,9 +31,10 @@ darkened Human.shoes06 shoes06_diffuse.png
 baked keys Human
 eye ref 1.731 -0.15
 shell Human.balaclava helper groups 2 ['HelperGeometry']
-balaclava verts 3078
+balaclava verts 3160
 shell Human.hood helper groups 2 ['HelperGeometry']
-hood verts 1359
+hood verts 1537
+pocket verts 37
 render full_front.png
 render face_34.png
 render full_34.png
