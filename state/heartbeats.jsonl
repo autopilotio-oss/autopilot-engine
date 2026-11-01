@@ -18,3 +18,4 @@
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-01T18:40:09+00:00", "note": "built 2026-11-01-howto-dispute, score 90 (bank 1)"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-01T19:10:47+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-01T19:23:20+00:00", "note": "8 posts out today (2 Threads errors, known), top post 0 saves+shares, feed written yes"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-01T19:51:25+00:00", "note": "fixed failing Tests: sitemap lastmod reproducible; subs and refund guides rebuilt with flagship reels"}
