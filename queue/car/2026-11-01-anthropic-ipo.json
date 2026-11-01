@@ -1,0 +1,42 @@
+{
+ "id": "2026-11-01-anthropic-ipo",
+ "kind": "news",
+ "status": "scheduled",
+ "gate": {
+  "score": "owner reviewed the look",
+  "sources_checked": true
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels)"
+ },
+ "posts": [
+  {
+   "metricool_id": 412604202,
+   "uuid": "-6314888142653272579",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T10:00-03:00"
+  },
+  {
+   "metricool_id": 412604222,
+   "uuid": "4788677946106791851",
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T10:00-03:00"
+  },
+  {
+   "metricool_id": 412604247,
+   "uuid": "-3109439287727601703",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T10:00-03:00"
+  }
+ ],
+ "story_key": "anthropic-s1-ipo-2026-10-26"
+}

@@ -1,0 +1,42 @@
+{
+ "id": "2026-11-01-claude-prompts",
+ "kind": "prompts",
+ "status": "scheduled",
+ "gate": {
+  "score": "owner reviewed the look",
+  "sources_checked": false
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels)"
+ },
+ "posts": [
+  {
+   "metricool_id": 412604301,
+   "uuid": "5473594849840549709",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T17:30-03:00"
+  },
+  {
+   "metricool_id": 412604335,
+   "uuid": "2893136460348604564",
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T17:30-03:00"
+  },
+  {
+   "metricool_id": 412604352,
+   "uuid": "1320382686186981654",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T17:30-03:00"
+  }
+ ],
+ "story_key": null
+}
