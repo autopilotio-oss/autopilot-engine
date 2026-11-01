@@ -61,12 +61,12 @@ jobs:
                       fetch(item); got.append(item["id"])
                   except Exception as e:
                       skipped.append(f"{item['id']}: {e!r}"); print("skip", item["id"], repr(e))
-              (out / "CREDITS.md").write_text("# HQ assets\n\nAll from Poly Haven (https://polyhaven.com), license CC0 1.0 (public domain).\n\n" + "\n".join(f"- {i}: https://polyhaven.com/a/{i}" for i in got) + "\n")
+              if len(got) > 3: (out / "CREDITS.md").write_text("# HQ assets\n\nAll from Poly Haven (https://polyhaven.com), license CC0 1.0 (public domain).\n\n" + "\n".join(f"- {i}: https://polyhaven.com/a/{i}" for i in got) + "\n")
               print("fetched", got); print("skipped", skipped)
           PY
       - name: Commit
         run: |
           git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
-          git add tools/hq-live/assets
+          git add tools/hq-live
           git commit -m "HQ assets: ${{ github.event.inputs.mode }} (Poly Haven CC0)" || exit 0
           for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done
