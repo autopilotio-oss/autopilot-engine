@@ -30,7 +30,10 @@ jobs:
               (out / "polyhaven_index.json").write_text(json.dumps(idx))
               print({k: len(v) for k, v in idx.items()})
           else:
-              want = json.loads((out / "wanted.json").read_text())
+              spec = json.loads((out / "wanted.json").read_text())
+              for u in spec.get("urls", []):
+                  dst = pathlib.Path(u["path"]); dst.parent.mkdir(parents=True, exist_ok=True); dst.write_bytes(get(u["url"]))
+              want = spec.get("assets", [])
               got = []
               for item in want:
                   files = json.loads(get(f"https://api.polyhaven.com/files/{item['id']}"))

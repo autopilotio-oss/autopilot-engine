@@ -1,0 +1,195 @@
+{
+ "urls": [
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js",
+   "path": "tools/hq-live/vendor-test/jsm/loaders/GLTFLoader.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/RGBELoader.js",
+   "path": "tools/hq-live/vendor-test/jsm/loaders/RGBELoader.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js",
+   "path": "tools/hq-live/vendor-test/jsm/utils/BufferGeometryUtils.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/SkeletonUtils.js",
+   "path": "tools/hq-live/vendor-test/jsm/utils/SkeletonUtils.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/GTAOPass.js",
+   "path": "tools/hq-live/vendor-test/jsm/postprocessing/GTAOPass.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/GTAOShader.js",
+   "path": "tools/hq-live/vendor-test/jsm/shaders/GTAOShader.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/PoissonDenoiseShader.js",
+   "path": "tools/hq-live/vendor-test/jsm/shaders/PoissonDenoiseShader.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/math/SimplexNoise.js",
+   "path": "tools/hq-live/vendor-test/jsm/math/SimplexNoise.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/SMAAPass.js",
+   "path": "tools/hq-live/vendor-test/jsm/postprocessing/SMAAPass.js"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/SMAAShader.js",
+   "path": "tools/hq-live/vendor-test/jsm/shaders/SMAAShader.js"
+  }
+ ],
+ "assets": [
+  {
+   "id": "brick_factory_01",
+   "type": "hdri",
+   "res": "1k"
+  },
+  {
+   "id": "red_brick_03",
+   "type": "texture",
+   "res": "1k",
+   "maps": [
+    "Diffuse",
+    "nor_gl",
+    "Rough"
+   ]
+  },
+  {
+   "id": "factory_brick",
+   "type": "texture",
+   "res": "1k",
+   "maps": [
+    "Diffuse",
+    "nor_gl",
+    "Rough"
+   ]
+  },
+  {
+   "id": "concrete_floor_worn_001",
+   "type": "texture",
+   "res": "1k",
+   "maps": [
+    "Diffuse",
+    "nor_gl",
+    "Rough"
+   ]
+  },
+  {
+   "id": "asphalt_02",
+   "type": "texture",
+   "res": "1k",
+   "maps": [
+    "Diffuse",
+    "nor_gl",
+    "Rough"
+   ]
+  },
+  {
+   "id": "rusty_metal_04",
+   "type": "texture",
+   "res": "1k",
+   "maps": [
+    "Diffuse",
+    "Rough"
+   ]
+  },
+  {
+   "id": "metal_office_desk",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "hanging_industrial_lamp",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "sofa_02",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "industrial_coffee_table",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "potted_plant_02",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "pachira_aquatica_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "steel_frame_shelves_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "decorative_book_set_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "desk_lamp_arm_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "wall_clock",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "metal_trash_can",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "cardboard_box_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "street_lamp_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "fire_hydrant",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "modular_fire_escape",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "exterior_aircon_unit",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "security_camera_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "modular_airduct_circular_01",
+   "type": "model",
+   "res": "1k"
+  },
+  {
+   "id": "spray_paint_bottles",
+   "type": "model",
+   "res": "1k"
+  }
+ ]
+}
