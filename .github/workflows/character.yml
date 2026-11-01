@@ -10,7 +10,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - name: Cache Blender and asset packs
@@ -21,12 +21,14 @@ jobs:
       - name: Download Blender 4.2 LTS, MPFB2 and CC0 asset packs
         run: |
           mkdir -p ~/dl && cd ~/dl
-          [ -f blender.tar.xz ] || curl -sSL -o blender.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz
-          [ -d blender ] || (mkdir blender && tar -xJf blender.tar.xz -C blender --strip-components=1)
-          [ -d mpfb2 ] || git clone --depth 1 https://github.com/makehumancommunity/mpfb2.git
+          C="curl -sSL --fail --retry 2 --connect-timeout 20 --speed-limit 30000 --speed-time 45 --max-time 900"
+          ( [ -f blender.tar.xz ] || $C -o blender.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz ) &
+          ( [ -d mpfb2 ] || git clone --depth 1 https://github.com/makehumancommunity/mpfb2.git ) &
           for p in makehuman_system_assets masks01 hats01 shirts01 pants01 shoes01 skins01 eyebrows01; do
-            [ -f $p.zip ] || curl -sSL --fail -o $p.zip https://files2.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || curl -sSL --fail -o $p.zip https://files.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || echo "MISSING $p"
+            ( [ -s $p.zip ] || $C -o $p.zip https://files.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || $C -o $p.zip https://files2.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || (rm -f $p.zip; echo "MISSING $p") ) &
           done
+          wait
+          [ -d blender ] || (mkdir blender && tar -xJf blender.tar.xz -C blender --strip-components=1)
           ls -la ~/dl
           sudo apt-get update -qq && sudo apt-get install -y -qq libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libegl1 libxkbcommon0 libsm6 > /dev/null
       - name: Run
