@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-01T20:24:00Z",
+  "at": "2026-11-01T21:25:00Z",
   "posts_today": {
-    "threads": {"published": 2, "pending": 9, "error": 2},
-    "twitter": {"published": 2, "pending": 6, "error": 0},
-    "instagram": {"published": 2, "pending": 8, "error": 0},
-    "tiktok": {"published": 2, "pending": 6, "error": 0}
+    "threads": {"published": 3, "pending": 8, "error": 2},
+    "twitter": {"published": 3, "pending": 5, "error": 0},
+    "instagram": {"published": 3, "pending": 7, "error": 0},
+    "tiktok": {"published": 3, "pending": 5, "error": 0}
   },
   "top_posts": [
     {"network": "instagram", "published_at": "2026-10-31T17:47:12-03:00", "text": "$133 a month. $1,596 a year. On things you don't even use.", "metrics": {"reach": 47, "views": 49, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfKufU-D6S_/"},
@@ -12,5 +12,5 @@
     {"network": "instagram", "published_at": "2026-10-31T23:31:15-03:00", "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Comment SUBS and I'll send you the free guide.", "metrics": {"reach": 10, "views": 15, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/"}
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Analytics pulled for Instagram reels (6) in the 6 to 72h window: all 0 saves and 0 shares, so ranked by reach; no winner. Instagram feed posts, Threads, X and TikTok post analytics not pulled this run: MISSING. Threads ERRORs are the 00:52 and 00:59 ART Binance news posts (media container), already reported and reposted 07:40. Kit growth stats: 0 subscribers, 0 new today. Revenue feed: 0 verified orders all time (unchanged). ci.yml now green (latest 19:43 UTC success; 9 fails in 24h). No workflow with conclusion failure. HQ feed written to status/hub (v4)."
+  "notes": "6 to 72h window: Instagram reels (6) and TikTok videos (6) pulled; all 0 saves and 0 shares (TikTok has no saves metric; TikTok reach null/MISSING, views 1 to 87, best 87 on the 2026-10-31 18:25 ART subscriptions video), so top posts ranked by Instagram reach; no winner. Threads, X and Instagram feed post analytics not pulled: MISSING. Threads ERRORs are the 00:52 and 00:59 ART Binance news posts (media container), already reported in Daily Pulse and reposted 07:40. Kit: 0 subscribers, 0 new today. Revenue feed: 0 verified orders all time (unchanged). ci.yml latest 19:43 UTC success (9 fails in 24h); daily.yml latest success (2 fails in 24h). No workflow with conclusion failure. HQ feed written to status/hub (v5)."
 }
