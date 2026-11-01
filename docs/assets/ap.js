@@ -30,7 +30,7 @@
   var gc = document.createElement('script'); gc.async = true; gc.src = 'https://gc.zgo.at/count.js';
   gc.setAttribute('data-goatcounter', 'https://autopilotoi.goatcounter.com/count'); document.head.appendChild(gc);
   function ev(name) { try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: name, title: name, event: true }); } catch (e) {} }
-  var LAUNCH = { code: 'LAUNCH30', until: Date.parse('2026-11-11T03:00:00Z'), slugs: ['subs-agent', 'refund-agent', 'bill-agent', 'all-money-agents', 'raise-agent', 'debt-agent', 'shop-agent', 'video-agent', 'sell-agent', 'deposit-agent', 'workspace'] };
+  var LAUNCH = { code: 'LAUNCH30', until: Date.parse('2026-11-11T03:00:00Z'), slugs: ['subs-agent', 'refund-agent', 'bill-agent', 'all-money-agents', 'raise-agent', 'debt-agent', 'shop-agent', 'video-agent', 'sell-agent', 'deposit-agent', 'workspace', 'tiktok-agents'] };
   LAUNCH.on = Date.now() < LAUNCH.until;
   function banner() {
     if (!LAUNCH.on || !document.querySelector('a[href*="gumroad.com/l/"]') || document.getElementById('ap-launch')) return;
