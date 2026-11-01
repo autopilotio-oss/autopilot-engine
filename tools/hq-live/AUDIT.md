@@ -21,7 +21,14 @@
 - Rendering: MSAA render target, image-based light from the factory interior, GTAO ambient occlusion on the High profile.
 - UI: graphite surfaces, lime only as thin accents, agent labels reduced to small status dots (full card on hover or selection), slimmer dock, softer floor rings.
 
-## Phase 3 blocker: a production character (needs Seb's decision and spend approval)
+## Phase 3 (Nov 1): Operative v1 built in-house (Seb: "No you make it")
+- MakeHuman body via MPFB2 in headless Blender on GitHub Actions (CC0): real anatomy, face, eyes, skin texture; 52 bone Mixamo-compatible skeleton with fingers.
+- CC0 clothes (knit long sleeve recolored to heather black fleece, cargo pants, sneakers) plus in-house modeled hood, knit balaclava with eye slit, kangaroo pocket, drawstrings.
+- Fixes found on the way: blended materials made opaque cutout; skeleton rests in T-pose while the mesh is A-pose, so the page rebinds bones to joints measured from skin weights before posing.
+- Poses solved by aiming bones at target directions per real state: typing (running), slumped (failed), leaning back (completed), phone or standing (on call), walking.
+- Still not AAA: no cloth simulation wrinkles, no finger or eye animation, one body for every agent, procedural rather than motion-captured animation. Next: Mixamo clips (rig is compatible), body and skin variations per agent, eye bones.
+
+## Earlier option list for a commissioned character (kept for reference)
 No free asset matches "photoreal masked hoodie operative". Options:
 | Option | Cost (estimate) | Time | Notes |
 |---|---|---|---|
