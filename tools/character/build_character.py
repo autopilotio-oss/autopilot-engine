@@ -37,35 +37,115 @@ add('eyebrows', 'eyebrow001', 'Eyebrows'); add('eyelashes', 'eyelashes01', 'Eyel
 top = add('clothes', 'toigo_fisherman_sweater', 'Clothes')
 pants = add('clothes', 'cortu_cargo_pants', 'Clothes')
 shoes = add('clothes', 'shoes06', 'Clothes')
-mask = add('clothes', 'culturalibre_hero_mask_1', 'Clothes')
+mask = None
 hood = add('clothes', 'culturalibre_hero-heroine_hood_1', 'Clothes')
 
-# 4. recolor textures (keep the fabric detail, change the color): heather black fleece, black knit mask, black denim-like pants, black sneakers
-def recolor(obj, target, contrast=0.6, keep_light_above=None):
+# 4. materials: heather black fleece (hoodie and hood), black knit (balaclava), dark pants, black sneakers with white soles
+def fleece_image(name, base=0.055, amp=0.035, size=512, seed=1):
+    rng = np.random.default_rng(seed)
+    n = rng.normal(0, 1, (size, size)).astype(np.float32)
+    k = np.ones(3, np.float32) / 3
+    for _ in range(2):
+        n = np.apply_along_axis(lambda r: np.convolve(r, k, 'same'), 1, n); n = np.apply_along_axis(lambda r: np.convolve(r, k, 'same'), 0, n)
+    fine = rng.normal(0, 1, (size, size)).astype(np.float32) * 0.35
+    v = np.clip(base + (n * 0.7 + fine) * amp, 0, 1)
+    px = np.ones((size, size, 4), np.float32); px[..., 0] = v; px[..., 1] = v; px[..., 2] = v * 1.04
+    im = bpy.data.images.new(name, size, size, alpha=False); im.pixels[:] = px.ravel(); im.file_format = 'JPEG'; return im
+def knit_image(name, size=512):
+    y, x = np.mgrid[0:size, 0:size].astype(np.float32)
+    rib = 0.5 + 0.5 * np.sin(x / size * 2 * np.pi * 64) * np.sin(y / size * 2 * np.pi * 96 + np.sin(x / size * 2 * np.pi * 64) * 1.2)
+    rng = np.random.default_rng(3); v = 0.025 + rib * 0.03 + rng.normal(0, 0.006, (size, size))
+    px = np.ones((size, size, 4), np.float32); px[..., :3] = np.clip(v, 0, 1)[..., None]
+    im = bpy.data.images.new(name, size, size, alpha=False); im.pixels[:] = px.ravel(); im.file_format = 'JPEG'; return im
+def set_fabric(obj, image, rough=0.95, drop_normal=True):
+    if not obj: return
+    for slot in obj.material_slots:
+        m = slot.material
+        if not m: continue
+        m.use_nodes = True; nt = m.node_tree
+        bsdf = next((n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED'), None)
+        if not bsdf: continue
+        tex = nt.nodes.new('ShaderNodeTexImage'); tex.image = image
+        for l in list(bsdf.inputs['Base Color'].links): nt.links.remove(l)
+        nt.links.new(tex.outputs['Color'], bsdf.inputs['Base Color'])
+        for l in list(bsdf.inputs['Roughness'].links): nt.links.remove(l)
+        bsdf.inputs['Roughness'].default_value = rough
+        if drop_normal:
+            for l in list(bsdf.inputs['Normal'].links): nt.links.remove(l)
+        say('fabric', obj.name, m.name)
+def darken_srgb(obj, target, contrast=0.8, keep_light_above=None):
     if not obj: return
     for slot in obj.material_slots:
         m = slot.material
         if not m or not m.use_nodes: continue
         for n in m.node_tree.nodes:
-            if n.type == 'TEX_IMAGE' and n.image and ('diff' in n.image.name.lower() or 'color' in n.image.name.lower() or n.outputs['Color'].links and any(l.to_socket.name == 'Base Color' for l in n.outputs['Color'].links)):
-                im = n.image; w, h = im.size
-                if w == 0: continue
-                px = np.array(im.pixels[:], dtype=np.float32).reshape(h, w, 4)
-                lum = (px[..., 0] * 0.3 + px[..., 1] * 0.59 + px[..., 2] * 0.11)
-                lum = (lum - lum.mean()) * contrast + 0.5
-                out = np.empty_like(px); t = np.array(target, np.float32)
-                for c in range(3): out[..., c] = np.clip(t[c] * (0.55 + lum), 0, 1)
-                if keep_light_above is not None:
-                    keep = (px[..., 0] + px[..., 1] + px[..., 2]) / 3 > keep_light_above
-                    out[keep, :3] = px[keep, :3]
-                out[..., 3] = px[..., 3]
-                new = bpy.data.images.new(obj.name + '_' + im.name + '_rc', w, h, alpha=True); new.pixels[:] = out.ravel(); new.file_format = 'JPEG'
-                n.image = new; say('recolored', obj.name, im.name)
-recolor(top, (0.075, 0.075, 0.08), 0.9)
-recolor(hood, (0.07, 0.07, 0.075), 0.9)
-recolor(mask, (0.035, 0.035, 0.038), 0.7)
-recolor(pants, (0.05, 0.052, 0.058), 0.9)
-recolor(shoes, (0.04, 0.04, 0.045), 0.8, keep_light_above=0.8)
+            if n.type != 'TEX_IMAGE' or not n.image or n.image.colorspace_settings.name != 'sRGB': continue
+            im = n.image; w, h = im.size
+            if not w: continue
+            px = np.array(im.pixels[:], dtype=np.float32).reshape(h, w, 4)
+            lum = px[..., 0] * 0.3 + px[..., 1] * 0.59 + px[..., 2] * 0.11
+            l2 = (lum - lum.mean()) * contrast + 0.5; out = px.copy()
+            for c in range(3): out[..., c] = np.clip(target[c] * (0.55 + l2), 0, 1)
+            if keep_light_above is not None:
+                keep = lum > keep_light_above; out[keep, :3] = np.clip(px[keep, :3] * 0.95, 0, 1)
+            new = bpy.data.images.new(obj.name + '_rc', w, h, alpha=True); new.pixels[:] = out.ravel(); new.file_format = 'JPEG'; n.image = new
+            say('darkened', obj.name, im.name)
+fleece = fleece_image('fleece_heather')
+set_fabric(top, fleece); set_fabric(hood, fleece)
+darken_srgb(pants, (0.06, 0.062, 0.07), 0.9)
+darken_srgb(shoes, (0.035, 0.035, 0.04), 0.8, keep_light_above=0.62)
+
+import bmesh, mathutils
+def offset_along_normals(obj, fn):
+    me = obj.data; me.calc_normals_split() if hasattr(me, 'calc_normals_split') else None
+    for v in me.vertices:
+        v.co += v.normal * fn(v.co)
+def smooth(obj, iters, factor=0.5):
+    bm = bmesh.new(); bm.from_mesh(obj.data)
+    for _ in range(iters): bmesh.ops.smooth_vert(bm, verts=bm.verts, factor=factor, use_axis_x=True, use_axis_y=True, use_axis_z=True)
+    bm.to_mesh(obj.data); bm.free()
+# eye reference points from the eyes mesh
+ev = [eyes.matrix_world @ v.co for v in eyes.data.vertices] if eyes else []
+eye_z = sum(v.z for v in ev) / len(ev) if ev else 1.62
+eye_y = min(v.y for v in ev) if ev else -0.09
+say('eye ref', round(eye_z, 3), round(eye_y, 3))
+
+# 4b. balaclava: a knit shell grown from the head and neck skin, eye slit open
+def from_body(name, keep):
+    o = body.copy(); o.data = body.data.copy(); o.name = name; bpy.context.scene.collection.objects.link(o)
+    for m in list(o.modifiers):
+        if m.type != 'ARMATURE': o.modifiers.remove(m)
+    bm = bmesh.new(); bm.from_mesh(o.data); dl = bm.verts.layers.deform.active
+    gi = {g.name: g.index for g in o.vertex_groups}
+    def w(v, g): return v[dl].get(gi[g], 0.0) if dl and g in gi else 0.0
+    kill = [v for v in bm.verts if not keep(v, w, o.matrix_world @ v.co)]
+    bmesh.ops.delete(bm, geom=kill, context='VERTS'); bm.to_mesh(o.data); bm.free()
+    o.data.materials.clear(); return o
+neck_z = eye_z - 0.17
+def keep_bala(v, w, co):
+    head = w(v, 'mixamorig:Head') + w(v, 'mixamorig:Neck')
+    if head < 0.35 and co.z < neck_z: return False
+    if co.z < neck_z - 0.04: return False
+    if abs(co.z - eye_z) < 0.017 and co.y < eye_y + 0.035 and abs(co.x) < 0.07: return False   # eye slit
+    return True
+bala = from_body('Human.balaclava', keep_bala)
+offset_along_normals(bala, lambda co: 0.0035)
+sol = bala.modifiers.new('thick', 'SOLIDIFY'); sol.thickness = 0.002; sol.offset = 1
+knit = knit_image('knit_black'); mat = bpy.data.materials.new('balaclava_knit'); mat.use_nodes = True
+b = mat.node_tree.nodes['Principled BSDF']; t = mat.node_tree.nodes.new('ShaderNodeTexImage'); t.image = knit
+mat.node_tree.links.new(t.outputs['Color'], b.inputs['Base Color']); b.inputs['Roughness'].default_value = 0.97
+bala.data.materials.append(mat); say('balaclava verts', len(bala.data.vertices))
+
+# 4c. hood: inflate the CC0 cowl into a loose hoodie hood
+if hood:
+    hz = eye_z
+    offset_along_normals(hood, lambda co: 0.016 + max(0.0, co.z - (hz - 0.02)) * 0.16 + max(0.0, co.y - (eye_y + 0.06)) * 0.05)
+    smooth(hood, 12, 0.5)
+    hs = hood.modifiers.new('thick', 'SOLIDIFY'); hs.thickness = 0.005; hs.offset = 1
+    say('hood inflated')
+# 4d. looser fleece body
+if top:
+    offset_along_normals(top, lambda co: 0.006); smooth(top, 2, 0.4)
 
 # 5. bake shape keys (MPFB keeps body shape as shape keys) so the export is a plain skinned mesh
 def bake(o):
@@ -103,6 +183,7 @@ def shot(name, loc, target_z, lens):
 shot('full_front.png', (0, -4.2, 1.0), 0.95, 50)
 shot('face_34.png', (0.55, -1.05, 1.68), 1.6, 70)
 shot('full_34.png', (2.4, -3.2, 1.2), 0.95, 50)
+shot('face_front.png', (0, -1.15, 1.66), 1.62, 70)
 
 # 8. export (separate glTF so pack_assets.py can embed geometry as .json)
 exp = OUT / 'out' / 'operative'; exp.mkdir(parents=True, exist_ok=True)
