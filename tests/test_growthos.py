@@ -162,7 +162,7 @@ def test_T08_timeout_429_500_bounded_backoff_then_dead_letter(env):
 def test_T09_hard_cost_cap_pauses_optional_ai(env):
     st = env["store"]; b = json.load(open(os.path.join(env["cfg"], "budget.json")))
     b.update({"ai_daily_soft_cap": 300, "ai_daily_hard_cap": 500}); json.dump(b, open(os.path.join(env["cfg"], "budget.json"), "w"))
-    day = __import__("datetime").date.today().isoformat()
+    _dt = __import__("datetime"); day = _dt.datetime.now(_dt.timezone.utc).date().isoformat()
     costs.record_usage(st, "Claude", 520, "job_a")
     g = lambda: costs.guard(st, env["cfg"], day)
     assert g()["hard_cap_hit"]

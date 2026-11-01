@@ -33,7 +33,7 @@ def record_usage(store, vendor, amount_minor, job_id, kind="usage", currency="US
 
 
 def ai_spend_today(store, day=None):
-    day = day or dt.date.today().isoformat()
+    day = day or dt.datetime.now(dt.timezone.utc).date().isoformat()  # same clock as occurred_at_utc
     return sum(e["payload"]["amount_minor"] for e in store.of("spend.recorded")
                if e["payload"]["kind"] == "usage" and e["occurred_at_utc"][:10] == day and e["payload"]["vendor"] in ("Claude", "Anthropic API", "ElevenLabs"))
 
