@@ -117,7 +117,8 @@
   "Keep the factory reel format: black and neon green factory top half, agent working live bottom half, strong hook, real demonstration, sample data labeled, product or free guide CTA.",
   "85/100 quality gate before any post. Never fabricate metrics; missing data is MISSING.",
   "No new agents or infrastructure unless a check proves something is broken.",
-  "Instagram 'Comment X' only for keywords in config/manychat.json; TikTok, Threads and X use link in bio or a direct link."
+  "Instagram 'Comment X' only for keywords in config/manychat.json; TikTok, Threads and X use link in bio or a direct link.",
+  "Respect cadence.max_per_day and cadence.slots_art on every network; check Metricool scheduled posts for the day before adding anything."
  ],
  "carousels": {
   "news_desk": "hourly, all day (Seb: 'Every hour, all day')",
@@ -127,5 +128,42 @@
   "quiet_hours_art": "00:30 to 07:30 (news found then posts at 07:30)",
   "queue": "queue/car/<id>.json",
   "renderer": "python3 tools/carousel/build.py <id>"
+ },
+ "cadence": {
+  "set_by": "Seb 2026-11-01: 'Thin everything out so that we don't over post, make sure everything you do is backed by real information and pick the best time'",
+  "max_per_day": {
+   "instagram": 2,
+   "tiktok": 3,
+   "threads": 3,
+   "twitter": 3
+  },
+  "slots_art": {
+   "instagram": [
+    "10:00",
+    "18:00"
+   ],
+   "tiktok": [
+    "10:00",
+    "12:00",
+    "18:00"
+   ],
+   "threads": [
+    "10:00",
+    "12:00",
+    "18:00"
+   ],
+   "twitter": [
+    "10:00",
+    "12:00",
+    "18:00"
+   ]
+  },
+  "instagram_mix": "10:00 conversion reel (flagships first during LAUNCH30), 18:00 news or prompts carousel",
+  "breaking_news": "never adds a post over the cap; it takes the next open slot or replaces the lowest priority post in it (that post goes to draft)",
+  "evidence": {
+   "best_times": "Metricool getBestTimeToPostByNetwork for brand 7761544, Nov 1 to 7: Instagram peaks 10:00 every day (weekday values 4900 to 6700) with a second peak 17:00 to 18:00; TikTok peaks 10:00, 12:00 and 18:00. X best times not available (Metricool 403); Threads not supported by the endpoint, so they use the same slots.",
+   "frequency": "Kontentino 2026: feed posts 3 to 5 per week, Reels 4 to 7 per week. socialcal.app: effective feed ceiling about 1 per day. TikTok creator resources: 1 to 4 per day."
+  },
+  "draft_bank": "Posts over the cap were moved to Metricool drafts (not deleted). The operator may promote one into an open slot when its topic or format is a proven winner."
  }
 }
