@@ -110,10 +110,18 @@ $('kb').disabled=true;const fd=new FormData();fd.append('email_address',em);fd.a
 fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(()=>{$('kf').style.display='none';$('km').innerHTML='<b>You’re on the list.</b> Check your inbox.'}).catch(()=>{$('kb').disabled=false;$('km').textContent='Something went wrong. Try again.'})});
 </script><script src="/assets/ap.js" defer></script></body></html>""")
     d = os.path.join(ROOT, "docs", "g", pslug); os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, "index.html"), "w").write("\n".join(out))
+    fp = os.path.join(d, "index.html"); html = "\n".join(out)
+    if not os.path.exists(fp) or open(fp).read() != html: CHANGED.add(f"g/{pslug}/")
+    open(fp, "w").write(html)
+CHANGED = set()
 for k, g in G.items(): page(k, g); print("built", k)
 
 # sitemap for Google (every guide + main pages)
 import datetime
 _u = ["", "free/", "store/", "store/money/", "store/subs/", "store/bill/", "brain/", "workspace/"] + [f"g/{k}/" for k in G if not G[k].get("draft")]
-open(os.path.join(ROOT, "docs", "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>https://autopilotoi.app/{u}</loc><lastmod>{datetime.date.today().isoformat()}</lastmod></url>\n" for u in _u) + "</urlset>\n")
+# lastmod only moves when a guide's HTML actually changed in this build, so a clean rebuild is byte identical (CI reproducibility test)
+import re
+_sm = os.path.join(ROOT, "docs", "sitemap.xml")
+_prev = dict(re.findall(r"<loc>https://autopilotoi\.app/([^<]*)</loc><lastmod>([^<]+)</lastmod>", open(_sm).read())) if os.path.exists(_sm) else {}
+_today = datetime.date.today().isoformat()
+open(_sm, "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>https://autopilotoi.app/{u}</loc><lastmod>{_today if (u in CHANGED or u not in _prev) else _prev[u]}</lastmod></url>\n" for u in _u) + "</urlset>\n")
