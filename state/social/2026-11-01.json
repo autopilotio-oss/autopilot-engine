@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-01",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts (brand 7761544) + Kit get_growth_stats, pulled 2026-11-01 11:20 UTC by Daily Pulse",
+ "kit": {
+  "subscribers": 0,
+  "new_7d": 0
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 59,
+   "posts_7d": 10,
+   "interactions_7d": 9,
+   "accounts_engaged_7d": 59,
+   "reel_views_7d": 98
+  },
+  "threads": {
+   "followers": 0,
+   "posts_7d": 8,
+   "views_7d": 19,
+   "interactions_7d": 6
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 32,
+  "queued": 53,
+  "failed": 2,
+  "window": "published/failed = last 24h, queued = next 48h, per network",
+  "unapproved_pending": 0,
+  "failed_note": "2 Threads ERRORs (Binance news, Nov 1 00:52 and 00:59 ART, 'Media container not created'); reposted OK at 07:40 ART"
+ },
+ "decisions": [
+  "Viral Lab: pick a source for public view counts so references can be certified (YouTube Data API key, or you capture URL + views + creator's last 10 from your phone). Open since Oct 31."
+ ]
+}

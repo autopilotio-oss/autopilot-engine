@@ -12,3 +12,10 @@
 - Support agent run Oct 31 19:10 UTC: incidents recorded inc:email:1a18dab9 (SEV-2 Metricool/IG restricted post), inc:email:1a18e451 + inc:email:1a18e44f (SEV-2 credit ad rejected). Oct 30-31 logins (Google, Kit, Metricool, Porkbun, Meta password change) all iOS/Argentina during setup: SEV-3 informational, not recorded.
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
+
+## Daily Pulse 2026-11-01 (08:20 ART)
+- Health: 0 failing checks, all 12 checkouts ok. Open incidents: the 3 Oct 30 email SEV-2s above (known). inc:page:home:2026-10-31 resolved by probe but its alert line stays sent:false (never messaged, resolved, no action).
+- Metricool: 0 unapproved pending posts (all post cutoff pending posts are in the approved set). 2 Threads ERRORs on the Binance news carousel (00:52, 00:59 ART), reposted fine at 07:40.
+- ONE CHANGE: refresh.yml now skips the Threads key refresh while config/threads.json says paused (the Sunday job failed red with 'Cannot parse access token' because get_token() returns None when paused). Test added.
+- For the operator: tests/test_revenue_engine.py::test_guide_pages_build_reproducibly fails on main (before this run): the site builder would swap the /g/subs and /g/refund topcard videos to subs-leak.mp4 / refund-fighter.mp4 and touch sitemap.xml. Either rebuild and commit the guide pages (campaign approval covers site pushes) or pin the builder to the current videos. Daily Pulse did not touch live pages.
+- support_agent heartbeat is late (16.1h vs 16h limit, SEV-3).

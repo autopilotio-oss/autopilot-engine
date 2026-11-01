@@ -18,6 +18,9 @@ jobs:
           THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
         run: |
           export THREADS_APP_SECRET="$(printf %s "$THREADS_APP_SECRET" | tr -d '[:space:]')"
+          if python3 -c "import json,sys;sys.exit(0 if json.load(open('config/threads.json')).get('paused') else 1)" 2>/dev/null; then
+            echo "Threads API paused (config/threads.json); posting goes through Metricool, nothing to refresh"; exit 0
+          fi
           OLD=$(python3 -c "import sys;sys.path.insert(0,'scripts');import threads;print(threads.get_token())")
           echo "::add-mask::$OLD"
           R=$(curl -s "https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$OLD")

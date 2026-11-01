@@ -1,0 +1,64 @@
+{
+ "at": "2026-11-01T11:17:43+00:00",
+ "snapshot": {
+  "at": "2026-11-01T11:17:43+00:00",
+  "health_failing": [],
+  "critical": [],
+  "not_live_offers": [],
+  "subscribers": 0,
+  "site_connected": true,
+  "orders": 0,
+  "unattributed_orders": 0,
+  "budget": {
+   "spent_today_minor": 0,
+   "soft_cap_minor": 100,
+   "hard_cap_minor": 200,
+   "soft_cap_hit": false,
+   "hard_cap_hit": false,
+   "status": "capped"
+  },
+  "viral_waiting_owner": [],
+  "viral_concepts": 0,
+  "approvals_waiting": 0,
+  "ungated_publishers": []
+ },
+ "bottleneck": "Prove one funnel: Subscription Leak",
+ "top3": [
+  {
+   "id": "first_funnel",
+   "title": "Prove one funnel: Subscription Leak",
+   "evidence": "0 orders, 0 leads: volume is not the bottleneck, proof is",
+   "action": "one gated Subscription video -> /g/subs/ -> opt in -> $10 kit; trace every step",
+   "needs_owner": true,
+   "rollback": "pause the concept",
+   "success_metric": "first traced order or lead",
+   "inputs": {
+    "impact": 6,
+    "confidence": 0.5,
+    "reversibility": 1,
+    "effort": 2,
+    "risk": 1
+   },
+   "priority": 1.5
+  }
+ ],
+ "all": [
+  {
+   "id": "first_funnel",
+   "title": "Prove one funnel: Subscription Leak",
+   "evidence": "0 orders, 0 leads: volume is not the bottleneck, proof is",
+   "action": "one gated Subscription video -> /g/subs/ -> opt in -> $10 kit; trace every step",
+   "needs_owner": true,
+   "rollback": "pause the concept",
+   "success_metric": "first traced order or lead",
+   "inputs": {
+    "impact": 6,
+    "confidence": 0.5,
+    "reversibility": 1,
+    "effort": 2,
+    "risk": 1
+   },
+   "priority": 1.5
+  }
+ ]
+}

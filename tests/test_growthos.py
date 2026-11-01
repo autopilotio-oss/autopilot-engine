@@ -339,3 +339,17 @@ def test_out_of_band_alert_opens_one_issue_and_closes_on_recovery(env, monkeypat
     heartbeat.push_alerts(ap, st, "o", down)
     rows = [json.loads(l) for l in open(ap)]
     assert [r for r in rows if r["check"] == "x"][0]["sent"] is False   # never claims it was sent
+
+
+def test_threads_key_refresh_skips_while_api_paused():
+    """Nov 1 Daily Pulse: the weekly refresh job failed ('Cannot parse access token') because get_token() returns None
+    while config/threads.json says the Threads API is paused. The job must skip, not fail, in that state."""
+    import subprocess
+    wf = open(os.path.join(R, ".github", "workflows", "refresh.yml")).read()
+    step = wf.split("- name: Refresh the key and save it encrypted", 1)[1].split("- name:", 1)[0]
+    assert step.index("get('paused')") < step.index("OLD=$(")
+    guard = "import json,sys;sys.exit(0 if json.load(open('config/threads.json')).get('paused') else 1)"
+    assert guard in step
+    paused = json.load(open(os.path.join(R, "config", "threads.json"))).get("paused")
+    r = subprocess.run([sys.executable, "-c", guard], cwd=R)
+    assert (r.returncode == 0) == bool(paused)
