@@ -139,3 +139,8 @@
 .hlogo{width:34px;height:34px;border-radius:50%;vertical-align:middle;margin-right:12px;box-shadow:0 0 18px #D4FF3A66}
 .haz{background:repeating-linear-gradient(-45deg,#D4FF3A 0 22px,#0c0c0c 22px 44px)}
 .s.lite .t .l{text-shadow:none}
+
+/* clean pass */
+.grain{opacity:.1}
+.paper{color:#262626}.paper .mast,.paper .bar2{opacity:.7}.big1{color:#202020!important}.cols{opacity:.6}
+.paper.light .big1{color:#cfcec7!important}.paper.light .cols{opacity:.45}.paper.light .mast{opacity:.5}

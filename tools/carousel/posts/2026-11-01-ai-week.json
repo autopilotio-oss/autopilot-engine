@@ -26,25 +26,7 @@
   "x": 340,
   "y": 110
  },
- "ow": {
-  "fig": "019",
-  "label": "WEEK 44",
-  "label_at": [
-   70,
-   430
-  ],
-  "pointer": [
-   74,
-   470,
-   250,
-   4
-  ],
-  "zip": "RECAP",
-  "zip_at": [
-   840,
-   250
-  ]
- },
+ "ow": {},
  "bg_words": [
   "GEMINI",
   "MISTRAL",

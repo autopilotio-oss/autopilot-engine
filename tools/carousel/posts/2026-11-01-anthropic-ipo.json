@@ -6,7 +6,7 @@
  "bg3": "f10",
  "lines": [
   "Claude's maker",
-  "is going *\"public\"*",
+  "{is going public}",
   "[ticker: ANT]"
  ],
  "slides": [
@@ -57,7 +57,7 @@
   ],
   "stamp": "FILED",
   "x": 300,
-  "y": 215
+  "y": 105
  },
  "subline": "here is what the filing says",
  "dateline": "OCT 31 2026",
@@ -74,18 +74,6 @@
   "22 banks are on the deal."
  ],
  "ow": {
-  "fig": "014",
-  "label": "THE FILING",
-  "label_at": [
-   60,
-   520
-  ],
-  "pointer": [
-   64,
-   560,
-   210,
-   -8
-  ],
   "zip": "S-1",
   "zip_at": [
    830,

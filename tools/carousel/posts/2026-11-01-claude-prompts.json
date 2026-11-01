@@ -55,23 +55,5 @@
   "SAVE",
   "THIS"
  ],
- "ow": {
-  "fig": "015",
-  "label": "THE TRICK",
-  "label_at": [
-   70,
-   430
-  ],
-  "pointer": [
-   74,
-   470,
-   300,
-   4
-  ],
-  "zip": "SAVE THIS",
-  "zip_at": [
-   820,
-   230
-  ]
- }
+ "ow": {}
 }

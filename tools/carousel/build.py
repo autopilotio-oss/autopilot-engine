@@ -101,21 +101,17 @@ def barcode(x, y, w=210, h=54, seed=7):
 
 
 def offwhite(p, n, cover=True):
-    """Catalog labels, hazard band, zip tag. Off-White inspired, nothing copied (no logos, no names)."""
-    ow = p.get("ow", {}); num = ow.get("fig", "01"); date = p.get("dateline", "")
-    out = f'<div class="haz" style="top:0"></div>'
-    out += (f'<div class="lab dim" style="left:250px;top:132px">"FIG. {E(num)}"<br>c/o AUTOPILOT.OI</div>'
-            f'<div class="lab dim" style="right:48px;top:96px;text-align:right">{E(date)}<br>"FOR INFORMATION ONLY"</div>') if cover else ""
-    if cover and ow.get("label"):
-        lx, ly = ow.get("label_at", [700, 560]); out += f'<div class="lab" style="left:{lx}px;top:{ly}px"><b>"{E(ow["label"])}"</b></div>'
-        if ow.get("pointer"):
-            px, py, pw, pa = ow["pointer"]; out += f'<div class="ptr" style="left:{px}px;top:{py}px;width:{pw}px;transform:rotate({pa}deg)"></div>'
-    if cover and ow.get("zip"):
-        zx, zy = ow.get("zip_at", [820, 230])
-        out += f'<div class="zip" style="left:{zx}px;top:{zy}px;transform:rotate(9deg)"><div class="str"></div><div class="tg">"{E(ow["zip"])}"<small>AUTOPILOT.OI</small></div></div>'
+    """Clean by default: just the ap. logo. One optional accent per post via "ow": {"zip": "WORD"} or {"label": .., "pointer": ..}."""
+    ow = p.get("ow", {}); out = ""
     if cover:
         out += '<img class="aplogo" src="/docs/logo.png">'
-        out += barcode(48, 1262, seed=int(re.sub(r"\D", "", num) or 7))
+        if ow.get("zip"):
+            zx, zy = ow.get("zip_at", [820, 230])
+            out += f'<div class="zip" style="left:{zx}px;top:{zy}px;transform:rotate(9deg)"><div class="str"></div><div class="tg">"{E(ow["zip"])}"<small>AUTOPILOT.OI</small></div></div>'
+        elif ow.get("label"):
+            lx, ly = ow.get("label_at", [700, 560]); out += f'<div class="lab" style="left:{lx}px;top:{ly}px"><b>"{E(ow["label"])}"</b></div>'
+            if ow.get("pointer"):
+                px, py, pw, pa = ow["pointer"]; out += f'<div class="ptr" style="left:{px}px;top:{py}px;width:{pw}px;transform:rotate({pa}deg)"></div>'
     return out
 
 
@@ -177,17 +173,17 @@ def inner(p, i, n, sl):
         body = (f'<div class="num">PROMPT {i - 1}</div><div class="t">{lime(sl["title"])}</div>'
                 f'<div class="pr"><small>COPY THIS</small>{E(sl["prompt"])}</div>' + (f'<div class="why">{lime(sl["why"])}</div>' if sl.get("why") else ""))
         return (f'<div class="s" id="s{i}"><div class="side" style="opacity:.35">{paper(p)}</div>{GRAIN}<div class="pg">{i}/{n}</div>'
-                f'<div class="in wide"><div class="fit2">{body}</div></div><div class="handle"><img class="hlogo" src="/docs/logo.png">"SAVE THIS" &nbsp;&middot;&nbsp; @AUTOPILOT.OI &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
+                f'<div class="in wide"><div class="fit2">{body}</div></div><div class="handle"><img class="hlogo" src="/docs/logo.png">"SAVE THIS" &nbsp;&middot;&nbsp; @AUTOPILOT.OI &nbsp;&middot;&nbsp; FIG. {i:02d}</div></div>')
     body = f'<div class="t">{lime(sl["title"])}</div><div class="b">{lime(sl["body"])}</div>'
     ev = evidence(sl["hero"]) if sl.get("hero") else ""
     if sl.get("lite") or (i % 3 == 0 and sl.get("lite") is not False):
         big = f'<div class="bignum">{E(sl["num"])}</div>' if sl.get("num") else ""
-        return (f'<div class="s lite" id="s{i}"><div class="haz" style="top:0;height:16px"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
+        return (f'<div class="s lite" id="s{i}">{GRAIN}<div class="pg">{i}/{n}</div>'
                 f'<div class="in wide"><div class="fit2">{big}{body}</div></div><div class="handle"><img class="hlogo" src="/docs/logo.png">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div></div>')
     return (f'<div class="s" id="s{i}"><div class="side">{paper(p)}</div>{ev}'
             f'<div class="shade" style="height:100%;background:linear-gradient(90deg,#0c0c0c 46%,#0c0c0c00 80%)"></div>{GRAIN}'
             f'<div class="pg">{i}/{n}</div><div class="in"><div class="fit2">{body}</div></div>'
-            f'<div class="handle"><img class="hlogo" src="/docs/logo.png">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
+            f'<div class="handle"><img class="hlogo" src="/docs/logo.png">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div></div>')
 
 
 def last(p, i, n):
@@ -195,7 +191,7 @@ def last(p, i, n):
     src = ('<div class="src">Sources: ' + " &middot; ".join(E(t) for t, _ in p["sources"]) + "</div>") if p.get("sources") else ""
     note = f'<div class="why">{E(p["note"])}</div>' if p.get("note") else ""
     return (f'<div class="s" id="s{i}">{paper(p)}<div style="opacity:.3">{BLOBS}</div><div class="shade" style="height:88%"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
-            f'<div class="tagbox"><span class="qm">&ldquo;</span>AUTO<br>PILOT<span class="qm">&rdquo;</span></div><div class="haz" style="top:0"></div><div class="in wide" style="justify-content:flex-end">'
+            f'<div class="tagbox"><span class="qm">&ldquo;</span>AUTO<br>PILOT<span class="qm">&rdquo;</span></div><div class="in wide" style="justify-content:flex-end">'
             f'<div class="t">{lime(c["big"])}</div><div class="b">{lime(c["small"])}</div>{note}{src}</div>'
             f'<div class="handle"><img class="hlogo" src="/docs/logo.png">FOLLOW @AUTOPILOT.OI &middot; AI NEWS FIRST</div></div>')
 

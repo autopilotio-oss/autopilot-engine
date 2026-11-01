@@ -23,18 +23,6 @@
   "y": 130
  },
  "ow": {
-  "fig": "016",
-  "label": "THE HEIST",
-  "label_at": [
-   60,
-   480
-  ],
-  "pointer": [
-   64,
-   520,
-   230,
-   -6
-  ],
   "zip": "EXHIBIT A",
   "zip_at": [
    850,
