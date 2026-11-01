@@ -38,8 +38,15 @@ top = add('clothes', 'toigo_fisherman_sweater', 'Clothes')
 pants = add('clothes', 'cortu_cargo_pants', 'Clothes')
 shoes = add('clothes', 'shoes06', 'Clothes')
 mask = None
-hood = add('clothes', 'culturalibre_hero-heroine_hood_1', 'Clothes')
+hood = None  # modeled below from the head shell
 
+def bake(o):
+    if o.type == 'MESH' and o.data.shape_keys:
+        bpy.context.view_layer.objects.active = o
+        for x in bpy.context.selected_objects: x.select_set(False)
+        o.select_set(True)
+        try: bpy.ops.object.shape_key_remove(all=True, apply_mix=True); say('baked keys', o.name)
+        except Exception as e: say('bake fail', o.name, repr(e))
 # 4. materials: heather black fleece (hoodie and hood), black knit (balaclava), dark pants, black sneakers with white soles
 def fleece_image(name, base=0.055, amp=0.035, size=512, seed=1):
     rng = np.random.default_rng(seed)
@@ -90,12 +97,13 @@ def darken_srgb(obj, target, contrast=0.8, keep_light_above=None):
                 keep = lum > keep_light_above; out[keep, :3] = np.clip(px[keep, :3] * 0.95, 0, 1)
             new = bpy.data.images.new(obj.name + '_rc', w, h, alpha=True); new.pixels[:] = out.ravel(); new.file_format = 'JPEG'; n.image = new
             say('darkened', obj.name, im.name)
-fleece = fleece_image('fleece_heather')
+fleece = fleece_image('fleece_heather', base=0.036, amp=0.022)
 set_fabric(top, fleece); set_fabric(hood, fleece)
 darken_srgb(pants, (0.06, 0.062, 0.07), 0.9)
 darken_srgb(shoes, (0.035, 0.035, 0.04), 0.8, keep_light_above=0.62)
 
 import bmesh, mathutils
+bake(body) if 'bake' in dir() else None
 def offset_along_normals(obj, fn):
     me = obj.data; me.calc_normals_split() if hasattr(me, 'calc_normals_split') else None
     for v in me.vertices:
@@ -136,15 +144,24 @@ b = mat.node_tree.nodes['Principled BSDF']; t = mat.node_tree.nodes.new('ShaderN
 mat.node_tree.links.new(t.outputs['Color'], b.inputs['Base Color']); b.inputs['Roughness'].default_value = 0.97
 bala.data.materials.append(mat); say('balaclava verts', len(bala.data.vertices))
 
-# 4c. hood: inflate the CC0 cowl into a loose hoodie hood
-if hood:
-    hz = eye_z
-    offset_along_normals(hood, lambda co: 0.016 + max(0.0, co.z - (hz - 0.02)) * 0.16 + max(0.0, co.y - (eye_y + 0.06)) * 0.05)
-    smooth(hood, 12, 0.5)
-    hs = hood.modifiers.new('thick', 'SOLIDIFY'); hs.thickness = 0.005; hs.offset = 1
-    say('hood inflated')
+# 4c. hood: grown from the head and neck, face opening cut, inflated and smoothed into a loose fleece hood
+def keep_hood(v, w, co):
+    head = w(v, 'mixamorig:Head') + w(v, 'mixamorig:Neck')
+    if co.z < neck_z - 0.05: return False
+    if head < 0.25 and co.z < neck_z + 0.02: return False
+    if co.y < eye_y + 0.075 and (eye_z - 0.14) < co.z < (eye_z + 0.055) and abs(co.x) < 0.088: return False   # face opening
+    return True
+hood = from_body('Human.hood', keep_hood)
+offset_along_normals(hood, lambda co: 0.022 + max(0.0, co.z - (eye_z - 0.03)) * 0.18 + max(0.0, co.y - (eye_y + 0.1)) * 0.06)
+smooth(hood, 30, 0.6)
+hs = hood.modifiers.new('thick', 'SOLIDIFY'); hs.thickness = 0.006; hs.offset = 1
+hmat = bpy.data.materials.new('hood_fleece'); hmat.use_nodes = True
+hb = hmat.node_tree.nodes['Principled BSDF']; ht = hmat.node_tree.nodes.new('ShaderNodeTexImage'); ht.image = fleece
+hmat.node_tree.links.new(ht.outputs['Color'], hb.inputs['Base Color']); hb.inputs['Roughness'].default_value = 0.96
+hood.data.materials.append(hmat); say('hood verts', len(hood.data.vertices))
 # 4d. looser fleece body
 if top:
+    bm = bmesh.new(); bm.from_mesh(top.data); bmesh.ops.holes_fill(bm, edges=bm.edges, sides=12); bm.to_mesh(top.data); bm.free()
     offset_along_normals(top, lambda co: 0.006); smooth(top, 2, 0.4)
 
 # 5. bake shape keys (MPFB keeps body shape as shape keys) so the export is a plain skinned mesh
