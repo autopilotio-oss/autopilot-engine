@@ -25,17 +25,13 @@ find clothes cortu_cargo_pants .mhclo -> ['/home/runner/.config/blender/4.2/exte
 added cortu_cargo_pants Human.cortu_cargo_pants 211
 find clothes shoes06 .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/clothes/shoes06/shoes06.mhclo']
 added shoes06 Human.shoes06 1594
-find clothes culturalibre_hero-heroine_hood_1 .mhclo -> ['/home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data/clothes/culturalibre_hero-heroine_hood_1/culturalibre_hero-heroine_hood_1.mhclo']
-added culturalibre_hero-heroine_hood_1 Human.culturalibre_hero-heroine_hood_1 1502
 fabric Human.toigo_fisherman_sweater Human.toigo_fisherman_sweater
-fabric Human.culturalibre_hero-heroine_hood_1 Human.culturalibre_hero-heroine_hood_1
 darkened Human.cortu_cargo_pants cargo_pants_diff.png
 darkened Human.shoes06 shoes06_diffuse.png
-eye ref 1.731 -0.15
-balaclava verts 2725
-hood inflated
 baked keys Human
-baked keys Human.balaclava
+eye ref 1.731 -0.15
+balaclava verts 3849
+hood verts 1709
 render full_front.png
 render face_34.png
 render full_34.png
