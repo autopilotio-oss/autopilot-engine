@@ -32,3 +32,6 @@
 - 2026-10 review: Spend made outside the system is invisible. A Meta in-app boost ran $32.03 over Oct 30 to 31 while the scoreboard said $0. Every Daily Pulse reconciles ad spend (Adspirer or Meta receipts) into state/events before reporting.
 - 2026-10 review: Any generator that writes to queue/ must attach a content_id or write to queue/hold/. The daily stories Action tripped the SEV-1 NO PROOF guard on Nov 1.
 - 2026-10 review: Reach without measurement is not evidence. 406 paid clicks plus about 120 organic views a week gave 0 opt-ins and 0 orders, and without visit data we cannot say which funnel step failed. Fix tracking before buying more reach.
+
+## Newsletter
+- 2026-11-01 (weekly newsletter): skipped, Kit shows 0 active subscribers, so no draft was created. Learned: the list needs its first signups (guide pages and Kit form) before a weekly email is worth drafting.

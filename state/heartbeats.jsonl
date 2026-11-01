@@ -11,3 +11,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-01T12:32:50+00:00", "note": "0 routed"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-01T13:15:18+00:00", "note": "0 drafted, 0 escalated, 1 alert (SEV-2 Metricool Threads failed posts)"}
 {"worker": "monthly_review", "status": "ok", "at": "2026-11-01T13:25:36+00:00", "note": "Stage A"}
+{"worker": "newsletter", "status": "ok", "at": "2026-11-01T14:17:00+00:00", "note": "skipped: 0 subscribers"}
