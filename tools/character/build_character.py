@@ -125,8 +125,11 @@ def from_body(name, keep):
         if m.type != 'ARMATURE': o.modifiers.remove(m)
     bm = bmesh.new(); bm.from_mesh(o.data); dl = bm.verts.layers.deform.active
     gi = {g.name: g.index for g in o.vertex_groups}
+    helpers = [i for n, i in gi.items() if 'helper' in n.lower() or n.lower().startswith('joint') or n.lower() == 'helpergeometry']
+    say('shell', name, 'helper groups', len(helpers), [n for n in gi if 'helper' in n.lower()][:12])
     def w(v, g): return v[dl].get(gi[g], 0.0) if dl and g in gi else 0.0
-    kill = [v for v in bm.verts if not keep(v, w, o.matrix_world @ v.co)]
+    def is_helper(v): return dl and any(v[dl].get(i, 0.0) > 0 for i in helpers)
+    kill = [v for v in bm.verts if is_helper(v) or not keep(v, w, o.matrix_world @ v.co)]
     bmesh.ops.delete(bm, geom=kill, context='VERTS'); bm.to_mesh(o.data); bm.free()
     o.data.materials.clear(); return o
 neck_z = eye_z - 0.17
@@ -134,7 +137,7 @@ def keep_bala(v, w, co):
     head = w(v, 'mixamorig:Head') + w(v, 'mixamorig:Neck')
     if head < 0.35 and co.z < neck_z: return False
     if co.z < neck_z - 0.04: return False
-    if abs(co.z - eye_z) < 0.017 and co.y < eye_y + 0.035 and abs(co.x) < 0.07: return False   # eye slit
+    if -0.014 < co.z - eye_z < 0.013 and co.y < eye_y + 0.035 and abs(co.x) < 0.066: return False   # eye slit
     return True
 bala = from_body('Human.balaclava', keep_bala)
 offset_along_normals(bala, lambda co: 0.0035)
