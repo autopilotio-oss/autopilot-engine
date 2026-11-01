@@ -229,6 +229,21 @@ shot('face_34.png', (0.55, -1.05, 1.68), 1.6, 70)
 shot('full_34.png', (2.4, -3.2, 1.2), 0.95, 50)
 shot('face_front.png', (0, -1.15, 1.66), 1.62, 70)
 
+# 7a. make the displayed pose the rest pose: bake each skinned mesh in its current pose, then apply the pose as rest
+def as_active(o):
+    for x in bpy.context.selected_objects: x.select_set(False)
+    bpy.context.view_layer.objects.active = o; o.select_set(True)
+for o in [o for o in bpy.data.objects if o.type == 'MESH' and any(m.type == 'ARMATURE' for m in o.modifiers)]:
+    am = next(m for m in o.modifiers if m.type == 'ARMATURE'); as_active(o)
+    try:
+        bpy.ops.object.modifier_copy(modifier=am.name)
+        bpy.ops.object.modifier_move_to_index(modifier=am.name, index=0)
+        bpy.ops.object.modifier_apply(modifier=am.name)
+    except Exception as e: say('pose bake fail', o.name, repr(e))
+as_active(rig); bpy.ops.object.mode_set(mode='POSE'); bpy.ops.pose.select_all(action='SELECT')
+try: bpy.ops.pose.armature_apply(selected=False); say('pose applied as rest')
+except Exception as e: say('armature_apply fail', repr(e))
+bpy.ops.object.mode_set(mode='OBJECT')
 # 7b. one shared frame for skeleton and meshes (glTF skinning ignores object transforms, Blender does not)
 import mathutils
 I4 = mathutils.Matrix.Identity(4)
