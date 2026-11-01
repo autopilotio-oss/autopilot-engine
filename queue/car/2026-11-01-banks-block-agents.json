@@ -25,8 +25,7 @@
    "metricool_id": 412643189,
    "uuid": "-3517130473859495208",
    "networks": [
-    "tiktok",
-    "threads"
+    "tiktok"
    ],
    "at": "2026-11-01T19:00-03:00"
   },
@@ -37,6 +36,15 @@
     "twitter"
    ],
    "at": "2026-11-01T19:00-03:00"
+  },
+  {
+   "metricool_id": 412807155,
+   "uuid": "6624166510327252587",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-01T19:00-03:00",
+   "note": "Threads split out: captions over 500 chars fail on Threads"
   }
  ],
  "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"

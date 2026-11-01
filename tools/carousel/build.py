@@ -27,6 +27,8 @@ BUILD PRINTS "QA PASS"; fix the spec and rebuild instead.
   Kinetic covers (tools/carousel/anim.js): lines slide in, big numbers count up, terminals type, stamps slam, the swipe
   line nudges. 16s video (anim_dur), lava keeps moving under the held layout.
   Music: tools/carousel/beat.py makes an original 8s loop ("music": dark, bright, tense) -> cover_beat.mp4.
+  THREADS: captions must be under 500 characters or Threads rejects the post ("media container not created").
+  Schedule Threads as its own post with a short caption, never bundled with the long TikTok caption.
   CONVERSION: news posts end on the comment card: cta {big, keyword, gift, small}. keyword must be confirmed in
   config/manychat.json; the DM card shows exactly what they get (autopilotoi.app/free)."""
 import html, json, os, re, subprocess, sys, time

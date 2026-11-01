@@ -24,8 +24,7 @@
    "metricool_id": 412618776,
    "uuid": "4788677946106791851",
    "networks": [
-    "tiktok",
-    "threads"
+    "tiktok"
    ],
    "at": "2026-11-01T10:00-03:00"
   },
@@ -36,6 +35,15 @@
     "twitter"
    ],
    "at": "2026-11-01T10:00-03:00"
+  },
+  {
+   "metricool_id": 412807078,
+   "uuid": "5591641177844500495",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-01T10:00-03:00",
+   "note": "Threads split out: captions over 500 chars fail on Threads"
   }
  ],
  "story_key": "anthropic-s1-ipo-2026-10-26"
