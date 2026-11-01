@@ -93,7 +93,7 @@ G["refund"] = dict(
  sources=[("DOT: airline refunds","https://www.transportation.gov/airconsumer/refunds"),("CFPB: disputing a charge","https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-a-charge-on-my-credit-card-bill-en-61/")],
 )
 G["raise"] = dict(
- kw="RAISE", bundle=False, title="Ask for a raise and get it", sub="Use real pay data and Claude to build your case, practice the conversation, and know exactly what to say when they push back.",
+ kw="RAISE", bundle=False, title="Ask for a raise with a real case", sub="Use real pay data and Claude to build your case, practice the conversation, and know exactly what to say when they push back.",
  time="About 45 minutes", need="Your job title, location, a list of your wins, and Claude",
  why="Most raises go to people who ask with a clear case: what the market pays, what you've delivered, and a specific number. Claude helps you build all three and rehearse until it feels easy.",
  steps=[
