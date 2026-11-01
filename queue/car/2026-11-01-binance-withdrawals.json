@@ -1,0 +1,61 @@
+{
+ "id": "2026-11-01-binance-withdrawals",
+ "kind": "news",
+ "cover": "white page, recreated bar chart 80% to 90% to 95% replaced, headline at bottom with black lime box",
+ "theme": "dark",
+ "status": "scheduled",
+ "story_key": "binance-withdrawals-reopen-2026-11-01",
+ "gate": {
+  "score": 88,
+  "accuracy_sourcing": 28,
+  "hook": 21,
+  "clarity": 18,
+  "design": 13,
+  "cta": 8,
+  "type_qa": "PASS",
+  "sources_checked": true,
+  "notes": "Every printed claim in 2+ of CoinDesk (Oct 31 and Nov 1), Bloomberg (Oct 31 and Nov 1 headlines), CNBC Oct 31, crypto.news Nov 1, The Hill; FBI attribution verified last run (Bloomberg, NPR, WaPo). Dropped the $3B frozen figure from this post (only CoinDesk restated it today). Follow up to the 00:52 binance-heist post; 08:55 run said revisit if CoinDesk confirms 90%, now confirmed plus new phased reopening."
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels)"
+ },
+ "posts": [
+  {
+   "metricool_id": 412903073,
+   "uuid": "4542636272102558491",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T12:15-03:00"
+  },
+  {
+   "metricool_id": 412903117,
+   "uuid": "-4950206999164794436",
+   "networks": [
+    "tiktok"
+   ],
+   "at": "2026-11-01T12:15-03:00"
+  },
+  {
+   "metricool_id": 412903166,
+   "uuid": "6857861263019100212",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-01T12:15-03:00",
+   "note": "Threads split out with short caption (500 char limit)"
+  },
+  {
+   "metricool_id": 412903189,
+   "uuid": "-4946144340477194536",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T12:15-03:00",
+   "note": "first 4 slides"
+  }
+ ],
+ "keyword": "AGENTS"
+}
