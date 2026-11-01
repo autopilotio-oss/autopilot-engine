@@ -35,3 +35,21 @@ Unsent alerts stay `sent: false` in state/health/alerts.jsonl; nothing claims Se
 ## What still needs a human
 Approving content (Approval Queue page or "approve <content_id>"), spend caps, any spending, price changes, new
 products going live, deployments of customer facing changes, refunds and disputes, ManyChat keyword edits.
+
+## Proof log
+
+### 2026-11-01 13:41Z (scheduled check)
+1. Heartbeats: viral_lab 06:50Z ok, daily_pulse 11:19Z ok, trend_scout 11:45Z ok, publisher 12:26Z ok, kit_sync every 3h ok (last 12:32Z), support_agent 13:15Z ok, monthly_review 13:25Z ok.
+2. Scheduled runs: Growth OS health checks 18 runs since 2026-10-31T19:40Z, all success (latest 41308380088 2026-11-01T12:50:22Z). Revenue ledger 7 runs, all success (latest 41312038837).
+   Failures found: 4. "Collect stats and reply to comments" x3 (push race: pull --rebase ran before add, then push rejected) -> fixed in .github/workflows/daily.yml (commit first, pull --rebase with retries). "Keep the Threads key alive" 07:36Z (OAuth 190) -> already fixed by Daily Pulse commit 62b4e5c (skips while Threads API paused; Threads posts go through Metricool).
+3. heartbeat.py check: no LATE or FAILED (weekly_sprint, newsletter, tiktok_intel waiting for first run).
+4. Metricool: 0 pending posts created after 2026-10-31T19:00Z missing from approved lists (queue/freel, queue/car, viral/staged.json).
+Heartbeat lines:
+    {"worker": "viral_lab", "status": "ok", "at": "2026-11-01T06:50:10+00:00", "note": "refs added 0 certified (2 failed fetches logged); concepts advanced 0; held 0; no PUBLISHED/TRIAL to measure; blocked: YouTube views not visible to fetcher"}
+    {"worker": "kit_sync", "status": "ok", "at": "2026-11-01T09:32:27+00:00", "note": "0 routed"}
+    {"worker": "daily_pulse", "status": "ok", "at": "2026-11-01T11:19:20+00:00", "note": "0 orders, 0 failing checks, 0 unapproved posts, 2 Threads errors reposted; fix: Threads refresh skips while paused"}
+    {"worker": "trend_scout", "status": "ok", "at": "2026-11-01T11:45:48+00:00", "note": "2 candidates (ACA Dec 15 window, ChatGPT iCloud password), 2 research records"}
+    {"worker": "publisher", "status": "ok", "at": "2026-11-01T12:26:27+00:00", "note": "0 staged, 0 published, 0 errors (plan empty, no QUEUED concepts)"}
+    {"worker": "kit_sync", "status": "ok", "at": "2026-11-01T12:32:50+00:00", "note": "0 routed"}
+    {"worker": "support_agent", "status": "ok", "at": "2026-11-01T13:15:18+00:00", "note": "0 drafted, 0 escalated, 1 alert (SEV-2 Metricool Threads failed posts)"}
+    {"worker": "monthly_review", "status": "ok", "at": "2026-11-01T13:25:36+00:00", "note": "Stage A"}

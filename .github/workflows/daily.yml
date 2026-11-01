@@ -34,6 +34,8 @@ jobs:
         run: |
           git config user.name "autopilot-bot"
           git config user.email "bot@users.noreply.github.com"
-          git pull --rebase || true
           git add state SCOREBOARD.md || true
-          git diff --cached --quiet || (git commit -m "stats" && git push)
+          git diff --cached --quiet && exit 0
+          git commit -m "stats"
+          for i in 1 2 3 4 5; do git pull --rebase -q -X theirs && git push && exit 0; sleep $((i*7)); done
+          exit 1
