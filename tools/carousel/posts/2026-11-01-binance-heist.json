@@ -1,0 +1,109 @@
+{
+ "kind": "news",
+ "breaking": true,
+ "dateline": "NOV 01 2026",
+ "lines": [
+  "$6.3 billion",
+  "{gone in 20 minutes}",
+  "[the biggest heist ever]"
+ ],
+ "subline": "how the binance hack happened",
+ "hero": {
+  "type": "doc",
+  "org": "INCIDENT REPORT",
+  "date": "OCT 29 2026",
+  "title": "BINANCE",
+  "marks": [
+   "Hit at 4:05 PM ET",
+   "About 20 minutes",
+   "About $3B frozen"
+  ],
+  "stamp": "HACKED",
+  "x": 300,
+  "y": 110
+ },
+ "ow": {
+  "fig": "016",
+  "label": "THE HEIST",
+  "label_at": [
+   60,
+   480
+  ],
+  "pointer": [
+   64,
+   520,
+   230,
+   -6
+  ],
+  "zip": "EXHIBIT A",
+  "zip_at": [
+   850,
+   240
+  ]
+ },
+ "bg_words": [
+  "HEIST",
+  "BINANCE",
+  "$6.3B",
+  "FBI"
+ ],
+ "bg_facts": [
+  "Hackers moved just over $6.3 billion out of Binance in about 20 minutes.",
+  "The FBI says North Korea was behind it.",
+  "About $3 billion has been frozen.",
+  "Withdrawals were paused."
+ ],
+ "slides": [
+  {
+   "title": "What *happened*",
+   "body": "Thursday at <b>4:05 PM Eastern</b>, hackers got into Binance, the world's largest crypto exchange. In about <b>20 minutes</b> they moved out just over <b>$6.3 billion</b>."
+  },
+  {
+   "title": "Across *10 chains*",
+   "body": "Blockchain firm TRM Labs says the attacker ordered Binance's own wallets to empty into wallets the attacker controlled, on <b>10 different blockchains</b>."
+  },
+  {
+   "title": "How they *got in*",
+   "body": "Investigators say the hackers took over Binance's <b>wallet signing system</b>. Early findings suggest it began with <b>one engineer's hacked laptop</b>. Binance says it found no sign a private key leaked."
+  },
+  {
+   "title": "Who did *it*",
+   "body": "The <b>FBI confirmed</b> on Saturday that <b>North Korea</b> was behind it. Experts point to a hacking unit in North Korea's military with a long record of crypto heists."
+  },
+  {
+   "title": "Where the money *is*",
+   "body": "About <b>$3 billion is frozen</b>, including more than <b>$2.3 billion</b> frozen by Tether and Circle. Binance has not said what happened to the other <b>$3.3 billion</b>."
+  },
+  {
+   "title": "What Binance *says*",
+   "body": "Binance says it will <b>cover all losses</b> and user funds are safe. Withdrawals were paused, aiming to resume in about 48 hours. Its $1 billion emergency fund is about <b>one sixth</b> of what was taken."
+  },
+  {
+   "title": "What it means *for you*",
+   "body": "Crypto on an exchange is <b>not insured like a bank deposit</b>, so refunds are up to the exchange. Use app based two factor login, a unique password, and never keep everything on one exchange."
+  }
+ ],
+ "cta": {
+  "big": "Get the news *first*",
+  "small": "Follow @autopilot.oi. Want an AI agent that checks your statements for charges you did not expect? Comment <b>SUBS</b>."
+ },
+ "note": "News, not financial advice.",
+ "sources": [
+  [
+   "NPR",
+   "https://www.npr.org/2026/10/31/nx-s1-6024426/binance-crypto-heist-cyber-criminals-north-korea"
+  ],
+  [
+   "Al Jazeera",
+   "https://www.aljazeera.com/news/2026/10/30/binance-says-6-3bn-stolen-in-biggest-crypto-heist-in-history-what-we-know"
+  ],
+  [
+   "NBC News",
+   "https://www.nbcnews.com/business/markets/binance-hack-tether-circle-stablecoins-rcna606445"
+  ],
+  [
+   "Yahoo Finance",
+   "https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html"
+  ]
+ ]
+}

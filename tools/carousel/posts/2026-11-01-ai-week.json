@@ -1,0 +1,104 @@
+{
+ "kind": "news",
+ "dateline": "NOV 01 2026",
+ "lines": [
+  "This week in AI",
+  "{in 60 seconds}",
+  "[3 stories you missed]"
+ ],
+ "hero": {
+  "type": "phone",
+  "app": "THE AI WIRE",
+  "notes": [
+   [
+    "GOOGLE",
+    "Gemini 4 Carbon takes the top spot"
+   ],
+   [
+    "MISTRAL",
+    "Its biggest model is now a free download"
+   ],
+   [
+    "SPACE",
+    "First AI answer from orbit"
+   ]
+  ],
+  "x": 340,
+  "y": 110
+ },
+ "ow": {
+  "fig": "019",
+  "label": "WEEK 44",
+  "label_at": [
+   70,
+   430
+  ],
+  "pointer": [
+   74,
+   470,
+   250,
+   4
+  ],
+  "zip": "RECAP",
+  "zip_at": [
+   840,
+   250
+  ]
+ },
+ "bg_words": [
+  "GEMINI",
+  "MISTRAL",
+  "ORBIT",
+  "AI"
+ ],
+ "bg_facts": [
+  "Gemini 4 Carbon took the top spot on a major AI ranking.",
+  "Mistral made its biggest model free to download.",
+  "An AI model answered a prompt from orbit.",
+  "AI keeps getting better and cheaper."
+ ],
+ "slides": [
+  {
+   "title": "Google takes *the top spot*",
+   "body": "Google says <b>Gemini 4 Carbon</b> ranks first on the Artificial Analysis Intelligence Index, <b>one point above Claude Opus 5.5</b>. Only some security teams can use it so far."
+  },
+  {
+   "title": "A giant model, *free*",
+   "body": "<b>Mistral</b> made its biggest AI model, about <b>a trillion parameters</b>, free to download."
+  },
+  {
+   "title": "AI answers *from space*",
+   "body": "Google's <b>Project Suncatcher</b> satellite ran an AI model in orbit for the first time, answering a prompt sent from a ground station near Svalbard, Norway, <b>with a haiku about space</b>."
+  },
+  {
+   "title": "What it means *for you*",
+   "body": "Top models keep getting <b>better and cheaper</b>, and free ones keep closing the gap. The skill that matters now is <b>knowing what to ask</b>."
+  }
+ ],
+ "cta": {
+  "big": "Learn AI in *5 min a day*",
+  "small": "Follow @autopilot.oi for daily AI news and free prompts. Comment <b>AGENTS</b> and we will DM you 7 Claude agents that run your busywork."
+ },
+ "sources": [
+  [
+   "AI SDG",
+   "https://aisdg.substack.com/p/ai-news-for-october-30-2026"
+  ],
+  [
+   "The AI Marketers",
+   "https://www.theaimarketers.ai/news-103026/"
+  ],
+  [
+   "Real Python",
+   "https://realpython.com/ai-news-weekly-2026-10-30"
+  ],
+  [
+   "The Neuron",
+   "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-october-30-2026/"
+  ],
+  [
+   "Google",
+   "https://blog.google"
+  ]
+ ]
+}

@@ -27,7 +27,7 @@
 
 /* evidence objects */
 .ev{position:absolute;z-index:3;filter:drop-shadow(16px 22px 0 #000) drop-shadow(0 30px 60px #000a)}
-.doc{position:relative;width:560px;background:#eeeeec;color:#151515;padding:44px 48px 56px;transform:rotate(-5deg);font:600 22px/1.45 C}
+.doc{position:relative;width:560px;background:#eeeeec;color:#151515;padding:44px 48px 130px;transform:rotate(-5deg);font:600 22px/1.45 C}
 .doc .dh{display:flex;justify-content:space-between;font:700 18px C;letter-spacing:3px;color:#666;border-bottom:3px solid #151515;padding-bottom:12px}
 .doc h4{font:400 88px/.95 A;margin:22px 0 10px;letter-spacing:1px}
 .doc .dl{height:13px;background:#cfcfcc;margin:14px 0;border-radius:2px}

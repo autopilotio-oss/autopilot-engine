@@ -1,0 +1,98 @@
+{
+ "kind": "news",
+ "dateline": "NOV 01 2026",
+ "lines": [
+  "AI found a flaw",
+  "in the code behind",
+  "{70% of websites}",
+  "[here is what to do]"
+ ],
+ "hero": {
+  "type": "doc",
+  "org": "SECURITY ALERT",
+  "date": "OCT 21 2026",
+  "title": "PHP2SHELL",
+  "marks": [
+   "Score: 9.2 out of 10",
+   "Fix: update PHP"
+  ],
+  "stamp": "PATCHED",
+  "x": 300,
+  "y": 170
+ },
+ "ow": {
+  "fig": "017",
+  "label": "THE BUG",
+  "label_at": [
+   60,
+   470
+  ],
+  "pointer": [
+   64,
+   510,
+   230,
+   -6
+  ],
+  "zip": "CVE",
+  "zip_at": [
+   860,
+   250
+  ]
+ },
+ "bg_words": [
+  "PHP",
+  "PATCH",
+  "CVE",
+  "AI"
+ ],
+ "bg_facts": [
+  "Two critical flaws were found in PHP.",
+  "PHP helps run about 70% of websites.",
+  "Patches came out on Oct 21.",
+  "AI helped find the bugs."
+ ],
+ "slides": [
+  {
+   "title": "What *happened*",
+   "body": "Security firm <b>Wiz</b>, working with AI models, found two critical flaws in <b>PHP</b>, the language behind about <b>70% of websites</b>. Fixes came out on <b>Oct 21</b>."
+  },
+  {
+   "title": "Why it is *serious*",
+   "body": "The bugs let an attacker <b>run code on a server without logging in</b>. Both scored <b>9.2 out of 10</b>, and they go back to PHP 5.4."
+  },
+  {
+   "title": "AI did *the hard part*",
+   "body": "Wiz says AI models helped <b>find the bugs and build working attacks</b>, a chain of steps at the edge of what human researchers could do by hand."
+  },
+  {
+   "title": "The *race*",
+   "body": "Cloudflare saw <b>tens of thousands of attack attempts</b> in the first 45 minutes, and <b>millions</b> after. Government sites in the UK, Finland and France went offline while teams patched."
+  },
+  {
+   "title": "What to *do*",
+   "body": "Run a website? Ask your host or developer if PHP is on <b>8.5.12, 8.4.27, 8.3.36 or 8.2.35</b>. A WordPress update alone <b>does not</b> fix it."
+  }
+ ],
+ "cta": {
+  "big": "Get the news *first*",
+  "small": "Follow @autopilot.oi for the AI stories that matter, explained in plain words."
+ },
+ "sources": [
+  [
+   "NPR",
+   "https://www.npr.org"
+  ],
+  [
+   "Wiz Research",
+   "https://www.wiz.io/vulnerability-database/cve/cve-2026-109618"
+  ],
+  [
+   "Cyber Magazine",
+   "https://cybermagazine.com/news/how-critical-php2shell-bugs-put-70-websites-at-risk"
+  ],
+  [
+   "Coalition",
+   "https://coalitiontechnologies.com/blog/your-host-patched-php-is-your-wordpress-site-actually-safe"
+  ]
+ ]
+}

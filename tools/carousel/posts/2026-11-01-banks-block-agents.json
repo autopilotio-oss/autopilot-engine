@@ -1,0 +1,100 @@
+{
+ "kind": "news",
+ "dateline": "NOV 01 2026",
+ "lines": [
+  "Big banks are",
+  "{blocking AI agents}",
+  "[keep your password]"
+ ],
+ "hero": {
+  "type": "phone",
+  "app": "SAMPLE ALERT",
+  "notes": [
+   [
+    "BANK SECURITY",
+    "An outside AI assistant tried to sign in to your account. We blocked it."
+   ],
+   [
+    "REMINDER",
+    "Never share your bank password with an AI tool."
+   ]
+  ],
+  "x": 340,
+  "y": 110
+ },
+ "ow": {
+  "fig": "018",
+  "label": "BLOCKED",
+  "label_at": [
+   70,
+   420
+  ],
+  "pointer": [
+   74,
+   460,
+   250,
+   4
+  ],
+  "zip": "NO LOGIN",
+  "zip_at": [
+   840,
+   250
+  ]
+ },
+ "bg_words": [
+  "BANKS",
+  "AGENTS",
+  "BLOCKED",
+  "AI"
+ ],
+ "bg_facts": [
+  "US banks found AI agents inside customer accounts.",
+  "Morgan Stanley is blocking outside agents.",
+  "Citi does not allow agents to log in.",
+  "Never share your bank password with AI."
+ ],
+ "slides": [
+  {
+   "title": "What *happened*",
+   "body": "Axios reported on <b>Oct 22</b> that major US banks found outside AI agents signed in to customer accounts <b>with the customer's own password</b>, some acting beyond what the user asked."
+  },
+  {
+   "title": "Who is *blocking*",
+   "body": "<b>Morgan Stanley</b> is blocking outside agents. <b>JPMorgan Chase</b> is restricting them, and <b>Citi</b> says it does not let AI agents log in or make transactions."
+  },
+  {
+   "title": "The *fine print*",
+   "body": "Reuters confirmed banks are blocking agents. The claim that agents went rogue rests on Axios, and <b>Morgan Stanley said it saw nothing like that</b>."
+  },
+  {
+   "title": "Stay *safe*",
+   "body": "<b>Never give an AI assistant your bank password.</b> Use read only connections your bank approves, and keep any AI tool away from moving your money."
+  },
+  {
+   "title": "How we *build*",
+   "body": "Our Claude agents <b>never need your login</b>. You upload a statement, the agent reads it, and <b>you decide</b> what to send."
+  }
+ ],
+ "cta": {
+  "big": "Safe AI that saves *money*",
+  "small": "Comment <b>SUBS</b> and we will DM you the agent that reads your statement, never your password."
+ },
+ "sources": [
+  [
+   "Axios",
+   "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"
+  ],
+  [
+   "Reuters via Gulf News",
+   "https://gulfnews.com/business/banking/major-us-banks-block-ai-agents-from-accessing-customer-accounts-1.500720591"
+  ],
+  [
+   "Cybernews",
+   "https://cybernews.com/ai-news/banks-blocking-ai-agents/"
+  ],
+  [
+   "IBTimes",
+   "https://www.ibtimes.co.uk/us-banks-restrict-third-party-ai-agents-1827385"
+  ]
+ ]
+}
