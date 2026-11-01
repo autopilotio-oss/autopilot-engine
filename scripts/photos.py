@@ -8,6 +8,10 @@ with rembg, save to docs/media/car/photos/<slug>/:
   credits.json photographer, page url, Pexels id (Pexels asks for credit when possible; we keep it with the image)
 Rules: never request a named real person; generic people, hands, objects and places only. Status becomes "done" or "failed".
 
+Seb's own photos (sent in chat): queue/photos/<slug>.json {"files": ["queue/photos/in/<slug>/1.jpg", ...], "source": "...",
+  "status": "pending"}. No Pexels call, just resize + cutout, same outputs. "source" records where the photo came from
+  (his own shot, an official press kit, licensed). Posts using a real person's photo always go to Seb for approval.
+
     python3 scripts/photos.py            (needs PEXELS_API_KEY)"""
 import glob, io, json, os, sys, urllib.parse, urllib.request
 
@@ -21,8 +25,6 @@ def get(url, headers=None):
 
 
 def run():
-    if not KEY:
-        print("No PEXELS_API_KEY yet"); return 0
     from PIL import Image
     from rembg import remove, new_session
     session = new_session("isnet-general-use")
@@ -32,6 +34,24 @@ def run():
         if r.get("status") != "pending":
             continue
         slug = os.path.basename(f)[:-5]; out = os.path.join(ROOT, "docs", "media", "car", "photos", slug); os.makedirs(out, exist_ok=True)
+        if r.get("files"):
+            try:
+                credits = []
+                for i, fp in enumerate(r["files"], 1):
+                    img = Image.open(os.path.join(ROOT, fp)).convert("RGB"); img.thumbnail((1600, 1600))
+                    img.save(os.path.join(out, f"{i:02d}.jpg"), quality=90)
+                    cut = remove(img, session=session); bbox = cut.getbbox()
+                    if bbox:
+                        cut = cut.crop(bbox)
+                    cut.save(os.path.join(out, f"{i:02d}_cut.png"))
+                    credits.append({"n": i, "file": fp, "source": r.get("source", "sent by Seb")})
+                json.dump({"credits": credits}, open(os.path.join(out, "credits.json"), "w"), indent=1)
+                r["status"] = "done"; r["count"] = len(credits)
+            except Exception as e:
+                r["status"] = "failed"; r["error"] = repr(e)[:300]
+            json.dump(r, open(f, "w"), indent=1); done += 1; print(slug, r["status"]); continue
+        if not KEY:
+            print(slug, "waiting: no PEXELS_API_KEY yet"); continue
         try:
             q = urllib.parse.urlencode({"query": r["query"], "orientation": r.get("orientation", "portrait"), "per_page": r.get("n", 3), "size": "large"})
             res = json.loads(get("https://api.pexels.com/v1/search?" + q, {"Authorization": KEY}))

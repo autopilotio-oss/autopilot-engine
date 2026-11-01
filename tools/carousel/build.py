@@ -125,10 +125,37 @@ def chevrons(x, y, n_gray=2, n_lime=3):
     return f'<div class="chev2" style="left:{x}px;top:{y}px">' + "<b></b>" * n_gray + '<b class="g"></b>' * n_lime + "</div>"
 
 
+def cover_photo(p, n):
+    """Photo cover (news with a real photo): photo up top, the subject cut out and lifted off it with a lime rim,
+    optional round badge holding a second cutout (an object, never a company logo), divider with our mark, then the
+    headline as full width justified lines (*word* = lime). Spec: p["photo"] = {src, cut?, badge?, pos?, cut_h?, cut_x?,
+    lines: [...], sub?, kicker?}"""
+    ph = p["photo"]
+    cut = (f'<img class="ph-cut" src="{E(ph["cut"])}" style="height:{ph.get("cut_h", 760)}px;left:{ph.get("cut_x", 540)}px">'
+           if ph.get("cut") else "")
+    badge = f'<div class="ph-badge"><img src="{E(ph["badge"])}"></div>' if ph.get("badge") else ""
+    kick = f'<div class="ph-kick">{E(ph["kicker"])}</div>' if ph.get("kicker") else ""
+    lines = "".join(f'<div class="ln">{lime(l)}</div>' for l in ph["lines"])
+    sub = f'<div class="ph-sub">{lime(ph["sub"])}</div>' if ph.get("sub") else ""
+    return (f'<div class="s L-photo{" has-cut" if cut else ""}" id="s1">'
+            f'<div class="ph-bg" style="background-image:url(\'{E(ph["src"])}\');background-position:{ph.get("pos", "center 30%")}"></div>'
+            f'<div class="ph-tint"></div>{cut}{badge}{kick}'
+            f'<div class="ph-div"><i></i><img src="/docs/logo.png"><i></i></div>'
+            f'<div class="ph-text"><div class="fitl" data-w="980">{lines}</div>{sub}</div>'
+            f'<div class="ph-swipe">SWIPE FOR MORE <b>&#9656;</b></div>{GRAIN}<div class="pg">1/{n}</div></div>')
+
+
 def cover(p, n):
+    if p.get("photo"):
+        return cover_photo(p, n)
     if p.get("cover_html"):
         cls = p.get("cover_bg", "bg-black")
-        return (f'<div class="s {cls}" id="s1">{p["cover_html"]}{GRAIN if p.get("grain", True) else ""}'
+        lava = ""
+        if p.get("lava", True):
+            pal = {"bg-black": "dark", "bg-lime": "lime", "bg-white": "white"}.get(cls, "dark")
+            lava = f'<iframe class="lava" style="opacity:{p.get('lava_opacity', {'dark': .6, 'lime': .75, 'white': .8}[pal])}" src="/tools/carousel/lava.html?pal={pal}&seed={p.get("seed", 2)}"></iframe>'
+        body = f'<div class="lavafg">{p["cover_html"]}</div>' if lava else p["cover_html"]
+        return (f'<div class="s {cls}" id="s1">{lava}{body}{GRAIN if p.get("grain", True) else ""}'
                 f'<img class="aplogo" src="/docs/logo.png"><div class="pg">1/{n}</div></div>')
     lay = p.get("layout", "stack")
     if lay == "stack":
@@ -221,9 +248,16 @@ def build(cid):
     page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}{FIT}</body></html>"
     hp = os.path.join(ROOT, "tools", "carousel", f"_{cid}.html"); open(hp, "w").write(page)
     out = os.path.join(ROOT, "docs", "media", "car", cid); os.makedirs(out, exist_ok=True)
-    js = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1350}}}});
+    lava = bool(p.get("cover_html")) and p.get("lava", True)
+    FRAMES = 192 if (lava and os.environ.get("CAR_STILL") != "1") else 0
+    fdir = f"/tmp/carframes/{cid}"
+    if FRAMES:
+        subprocess.run(["rm", "-rf", fdir]); os.makedirs(fdir)
+    js = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch({{args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist','--enable-webgl']}});const p=await b.newPage({{viewport:{{width:1080,height:1350}}}});
 await p.goto('http://localhost:8779/tools/carousel/_{cid}.html');await p.waitForFunction(()=>document.body.dataset.ready==='1');
+const lf=p.frames().find(f=>f.url().includes('lava.html'));if(lf){{await lf.waitForFunction(()=>window.READY===1,null,{{timeout:60000}});await lf.evaluate(()=>window.render(0))}}
 for(let i=1;i<={n};i++){{await (await p.$('#s'+i)).screenshot({{path:'{out}/'+String(i).padStart(2,'0')+'.jpg',type:'jpeg',quality:88}})}}
+if(lf&&{FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await lf.evaluate(t=>window.render(t),k*8/{FRAMES});await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
 await b.close()}})();"""
     srv = subprocess.Popen([sys.executable, "-m", "http.server", "8779"], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
@@ -231,6 +265,12 @@ await b.close()}})();"""
         subprocess.run(["node", "-e", js], check=True, cwd="/tmp")
     finally:
         srv.terminate()
+    if FRAMES:
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", "24", "-i", f"{fdir}/%04d.jpg", "-c:v", "libx264", "-preset", "veryfast",
+                        "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", os.path.join(out, "cover.mp4")], check=True)
+        # 3 loops = 24s so IG plays it long enough to read
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "2", "-i", os.path.join(out, "cover.mp4"), "-c", "copy", os.path.join(out, "cover_ig.mp4")], check=True)
+        print(f"animated cover: docs/media/car/{cid}/cover.mp4")
     print(f"carousel ready: docs/media/car/{cid}/ ({n} slides)")
     return n
 

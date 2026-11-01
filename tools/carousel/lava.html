@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>*{margin:0;padding:0}html,body{width:1080px;height:1350px;overflow:hidden;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1350"></canvas>
+<script>
+// Lava lamp background for carousel covers: glossy metaballs that drift and merge, lime rim light.
+// ?pal=dark|lime|white&seed=N ; window.render(t) draws time t (seconds), loops every LOOP seconds.
+const q=new URLSearchParams(location.search), pal=q.get('pal')||'dark', seed=+(q.get('seed')||1), LOOP=8;
+const P={dark:{base:[.018,.02,.018],body:[.03,.04,.025],body2:[.07,.10,.04],rim:[.83,1.0,.23],rimK:.9,alpha:.9},
+         lime:{base:[.83,1.0,.23],body:[.58,.76,.08],body2:[.76,.95,.18],rim:[1.0,1.0,.86],rimK:.65,alpha:.62},
+         white:{base:[.95,.95,.93],body:[.78,.79,.75],body2:[.90,.91,.88],rim:[.70,.92,.10],rimK:.85,alpha:.7}}[pal];
+const gl=document.getElementById('c').getContext('webgl',{preserveDrawingBuffer:true,antialias:true});
+const vs=`attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}`;
+const fs=`precision highp float;uniform float t;uniform vec2 R;uniform vec3 base,body,body2,rim;uniform float rimK,alpha,sd;
+const float TAU=6.2831853;
+float field(vec2 p){float f=0.;
+ for(int i=0;i<6;i++){float fi=float(i);float a=TAU*(t/${LOOP}.);
+  vec2 c=vec2(.5+.42*sin(a+fi*1.9+sd)+.06*sin(2.*a+fi),.62+.52*cos(a+fi*2.4+sd*.7)+.05*cos(2.*a+fi*1.3));
+  float r=.11+.08*fract(sin(fi*12.9+sd)*43.7);
+  vec2 d=p-c;f+=r*r/(dot(d,d)+.0004);}
+ return f;}
+float qf(vec2 p){return inversesqrt(field(p));}
+void main(){vec2 uv=gl_FragCoord.xy/R.x;float q=qf(uv);
+ float e=1./R.x;vec2 g=vec2(qf(uv+vec2(e,0.))-qf(uv-vec2(e,0.)),qf(uv+vec2(0.,e))-qf(uv-vec2(0.,e)))/(2.*e);
+ float gn=max(length(g),1e-4);float dist=(1.-q)/gn;vec2 nrm=g/gn;
+ float inside=smoothstep(-.0015,.0015,dist);
+ float facing=clamp(dot(nrm,normalize(vec2(-.55,-.85))),0.,1.);float back=clamp(dot(nrm,normalize(vec2(.6,.8))),0.,1.);
+ float rimMask=exp(-max(dist,0.)*16.);
+ vec3 b=mix(body,body2,clamp(uv.y*.6+facing*.35,0.,1.));
+ vec3 col=b+rim*rimMask*(.15+1.05*pow(facing,1.4))*rimK+rim*rimMask*back*.12*rimK;
+ vec3 o=mix(base,mix(base,col,alpha),inside);
+ gl_FragColor=vec4(o,1.);}`;
+function sh(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw gl.getShaderInfoLog(s);return s}
+const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+const U=n=>gl.getUniformLocation(pr,n);
+gl.uniform2f(U('R'),1080,1350);gl.uniform3fv(U('base'),P.base);gl.uniform3fv(U('body'),P.body);gl.uniform3fv(U('body2'),P.body2);gl.uniform3fv(U('rim'),P.rim);
+gl.uniform1f(U('rimK'),P.rimK);gl.uniform1f(U('alpha'),P.alpha);gl.uniform1f(U('sd'),seed*1.37);
+window.LOOP=LOOP;window.render=t=>{gl.uniform1f(U('t'),t%LOOP);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);gl.finish();return t};
+window.render(0);window.READY=1;
+</script></body></html>
