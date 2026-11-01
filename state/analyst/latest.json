@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-01T18:22:00Z",
+  "at": "2026-11-01T19:24:00Z",
   "posts_today": {
     "threads": {"published": 2, "pending": 9, "error": 2},
     "twitter": {"published": 2, "pending": 6, "error": 0},
@@ -9,8 +9,8 @@
   "top_posts": [
     {"network": "instagram", "published_at": "2026-10-31T17:47:12-03:00", "text": "$133 a month. $1,596 a year. On things you don't even use.", "metrics": {"reach": 47, "views": 49, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfKufU-D6S_/"},
     {"network": "instagram", "published_at": "2026-10-30T16:45:06-03:00", "text": "1 in 5 people have an error on their credit report. Here's how to find yours and dispute it with Claude, then turn it into a Credit Agent that checks every month.", "metrics": {"reach": 19, "views": 19, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfICnFKkhRn/"},
-    {"network": "instagram", "published_at": "2026-10-31T23:31:15-03:00", "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Comment SUBS and I'll send you the free guide.", "metrics": {"reach": 10, "views": 15, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/"}
+    {"network": "instagram", "published_at": "2026-10-30T19:59:30-03:00", "text": "If you answer the same customer questions every week, this is for you.", "metrics": {"reach": 13, "views": 30, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/p/DfIY2NHFdF3/"}
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Analytics pulled for Instagram reels only (6 reels in the 6 to 72h window, all 0 saves and 0 shares, so ranked by reach; no winner). Threads, X and TikTok post analytics not pulled: MISSING. Threads ERRORs are the 00:52 and 00:59 ART Binance news posts (media container), already reported and reposted 07:40. Kit growth stats report 0 subscribers total. Revenue feed: 0 verified orders all time. ci.yml failing on test_guide_pages_build_reproducibly. HQ feed written to status/hub."
+  "notes": "Analytics pulled for Instagram reels (6) and feed posts (4) in the 6 to 72h window: all 0 saves and 0 shares, so ranked by reach; no winner. Threads, X and TikTok post analytics not pulled: MISSING. Threads ERRORs are the 00:52 and 00:59 ART Binance news posts (media container), already reported and reposted 07:40. Kit growth stats: 0 subscribers, 0 new today. Revenue feed: 0 verified orders all time (unchanged). ci.yml still failing (latest 17:36 UTC, already in Fix needed). HQ feed written to status/hub (v3)."
 }
