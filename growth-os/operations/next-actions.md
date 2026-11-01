@@ -32,4 +32,3 @@
 - Skipped 2026-11-01: Boston police law-enforcement impersonation calls (Oct 29; third phone impersonation scam in a week, no new fix), ICE impersonation scam (politics adjacent), holiday delivery text scams (no new 24-48h source), FTC GOAT refund checks (Oct 6, outside window, only 6,205 people), ChatGPT texting/Pro updates (Pro only).
 
 ## Fix needed
-- 2026-11-01 analyst: Tests (ci.yml) failing on main (12 of 33 runs in 24h, latest 17:36 UTC): tests/test_revenue_engine.py::test_guide_pages_build_reproducibly, builder output differs for docs/g/subs/index.html, docs/g/refund and docs/sitemap.xml.
