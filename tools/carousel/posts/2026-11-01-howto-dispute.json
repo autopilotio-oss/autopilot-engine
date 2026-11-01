@@ -1,0 +1,54 @@
+{
+ "kind": "howto",
+ "dateline": "NOV 01 2026",
+ "cover_bg": "bg-lime",
+ "theme": "light",
+ "grain": false,
+ "music": "bright",
+ "seed": 5,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">HOW TO &middot; US CARDS</div><div class=\"fx\" style=\"left:56px;top:160px;width:968px;height:560px;background:#0c0c0c;color:#f2f2ee;border-radius:26px;box-shadow:0 40px 80px #0004;transform:rotate(-2deg)\"><div class=\"Cc\" style=\"position:absolute;left:44px;top:40px;font-size:24px;color:#f2f2ee99\">SAMPLE STATEMENT</div><div class=\"Mm\" style=\"position:absolute;left:44px;top:110px;width:880px;font-size:36px;line-height:2.2;white-space:pre;color:#f2f2ee\"><div>OCT 02  STREAMING             $15.99</div><div>OCT 09  GROCERY               $82.40</div><div>OCT 14  SHOE SHOP            $129.00</div><div style=\"background:#D4FF3A;color:#0c0c0c;margin:0 -20px;padding:0 20px\">OCT 14  SHOE SHOP            $129.00</div><div>OCT 21  GAS                   $41.10</div></div></div><div class=\"fx A\" style=\"left:560px;top:668px;font-size:58px;background:#f2f2ee;color:#0c0c0c;padding:12px 22px 4px;transform:rotate(4deg);box-shadow:0 20px 40px #0006\">CHARGED TWICE</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"18\" style=\"left:56px;top:810px;font-size:280px;white-space:nowrap;color:#0c0c0c\">60 days</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:1080px;font-size:86px;white-space:nowrap;color:#0c0c0c\">to fight a bad charge</div><div class=\"fx Ii\" data-after=\"h\" data-gap=\"30\" style=\"left:56px;top:1190px;width:820px;font-size:32px;line-height:1.25;color:#0c0c0c\">Your card has a legal fix. Swipe for the steps &#9656;</div>",
+ "slides": [
+  {
+   "title": "What *counts*",
+   "body": "Double charges, the wrong amount, things you <b>never got</b>, returns that were <b>never credited</b>, and charges you do not recognize. This is a US law, the Fair Credit Billing Act."
+  },
+  {
+   "title": "Watch the *clock*",
+   "body": "Ask the seller for a refund first. But your <b>60 days</b> start from the first statement that showed the charge, and they keep running while you wait."
+  },
+  {
+   "title": "Put it *in writing*",
+   "body": "Calling is fine, but a <b>letter</b> keeps your rights. Send it to the <b>billing inquiries</b> address on your statement, not the payment address. Use tracked mail and keep a copy."
+  },
+  {
+   "title": "Let *Claude* write it",
+   "body": "Paste the charge and what went wrong, then ask: <b>Write a short billing error letter to my card company with the charge, the date and why it is wrong. Leave a blank for my account number.</b>"
+  },
+  {
+   "title": "What *happens next*",
+   "body": "They must confirm your letter within <b>30 days</b> and settle it within 2 billing cycles, never more than <b>90 days</b>. You can hold the disputed amount. Pay the rest on time."
+  }
+ ],
+ "cta": {
+  "big": "Get your *money back*",
+  "keyword": "REFUND",
+  "gift": "Here is your free refund guide: the rules, the exact request to send, and what to do if they say no.",
+  "small": "Free, right in your DMs. General info, *not legal advice.*"
+ },
+ "sources": [
+  [
+   "California Attorney General",
+   "https://www.oag.ca.gov/consumers/general/credit-cards-dispute-charge"
+  ],
+  [
+   "Experian",
+   "https://www.experian.com/blogs/ask-experian/how-long-do-you-have-to-dispute-credit-card-charge/"
+  ]
+ ],
+ "bg_words": [
+  "DISPUTE",
+  "REFUND",
+  "60 DAYS",
+  "CARD"
+ ]
+}
