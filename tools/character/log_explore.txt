@@ -1,0 +1,21 @@
+extension installed via package_install_files
+mpfb modules loaded: 546 ['bl_ext.user_default.mpfb', 'bl_ext.user_default.mpfb._classmanager', 'bl_ext.user_default.mpfb._preferences', 'bl_ext.user_default.mpfb.entities', 'bl_ext.user_default.mpfb.entities.clothes']
+addon module bl_ext.user_default.mpfb
+pkg bl_ext.user_default.mpfb
+pack install failed makehuman_system_assets AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+pack install failed masks01 AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+pack install failed hats01 AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+pack install failed shirts01 AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+pack install failed pants01 AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+pack install failed shoes01 AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+pack install failed skins01 AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+pack install failed eyebrows01 AttributeError('Calling operator "bpy.ops.mpfb.load_library_zip" error, could not be found')
+user data /home/runner/.config/blender/4.2/extensions/.user/user_default/mpfb/data
+clothes 0 []
+proxymeshes 0 []
+eyes 0 []
+eyebrows 0 []
+skins 0 []
+hair 0 []
+HumanService methods ['add_builtin_rig', 'add_custom_rig', 'add_mhclo_asset', 'create_human', 'deserialize_from_dict', 'deserialize_from_json_file', 'deserialize_from_mhm', 'get_asset_sources_of_equipped_mesh_assets', 'get_default_deserialization_settings', 'get_list_of_human_presets', 'refit', 'serialize_to_json_file', 'serialize_to_json_string', 'set_character_skin', 'unload_mhclo_asset', 'update_list_of_human_presets']
+RigService methods ['activate_pose_bone_by_name', 'add_bone_constraint_to_pose_bone', 'add_copy_rotation_constraint_to_pose_bone', 'add_ik_constraint_to_pose_bone', 'add_ik_rotation_lock_to_pose_bone', 'add_path_object_to_bone', 'add_rotation_constraint_to_pose_bone', 'add_uv_sphere_object_to_bone', 'apply_pose_as_rest_pose', 'apply_weights', 'copy_pose', 'create_rig_from_skeleton_info', 'display_pose_bone_as_empty', 'ensure_armature_has_bone_shape_objects_as_children', 'ensure_armature_modifier', 'ensure_global_poses_are_available', 'find_arm_length', 'find_edit_bone_by_name', 'find_extra_bones', 'find_leg_length', 'find_pose_bone_by_name', 'find_pose_bone_head_world_location', 'find_pose_bone_tail_world_location', 'generate_rigify_rig', 'get_bone_orientation_info_as_dict', 'get_deform_group_bones', 'get_extra_bones', 'get_pose_as_dict', 'get_rig_weight_fallbacks', 'get_weights', 'get_world_space_location_of_pose_bone', 'identify_rig', 'infer_metarig_type_from_generated', 'load_weights', 'mirror_bone_weights_inside_center_bone', 'mirror_bone_weights_to_other_side_bone', 'normalize_rotation_mode', 'refit_existing_armature', 'refit_existing_subrig', 'remove_all_constraints_from_pose_bone', 'set_bone_orientation_from_info_in_dict', 'set_extra_bones', 'set_ik_rotation_limits', 'set_pose_from_dict', 'symmetrize_all_bone_weights']
