@@ -10,8 +10,10 @@
 - Oct 30: Meta rejected the boosted credit report post (Discriminatory Practices policy). Credit is a special ad category on Meta; the paid Credit Agent is retired. Do not boost credit posts.
 - Oct 31 11:32 ART: TikTok new login alert from Safari, Buenos Aires (Seb's own setup; informational).
 - Support agent run Oct 31 19:10 UTC: incidents recorded inc:email:1a18dab9 (SEV-2 Metricool/IG restricted post), inc:email:1a18e451 + inc:email:1a18e44f (SEV-2 credit ad rejected). Oct 30-31 logins (Google, Kit, Metricool, Porkbun, Meta password change) all iOS/Argentina during setup: SEV-3 informational, not recorded.
+- Support agent run Nov 1 13:12 UTC: inc:email:1a1953da (SEV-2 Metricool: 2 Threads posts not published Nov 1 00:53/01:00 ART, media container error; reposted ok 07:40). Other new mail (Meta ads receipt, GoatCounter welcome, Claude for Gmail grant) informational.
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
+- Nov 1 run (13:12 UTC): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-01 (08:20 ART)
 - Health: 0 failing checks, all 12 checkouts ok. Open incidents: the 3 Oct 30 email SEV-2s above (known). inc:page:home:2026-10-31 resolved by probe but its alert line stays sent:false (never messaged, resolved, no action).
