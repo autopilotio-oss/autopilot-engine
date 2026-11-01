@@ -27,7 +27,7 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "not_live",
+   "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/bill-agent",
    "guides": [
     {
@@ -67,7 +67,7 @@
    "currency": "USD",
    "kind": "kit",
    "components": [],
-   "status": "not_live",
+   "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/debt-agent",
    "guides": [
     {
@@ -371,6 +371,8 @@
  ],
  "live": [
   "all-money-agents",
+  "bill-agent",
+  "debt-agent",
   "deposit-agent",
   "raise-agent",
   "refund-agent",
