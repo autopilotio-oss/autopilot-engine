@@ -6,3 +6,4 @@
 {"worker": "viral_lab", "status": "ok", "at": "2026-11-01T06:50:10+00:00", "note": "refs added 0 certified (2 failed fetches logged); concepts advanced 0; held 0; no PUBLISHED/TRIAL to measure; blocked: YouTube views not visible to fetcher"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-01T09:32:27+00:00", "note": "0 routed"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-01T11:19:20+00:00", "note": "0 orders, 0 failing checks, 0 unapproved posts, 2 Threads errors reposted; fix: Threads refresh skips while paused"}
+{"worker": "trend_scout", "status": "ok", "at": "2026-11-01T11:45:48+00:00", "note": "2 candidates (ACA Dec 15 window, ChatGPT iCloud password), 2 research records"}
