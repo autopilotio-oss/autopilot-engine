@@ -7,3 +7,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-01T09:32:27+00:00", "note": "0 routed"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-01T11:19:20+00:00", "note": "0 orders, 0 failing checks, 0 unapproved posts, 2 Threads errors reposted; fix: Threads refresh skips while paused"}
 {"worker": "trend_scout", "status": "ok", "at": "2026-11-01T11:45:48+00:00", "note": "2 candidates (ACA Dec 15 window, ChatGPT iCloud password), 2 research records"}
+{"worker": "publisher", "status": "ok", "at": "2026-11-01T12:26:27+00:00", "note": "0 staged, 0 published, 0 errors (plan empty, no QUEUED concepts)"}
