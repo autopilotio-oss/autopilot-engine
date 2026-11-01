@@ -1,0 +1,42 @@
+name: Character build (Blender + MPFB2, CC0)
+on:
+  workflow_dispatch:
+    inputs:
+      step:
+        description: "explore | build"
+        default: explore
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache Blender and asset packs
+        uses: actions/cache@v4
+        with:
+          path: ~/dl
+          key: char-dl-v1
+      - name: Download Blender 4.2 LTS, MPFB2 and CC0 asset packs
+        run: |
+          mkdir -p ~/dl && cd ~/dl
+          [ -f blender.tar.xz ] || curl -sSL -o blender.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz
+          [ -d blender ] || (mkdir blender && tar -xJf blender.tar.xz -C blender --strip-components=1)
+          [ -d mpfb2 ] || git clone --depth 1 https://github.com/makehumancommunity/mpfb2.git
+          for p in makehuman_system_assets masks01 hats01 shirts01 pants01 shoes01 skins01 eyebrows01; do
+            [ -f $p.zip ] || curl -sSL --fail -o $p.zip https://files2.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || curl -sSL --fail -o $p.zip https://files.makehumancommunity.org/asset_packs/$p/${p}_cc0.zip || echo "MISSING $p"
+          done
+          ls -la ~/dl
+          sudo apt-get update -qq && sudo apt-get install -y -qq libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libegl1 libxkbcommon0 libsm6 > /dev/null
+      - name: Run
+        env:
+          STEP: ${{ github.event.inputs.step }}
+        run: |
+          ~/dl/blender/blender -b --factory-startup --python-exit-code 1 --python tools/character/build.py -- "$STEP" 2>&1 | tail -150
+      - name: Commit
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add tools/character
+          git commit -m "Character: ${{ github.event.inputs.step }} (MPFB2, CC0)" || exit 0
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done
