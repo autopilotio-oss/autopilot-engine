@@ -94,6 +94,11 @@
   {
    "what": "Launch discount code up to 30% off until Nov 10, list prices unchanged",
    "quote": "Yes, up to 30% (Recommended)"
+  },
+  {
+   "what": "News and prompt carousels autopost on Instagram, TikTok, Threads and X without per post approval when they pass the gate (every claim confirmed by 2 trusted sources, 85/100 quality score, no real people's photos, no logos as the main image), Nov 1 to Nov 10 only",
+   "quote": "Yes, autopost to Nov 10 (Recommended)",
+   "at": "2026-10-31T22:55-03:00"
   }
  ],
  "approved_by": "Seb",
@@ -113,5 +118,14 @@
   "85/100 quality gate before any post. Never fabricate metrics; missing data is MISSING.",
   "No new agents or infrastructure unless a check proves something is broken.",
   "Instagram 'Comment X' only for keywords in config/manychat.json; TikTok, Threads and X use link in bio or a direct link."
- ]
+ ],
+ "carousels": {
+  "news_desk": "hourly, all day (Seb: 'Every hour, all day')",
+  "daily_mix": "2 factory reels + 1 prompts carousel + breaking news when a big verified story drops (Seb: '2 reels + 1 prompts post + news (Recommended)')",
+  "news_cap_per_day": 3,
+  "prompts_slot_art": "17:30",
+  "quiet_hours_art": "00:30 to 07:30 (news found then posts at 07:30)",
+  "queue": "queue/car/<id>.json",
+  "renderer": "python3 tools/carousel/build.py <id>"
+ }
 }

@@ -65,7 +65,7 @@ def approved_post_uuids(root=ROOT):
     """Metricool uuids and ids of posts Seb approved (factory reel queue, incl. the campaign standing approval)."""
     import glob
     ids = set()
-    for f in glob.glob(os.path.join(root, "queue", "freel", "*.json")):
+    for f in glob.glob(os.path.join(root, "queue", "freel", "*.json")) + glob.glob(os.path.join(root, "queue", "car", "*.json")):
         q = json.load(open(f))
         if not (q.get("approval") or {}).get("quote"): continue
         for p in q.get("posts", []):
