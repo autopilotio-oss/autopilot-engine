@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-01-tip",
+  "group": "stories-2026-11-01",
+  "at": "2026-11-01T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-01-tip.jpg"
+  ],
+  "text": "AI tip: Add this to the end of any request: \"Ask me 3 questions before you answer.\""
+ },
+ {
+  "id": "story-2026-11-01-quiz",
+  "group": "stories-2026-11-01",
+  "at": "2026-11-01T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-01-quiz.jpg"
+  ],
+  "text": "Quiz: Medical debt under $500. Does it show on your credit report?"
+ },
+ {
+  "id": "story-2026-11-01-answer",
+  "group": "stories-2026-11-01",
+  "at": "2026-11-01T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-01-answer.jpg"
+  ],
+  "text": "Quiz answer: No. The 3 bureaus don't report medical collections {under $500,} or paid ones. If you see one, dispute it."
+ },
+ {
+  "id": "story-2026-11-01-fact",
+  "group": "stories-2026-11-01",
+  "at": "2026-11-01T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-01-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can write the cancel message for you. Tell it the company and what you want. You get a short, firm message that's hard to argue with."
+ },
+ {
+  "id": "story-2026-11-01-poll",
+  "group": "stories-2026-11-01",
+  "at": "2026-11-01T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-01-poll.jpg"
+  ],
+  "text": "Poll: Would you let AI draft your replies? A) Yes, if I approve B) No way"
+ }
+]
