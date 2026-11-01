@@ -141,7 +141,7 @@ def cover_photo(p, n):
             f'<div class="ph-bg" style="background-image:url(\'{E(ph["src"])}\');background-position:{ph.get("pos", "center 30%")}"></div>'
             f'<div class="ph-tint"></div>{cut}{badge}{kick}'
             f'<div class="ph-div"><i></i><img src="/docs/logo.png"><i></i></div>'
-            f'<div class="ph-text"><div class="fitl" data-w="980">{lines}</div>{sub}</div>'
+            f'<div class="ph-text"><div class="fitl" data-w="980" data-uni="1">{lines}</div>{sub}</div>'
             f'<div class="ph-swipe">SWIPE FOR MORE <b>&#9656;</b></div>{GRAIN}<div class="pg">1/{n}</div></div>')
 
 
@@ -232,6 +232,7 @@ async function go(){await document.fonts.ready;
  for(const box of document.querySelectorAll('.fitl')){const ls=[...box.querySelectorAll('.ln')];
    const W=+(box.dataset.w||1000);
    ls.forEach(l=>{l.style.fontSize='100px';const w=l.getBoundingClientRect().width;l.dataset.f=Math.min(230,100*(l.classList.contains('box')?W*.96:W)/w)});
+   if(box.dataset.uni){const m=Math.min(...ls.map(l=>+l.dataset.f));ls.forEach(l=>l.dataset.f=m)}
    let k=1;const apply=()=>ls.forEach(l=>l.style.fontSize=(l.dataset.f*k)+'px');apply();
    const P=box.parentElement;
    if(box.dataset.w){while(P.getBoundingClientRect().bottom>1240&&k>.4){k-=.03;apply()}}
