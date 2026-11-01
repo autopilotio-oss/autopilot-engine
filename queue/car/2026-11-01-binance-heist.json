@@ -1,7 +1,7 @@
 {
  "id": "2026-11-01-binance-heist",
  "kind": "news",
- "status": "scheduled",
+ "status": "published",
  "gate": {
   "design": "v4 lava kinetic cover + conversion end card",
   "type_qa": "PASS",
@@ -37,7 +37,21 @@
     "twitter"
    ],
    "at": "2026-11-01T00:52-03:00"
+  },
+  {
+   "metricool_id": 412645731,
+   "uuid": "2092832768919095958",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-01T00:59-03:00",
+   "note": "retry, first Threads attempt errored (media container)"
   }
  ],
- "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"
+ "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)",
+ "live": {
+  "instagram": "https://www.instagram.com/p/DfLz879gsjO/",
+  "tiktok": "https://www.tiktok.com/@autopilot.oi/video/7703045881565695253",
+  "x": "https://twitter.com/a/status/2116740099023020169"
+ }
 }
