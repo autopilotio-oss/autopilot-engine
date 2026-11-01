@@ -162,33 +162,44 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 // ---------------------------------------------------------------------------
 const DEMO = location.hash === '#demo'; // DEMO MODE: separate test data, never mixed with live feeds
 const SERVERS = { remote: 'Claude Code Remote', metricool: 'Metricool Social Media Management', kit: 'Kit' };
-const ROSTER = [
+const ROSTER = [ // first match wins: specific names before broad ones
   { re: /news desk/i, code: 'WIRE', dept: 'content', role: 'Breaks big AI and money news first as fact checked carousels.', vibe: 'Restless, always scanning headlines.', hue: 0x111214 },
   { re: /operator/i, code: 'FOREMAN', dept: 'exec', role: 'Runs FIRST SALES MODE each morning: factory reels, funnels, ads, scoreboard.', vibe: 'Calm, decisive, owns the plan.', hue: 0x0e0f10 },
+  { re: /final report/i, code: 'CLOSER', dept: 'exec', role: 'Writes the FIRST SALES MODE final report on Nov 11.', vibe: 'Waits for the numbers, then talks.', hue: 0x0f1012 },
   { re: /support|inbox/i, code: 'SHIELD', dept: 'care', role: 'Reads the inbox, drafts replies, opens incidents. Never sends on its own.', vibe: 'Patient and careful.', hue: 0x141517 },
   { re: /monthly|scale review/i, code: 'LEDGER', dept: 'finance', role: 'Monthly scale review: finances, portfolio, next month priorities.', vibe: 'Quiet, counts everything twice.', hue: 0x101113 },
-  { re: /final report/i, code: 'CLOSER', dept: 'exec', role: 'Writes the FIRST SALES MODE final report on Nov 11.', vibe: 'Waits for the numbers, then talks.', hue: 0x0f1012 },
   { re: /test result|reel test/i, code: 'JUDGE', dept: 'finance', role: 'Reads the factory reel test results and gives the verdict.', vibe: 'Blunt, data first.', hue: 0x131416 },
+  { re: /analyst/i, code: 'ANALYST', dept: 'finance', role: 'Hourly: Metricool and Kit numbers, scoreboard, winners, and the live feed for this HQ.', vibe: 'Lives in the numbers.', hue: 0x121416 },
+  { re: /draft factory/i, code: 'FACTORY', dept: 'content', role: 'Every 2 hours: builds and QA checks carousel drafts into the ready bank. Never posts.', vibe: 'Heads down, always shipping drafts.', hue: 0x141416 },
+  { re: /site improver/i, code: 'BUILDER', dept: 'systems', role: 'Every 3 hours: improves one guide or page for conversion. Never touches prices.', vibe: 'Tinkerer, tests on a phone first.', hue: 0x131517 },
   { re: /pulse/i, code: 'PULSE', dept: 'systems', role: 'Daily Pulse: health, unapproved post guard, daily report.', vibe: 'Never misses a heartbeat.', hue: 0x111215 },
-  { re: /sprint|weekly/i, code: 'COACH', dept: 'finance', role: 'Weekly sprint: picks the one experiment and the weekly report.', vibe: 'Pushes the team, keeps score.', hue: 0x121315 },
-  { re: /newsletter/i, code: 'INK', dept: 'content', role: 'Writes the newsletter from what worked this week.', vibe: 'Wordsmith, hates fluff.', hue: 0x131315 },
-  { re: /tiktok|intel|trend|scout|viral/i, code: 'SCOUT', dept: 'content', role: 'Finds proven formats and trends before anyone else.', vibe: 'Curious, always on the phone.', hue: 0x151618 },
+  { re: /newsletter/i, code: 'INK', dept: 'content', role: 'Drafts the weekly newsletter for your approval.', vibe: 'Wordsmith, hates fluff.', hue: 0x131315 },
+  { re: /tiktok shop/i, code: 'MERCH', dept: 'content', role: 'Keeps TikTok Shop knowledge current, weekly.', vibe: 'Knows every fee and rule.', hue: 0x141517 },
+  { re: /kit welcome|kit sync/i, code: 'POSTMAN', dept: 'systems', role: 'Routes new subscribers into the right Kit welcome sequence every 3 hours.', vibe: 'Never loses a letter.', hue: 0x121315 },
+  { re: /publisher/i, code: 'DISPATCH', dept: 'content', role: 'Schedules only content the approval code marks allowed.', vibe: 'Strict at the door.', hue: 0x111315 },
+  { re: /sprint|weekly/i, code: 'COACH', dept: 'finance', role: 'Weekly sprint: picks the one experiment and writes the weekly report.', vibe: 'Pushes the team, keeps score.', hue: 0x121315 },
+  { re: /trend|scout|viral/i, code: 'SCOUT', dept: 'content', role: 'Finds trends and proven formats before anyone else. Research only.', vibe: 'Curious, always on the phone.', hue: 0x151618 },
 ];
-const GH_WORKERS = [ // GitHub Actions workers: real, but no live feed reaches this page yet.
-  { code: 'HEALTH', name: 'Growth OS health checks', dept: 'systems', role: 'Hourly site, checkout and page checks (GitHub Actions).' },
-  { code: 'TILL', name: 'Revenue ledger', dept: 'finance', role: 'Gumroad and site numbers into the ledger (GitHub Actions).' },
-  { code: 'POSTMAN', name: 'Kit sync', dept: 'systems', role: 'Routes subscribers into Kit every 3 hours (GitHub Actions).' },
+const GH_WORKERS = [ // GitHub Actions workers. Live status arrives through the ANALYST feed (status/hub in this page's database).
+  { code: 'RELAY', tools: ['GitHub', 'Threads API'], wf: 'post.yml', name: 'Post to Threads (GitHub Actions)', dept: 'content', role: 'Every 15 minutes: publishes the approved Threads queue.' },
+  { code: 'REELS', tools: ['GitHub', 'Render pipeline', 'ElevenLabs'], wf: 'freel.yml', name: 'Factory reels render (GitHub Actions)', dept: 'content', role: 'Daily 06:07 ART: renders the next factory reels.' },
+  { code: 'STORIES', tools: ['GitHub', 'Render pipeline'], wf: 'market.yml', name: 'Daily stories (GitHub Actions)', dept: 'content', role: 'Daily: builds the stories set.' },
+  { code: 'REPLY', tools: ['GitHub', 'Threads API', 'Metricool'], wf: 'daily.yml', name: 'Stats and comment replies (GitHub Actions)', dept: 'care', role: 'Hourly: collects stats and replies to comments.' },
+  { code: 'TILL', tools: ['GitHub', 'Gumroad'], wf: 'revenue.yml', name: 'Revenue ledger (GitHub Actions)', dept: 'finance', role: 'Every 3 hours: Gumroad sales and site numbers into the ledger.' },
+  { code: 'SYNC', tools: ['GitHub', 'Gumroad'], wf: 'gumroad.yml', name: 'Gumroad products (GitHub Actions)', dept: 'finance', role: 'Every 6 hours: keeps products, files and codes in sync.' },
+  { code: 'HEALTH', tools: ['GitHub', 'Site checks'], wf: 'health.yml', name: 'Growth OS health checks (GitHub Actions)', dept: 'systems', role: 'Hourly: site, checkout and page checks.' },
+  { code: 'CI', tools: ['GitHub', 'pytest'], wf: 'ci.yml', name: 'Tests (GitHub Actions)', dept: 'systems', role: 'Runs the test suite on every push.' },
 ];
-const DEPTS = {
-  exec: { name: 'Executive', x: 0, z: -7.5 },
-  content: { name: 'Content + Research', x: -11, z: 3 },
-  care: { name: 'Customer Support', x: 11, z: 3 },
-  finance: { name: 'Finance + Analytics', x: 11, z: -6 },
-  systems: { name: 'Systems + Automation', x: -11, z: -6 },
+const DEPTS = { // desk grid per department: 3 columns, rows 3.3 apart from z0
+  exec: { name: 'Executive', x: 0, z: -7.5, z0: -9.2, rows: 2 },
+  content: { name: 'Content + Research', x: -11, z: 4.8, z0: 1.4, rows: 3 },
+  care: { name: 'Customer Support', x: 11, z: 3, z0: 1.4, rows: 2 },
+  finance: { name: 'Finance + Analytics', x: 11, z: -6, z0: -9.2, rows: 3 },
+  systems: { name: 'Systems + Automation', x: -11, z: -6, z0: -9.2, rows: 3 },
 };
 const STATE = {
-  WORKING: { c: '#D4FF3A', label: 'WORKING' }, COMPLETED: { c: '#7fd6ff', label: 'COMPLETED' }, IDLE: { c: '#9aa18f', label: 'IDLE' },
-  FAILED: { c: '#ff5a4f', label: 'FAILED' }, OFFLINE: { c: '#666', label: 'PAUSED' }, NOFEED: { c: '#4a4d45', label: 'NO LIVE FEED' }, WAITING: { c: '#4a4d45', label: 'WAITING FOR FEED' },
+  WORKING: { c: '#D4FF3A', label: 'WORKING' }, COMPLETED: { c: '#7fd6ff', label: 'COMPLETED' }, IDLE: { c: '#9aa18f', label: 'ON CALL' },
+  FAILED: { c: '#ff5a4f', label: 'FAILED' }, OFFLINE: { c: '#666', label: 'PAUSED' }, NOFEED: { c: '#4a4d45', label: 'FEED PENDING' }, WAITING: { c: '#4a4d45', label: 'WAITING FOR FEED' },
 };
 // Tools an agent uses, detected from words in its own standing orders (not invented).
 const TOOL_RULES = [
@@ -198,8 +209,10 @@ const TOOL_RULES = [
 ];
 // Who hands work to whom: from how the system is configured (FIRST SALES MODE plan), not from live telemetry.
 const COLLAB = {
-  WIRE: ['SCOUT', 'PULSE'], FOREMAN: ['JUDGE', 'WIRE', 'HEALTH', 'CLOSER'], SHIELD: ['POSTMAN', 'FOREMAN'], LEDGER: ['TILL', 'COACH'], CLOSER: ['FOREMAN', 'JUDGE', 'TILL'],
-  JUDGE: ['FOREMAN'], PULSE: ['HEALTH', 'WIRE', 'FOREMAN'], COACH: ['LEDGER', 'INK'], INK: ['POSTMAN', 'COACH'], SCOUT: ['WIRE'], HEALTH: ['PULSE'], TILL: ['LEDGER'], POSTMAN: ['SHIELD', 'INK'],
+  WIRE: ['SCOUT', 'FACTORY', 'PULSE'], FOREMAN: ['JUDGE', 'REELS', 'HEALTH', 'CLOSER'], SHIELD: ['REPLY', 'POSTMAN'], LEDGER: ['TILL', 'COACH', 'ANALYST'], CLOSER: ['FOREMAN', 'JUDGE', 'TILL'],
+  JUDGE: ['FOREMAN', 'ANALYST'], PULSE: ['HEALTH', 'DISPATCH', 'FOREMAN'], COACH: ['LEDGER', 'ANALYST', 'INK'], INK: ['POSTMAN', 'COACH'], SCOUT: ['WIRE', 'FACTORY'], MERCH: ['SCOUT', 'BUILDER'],
+  POSTMAN: ['SHIELD', 'INK'], DISPATCH: ['FACTORY', 'RELAY', 'PULSE'], ANALYST: ['TILL', 'RELAY', 'HEALTH', 'COACH'], FACTORY: ['WIRE', 'SCOUT', 'DISPATCH'], BUILDER: ['HEALTH', 'SYNC', 'FOREMAN'],
+  RELAY: ['DISPATCH', 'WIRE'], REELS: ['FOREMAN', 'JUDGE'], STORIES: ['WIRE'], REPLY: ['SHIELD', 'ANALYST'], TILL: ['LEDGER', 'ANALYST'], SYNC: ['TILL', 'BUILDER'], HEALTH: ['PULSE', 'BUILDER'], CI: ['HEALTH', 'BUILDER'],
 };
 // Workflow steps: read from the standing orders when they declare steps (numbered lines or CAPS headings).
 function parseSteps(prompt) {
@@ -384,7 +397,7 @@ for (let b = 0; b < 5; b++) {
   for (let k = 1; k < 5; k++) box(wB, 0.09, 0.12, M.frame, x0 + wB / 2, 1.1 + k * (hqH - 2.1) / 5, fz, FRONT);
 }
 // steel columns, ceiling ducts, pendant lamps
-[-15.5, -5.5, 5.5, 15.5].forEach((x) => [-3, 6].forEach((z) => { const c = box(0.5, hqH, 0.5, M.rust, x, hqH / 2, z, HQ); c.castShadow = true; }));
+[-15.5, -5.5, 5.5, 15.5].forEach((x) => [-0.4, 11.8].forEach((z) => { const c = box(0.5, hqH, 0.5, M.rust, x, hqH / 2, z, HQ); c.castShadow = true; }));
 const duct = cyl(0.32, 0.32, hqW - 2, M.duct, 0, hqH - 0.5, -hqD / 2 + 1.4, HQ, 16); duct.rotation.z = Math.PI / 2;
 for (let x = -16; x <= 16; x += 8) box(0.18, 0.18, hqD - 1, M.rust, x, hqH - 0.2, 0, HQ);
 [[-12, -6], [0, -6], [12, -6], [-12, 4], [0, 2], [12, 4]].forEach(([x, z]) => {
@@ -710,11 +723,12 @@ const agents = new Map();
 const events = []; // session event log: only things this page actually observed
 function logEvent(kind, text, agentId, color) { events.unshift({ at: Date.now(), kind, text, agentId, color: color || '#C8F53C' }); if (events.length > 200) events.pop(); if (curView === 'activity') renderView(); renderStatus(); }
 const deptSlots = { exec: 0, content: 0, care: 0, finance: 0, systems: 0 };
-const slotPos = (dept, n) => { const d = DEPTS[dept]; const col = n % 2, row = Math.floor(n / 2); return { x: d.x + (col ? 3.2 : -3.2), z: d.z + row * 3.6, rot: 0 }; };
+const slotPos = (dept, n) => { const d = DEPTS[dept]; const col = n % 3, row = Math.floor(n / 3); return { x: d.x + (col - 1) * 3.9, z: d.z0 + row * 3.3, rot: 0 }; };
+const deptFor = (want) => (deptSlots[want] < DEPTS[want].rows * 3 ? want : Object.keys(DEPTS).find((k) => deptSlots[k] < DEPTS[k].rows * 3) || want);
 function identityFor(name) { const r = ROSTER.find((x) => x.re.test(name)); return r ? { ...r } : { code: name.replace(/[^A-Za-z]/g, '').slice(0, 6).toUpperCase() || 'AGENT', dept: 'systems', role: name, vibe: 'New hire.', hue: 0x1b1c1e }; }
 const cardsEl = document.getElementById('cards');
 function addAgent(id, name, ident, ghost) {
-  const dept = ident.dept; const n = deptSlots[dept]++; const p = slotPos(dept, n);
+  const dept = deptFor(ident.dept); ident.dept = dept; const n = deptSlots[dept]++; const p = slotPos(dept, n);
   const desk = makeDesk(p.x, p.z, p.rot);
   const rig = makeOperative(agents.size, ident.hue);
   rig.root.position.set(p.x + 1.4, 0.25, p.z + 1.4); HQ.add(rig.root);
@@ -725,11 +739,11 @@ function addAgent(id, name, ident, ghost) {
     seat: new THREE.Vector3(p.x, 0.25, p.z + 0.95), stand: new THREE.Vector3(p.x + 1.5, 0.25, p.z + 1.6), pos: new THREE.Vector3(p.x + 1.5, 0.25, p.z + 1.6), phase: rnd() * 10 };
   agents.set(id, a); drawMonitor(a); drawCard(a); return a;
 }
-GH_WORKERS.forEach((w) => addAgent('gh:' + w.code, w.name, { code: w.code, dept: w.dept, role: w.role, vibe: 'Runs on GitHub Actions.', hue: 0x1b1c1e }, true));
+GH_WORKERS.forEach((w) => addAgent('gh:' + w.code, w.name, { code: w.code, dept: w.dept, role: w.role, vibe: 'Runs on GitHub Actions.', hue: 0x1b1c1e, wf: w.wf }, true).tools = w.tools);
 const shortName = (a) => a.name.replace(/^AUTOPILOT\.OI\s*/i, '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
 function activity(a) {
   const d = a.data;
-  if (a.ghost) return 'Live feed not connected';
+  if (a.ghost) { const g = a.gh; if (!g) return 'Waiting for the ANALYST feed'; if (a.state === 'WORKING') return 'Running now (as of ' + ago(live.hub.at) + ')'; if (a.state === 'FAILED') return 'Last run failed ' + ago(g.finished || g.started); return 'Last run ' + ago(g.finished || g.started) + (g.runs24h != null ? ' · ' + g.runs24h + ' runs in 24h' : ''); }
   if (!d) return 'Waiting for live feed';
   if (a.state === 'WORKING') return 'Run started ' + ago(d.last);
   if (a.state === 'FAILED') return 'Last run failed ' + ago(d.last);
@@ -751,7 +765,7 @@ function drawMonitor(a) {
   g.fillStyle = st.c; g.font = 'bold 15px "Space Mono", monospace'; g.fillText(a.ident.code + ' · ' + st.label, 10, 22);
   g.fillStyle = '#7f8a74'; g.font = '11px "Space Mono", monospace';
   const d = a.data;
-  const lines = d ? [`last run  ${ago(d.last)}`, `result    ${d.status || 'n/a'}`, `next      ${ago(d.next)}`] : a.ghost ? ['GitHub Actions worker', 'live feed not connected'] : ['waiting for live feed'];
+  const gh = a.gh; const lines = d ? [`last run  ${ago(d.last)}`, `result    ${d.status || 'n/a'}`, `next      ${ago(d.next)}`] : gh ? [`last run  ${ago(gh.finished || gh.started)}`, `result    ${(gh.conclusion || gh.status || "n/a").toUpperCase()}`, `24h runs  ${gh.runs24h ?? "n/a"}`] : a.ghost ? ['GitHub Actions worker', 'waiting for ANALYST feed'] : ['waiting for live feed'];
   lines.forEach((l, i) => g.fillText(l, 10, 46 + i * 16));
   for (let i = 0; i < 26; i++) { const h = a.state === 'WORKING' ? 6 + Math.abs(Math.sin(i * 1.7 + a.phase)) * 34 : 3 + (i % 5); g.fillStyle = a.state === 'FAILED' ? '#5a2522' : '#2c4a1a'; g.fillRect(10 + i * 9, H - 10 - h, 6, h); }
   a.desk.tex.needsUpdate = true;
@@ -767,7 +781,7 @@ function setState(a, s) {
 // ---------------------------------------------------------------------------
 // Live data
 // ---------------------------------------------------------------------------
-const live = { triggers: null, posts: null, kit: null, at: {}, err: {} };
+const live = { triggers: null, posts: null, kit: null, hub: null, at: {}, err: {} };
 function deriveState(t) {
   if (!t.enabled) return 'OFFLINE';
   const lr = t.last_run || {}; const st = (lr.status || '').replace('ROUTINE_RUN_STATUS_', '');
@@ -783,6 +797,34 @@ function parseMaybe(p) {
   for (let j = s.lastIndexOf('}'), n = 0; j > i && n < 40; j = s.lastIndexOf('}', j - 1), n++) { try { return JSON.parse(s.slice(i, j + 1)); } catch (e) {} }
   return null;
 }
+// ---- ANALYST feed: GitHub Actions workers, verified revenue (Gumroad ledger), approvals waiting.
+// The hourly ANALYST scheduled task writes status/hub into this page's own database. Older than 2.5h = stale.
+function hubStale() { return !live.hub || Date.now() - Date.parse(live.hub.at) > 2.5 * 3600e3; }
+function ghState(g) {
+  if (!g || hubStale()) return 'NOFEED';
+  if (g.status === 'in_progress' || g.status === 'queued') return 'WORKING';
+  if (g.conclusion === 'failure' || g.conclusion === 'timed_out') return 'FAILED';
+  if (g.conclusion === 'success' && g.finished && Date.now() - Date.parse(g.finished) < 20 * 60000) return 'COMPLETED';
+  return 'IDLE';
+}
+function applyHub(d) {
+  if (!d || !d.at) return;
+  const first = !live.hub; live.hub = d; live.at.hub = Date.parse(d.at);
+  live.err.hub = hubStale() ? { text: 'stale since ' + ago(d.at) } : null;
+  for (const a of agents.values()) if (a.ghost && a.ident.wf) { a.gh = (d.github || {})[a.ident.wf] || null; a.shownState = null; setState(a, ghState(a.gh)); }
+  if (first) logEvent('feed', `ANALYST feed ${DEMO ? '(DEMO)' : 'live'}: GitHub workers, revenue ledger, approvals (as of ${ago(d.at)})`, null, '#7fd6ff');
+  renderUI();
+}
+async function connectDb() {
+  let db = null; try { db = await window.claude?.use?.('db'); } catch (e) { db = null; }
+  if (!db) { live.err.hub = { text: 'open this page in Claude' }; renderUI(); return; }
+  const timer = setTimeout(() => { if (!live.hub) { live.err.hub = { text: 'not reachable yet' }; renderUI(); } }, 10000);
+  try {
+    db.doc('status/hub').onSnapshot((snap) => { clearTimeout(timer); if (snap.exists) applyHub(snap.data()); else { live.err.hub = { text: 'no ANALYST report yet' }; renderUI(); } },
+      (e) => { clearTimeout(timer); live.err.hub = { text: 'feed error: ' + (e && e.code || 'unavailable') }; renderUI(); });
+  } catch (e) { clearTimeout(timer); live.err.hub = { text: 'feed error' }; renderUI(); }
+}
+const money = (r) => { if (!r) return null; const n = r.net_7d || {}; const k = Object.keys(n); return k.length ? k.map((c) => (c === 'USD' ? '$' : c + ' ') + Number(n[c]).toFixed(0)).join(' · ') : '$0'; };
 function applyTriggers(list) {
   const first = !live.triggers; live.triggers = list;
   for (const t of list) {
@@ -812,6 +854,7 @@ function errText(code, server) {
 let mcp = null; const srv = { ...SERVERS };
 async function connect() {
   if (DEMO) return simulate();
+  connectDb();
   try { mcp = await window.claude?.use?.('mcp'); } catch (e) { mcp = null; }
   if (!mcp) { ['triggers', 'posts', 'kit'].forEach((k) => (live.err[k] = { text: 'open this page in Claude' })); renderUI(); return; }
   try { // resolve the real display names of the connectors
@@ -871,7 +914,7 @@ const P_ = () => (live.posts || []).filter((p) => !p.draft);
 function counts() {
   const T = live.triggers, P = P_();
   const A = [...agents.values()];
-  const withRun = A.filter((a) => a.data && a.data.raw.enabled && a.data.status);
+  const withRun = A.filter((a) => (a.data && a.data.raw.enabled && a.data.status) || (a.gh && a.gh.conclusion));
   return {
     running: T ? A.filter((a) => a.state === 'WORKING').length : null,
     onShift: T ? T.filter((t) => t.enabled).length : null,
@@ -881,8 +924,10 @@ function counts() {
     failedPosts: live.posts ? P.filter((p) => p.status === 'ERROR').length : null,
     subs: live.kit ? (live.kit.subscribers ?? 0) : null,
     next24: T ? T.filter((t) => t.enabled && t.next_run_at && new Date(t.next_run_at) - Date.now() < 864e5).length : null,
-    health: T && withRun.length ? Math.round(100 * withRun.filter((a) => a.data.status !== 'FAILED').length / withRun.length) : null,
+    health: T && withRun.length ? Math.round(100 * withRun.filter((a) => (a.data ? a.data.status !== 'FAILED' : a.gh.conclusion !== 'failure')).length / withRun.length) : null,
     failedAgents: T ? A.filter((a) => a.state === 'FAILED').length : null,
+    revenue: live.hub && !hubStale() ? money(live.hub.revenue) : null, orders7: live.hub && live.hub.revenue ? live.hub.revenue.orders_7d : null,
+    approvals: live.hub && !hubStale() && live.hub.approvals ? live.hub.approvals.count : null,
   };
 }
 const dash = (v) => (v == null ? '—' : String(v));
@@ -897,12 +942,12 @@ function drawWalls(t = 0) {
   const c = counts();
   // LEFT: live operations
   { const { g, W, H, tex } = wallL; panelHead(g, W, 'LIVE OPERATIONS', DEMO ? 'DEMO MODE' : 'LIVE');
-    const tiles = [['Agents running', c.running], ['On shift', c.onShift], ['Posts out today', c.published], ['Queued today', c.queued], ['Kit subscribers', c.subs], ['Revenue', NC]];
+    const tiles = [['Agents running', c.running], ['On shift', c.onShift], ['Posts out today', c.published], ['Queued today', c.queued], ['Kit subscribers', c.subs], ['Revenue 7d', c.revenue ?? NC]];
     tiles.forEach(([k, v], i) => { const x = 28 + (i % 3) * 328, y = 100 + Math.floor(i / 3) * 186;
       g.fillStyle = '#0b1210'; g.fillRect(x, y, 312, 172); g.strokeStyle = '#26321f'; g.lineWidth = 2; g.strokeRect(x + 1, y + 1, 310, 170);
       g.fillStyle = '#7f8a74'; g.font = '600 24px "Chakra Petch"'; g.fillText(k.toUpperCase(), x + 18, y + 40);
       const nc = v === NC; g.fillStyle = nc ? '#8a7a45' : '#eef0e6'; g.font = nc ? '600 32px "Chakra Petch"' : '600 100px "Chakra Petch"'; g.fillText(nc ? NC : dash(v), x + 18, y + (nc ? 118 : 150)); });
-    g.fillStyle = '#7f8a74'; g.font = '20px "Space Mono"'; g.fillText('Claude scheduler · Metricool · Kit', 28, H - 22); tex.needsUpdate = true; }
+    g.fillStyle = '#7f8a74'; g.font = '20px "Space Mono"'; g.fillText('Scheduler · Metricool · Kit · Gumroad ledger', 28, H - 22); tex.needsUpdate = true; }
   // CENTER: workflow engine (real pipeline, flows animate only where the feed shows activity)
   { const { g, W, H, tex } = wallC; panelHead(g, W, 'WORKFLOW ENGINE · CONTENT PIPELINE', 'today, ART');
     const wire = [...agents.values()].find((a) => a.ident.code === 'WIRE'), fore = [...agents.values()].find((a) => a.ident.code === 'FOREMAN');
@@ -924,14 +969,14 @@ function drawWalls(t = 0) {
     const al = alerts(); if (!al.length) { g.fillStyle = '#3bd16f'; g.font = '600 34px "Chakra Petch"'; g.fillText(live.triggers || live.posts ? 'No failures reported' : 'Waiting for feeds', 28, 140); }
     al.slice(0, 4).forEach((x, i) => { const y = 100 + i * 82; g.fillStyle = '#140b0a'; g.fillRect(28, y, W - 56, 72); g.fillStyle = x.c; g.fillRect(28, y, 8, 72); g.fillStyle = '#eef0e6'; g.font = '600 28px "Chakra Petch"'; g.fillText(x.title.slice(0, 44), 52, y + 32); g.fillStyle = '#a7ae9c'; g.font = '19px "Space Mono"'; g.fillText(x.sub.slice(0, 64), 52, y + 60); });
     const feeds = [['Scheduler', 'triggers'], ['Metricool', 'posts'], ['Kit', 'kit']]; feeds.forEach(([n, k], i) => { const x = 28 + i * 330, y = H - 76; const ok = !!live[k] && !live.err[k]; g.fillStyle = ok ? '#3bd16f' : live.err[k] ? '#ff5a4f' : '#4a4d45'; g.beginPath(); g.arc(x + 10, y + 8, 10, 0, 7); g.fill(); g.fillStyle = '#d7dccf'; g.font = '22px "Space Mono"'; g.fillText(n + (ok ? ' live' : live.err[k] ? ' down' : ' …'), x + 28, y + 16); });
-    g.fillStyle = '#a8955a'; g.font = '19px "Space Mono"'; g.fillText('Revenue · GitHub · Approvals: ' + NC, 28, H - 18); tex.needsUpdate = true; }
+    g.fillStyle = '#a8955a'; g.font = '19px "Space Mono"'; g.fillText(live.hub ? `ANALYST feed ${hubStale() ? 'stale' : 'live'} · as of ${ago(live.hub.at)} · Ads: ${NC}` : 'ANALYST feed · Ads: ' + NC, 28, H - 18); tex.needsUpdate = true; }
   drawMap(t);
 }
 function alerts() {
   const out = [];
-  for (const a of agents.values()) if (a.state === 'FAILED') out.push({ c: '#ff5a4f', title: `${a.ident.code} last run failed`, sub: `${shortName(a)} · ${ago(a.data.last)}`, id: a.id });
+  for (const a of agents.values()) if (a.state === 'FAILED') out.push({ c: '#ff5a4f', title: `${a.ident.code} last run failed`, sub: `${shortName(a)} · ${ago(a.data ? a.data.last : a.gh && (a.gh.finished || a.gh.started))}`, id: a.id });
   for (const p of P_()) if (p.status === 'ERROR') out.push({ c: '#ff5a4f', title: `Post failed on ${p.net}`, sub: `${p.time.slice(11, 16)} · ${p.text}` });
-  for (const [k, n] of [['triggers', 'Scheduler'], ['posts', 'Metricool'], ['kit', 'Kit']]) if (live.err[k]) out.push({ c: '#ffc94a', title: `${n} feed: ${live.err[k].text}`, sub: 'Data from this source is not shown until it reconnects' });
+  for (const [k, n] of [['triggers', 'Scheduler'], ['posts', 'Metricool'], ['kit', 'Kit'], ['hub', 'ANALYST']]) if (live.err[k]) out.push({ c: '#ffc94a', title: `${n} feed: ${live.err[k].text}`, sub: 'Data from this source is not shown until it reconnects' });
   return out;
 }
 function drawMap(t) {
@@ -976,8 +1021,8 @@ function renderTop() {
   const c = counts(); const nc = '<span class="nc" style="white-space:normal;line-height:1.05;display:block;font-size:9.5px!important">NOT CONNECTED</span>';
   const tiles = [
     ['Chicago', I.clock, chiTime()], ['Running', I.bolt, dash(c.running)], ['On shift', I.users, c.onShift == null ? '—' : `${c.onShift}<small style="color:var(--mut);font-size:13px">/${c.total}</small>`],
-    ['Task queue', I.list, dash(c.queued)], ['Published', I.send, dash(c.published)], ['Revenue', I.dollar, nc], ['Subscribers', I.mail, dash(c.subs)],
-    ['Runs 24h', I.cog, dash(c.next24)], ['Health', I.heart, c.health == null ? '—' : c.health + '%'], ['Approvals', I.check, nc],
+    ['Task queue', I.list, dash(c.queued)], ['Published', I.send, dash(c.published)], ['Revenue 7d', I.dollar, c.revenue == null ? nc : c.revenue + (c.orders7 != null ? `<small style="color:var(--mut);font-size:12px"> ${c.orders7} orders</small>` : '')], ['Subscribers', I.mail, dash(c.subs)],
+    ['Runs 24h', I.cog, dash(c.next24)], ['Health', I.heart, c.health == null ? '—' : c.health + '%'], ['Approvals', I.check, c.approvals == null ? nc : String(c.approvals)],
   ];
   $('metrics').innerHTML = (innerWidth <= 820 ? `<button class="m glass" id="menuBtn" style="min-width:0;cursor:pointer;color:var(--lime)">${ico(I.menu)}</button>` : '') +
     tiles.map(([k, i, v], n) => `<div class="m glass" title="${k}" style="${n === 0 ? 'min-width:118px' : ''}"><em>${k}</em><div>${ico(i)}<strong>${v}</strong></div></div>`).join('') +
@@ -988,7 +1033,7 @@ function renderTop() {
 let curView = null, searchQ = '';
 function renderSide() {
   const A = [...agents.values()]; const c = counts();
-  const ct = { agents: A.length, tasks: c.next24 ?? '', content: live.posts ? P_().length : '', activity: events.length || '', integrations: ['triggers', 'posts', 'kit'].filter((k) => live[k] && !live.err[k]).length + '/7' };
+  const ct = { agents: A.length, tasks: c.next24 ?? '', content: live.posts ? P_().length : '', activity: events.length || '', integrations: ['triggers', 'posts', 'kit', 'hub'].filter((k) => live[k] && !live.err[k]).length * 1 + (live.hub && !live.err.hub ? 2 : 0) + '/7' };
   const deps = Object.entries(DEPTS).map(([k, d]) => `<div class="dp" data-dept="${k}"><i style="${A.some((a) => a.ident.dept === k && a.state === 'WORKING') ? '' : 'background:#3a4434;box-shadow:none'}"></i>${d.name}<b>${A.filter((a) => a.ident.dept === k).length}</b></div>`).join('');
   const side = $('side'); const had = side.querySelector('input'); const focus = had && document.activeElement === had;
   side.innerHTML = `<label class="search">${ico(I.search)}<input id="q" placeholder="Search agents  /" value="${esc(searchQ)}" autocomplete="off"></label>
@@ -1004,7 +1049,7 @@ ${NAV.map(([k, n, d]) => `<div class="nv ${curView === k || (!curView && k === '
 }
 const matches = (a) => { const q = searchQ.trim().toLowerCase(); return q && (a.ident.code.toLowerCase().includes(q) || a.name.toLowerCase().includes(q) || DEPTS[a.ident.dept].name.toLowerCase().includes(q)); };
 function renderStatus() {
-  const c = counts(); const down = ['triggers', 'posts', 'kit'].filter((k) => live.err[k]).length; const syncs = Object.values(live.at).filter(Boolean);
+  const c = counts(); const down = ['triggers', 'posts', 'kit', 'hub'].filter((k) => live.err[k]).length; const syncs = Object.values(live.at).filter(Boolean);
   $('status').innerHTML = `<span class="on" style="${down ? 'color:var(--amber)' : ''}"><i style="${down ? 'background:var(--amber);box-shadow:0 0 8px var(--amber)' : ''}"></i>${DEMO ? 'DEMO MODE · TEST DATA' : down ? down + ' FEED' + (down > 1 ? 'S' : '') + ' DOWN' : 'ALL FEEDS LIVE'}</span>
 <span class="s">Agents <b>${dash(c.running)}</b> running / <b>${dash(c.onShift)}</b> on shift</span><span class="s">Posts today <b>${dash(c.published)}</b> out · <b>${dash(c.queued)}</b> queued</span>
 <span class="s">Subscribers <b>${dash(c.subs)}</b></span><span class="s">Last sync <b>${syncs.length ? ago(new Date(Math.max(...syncs)).toISOString()) : '—'}</b></span><span class="s">Events <b>${events.length}</b></span>
@@ -1029,7 +1074,7 @@ function renderView() {
   if (!curView) return; const A = [...agents.values()]; const c = counts(); const P = P_().slice().sort((a, b) => a.time.localeCompare(b.time));
   const title = (NAV.find((n) => n[0] === curView) || [0, curView])[1];
   let body = '';
-  if (curView === 'agents') body = `<table class="t"><tr><th>Agent</th><th>Department</th><th>State</th><th>Last run</th><th>Next run</th></tr>${A.map((a) => row([`<b>${a.ident.code}</b><br><span class="note">${esc(shortName(a))}</span>`, DEPTS[a.ident.dept].name, stPill(a.state), a.data ? `${ago(a.data.last)}<br><span class="note">${a.data.status || ''}</span>` : '—', a.data ? ago(a.data.next) : a.ghost ? 'feed not connected' : '—'], a.id)).join('')}</table>`;
+  if (curView === 'agents') body = `<table class="t"><tr><th>Agent</th><th>Department</th><th>State</th><th>Last run</th><th>Next run</th></tr>${A.map((a) => row([`<b>${a.ident.code}</b><br><span class="note">${esc(shortName(a))}</span>`, DEPTS[a.ident.dept].name, stPill(a.state), a.data ? `${ago(a.data.last)}<br><span class="note">${a.data.status || ''}</span>` : a.gh ? `${ago(a.gh.finished || a.gh.started)}<br><span class="note">${(a.gh.conclusion || a.gh.status || '').toUpperCase()}</span>` : '—', a.data ? ago(a.data.next) : a.gh ? (a.gh.runs24h ?? '—') + ' runs / 24h' : a.ghost ? 'waiting for ANALYST' : '—'], a.id)).join('')}</table>`;
   else if (curView === 'workflows') body = A.filter((a) => a.data).map((a) => `<div class="sec" style="border:1px solid #1d241a;border-radius:10px;margin-bottom:10px"><h4><span>${a.ident.code} · ${esc(shortName(a))}</span>${stPill(a.state)}</h4>${a.steps && a.steps.length ? `<ol class="flow">${a.steps.map((s) => `<li class="${a.state === 'WORKING' ? '' : ''}"><i></i>${esc(s)}</li>`).join('')}</ol><div class="note" style="margin-top:6px">Steps read from this agent's standing orders. Which step is running is not reported by the scheduler.</div>` : '<div class="note">No numbered steps declared in its standing orders.</div>'}</div>`).join('') || '<div class="note">Waiting for the scheduler feed.</div>';
   else if (curView === 'tasks') { const run = A.filter((a) => a.state === 'WORKING'); const up = A.filter((a) => a.data && a.data.raw.enabled && a.data.next).sort((a, b) => new Date(a.data.next) - new Date(b.data.next));
     body = `<h4 class="sh" style="margin-left:0">RUNNING NOW</h4>${run.length ? `<table class="t">${run.map((a) => row([`<b>${a.ident.code}</b>`, esc(shortName(a)), 'started ' + ago(a.data.last)], a.id)).join('')}</table>` : '<div class="note">Nothing running right now.</div>'}
@@ -1037,12 +1082,12 @@ function renderView() {
 <div class="note" style="margin-top:8px">Run now assigns the task to the agent immediately, after you confirm. It acts on your real scheduled task.</div>`; }
   else if (curView === 'content') body = live.posts ? `<table class="t"><tr><th>Time ART</th><th>Network</th><th>Status</th><th>Post</th></tr>${P.map((p) => row([p.time.slice(11, 16), netName(p.net), `<span style="color:${p.status === 'PUBLISHED' ? 'var(--lime)' : p.status === 'ERROR' ? 'var(--red)' : 'var(--mut)'}">${p.status}</span>`, esc(p.text.slice(0, 90)) + (p.url ? ` <a href="${esc(p.url)}" target="_blank" rel="noopener">open</a>` : '')])).join('')}</table>` : `<div class="note">${live.err.posts ? 'Metricool feed: ' + live.err.posts.text : 'Waiting for Metricool.'}</div>`;
   else if (curView === 'publishing') body = live.posts ? `<table class="t"><tr><th>Network</th><th>Published</th><th>Queued</th><th>Failed</th><th>Daily cap</th></tr>${NETS.map(([n]) => { const r = P.filter((p) => p.net === n); return row([netName(n), r.filter((p) => p.status === 'PUBLISHED').length, r.filter((p) => p.status === 'PENDING').length, r.filter((p) => p.status === 'ERROR').length, n === 'instagram' ? 2 : 3]); }).join('')}</table><div class="note" style="margin-top:8px">Caps come from your cadence rules (Instagram 2 a day, others 3). Counts are today in Argentina time.</div>` : '<div class="note">Waiting for Metricool.</div>';
-  else if (curView === 'automations') body = `<table class="t"><tr><th>Automation</th><th>Runs on</th><th>Schedule</th><th>State</th></tr>${A.map((a) => row([`<b>${a.ident.code}</b> ${esc(shortName(a))}`, a.ghost ? 'GitHub Actions' : 'Claude scheduler', a.data ? esc((a.data.cron || 'on demand').replace(/CRON_TZ=\S+\s/, '')) : a.ghost ? 'see repo workflows' : '—', stPill(a.state)], a.id)).join('')}</table>`;
+  else if (curView === 'automations') body = `<table class="t"><tr><th>Automation</th><th>Runs on</th><th>Schedule</th><th>State</th></tr>${A.map((a) => row([`<b>${a.ident.code}</b> ${esc(shortName(a))}`, a.ghost ? 'GitHub Actions' : 'Claude scheduler', a.data ? esc((a.data.cron || 'on demand').replace(/CRON_TZ=\S+\s/, '')) : a.ghost ? a.ident.wf : '—', stPill(a.state)], a.id)).join('')}</table>`;
   else if (curView === 'intel') { const s = A.filter((a) => ['WIRE', 'SCOUT'].includes(a.ident.code)); body = `${s.map((a) => `<div class="sec">${a.ident.code} · ${esc(shortName(a))} ${stPill(a.state)}<div class="note">${esc(activity(a))}</div></div>`).join('')}${ncCard('Research findings feed', 'Sources the news desk checked and trends it rejected are written to the repo, not sent to this page yet.', 'Next step: a findings file the page can read.')}`; }
   else if (curView === 'analytics') body = ncCard('Reach, views, saves, follows', 'Metricool analytics are available but this page only has permission for the post schedule.', 'Next step: allow Metricool getAnalyticsDataByMetrics on this page.') + `<div class="note" style="margin-top:10px">Today you can see post status (Content, Publishing) and Kit subscribers. Nothing here is estimated.</div>`;
-  else if (curView === 'finance') body = ncCard('Revenue', 'No Gumroad connector reaches this page. The revenue ledger runs on GitHub Actions and is not exposed here.', 'Next step: a read only Gumroad feed or a published ledger file.') + '<br>' + ncCard('Ad spend', 'Meta ads ($10/day, $60 cap from Nov 5) are managed through Adspirer, which is not allowed on this page.', 'Spending stays approval only.');
+  else if (curView === 'finance') body = (live.hub && live.hub.revenue ? (() => { const r = live.hub.revenue; return `<table class="t"><tr><th>Verified (Gumroad ledger)</th><th></th></tr>${row(['Orders, all time', r.orders_all_time ?? '—'])}${row(['Orders, last 7 days', r.orders_7d ?? '—'])}${row(['Net, last 7 days', money(r)])}${row(['Refunds, all time', r.refunds_all_time ?? '—'])}${row(['Ledger synced', r.ledger_synced ? ago(r.ledger_synced) : '—'])}</table><div class="note" style="margin:8px 0 12px">Net = gross minus Gumroad fees and refunds. Delivered by ANALYST ${ago(live.hub.at)}${hubStale() ? ' (STALE)' : ''}.</div>`; })() : ncCard('Revenue', 'Waiting for the first ANALYST report (it copies the Gumroad ledger summary here every hour).', '')) + '<br>' + ncCard('Ad spend', 'Meta ads ($10/day, $60 cap from Nov 5) are managed through Adspirer, which is not allowed on this page.', 'Spending stays approval only.');
   else if (curView === 'integrations') { const f = (n, k) => { const ok = live[k] && !live.err[k]; return row([n, ok ? '<span style="color:var(--lime)">● LIVE</span>' : live.err[k] ? `<span style="color:var(--red)">● ${esc(live.err[k].text)}</span>` : DEMO ? 'DEMO' : '…', live.at[k] ? ago(new Date(live.at[k]).toISOString()) : '—']); };
-    body = `<table class="t"><tr><th>Source</th><th>Status</th><th>Last sync</th></tr>${f('Claude scheduler (agents)', 'triggers')}${f('Metricool (posts)', 'posts')}${f('Kit (subscribers)', 'kit')}${['Gumroad (revenue)', 'GitHub Actions (workers)', 'Approval queue', 'Meta Ads (spend)'].map((n) => row([n, '<span class="nc">NOT CONNECTED</span>', '—'])).join('')}</table>`; }
+    body = `<table class="t"><tr><th>Source</th><th>Status</th><th>Last sync</th></tr>${f('Claude scheduler (agents)', 'triggers')}${f('Metricool (posts)', 'posts')}${f('Kit (subscribers)', 'kit')}${f('Gumroad ledger (revenue) · via ANALYST', 'hub')}${f('GitHub Actions (workers) · via ANALYST', 'hub')}${f('Approval queue (repo) · via ANALYST', 'hub')}${row(['Meta Ads (spend)', '<span class="nc">NOT CONNECTED</span>', '—'])}</table>`; }
   else if (curView === 'activity') body = `<div class="row" style="margin-bottom:10px"><button class="btn lime" id="rp">${ico('M4 4v6h6M4 10a8 8 0 112 7')}Replay session</button></div>
 ${alerts().length ? `<h4 class="sh" style="margin-left:0">NEEDS ATTENTION</h4>${alerts().map((x) => `<div class="sec" style="border-left:3px solid ${x.c}"><b>${esc(x.title)}</b><div class="note">${esc(x.sub)}</div></div>`).join('')}` : ''}
 <h4 class="sh" style="margin-left:0">SESSION LOG · SINCE YOU OPENED THIS PAGE</h4><div class="log">${events.map((e) => `<div ${e.agentId ? `data-agent="${e.agentId}" style="cursor:pointer"` : ''}><span>${ART(new Date(e.at))}</span><span style="color:${e.color}">${esc(e.text)}</span></div>`).join('') || '<div><span></span><span class="note">No changes observed yet.</span></div>'}</div>`;
@@ -1080,7 +1125,7 @@ function renderInspector() {
   $('insp').innerHTML = `<div class="ih"><span>AGENT INSPECTOR${DEMO ? ' · <span style="color:var(--red)">DEMO</span>' : ''}</span><button id="ix">✕</button></div>
 <div class="prof"><canvas id="pc" width="172" height="172"></canvas><div><div class="id">${a.ghost ? 'GitHub Actions' : 'ID ' + esc(String(a.id).slice(-8))}</div><h3><i style="background:${st.c};box-shadow:0 0 8px ${st.c}"></i>${a.ident.code}</h3><div class="note">${DEPTS[a.ident.dept].name}</div><span class="pill" style="margin-top:6px;color:${st.c};border-color:${st.c}66">● ${st.label}</span><br><span class="tag">PLACEHOLDER MODEL</span></div></div>
 <dl class="kv"><dt>Role</dt><dd>${esc(a.ident.role)}</dd><dt>Task</dt><dd>${esc(shortName(a))}</dd><dt>Activity</dt><dd>${esc(activity(a))}</dd><dt>Elapsed</dt><dd>${dur}</dd>
-${d ? `<dt>Schedule</dt><dd>${esc((d.cron || 'on demand').replace(/CRON_TZ=\S+\s/, ''))}${String(d.cron).startsWith('CRON_TZ') ? ' ART' : ''}</dd><dt>Next run</dt><dd>${ago(d.next)}${d.next ? ' · ' + ART(new Date(d.next)) + ' ART' : ''}</dd><dt>Last result</dt><dd>${d.status || 'not run yet'}</dd>` : `<dt>Feed</dt><dd>${a.ghost ? 'Runs on GitHub Actions. Live feed not connected to this page.' : 'Waiting for the live feed.'}</dd>`}</dl>
+${d ? `<dt>Schedule</dt><dd>${esc((d.cron || 'on demand').replace(/CRON_TZ=\S+\s/, ''))}${String(d.cron).startsWith('CRON_TZ') ? ' ART' : ''}</dd><dt>Next run</dt><dd>${ago(d.next)}${d.next ? ' · ' + ART(new Date(d.next)) + ' ART' : ''}</dd><dt>Last result</dt><dd>${d.status || 'not run yet'}</dd>` : (a.gh ? `<dt>Workflow</dt><dd>${a.ident.wf}</dd><dt>Last run</dt><dd>${ago(a.gh.finished || a.gh.started)} · ${(a.gh.conclusion || a.gh.status || '').toUpperCase()}</dd><dt>Runs 24h</dt><dd>${a.gh.runs24h ?? '—'} (${a.gh.fails24h ?? 0} failed)</dd><dt>Feed</dt><dd>ANALYST, ${ago(live.hub.at)}${hubStale() ? ' · STALE' : ''}</dd>` : `<dt>Feed</dt><dd>${a.ghost ? 'GitHub Actions worker. Waiting for the ANALYST report.' : 'Waiting for the live feed.'}</dd>`)}</dl>
 ${a.state === 'WORKING' ? `<div class="sec"><h4><span>PROGRESS</span><span class="note">not reported</span></h4><div class="bar"><b></b></div><div class="note" style="margin-top:6px">The scheduler reports started and finished, not percent done, so no number is shown.</div></div>` : ''}
 <div class="sec"><h4><span>WORKFLOW</span><span class="note">from standing orders</span></h4>${a.steps && a.steps.length ? `<ol class="flow">${a.steps.map((s) => `<li><i></i>${esc(s)}</li>`).join('')}</ol>` : '<div class="note">No declared steps.</div>'}</div>
 <div class="sec"><h4><span>TOOLS</span><span class="note">named in its orders</span></h4><div class="chips">${(a.tools || []).map((t) => `<span>${t}</span>`).join('') || '<span>—</span>'}</div></div>
@@ -1160,9 +1205,11 @@ function simulate() {
   const mk = (id, name, fired, fin, st, en = true, prompt = 'Demo standing orders.') => (fired == null ? { id, name, enabled: en, next_run_at: iso(600), run_once_at: iso(600), derived_state: { prompt } } : ({ id, name, enabled: en, cron_expression: 'CRON_TZ=America/Argentina/Buenos_Aires 49 * * * *', next_run_at: iso(40), last_run: { status: 'ROUTINE_RUN_STATUS_' + st, fired_at: iso(fired), finished_at: fin == null ? null : iso(fin) }, derived_state: { prompt } }));
   const wireOrders = '1. SCAN the wires with web search\n2. VERIFY two sources\n3. LIMITS AND SLOTS check cadence\n4. BUILD carousel with build.py and render\n5. PUBLISH to Metricool\n6. LEARN from results';
   applyTriggers([mk('d1', 'AUTOPILOT.OI News Desk (hourly)', -2, null, 'RUNNING', true, wireOrders), mk('d2', 'FIRST SALES MODE operator', -200, -180, 'SUCCEEDED', true, '1. Factory reels\n2. Funnels and Kit\n3. Meta ads check\n4. Scoreboard to GitHub'), mk('d3', 'Support + inbox monitor', -15, -10, 'SUCCEEDED', true, 'Read Gmail inbox, draft replies.'),
-    mk('d4', 'Monthly Scale Review', -300, -290, 'FAILED'), mk('d5', 'Daily Pulse', -1, null, 'RUNNING'), mk('d6', 'Weekly sprint', -3000, -2990, 'SUCCEEDED', false), mk('d7', 'TikTok intel', -60, -50, 'SUCCEEDED'), mk('d8', 'FIRST SALES MODE final report', null, null, '')]);
+    mk('d4', 'Monthly Scale Review', -300, -290, 'FAILED'), mk('d5', 'Daily Pulse', -1, null, 'RUNNING'), mk('d6', 'Weekly sprint', -3000, -2990, 'SUCCEEDED', false), mk('d7', 'AUTOPILOT.OI trend scout', -60, -50, 'SUCCEEDED'), mk('d8', 'FIRST SALES MODE final report', null, null, '')]);
   applyPosts({ data: [{ publicationDate: { dateTime: '2026-11-01T10:00:00' }, providers: [{ network: 'instagram', status: 'PUBLISHED' }, { network: 'tiktok', status: 'PUBLISHED' }], text: 'Demo post one' }, { publicationDate: { dateTime: '2026-11-01T18:00:00' }, providers: [{ network: 'threads', status: 'PENDING' }, { network: 'twitter', status: 'PENDING' }], text: 'Demo post two' }] });
   live.kit = { subscribers: 0 }; ['triggers', 'posts', 'kit'].forEach((k) => (live.at[k] = now));
+  applyHub({ at: iso(-12), by: 'ANALYST (demo)', github: { 'post.yml': { status: 'in_progress', started: iso(-1), runs24h: 40, fails24h: 0 }, 'health.yml': { status: 'completed', conclusion: 'success', started: iso(-15), finished: iso(-14), runs24h: 14, fails24h: 0 }, 'daily.yml': { status: 'completed', conclusion: 'failure', started: iso(-50), finished: iso(-49), runs24h: 6, fails24h: 1 }, 'revenue.yml': { status: 'completed', conclusion: 'success', started: iso(-90), finished: iso(-88), runs24h: 5, fails24h: 0 } },
+    revenue: { orders_all_time: 3, orders_7d: 3, net_7d: { USD: 21 }, refunds_all_time: 0, ledger_synced: iso(-90) }, approvals: { count: 2, items: ['Demo approval one', 'Demo approval two'] } });
   setTimeout(() => { const a = agents.get('d3'); a.data.raw.last_run = { status: 'ROUTINE_RUN_STATUS_RUNNING', fired_at: new Date().toISOString() }; a.data.last = a.data.raw.last_run.fired_at; logEvent('run', 'SHIELD run fired (demo)', 'd3'); a.shownState = null; setState(a, 'WORKING'); renderUI(); }, 4000);
   renderUI();
 }

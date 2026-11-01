@@ -8,8 +8,10 @@ Published as a Claude artifact (private to Seb). Single file, three.js r170 from
 - Run now / Pause / Resume act on the real scheduled task, always after a confirm.
 - Activity log = changes this page observed since it was opened. Replay walks the camera through them.
 
+- ANALYST feed (hourly scheduled task): runs `python3 scripts/growthos/hq_feed.py` and writes the result to the page database at `status/hub`: GitHub Actions workers (RELAY post.yml, REELS freel.yml, STORIES market.yml, REPLY daily.yml, TILL revenue.yml, SYNC gumroad.yml, HEALTH health.yml, CI ci.yml), verified revenue from state/ledger/summary.json, approvals waiting. Older than 2.5h shows STALE.
+
 ## NOT CONNECTED (shown as such, never estimated)
-Revenue (Gumroad), GitHub Actions workers (HEALTH, TILL, POSTMAN), approval queue, Meta ad spend, Metricool analytics, per step progress, 7 day performance.
+Meta ad spend, Metricool analytics, per step progress, 7 day performance, revenue per agent.
 
 ## DEMO MODE
 Add `#demo` to the address. Separate test dataset, red banner, never mixed with live data.
