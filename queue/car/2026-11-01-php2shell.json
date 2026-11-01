@@ -1,0 +1,43 @@
+{
+ "id": "2026-11-01-php2shell",
+ "kind": "news",
+ "status": "scheduled",
+ "gate": {
+  "design": "v4 lava kinetic cover + conversion end card",
+  "type_qa": "PASS",
+  "sources_checked": true
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels); Seb: 'Perfect imma add music to them after', 'Post the crypto one now'"
+ },
+ "posts": [
+  {
+   "metricool_id": 412643121,
+   "uuid": "-735058188945503089",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T14:30-03:00"
+  },
+  {
+   "metricool_id": 412643133,
+   "uuid": "-3034554639341632543",
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T14:30-03:00"
+  },
+  {
+   "metricool_id": 412643141,
+   "uuid": "-1388900017008128134",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T14:30-03:00"
+  }
+ ],
+ "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"
+}

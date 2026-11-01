@@ -1,0 +1,43 @@
+{
+ "id": "2026-11-01-banks-block-agents",
+ "kind": "news",
+ "status": "scheduled",
+ "gate": {
+  "design": "v4 lava kinetic cover + conversion end card",
+  "type_qa": "PASS",
+  "sources_checked": true
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels); Seb: 'Perfect imma add music to them after', 'Post the crypto one now'"
+ },
+ "posts": [
+  {
+   "metricool_id": 412643163,
+   "uuid": "-1294101599676248441",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T19:00-03:00"
+  },
+  {
+   "metricool_id": 412643189,
+   "uuid": "-3517130473859495208",
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T19:00-03:00"
+  },
+  {
+   "metricool_id": 412643208,
+   "uuid": "5670686975881856860",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T19:00-03:00"
+  }
+ ],
+ "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"
+}

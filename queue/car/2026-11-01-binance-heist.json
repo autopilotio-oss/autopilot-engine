@@ -1,0 +1,43 @@
+{
+ "id": "2026-11-01-binance-heist",
+ "kind": "news",
+ "status": "scheduled",
+ "gate": {
+  "design": "v4 lava kinetic cover + conversion end card",
+  "type_qa": "PASS",
+  "sources_checked": true
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels); Seb: 'Perfect imma add music to them after', 'Post the crypto one now'"
+ },
+ "posts": [
+  {
+   "metricool_id": 412643361,
+   "uuid": "-8263377924277713164",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T00:52-03:00"
+  },
+  {
+   "metricool_id": 412643398,
+   "uuid": "8096917488628745037",
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T00:52-03:00"
+  },
+  {
+   "metricool_id": 412643418,
+   "uuid": "2469719777462600449",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-01T00:52-03:00"
+  }
+ ],
+ "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"
+}

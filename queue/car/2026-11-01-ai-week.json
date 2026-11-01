@@ -1,0 +1,35 @@
+{
+ "id": "2026-11-01-ai-week",
+ "kind": "news",
+ "status": "scheduled",
+ "gate": {
+  "design": "v4 lava kinetic cover + conversion end card",
+  "type_qa": "PASS",
+  "sources_checked": true
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels); Seb: 'Perfect imma add music to them after', 'Post the crypto one now'"
+ },
+ "posts": [
+  {
+   "metricool_id": 412643236,
+   "uuid": "9088924645824348272",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-01T22:00-03:00"
+  },
+  {
+   "metricool_id": 412643252,
+   "uuid": "6526415023786967608",
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-11-01T22:00-03:00"
+  }
+ ],
+ "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"
+}
