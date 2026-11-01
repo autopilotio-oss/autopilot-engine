@@ -179,8 +179,8 @@ window.reelDom=function(t){const D=window.DATA;const B=D.beats;
  document.getElementById('hdim').style.opacity=.66-.46*sh;
  const w=document.getElementById('win');const wa=cl((t-2.35)/.5);w.style.opacity=wa;w.style.transform=`translateY(${(1-eout(wa))*60}px) scale(${.96+.04*eout(wa)})`;
  const st=document.getElementById('stat'),fl=document.getElementById('flash');let so=0,fo=0;
- if(D.stat){const rb=B.findIndex((x,i)=>i>0&&['table','checks','doc','dm'].includes(x.screen.type)&&x.screen.type!=='cta'&&i===B.length-2);if(rb>=0){const r=B[rb];const rs=rb?r.s-.15:0,re=rb+1<B.length?B[rb+1].s-.15:D.dur;const t0=rs+(re-rs)*.72,t1=re-.1;
-   if(t>=t0&&t<t1){const a=cl((t-t0)/.18),o=cl((t1-t)/.2);so=Math.min(a,o);const c=cl((t-t0)/.7);
+ if(D.stat){const rb=B.findIndex((x,i)=>i>0&&['table','checks','doc','dm'].includes(x.screen.type)&&x.screen.type!=='cta'&&i===B.length-2);if(rb>=0){const r=B[rb];const rs=rb?r.s-.15:0,re=rb+1<B.length?B[rb+1].s-.15:D.dur;const t0=rs+(re-rs)*.58,t1=re-.1;
+   if(t>=t0&&t<t1){const a=cl((t-t0)/.18),o=cl((t1-t)/.2);so=Math.min(a,o);const c=cl((t-t0)/.45);
     const val=D.stat.count!=null?(D.stat.prefix||'')+(D.stat.count*(c>.97?1:eout(c))).toLocaleString('en-US',{minimumFractionDigits:D.stat.dec||0,maximumFractionDigits:D.stat.dec||0})+(D.stat.suffix||''):D.stat.big;
     const v=st.querySelector('.v');v.textContent=val;v.style.transform=`scale(${1.25-.25*back(a)})`;fo=Math.max(0,.3-(t-t0)*2)}}}
  st.style.opacity=so;fl.style.opacity=fo+Math.max(0,.22-t*1.2);
