@@ -1,0 +1,104 @@
+{
+ "id": "bill-coach",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Bill Lowering Coach",
+ "lane": "money traps",
+ "hook": [
+  "Don't pay that medical bill yet",
+  "AI checks it line by line"
+ ],
+ "hook_lines": [
+  "Don't *pay*",
+  "that medical",
+  "bill *yet*"
+ ],
+ "caption": {
+  "ig": "Medical bills often have errors. This agent compares your itemized bill with your insurance EOB line by line, flags what doesn't match and writes the questions to ask billing before you pay. Sample bill shown. Comment BILL and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not medical or financial advice.\n\n#ai #claude #medicalbills #moneytips #healthcare",
+  "other": "Medical bills often have errors. This agent compares your itemized bill with your insurance EOB line by line, flags what doesn't match and writes the questions to ask billing before you pay. Sample bill shown. Bill Lowering Coach at the link in bio.\n\nEducation only, not medical or financial advice.\n\n#ai #claude #medicalbills #moneytips #healthcare"
+ },
+ "stat": {
+  "count": 3,
+  "suffix": " FLAGS",
+  "label": "to ask billing about before you pay",
+  "note": "sample bill"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Don't pay that medical bill yet. Ask for the itemized bill, then give it to this agent with your insurance statement.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "itemized_bill.pdf",
+     "insurance_eob.pdf"
+    ],
+    "text": "check this bill before I pay it"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It lines up every charge on the bill with what your insurance says, one line at a time.",
+   "screen": {
+    "type": "work",
+    "title": "Comparing line by line",
+    "lines": [
+     "read 18 billed lines",
+     "match each to the EOB",
+     "check amounts and dates",
+     "flag anything that doesn't match"
+    ]
+   }
+  },
+  {
+   "chip": "flags",
+   "say": "Three lines don't match. Sample bill shown, but yours works the same way.",
+   "screen": {
+    "type": "checks",
+    "title": "Lines to question",
+    "rows": [
+     [
+      "Lab panel billed twice",
+      "DUP",
+      0
+     ],
+     [
+      "EOB says $0 owed on this visit",
+      "$0",
+      0
+     ],
+     [
+      "Room charge matches the EOB",
+      "OK",
+      1
+     ]
+    ],
+    "verdict": "ASK BEFORE YOU PAY",
+    "ok": false
+   }
+  },
+  {
+   "chip": "questions",
+   "say": "Then it writes the questions to ask billing, so you call ready.",
+   "screen": {
+    "type": "doc",
+    "title": "Questions for billing",
+    "sub": "sample bill  ·  for your call",
+    "text": "1. The lab panel on Jun 3 appears twice. Can you remove the duplicate?\n\n2. My insurance EOB shows $0 owed for the Jun 10 visit. Why am I billed $185?\n\n3. Please send an updated bill once these are fixed."
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the Bill Lowering Coach at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Bill Lowering Coach",
+    "sub": "the full agent",
+    "cover": "bill",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}

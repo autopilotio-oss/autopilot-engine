@@ -1,0 +1,105 @@
+{
+ "id": "refund-fighter",
+ "kind": "product",
+ "room": "support",
+ "agent": "Refund Fighter",
+ "lane": "money traps",
+ "hook": [
+  "Airline canceled your flight?",
+  "Get cash, not a voucher"
+ ],
+ "hook_lines": [
+  "Airline *canceled*",
+  "your flight?",
+  "Get *cash*,",
+  "not a voucher"
+ ],
+ "caption": {
+  "ig": "If a US airline cancels your flight and you turn down the new one, DOT rules say you can get your money back, not just a voucher. This agent reads your booking, checks what you're owed and writes the refund request for you to send. Sample booking shown. Comment REFUND and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "If a US airline cancels your flight and you turn down the new one, DOT rules say you can get your money back, not just a voucher. This agent reads your booking, checks what you're owed and writes the refund request for you to send. Sample booking shown. Refund Fighter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "stat": {
+  "count": 412,
+  "prefix": "$",
+  "label": "cash refund requested, not a voucher",
+  "note": "sample booking"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "The airline canceled your flight and offered you a voucher. Before you take it, give this agent your booking.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "booking_confirmation.pdf",
+     "airline_email.txt"
+    ],
+    "text": "they canceled my flight, what am I owed?"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It reads the booking and the airline's email, and checks them against the refund rules.",
+   "screen": {
+    "type": "work",
+    "title": "Checking your rights",
+    "lines": [
+     "read booking and fare paid",
+     "read the cancellation email",
+     "check DOT refund rules",
+     "note what the airline must refund"
+    ]
+   }
+  },
+  {
+   "chip": "verdict",
+   "say": "Canceled by the airline, new flight declined. That means a refund, not just a voucher. Sample booking shown.",
+   "screen": {
+    "type": "checks",
+    "title": "What you're owed",
+    "rows": [
+     [
+      "Airline canceled the flight",
+      "YES",
+      1
+     ],
+     [
+      "You declined the new flight",
+      "YES",
+      1
+     ],
+     [
+      "Voucher is your only option",
+      "NO",
+      0
+     ]
+    ],
+    "verdict": "YOU CAN ASK FOR CASH BACK",
+    "ok": true
+   }
+  },
+  {
+   "chip": "request",
+   "say": "Then it writes the refund request with the rule in it, for you to send.",
+   "screen": {
+    "type": "doc",
+    "title": "Refund request",
+    "sub": "sample booking  ·  ready for you to send",
+    "text": "Hi,\n\nFlight 2281 on Sep 12 (booking QX7L4P) was canceled by the airline, and I declined the rebooking.\n\nUnder US DOT rules I am requesting a full refund of $412 to my original card, not a voucher.\n\nThank you."
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the Refund Fighter at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Refund Fighter",
+    "sub": "the full agent",
+    "cover": "refund",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}

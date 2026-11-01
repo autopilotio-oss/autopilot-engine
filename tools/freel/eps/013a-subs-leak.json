@@ -1,0 +1,114 @@
+{
+ "id": "subs-leak",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Subscription Leak Hunter",
+ "lane": "money traps",
+ "hook": [
+  "You're paying for apps you forgot",
+  "AI finds every one"
+ ],
+ "hook_lines": [
+  "You're *paying*",
+  "for apps",
+  "you *forgot*"
+ ],
+ "caption": {
+  "ig": "Most people have at least one subscription they forgot about. This agent reads your bank statement, finds every recurring charge, flags the ones you stopped using and writes the cancel messages for you. Sample statement shown. Comment SUBS and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Most people have at least one subscription they forgot about. This agent reads your bank statement, finds every recurring charge, flags the ones you stopped using and writes the cancel messages for you. Sample statement shown. Subscription Leak Hunter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "stat": {
+  "count": 47.96,
+  "dec": 2,
+  "prefix": "$",
+  "label": "a month in forgotten subscriptions",
+  "note": "sample statement"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "You're paying for apps you forgot about. Drop your bank statement in and ask one simple question.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "bank_statement.csv"
+    ],
+    "text": "find every subscription I'm still paying for"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It reads every charge, spots the ones that repeat, and checks when you last used each one.",
+   "screen": {
+    "type": "work",
+    "title": "Hunting leaks",
+    "lines": [
+     "read 214 charges",
+     "find repeating merchants",
+     "match monthly and yearly",
+     "flag the ones you stopped using"
+    ]
+   }
+  },
+  {
+   "chip": "leaks",
+   "say": "Four you forgot about. Almost forty eight dollars a month. Sample statement shown.",
+   "screen": {
+    "type": "table",
+    "title": "Forgotten subscriptions",
+    "sample": true,
+    "cols": [
+     "Merchant",
+     "Monthly",
+     "Last used"
+    ],
+    "rows": [
+     [
+      "Streamflix Plus",
+      "$15.99",
+      "5 mo ago"
+     ],
+     [
+      "FitTrack app",
+      "$12.99",
+      "8 mo ago"
+     ],
+     [
+      "SafeVPN",
+      "$9.99",
+      "never"
+     ],
+     [
+      "Clouddrive 200GB",
+      "$8.99",
+      "3 mo ago"
+     ]
+    ],
+    "foot": "$47.96 a month  ·  $575.52 a year"
+   }
+  },
+  {
+   "chip": "cancel",
+   "say": "Then it writes every cancel message, ready for you to send. You decide what goes.",
+   "screen": {
+    "type": "doc",
+    "title": "Cancel message",
+    "sub": "sample  ·  ready for you to send",
+    "text": "Hi,\n\nPlease cancel my FitTrack subscription effective today and confirm by email.\n\nI have not used the service since March, so please stop all future charges.\n\nThank you."
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the Subscription Leak Hunter at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Subscription Leak Hunter",
+    "sub": "the full agent",
+    "cover": "subs",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}
