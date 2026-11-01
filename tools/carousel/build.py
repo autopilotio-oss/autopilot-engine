@@ -1,15 +1,21 @@
-"""AUTOPILOT.OI carousels (news and prompt posts), 1080x1350, our factory look.
+"""AUTOPILOT.OI carousels: news and prompt posts, 1080x1350, tabloid news style (lime, Anton).
 
     python3 tools/carousel/build.py <id>      -> docs/media/car/<id>/01.jpg ... (needs node + playwright)
 
 Spec: tools/carousel/posts/<id>.json
-  kind: "news" | "prompts"
-  bg: factory still in docs/media/car/bg (f00..f11), badge: short chip over the image (optional)
-  headline: cover text; *words* in lime. Keep it true: every claim must be in sources.
-  slides: [{title, body}] or for prompts [{title, prompt, why}]
-  cta: {big, small}   sources: [[title, url], ...] (kept in the spec, shown as "Sources" on the last slide)
-Rules: no dashes in copy, no real people's photos, no logos, sample or source for every number."""
-import html, json, os, re, subprocess, sys
+  kind: "news" | "prompts";  breaking: true (or ribbon: "EXCLUSIVE" etc.)
+  lines: cover headline, one entry per stacked line. *word* = lime word, {line} = whole line lime, [line] = lime box line.
+  subline: small letterspaced line under the headline (optional)
+  hero: the evidence object on the cover (no real people's photos, no logos):
+     {"type":"doc","org":"SEC FILING","date":"OCT 26 2026","title":"FORM S-1","marks":["Ticker: ANT"],"stamp":"FILED","x":230,"y":170}
+     {"type":"phone","app":"CLAUDE","you":"...","ai":"...","notes":[["TITLE","text"]],"x":330,"y":120}
+     {"type":"ticker","top":"NASDAQ","text":"ANT","bottom":"...","x":220,"y":230}
+     {"type":"big","text":"$9.4M","label":"...","x":200,"y":200}
+     optional "ring":[x,y,size] lime circle callout, "chevrons":[x,y]
+  bg_words: 2 to 4 big words for the newspaper collage; bg_facts: short true lines for its columns
+  slides: [{title, body, hero?}] or for prompts [{title, prompt, why}]; cta: {big, small}; note; sources: [[title, url]]
+Copy rules: true and sourced, no dashes, plain words. <b>..</b> allowed in body text (lime bold)."""
+import html, json, os, re, subprocess, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 E = html.escape
@@ -20,112 +26,136 @@ def lime(s):
     return re.sub(r"\*(.+?)\*", r'<span class="l">\1</span>', t)
 
 
-CSS = """
-@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
-@font-face{font-family:C;src:url(/docs/assets/fonts/ChakraPetch-SemiBold.ttf);font-weight:600}
-@font-face{font-family:C;src:url(/docs/assets/fonts/ChakraPetch-Bold.ttf);font-weight:700}
-@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
-*{box-sizing:border-box;margin:0;padding:0}body{background:#000}
-.s{width:1080px;height:1350px;position:relative;overflow:hidden;background:#060606;color:#f2f2f2;font-family:C}
-.l{color:#B8F23C}
-.bgf{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.25) brightness(.85)}
-.blob{position:absolute;inset:0;opacity:.42}
-.shade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(transparent,#060606 58%)}
-.tagbox{position:absolute;left:0;top:150px;background:#B8F23C;color:#060606;font:400 66px/.9 A;padding:16px 22px 14px 26px;letter-spacing:.5px;box-shadow:6px 6px 0 #060606}
-.brk{display:inline-block;background:#B8F23C;color:#060606;font:700 30px C;letter-spacing:2px;padding:4px 14px;margin-bottom:16px;font-style:italic}
-.hl{position:absolute;left:44px;right:44px;bottom:118px;text-align:center}
-.ln{display:block;font:400 120px/1.0 A;text-transform:uppercase;white-space:nowrap;color:#f2f2f2}
-.ln.box{display:inline-block;background:#B8F23C;color:#060606;padding:4px 18px 0;margin-top:10px}
-.sub{font:700 30px C;letter-spacing:6px;margin-top:16px;color:#f2f2f2}
-.foot1{position:absolute;left:0;right:0;bottom:40px;text-align:center;font:700 26px C;letter-spacing:3px;color:#B8F23C}
-.pg{position:absolute;right:46px;top:46px;font:700 26px C;color:#fff8;letter-spacing:2px}
-.side{position:absolute;right:-120px;top:0;width:760px;height:1350px;object-fit:cover;filter:grayscale(1) contrast(1.2) brightness(.7);-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%)}
-.in{position:absolute;left:56px;width:600px;top:120px;bottom:120px;display:flex;flex-direction:column;justify-content:center;gap:30px}
-.in.wide{width:968px}
-.t{font:400 118px/.98 A;text-transform:uppercase}
-.b{font:600 48px/1.32 C;color:#e8e8e8}
-.b b,.why b{color:#B8F23C}
-.pr{background:#0d0d0bcc;border:3px solid #B8F23C;border-radius:18px;padding:30px 32px;font:400 35px/1.42 M;color:#fff}
-.pr small{display:block;font:700 22px C;letter-spacing:3px;color:#B8F23C;margin-bottom:14px}
-.why{font:600 36px/1.35 C;color:#fffa}
-.handle{position:absolute;left:56px;bottom:52px;font:700 26px C;letter-spacing:3px;color:#fff8}
-.src{font:600 24px/1.4 C;color:#fff8}
-.hero{position:absolute;left:57%;top:250px;transform:translateX(-50%) rotate(-4deg);z-index:2}
-.tick{background:#0b0b0b;border:4px solid #B8F23C;border-radius:26px;padding:26px 44px 22px;box-shadow:0 0 90px #B8F23C66,12px 12px 0 #000;text-align:left}
-.tick small{display:block;font:700 28px C;letter-spacing:4px;color:#B8F23C;white-space:nowrap}
-.tick b{display:block;font:400 190px/.95 A;color:#fff}
-.tick i{font:700 32px C;font-style:normal;color:#B8F23C;white-space:nowrap}
-.chat{width:820px;background:#111;border:3px solid #333;border-radius:30px;padding:30px 34px;box-shadow:0 0 90px #B8F23C44,12px 12px 0 #000;transform:rotate(3deg)}
-.chat .u{margin-left:auto;max-width:620px;background:#B8F23C;color:#060606;font:600 34px/1.3 C;padding:20px 26px;border-radius:24px 24px 6px 24px}
-.chat .a{max-width:640px;margin-top:20px;background:#222;color:#eee;font:600 30px/1.35 C;padding:18px 24px;border-radius:24px 24px 24px 6px}
-.chat .h{font:700 24px C;letter-spacing:3px;color:#fff8;margin-bottom:18px}
-.big{font:400 300px/.85 A;color:#B8F23C;text-shadow:0 0 80px #B8F23C66,10px 10px 0 #000}
-.big small{display:block;font:700 40px C;letter-spacing:6px;color:#fff;text-shadow:none;text-align:center}
-"""
+def plain(s):
+    return E(re.sub(r"</?b>|\*", "", s))
 
-BLOBS = """<svg class="blob" viewBox="0 0 1080 1350" preserveAspectRatio="none"><g fill="#B8F23C">
-<path d="M-40 260 C120 140 260 230 300 380 C340 520 210 610 250 760 C280 870 120 930 -40 880Z"/>
-<path d="M760 90 C900 40 1120 120 1120 300 C1120 470 960 470 930 600 C900 720 1000 800 1120 820 L1120 90Z"/>
-<path d="M420 120 C520 60 640 110 630 220 C620 320 520 330 470 300 C400 260 360 170 420 120Z"/></g></svg>"""
+
+CSS = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "style.css")).read()
+
+GRAIN = ('<svg class="grain" width="1080" height="1350"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" '
+         'numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>')
+BLOBS = ('<svg class="blob" viewBox="0 0 1080 1350" preserveAspectRatio="none"><g fill="#B8F23C">'
+         '<path d="M150 230 C330 120 520 210 560 360 C600 500 470 560 520 690 C560 800 420 860 300 800 C170 740 60 660 90 520 C110 420 20 320 150 230Z"/>'
+         '<path d="M700 160 C820 100 1010 140 1050 290 C1090 440 960 470 940 590 C920 700 1010 760 980 820 C900 860 780 780 720 680 C650 560 600 230 700 160Z"/></g></svg>')
+
+
+def paper(p):
+    words = p.get("bg_words") or ["AI", "NEWS"]
+    facts = p.get("bg_facts") or [s.get("body", s.get("why", "")) for s in p.get("slides", [])]
+    blocks = "".join(f"<b>{E(w)}</b>{plain(f)} " for w, f in zip((words * 4)[:8], (facts * 4)[:8]))
+    return (f'<div class="paper"><div class="mast"><span>THE AI WIRE</span><small>VOL. 01 &middot; {E(p.get("ow", {}).get("fig", "01"))}</small></div>'
+            f'<div class="bar2"><span>BREAKING</span><span>TECH &middot; MONEY &middot; YOU</span><span>@AUTOPILOT.OI</span></div>'
+            f'<div class="big1">{E(" ".join(words[:2]))}</div><div class="cols">{blocks}</div></div>')
+
+
+def evidence(h):
+    if not h:
+        return ""
+    t = h["type"]; x, y = h.get("x", 230), h.get("y", 180); out = ""
+    if t == "doc":
+        lines = "".join('<div class="dl" style="width:%d%%"></div>' % w for w in (96, 88, 92, 70))
+        marks = "".join(f'<p style="margin:12px 0"><mark>{E(m)}</mark></p>' for m in h.get("marks", []))
+        stamp = f'<div class="stamp">{E(h["stamp"])}</div>' if h.get("stamp") else ""
+        out = (f'<div class="ev" style="left:{x}px;top:{y}px"><div class="doc"><div class="dh"><span>{E(h.get("org", ""))}</span>'
+               f'<span>{E(h.get("date", ""))}</span></div><h4>{E(h["title"])}</h4>{lines}{marks}<div class="dl" style="width:80%"></div>{stamp}</div></div>')
+    elif t == "phone":
+        inner = "".join(f'<div class="nt"><b>{E(a)}</b>{E(b)}</div>' for a, b in h.get("notes", []))
+        if h.get("you"): inner += f'<div class="u">{E(h["you"])}</div>'
+        if h.get("ai"): inner += f'<div class="a">{E(h["ai"])}</div>'
+        out = (f'<div class="ev" style="left:{x}px;top:{y}px"><div class="phone"><div class="notch"></div>'
+               f'<div class="app">{E(h.get("app", ""))}</div>{inner}</div></div>')
+    elif t == "ticker":
+        spark = ('<svg width="550" height="90"><polyline points="0,80 60,70 120,74 180,52 240,58 300,36 360,44 420,22 480,28 550,8" '
+                 'fill="none" stroke="#B8F23C" stroke-width="7"/></svg>') if h.get("spark", True) else ""
+        out = (f'<div class="ev" style="left:{x}px;top:{y}px"><div class="tick"><small>{E(h.get("top", ""))}</small>'
+               f'<b>{E(h["text"])}</b><i>{E(h.get("bottom", ""))}</i>{spark}</div></div>')
+    elif t == "big":
+        out = f'<div class="ev" style="left:{x}px;top:{y}px"><div class="bigno">{E(h["text"])}<small>{E(h.get("label", ""))}</small></div></div>'
+    if h.get("ring"):
+        rx, ry, rs = h["ring"]; out += f'<div class="ring" style="left:{rx}px;top:{ry}px;width:{rs}px;height:{rs}px"></div>'
+    if h.get("chevrons"):
+        cx, cy = h["chevrons"]; out += f'<div class="chev" style="left:{cx}px;top:{cy}px"><span>&#8250;&#8250;</span>&#8250;&#8250;&#8250;</div>'
+    return out
 
 
 def lines_html(lines):
     out = []
     for ln in lines:
-        box = ln.startswith("[") and ln.endswith("]")
-        txt = ln[1:-1] if box else ln
-        out.append(f'<span class="ln{" box" if box else ""}">{lime(txt)}</span>')
+        box = ln.startswith("[") and ln.endswith("]"); lm = ln.startswith("{") and ln.endswith("}")
+        txt = ln[1:-1] if (box or lm) else ln
+        out.append(f'<span class="ln{" box" if box else ""}{" lm" if lm else ""}">{lime(txt)}</span>')
     return "".join(out)
 
 
-def hero(h):
-    if not h: return ""
-    if h["type"] == "ticker":
-        return f'<div class="hero"><div class="tick"><small>{E(h.get("top",""))}</small><b>{E(h["text"])}</b><i>{E(h.get("bottom",""))}</i></div></div>'
-    if h["type"] == "chat":
-        return f'<div class="hero" style="top:230px"><div class="chat"><div class="h">{E(h.get("app","CLAUDE"))}</div><div class="u">{E(h["you"])}</div><div class="a">{E(h["ai"])}</div></div></div>'
-    if h["type"] == "big":
-        return f'<div class="hero" style="top:230px"><div class="big">{E(h["text"])}<small>{E(h.get("label",""))}</small></div></div>'
-    return ""
+def barcode(x, y, w=210, h=54, seed=7):
+    import random
+    r = random.Random(seed); bars = []; cx = 0
+    while cx < w:
+        bw = r.choice([2, 2, 3, 4, 6]); gap = r.choice([2, 3, 4])
+        bars.append(f'<rect x="{cx}" y="0" width="{bw}" height="{h}" fill="#f4f4f4"/>'); cx += bw + gap
+    return f'<svg class="bc" style="left:{x}px;top:{y}px" width="{w}" height="{h + 22}">{"".join(bars)}<text x="0" y="{h + 18}" fill="#fff9" font-family="I" font-weight="700" font-size="14" letter-spacing="3">AP.{seed:04d}.OI</text></svg>'
+
+
+def offwhite(p, n, cover=True):
+    """Catalog labels, hazard band, zip tag. Off-White inspired, nothing copied (no logos, no names)."""
+    ow = p.get("ow", {}); num = ow.get("fig", "01"); date = p.get("dateline", "")
+    out = f'<div class="haz" style="top:0"></div>'
+    out += (f'<div class="lab dim" style="left:250px;top:132px">"FIG. {E(num)}"<br>c/o AUTOPILOT.OI</div>'
+            f'<div class="lab dim" style="right:48px;top:96px;text-align:right">{E(date)}<br>"FOR INFORMATION ONLY"</div>') if cover else ""
+    if cover and ow.get("label"):
+        lx, ly = ow.get("label_at", [700, 560]); out += f'<div class="lab" style="left:{lx}px;top:{ly}px"><b>"{E(ow["label"])}"</b></div>'
+        if ow.get("pointer"):
+            px, py, pw, pa = ow["pointer"]; out += f'<div class="ptr" style="left:{px}px;top:{py}px;width:{pw}px;transform:rotate({pa}deg)"></div>'
+    if cover and ow.get("zip"):
+        zx, zy = ow.get("zip_at", [820, 230])
+        out += f'<div class="zip" style="left:{zx}px;top:{zy}px;transform:rotate(9deg)"><div class="str"></div><div class="tg">"{E(ow["zip"])}"<small>AUTOPILOT.OI</small></div></div>'
+    if cover:
+        out += barcode(48, 1262, seed=int(re.sub(r"\D", "", num) or 7))
+    return out
 
 
 def cover(p, n):
-    brk = '<div class="brk">BREAKING NEWS</div><br>' if p.get("breaking") else ""
+    rib = p.get("ribbon") or ("BREAKING NEWS" if p.get("breaking") else "")
+    brk = f'<div class="brk">{E(rib)}</div><br>' if rib else ""
     sub = f'<div class="sub">{E(p["subline"])}</div>' if p.get("subline") else ""
-    tag = "AI<br>NEWS" if p["kind"] == "news" else "AI<br>TIPS"
-    return f'''<div class="s" id="s1"><img class="bgf" src="/docs/media/car/bg/{p.get("bg","f03")}.jpg">{BLOBS}<div class="shade"></div>
-<div class="tagbox">{tag}</div><div class="pg">1/{n}</div>{hero(p.get("hero"))}
-<div class="hl">{brk}<div class="fitl">{lines_html(p["lines"])}</div>{sub}</div><div class="foot1">SWIPE FOR THE FULL STORY ▸</div></div>'''
+    tag = ('<span class="qm">&ldquo;</span>AI<br>NEWS<span class="qm">&rdquo;</span>' if p["kind"] == "news"
+           else '<span class="qm">&ldquo;</span>AI<br>TIPS<span class="qm">&rdquo;</span>')
+    return (f'<div class="s" id="s1">{paper(p)}{BLOBS}{evidence(p.get("hero"))}<div class="shade"></div>{GRAIN}{offwhite(p, n)}'
+            f'<div class="tagbox">{tag}</div><div class="pg">1/{n}</div>'
+            f'<div class="hl">{brk}<div class="fitl">{lines_html(p["lines"])}</div>{sub}</div>'
+            f'<div class="foot1">SWIPE FOR THE FULL STORY &#9656;</div></div>')
 
 
 def inner(p, i, n, sl):
-    bg = sl.get("bg") or p.get("bg2") or "f07"
     if "prompt" in sl:
-        body = f'<div class="t">{lime(sl["title"])}</div><div class="pr"><small>COPY THIS</small>{E(sl["prompt"])}</div>' + (f'<div class="why">{lime(sl["why"])}</div>' if sl.get("why") else "")
-        return f'''<div class="s" id="s{i}"><img class="side" src="/docs/media/car/bg/{bg}.jpg" style="opacity:.35"><div class="pg">{i}/{n}</div>
-<div class="in wide"><div class="fit2">{body}</div></div><div class="handle">@AUTOPILOT.OI · SAVE THIS</div></div>'''
+        body = (f'<div class="num">PROMPT {i - 1}</div><div class="t">{lime(sl["title"])}</div>'
+                f'<div class="pr"><small>COPY THIS</small>{E(sl["prompt"])}</div>' + (f'<div class="why">{lime(sl["why"])}</div>' if sl.get("why") else ""))
+        return (f'<div class="s" id="s{i}"><div class="side" style="opacity:.35">{paper(p)}</div>{GRAIN}<div class="pg">{i}/{n}</div>'
+                f'<div class="in wide"><div class="fit2">{body}</div></div><div class="handle">"SAVE THIS" &nbsp;&middot;&nbsp; @AUTOPILOT.OI &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
     body = f'<div class="t">{lime(sl["title"])}</div><div class="b">{lime(sl["body"])}</div>'
-    return f'''<div class="s" id="s{i}"><img class="side" src="/docs/media/car/bg/{bg}.jpg"><div class="pg">{i}/{n}</div>
-<div class="in"><div class="fit2">{body}</div></div><div class="handle">@AUTOPILOT.OI</div></div>'''
+    ev = evidence(sl["hero"]) if sl.get("hero") else ""
+    return (f'<div class="s" id="s{i}"><div class="side">{paper(p)}</div>{ev}'
+            f'<div class="shade" style="height:100%;background:linear-gradient(90deg,#0c0c0c 46%,#0c0c0c00 80%)"></div>{GRAIN}'
+            f'<div class="pg">{i}/{n}</div><div class="in"><div class="fit2">{body}</div></div>'
+            f'<div class="handle">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
 
 
 def last(p, i, n):
-    c = p["cta"]; src = ""
-    if p.get("sources"):
-        src = '<div class="src">Sources: ' + " · ".join(E(t) for t, _ in p["sources"]) + "</div>"
+    c = p["cta"]
+    src = ('<div class="src">Sources: ' + " &middot; ".join(E(t) for t, _ in p["sources"]) + "</div>") if p.get("sources") else ""
     note = f'<div class="why">{E(p["note"])}</div>' if p.get("note") else ""
-    return f'''<div class="s" id="s{i}"><img class="bgf" src="/docs/media/car/bg/{p.get("bg3","f09")}.jpg" style="opacity:.45">{BLOBS}<div class="shade" style="height:80%"></div><div class="pg">{i}/{n}</div>
-<div class="tagbox">AUTO<br>PILOT</div>
-<div class="in wide" style="justify-content:flex-end"><div class="t">{lime(c["big"])}</div><div class="b">{lime(c["small"])}</div>{note}{src}</div>
-<div class="handle">FOLLOW @AUTOPILOT.OI FOR AI NEWS FIRST</div></div>'''
+    return (f'<div class="s" id="s{i}">{paper(p)}<div style="opacity:.3">{BLOBS}</div><div class="shade" style="height:88%"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
+            f'<div class="tagbox"><span class="qm">&ldquo;</span>AUTO<br>PILOT<span class="qm">&rdquo;</span></div><div class="haz" style="top:0"></div><div class="in wide" style="justify-content:flex-end">'
+            f'<div class="t">{lime(c["big"])}</div><div class="b">{lime(c["small"])}</div>{note}{src}</div>'
+            f'<div class="handle">FOLLOW @AUTOPILOT.OI &middot; AI NEWS FIRST</div></div>')
 
 
 FIT = """<script>
 async function go(){await document.fonts.ready;
  for(const box of document.querySelectorAll('.fitl')){const ls=[...box.querySelectorAll('.ln')];
-   let f=Math.min(...ls.map(l=>{l.style.fontSize='100px';const w=l.getBoundingClientRect().width;return 100*(l.classList.contains('box')?940:990)/w}));
-   f=Math.min(f,170);ls.forEach(l=>l.style.fontSize=f+'px');
-   while(box.parentElement.getBoundingClientRect().top<330&&f>50){f-=3;ls.forEach(l=>l.style.fontSize=f+'px')}}
+   ls.forEach(l=>{l.style.fontSize='100px';const w=l.getBoundingClientRect().width;l.dataset.f=Math.min(230,100*(l.classList.contains('box')?960:1000)/w)});
+   let k=1;const apply=()=>ls.forEach(l=>l.style.fontSize=(l.dataset.f*k)+'px');apply();
+   while(box.parentElement.getBoundingClientRect().top<560&&k>.4){k-=.03;apply()}}
  for(const el of document.querySelectorAll('.fit2')){const b=el.parentElement;let k=1;while(el.scrollHeight>b.clientHeight&&k>.5){k-=.04;el.style.zoom=k}}
  document.body.dataset.ready=1}
 go();</script>"""
@@ -144,7 +174,7 @@ for(let i=1;i<={n};i++){{await (await p.$('#s'+i)).screenshot({{path:'{out}/'+St
 await b.close()}})();"""
     srv = subprocess.Popen([sys.executable, "-m", "http.server", "8779"], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
-        import time; time.sleep(0.8)
+        time.sleep(0.8)
         subprocess.run(["node", "-e", js], check=True, cwd="/tmp")
     finally:
         srv.terminate()

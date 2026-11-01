@@ -5,10 +5,9 @@
  "bg2": "f07",
  "bg3": "f10",
  "lines": [
-  "The company behind",
-  "*Claude* just filed",
-  "to go *public*",
-  "[here is what is inside]"
+  "Claude's maker",
+  "is going *\"public\"*",
+  "[ticker: ANT]"
  ],
  "slides": [
   {
@@ -48,9 +47,49 @@
   ]
  ],
  "hero": {
-  "type": "ticker",
-  "top": "NASDAQ · FILED OCT 26",
-  "text": "ANT",
-  "bottom": "PRICE AND DATE NOT SET"
+  "type": "doc",
+  "org": "SEC FILING",
+  "date": "OCT 26 2026",
+  "title": "FORM S-1",
+  "marks": [
+   "Nasdaq ticker: ANT",
+   "Price: not set yet"
+  ],
+  "stamp": "FILED",
+  "x": 300,
+  "y": 215
+ },
+ "subline": "here is what the filing says",
+ "dateline": "OCT 31 2026",
+ "bg_words": [
+  "IPO",
+  "NASDAQ",
+  "CLAUDE",
+  "ANT"
+ ],
+ "bg_facts": [
+  "Anthropic filed an S-1 with the SEC on Oct 26.",
+  "It plans to list on the Nasdaq under ANT.",
+  "No share price or IPO date has been set.",
+  "22 banks are on the deal."
+ ],
+ "ow": {
+  "fig": "014",
+  "label": "THE FILING",
+  "label_at": [
+   60,
+   520
+  ],
+  "pointer": [
+   64,
+   560,
+   210,
+   -8
+  ],
+  "zip": "S-1",
+  "zip_at": [
+   830,
+   250
+  ]
  }
 }

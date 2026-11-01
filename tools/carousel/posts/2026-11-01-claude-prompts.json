@@ -5,9 +5,8 @@
  "bg3": "f11",
  "lines": [
   "Stop using Claude",
-  "like *Google*",
-  "[5 prompts that]",
-  "[make it work for you]"
+  "like *\"Google\"*",
+  "[5 prompts inside]"
  ],
  "slides": [
   {
@@ -42,9 +41,37 @@
  },
  "note": "Works in Claude, and in ChatGPT too.",
  "hero": {
-  "type": "chat",
+  "type": "phone",
   "app": "CLAUDE",
   "you": "Before you answer, ask me 5 questions that would change your answer.",
-  "ai": "Good idea. First: what is the goal, and who is it for?"
+  "ai": "Good call. First: what is the goal, and who is it for?",
+  "x": 360,
+  "y": 150
+ },
+ "dateline": "OCT 31 2026",
+ "bg_words": [
+  "PROMPTS",
+  "CLAUDE",
+  "SAVE",
+  "THIS"
+ ],
+ "ow": {
+  "fig": "015",
+  "label": "THE TRICK",
+  "label_at": [
+   70,
+   430
+  ],
+  "pointer": [
+   74,
+   470,
+   300,
+   4
+  ],
+  "zip": "SAVE THIS",
+  "zip_at": [
+   820,
+   230
+  ]
  }
 }

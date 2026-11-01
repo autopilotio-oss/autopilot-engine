@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>*{margin:0;padding:0}html,body{width:1080px;height:1350px;background:transparent;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/tools/office/vendor/three.module.min.js","three/addons/":"/tools/office/vendor/jsm/"}}</script>
+</head><body><canvas id="gl" width="1080" height="1350"></canvas>
+<script type="module">
+// The AUTOPILOT.OI agent robot as a big hero character for carousel covers (transparent PNG).
+// window.pose(name) then screenshot. Same geometry as the factory robot in tools/office/engine.html.
+import * as THREE from 'three';
+import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
+const rd=new THREE.WebGLRenderer({canvas:document.getElementById('gl'),antialias:true,alpha:true,preserveDrawingBuffer:true});
+rd.setPixelRatio(1);rd.setSize(1080,1350,false);rd.setClearColor(0x000000,0);rd.toneMapping=THREE.ACESFilmicToneMapping;rd.toneMappingExposure=1.1;
+rd.shadowMap.enabled=false;
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(28,1080/1350,.1,100);
+scene.add(new THREE.HemisphereLight(0xdfffe0,0x0a140a,.9));
+const key=new THREE.DirectionalLight(0xffffff,2.4);key.position.set(3,5,6);scene.add(key);
+const rim=new THREE.DirectionalLight(0xb8f23c,2.2);rim.position.set(-5,3,-4);scene.add(rim);
+const rim2=new THREE.DirectionalLight(0xb8f23c,1.2);rim2.position.set(5,1,-3);scene.add(rim2);
+const std=(c,r=.55,m=.35)=>new THREE.MeshStandardMaterial({color:c,roughness:r,metalness:m});
+const glow=(c,i=2.2)=>new THREE.MeshBasicMaterial({color:new THREE.Color(c).multiplyScalar(i),toneMapped:false});
+const M={metal:std(0xe9eee9,.32,.12),metal2:std(0x2a3236,.3,.6),dark:std(0x0a0d0e,.5,.4)};
+const rb=(w,h,d,r=.08,seg=4)=>new RoundedBoxGeometry(w,h,d,seg,r);
+const mesh=(g,m)=>new THREE.Mesh(g,m);
+const C=0xb8f23c;
+const g=new THREE.Group();scene.add(g);
+const body=mesh(rb(.72,.74,.5,.2),M.metal);body.position.y=.95;g.add(body);
+const chest=mesh(new THREE.BoxGeometry(.3,.06,.02),glow(C,1.6));chest.position.set(0,1.08,.26);g.add(chest);
+const pack=mesh(rb(.5,.5,.16,.06),M.metal2);pack.position.set(0,.98,-.3);g.add(pack);
+const head=new THREE.Group();head.position.y=1.62;g.add(head);
+head.add(mesh(rb(.8,.64,.68,.24,5),M.metal));
+const face=mesh(rb(.7,.42,.04,.12),M.dark);face.position.set(0,0,.325);head.add(face);
+const visor=mesh(rb(.64,.24,.06,.1),glow(C,1.5));visor.position.set(0,.02,.33);head.add(visor);
+const eyes=[];for(const s of[-1,1]){const e=mesh(rb(.13,.1,.04,.04),new THREE.MeshBasicMaterial({color:0x031000}));e.position.set(s*.14,.02,.37);head.add(e);eyes.push(e)}
+for(const s of[-1,1]){const e=mesh(new THREE.CylinderGeometry(.11,.11,.08,24),M.metal2);e.rotation.z=Math.PI/2;e.position.set(s*.42,0,0);head.add(e);
+ const r=mesh(new THREE.TorusGeometry(.08,.018,10,28),glow(C,1.8));r.rotation.y=Math.PI/2;r.position.set(s*.465,0,0);head.add(r)}
+const ant=mesh(new THREE.CylinderGeometry(.018,.018,.28,10),M.metal2);ant.position.set(.18,.42,0);head.add(ant);
+const bulb=mesh(new THREE.SphereGeometry(.06,20,14),glow(C,2.4));bulb.position.set(.18,.58,0);head.add(bulb);
+const arms=[];for(const s of[-1,1]){const pv=new THREE.Group();pv.position.set(s*.45,1.2,0);const a=mesh(new THREE.CapsuleGeometry(.1,.38,6,14),M.metal2);a.position.y=-.24;pv.add(a);
+ const h=mesh(new THREE.SphereGeometry(.11,18,12),M.metal);h.position.y=-.5;pv.add(h);g.add(pv);arms.push(pv)}
+const legs=[];for(const s of[-1,1]){const pv=new THREE.Group();pv.position.set(s*.18,.6,0);const l=mesh(new THREE.CapsuleGeometry(.11,.34,6,14),M.metal2);l.position.y=-.3;pv.add(l);
+ const ft=mesh(rb(.22,.12,.32,.05),M.metal);ft.position.set(0,-.55,.05);pv.add(ft);g.add(pv);legs.push(pv)}
+// props: phone and sign
+const phone=new THREE.Group();phone.add(mesh(rb(.26,.46,.03,.04),M.dark));const scr=mesh(rb(.22,.4,.01,.03),glow(C,1.1));scr.position.z=.02;phone.add(scr);
+phone.visible=false;arms[1].add(phone);phone.position.set(.02,-.62,.1);
+const POSES={
+ hero:   {cam:[0.9,1.15,4.2],look:[0,1.05,0],ry:-.35,head:[.05,.2,0],arms:[[.15,0,.25],[.15,0,-.25]]},
+ wave:   {cam:[0.6,1.3,4.0],look:[0,1.1,0],ry:-.25,head:[-.05,.15,.08],arms:[[.1,0,.2],[0,0,-2.6]]},
+ shock:  {cam:[0,1.05,3.9],look:[0,1.15,0],ry:0,head:[-.12,0,0],arms:[[0,0,2.5],[0,0,-2.5]]},
+ point:  {cam:[-0.7,1.2,4.1],look:[0,1.1,0],ry:.3,head:[0,-.25,0],arms:[[.1,0,.2],[-1.45,0,-.2]]},
+ think:  {cam:[0.8,1.4,3.8],look:[0,1.2,0],ry:-.3,head:[.1,.25,.18],arms:[[.1,0,.2],[-2.3,0,-.6]]},
+ phone:  {cam:[0.7,1.25,3.6],look:[0,1.1,0],ry:-.3,head:[.35,.15,0],arms:[[.1,0,.2],[-1.25,0,.25]],phone:true},
+ closeup:{cam:[0.5,1.75,2.1],look:[0,1.55,0],ry:-.3,head:[.02,.22,0],arms:[[.1,0,.2],[.1,0,-.2]]}
+};
+window.pose=(n)=>{const p=POSES[n];const k=n==='closeup'?1:1.16;cam.position.set(p.cam[0]*k,p.cam[1],p.cam[2]*k);cam.lookAt(new THREE.Vector3(...p.look));g.rotation.y=p.ry;
+ head.rotation.set(...p.head);arms.forEach((a,i)=>a.rotation.set(...p.arms[i]));phone.visible=!!p.phone;rd.render(scene,cam);return n};
+window.POSES=Object.keys(POSES);window.pose('hero');window.READY=1;
+</script></body></html>
