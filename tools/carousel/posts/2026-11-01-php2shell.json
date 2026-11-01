@@ -83,5 +83,8 @@
   46,
   1060
  ],
- "head_w": 500
+ "head_w": 500,
+ "cover_bg": "bg-black",
+ "theme": "light",
+ "cover_html": "\n<div class=\"fx chip l\" style=\"left:56px;top:70px\">SECURITY ALERT</div>\n<div class=\"fx A\" style=\"left:56px;top:150px;font-size:150px;color:#f4f4f4\">AI found 2 holes</div>\n<div class=\"fx A\" style=\"left:56px;top:282px;font-size:96px;color:#f4f4f4\">in the code behind</div>\n<div class=\"fx A l\" style=\"left:56px;top:378px;font-size:146px;white-space:nowrap;color:#D4FF3A\">70% of websites</div>\n<div class=\"fx term\" style=\"left:56px;top:600px;width:968px\"><div class=\"bar\"><i></i><i></i><i></i><span class=\"Cc\" style=\"font-size:18px;color:#7c8a6c;margin-left:14px\">SAMPLE SERVER CHECK</span></div><pre>$ php -v\nPHP 8.2.34 (cli)\n<u>&#10007; VULNERABLE   CVE-2026-109618</u>\n<u>&#10007; VULNERABLE   CVE-2026-109619</u>\n$ update php\n<b>&#10003; PHP 8.2.35   patched</b></pre></div>\n<div class=\"fx Cc\" style=\"left:56px;top:1190px;font-size:28px;color:#D4FF3A\">Swipe for what to do &#9656;</div>"
 }

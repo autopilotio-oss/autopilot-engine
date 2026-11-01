@@ -126,6 +126,10 @@ def chevrons(x, y, n_gray=2, n_lime=3):
 
 
 def cover(p, n):
+    if p.get("cover_html"):
+        cls = p.get("cover_bg", "bg-black")
+        return (f'<div class="s {cls}" id="s1">{p["cover_html"]}{GRAIN if p.get("grain", True) else ""}'
+                f'<img class="aplogo" src="/docs/logo.png"><div class="pg">1/{n}</div></div>')
     lay = p.get("layout", "stack")
     if lay == "stack":
         return cover_stack(p, n)
@@ -214,7 +218,7 @@ def build(cid):
     p = json.load(open(os.path.join(ROOT, "tools", "carousel", "posts", cid + ".json")))
     n = len(p["slides"]) + 2
     slides = [cover(p, n)] + [inner(p, i + 2, n, s) for i, s in enumerate(p["slides"])] + [last(p, n, n)]
-    page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body>{''.join(slides)}{FIT}</body></html>"
+    page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}{FIT}</body></html>"
     hp = os.path.join(ROOT, "tools", "carousel", f"_{cid}.html"); open(hp, "w").write(page)
     out = os.path.join(ROOT, "docs", "media", "car", cid); os.makedirs(out, exist_ok=True)
     js = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1350}}}});

@@ -96,5 +96,9 @@
    "https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html"
   ]
  ],
- "layout": "wall"
+ "layout": "wall",
+ "cover_bg": "bg-lime",
+ "theme": "dark",
+ "grain": false,
+ "cover_html": "\n<div class=\"fx chip\" style=\"left:56px;top:70px\">BREAKING &middot; CRYPTO</div>\n<div class=\"fx A\" style=\"left:44px;top:150px;font-size:440px;letter-spacing:-6px;color:#0c0c0c\">$6.3B</div>\n<div class=\"fx A\" style=\"left:56px;top:600px;font-size:122px;color:#0c0c0c\">Stolen from Binance</div>\n<div class=\"fx A\" style=\"left:56px;top:720px;font-size:122px;background:#0c0c0c;color:#D4FF3A;padding:10px 22px 0\">in about 20 minutes</div>\n<div class=\"fx rule\" style=\"left:56px;top:900px;width:968px;color:#0c0c0c\"></div>\n<div class=\"fx Ii\" style=\"left:56px;top:934px;width:940px;font-size:40px;line-height:1.28;color:#0c0c0c\">Thursday, 4:05 PM Eastern. Hackers drained Binance wallets on 10 blockchains. The FBI says North Korea did it.</div>\n<div class=\"fx Cc\" style=\"left:56px;top:1160px;font-size:30px;color:#0c0c0c\">The biggest crypto heist ever &nbsp;&middot;&nbsp; swipe for how &#9656;</div>"
 }
