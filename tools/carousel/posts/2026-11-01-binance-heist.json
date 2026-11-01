@@ -19,8 +19,8 @@
    "About $3B frozen"
   ],
   "stamp": "HACKED",
-  "x": 300,
-  "y": 110
+  "x": 270,
+  "y": 130
  },
  "ow": {
   "fig": "016",
@@ -56,7 +56,8 @@
  "slides": [
   {
    "title": "What *happened*",
-   "body": "Thursday at <b>4:05 PM Eastern</b>, hackers got into Binance, the world's largest crypto exchange. In about <b>20 minutes</b> they moved out just over <b>$6.3 billion</b>."
+   "body": "Thursday at <b>4:05 PM Eastern</b>, hackers got into Binance, the world's largest crypto exchange. In about <b>20 minutes</b> they moved out just over <b>$6.3 billion</b>.",
+   "num": "$6.3B"
   },
   {
    "title": "Across *10 chains*",
@@ -72,7 +73,8 @@
   },
   {
    "title": "Where the money *is*",
-   "body": "About <b>$3 billion is frozen</b>, including more than <b>$2.3 billion</b> frozen by Tether and Circle. Binance has not said what happened to the other <b>$3.3 billion</b>."
+   "body": "About <b>$3 billion is frozen</b>, including more than <b>$2.3 billion</b> frozen by Tether and Circle. Binance has not said what happened to the other <b>$3.3 billion</b>.",
+   "num": "$3B"
   },
   {
    "title": "What Binance *says*",
@@ -105,5 +107,6 @@
    "Yahoo Finance",
    "https://finance.yahoo.com/markets/article/bitcoin-drops-to-76000-as-binance-hack-spooks-investors-tether-circle-freeze-assets-083406383.html"
   ]
- ]
+ ],
+ "layout": "wall"
 }

@@ -90,3 +90,42 @@
 .bc{position:absolute;z-index:8}
 .tagbox{font:400 66px/.9 A}
 .tagbox .qm{font:800 60px/1 I;vertical-align:top;margin:0 2px}
+
+/* ---------- cutout photos ---------- */
+.cut{position:absolute;z-index:3;filter:grayscale(1) contrast(1.25) brightness(1.05) drop-shadow(0 30px 50px #000c)}
+.cut.duo{filter:grayscale(1) contrast(1.3) brightness(1.05) sepia(1) hue-rotate(38deg) saturate(2.4) drop-shadow(0 30px 50px #000c)}
+
+/* ---------- layout: split (headline left, subject right) ---------- */
+.L-split .hl2{position:absolute;left:52px;top:300px;width:560px;z-index:6;text-align:left}
+.L-split .hl2 .ln{margin:0;text-align:left}
+.L-split .dek{font:700 30px/1.35 I;color:#e8e8e8;margin-top:26px;letter-spacing:-.3px;max-width:520px}
+.L-split .dek b{color:#B8F23C}
+.L-split .shade2{position:absolute;inset:0;background:linear-gradient(90deg,#0c0c0c 38%,#0c0c0c99 58%,#0c0c0c00 80%);z-index:2}
+
+/* ---------- layout: wall (height chart, Kim K style) ---------- */
+.wallbg{position:absolute;inset:0;background:#d6d6d2}
+.wallbg i{position:absolute;left:0;right:0;height:3px;background:#5a5a56}
+.wallbg span{position:absolute;font:400 54px/1 A;color:#4a4a46}
+.L-wall .blob{opacity:.85}
+.L-wall .band{position:absolute;left:0;right:0;bottom:0;height:520px;background:linear-gradient(#0c0c0c00,#0c0c0c 34%);z-index:4}
+
+/* ---------- layout: front page (light newspaper) ---------- */
+.paper.light{background:#e8e7e1;color:#1d1d1d}
+.paper.light .mast{border-color:#1d1d1d;color:#151515}.paper.light .mast small,.paper.light .bar2{color:#333;border-color:#1d1d1d}
+.paper.light .big1{color:#1a1a1a}.paper.light .cols{color:#3a3a3a}.paper.light .cols b{color:#1d1d1d}
+.L-front .shade{background:linear-gradient(#0c0c0c00,#0c0c0c 42%)}
+
+/* ---------- layout: arrow (left stack + chevrons) ---------- */
+.L-arrow .hl3{position:absolute;left:46px;top:300px;z-index:6;text-align:left}
+.L-arrow .hl3 .ln{margin:0;text-align:left}
+.L-arrow .chev2{position:absolute;z-index:6;display:flex;gap:6px}
+.L-arrow .chev2 b{display:block;width:96px;height:150px;background:#6f6f6f;clip-path:polygon(0 0,45% 0,100% 50%,45% 100%,0 100%,55% 50%)}
+.L-arrow .chev2 b.g{background:#B8F23C}
+.L-arrow .kick{font:800 26px/1.3 I;letter-spacing:1px;color:#f4f4f4;border-top:3px solid #f4f4f4;padding-top:14px;margin-top:22px;text-transform:uppercase;max-width:560px}
+.L-arrow .kick b{color:#B8F23C}
+/* light inner slide variant */
+.s.lite{background:#e8e7e1;color:#111}
+.s.lite .b{color:#1d1d1d}.s.lite .b b{background:#B8F23C;color:#111;padding:0 6px}
+.s.lite .t .l{background:#111;color:#B8F23C;padding:0 10px}
+.s.lite .handle{color:#0009}.s.lite .pg{background:#111;color:#fff}
+.s.lite .bignum{font:400 300px/.8 A;color:#111;margin-bottom:10px}

@@ -1,0 +1,30 @@
+name: Carousel photos
+# Pexels stock photos + rembg cutouts for news carousels (scripts/photos.py). The News Desk adds queue/photos/<slug>.json
+# and dispatches this; it also runs when a request is pushed.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["queue/photos/**"]
+permissions:
+  contents: write
+concurrency: { group: photos, cancel-in-progress: false }
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - uses: actions/cache@v4
+        with: { path: ~/.u2net, key: rembg-isnet-v1 }
+      - run: pip install -q "rembg[cpu]==2.0.59" pillow
+      - name: Fetch and cut out
+        env: { PEXELS_API_KEY: "${{ secrets.PEXELS_API_KEY }}" }
+        run: python3 scripts/photos.py
+      - name: Save
+        run: |
+          git config user.name "autopilot-bot"; git config user.email "bot@users.noreply.github.com"
+          git add queue/photos docs/media/car/photos || true
+          git diff --cached --quiet || git commit -m "carousel photos"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 7; done

@@ -39,11 +39,11 @@ BLOBS = ('<svg class="blob" viewBox="0 0 1080 1350" preserveAspectRatio="none"><
          '<path d="M700 160 C820 100 1010 140 1050 290 C1090 440 960 470 940 590 C920 700 1010 760 980 820 C900 860 780 780 720 680 C650 560 600 230 700 160Z"/></g></svg>')
 
 
-def paper(p):
+def paper(p, light=False):
     words = p.get("bg_words") or ["AI", "NEWS"]
     facts = p.get("bg_facts") or [s.get("body", s.get("why", "")) for s in p.get("slides", [])]
     blocks = "".join(f"<b>{E(w)}</b>{plain(f)} " for w, f in zip((words * 4)[:8], (facts * 4)[:8]))
-    return (f'<div class="paper"><div class="mast"><span>THE AI WIRE</span><small>VOL. 01 &middot; {E(p.get("ow", {}).get("fig", "01"))}</small></div>'
+    return (f'<div class="paper{" light" if light else ""}"><div class="mast"><span>THE AI WIRE</span><small>VOL. 01 &middot; {E(p.get("ow", {}).get("fig", "01"))}</small></div>'
             f'<div class="bar2"><span>BREAKING</span><span>TECH &middot; MONEY &middot; YOU</span><span>@AUTOPILOT.OI</span></div>'
             f'<div class="big1">{E(" ".join(words[:2]))}</div><div class="cols">{blocks}</div></div>')
 
@@ -69,6 +69,10 @@ def evidence(h):
                  'fill="none" stroke="#B8F23C" stroke-width="7"/></svg>') if h.get("spark", True) else ""
         out = (f'<div class="ev" style="left:{x}px;top:{y}px"><div class="tick"><small>{E(h.get("top", ""))}</small>'
                f'<b>{E(h["text"])}</b><i>{E(h.get("bottom", ""))}</i>{spark}</div></div>')
+    elif t == "cutout":
+        w = h.get("w", 760)
+        return f'<img class="cut{" duo" if h.get("duo") else ""}" src="/docs/media/car/{E(h["src"])}" style="left:{x}px;top:{y}px;width:{w}px">' + (
+            f'<div class="ring" style="left:{h["ring"][0]}px;top:{h["ring"][1]}px;width:{h["ring"][2]}px;height:{h["ring"][2]}px"></div>' if h.get("ring") else "")
     elif t == "big":
         out = f'<div class="ev" style="left:{x}px;top:{y}px"><div class="bigno">{E(h["text"])}<small>{E(h.get("label", ""))}</small></div></div>'
     if h.get("ring"):
@@ -114,7 +118,48 @@ def offwhite(p, n, cover=True):
     return out
 
 
+def wall():
+    lines = "".join(f'<i style="top:{60 + k * 64}px"></i>' for k in range(19))
+    marks = "".join(f'<span style="left:22px;top:{40 + k * 128}px">{90 - k * 4}&quot;</span><span style="right:22px;top:{40 + k * 128}px">{90 - k * 4}&quot;</span>' for k in range(10))
+    return f'<div class="wallbg">{lines}{marks}</div>'
+
+
+def chevrons(x, y, n_gray=2, n_lime=3):
+    return f'<div class="chev2" style="left:{x}px;top:{y}px">' + "<b></b>" * n_gray + '<b class="g"></b>' * n_lime + "</div>"
+
+
 def cover(p, n):
+    lay = p.get("layout", "stack")
+    if lay == "stack":
+        return cover_stack(p, n)
+    tag = ('<span class="qm">&ldquo;</span>AI<br>NEWS<span class="qm">&rdquo;</span>' if p["kind"] == "news"
+           else '<span class="qm">&ldquo;</span>AI<br>TIPS<span class="qm">&rdquo;</span>')
+    rib = p.get("ribbon") or ("BREAKING NEWS" if p.get("breaking") else "")
+    brk = f'<div class="brk">{E(rib)}</div><br>' if rib else ""
+    ev = evidence(p.get("hero")); ow = offwhite(p, n)
+    head = f'<div class="tagbox">{tag}</div><div class="pg">1/{n}</div>'
+    foot = '<div class="foot1">SWIPE FOR THE FULL STORY &#9656;</div>'
+    dek = f'<div class="dek">{lime(p["dek"])}</div>' if p.get("dek") else ""
+    if lay == "split":
+        return (f'<div class="s L-split" id="s1">{paper(p)}<div class="shade2"></div>{BLOBS.replace("class=\"blob\"", "class=\"blob\" style=\"left:380px\"")}{ev}{GRAIN}{ow}{head}'
+                f'<div class="hl2">{brk}<div class="fitl" data-w="560">{lines_html(p["lines"])}</div>{dek}</div>{foot}</div>')
+    if lay == "wall":
+        sub = f'<div class="sub">{E(p["subline"])}</div>' if p.get("subline") else ""
+        return (f'<div class="s L-wall" id="s1">{wall()}{BLOBS}{ev}<div class="band"></div>{GRAIN}{ow}{head}'
+                f'<div class="hl">{brk}<div class="fitl">{lines_html(p["lines"])}</div>{sub}</div>{foot}</div>')
+    if lay == "front":
+        sub = f'<div class="sub">{E(p["subline"])}</div>' if p.get("subline") else ""
+        return (f'<div class="s L-front" id="s1">{paper(p, light=True)}{ev}<div class="shade"></div>{GRAIN}{ow}{head}'
+                f'<div class="hl">{brk}<div class="fitl">{lines_html(p["lines"])}</div>{sub}</div>{foot}</div>')
+    if lay == "arrow":
+        kick = f'<div class="kick">{lime(p["kicker"])}</div>' if p.get("kicker") else ""
+        cx, cy = p.get("chev_at", [470, 980])
+        return (f'<div class="s L-arrow" id="s1"><div style="opacity:.55">{paper(p)}</div>{ev}{GRAIN}{ow}{head}{chevrons(cx, cy)}'
+                f'<div class="hl3">{brk}<div class="fitl" data-w="{p.get('head_w', 520)}">{lines_html(p["lines"])}</div>{kick}</div>{foot}</div>')
+    return cover_stack(p, n)
+
+
+def cover_stack(p, n):
     rib = p.get("ribbon") or ("BREAKING NEWS" if p.get("breaking") else "")
     brk = f'<div class="brk">{E(rib)}</div><br>' if rib else ""
     sub = f'<div class="sub">{E(p["subline"])}</div>' if p.get("subline") else ""
@@ -134,6 +179,10 @@ def inner(p, i, n, sl):
                 f'<div class="in wide"><div class="fit2">{body}</div></div><div class="handle">"SAVE THIS" &nbsp;&middot;&nbsp; @AUTOPILOT.OI &nbsp;&middot;&nbsp; FIG. {i:02d}</div><div class="haz" style="bottom:0;height:16px"></div></div>')
     body = f'<div class="t">{lime(sl["title"])}</div><div class="b">{lime(sl["body"])}</div>'
     ev = evidence(sl["hero"]) if sl.get("hero") else ""
+    if sl.get("lite") or (i % 3 == 0 and sl.get("lite") is not False):
+        big = f'<div class="bignum">{E(sl["num"])}</div>' if sl.get("num") else ""
+        return (f'<div class="s lite" id="s{i}"><div class="haz" style="top:0;height:16px"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
+                f'<div class="in wide"><div class="fit2">{big}{body}</div></div><div class="handle">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div></div>')
     return (f'<div class="s" id="s{i}"><div class="side">{paper(p)}</div>{ev}'
             f'<div class="shade" style="height:100%;background:linear-gradient(90deg,#0c0c0c 46%,#0c0c0c00 80%)"></div>{GRAIN}'
             f'<div class="pg">{i}/{n}</div><div class="in"><div class="fit2">{body}</div></div>'
@@ -153,9 +202,12 @@ def last(p, i, n):
 FIT = """<script>
 async function go(){await document.fonts.ready;
  for(const box of document.querySelectorAll('.fitl')){const ls=[...box.querySelectorAll('.ln')];
-   ls.forEach(l=>{l.style.fontSize='100px';const w=l.getBoundingClientRect().width;l.dataset.f=Math.min(230,100*(l.classList.contains('box')?960:1000)/w)});
+   const W=+(box.dataset.w||1000);
+   ls.forEach(l=>{l.style.fontSize='100px';const w=l.getBoundingClientRect().width;l.dataset.f=Math.min(230,100*(l.classList.contains('box')?W*.96:W)/w)});
    let k=1;const apply=()=>ls.forEach(l=>l.style.fontSize=(l.dataset.f*k)+'px');apply();
-   while(box.parentElement.getBoundingClientRect().top<560&&k>.4){k-=.03;apply()}}
+   const P=box.parentElement;
+   if(box.dataset.w){while(P.getBoundingClientRect().bottom>1240&&k>.4){k-=.03;apply()}}
+   else{while(P.getBoundingClientRect().top<560&&k>.4){k-=.03;apply()}}}
  for(const el of document.querySelectorAll('.fit2')){const b=el.parentElement;let k=1;while(el.scrollHeight>b.clientHeight&&k>.5){k-=.04;el.style.zoom=k}}
  document.body.dataset.ready=1}
 go();</script>"""

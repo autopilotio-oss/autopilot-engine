@@ -2,10 +2,10 @@
  "kind": "news",
  "dateline": "NOV 01 2026",
  "lines": [
-  "AI found a flaw",
-  "in the code behind",
-  "{70% of websites}",
-  "[here is what to do]"
+  "AI found",
+  "a flaw in",
+  "{70% of}",
+  "{websites}"
  ],
  "hero": {
   "type": "doc",
@@ -17,26 +17,15 @@
    "Fix: update PHP"
   ],
   "stamp": "PATCHED",
-  "x": 300,
-  "y": 170
+  "x": 600,
+  "y": 360
  },
  "ow": {
   "fig": "017",
-  "label": "THE BUG",
-  "label_at": [
-   60,
-   470
-  ],
-  "pointer": [
-   64,
-   510,
-   230,
-   -6
-  ],
   "zip": "CVE",
   "zip_at": [
-   860,
-   250
+   880,
+   180
   ]
  },
  "bg_words": [
@@ -94,5 +83,12 @@
    "Coalition",
    "https://coalitiontechnologies.com/blog/your-host-patched-php-is-your-wordpress-site-actually-safe"
   ]
- ]
+ ],
+ "layout": "arrow",
+ "kicker": "Patched Oct 21. <b>Here is what to do.</b>",
+ "chev_at": [
+  46,
+  1060
+ ],
+ "head_w": 500
 }
