@@ -1,7 +1,7 @@
 # Next actions (handoff between runs)
 
 - Daily Pulse writes run-history/<date>-daily.md; the Weekly Sprint reads the last 7.
-- Viral Lab: Subscription first (viral/demos/subscription has the tested synthetic demo). Need 3 qualified references before a concept can pass.
+- Viral Lab: Subscription first (viral/demos/subscription has the tested synthetic demo). Need 3 qualified references before a concept can pass. BLOCKER (Oct 31 + Nov 1 runs): from the cloud runner, YouTube serves a bot-protection shell (no views, wrong metadata on watch?v=) and TikTok/IG are robots-blocked, so no reference can be certified. Needs Seb's call: a source that shows public view counts (e.g. YouTube Data API key, or Seb captures URL + views + creator's last 10 from his phone).
 - Publisher: nothing QUEUED yet; `python3 scripts/growthos/publish.py plan` is empty until Seb approves a concept.
 - Decided Oct 31: caps $30/month, keep legacy posts, GitHub alerts confirmed, Seb connecting Gmail for support drafts.
 
