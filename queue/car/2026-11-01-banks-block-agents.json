@@ -19,7 +19,7 @@
    "networks": [
     "instagram"
    ],
-   "at": "2026-11-01T19:00-03:00"
+   "at": "2026-11-03T18:00-03:00"
   },
   {
    "metricool_id": 412643189,
@@ -27,7 +27,7 @@
    "networks": [
     "tiktok"
    ],
-   "at": "2026-11-01T19:00-03:00"
+   "at": "2026-11-03T12:00-03:00"
   },
   {
    "metricool_id": 412643208,
@@ -35,7 +35,7 @@
    "networks": [
     "twitter"
    ],
-   "at": "2026-11-01T19:00-03:00"
+   "at": "2026-11-03T12:00-03:00"
   },
   {
    "metricool_id": 412807155,
@@ -43,7 +43,7 @@
    "networks": [
     "threads"
    ],
-   "at": "2026-11-01T19:00-03:00",
+   "at": "2026-11-03T12:00-03:00",
    "note": "Threads split out: captions over 500 chars fail on Threads"
   }
  ],

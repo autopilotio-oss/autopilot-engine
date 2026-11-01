@@ -19,7 +19,8 @@
    "networks": [
     "instagram"
    ],
-   "at": "2026-11-01T22:00-03:00"
+   "at": "2026-11-01T22:00-03:00",
+   "status": "draft (thinned Nov 1)"
   },
   {
    "metricool_id": 412643252,
@@ -27,7 +28,8 @@
    "networks": [
     "tiktok"
    ],
-   "at": "2026-11-01T22:00-03:00"
+   "at": "2026-11-01T22:00-03:00",
+   "status": "draft (thinned Nov 1)"
   },
   {
    "metricool_id": 412807192,
@@ -36,7 +38,8 @@
     "threads"
    ],
    "at": "2026-11-01T22:00-03:00",
-   "note": "Threads split out: captions over 500 chars fail on Threads"
+   "note": "Threads split out: captions over 500 chars fail on Threads",
+   "status": "draft (thinned Nov 1)"
   }
  ],
  "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"
