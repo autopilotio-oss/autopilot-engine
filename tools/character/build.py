@@ -35,22 +35,30 @@ def mpfb_pkg():
     return None
 
 def install_packs(pkg):
+    LocationService = __import__(pkg + '.services.locationservice', fromlist=['LocationService']).LocationService
+    root = pathlib.Path(LocationService.get_user_data()); root.mkdir(parents=True, exist_ok=True)
     for p in ['makehuman_system_assets', 'masks01', 'hats01', 'shirts01', 'pants01', 'shoes01', 'skins01', 'eyebrows01']:
         z = DL / f'{p}.zip'
         if not z.exists():
             say('pack missing', p); continue
-        try:
-            bpy.ops.mpfb.load_library_zip(filepath=str(z))
-            say('pack installed', p)
-        except Exception as e:
-            say('pack install failed', p, repr(e))
+        with zipfile.ZipFile(z) as zf:
+            tops = sorted(set(n.split('/')[0] for n in zf.namelist()))
+            say('pack', p, 'top level:', tops[:12])
+            for n in zf.namelist():
+                parts = n.split('/')
+                # asset packs are laid out as <type>/<asset>/...; skip license/readme files at the root
+                if len(parts) < 2 or n.endswith('/'):
+                    continue
+                dst = root / n
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                with zf.open(n) as src, open(dst, 'wb') as out:
+                    shutil.copyfileobj(src, out)
+    return root
 
 def explore():
     mods = install_mpfb(); pkg = mpfb_pkg(); say('pkg', pkg)
     if not pkg: raise SystemExit('mpfb not importable')
-    install_packs(pkg)
-    LocationService = __import__(pkg + '.services.locationservice', fromlist=['LocationService']).LocationService
-    root = LocationService.get_user_data(); say('user data', root)
+    root = str(install_packs(pkg)); say('user data', root)
     found = {}
     for kind in ('clothes', 'proxymeshes', 'eyes', 'eyebrows', 'skins', 'hair'):
         found[kind] = sorted(set(os.path.basename(os.path.dirname(f)) for f in glob.glob(os.path.join(root, kind, '**', '*.*'), recursive=True)))
@@ -61,7 +69,17 @@ def explore():
             shutil.copy(f, thumbs / (os.path.basename(os.path.dirname(f)) + '.png'))
     (thumbs / 'assets.json').write_text(json.dumps(found, indent=1))
     hs = __import__(pkg + '.services.humanservice', fromlist=['HumanService']).HumanService
-    say('HumanService methods', [m for m in dir(hs) if not m.startswith('_')])
+    import inspect
+    for m in ('create_human', 'add_builtin_rig', 'add_mhclo_asset', 'set_character_skin', 'deserialize_from_dict', 'get_default_deserialization_settings'):
+        try: say('SIG', m, str(inspect.signature(getattr(hs, m))))
+        except Exception as e: say('SIG fail', m, repr(e))
+    try:
+        say('builtin rigs', sorted(os.listdir(os.path.join(os.path.dirname(sys.modules[pkg].__file__), 'data', 'rigs', 'standard'))))
+    except Exception as e: say('rigs list fail', repr(e))
+    try:
+        AssetService = __import__(pkg + '.services.assetservice', fromlist=['AssetService']).AssetService
+        say('AssetService methods', [m for m in dir(AssetService) if not m.startswith('_')])
+    except Exception as e: say('assetservice fail', repr(e))
     rs = __import__(pkg + '.services.rigservice', fromlist=['RigService']).RigService
     say('RigService methods', [m for m in dir(rs) if not m.startswith('_')][:60])
 
