@@ -35,7 +35,13 @@
     const left = r.left - s.left + px(cs.paddingLeft) + px(cs.borderLeftWidth);
     const fh = m.fontBoundingBoxAscent + m.fontBoundingBoxDescent;
     const base = r.top - s.top + px(cs.paddingTop) + (lineH(cs, m) - fh) / 2 + m.fontBoundingBoxAscent;
-    return { x0: left - m.actualBoundingBoxLeft, x1: left + m.actualBoundingBoxRight, y0: base - m.actualBoundingBoxAscent, y1: base + m.actualBoundingBoxDescent };
+    const B = { x0: left - m.actualBoundingBoxLeft, x1: left + m.actualBoundingBoxRight, y0: base - m.actualBoundingBoxAscent, y1: base + m.actualBoundingBoxDescent };
+    for (const c of el.querySelectorAll('*')) {          // highlight boxes inside the line count as ink
+      if (transparent(getComputedStyle(c).backgroundColor)) continue;
+      const q = c.getBoundingClientRect();
+      B.x0 = Math.min(B.x0, q.left - s.left); B.x1 = Math.max(B.x1, q.right - s.left); B.y0 = Math.min(B.y0, q.top - s.top); B.y1 = Math.max(B.y1, q.bottom - s.top);
+    }
+    return B;
   }
   // multi line text: per line rects shrunk from font box to real ink, plus any highlight boxes inside
   function inkMulti(el, s) {

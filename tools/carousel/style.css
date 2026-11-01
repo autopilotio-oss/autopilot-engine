@@ -216,3 +216,26 @@
 /* spacing fixes found by QA: boxed titles and Anton descenders were touching the text under them */
 .t+.b{margin-top:16px}
 .band .d{margin-top:18px}
+
+/* conversion end card */
+.conv{background:radial-gradient(90% 60% at 80% 100%,rgba(212,255,58,.16),transparent 70%),#0a0a0a!important;color:#f4f4f4}
+.cv-h{color:#f4f4f4}.cv-h .l{color:#D4FF3A}
+.cv-h2{color:#f4f4f4}.cv-h2 .kw{color:#0c0c0c;background:#D4FF3A;padding:6px 18px 0;margin-left:8px}
+.cv-card{width:968px;box-sizing:border-box;border-radius:28px;display:flex;gap:22px;align-items:flex-start;padding:26px 30px}
+.cv-cmt{background:#1b1b1b;border:2px solid #2a2a2a}
+.cv-card .av{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#444,#222);flex:none}
+.cv-card .nm{font:700 26px/1.2 I;color:#f4f4f4}.cv-card .nm i{font-style:normal;color:#8a8a8a;font-weight:500}
+.cv-cmt .tx{font:800 54px/1.1 I;color:#D4FF3A;margin-top:6px;letter-spacing:1px}
+.cv-cmt .ht{margin-left:auto;font:400 40px/1 I;color:#8a8a8a}
+.cv-arrow{display:flex;flex-direction:column;align-items:center;gap:4px;width:80px}
+.cv-arrow i{width:44px;height:44px;border-right:9px solid #D4FF3A;border-bottom:9px solid #D4FF3A;transform:rotate(45deg);margin-top:-20px;opacity:.35}
+.cv-arrow i:nth-child(2){opacity:.65}.cv-arrow i:nth-child(3){opacity:1}
+.cv-dm{background:#141414;border:2px solid #D4FF3A;box-shadow:0 0 60px rgba(212,255,58,.18)}
+.cv-dm .bub{margin-top:12px;background:#D4FF3A;color:#0c0c0c;font:700 34px/1.3 I;padding:18px 22px;border-radius:22px 22px 22px 6px;max-width:780px}
+.cv-dm .bub .l{text-decoration:underline}
+.cv-dm .lnk{margin-top:14px;display:inline-block;font:700 26px/1 C;letter-spacing:.06em;color:#D4FF3A;border:2px solid #D4FF3A;border-radius:99px;padding:12px 20px 10px}
+.cv-small{font-size:32px;line-height:1.3;color:rgba(244,244,244,.82)}
+.cv-small .l{color:#D4FF3A}
+.cv-src{position:absolute;left:56px;bottom:100px;z-index:5}
+.cv-flow{display:flex;flex-direction:column;gap:26px}.cv-flow .cv-arrow{align-self:center;padding-top:18px}
+.cv-flow{gap:16px}.cv-card{padding:20px 28px}.cv-cmt .tx{font-size:46px}.cv-dm .bub{font-size:31px;padding:14px 20px}.cv-dm .lnk{margin-top:12px}.cv-small{font-size:29px}.cv-flow .cv-arrow{padding-top:14px}

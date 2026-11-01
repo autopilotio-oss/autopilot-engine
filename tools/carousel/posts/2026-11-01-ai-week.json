@@ -58,8 +58,10 @@
   }
  ],
  "cta": {
-  "big": "Learn AI in *5 min a day*",
-  "small": "Follow @autopilot.oi for daily AI news and free prompts. Comment <b>AGENTS</b> and we will DM you 7 Claude agents that run your busywork."
+  "big": "Learn AI in *5 min*",
+  "keyword": "AGENTS",
+  "gift": "Here are 7 free Claude agents that run your busywork.",
+  "small": "Free, right in your DMs. Follow for *daily AI news.*"
  },
  "sources": [
   [
@@ -86,5 +88,6 @@
  "layout": "front",
  "cover_bg": "bg-black",
  "theme": "light",
- "cover_html": "\n<div class=\"fx A\" style=\"left:54px;top:80px;font-size:210px;color:#f4f4f4\">This week</div>\n<div class=\"fx A\" style=\"left:54px;top:270px;font-size:210px;color:#D4FF3A\">in AI</div>\n<div class=\"fx chip l\" style=\"left:600px;top:330px\">OCT 26 TO OCT 30</div>\n<div class=\"fx rule\" style=\"left:54px;top:500px;width:972px;color:#f4f4f4\"></div>\n<div class=\"band\" style=\"top:520px;height:220px\"><div class=\"n\">01</div><div><div class=\"h\">Gemini 4 Carbon<br>takes the top spot</div><div class=\"d\">One point above Claude Opus 5.5 on a major ranking.</div></div></div>\n<div class=\"fx rule\" style=\"left:54px;top:750px;width:972px;color:#333\"></div>\n<div class=\"band\" style=\"top:770px;height:200px\"><div class=\"n\">02</div><div><div class=\"h\">A trillion parameter<br>model goes free</div><div class=\"d\">Mistral made its biggest model free to download.</div></div></div>\n<div class=\"fx rule\" style=\"left:54px;top:980px;width:972px;color:#333\"></div>\n<div class=\"band\" style=\"top:1000px;height:200px\"><div class=\"n\">03</div><div><div class=\"h\">AI answers<br>from space</div><div class=\"d\">Google ran a model on a satellite in orbit.</div></div></div>\n<div class=\"fx Cc\" style=\"left:54px;top:1240px;font-size:26px;color:#D4FF3A\">Swipe for the full stories &#9656;</div>"
+ "cover_html": "\n<div class=\"fx A\" style=\"left:54px;top:80px;font-size:210px;color:#f4f4f4\">This week</div>\n<div class=\"fx A\" style=\"left:54px;top:270px;font-size:210px;color:#D4FF3A\">in AI</div>\n<div class=\"fx chip l\" style=\"left:600px;top:330px\">OCT 26 TO OCT 30</div>\n<div class=\"fx rule\" style=\"left:54px;top:500px;width:972px;color:#f4f4f4\"></div>\n<div class=\"band\" style=\"top:520px;height:220px\"><div class=\"n\">01</div><div><div class=\"h\">Gemini 4 Carbon<br>takes the top spot</div><div class=\"d\">One point above Claude Opus 5.5 on a major ranking.</div></div></div>\n<div class=\"fx rule\" style=\"left:54px;top:750px;width:972px;color:#333\"></div>\n<div class=\"band\" style=\"top:770px;height:200px\"><div class=\"n\">02</div><div><div class=\"h\">A trillion parameter<br>model goes free</div><div class=\"d\">Mistral made its biggest model free to download.</div></div></div>\n<div class=\"fx rule\" style=\"left:54px;top:980px;width:972px;color:#333\"></div>\n<div class=\"band\" style=\"top:1000px;height:200px\"><div class=\"n\">03</div><div><div class=\"h\">AI answers<br>from space</div><div class=\"d\">Google ran a model on a satellite in orbit.</div></div></div>\n<div class=\"fx Cc\" style=\"left:54px;top:1240px;font-size:26px;color:#D4FF3A\">Swipe for the full stories &#9656;</div>",
+ "music": "bright"
 }

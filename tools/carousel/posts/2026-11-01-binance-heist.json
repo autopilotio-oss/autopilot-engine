@@ -74,8 +74,10 @@
   }
  ],
  "cta": {
-  "big": "Get the news *first*",
-  "small": "Follow @autopilot.oi. Want an AI agent that checks your statements for charges you did not expect? Comment <b>SUBS</b>."
+  "big": "Protect your *money*",
+  "keyword": "SUBS",
+  "gift": "Here is your free guide to the agent that spots charges you did not expect.",
+  "small": "Free, right in your DMs. It reads your statements, *never your password.*"
  },
  "note": "News, not financial advice.",
  "sources": [
@@ -100,5 +102,6 @@
  "cover_bg": "bg-lime",
  "theme": "dark",
  "grain": false,
- "cover_html": "\n<div class=\"fx chip\" style=\"left:56px;top:70px\">BREAKING &middot; CRYPTO</div>\n<div class=\"fx A\" style=\"left:44px;top:150px;font-size:440px;letter-spacing:-6px;color:#0c0c0c\">$6.3B</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"s\" data-gap=\"18\" style=\"left:56px;top:600px;font-size:122px;white-space:nowrap;color:#0c0c0c\">Stolen from Binance</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"s\" style=\"left:56px;top:720px;font-size:122px;white-space:nowrap;background:#0c0c0c;color:#D4FF3A;padding:10px 22px 0\">in about 20 minutes</div>\n<div class=\"fx rule\" style=\"left:56px;top:900px;width:968px;color:#0c0c0c\"></div>\n<div class=\"fx Ii\" style=\"left:56px;top:934px;width:940px;font-size:40px;line-height:1.28;color:#0c0c0c\">Thursday, 4:05 PM Eastern. Hackers drained Binance wallets on 10 blockchains. The FBI says North Korea did it.</div>\n<div class=\"fx Cc\" style=\"left:56px;top:1160px;font-size:30px;color:#0c0c0c\">The biggest crypto heist ever &nbsp;&middot;&nbsp; swipe for how &#9656;</div>"
+ "cover_html": "\n<div class=\"fx chip\" style=\"left:56px;top:70px\">BREAKING &middot; CRYPTO</div>\n<div class=\"fx A\" style=\"left:44px;top:150px;font-size:440px;letter-spacing:-6px;color:#0c0c0c\">$6.3B</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"s\" data-gap=\"18\" style=\"left:56px;top:600px;font-size:122px;white-space:nowrap;color:#0c0c0c\">Stolen from Binance</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"s\" style=\"left:56px;top:720px;font-size:122px;white-space:nowrap;background:#0c0c0c;color:#D4FF3A;padding:10px 22px 0\">in about 20 minutes</div>\n<div class=\"fx rule\" style=\"left:56px;top:900px;width:968px;color:#0c0c0c\"></div>\n<div class=\"fx Ii\" style=\"left:56px;top:934px;width:940px;font-size:40px;line-height:1.28;color:#0c0c0c\">Thursday, 4:05 PM Eastern. Hackers drained Binance wallets on 10 blockchains. The FBI says North Korea did it.</div>\n<div class=\"fx Cc\" style=\"left:56px;top:1160px;font-size:30px;color:#0c0c0c\">The biggest crypto heist ever &nbsp;&middot;&nbsp; swipe for how &#9656;</div>",
+ "music": "tense"
 }

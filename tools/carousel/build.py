@@ -24,7 +24,11 @@ BUILD PRINTS "QA PASS"; fix the spec and rebuild instead.
   data-stack="h" + data-gap (stack lines with equal ink gaps), data-after="h" (place under the stack).
   Photo covers: "photo": {src, cut, badge?, kicker?, lines, sub?} (see cover_photo).
   Animated covers: cover_html covers get the lava lamp loop (cover.mp4, cover_ig.mp4 24s; CAR_STILL=1 skips video).
-  Music: tools/carousel/beat.py makes an original 8s loop (dark, bright, tense) for cover_beat.mp4."""
+  Kinetic covers (tools/carousel/anim.js): lines slide in, big numbers count up, terminals type, stamps slam, the swipe
+  line nudges. 16s video (anim_dur), lava keeps moving under the held layout.
+  Music: tools/carousel/beat.py makes an original 8s loop ("music": dark, bright, tense) -> cover_beat.mp4.
+  CONVERSION: news posts end on the comment card: cta {big, keyword, gift, small}. keyword must be confirmed in
+  config/manychat.json; the DM card shows exactly what they get (autopilotoi.app/free)."""
 import html, json, os, re, subprocess, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -227,8 +231,27 @@ def inner(p, i, n, sl):
             f'<div class="handle"><img class="hlogo" src="/docs/logo.png">"@AUTOPILOT.OI" &nbsp;&middot;&nbsp; FIG. {i:02d}</div></div>')
 
 
+def last_convert(p, i, n):
+    """Conversion end card: shows the exact action (comment the keyword) and what lands in the DM. Keyword must be a
+    confirmed ManyChat keyword (config/manychat.json)."""
+    c = p["cta"]; kw = E(c["keyword"].upper())
+    src = ('<div class="src cv-src">Sources: ' + " &middot; ".join(E(t) for t, _ in p["sources"]) + "</div>") if p.get("sources") else ""
+    return (f'<div class="s end conv" id="s{i}">{GRAIN}<div class="pg">{i}/{n}</div>'
+            f'<div class="fx A cv-h" data-fit="968" data-stack="cv" data-gap="16" style="left:56px;top:120px;white-space:nowrap;font-size:150px">{lime(c["big"])}</div>'
+            f'<div class="fx A cv-h2" data-fit="968" data-stack="cv" style="left:56px;top:290px;white-space:nowrap;font-size:120px">comment <span class="kw">{kw}</span></div>'
+            f'<div class="fx cv-flow" data-after="cv" data-gap="54" style="left:56px;top:470px;width:968px"><div class="cv-card cv-cmt"><div class="av"></div><div><div class="nm">you <i>&middot; now</i></div>'
+            f'<div class="tx"><b>{kw}</b></div></div><div class="ht">&#9825;</div></div>'
+            f'<div class="cv-arrow"><i></i><i></i><i></i></div>'
+            f'<div class="cv-card cv-dm"><img class="av" src="/docs/logo.png"><div><div class="nm">@autopilot.oi <i>&middot; DM</i></div>'
+            f'<div class="bub">{lime(c["gift"])}</div><div class="lnk">autopilotoi.app/free &#8599;</div></div></div>'
+            f'<div class="Ii cv-small">{lime(c["small"])}</div></div>{src}'
+            f'<div class="handle"><img class="hlogo" src="/docs/logo.png">FOLLOW @AUTOPILOT.OI &middot; AI NEWS FIRST</div></div>')
+
+
 def last(p, i, n):
     c = p["cta"]
+    if c.get("keyword"):
+        return last_convert(p, i, n)
     src = ('<div class="src">Sources: ' + " &middot; ".join(E(t) for t, _ in p["sources"]) + "</div>") if p.get("sources") else ""
     note = f'<div class="why">{E(p["note"])}</div>' if p.get("note") else ""
     return (f'<div class="s end" id="s{i}">{paper(p)}<div style="opacity:.3">{BLOBS}</div><div class="shade" style="height:88%"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
@@ -238,6 +261,7 @@ def last(p, i, n):
 
 
 QAJS = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "qa.js")).read()
+ANIMJS = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "anim.js")).read()
 FIT_HEAD = ""
 FIT = """<script>
 async function go(){await document.fonts.ready;
@@ -259,11 +283,11 @@ def build(cid):
     p = json.load(open(os.path.join(ROOT, "tools", "carousel", "posts", cid + ".json")))
     n = len(p["slides"]) + 2
     slides = [cover(p, n)] + [inner(p, i + 2, n, s) for i, s in enumerate(p["slides"])] + [last(p, n, n)]
-    page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}<script>{QAJS}</script>{FIT}</body></html>"
+    page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}<script>{QAJS}</script><script>{ANIMJS}</script>{FIT}</body></html>"
     hp = os.path.join(ROOT, "tools", "carousel", f"_{cid}.html"); open(hp, "w").write(page)
     out = os.path.join(ROOT, "docs", "media", "car", cid); os.makedirs(out, exist_ok=True)
     lava = bool(p.get("cover_html")) and p.get("lava", True)
-    FRAMES = 192 if (lava and os.environ.get("CAR_STILL") != "1") else 0
+    FRAMES = 24 * int(p.get("anim_dur", 16)) if (lava and os.environ.get("CAR_STILL") != "1") else 0
     fdir = f"/tmp/carframes/{cid}"
     if FRAMES:
         subprocess.run(["rm", "-rf", fdir]); os.makedirs(fdir)
@@ -272,7 +296,7 @@ await p.goto('http://localhost:8779/tools/carousel/_{cid}.html');await p.waitFor
 require('fs').writeFileSync('{out}/qa.json',JSON.stringify(await p.evaluate(()=>window.QA||[]),null,1));
 const lf=p.frames().find(f=>f.url().includes('lava.html'));if(lf){{await lf.waitForFunction(()=>window.READY===1,null,{{timeout:60000}});await lf.evaluate(()=>window.render(0))}}
 for(let i=1;i<={n};i++){{await (await p.$('#s'+i)).screenshot({{path:'{out}/'+String(i).padStart(2,'0')+'.jpg',type:'jpeg',quality:88}})}}
-if(lf&&{FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await lf.evaluate(t=>window.render(t),k*8/{FRAMES});await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
+if(lf&&{FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await p.evaluate(t=>window.ANIM(t),k/24);await lf.evaluate(t=>window.render(t),(k/24)%8);await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
 await b.close()}})();"""
     srv = subprocess.Popen([sys.executable, "-m", "http.server", "8779"], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
@@ -283,8 +307,13 @@ await b.close()}})();"""
     if FRAMES:
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", "24", "-i", f"{fdir}/%04d.jpg", "-c:v", "libx264", "-preset", "veryfast",
                         "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", os.path.join(out, "cover.mp4")], check=True)
-        # 3 loops = 24s so IG plays it long enough to read
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "2", "-i", os.path.join(out, "cover.mp4"), "-c", "copy", os.path.join(out, "cover_ig.mp4")], check=True)
+        subprocess.run(["cp", os.path.join(out, "cover.mp4"), os.path.join(out, "cover_ig.mp4")], check=True)
+        mood = p.get("music", "dark")
+        subprocess.run([sys.executable, os.path.join(ROOT, "tools", "carousel", "beat.py"), f"{fdir}.wav", mood], check=True, stdout=subprocess.DEVNULL)
+        dur = FRAMES / 24
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", os.path.join(out, "cover.mp4"), "-stream_loop", "-1", "-i", f"{fdir}.wav", "-map", "0:v", "-map", "1:a",
+                        "-c:v", "copy", "-af", f"afade=t=out:st={dur - 1.5}:d=1.5,loudnorm=I=-14:TP=-1.5", "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-t", str(dur),
+                        "-movflags", "+faststart", os.path.join(out, "cover_beat.mp4")], check=True)
         print(f"animated cover: docs/media/car/{cid}/cover.mp4")
     qa = json.load(open(os.path.join(out, "qa.json")))
     errs = [q for q in qa if q["level"] == "error"]
