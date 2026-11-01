@@ -14,7 +14,17 @@ Spec: tools/carousel/posts/<id>.json
      optional "ring":[x,y,size] lime circle callout, "chevrons":[x,y]
   bg_words: 2 to 4 big words for the newspaper collage; bg_facts: short true lines for its columns
   slides: [{title, body, hero?}] or for prompts [{title, prompt, why}]; cta: {big, small}; note; sources: [[title, url]]
-Copy rules: true and sourced, no dashes, plain words. <b>..</b> allowed in body text (lime bold)."""
+Copy rules: true and sourced, no dashes, plain words. <b>..</b> allowed in body text (lime bold).
+
+TYPE QA (tools/carousel/qa.js, runs on every build): aligns text by its real ink edges, then checks every slide for text
+outside the safe area, text colliding with text, the logo or the page number, low contrast, and edges that do not line
+up. Results go to docs/media/car/<id>/qa.json and the build exits 2 on any error. NEVER SCHEDULE A CAROUSEL UNLESS THE
+BUILD PRINTS "QA PASS"; fix the spec and rebuild instead.
+  cover_html helpers: data-fit="968" (line ink exactly 968 wide, like a justified headline block),
+  data-stack="h" + data-gap (stack lines with equal ink gaps), data-after="h" (place under the stack).
+  Photo covers: "photo": {src, cut, badge?, kicker?, lines, sub?} (see cover_photo).
+  Animated covers: cover_html covers get the lava lamp loop (cover.mp4, cover_ig.mp4 24s; CAR_STILL=1 skips video).
+  Music: tools/carousel/beat.py makes an original 8s loop (dark, bright, tense) for cover_beat.mp4."""
 import html, json, os, re, subprocess, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -221,12 +231,14 @@ def last(p, i, n):
     c = p["cta"]
     src = ('<div class="src">Sources: ' + " &middot; ".join(E(t) for t, _ in p["sources"]) + "</div>") if p.get("sources") else ""
     note = f'<div class="why">{E(p["note"])}</div>' if p.get("note") else ""
-    return (f'<div class="s" id="s{i}">{paper(p)}<div style="opacity:.3">{BLOBS}</div><div class="shade" style="height:88%"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
+    return (f'<div class="s end" id="s{i}">{paper(p)}<div style="opacity:.3">{BLOBS}</div><div class="shade" style="height:88%"></div>{GRAIN}<div class="pg">{i}/{n}</div>'
             f'<div class="tagbox"><span class="qm">&ldquo;</span>AUTO<br>PILOT<span class="qm">&rdquo;</span></div><div class="in wide" style="justify-content:flex-end">'
             f'<div class="t">{lime(c["big"])}</div><div class="b">{lime(c["small"])}</div>{note}{src}</div>'
             f'<div class="handle"><img class="hlogo" src="/docs/logo.png">FOLLOW @AUTOPILOT.OI &middot; AI NEWS FIRST</div></div>')
 
 
+QAJS = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "qa.js")).read()
+FIT_HEAD = ""
 FIT = """<script>
 async function go(){await document.fonts.ready;
  for(const box of document.querySelectorAll('.fitl')){const ls=[...box.querySelectorAll('.ln')];
@@ -238,6 +250,7 @@ async function go(){await document.fonts.ready;
    if(box.dataset.w){while(P.getBoundingClientRect().bottom>1240&&k>.4){k-=.03;apply()}}
    else{while(P.getBoundingClientRect().top<560&&k>.4){k-=.03;apply()}}}
  for(const el of document.querySelectorAll('.fit2')){const b=el.parentElement;let k=1;while(el.scrollHeight>b.clientHeight&&k>.5){k-=.04;el.style.zoom=k}}
+ try{TYPESET()}catch(e){window.QA=[{slide:0,level:'error',msg:'typeset crashed: '+e.message}]}
  document.body.dataset.ready=1}
 go();</script>"""
 
@@ -246,7 +259,7 @@ def build(cid):
     p = json.load(open(os.path.join(ROOT, "tools", "carousel", "posts", cid + ".json")))
     n = len(p["slides"]) + 2
     slides = [cover(p, n)] + [inner(p, i + 2, n, s) for i, s in enumerate(p["slides"])] + [last(p, n, n)]
-    page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}{FIT}</body></html>"
+    page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}<script>{QAJS}</script>{FIT}</body></html>"
     hp = os.path.join(ROOT, "tools", "carousel", f"_{cid}.html"); open(hp, "w").write(page)
     out = os.path.join(ROOT, "docs", "media", "car", cid); os.makedirs(out, exist_ok=True)
     lava = bool(p.get("cover_html")) and p.get("lava", True)
@@ -256,6 +269,7 @@ def build(cid):
         subprocess.run(["rm", "-rf", fdir]); os.makedirs(fdir)
     js = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch({{args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist','--enable-webgl']}});const p=await b.newPage({{viewport:{{width:1080,height:1350}}}});
 await p.goto('http://localhost:8779/tools/carousel/_{cid}.html');await p.waitForFunction(()=>document.body.dataset.ready==='1');
+require('fs').writeFileSync('{out}/qa.json',JSON.stringify(await p.evaluate(()=>window.QA||[]),null,1));
 const lf=p.frames().find(f=>f.url().includes('lava.html'));if(lf){{await lf.waitForFunction(()=>window.READY===1,null,{{timeout:60000}});await lf.evaluate(()=>window.render(0))}}
 for(let i=1;i<={n};i++){{await (await p.$('#s'+i)).screenshot({{path:'{out}/'+String(i).padStart(2,'0')+'.jpg',type:'jpeg',quality:88}})}}
 if(lf&&{FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await lf.evaluate(t=>window.render(t),k*8/{FRAMES});await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
@@ -272,9 +286,13 @@ await b.close()}})();"""
         # 3 loops = 24s so IG plays it long enough to read
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "2", "-i", os.path.join(out, "cover.mp4"), "-c", "copy", os.path.join(out, "cover_ig.mp4")], check=True)
         print(f"animated cover: docs/media/car/{cid}/cover.mp4")
-    print(f"carousel ready: docs/media/car/{cid}/ ({n} slides)")
-    return n
+    qa = json.load(open(os.path.join(out, "qa.json")))
+    errs = [q for q in qa if q["level"] == "error"]
+    for q in errs:
+        print(f"  QA slide {q['slide']}: {q['msg']}")
+    print(f"carousel ready: docs/media/car/{cid}/ ({n} slides) QA {'PASS' if not errs else f'FAIL ({len(errs)})'}")
+    return n if not errs else -len(errs)
 
 
 if __name__ == "__main__":
-    build(sys.argv[1])
+    sys.exit(0 if build(sys.argv[1]) > 0 else 2)

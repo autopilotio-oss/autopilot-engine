@@ -173,18 +173,18 @@
 .band .d{font:700 26px/1.3 I;color:#bbb;margin-top:10px;letter-spacing:-.3px}
 .rule{height:3px;background:currentColor;opacity:.9}
 /* per post inner themes */
-.th-lime .s:not(#s1){background:radial-gradient(120% 90% at 30% 20%,#F0FF9A 0,#D4FF3A 45%,#C2F21F 100%);color:#0c0c0c}
-.th-lime .s:not(#s1) .b{color:#111}.th-lime .s:not(#s1) .b b{background:#0c0c0c;color:#D4FF3A;padding:0 6px}
-.th-lime .s:not(#s1) .t .l{background:#0c0c0c;color:#D4FF3A;padding:8px 14px 0;display:inline-block;line-height:.92;text-shadow:none}
-.th-lime .s:not(#s1) .side,.th-lime .s:not(#s1) .shade{display:none}
-.th-lime .s:not(#s1) .handle{color:#0009}.th-lime .s:not(#s1) .pg{background:#0c0c0c;color:#D4FF3A}
-.th-light .s:not(#s1){background:#f2f2ee;color:#0c0c0c}
-.th-light .s:not(#s1) .b{color:#1a1a1a}.th-light .s:not(#s1) .b b{background:#D4FF3A;color:#111;padding:0 6px}
-.th-light .s:not(#s1) .t .l{background:#0c0c0c;color:#D4FF3A;padding:8px 14px 0;display:inline-block;line-height:.92;text-shadow:none}
-.th-light .s:not(#s1) .side,.th-light .s:not(#s1) .shade{display:none}
-.th-light .s:not(#s1) .handle{color:#0009}.th-light .s:not(#s1) .pg{background:#0c0c0c;color:#fff}
-.th-light .s:not(#s1) .in,.th-lime .s:not(#s1) .in{width:968px}
-.th-light .s:not(#s1) .t,.th-lime .s:not(#s1) .t{font-size:150px}
+.th-lime .s:not(#s1):not(.end){background:radial-gradient(120% 90% at 30% 20%,#F0FF9A 0,#D4FF3A 45%,#C2F21F 100%);color:#0c0c0c}
+.th-lime .s:not(#s1):not(.end) .b{color:#111}.th-lime .s:not(#s1):not(.end) .b b{background:#0c0c0c;color:#D4FF3A;padding:0 6px}
+.th-lime .s:not(#s1):not(.end) .t .l{background:#0c0c0c;color:#D4FF3A;padding:8px 14px 0;display:inline-block;line-height:.92;text-shadow:none}
+.th-lime .s:not(#s1):not(.end) .side,.th-lime .s:not(#s1):not(.end) .shade{display:none}
+.th-lime .s:not(#s1):not(.end) .handle{color:#0009}.th-lime .s:not(#s1):not(.end) .pg{background:#0c0c0c;color:#D4FF3A}
+.th-light .s:not(#s1):not(.end){background:#f2f2ee;color:#0c0c0c}
+.th-light .s:not(#s1):not(.end) .b{color:#1a1a1a}.th-light .s:not(#s1):not(.end) .b b{background:#D4FF3A;color:#111;padding:0 6px}
+.th-light .s:not(#s1):not(.end) .t .l{background:#0c0c0c;color:#D4FF3A;padding:8px 14px 0;display:inline-block;line-height:.92;text-shadow:none}
+.th-light .s:not(#s1):not(.end) .side,.th-light .s:not(#s1):not(.end) .shade{display:none}
+.th-light .s:not(#s1):not(.end) .handle{color:#0009}.th-light .s:not(#s1):not(.end) .pg{background:#0c0c0c;color:#fff}
+.th-light .s:not(#s1):not(.end) .in,.th-lime .s:not(#s1):not(.end) .in{width:968px}
+.th-light .s:not(#s1):not(.end) .t,.th-lime .s:not(#s1):not(.end) .t{font-size:150px}
 
 /* lava lamp animated cover (WebGL iframe behind the composition) */
 .lava{position:absolute;inset:0;width:1080px;height:1350px;border:0;z-index:0;pointer-events:none}
@@ -212,3 +212,7 @@
 .ph-swipe{position:absolute;bottom:30px;left:0;right:0;text-align:center;font:600 24px/1 C;letter-spacing:.2em;color:#f4f4f4;z-index:4}
 .ph-swipe b{color:#D4FF3A}
 .L-photo .pg{z-index:5}
+
+/* spacing fixes found by QA: boxed titles and Anton descenders were touching the text under them */
+.t+.b{margin-top:16px}
+.band .d{margin-top:18px}
