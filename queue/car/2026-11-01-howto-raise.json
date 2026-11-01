@@ -1,0 +1,50 @@
+{
+ "id": "2026-11-01-howto-raise",
+ "kind": "howto",
+ "status": "bank",
+ "cover_idea": "Split cover: black top with a SAMPLE pay range bar (10th to 90th percentile, YOU $47K pin vs ASK $64K pin), full bleed lime bottom block holding the fitted ARE YOU UNDERPAID? headline.",
+ "theme": "work and money: check your market pay and ask for a raise with proof, tied to raise-agent / RAISE guide",
+ "gate": {
+  "score": 90,
+  "notes": "Accuracy 28/30 (BLS OEWS percentiles 10 to 90 by state and metro: CareerOneStop + BLS; CA, CO, NY, WA pay ranges in job ads: ADP + Bradley + Farella Braun; NLRA right to discuss pay, private sector, union or not: NLRB + Barnes & Thornburg; 'most' covers supervisor exclusion; pay chart labeled SAMPLE). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5: split black/lime background (new), headline in bottom band vs top on last cover, data range chart as main visual (new), mid scale headline vs giant number. CTA 10/10 (RAISE confirmed in manychat.json, gift matches /g/raise guide steps). QA PASS, all 7 slides legible."
+ },
+ "sources": [
+  [
+   "CareerOneStop",
+   "https://reentry.careeronestop.org/Toolkit/StateAndLocal/wages-help.aspx"
+  ],
+  [
+   "BLS",
+   "https://www.bls.gov/oes/"
+  ],
+  [
+   "ADP",
+   "https://sbshrs.adpinfo.com/blog/your-updated-guide-to-pay-disclosure-requirements"
+  ],
+  [
+   "Bradley",
+   "https://www.bradley.com/insights/publications/2023/01/know-before-you-post-pay-transparency-laws-and-job-postings"
+  ],
+  [
+   "FBM",
+   "https://www.fbm.com/post/102krs8/"
+  ],
+  [
+   "NLRB",
+   "https://www.nlrb.gov/about-nlrb/rights-we-protect/your-rights/your-rights-to-discuss-wages"
+  ],
+  [
+   "B&T",
+   "https://www.btlaw.com/insights/blogs/can-you-prohibit-employees-from-comparing-their-salaries"
+  ]
+ ],
+ "captions": {
+  "ig": "Before you ask for a raise, find out what your job really pays. The data is free.\n\n1. Look up your job and city in BLS pay data (free on CareerOneStop). It shows the 10th to 90th percentile.\n2. Save 5 job ads for your role. In states like California, Colorado, New York and Washington, ads must show the pay range.\n3. Most private sector workers have the right to discuss pay with coworkers, union or not.\n4. Paste it all into Claude and have it build a one page case with your number and 3 results with proof.\n5. If they say not now, ask what you need to do and by when. Confirm it by email.\n\nComment RAISE and we will DM you our free raise guide: where to find real pay data, the Claude prompts to build your case, and what to say when they push back.\n\nChart numbers are a sample. General info, not legal advice. Sources: CareerOneStop, BLS, ADP, Bradley, Farella Braun, NLRB, Barnes & Thornburg.\n\n#raise #salary #careertips #claudeai #moneytips",
+  "tiktok": "Check if you are underpaid before you ask for a raise\n\nFree BLS pay data by job and city, 5 job ads with pay ranges, then let Claude build your one page case. Save this. Free raise guide: link in bio.\n\n#raise #salary #careertips #claudeai",
+  "tiktok_title": "Check if you are underpaid before you ask for a raise",
+  "threads": "Before you ask for a raise, get your number. BLS pay data shows your job and city from the 10th to the 90th percentile, free on CareerOneStop. In states like California, Colorado, New York and Washington, job ads must show the pay range, so save 5 for your role. Paste it all into Claude with your wins and ask for a one page case. Free raise guide: autopilotoi.app/g/raise",
+  "x": "Ask for a raise with proof: look up your job and city in free BLS pay data (10th to 90th percentile), save 5 job ads that show pay ranges, then have Claude turn it into a one page case. Free guide: autopilotoi.app/g/raise"
+ },
+ "media": "docs/media/car/2026-11-01-howto-raise/",
+ "built_at": "2026-11-01T22:46Z"
+}

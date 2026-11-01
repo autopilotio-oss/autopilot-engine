@@ -1,0 +1,73 @@
+{
+ "kind": "howto",
+ "dateline": "NOV 01 2026",
+ "cover_bg": "bg-black",
+ "grain": false,
+ "music": "tense",
+ "seed": 8,
+ "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">HOW TO &middot; YOUR PAY</div><div class=\"fx Cc\" style=\"left:56px;top:178px;font-size:24px;color:#f2f2eeaa\">SAMPLE PAY RANGE &middot; ONE JOB &middot; ONE CITY</div><div class=\"fx\" style=\"left:56px;top:430px;width:968px;height:22px;background:#f2f2ee33;border-radius:11px\"></div><div class=\"fx\" style=\"left:298px;top:430px;width:484px;height:22px;background:#D4FF3A;border-radius:11px\"></div><div class=\"fx\" style=\"left:338px;top:350px;width:6px;height:80px;background:#f2f2ee\"></div><div class=\"fx A\" style=\"left:250px;top:262px;width:200px;text-align:center;font-size:52px;background:#f2f2ee;color:#0c0c0c;padding:12px 0 4px\">YOU $47K</div><div class=\"fx\" style=\"left:758px;top:350px;width:6px;height:80px;background:#D4FF3A\"></div><div class=\"fx A\" style=\"left:640px;top:262px;width:240px;text-align:center;font-size:52px;background:#D4FF3A;color:#0c0c0c;padding:12px 0 4px\">ASK $64K</div><div class=\"fx Cc\" style=\"left:56px;top:484px;width:150px;font-size:22px;color:#f2f2eeaa\">10TH</div><div class=\"fx Cc\" style=\"left:238px;top:484px;width:120px;text-align:center;font-size:22px;color:#f2f2eeaa\">25TH</div><div class=\"fx Cc\" style=\"left:460px;top:484px;width:160px;text-align:center;font-size:22px;color:#f2f2eeaa\">MEDIAN</div><div class=\"fx Cc\" style=\"left:722px;top:484px;width:120px;text-align:center;font-size:22px;color:#f2f2eeaa\">75TH</div><div class=\"fx Cc\" style=\"left:874px;top:484px;width:150px;text-align:right;font-size:22px;color:#f2f2eeaa\">90TH</div><div class=\"fx A\" style=\"left:56px;top:526px;width:150px;font-size:58px;color:#f2f2ee\">$38K</div><div class=\"fx A\" style=\"left:228px;top:526px;width:140px;text-align:center;font-size:58px;color:#f2f2ee\">$45K</div><div class=\"fx A\" style=\"left:470px;top:526px;width:140px;text-align:center;font-size:58px;color:#f2f2ee\">$54K</div><div class=\"fx A\" style=\"left:712px;top:526px;width:140px;text-align:center;font-size:58px;color:#D4FF3A\">$66K</div><div class=\"fx A\" style=\"left:874px;top:526px;width:150px;text-align:right;font-size:58px;color:#f2f2ee\">$80K</div><div class=\"fx\" style=\"left:0;top:720px;width:1080px;height:660px;background:#D4FF3A\"></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"20\" style=\"left:56px;top:850px;font-size:150px;white-space:nowrap;color:#0c0c0c;background:#D4FF3A\">Are you underpaid?</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:1010px;font-size:70px;white-space:nowrap;color:#0c0c0c;background:#D4FF3A\">Check before you ask for a raise</div><div class=\"fx Ii\" data-after=\"h\" data-gap=\"34\" style=\"left:56px;top:1110px;width:820px;font-size:34px;line-height:1.25;color:#0c0c0c;background:#D4FF3A\">Real pay data is free. Find your number, then ask with proof. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "Find the *real range*",
+   "body": "The US Bureau of Labor Statistics publishes pay for hundreds of jobs by state and metro area, from the <b>10th to the 90th percentile</b>. CareerOneStop shows it free. Search your job title and your city."
+  },
+  {
+   "title": "Read *5 job ads*",
+   "body": "In many states, including <b>California, Colorado, New York and Washington</b>, job ads must show the pay range. Save 5 ads for your exact role. That is what the market pays right now."
+  },
+  {
+   "title": "You can *talk pay*",
+   "body": "Under federal labor law, most private sector workers have the right to <b>discuss pay with coworkers</b>, union or not. Rules that ban it are generally unlawful. Ask someone you trust."
+  },
+  {
+   "title": "Let *Claude* build the case",
+   "body": "Paste your range, the ads and a messy list of your wins, then ask: <b>Turn this into a one page raise case with my number, 3 results with proof, and the first sentence I should say.</b>"
+  },
+  {
+   "title": "Plan for *not now*",
+   "body": "Ask for a meeting just for this. Have Claude play your manager and push back. If the answer is not now, ask <b>what you need to do and by when</b>, then confirm it by email the same day."
+  }
+ ],
+ "cta": {
+  "big": "Ask with *proof*",
+  "keyword": "RAISE",
+  "gift": "Here is your free raise guide: where to find real pay data, the Claude prompts to build your case, and what to say when they push back.",
+  "small": "Free, right in your DMs. General info, *not legal advice.*"
+ },
+ "sources": [
+  [
+   "CareerOneStop",
+   "https://reentry.careeronestop.org/Toolkit/StateAndLocal/wages-help.aspx"
+  ],
+  [
+   "BLS",
+   "https://www.bls.gov/oes/"
+  ],
+  [
+   "ADP",
+   "https://sbshrs.adpinfo.com/blog/your-updated-guide-to-pay-disclosure-requirements"
+  ],
+  [
+   "Bradley",
+   "https://www.bradley.com/insights/publications/2023/01/know-before-you-post-pay-transparency-laws-and-job-postings"
+  ],
+  [
+   "FBM",
+   "https://www.fbm.com/post/102krs8/"
+  ],
+  [
+   "NLRB",
+   "https://www.nlrb.gov/about-nlrb/rights-we-protect/your-rights/your-rights-to-discuss-wages"
+  ],
+  [
+   "B&T",
+   "https://www.btlaw.com/insights/blogs/can-you-prohibit-employees-from-comparing-their-salaries"
+  ]
+ ],
+ "bg_words": [
+  "RAISE",
+  "PAY",
+  "RANGE",
+  "PROOF"
+ ]
+}
