@@ -124,7 +124,7 @@
   "severity": "SEV-2"
  },
  "simulated_failure": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-2"
  },
  "viral_audit_chain": {
