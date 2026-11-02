@@ -51,6 +51,10 @@
   "ok": true,
   "severity": "SEV-1"
  },
+ "checkout:workspace-founding": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "dead_letters": {
   "ok": true,
   "severity": "SEV-3"
@@ -104,11 +108,11 @@
   "severity": "SEV-2"
  },
  "page:home": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-2"
  },
  "page:store": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-2"
  },
  "page:workspace": {
