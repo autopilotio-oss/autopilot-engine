@@ -74,11 +74,12 @@ def check_manifest(fetch=http_get, root=ROOT):
         price = f"${o['price_cents'] // 100}"
         try:
             code, body = fetch(CHECKOUT.format(o["permalink"]))
+            st = json.load(open(os.path.join(root, "state", "products.json"))).get(o["permalink"], {})
+            live_price = st.get("live_price_cents")   # from the Gumroad API (product pages render prices with JavaScript)
             name_ok = (o.get("gumroad_name") or o["name"]).split(" by ")[0].split(" ·")[0] in body
-            ok = code == 200 and price in body and name_ok
-            import re as _re
-            seen = sorted(set(_re.findall(r"\$\d+(?:\.\d\d)?", body)))[:6]
-            out.append({"check": f"gumroad_offer:{o['id']}", "ok": ok, "severity": "SEV-1", "detail": f"{code}, price {price} {'found' if price in body else 'MISSING'} (page shows {', '.join(seen) or 'no $ amounts'}), name {'found' if name_ok else 'MISSING'}"})
+            ok = code == 200 and name_ok and live_price == o["price_cents"] and st.get("live") is not False
+            out.append({"check": f"gumroad_offer:{o['id']}", "ok": ok, "severity": "SEV-1",
+                        "detail": f"page {code}, name {'found' if name_ok else 'MISSING'}, Gumroad API price {live_price} vs manifest {o['price_cents']}, live {st.get('live')}"})
         except Exception as e:
             out.append({"check": f"gumroad_offer:{o['id']}", "ok": False, "severity": "SEV-1", "detail": str(e)[:120]})
         if o.get("landing"):
