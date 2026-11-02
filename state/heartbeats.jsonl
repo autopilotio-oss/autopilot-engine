@@ -64,3 +64,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T20:28:48+00:00", "note": "7 posts out today, top post saves+shares 0, feed written yes"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-02T20:42:35+00:00", "note": "bank full (6); rechecked oldest 2026-11-01-howto-dispute: still valid, kept in bank"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T21:26:16+00:00", "note": "11 posts out today, top post saves+shares 0, feed written yes"}
+{"worker": "kit_sync", "status": "ok", "at": "2026-11-02T21:36:31+00:00", "note": "0 routed (forms empty)"}
