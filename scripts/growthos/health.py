@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from events import Store, ROOT, now  # noqa: E402
 
 PAGES = [("home", "https://autopilotoi.app/", "href=\"g/subs/\""), ("free", "https://autopilotoi.app/free/", "/g/subs/"),
-         ("store", "https://autopilotoi.app/store/", "gumroad.com/l/"), ("workspace", "https://autopilotoi.app/workspace/", "gumroad.com/l/workspace"),
+         ("store", "https://autopilotoi.app/store/", "/store/subs/"), ("workspace", "https://autopilotoi.app/workspace/", "gumroad.com/l/workspace"),
          ("guide_subs", "https://autopilotoi.app/g/subs/", "gumroad.com/l/subs-agent"), ("brain", "https://autopilotoi.app/brain/", "kit.com"),
          ("guide_refund", "https://autopilotoi.app/g/refund/", "gumroad.com/l/refund-agent"), ("guide_bill", "https://autopilotoi.app/g/bill/", "gumroad.com/l/bill-agent"),
          ("guide_shop", "https://autopilotoi.app/g/shop/", "gumroad.com/l/shop-agent"), ("guide_video", "https://autopilotoi.app/g/video/", "gumroad.com/l/video-agent"),
