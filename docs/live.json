@@ -1,6 +1,7 @@
 {
  "live": [
   "all-money-agents",
+  "autopilot",
   "bill-agent",
   "debt-agent",
   "deposit-agent",
@@ -13,5 +14,5 @@
   "video-agent",
   "workspace"
  ],
- "checked": "2026-11-02T13:33:59Z"
+ "checked": "2026-11-02T15:25:39Z"
 }
