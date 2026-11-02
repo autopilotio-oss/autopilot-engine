@@ -1,4 +1,4 @@
-"""Builds THE WORKSPACE course PDF. Usage: python3 tools/workspace/build.py out.pdf"""
+"""Builds OFFICE AUTOPILOT course PDF. Usage: python3 tools/workspace/build.py out.pdf"""
 import html, os, sys, asyncio
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import QUIZ, BUILDER, BRAIN, AGENTS, COMMANDS, NIGHT, FIX, SAFETY, EXAMPLES
@@ -27,16 +27,16 @@ a{{color:#D4FF3A}}.foot{{position:absolute;left:.7in;right:.7in;bottom:.35in;fon
 N = [0]
 def page(body, label):
     N[0] += 1
-    return (f'<div class="pg"><div class="top"><b>AUTOPILOT.OI</b> · THE WORKSPACE<span>{e(label)} · {N[0]:02d}</span></div>{body}'
+    return (f'<div class="pg"><div class="top"><b>AUTOPILOT.OI</b> · OFFICE AUTOPILOT<span>{e(label)} · {N[0]:02d}</span></div>{body}'
             '<div class="foot">AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic. Features and plans change: check claude.com.<span>@autopilot.oi</span></div></div>')
 
-STARTER = ('Read the file "THE WORKSPACE" in this project. You are my setup tech. Follow the BUILDER PROMPT page exactly, '
+STARTER = ('Read the file "OFFICE AUTOPILOT" in this project. You are my setup tech. Follow the BUILDER PROMPT page exactly, '
            'using the 20 QUESTIONS page, the BUSINESS BRAIN TEMPLATE page and the 7 agent pages. Start now.')
 
 def build():
     P = []
     P.append(page(f'''<div style="margin-top:1.3in"><span class="chip">7 agents · any business</span>
-<h1>The<br><em>Workspace</em></h1><p class="lead">Set up 7 Claude agents that draft your email replies, keep your calendar, chase quiet quotes, ask for reviews and brief you every morning. You answer 20 questions. Claude does the setup with you.</p>
+<h1>Office<br><em>Autopilot</em></h1><p class="lead">Set up 7 Claude agents that draft your email replies, keep your calendar, chase quiet quotes, ask for reviews and brief you every morning. You answer 20 questions. Claude does the setup with you.</p>
 <h2>What's inside</h2><div class="g2">{"".join(f'<div class="card"><div class="mono">{a}</div>{e(b)}</div>' for a, b in [
         ("Start here", "What you need and the one hour plan"), ("The 20 questions", "Everything Claude needs to know about your business"),
         ("The Builder prompt", "Turns Claude into your setup tech"), ("Business Brain", "One file with your prices, rules and voice"),
@@ -49,7 +49,7 @@ def build():
 <li><b>Gmail and Google Calendar</b> work best. Other apps can work if Claude has a connector for them.</li>
 <li><b>About an hour.</b> Most of it is Claude working.</li></ol></div>
 <h2>The one hour <em>plan</em></h2>
-<div class="row"><div class="n">01</div><div><b>Make a Project.</b> In Claude, open Projects, then New project. Name it "My Workspace". Add this PDF to the project's files.</div></div>
+<div class="row"><div class="n">01</div><div><b>Make a Project.</b> In Claude, open Projects, then New project. Name it "Office Autopilot". Add this PDF to the project's files.</div></div>
 <div class="row"><div class="n">02</div><div><b>Paste one prompt.</b> Open a new chat inside the project and paste the starter prompt below.</div></div>
 <div class="row"><div class="n">03</div><div><b>Answer and tap allow.</b> Claude asks the 20 questions, writes your Business Brain, connects your apps with you and builds your 7 agents.</div></div>
 <div class="card" style="margin-top:16px"><div class="mono">Starter prompt · paste this</div><pre style="font-size:12.5px">{e(STARTER)}</pre></div>
@@ -70,7 +70,7 @@ def build():
 <div class="row" style="border:0"><div class="n">TIP</div><div>{e(EXAMPLES[a["n"]][1])}</div></div>''', "AGENT " + a["n"]))
     half = [COMMANDS[:4], COMMANDS[4:]]
     for j, grp in enumerate(half):
-        body = ('<h2>50 phone <em>commands</em></h2><p class="mut">Type these in your Workspace project from your phone. Fill the [brackets].</p>' if j == 0 else '<h2>Phone commands <em>cont.</em></h2>')
+        body = ('<h2>50 phone <em>commands</em></h2><p class="mut">Type these in your Office Autopilot project from your phone. Fill the [brackets].</p>' if j == 0 else '<h2>Phone commands <em>cont.</em></h2>')
         body += '<div class="g2" style="margin-top:10px">' + "".join(f'<div class="card"><div class="mono">{e(t)}</div>' + "".join(f'<div style="padding:3px 0;font-size:12px">→ {e(c)}</div>' for c in cs) + '</div>' for t, cs in grp) + '</div>'
         P.append(page(body, "COMMANDS"))
     P.append(page('<h2>The night <em>shift</em></h2><p class="mut">How your agents run on their own.</p>' + "".join(f'<div class="row"><div class="n">{i+1:02d}</div><div><b>{e(a)}</b> <span class="mut">{e(b)}</span></div></div>' for i, (a, b) in enumerate(NIGHT)), "NIGHT SHIFT"))
@@ -91,4 +91,4 @@ async def main(out):
         bad = await pg.evaluate("[...document.querySelectorAll('.pg')].map((p,i)=>[i+1,p.scrollHeight-p.clientHeight]).filter(x=>x[1]>2)")
         if bad: print("OVERFLOW", bad)
         await pg.pdf(path=out, print_background=True, prefer_css_page_size=True); await b.close()
-asyncio.run(main(sys.argv[1] if len(sys.argv) > 1 else "/tmp/ws/THE WORKSPACE.pdf"))
+asyncio.run(main(sys.argv[1] if len(sys.argv) > 1 else "/tmp/ws/OFFICE AUTOPILOT.pdf"))

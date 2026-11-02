@@ -1,4 +1,4 @@
-# THE WORKSPACE course content. Plain copy rules: no dashes, no income claims, drafts not sends.
+# OFFICE AUTOPILOT course content. Plain copy rules: no dashes, no income claims, drafts not sends.
 QUIZ = [
     ("Your business", "What's the business called, and what do you do in one sentence?"),
     ("You", "Your first name, and how you sign off messages (example: \"Sam, Shine Mobile Detail\")."),
@@ -22,7 +22,7 @@ QUIZ = [
     ("Send to me", "What must always come straight to you: complaints, refunds, big jobs, anything legal."),
 ]
 
-BUILDER = """You are my setup tech for THE WORKSPACE by AUTOPILOT.OI. Your job is to set up 7 AI agents for my business with me, one step at a time. I am not technical. Use short messages, tell me exactly what to tap, and wait for me after every step.
+BUILDER = """You are my setup tech for OFFICE AUTOPILOT by AUTOPILOT.OI. Your job is to set up 7 AI agents for my business with me, one step at a time. I am not technical. Use short messages, tell me exactly what to tap, and wait for me after every step.
 
 RULES
 1. One step at a time. After each step, ask me "Done?" and wait.

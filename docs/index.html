@@ -1,124 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>AUTOPILOT.OI · AI that does the boring stuff</title>
-<meta name="description" content="7 Claude agents that answer customers, book jobs, chase quotes and brief you every morning. Set up once in about an hour.">
-<meta property="og:title" content="AUTOPILOT.OI · Stop doing the busy work">
-<meta property="og:description" content="Free AI guides and Claude prompt kits to save money, grow on TikTok and run a small business.">
-<meta property="og:image" content="https://autopilotoi.app/logo.png">
-<meta property="og:url" content="https://autopilotoi.app/">
-<meta name="theme-color" content="#000000">
-<link rel="icon" href="logo.png">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AUTOPILOT.OI · AI for the front office</title><meta name="description" content="Setup kits you install in your own Claude account, and Workspace, the software we&#x27;re building to answer every lead for you."><link rel="canonical" href="https://autopilotoi.app/">
+<meta property="og:title" content="AUTOPILOT.OI · AI for the front office"><meta property="og:description" content="Setup kits you install in your own Claude account, and Workspace, the software we&#x27;re building to answer every lead for you."><meta property="og:image" content="https://autopilotoi.app/store/workspace-founding-cover.png">
+<meta name="theme-color" content="#050605"><link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600;14..32,700;14..32,900&display=swap" rel="stylesheet">
-<style>
-:root{--l:#B6F35A;--line:#1c1d1b;--mut:#8f928b;--card:#0c0d0c}
-*{box-sizing:border-box;margin:0;padding:0}
-html{overflow-x:hidden}
-body{background:#000;color:#fff;font:500 16px/1.5 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.w{max-width:520px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
-.glow{position:fixed;width:520px;height:520px;left:50%;margin-left:-260px;top:-300px;border-radius:50%;background:rgba(182,243,90,.16);filter:blur(100px);z-index:0;pointer-events:none}
-.H{font-family:Inter,system-ui,sans-serif;font-variation-settings:"opsz" 32;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.95}
-.H em{font-style:normal;color:var(--l)}
-.tag{font:600 11px Inter;letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}
-.top{text-align:center;padding:40px 0 30px}
-.top img{width:76px;height:76px;border-radius:50%;box-shadow:0 0 0 4px #000,0 0 0 5px rgba(182,243,90,.5)}
-.top h1{font-size:clamp(40px,11.5vw,56px);margin:18px 0 12px}
-.top p{color:rgba(255,255,255,.72);font-size:16px;max-width:360px;margin:0 auto}
-.lbl{margin:28px 2px 12px}
-.card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;margin-bottom:10px;transition:transform .12s}
-.card:active{transform:scale(.98)}
-.card .ic{width:48px;height:48px;border-radius:14px;background:#161815;display:flex;align-items:center;justify-content:center;font-size:24px;flex:none}
-.card div{flex:1;min-width:0}
-.card b{display:block;font:700 16px/1.25 Inter}
-.card p{color:var(--mut);font-size:13.5px;margin-top:2px}
-.card .go{flex:none;font:900 11px Inter;letter-spacing:.14em;background:var(--l);color:#000;border-radius:30px;padding:7px 11px}
-.card.hero{background:var(--l);color:#000;border:none;flex-direction:column;align-items:stretch;padding:22px 20px}
-.card.hero .tag{color:rgba(0,0,0,.6)}
-.card.hero .H{font-size:34px;margin:10px 0 8px}
-.card.hero p{color:rgba(0,0,0,.72);font-size:15px}
-.card.hero .btn{display:block;text-align:center;background:#000;color:var(--l);border-radius:14px;padding:16px;font:900 15px Inter;text-transform:uppercase;margin-top:18px}
-.card.hero .sm{text-align:center;font:600 12.5px Inter;color:rgba(0,0,0,.6);margin-top:10px}
-.offer{background:var(--card);border:1px solid rgba(182,243,90,.35);border-radius:22px;padding:22px 20px}
-.offer .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.offer .H{font-size:28px}
-.offer .price{font:900 30px Inter;color:var(--l)}
-.offer p{color:rgba(255,255,255,.7);font-size:14.5px;margin:10px 0 16px}
-.offer a{display:block;text-align:center;border:1.5px solid var(--l);color:var(--l);border-radius:14px;padding:14px;font:900 14px Inter;text-transform:uppercase}
-.offer .sm{text-align:center;color:var(--mut);font-size:12.5px;margin-top:10px}
-form{display:flex;gap:8px;margin-top:4px}
-input{flex:1;min-width:0;font:500 16px Inter;color:#fff;background:var(--card);border:1px solid #272825;border-radius:14px;padding:15px 14px;outline:none}
-input:focus{border-color:var(--l)}
-form button{border:0;border-radius:14px;background:#fff;color:#000;font:900 13px Inter;text-transform:uppercase;padding:0 18px}
-#km{color:var(--mut);font-size:12.5px;margin-top:8px}
-.ft{text-align:center;color:#55584f;font-size:12px;padding:40px 0 50px;line-height:1.7}
-.ft a{color:var(--mut)}
-</style>
-<link rel="stylesheet" href="/assets/brand.css"></head>
-<body>
-<div class="glow"></div>
-<div class="w">
- <header class="top">
-  <img src="logo.png" alt="AUTOPILOT.OI">
-  <h1 class="H">AI that does<br>the <em>boring stuff.</em></h1>
-  <p>Simple AI setups for real life and small business. Start free, no experience needed.</p>
- </header>
-
- <div class="tag lbl" style="margin-top:6px">The agents from our videos</div>
- <a class="card" href="https://autopilotoi.gumroad.com/l/shop-agent"><span class="ic">🛍️</span><div><b>Shop Agent</b><p>Finds TikTok Shop products, does the profit math, checks the rules</p></div><span class="go">$10</span></a>
- <a class="card" href="https://autopilotoi.gumroad.com/l/video-agent"><span class="ic">🎬</span><div><b>Video Agent</b><p>One idea into a week of TikToks, every edit planned</p></div><span class="go">$10</span></a>
- <a class="card" href="https://autopilotoi.gumroad.com/l/sell-agent"><span class="ic">💬</span><div><b>Sales Agent</b><p>Every DM and comment answered in your voice</p></div><span class="go">$10</span></a>
- <a class="card" href="workspace/"><span class="ic">🧠</span><div><b>The Workspace</b><p>7 agents that do your business busywork</p></div><span class="go">$49</span></a>
- <a class="card" href="https://autopilotoi.gumroad.com/l/all-money-agents"><span class="ic">💰</span><div><b>All 5 Money Agents</b><p>Subscriptions, bills, refunds, debt and your raise</p></div><span class="go">$39</span></a>
- <div style="height:14px"></div>
- <a class="card hero" href="brain/">
-  <span class="tag">Run a business? Start here · Free</span>
-  <span class="H">Your free<br>AI Front Desk</span>
-  <p>Answer 15 questions. Get an AI that replies to customers with your real prices, rules and voice, plus 10 ready prompts.</p>
-  <span class="btn">Build mine free →</span>
-  <span class="sm">5 minutes · works with free Claude or ChatGPT</span>
- </a>
-
- <div class="tag lbl">Free money guides</div>
- <a class="card" href="g/subs/"><span class="ic">🔁</span><div><b>Kill forgotten subscriptions</b><p>Find every recurring charge and cancel the dead ones</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/refund/"><span class="ic">↩️</span><div><b>Get your money back</b><p>Refunds for double charges, flights and missing orders</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/credit/"><span class="ic">💳</span><div><b>Fix your credit report</b><p>Find errors and dispute them with AI</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/bill/"><span class="ic">🧾</span><div><b>Cut a medical bill</b><p>Check it before you pay, with the call script</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/debt/"><span class="ic">💸</span><div><b>Get out of debt faster</b><p>Ask for a lower rate and build a payoff plan</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/raise/"><span class="ic">📈</span><div><b>Ask for a raise</b><p>Real pay data and a practiced ask</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/deposit/"><span class="ic">🔑</span><div><b>Get your deposit back</b><p>Check every deduction and draft the letter</p></div><span class="go">FREE</span></a>
-
- <div class="tag lbl">Free TikTok guides</div>
- <a class="card" href="g/video/"><span class="ic">🎬</span><div><b>Edit and post videos with AI</b><p>Hooks, captions and a posting plan</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/shop/"><span class="ic">🛍️</span><div><b>Start a TikTok Shop</b><p>Pick a product and do the math first</p></div><span class="go">FREE</span></a>
- <a class="card" href="g/sell/"><span class="ic">🤝</span><div><b>Sell on TikTok with AI</b><p>Listings, LIVE plans and buyer replies</p></div><span class="go">FREE</span></a>
-
- <div class="tag lbl">Want it done for you?</div>
- <div class="offer">
-  <div class="row"><span class="H">The Workspace</span><span class="price">$49</span></div>
-  <p>7 AI agents that answer customers, book jobs, chase quotes and brief you every morning. They draft, you approve. About 1 hour to set up.</p>
-  <a href="workspace/">See what's inside →</a>
-  <div class="sm">One payment · 30 day refund</div>
- </div>
- <a class="card" href="store/" style="margin-top:10px"><span class="ic">🤖</span><div><b>The Agent Store</b><p>6 Money Agents and 3 TikTok Agents, from $10</p></div><span class="go">SHOP</span></a>
-
- <div class="tag lbl">One useful AI tip at a time</div>
- <form id="kf"><input type="email" id="ke" required placeholder="Your email" autocomplete="email"><button type="submit" id="kb">Join</button></form>
- <p id="km">No spam. Unsubscribe anytime.</p>
-
- <div class="ft"><a href="https://www.instagram.com/autopilot.oi/">@autopilot.oi</a><br>© AUTOPILOT.OI · Independent, not affiliated with Anthropic.<br>Education only, not financial advice.</div>
-</div>
-<script>
-(function(){
- var f=document.getElementById('kf'),m=document.getElementById('km'),b=document.getElementById('kb');
- f.addEventListener('submit',function(e){e.preventDefault();var em=document.getElementById('ke').value.trim();
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
-  b.disabled=true;b.textContent='...';var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]','home');
-  fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){f.style.display='none';m.innerHTML='<b style="color:#fff">You\u2019re in.</b> Check your inbox within the hour.'}).catch(function(){b.disabled=false;b.textContent='Join';m.textContent='Something went wrong. Try again.'})});
-})();
-</script>
-<script src="/assets/ap.js" defer></script></body>
-</html>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=3"></head><body><div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links"><a href="/marketplace/">Marketplace</a><a href="/workspace/">Workspace</a><a href="/brain/">Free check</a></div></div></div>
+<div class="wrap hero"><div class="k"><b>AUTOPILOT.OI</b> · AI for the front office</div>
+<h1 style="margin:18px 0 22px">Your front office,<br><em>handled.</em> You stay in control.</h1>
+<p class="lead">Setup kits that install AI into your business today, and Workspace, the software we're building to answer every lead while you work.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn" href="/marketplace/">Browse the Marketplace</a><a class="btn ghost" href="/workspace/">See Workspace</a></div></div>
+<div class="wrap" style="padding-bottom:84px"><div class="grid2">
+<a class="card door" href="/marketplace/"><span class="tagline live">Available now</span><h2 style="font-size:34px">Marketplace</h2><p>Guided setup kits for your own Claude account: a front desk that drafts replies and quotes, an office of scheduled agents, a week of content. One time price, 30 day refund.</p><span class="label">SETUP KITS · FROM $10</span><span class="go">Browse kits →</span></a>
+<a class="card door" href="/workspace/"><span class="tagline dev">In development · founding spots open</span><h2 style="font-size:34px">Workspace</h2><p>Software that catches every new lead, answers within a minute, drafts the reply and quote, and chases quiet quotes. One inbox you approve from your phone.</p><span class="label">SOFTWARE · $99 A MONTH PLANNED</span><span class="go">See Workspace →</span></a></div></div>
+<div class="sec"><div class="wrap"><div class="k" style="margin-bottom:14px">How we work</div><h2 style="margin-bottom:30px">Built to be <em>trusted</em> with real customers.</h2>
+<div class="grid3"><div class="card"><h3>You approve what goes out</h3><p style="margin-top:10px">Our kits draft. Workspace drafts too, and only sends the one acknowledgment you write yourself.</p></div>
+<div class="card"><h3>Clear labels</h3><p style="margin-top:10px">Every product says what it is: a setup kit that runs in your Claude account, or software we run. Nothing pretends to be more.</p></div>
+<div class="card"><h3>Your prices, your rules</h3><p style="margin-top:10px">Everything starts from a short interview about your business. When information is missing it asks, instead of guessing.</p></div></div></div></div>
+<div class="sec"><div class="wrap grid2" style="align-items:center"><div><div class="k" style="margin-bottom:14px">Free · 2 minutes</div><h2>Where are your leads <em>leaking?</em></h2><p class="lead" style="margin-top:14px">Answer 10 questions and get your own AI front desk prompt, free.</p><a class="btn" style="margin-top:24px" href="/brain/">Start the free check</a></div><div class="ui"><div class="bar"><span>Leads · today</span><span>Product preview</span></div>
+<div class="row"><div class="av">DR</div><div class="t"><b>Dana R.</b><span>How much for a full detail on an SUV? Free Saturday?</span></div><span class="st g">REPLIED 0:48</span></div>
+<div class="row"><div class="av">MT</div><div class="t"><b>Mark T.</b><span>Ceramic coating, 2022 Tacoma</span></div><span class="st g">QUOTE READY</span></div>
+<div class="row"><div class="av">PS</div><div class="t"><b>Priya S.</b><span>Quote sent Tuesday, no reply</span></div><span class="st">FOLLOW UP · DAY 2</span></div>
+<div class="draft"><div class="label" style="margin-bottom:10px">DRAFT FOR DANA · WAITING FOR YOU</div><div class="msg">How much for a full detail on an SUV? Free Saturday?</div>
+<div class="dr">A full SUV detail is $250, about 3 hours, and we come to you. I have Saturday at 9 or 1. Want me to hold one?</div><div class="acts"><span>Edit</span><span class="ok">Approve & send</span></div></div>
+<div class="label" style="margin-top:12px;text-align:center">Example business. Workspace is in development.</div></div></div></div><div class="foot"><div class="wrap"><div>AUTOPILOT.OI · AI for the front office<br>Independent. Not affiliated with Anthropic. Claude is a product of Anthropic.</div>
+<div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/marketplace/">Marketplace</a><a href="/workspace/">Workspace</a><a href="/brain/">Free check</a><a href="/library/">Library</a><a href="https://www.instagram.com/autopilot.oi/">Instagram</a></div></div></div>
+<script src="/assets/ap.js" defer></script></body></html>

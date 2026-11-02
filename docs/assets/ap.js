@@ -48,7 +48,7 @@
     if (!Array.prototype.some.call(document.querySelectorAll('a[href*="gumroad.com/l/"]'), function (a) { return LAUNCH.slugs.indexOf(slugOf(a)) > -1; })) return;
     var b = document.createElement('div'); b.id = 'ap-launch';
     b.style.cssText = 'position:sticky;top:0;z-index:50;background:#D4FF3A;color:#050505;text-align:center;font:600 13px/1.3 "Chakra Petch",system-ui,sans-serif;padding:9px 12px;letter-spacing:.02em';
-    b.textContent = 'Launch week: 30% off every agent with code LAUNCH30, applied at checkout. Ends Nov 10.';
+    b.textContent = 'Launch week: 30% off selected kits with code LAUNCH30, applied at checkout. Ends Nov 10.';
     document.body.insertBefore(b, document.body.firstChild);
     Array.prototype.forEach.call(document.querySelectorAll('.ap-launch-price'), function (el) { el.style.display = 'block'; });
   }

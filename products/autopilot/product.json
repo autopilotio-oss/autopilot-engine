@@ -1,10 +1,10 @@
 {
- "name": "Autopilot",
- "price_cents": 1999,
+ "name": "Front Desk Kit by AUTOPILOT.OI",
+ "price_cents": 3900,
  "permalink": "autopilot",
- "filename": "Autopilot Setup.pdf",
- "description_html": "<p><strong>Put the busy work on Autopilot.</strong></p><p>Autopilot is an agent that interviews you for about 15 minutes, learns your prices, your rules and how you talk, then builds your systems inside the Claude app with you:</p><ul><li><strong>Front desk:</strong> paste any customer message, get a reply with your real prices, hours and two time options</li><li><strong>Quotes:</strong> total, what's included, your deposit and cancel rules, ready to send</li><li><strong>Follow ups:</strong> the nudge for the quote that went quiet, in your style</li><li><strong>Reviews:</strong> the thank you that asks for a review with your link</li><li><strong>FAQ bank:</strong> your answers to the questions you get every day</li><li><strong>Weekly plan:</strong> your week laid out with the busy work batched</li><li><strong>Plus 3 extra systems</strong> picked from the busy work you name, and a command to build new ones anytime</li></ul><p><strong>How it works:</strong> 1. Paste the setup agent from the PDF into a new Claude chat. 2. Answer the 15 interview questions about your prices, your rules and how you talk. 3. Autopilot builds your systems with you, one at a time, and gives you 9 commands to use them.</p><p>Every draft waits for your OK. It never sends, posts or logs into anything.</p><p><strong>What you get (14 page PDF):</strong> the setup agent, the 15 interview questions, the Autopilot instructions (9 commands), a worked example, message templates, a cheat sheet and a time back tracker.</p><p><strong>You need:</strong> the Claude app on your phone or computer (the free plan works), your price list, about 30 minutes.</p><p>Example business shown in our videos. Results depend on what you tell it.</p><p>Not working for you within 30 days? Reply to your Gumroad receipt for a full refund.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
- "cover_url": "https://autopilotoi.app/store/autopilot-cover.png?v=1",
+ "filename": "Front Desk Kit.pdf",
+ "description_html": "<p><strong>Every customer, answered in your voice.</strong></p><p>A setup kit you install in your own Claude account. Its agent interviews you for about 15 minutes, learns your prices, your rules and how you talk, then builds your systems inside the Claude app with you:</p><ul><li><strong>Front desk:</strong> paste any customer message, get a reply with your real prices, hours and two time options</li><li><strong>Quotes:</strong> total, what's included, your deposit and cancel rules, ready to send</li><li><strong>Follow ups:</strong> the nudge for the quote that went quiet, in your style</li><li><strong>Reviews:</strong> the thank you that asks for a review with your link</li><li><strong>FAQ bank:</strong> your answers to the questions you get every day</li><li><strong>Weekly plan:</strong> your week laid out with the busy work batched</li><li><strong>Plus 3 extra systems</strong> picked from the busy work you name, and a command to build new ones anytime</li></ul><p><strong>How it works:</strong> 1. Paste the setup agent from the PDF into a new Claude chat. 2. Answer the 15 interview questions about your prices, your rules and how you talk. 3. Autopilot builds your systems with you, one at a time, and gives you 9 commands to use them.</p><p>Every draft waits for your OK. It never sends, posts or logs into anything.</p><p><strong>What you get (14 page PDF):</strong> the setup agent, the 15 interview questions, the Autopilot instructions (9 commands), a worked example, message templates, a cheat sheet and a time back tracker.</p><p><strong>You need:</strong> the Claude app on your phone or computer (the free plan works), your price list, about 30 minutes.</p><p>Example business shown. Results depend on what you tell it.</p><p>Not working for you within 30 days? Reply to your Gumroad receipt for a full refund.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/autopilot-cover.png?v=2",
  "tags": [
   "ai",
   "claude",
@@ -12,8 +12,8 @@
   "ai agent",
   "automation"
  ],
- "version": 2,
- "cover_v": 1,
+ "version": 3,
+ "cover_v": 2,
  "priority": 5,
  "landing": "autopilot/"
 }
