@@ -1,24 +1,24 @@
 {
-  "at": "2026-11-02T20:31:00Z",
+  "at": "2026-11-02T21:26:00Z",
   "posts_today": {
     "threads": {
-      "published": 2,
-      "pending": 6,
-      "error": 0
-    },
-    "twitter": {
-      "published": 2,
-      "pending": 3,
-      "error": 0
-    },
-    "instagram": {
-      "published": 1,
+      "published": 3,
       "pending": 5,
       "error": 0
     },
-    "tiktok": {
-      "published": 2,
+    "twitter": {
+      "published": 3,
       "pending": 2,
+      "error": 0
+    },
+    "instagram": {
+      "published": 2,
+      "pending": 4,
+      "error": 0
+    },
+    "tiktok": {
+      "published": 3,
+      "pending": 1,
       "error": 0
     }
   },
@@ -35,21 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-02T20:31:00Z"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-10-31T17:47:12-03:00",
-      "text": "$133 a month. $1,596 a year. On things you don't even use.",
-      "metrics": {
-        "reach": 73,
-        "views": 73,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
-      "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-02T20:31:00Z"
+      "metrics_seen_at": "2026-11-02T21:26:00Z"
     },
     {
       "network": "instagram",
@@ -63,16 +49,26 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-02T20:31:00Z"
+      "metrics_seen_at": "2026-11-02T21:26:00Z"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-01T02:02:36-03:00",
+      "text": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged.",
+      "metrics": {
+        "reach": 54,
+        "views": 67,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0
+      },
+      "url": "https://www.instagram.com/reel/DfLnMxhjLES/",
+      "metrics_seen_at": "2026-11-02T21:26:00Z"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "revenue_seen": {
-    "orders_all_time": 0,
-    "orders_7d": 0
-  },
-  "notes": "17:31 ART: 7 provider slots published today (10:00 subs leak on IG, TikTok, Threads, X; 12:00 PHP alert on Threads, TikTok, X), 16 pending (4 non draft due 18:00: raise on TikTok, Threads, X and PHP alert on IG; 12 draft=true awaiting approval), 0 ERROR. IG reels 6-72h re-pulled: 7 reels all 0 saves, 0 shares, 0 comments; reach 15 to 75 (ranked by reach only, no winner). Today's 10:00 IG reel not yet in Metricool reels analytics (MISSING). TikTok, Threads and X post analytics not pulled this run (MISSING). Kit subscribers 0, new today 0. Revenue: 0 verified orders all time (unchanged). All 8 workflows latest completed run success; post.yml and ci.yml in progress at feed time (ci.yml 5 failures in 24h, none latest). HQ feed written to status/hub (v18). git fetch from origin hung this run; push may lag."
+  "notes": "18:26 ART: 11 provider slots published today (10:00 subs leak on IG, TikTok, Threads, X; 12:00 PHP alert on Threads, TikTok, X; 18:00 raise on TikTok, Threads, X and PHP alert on IG), 12 pending (all draft=true awaiting approval), 0 ERROR. IG reels 6-72h re-pulled: 7 reels all 0 saves, 0 shares, 0 comments; reach 15 to 75 (ranked by reach only, no winner). Today's 10:00 IG reel still not in Metricool reels analytics (MISSING). TikTok, Threads and X post analytics not pulled this run (MISSING). Kit subscribers 0, new today 0. Revenue: 0 verified orders all time (unchanged). All 8 workflows latest completed run success (ci.yml 5 failures in 24h, none latest). HQ feed written to status/hub (v19)."
 }
