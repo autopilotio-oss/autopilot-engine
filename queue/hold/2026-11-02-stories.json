@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-02-tip",
+  "group": "stories-2026-11-02",
+  "at": "2026-11-02T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-02-tip.jpg"
+  ],
+  "text": "AI tip: Want it to sound like you? Paste 2 old messages and say: \"Write like this.\""
+ },
+ {
+  "id": "story-2026-11-02-quiz",
+  "group": "stories-2026-11-02",
+  "at": "2026-11-02T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-02-quiz.jpg"
+  ],
+  "text": "Quiz: Who can legally remove accurate negative items from your credit report?"
+ },
+ {
+  "id": "story-2026-11-02-answer",
+  "group": "stories-2026-11-02",
+  "at": "2026-11-02T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-02-answer.jpg"
+  ],
+  "text": "Quiz answer: Nobody. {Nobody.} But errors can be disputed for free, and most negatives drop off after about 7 years."
+ },
+ {
+  "id": "story-2026-11-02-fact",
+  "group": "stories-2026-11-02",
+  "at": "2026-11-02T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-02-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can write your dispute letter. Give it the date, the amount and what went wrong. It writes a clear, polite letter that gets read."
+ },
+ {
+  "id": "story-2026-11-02-poll",
+  "group": "stories-2026-11-02",
+  "at": "2026-11-02T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-02-poll.jpg"
+  ],
+  "text": "Poll: Claude or ChatGPT? A) Claude B) ChatGPT"
+ }
+]
