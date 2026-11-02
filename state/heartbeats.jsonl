@@ -33,3 +33,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T01:23:09+00:00", "note": "12 posts out today, top post 0 saves+shares, feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-02T01:46:33+00:00", "note": "/free/ OPEN labels kept on one line at 390px (ManyChat landing); Pages deploy of c50a4b0 succeeded, live fetch blocked by sandbox proxy"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T02:22:20+00:00", "note": "posts out today 12 (3 per network), top post saves+shares 0, feed written yes (v10)"}
+{"worker": "draft_factory", "status": "ok", "at": "2026-11-02T02:49:11+00:00", "note": "built 2026-11-02-howto-subs, gate 90, bank 5"}
