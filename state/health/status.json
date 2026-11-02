@@ -104,7 +104,7 @@
   "severity": "SEV-2"
  },
  "page:store": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-2"
  },
  "page:workspace": {
@@ -156,7 +156,7 @@
   "severity": "SEV-2"
  },
  "worker:support_agent": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-3"
  },
  "worker:tiktok_intel": {
