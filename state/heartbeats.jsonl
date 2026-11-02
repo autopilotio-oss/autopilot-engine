@@ -42,3 +42,4 @@
 {"worker": "trend_scout", "status": "ok", "at": "2026-11-02T11:53:37+00:00", "note": "2 candidates, 2 research records"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T12:29:39+00:00", "note": "0 posts out today (24 pending), top post saves+shares 0, feed written yes"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-02T12:34:21+00:00", "note": "0 routed"}
+{"worker": "publisher", "status": "ok", "at": "2026-11-02T12:40:02+00:00", "note": "0 staged, 0 published, 0 errors"}
