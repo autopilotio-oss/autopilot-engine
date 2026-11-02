@@ -9,7 +9,7 @@ OFFERS = {o["id"]: o for o in M["offers"]}
 def text(path):
     s = open(path, encoding="utf-8").read()
     s = re.sub(r"<script.*?</script>|<style.*?</style>", " ", s, flags=re.S)
-    return html.unescape(re.sub(r"<[^>]+>", " ", s))
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s)))  # collapse spaces so tags cannot split a phrase
 
 
 def site_pages():

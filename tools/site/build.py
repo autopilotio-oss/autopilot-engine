@@ -13,9 +13,9 @@ def head(title, desc, path, img="autopilot-cover.png"):  # share image: the prod
 <link rel="stylesheet" href="/assets/site.css?v=3"></head><body>"""
 def nav(on):
     a = lambda href, t, k: f'<a href="{href}"{" class=\"on\"" if k == on else ""}>{t}</a>'
-    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/marketplace/", "Marketplace", "m")}{a("/workspace/", "Workspace", "w")}{a("/brain/", "Free check", "c")}</div></div></div>'
+    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/marketplace/", "Marketplace", "m")}{a("/workspace/", "Workspace", "w")}{a("/brain/", "Free starter", "c")}</div></div></div>'
 FOOT = """<div class="foot"><div class="wrap"><div>AUTOPILOT.OI · AI for the front office<br>Independent. Not affiliated with Anthropic. Claude is a product of Anthropic.</div>
-<div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/marketplace/">Marketplace</a><a href="/workspace/">Workspace</a><a href="/brain/">Free check</a><a href="/library/">Library</a><a href="https://www.instagram.com/autopilot.oi/">Instagram</a></div></div></div>
+<div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/marketplace/">Marketplace</a><a href="/workspace/">Workspace</a><a href="/brain/">Free starter</a><a href="/library/">Library</a><a href="https://www.instagram.com/autopilot.oi/">Instagram</a></div></div></div>
 <script src="/assets/ap.js" defer></script></body></html>"""
 def redirect(path, to):
     os.makedirs(f"{D}{path}", exist_ok=True)
@@ -43,7 +43,7 @@ def home():
 <div class="grid3"><div class="card"><h3>You approve what goes out</h3><p style="margin-top:10px">Our kits draft. Workspace drafts too, and only sends the one acknowledgment you write yourself.</p></div>
 <div class="card"><h3>Clear labels</h3><p style="margin-top:10px">Every product says what it is: a setup kit that runs in your Claude account, or software we run. Nothing pretends to be more.</p></div>
 <div class="card"><h3>Your prices, your rules</h3><p style="margin-top:10px">Everything starts from a short interview about your business. When information is missing it asks, instead of guessing.</p></div></div></div></div>
-<div class="sec"><div class="wrap grid2" style="align-items:center"><div><div class="k" style="margin-bottom:14px">Free · 2 minutes</div><h2>Where are your leads <em>leaking?</em></h2><p class="lead" style="margin-top:14px">Answer 10 questions and get your own AI front desk prompt, free.</p><a class="btn" style="margin-top:24px" href="/brain/">Start the free check</a></div>{INBOX}</div></div>""" + FOOT
+<div class="sec"><div class="wrap grid2" style="align-items:center"><div><div class="k" style="margin-bottom:14px">Free · 2 minutes</div><h2>Where are your leads <em>leaking?</em></h2><p class="lead" style="margin-top:14px">Answer 10 questions and get your free Front Desk Starter prompt.</p><a class="btn" style="margin-top:24px" href="/brain/">Start the free check</a></div>{INBOX}</div></div>""" + FOOT
 
 PRODUCTS = [
  ("Front Desk Kit", "39", "/front-desk/", GR + "autopilot", "Customer replies, quotes and follow ups, drafted in your voice from your real prices.", ["15 question business interview", "Reply, quote, chase, review, FAQ, plan week", "3 extra systems built for your business", "Free Claude plan works"]),

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>The AI Front Desk · Free from AUTOPILOT.OI</title><link rel="canonical" href="https://autopilotoi.app/brain/">
+<title>Free Front Desk Starter · AUTOPILOT.OI</title><link rel="canonical" href="https://autopilotoi.app/brain/">
 <meta name="description" content="Answer 10 questions and get an AI assistant that knows your prices, rules and voice, plus 10 ready prompts. Free, 5 minutes.">
-<meta property="og:title" content="The AI Front Desk · Free">
+<meta property="og:title" content="Free Front Desk Starter · AUTOPILOT.OI">
 <meta property="og:description" content="An AI that knows your prices, rules and voice. 5 minutes, free.">
 <meta property="og:image" content="https://autopilotoi.app/logo.png">
 <meta name="theme-color" content="#000000"><link rel="icon" href="../logo-128.png">
@@ -105,7 +105,7 @@ pre{white-space:pre-wrap;word-wrap:break-word;font:500 13.5px/1.6 "Geist Mono",m
 
 <header class="hero">
  <div class="tag">Free · 5 minutes · for any business</div>
- <h1 class="H">Your AI<br><em>front desk.</em></h1>
+ <h1 class="H">Your free<br><em>front desk starter.</em></h1>
  <p>Answer 10 quick questions. Get an AI assistant that knows your prices, your rules and how you talk, ready to reply to customers in seconds.</p>
  <a class="big" href="#quiz"><b>Build mine free</b><span>Start →</span></a>
  <div class="trust"><span>No sign up</span><span>Free Claude or ChatGPT</span><span>Answers stay on your phone</span></div>
@@ -114,7 +114,7 @@ pre{white-space:pre-wrap;word-wrap:break-word;font:500 13.5px/1.6 "Geist Mono",m
 <section><div class="tag">What you walk away with</div>
  <h2 class="H">Three things,<br><em>yours to keep.</em></h2>
  <ul class="get">
-  <li><span class="n">01</span><span><b>Your AI Front Desk</b><p>One setup text you paste once. After that, your AI answers like it works for you.</p></span></li>
+  <li><span class="n">01</span><span><b>Your Front Desk Starter</b><p>One setup text you paste once. After that, your AI answers like it works for you.</p></span></li>
   <li><span class="n">02</span><span><b>10 ready prompts</b><p>Reply to a lead, write a quote, follow up, ask for a review, and more. Tap to copy.</p></span></li>
   <li><span class="n">03</span><span><b>Your time back plan</b><p>Which busy work to hand off first, with a rough estimate of the hours.</p></span></li>
  </ul>
@@ -139,11 +139,11 @@ pre{white-space:pre-wrap;word-wrap:break-word;font:500 13.5px/1.6 "Geist Mono",m
 </section>
 
 <section id="results" style="display:none"><div class="tag">Done</div>
- <h2 class="H">Your front desk<br><em>is ready.</em></h2>
+ <h2 class="H">Your starter<br><em>is ready.</em></h2>
 
- <h3>01 · Your AI Front Desk</h3>
+ <h3>01 · Your Front Desk Starter</h3>
  <p class="mut small" style="margin-top:6px">Paste this once. Every chat after that knows your business.</p>
- <div class="pbox"><div class="phead">AI FRONT DESK<button class="btn" data-copy="brainText">Copy</button></div><pre id="brainText"></pre></div>
+ <div class="pbox"><div class="phead">FRONT DESK STARTER<button class="btn" data-copy="brainText">Copy</button></div><pre id="brainText"></pre></div>
  <div class="g2">
   <div class="card howto"><b>Claude (free):</b> open <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> → Projects → Create project → name it after your business → Project instructions → paste.</div>
   <div class="card howto"><b>ChatGPT:</b> open <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a> → Projects → New project → Instructions → paste. Or paste it at the start of any chat.</div>
@@ -202,7 +202,7 @@ function rq(){const q=Q[qi],v=A[q.k];let b='';
  else{const sel=q.t=='many'?(v||[]):[v];b=`<div class="opts">${q.o.map(o=>`<button class="opt ${sel.includes(o)?'sel':''}" data-o="${esc(o)}">${esc(o)}</button>`).join('')}</div>`}
  $('qcard').innerHTML=`<div class="qn">QUESTION ${qi+1} OF ${Q.length}</div><div class="qq">${q.q}</div><div class="qh">${q.t=='many'?'Pick all that apply.':q.t=='one'?'Pick one.':'Example in grey. Write your own, or skip.'}</div>${b}`;
  $('qbar').style.width=((qi+1)/Q.length*100)+'%';$('qcount').textContent=(qi+1)+' / '+Q.length;
- $('qnext').textContent=qi==Q.length-1?'BUILD MY FRONT DESK':'NEXT';$('qback').style.visibility=qi?'visible':'hidden';
+ $('qnext').textContent=qi==Q.length-1?'BUILD MY STARTER':'NEXT';$('qback').style.visibility=qi?'visible':'hidden';
  const i=$('qin');if(i)i.oninput=()=>{A[q.k]=i.value;store.set('a',A)};
  document.querySelectorAll('.opt').forEach(x=>x.onclick=()=>{const o=x.dataset.o;if(q.t=='one')A[q.k]=A[q.k]===o?'':o;else{let a=A[q.k]||[];A[q.k]=a.includes(o)?a.filter(y=>y!==o):[...a,o]}store.set('a',A);rq()})}
 $('qnext').onclick=()=>{if(qi<Q.length-1){qi++;store.set('qi',qi);rq()}else{build();$('results').style.display='block';$('results').scrollIntoView()}};

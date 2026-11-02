@@ -246,7 +246,7 @@ def page(slug, p):
     rows = "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in r) + "</tr>" for r in p["sample_rows"])
     li = lambda xs: "".join(f"<li>{e(x)}</li>" for x in xs)
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in p["faq"] + FAQ_COMMON)
-    free = '<p class="free">Not ready? <a href="/brain/">Try the free AI Front Desk first</a>.</p>' if slug == "autopilot" else f'<p class="free">Not ready to buy? <a href="/g/{p["guide"]}/">Try the free guide first</a>.</p>' if p["guide"] else '<p class="free">Not ready to buy? <a href="/free/">Every kit has a free guide</a>.</p>'
+    free = '<p class="free">Not ready? <a href="/brain/">Try the free Front Desk Starter first</a>.</p>' if slug == "autopilot" else f'<p class="free">Not ready to buy? <a href="/g/{p["guide"]}/">Try the free guide first</a>.</p>' if p["guide"] else '<p class="free">Not ready to buy? <a href="/free/">Every kit has a free guide</a>.</p>'
     items = ""
     if p.get("items"):
         items = '<h2>What\'s in the bundle</h2><div class="items">' + "".join(f'<a href="/store/{s}/"><b>{e(P[s]["name"])}</b><span>{e(P[s]["short"])}</span></a>' for s in p["items"]) + "</div>"
@@ -304,7 +304,7 @@ def index():
 <a class="hero" href="/store/autopilot/"><span class="tag">New · for any small business</span><span class="H">Front Desk<br>Kit · $39</span><p>Learns your business in a 15 minute interview, then builds your systems in Claude: replies with your prices, quotes, follow ups, reviews, FAQ and your weekly plan. Every draft waits for your OK.</p><span class="btn">See Autopilot →</span><span class="sm">One time · 30 day refund</span></a>
 <div style="height:10px"></div>
 <a class="hero" href="/office-autopilot/"><span class="tag">Hands off · $79</span><span class="H">Office<br>Autopilot</span><p>7 agent setups for customers, quotes, bookings and a morning brief. Drafts for your approval, never sends on its own. About an hour to set up. 30 day refund.</p><span class="btn">See Office Autopilot →</span></a>
-<div class="grid" style="margin-top:10px"><a class="card" href="/brain/"><span class="th">🧠</span><div><b>AI Front Desk</b><p>Free: answer 10 questions, get a setup that replies with your real prices and rules</p></div><span class="go">FREE</span></a></div>
+<div class="grid" style="margin-top:10px"><a class="card" href="/brain/"><span class="th">🧠</span><div><b>Front Desk Starter</b><p>Free: answer 10 questions, get a setup that replies with your real prices and rules</p></div><span class="go">FREE</span></a></div>
 <h2>Good to know</h2>
 <div class="trust"><div><b>Prompt kits, not apps</b>They run inside Claude. Nothing to install.</div><div><b>Free plan works</b>Claude's free plan allows 5 Projects.</div><div><b>You stay in control</b>They draft. They never send, post or pay.</div><div><b>Try before you buy</b><a href="/free/" style="color:var(--l)">Every kit has a free guide</a>.</div></div>
 """ + FOOT
