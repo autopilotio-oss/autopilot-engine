@@ -56,3 +56,4 @@
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-02T17:29:04+00:00", "note": "built 2026-11-02-howto-credit, score 91 (bank now 6)"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T17:38:12+00:00", "note": "7 posts out today, top post saves+shares 0, feed written yes"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T18:25:31+00:00", "note": "7 posts out today, top post saves+shares 0, feed written yes"}
+{"worker": "kit_sync", "status": "ok", "at": "2026-11-02T18:35:54+00:00", "note": "0 routed (forms empty)"}
