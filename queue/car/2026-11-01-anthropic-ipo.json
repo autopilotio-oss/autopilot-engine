@@ -1,50 +1,64 @@
 {
- "id": "2026-11-01-anthropic-ipo",
- "kind": "news",
- "status": "scheduled",
- "gate": {
-  "design": "v3 tabloid + Off-White details, Seb reviewed direction",
-  "sources_checked": true
- },
- "approval": {
-  "by": "Seb",
-  "quote": "Yes, autopost to Nov 10 (Recommended)",
-  "basis": "campaign standing approval (news and prompt carousels)"
- },
- "posts": [
-  {
-   "metricool_id": 412618747,
-   "uuid": "-6314888142653272579",
-   "networks": [
-    "instagram"
-   ],
-   "at": "2026-11-01T10:00-03:00"
+  "id": "2026-11-01-anthropic-ipo",
+  "kind": "news",
+  "status": "scheduled",
+  "gate": {
+    "design": "v3 tabloid + Off-White details, Seb reviewed direction",
+    "sources_checked": true
   },
-  {
-   "metricool_id": 412618776,
-   "uuid": "4788677946106791851",
-   "networks": [
-    "tiktok"
-   ],
-   "at": "2026-11-01T10:00-03:00"
+  "approval": {
+    "by": "Seb",
+    "quote": "Yes, autopost to Nov 10 (Recommended)",
+    "basis": "campaign standing approval (news and prompt carousels)"
   },
-  {
-   "metricool_id": 412618796,
-   "uuid": "-3109439287727601703",
-   "networks": [
-    "twitter"
-   ],
-   "at": "2026-11-01T10:00-03:00"
-  },
-  {
-   "metricool_id": 412807078,
-   "uuid": "5591641177844500495",
-   "networks": [
-    "threads"
-   ],
-   "at": "2026-11-01T10:00-03:00",
-   "note": "Threads split out: captions over 500 chars fail on Threads"
+  "posts": [
+    {
+      "metricool_id": 412618747,
+      "uuid": "-6314888142653272579",
+      "networks": [
+        "instagram"
+      ],
+      "at": "2026-11-01T10:00-03:00"
+    },
+    {
+      "metricool_id": 412618776,
+      "uuid": "4788677946106791851",
+      "networks": [
+        "tiktok"
+      ],
+      "at": "2026-11-01T10:00-03:00"
+    },
+    {
+      "metricool_id": 412618796,
+      "uuid": "-3109439287727601703",
+      "networks": [
+        "twitter"
+      ],
+      "at": "2026-11-01T10:00-03:00"
+    },
+    {
+      "metricool_id": 412807078,
+      "uuid": "5591641177844500495",
+      "networks": [
+        "threads"
+      ],
+      "at": "2026-11-01T10:00-03:00",
+      "note": "Threads split out: captions over 500 chars fail on Threads"
+    }
+  ],
+  "story_key": "anthropic-s1-ipo-2026-10-26",
+  "results": {
+    "reach": 3,
+    "views": 6,
+    "saves": 0,
+    "shares": 0,
+    "comments": 0,
+    "follows": 0,
+    "network": "instagram",
+    "pulled_at": "2026-11-02T09:58-03:00",
+    "source": "Metricool IGPO posts",
+    "profile_visits": null,
+    "keyword_comments": 0,
+    "note": "TikTok/Threads/X per-post stats not pulled this run"
   }
- ],
- "story_key": "anthropic-s1-ipo-2026-10-26"
 }
