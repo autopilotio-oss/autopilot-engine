@@ -60,3 +60,4 @@
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-02T18:47:20+00:00", "note": "bank full (6); rechecked oldest 2026-11-01-howto-dispute, still accurate"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-02T19:20:13+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T19:30:43+00:00", "note": "7 posts out today, top post saves+shares 0, feed written yes"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-02T19:49:23+00:00", "note": "test_health_markers: every health page probe marker must exist in committed docs/ (probes already fixed in 3505cd6)"}
