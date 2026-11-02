@@ -1,0 +1,32 @@
+{
+ "autopilot": {
+  "thumbnail": null,
+  "covers": [
+   {
+    "id": "f2c6c2579c954f99e6a8e47fa28ffcaa",
+    "diff_vs_current_art": 44.7,
+    "is_current": false
+   }
+  ]
+ },
+ "workspace": {
+  "thumbnail": null,
+  "covers": [
+   {
+    "id": "2e6f12f9a414c0dba778051511acb971",
+    "diff_vs_current_art": 75.0,
+    "is_current": false
+   }
+  ]
+ },
+ "workspace-founding": {
+  "thumbnail": null,
+  "covers": [
+   {
+    "id": "1f651d6c4b80f2209d93648610af650e",
+    "diff_vs_current_art": 0.0,
+    "is_current": true
+   }
+  ]
+ }
+}
