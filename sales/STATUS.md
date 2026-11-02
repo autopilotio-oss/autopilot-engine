@@ -23,3 +23,11 @@ Updated 2026-11-02 by Claude. Source of truth for offers: `config/offers.json`.
 | Gumroad thumbnails | blocked | Seb uploads the 3 thumbnail files (API can't set them) |
 | 3 search intent guides (/guides/reply-to-price-inquiry, after-hours-customer-messages, follow-up-on-a-quote) | live after deploy | hourly health check covers them |
 | 3 Threads demo posts (Nov 4, 5, 6, 9:30 ET) linking the guides | waiting for Seb's YES | queue/2026-11-04-frontdesk.json; approval issue opens about 1 hour before each |
+
+## 2026-11-02 night (verified)
+- All 14 Gumroad prices verified via API against config/offers.json; health checks library prices hourly.
+- LAUNCH30 removed from Office Autopilot (on hold); sync log: offer_code_withdrawn workspace.
+- Free offer renamed Front Desk Starter (/brain/); paid stays Front Desk Kit $39.
+- Share images per page fixed; meta added to Office Autopilot, brain, free.
+- Office Autopilot copy: old Workspace name gone, schedule claim accurate. Full redesign skipped while on hold.
+- Health: only meta_pixel_configured failing (needs Seb's pixel ID). CI green.
