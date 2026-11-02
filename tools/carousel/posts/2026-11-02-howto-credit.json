@@ -1,0 +1,84 @@
+{
+ "kind": "howto",
+ "dateline": "NOV 02 2026",
+ "cover_bg": "bg-black",
+ "lava_opacity": 0.45,
+ "music": "tense",
+ "seed": 5,
+ "cover_html": "<div class=\"fx\" style=\"left:0;top:0;width:470px;height:1350px;background:#D4FF3A\"></div><div class=\"fx A\" style=\"background:#D4FF3A;left:50px;top:190px;font-size:380px;color:#0c0c0c\">1</div><div class=\"fx A\" style=\"background:#D4FF3A;left:56px;top:540px;font-size:190px;color:#0c0c0c\">IN</div><div class=\"fx A\" style=\"background:#D4FF3A;left:50px;top:720px;font-size:380px;color:#0c0c0c\">5</div><div class=\"fx Ii\" style=\"background:#D4FF3A;left:56px;top:1080px;width:370px;font-size:32px;line-height:1.25;color:#0c0c0c\">people in an FTC study had an error on at least one credit report.</div><div class=\"fx\" style=\"left:56px;top:70px\"><span class=\"chip\">HOW TO &middot; CREDIT</span></div><div class=\"fx A\" style=\"left:510px;top:170px;width:514px;font-size:116px;color:#f2f2ee\">Find the</div><div class=\"fx A\" style=\"left:510px;top:276px;width:514px;font-size:116px;color:#D4FF3A\">error</div><div class=\"fx A\" style=\"left:510px;top:382px;width:514px;font-size:116px;color:#f2f2ee\">on your</div><div class=\"fx A\" style=\"left:510px;top:488px;width:514px;font-size:116px;color:#f2f2ee\">credit</div><div class=\"fx A\" style=\"left:510px;top:594px;width:514px;font-size:116px;color:#f2f2ee\">report</div><div class=\"fx Ii\" style=\"left:510px;top:722px;width:480px;font-size:32px;line-height:1.25;color:#f2f2ee\">Free, about 30 minutes, with Claude. Swipe &#9656;</div><div class=\"fx\" style=\"left:510px;top:880px;width:514px;height:300px\"><div class=\"Cc\" style=\"position:absolute;left:0;top:0;font-size:20px;color:#D4FF3A\">SAMPLE &middot; SAME CARD, 3 REPORTS</div><div style=\"position:absolute;left:0;top:44px;width:514px;height:62px;border-radius:10px;background:#f2f2ee12\"><div class=\"Mm\" style=\"position:absolute;left:16px;top:16px;font-size:24px;color:#f2f2ee\">BUREAU 1</div><div class=\"Mm\" style=\"position:absolute;right:16px;top:16px;font-size:24px;font-weight:700;color:#f2f2eeaa\">PAID ON TIME</div></div><div style=\"position:absolute;left:0;top:116px;width:514px;height:62px;border-radius:10px;background:#D4FF3A\"><div class=\"Mm\" style=\"position:absolute;left:16px;top:16px;font-size:24px;color:#0c0c0c\">BUREAU 2</div><div class=\"Mm\" style=\"position:absolute;right:16px;top:16px;font-size:24px;font-weight:700;color:#0c0c0c\">30 DAYS LATE</div></div><div style=\"position:absolute;left:0;top:188px;width:514px;height:62px;border-radius:10px;background:#f2f2ee12\"><div class=\"Mm\" style=\"position:absolute;left:16px;top:16px;font-size:24px;color:#f2f2ee\">BUREAU 3</div><div class=\"Mm\" style=\"position:absolute;right:16px;top:16px;font-size:24px;font-weight:700;color:#f2f2eeaa\">PAID ON TIME</div></div></div>",
+ "slides": [
+  {
+   "title": "Pull all *3 reports*, free",
+   "body": "Go to <b>AnnualCreditReport.com</b>, the only official free site. Equifax, Experian and TransUnion each give you a free report <b>every week</b>. Download all three as PDFs."
+  },
+  {
+   "title": "Let *Claude* audit them",
+   "body": "Black out your Social Security number and account numbers first. Upload the 3 PDFs and ask: <b>List anything that could be wrong: accounts I don't recognize, wrong balances, late payments, duplicates, and anything that differs between the 3 reports.</b>"
+  },
+  {
+   "title": "Know what *stays*",
+   "num": "7 YRS",
+   "body": "Accurate negatives can't be disputed away. Most stay <b>7 years</b>, bankruptcy <b>10</b>. Only dispute what is actually wrong, or older than that."
+  },
+  {
+   "title": "Dispute *with proof*",
+   "body": "Dispute with each bureau that shows the error, online or by mail, with copies of your proof. Also write to the company that reported it. The bureau usually has <b>30 days</b> to investigate."
+  },
+  {
+   "title": "Skip the *repair company*",
+   "body": "Credit repair companies <b>can't legally charge you before they do the work</b>, and they <b>can't remove accurate</b> information. Everything they do, you can do yourself for free."
+  }
+ ],
+ "cta": {
+  "big": "Fix it *free*",
+  "keyword": "CREDIT",
+  "gift": "Your free credit guide: the Claude prompts to audit all 3 reports and write a clear dispute.",
+  "small": "Free, right in your DMs. General info, *not financial advice.*"
+ },
+ "bg_words": [
+  "CREDIT",
+  "REPORT",
+  "ERROR",
+  "DISPUTE"
+ ],
+ "sources": [
+  [
+   "FTC",
+   "https://www.ftc.gov/news-events/news/press-releases/2013/02/ftc-study-five-percent-consumers-had-errors-their-credit-reports-could-result-less-favorable-terms"
+  ],
+  [
+   "CDIA",
+   "https://www.cdiaonline.org/news/2023/09/18/equifax-experian-and-transunion-support-u-s-consumers-with-permanent-extension-of-free-weekly-credit-reports/"
+  ],
+  [
+   "NJ DOBI",
+   "https://www.nj.gov/dobi/division_consumers/finance/creditreport4.htm"
+  ]
+ ],
+ "sources_all": [
+  [
+   "FTC",
+   "https://www.ftc.gov/news-events/news/press-releases/2013/02/ftc-study-five-percent-consumers-had-errors-their-credit-reports-could-result-less-favorable-terms"
+  ],
+  [
+   "FTC",
+   "https://consumer.ftc.gov/consumer-alerts/2023/10/you-now-have-permanent-access-free-weekly-credit-reports"
+  ],
+  [
+   "CDIA",
+   "https://www.cdiaonline.org/news/2023/09/18/equifax-experian-and-transunion-support-u-s-consumers-with-permanent-extension-of-free-weekly-credit-reports/"
+  ],
+  [
+   "FTC",
+   "https://www.bulkorder.ftc.gov/system/files/publications/fixing_your_credit.pdf"
+  ],
+  [
+   "NJ DOBI",
+   "https://www.nj.gov/dobi/division_consumers/finance/creditreport4.htm"
+  ],
+  [
+   "15 USC 1679b",
+   "https://www.law.cornell.edu/uscode/text/15/1679b"
+  ]
+ ]
+}

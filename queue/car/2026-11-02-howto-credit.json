@@ -1,0 +1,50 @@
+{
+ "id": "2026-11-02-howto-credit",
+ "kind": "howto",
+ "status": "bank",
+ "cover_idea": "Vertical split: lime left panel with giant stacked 1 IN 5 (FTC study), black right column with FIND THE ERROR ON YOUR CREDIT REPORT and a SAMPLE 3 bureau table where one row says 30 DAYS LATE.",
+ "theme": "money: check and fix your credit report for free (AnnualCreditReport.com weekly, Claude audit, what stays 7/10 years, dispute with proof, skip credit repair companies), tied to the free CREDIT guide (/g/credit) and all-money-agents",
+ "gate": {
+  "score": 91,
+  "notes": "Accuracy 27/30 (1 in 5 had an error on at least one report: FTC 2013 press release + Daily Record/AP coverage, study age stated in captions; free weekly reports from all 3 bureaus permanent, AnnualCreditReport.com official: FTC consumer alert + CDIA; bureau usually investigates within 30 days and write to the furnisher: FTC Fixing Your Credit + NJ DOBI; most negatives 7 years, bankruptcy 10: FTC + NJ DOBI; repair companies can't charge before doing the work or remove accurate info: FTC + 15 USC 1679b). Dropped: under $500 medical collections and CFPB complaint route (policy and agency status too fluid for an evergreen bank item). Hook 23/25 (giant 1 IN 5 stat). Clarity 18/20. Design 14/15 vs last 5: new vertical split background (lime panel + black), headline in right column (none used a column), main visual giant stacked number plus 3 bureau comparison table (new), largest number scale so far. CTA 9/10 (CREDIT confirmed in manychat.json, gift matches /g/credit; no flagship credit agent, so it leads to the free guide). QA PASS, all 7 slides read on a phone."
+ },
+ "sources": [
+  [
+   "FTC",
+   "https://www.ftc.gov/news-events/news/press-releases/2013/02/ftc-study-five-percent-consumers-had-errors-their-credit-reports-could-result-less-favorable-terms"
+  ],
+  [
+   "The Daily Record (AP)",
+   "https://thedailyrecord.com/2013/02/11/study-1-in-5-consumers-had-error-in-credit-report/"
+  ],
+  [
+   "FTC",
+   "https://consumer.ftc.gov/consumer-alerts/2023/10/you-now-have-permanent-access-free-weekly-credit-reports"
+  ],
+  [
+   "CDIA",
+   "https://www.cdiaonline.org/news/2023/09/18/equifax-experian-and-transunion-support-u-s-consumers-with-permanent-extension-of-free-weekly-credit-reports/"
+  ],
+  [
+   "FTC",
+   "https://www.bulkorder.ftc.gov/system/files/publications/fixing_your_credit.pdf"
+  ],
+  [
+   "NJ DOBI",
+   "https://www.nj.gov/dobi/division_consumers/finance/creditreport4.htm"
+  ],
+  [
+   "15 USC 1679b",
+   "https://www.law.cornell.edu/uscode/text/15/1679b"
+  ]
+ ],
+ "captions": {
+  "ig": "1 in 5 people in an FTC study had an error on at least one of their credit reports. Here is how to check yours for free.\n\n1. Go to AnnualCreditReport.com, the only official free site. Equifax, Experian and TransUnion each give you a free report every week.\n2. Black out your Social Security number and account numbers, upload the 3 PDFs to Claude and ask it to list anything that could be wrong: unknown accounts, wrong balances, late payments, duplicates, and anything that differs between the reports.\n3. Know what stays: accurate negatives can't be disputed away. Most stay 7 years, bankruptcy 10.\n4. Dispute errors with each bureau that shows them, with copies of your proof, and write to the company that reported it. The bureau usually has 30 days to investigate.\n5. Skip the repair company: they can't legally charge before doing the work or remove accurate information.\n\nComment CREDIT and we will DM you our free credit guide: the Claude prompts to audit all 3 reports and write a clear dispute.\n\nBureau table is a sample. FTC study published 2013. General info, not financial advice. Sources: FTC, CDIA, NJ Dept of Banking and Insurance, 15 U.S.C. 1679b.\n\n#creditreport #credittips #moneytips #claudeai #personalfinance",
+  "tiktok": "Find the error on your credit report\n\n1 in 5 people in an FTC study had a credit report error. Pull all 3 reports free, let Claude flag what looks wrong, dispute with proof. Save this. Free credit guide: link in bio.\n\n#creditreport #moneytips #claudeai #personalfinance",
+  "tiktok_title": "Find the error on your credit report",
+  "threads": "1 in 5 people in an FTC study had an error on a credit report. Pull all 3 free every week at AnnualCreditReport.com. Black out your SSN, upload them to Claude and ask it to flag unknown accounts, wrong balances, late payments and anything that differs. Dispute real errors with proof; the bureau usually has 30 days. Free guide: autopilotoi.app/g/credit",
+  "x": "1 in 5 people in an FTC study had a credit report error. Pull all 3 reports free at AnnualCreditReport.com, let Claude flag what looks wrong, dispute with proof. Free guide: autopilotoi.app/g/credit"
+ },
+ "media": "docs/media/car/2026-11-02-howto-credit/",
+ "built_at": "2026-11-02T17:55Z"
+}
