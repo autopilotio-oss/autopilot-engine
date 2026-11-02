@@ -108,5 +108,13 @@
   "takes *10 min* to set up",
   "and finds every",
   "*subscription* you forgot"
- ]
+ ],
+ "payoff": {
+  "big": "$1,756",
+  "lines": [
+   "A YEAR ON SUBSCRIPTIONS",
+   "*YOU FORGOT ABOUT*"
+  ],
+  "tag": "sample statement"
+ }
 }

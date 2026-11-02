@@ -67,5 +67,13 @@
   "Don't take the voucher",
   "this *AI agent* writes",
   "your *refund* request"
- ]
+ ],
+ "payoff": {
+  "big": "$412.60",
+  "lines": [
+   "CASH BACK,",
+   "*NOT A VOUCHER*"
+  ],
+  "tag": "sample booking"
+ }
 }
