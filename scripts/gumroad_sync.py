@@ -100,23 +100,36 @@ def sync_offer_code(st):
         except Exception as e: DBG.append(["offer_code_fail", slug, repr(e)[:200]])
 
 def prune_covers(st):
-    """Keep only the newest cover on products whose product.json sets "single_cover": true (old covers showed stale prices).
-    Logs everything; a failure changes nothing."""
+    """Products with "single_cover": true keep only the Gumroad cover that matches the current art in docs/store/<slug>-cover.png
+    (pixel comparison; Gumroad's cover order is not reliable). Nothing is deleted unless a matching cover exists."""
+    try:
+        import io
+        from PIL import Image, ImageChops, ImageStat
+    except Exception as e:
+        DBG.append(["covers_skip", "pillow missing", repr(e)[:80]]); return
     for f in glob.glob(os.path.join(ROOT, "products", "*", "product.json")):
         slug = os.path.basename(os.path.dirname(f)); p = json.load(open(f)); pid = (st.get(slug) or {}).get("id")
-        if not p.get("single_cover") or not pid: continue
+        art = os.path.join(ROOT, "docs", "store", f"{slug}-cover.png")
+        if not p.get("single_cover") or not pid or not os.path.exists(art): continue
         try:
-            g = call_get(f"/products/{pid}?" + urllib.parse.urlencode({"access_token": TOK})).get("product", {})
-            covers = g.get("covers") or []
-            DBG.append(["covers", slug, [{k: c.get(k) for k in ("id", "url", "original_url")} for c in covers]])
-            if len(covers) <= 1: continue
-            keep = covers[0]  # Gumroad returns covers newest first (verified Nov 2: the cover uploaded that day was index 0)
-            for c in covers[1:]:
-                if not c.get("id"): continue
-                try: call("DELETE", f"/products/{pid}/covers/{c['id']}", {}); DBG.append(["cover_deleted", slug, c["id"]])
-                except Exception as e: DBG.append(["cover_delete_fail", slug, repr(e)[:200]])
+            ref = Image.open(art).convert("RGB").resize((320, 180))
+            covers = call_get(f"/products/{pid}?" + urllib.parse.urlencode({"access_token": TOK})).get("product", {}).get("covers") or []
+            scored = []
+            for c in covers:
+                im = Image.open(io.BytesIO(urllib.request.urlopen(c.get("original_url") or c["url"], timeout=60).read())).convert("RGB").resize((320, 180))
+                scored.append((sum(ImageStat.Stat(ImageChops.difference(im, ref)).mean) / 3, c))
+            DBG.append(["covers", slug, [[round(d, 1), c.get("id")] for d, c in scored]])
+            match = [c for d, c in sorted(scored, key=lambda x: x[0]) if d < 12]
+            if not match: DBG.append(["covers_no_match", slug]); continue
+            keep = match[0]
+            for d, c in scored:
+                if c.get("id") and c is not keep:
+                    try: call("DELETE", f"/products/{pid}/covers/{c['id']}", {}); DBG.append(["cover_deleted", slug, c["id"], round(d, 1)])
+                    except Exception as e: DBG.append(["cover_delete_fail", slug, repr(e)[:200]])
             st[slug]["cover_kept"] = keep.get("id")
         except Exception as e: DBG.append(["covers_fail", slug, repr(e)[:200]])
+
+
 def main():
     if not TOK: print("No GUMROAD_TOKEN yet"); return
     try:
