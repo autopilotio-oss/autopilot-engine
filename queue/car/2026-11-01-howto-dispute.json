@@ -28,8 +28,8 @@
  "media": "docs/media/car/2026-11-01-howto-dispute/",
  "built_at": "2026-11-01T18:40Z",
  "rechecked": {
-  "at": "2026-11-02T15:20Z",
+  "at": "2026-11-02T18:50Z",
   "result": "still bank",
-  "notes": "Bank full (6). Facts re-verified: 60 day written dispute window, billing inquiries address, 30 day acknowledgement, 90 day resolution, may withhold disputed amount (CA AG page; NerdWallet; Experian article still indexed). Gift page docs/g/refund present for autopilotoi.app/g/refund; REFUND keyword in manychat.json. Note: chargeback windows of up to 120 days may exist by card network, not needed for this post."
+  "notes": "Bank full (6). Re-verified today: CA AG page live and confirms written dispute within 60 days to billing inquiries address, 30 day acknowledgement, 90 day investigation, may withhold disputed amount; CFPB confirms 60 day written notice; Experian article still indexed. docs/g/refund present for autopilotoi.app/g/refund; REFUND keyword in manychat.json."
  }
 }
