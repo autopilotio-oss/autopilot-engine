@@ -30,10 +30,22 @@
   var gc = document.createElement('script'); gc.async = true; gc.src = 'https://gc.zgo.at/count.js';
   gc.setAttribute('data-goatcounter', 'https://autopilotoi.goatcounter.com/count'); document.head.appendChild(gc);
   function ev(name) { try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: name, title: name, event: true }); } catch (e) {} }
+  // Meta Pixel. Paste the dataset (pixel) ID from Meta Events Manager here; empty = off. Purchases fire on Gumroad's side
+  // (Gumroad Settings, Third-party analytics, Facebook Pixel field, same ID).
+  var PIXEL = '';
+  function fb() { if (PIXEL && window.fbq) try { fbq.apply(null, arguments); } catch (e) {} }
+  if (PIXEL) {
+    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL); fbq('track', 'PageView');
+    var pm = location.pathname.match(/^\/(store\/([a-z0-9-]+)|autopilot)\/?$/);
+    if (pm) fbq('track', 'ViewContent', { content_ids: [pm[2] || 'autopilot'], content_type: 'product' });
+  }
   var LAUNCH = { code: 'LAUNCH30', until: Date.parse('2026-11-11T03:00:00Z'), slugs: ['subs-agent', 'refund-agent', 'bill-agent', 'all-money-agents', 'raise-agent', 'debt-agent', 'shop-agent', 'video-agent', 'sell-agent', 'deposit-agent', 'workspace', 'tiktok-agents'] };
   LAUNCH.on = Date.now() < LAUNCH.until;
   function banner() {
-    if (!LAUNCH.on || !document.querySelector('a[href*="gumroad.com/l/"]') || document.getElementById('ap-launch')) return;
+    if (!LAUNCH.on || document.getElementById('ap-launch')) return;
+    // Only promise the code where it applies: a page whose buy links are all outside the launch list (Autopilot) gets no banner.
+    if (!Array.prototype.some.call(document.querySelectorAll('a[href*="gumroad.com/l/"]'), function (a) { return LAUNCH.slugs.indexOf(slugOf(a)) > -1; })) return;
     var b = document.createElement('div'); b.id = 'ap-launch';
     b.style.cssText = 'position:sticky;top:0;z-index:50;background:#D4FF3A;color:#050505;text-align:center;font:600 13px/1.3 "Chakra Petch",system-ui,sans-serif;padding:9px 12px;letter-spacing:.02em';
     b.textContent = 'Launch week: 30% off every agent with code LAUNCH30, applied at checkout. Ends Nov 10.';
@@ -55,7 +67,10 @@
         if (first && first.s) u.searchParams.set('ft', first.s + (first.c ? ':' + first.c : ''));
         a.href = u.toString();
       } catch (e) {}
-      a.addEventListener('click', function () { ev('checkout-click/' + slug.replace(/-/g, '_') + '/' + page + '/' + (src || 'direct')); });
+        // Main buy buttons skip the Gumroad product page and open checkout directly.
+        try { if (a.classList.contains('buy')) { var w = new URL(a.href); w.searchParams.set('wanted', 'true'); a.href = w.toString(); } } catch (e) {}
+      a.addEventListener('click', function () { fb('track', 'InitiateCheckout', { content_ids: [slug] }); });
+      a.addEventListener('click', function () { ev('checkout-click/'  + slug.replace(/-/g, '_') + '/' + page + '/' + (src || 'direct')); });
     });
     // Hide buy buttons for products that are not live yet. Fails open: if live.json can't load, links stay as they are.
     fetch('/live.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {

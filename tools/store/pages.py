@@ -105,18 +105,22 @@ P = {
   need=["A Claude account (the free plan's 5 Projects fit all 5)", "The documents for whichever job you're doing", "About 20 minutes to set up"],
   faq=[("Can I start with one?", "Yes. Every kit is $10 on its own, and every one has a free guide you can try first.")],
   items=["bill", "debt", "subs", "refund", "raise"], sep="$50"),
- "autopilot": dict(cat="business", ic="⚡", name="Autopilot", price="$19.99", buy="autopilot", kw="AUTOPILOT", guide=None, video=advid("ap-a"),
-  title="Put the busy work on Autopilot", short="Learns your business in 15 minutes, then builds your systems in Claude",
-  lead="An agent that interviews you for about 15 minutes, learns your prices, rules and how you talk, then builds your systems inside the Claude app: replies to leads, quotes, follow ups, review asks, your FAQ and your weekly plan, plus 3 extra systems picked for your business. Every draft waits for your OK.",
-  who=["You run a small business and answer the same questions every day", "Quotes go quiet and you forget to follow up", "You want help tonight, not a course or a new app to learn"],
+ "autopilot": dict(cat="business", ic="⚡", name="Autopilot", price="$19.99", buy="autopilot", kw="AUTOPILOT", guide=None, video=advid("st-demo") or advid("ap-a"),
+  title="It writes.|You send.", short="Your replies, quotes and follow ups, drafted in your voice",
+  lead="A 15 minute setup that turns the free Claude app into your business assistant. It learns your prices, rules and voice, then drafts your customer replies, quotes and follow ups. You read every draft and hit send.",
+  inside=["Setup guide (PDF) and 1 starter prompt", "9 ready commands: reply, quote, chase, review, faq, plan week, plus 3 built for your business", "Templates, a cheat sheet and a time back tracker"],
+  who=["You answer customers yourself, often at night", "Quotes go quiet and you forget to follow up", "You want help tonight, not a course or a new app to learn"],
   sample_note="Example business (a mobile car detailer) from a test run. Your drafts use your own prices, rules and voice.",
   sample_head=["You type", "Autopilot drafts"],
   sample_rows=[["reply: how much for a full detail on an SUV? Free Saturday?", "A full SUV detail is $250, about 3 hours. We come to you. Saturday at 9 AM or 1 PM?"], ["quote: Dave, SUV, ceramic, pet hair", "$250 + $240 + $30 = $520 · $50 deposit holds the slot · 24 hr notice to cancel"], ["chase: Dave, day 3", "Saturday 9 AM is still open and the $520 holds through the end of the month. Want me to lock it in?"], ["review: Maria, full detail", "Thanks for having us out today! A quick Google review would mean a lot: [your link]"]],
   sample_after=["Missing information shows up as [CHECK: ...], so it never guesses a price or a rule.", "Then type build me a system for [any task] and it builds a new command with you."],
   does=["Interviews you and writes your Business Brain", "Builds 6 core systems: reply, quote, chase, review, faq, plan week", "Builds 3 extra systems from the busy work you name", "Drafts in your voice with your real prices and rules"],
   doesnt=["Send, post or call anyone for you", "Log into your email, calendar or accounts", "Run on a schedule by itself (that's The Workspace)"],
-  need=["The Claude app on your phone or computer (free plan works)", "Your price list and 2 real messages you've sent customers", "About 30 minutes"],
-  faq=[("How is this different from The Workspace?", "Autopilot drafts when you paste something in. The Workspace connects 7 scheduled agents to your Gmail and Calendar so they work on their own, still waiting for your OK."), ("Does it work for my business?", "If you answer customers, send quotes and follow up, yes. The interview shapes everything around your business.")],
+  need=["A free Claude account (claude.ai) on your phone or computer", "Your price list and 2 real messages you've sent customers", "About 30 minutes"],
+  faq=[("Why not just use ChatGPT?", "You can, but a blank chat starts from zero every time and will guess your prices. Autopilot interviews you once, saves your Business Brain in a Claude Project, and drafts from it every time. When something is missing it writes [CHECK] instead of guessing. You also get 9 ready commands, templates and a 30 minute setup plan."),
+       ("Why is it called Autopilot if I press send?", "It puts the writing on autopilot: replies, quotes and follow ups come back drafted. Sending stays with you, so nothing reaches a customer that you haven't read."),
+       ("I've never used Claude. Can I do this?", "Yes. Make a free account at claude.ai, then follow the 3 step plan in the PDF: make a Project, paste one prompt, answer the questions. About 30 minutes."),
+       ("How is this different from The Workspace?", "Autopilot drafts when you paste something in. The Workspace connects 7 scheduled agents to your Gmail and Calendar so they work on their own, still waiting for your OK."), ("Does it work for my business?", "If you answer customers, send quotes and follow up, yes. The interview shapes everything around your business.")],
   how=[("Buy it, open the PDF", "Instant download from Gumroad."), ("Paste one prompt into a Claude Project", "Autopilot interviews you for about 15 minutes and writes your Business Brain."), ("It builds your systems with you", "Tests each one on a real example from your business until it sounds like you.")]),
  "video": dict(cat="tiktok", ic="🎬", name="Video Agent", price="$10", buy="video-agent", kw="VIDEO", guide="video", video=vid("content-machine"),
   title="One idea into a week of TikToks", short="One idea into a week of TikToks, every edit planned",
@@ -186,6 +190,7 @@ h1 em{font-style:normal;color:var(--l)}
 .lead{color:rgba(255,255,255,.82);font-size:17px}
 .buy{display:block;text-align:center;background:var(--l);color:#000;text-decoration:none;font:900 16px Inter;text-transform:uppercase;border-radius:16px;padding:18px;margin:22px 0 8px;box-shadow:0 0 40px rgba(212,255,58,.25)}
 .sm{text-align:center;color:var(--mut);font-size:13px}
+.inside{margin:18px 0 6px;border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:var(--card)}.inside b{font:700 11px 'Space Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--l)}.inside ul{margin:8px 0 0 18px}.inside li{margin:4px 0;font-size:15px}
 h2{font:900 13px 'Space Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:36px 0 12px}
 ul{padding-left:20px}li{margin:6px 0}
 .box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
@@ -250,11 +255,12 @@ def page(slug, p):
     og = f"https://autopilotoi.app/store/{slug}-cover.png" if os.path.exists(f"{ROOT}/docs/store/{slug}-cover.png") else "https://autopilotoi.app/logo.png"
     return HEAD(f"{p['name']} · {p['price']} · AUTOPILOT.OI", p["lead"], f"https://autopilotoi.app/store/{slug}/", og) + f"""
 <div class="hd"><a href="/"><img src="/logo.png" alt=""></a><b>AUTOPILOT.OI</b><a class="bk" href="/store/">← Store</a></div>
-<div class="tag">{'Claude agent · one time' if slug == 'autopilot' else 'Claude prompt kit'} · {p['price']}{' · bundle' if p.get('bundle') else ''}</div>
-<h1>{e(p['title'])}</h1>
+<div class="tag">{'Claude setup · one time' if slug == 'autopilot' else 'Claude prompt kit'} · {p['price']}{' · bundle' if p.get('bundle') else ''}</div>
+<h1>{(e(p['title'].split('|')[0]) + '<br><em>' + e(p['title'].split('|')[1]) + '</em>') if '|' in p['title'] else e(p['title'])}</h1>
 <p class="lead">{e(p['lead'])}</p>
 <a class="buy" href="{GR}{p['buy']}">Get {"" if slug == "autopilot" else "the "}{e(p['name'])} · {p['price']}</a>
-<p class="sm">Instant download · works on Claude's free plan{(' · ' + p['sep'] + ' separately') if p.get('sep') else ''}</p>
+<p class="sm">{'$19.99 once · instant download · free Claude plan works · 30 day refund' if slug == 'autopilot' else "Instant download · works on Claude's free plan"}{(' · ' + p['sep'] + ' separately') if p.get('sep') else ''}</p>
+{('<div class="inside"><b>What you get</b><ul>' + li(p['inside']) + '</ul></div>') if p.get('inside') else ''}
 {video_block(p['video'], 'Watch it work · sample data')}
 {items}
 <h2>It's for you if</h2><ul>{li(p['who'])}</ul>
