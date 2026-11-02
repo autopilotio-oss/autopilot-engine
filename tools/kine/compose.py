@@ -6,8 +6,8 @@ M = json.load(open(f"{D}/out/{ep}.meta.json")); P = M["plates"]
 ins, fc = [], []
 for i, p in enumerate(P):
     ins += ["-i", f"{D}/plates/{p['plate']}.mp4"]
-    L = p["e"] - p["s"]
-    fc.append(f"[{i}:v]trim=start={p['off']}:duration={L * p['rate'] + .05},setpts=(PTS-STARTPTS)/{p['rate']},fps=30,scale=1080:1920,trim=duration={L},setpts=PTS-STARTPTS[p{i}]")
+    L = p["e"] - p["s"]; N = round(p["e"] * 30) - round(p["s"] * 30)  # exact frame count from absolute boundaries: no drift
+    fc.append(f"[{i}:v]trim=start={p['off']}:duration={L * p['rate'] + .1},setpts=(PTS-STARTPTS)/{p['rate']},fps=30,scale=1080:1920,tpad=stop_mode=clone:stop=60,trim=end_frame={N},setpts=PTS-STARTPTS[p{i}]")
 n = len(P); fc.append("".join(f"[p{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0[bg]")
 ins += ["-i", ov, "-i", f"{D}/out/{ep}_mix.wav"]
 fc.append(f"[bg][{n}:v]overlay=0:0:format=auto,format=yuv420p[v]")
