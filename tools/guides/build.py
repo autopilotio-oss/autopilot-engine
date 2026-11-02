@@ -128,7 +128,7 @@ for k, g in G.items(): page(k, g); print("built", k)
 
 # sitemap for Google (every guide + main pages)
 import datetime
-_u = ["", "free/", "store/", "store/money/", "store/subs/", "store/bill/", "brain/", "workspace/"] + [f"g/{k}/" for k in G if not G[k].get("draft")]
+_u = ["", "marketplace/", "workspace/", "office-autopilot/", "store/autopilot/", "library/", "free/", "store/money/", "store/subs/", "store/bill/", "brain/"] + [f"g/{k}/" for k in G if not G[k].get("draft")]
 # lastmod only moves when a guide's HTML actually changed in this build, so a clean rebuild is byte identical (CI reproducibility test)
 import re
 _sm = os.path.join(ROOT, "docs", "sitemap.xml")

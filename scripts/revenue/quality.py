@@ -31,7 +31,7 @@ def check(slug):
         errs.append("description must say what it does NOT do")
     if re.search(r" [-–—] ", t):
         errs.append("dash in copy")
-    if p.get("price_cents") not in (1000, 1999, 2400, 3900, 4900):  # 1999: Autopilot, owner set (Seb, Nov 2)
+    if p.get("price_cents") not in (1000, 1999, 2400, 3900, 4900, 7900):  # 1999 and 7900 owner set (Seb, Nov 2: Front Desk Kit $39, Office Autopilot $79)
         errs.append(f"price {p.get('price_cents')} is not an approved price point")
     if not p.get("bundle_of") and not (os.path.exists(os.path.join(ROOT, "products", slug, "file.enc")) and os.path.exists(os.path.join(ROOT, "products", slug, "key.enc"))):
         errs.append("sealed kit file missing (file.enc/key.enc)")
