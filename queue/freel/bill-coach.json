@@ -6,7 +6,7 @@
   "Don't pay that medical bill yet",
   "AI checks it line by line"
  ],
- "keyword": null,
+ "keyword": "BILL",
  "video": "https://autopilotoi.app/media/freel/bill-coach.mp4",
  "poster": "https://autopilotoi.app/media/freel/bill-coach-poster.jpg",
  "caption": {
@@ -14,21 +14,76 @@
   "other": "Medical bills often have errors. This agent compares your itemized bill with your insurance EOB line by line, flags what doesn't match and writes the questions to ask billing before you pay. Sample bill shown. Bill Lowering Coach at the link in bio.\n\nEducation only, not medical or financial advice.\n\n#ai #claude #medicalbills #moneytips #healthcare"
  },
  "rendered_at": "2026-11-02T10:27:38+00:00",
- "status": "rendered",
+ "status": "scheduled",
  "gate": {
-  "score": 82,
-  "result": "hold, re-render",
+  "score": 92,
+  "result": "pass",
   "by": "campaign operator",
-  "at": "2026-11-02T07:40-03:00",
+  "at": "2026-11-02T07:35-03:00",
   "breakdown": {
    "hook": 24,
    "demo": 24,
    "legibility": 13,
-   "honesty": 5,
+   "honesty": 15,
    "cta": 8,
    "brand_sound": 8
   },
-  "notes": "21.3s, -15.0 LUFS. Voice says 'Three lines don't match' and stat shows 3 FLAGS, but the checks screen flagged only 2 rows (third row was OK): claim not backed by the sample. Fixed the episode screen (third row: facility fee not on the EOB; question 3 added), voice unchanged so it is reused. Re-render dispatched with voice reuse. End card cover still reads 'BILL AGENT' (old name, fixed with the Nov 3 to 4 cover update)."
+  "notes": "Re-render (run 41427770869, saved voice reused, 21.3s, -15.0 LUFS / -1.4 dBTP). Checks screen now flags 3 lines (duplicate lab panel, $0 per EOB, facility fee not on EOB), matching the voice and the 3 FLAGS stat (sample bill). End card cover still reads BILL AGENT (old name; Nov 3 to 4 cover work).",
+  "previous": {
+   "score": 82,
+   "result": "hold, re-render",
+   "by": "campaign operator",
+   "at": "2026-11-02T07:40-03:00",
+   "breakdown": {
+    "hook": 24,
+    "demo": 24,
+    "legibility": 13,
+    "honesty": 5,
+    "cta": 8,
+    "brand_sound": 8
+   },
+   "notes": "21.3s, -15.0 LUFS. Voice says 'Three lines don't match' and stat shows 3 FLAGS, but the checks screen flagged only 2 rows (third row was OK): claim not backed by the sample. Fixed the episode screen (third row: facility fee not on the EOB; question 3 added), voice unchanged so it is reused. Re-render dispatched with voice reuse. End card cover still reads 'BILL AGENT' (old name, fixed with the Nov 3 to 4 cover update)."
+  }
  },
- "posts": []
+ "posts": [
+  {
+   "metricool_id": 413787067,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-06T10:00-03:00",
+   "uuid": "-2292430417288279351"
+  },
+  {
+   "metricool_id": 413787095,
+   "networks": [
+    "tiktok"
+   ],
+   "at": "2026-11-06T10:00-03:00",
+   "uuid": "-4029403206024346349"
+  },
+  {
+   "metricool_id": 413787146,
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-06T10:00-03:00",
+   "uuid": "-8475552290484961275"
+  },
+  {
+   "metricool_id": 413787199,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-06T10:00-03:00",
+   "uuid": "3381350012871262929"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ },
+ "x_text_link": "https://autopilotoi.app/g/bill/?utm_source=x&utm_medium=social&utm_campaign=first_sales&utm_content=bill-coach",
+ "media_note": "Posts use bill-coach.mp4?v=2 so Metricool fetched the re-rendered file, not the CDN cached first render."
 }
