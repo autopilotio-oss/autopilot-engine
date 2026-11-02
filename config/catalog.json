@@ -22,8 +22,8 @@
   {
    "offer_id": "autopilot",
    "permalink": "autopilot",
-   "name": "Autopilot",
-   "price_cents": 1999,
+   "name": "Front Desk Kit by AUTOPILOT.OI",
+   "price_cents": 3900,
    "currency": "USD",
    "kind": "kit",
    "components": [],
@@ -283,10 +283,30 @@
    "managed_by": "products/"
   },
   {
+   "offer_id": "workspace_founding",
+   "permalink": "workspace-founding",
+   "name": "AUTOPILOT Workspace · Founding Spot (refundable)",
+   "price_cents": 4900,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/workspace-founding",
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "workspace/",
+     "keyword": null,
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
    "offer_id": "workspace",
    "permalink": "workspace",
-   "name": "THE WORKSPACE by AUTOPILOT.OI",
-   "price_cents": 4900,
+   "name": "Office Autopilot by AUTOPILOT.OI",
+   "price_cents": 7900,
    "currency": "USD",
    "kind": "kit",
    "components": [],
@@ -402,6 +422,7 @@
   "subs-agent",
   "tiktok-agents",
   "video-agent",
-  "workspace"
+  "workspace",
+  "workspace-founding"
  ]
 }

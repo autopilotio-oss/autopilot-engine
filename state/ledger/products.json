@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-02T16:47:19Z",
+ "checked": "2026-11-02T19:42:18Z",
  "products": [
   {
    "permalink": "all-money-agents",
@@ -12,9 +12,9 @@
   },
   {
    "permalink": "autopilot",
-   "name": "Autopilot",
+   "name": "Front Desk Kit by AUTOPILOT.OI",
    "published": true,
-   "price_cents": 1999,
+   "price_cents": 3900,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
@@ -22,15 +22,6 @@
   {
    "permalink": "deposit-agent",
    "name": "AUTOPILOT.OI Deposit Agent",
-   "published": true,
-   "price_cents": 1000,
-   "currency": "usd",
-   "sales_count": 0,
-   "deleted": false
-  },
-  {
-   "permalink": "refund-agent",
-   "name": "AUTOPILOT.OI Refund Agent",
    "published": true,
    "price_cents": 1000,
    "currency": "usd",
@@ -84,7 +75,16 @@
   },
   {
    "permalink": "workspace",
-   "name": "THE WORKSPACE by AUTOPILOT.OI",
+   "name": "Office Autopilot by AUTOPILOT.OI",
+   "published": true,
+   "price_cents": 7900,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "workspace-founding",
+   "name": "AUTOPILOT Workspace \u00b7 Founding Spot (refundable)",
    "published": true,
    "price_cents": 4900,
    "currency": "usd",
