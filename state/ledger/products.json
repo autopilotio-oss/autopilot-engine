@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-02T13:57:53Z",
+ "checked": "2026-11-02T16:47:19Z",
  "products": [
   {
    "permalink": "all-money-agents",
@@ -11,17 +11,17 @@
    "deleted": false
   },
   {
-   "permalink": "deposit-agent",
-   "name": "AUTOPILOT.OI Deposit Agent",
+   "permalink": "autopilot",
+   "name": "Autopilot",
    "published": true,
-   "price_cents": 1000,
+   "price_cents": 1999,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
   },
   {
-   "permalink": "raise-agent",
-   "name": "AUTOPILOT.OI Raise Agent",
+   "permalink": "deposit-agent",
+   "name": "AUTOPILOT.OI Deposit Agent",
    "published": true,
    "price_cents": 1000,
    "currency": "usd",

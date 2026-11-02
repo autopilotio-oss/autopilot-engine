@@ -20,6 +20,19 @@
    "managed_by": "products/"
   },
   {
+   "offer_id": "autopilot",
+   "permalink": "autopilot",
+   "name": "Autopilot",
+   "price_cents": 1999,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/autopilot",
+   "guides": [],
+   "managed_by": "products/"
+  },
+  {
    "offer_id": "bill_agent",
    "permalink": "bill-agent",
    "name": "Bill Agent",
@@ -371,6 +384,7 @@
  ],
  "live": [
   "all-money-agents",
+  "autopilot",
   "bill-agent",
   "debt-agent",
   "deposit-agent",
