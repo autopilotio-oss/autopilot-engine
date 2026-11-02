@@ -8,25 +8,35 @@
   "ok"
  ],
  [
+  "cover",
+  "workspace",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/tf8y7dtw1f558udzznifnpjvd4kd', 'original_url': 'https://public-files.gumroad.com/fk1nmwb5f4423e4vhw7y5jocxi40', 'thumbnail': None"
+ ],
+ [
+  "cover",
+  "autopilot",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/ro978digujx0lxen6oxi0tsa4boq', 'original_url': 'https://public-files.gumroad.com/1gl2x7ky4lw8ojfblwuy66dfvy2f', 'thumbnail': None"
+ ],
+ [
   "covers",
   "autopilot",
   [
    {
-    "id": "2fecb7ad133a752cecfc727cb6dbc8b1",
-    "url": "https://public-files.gumroad.com/rz6ky7kanik2c1d8m6ph478baeuv",
-    "original_url": "https://public-files.gumroad.com/i7218a4036chzbk0a95bhtbn924w"
-   },
-   {
     "id": "f2c6c2579c954f99e6a8e47fa28ffcaa",
     "url": "https://public-files.gumroad.com/ro978digujx0lxen6oxi0tsa4boq",
     "original_url": "https://public-files.gumroad.com/1gl2x7ky4lw8ojfblwuy66dfvy2f"
+   },
+   {
+    "id": "5bf6f60d54af438319303bea69c6ed03",
+    "url": "https://public-files.gumroad.com/oka25xjdquur5nclcmxahwdyade0",
+    "original_url": "https://public-files.gumroad.com/h20gswjxry73nrfruzg2qwphsada"
    }
   ]
  ],
  [
   "cover_deleted",
   "autopilot",
-  "2fecb7ad133a752cecfc727cb6dbc8b1"
+  "5bf6f60d54af438319303bea69c6ed03"
  ],
  [
   "covers",
@@ -44,31 +54,21 @@
   "workspace",
   [
    {
-    "id": "ecba9b3e9dd4efd6c5d898d4cfb29c12",
-    "url": "https://public-files.gumroad.com/wlk0m895a2g9wd8azktt0v61wtoh",
-    "original_url": "https://public-files.gumroad.com/u76ew7zwdwmdt34xjuv6z3qx1m3l"
-   },
-   {
-    "id": "ae64ff8004730548ae80ce9951befbd2",
-    "url": "https://public-files.gumroad.com/ny1ucpc24gz0mxmdmbk2k2zao1za",
-    "original_url": "https://public-files.gumroad.com/f4g33ctutifj9jbc8x9ensykd29k"
-   },
-   {
     "id": "2e6f12f9a414c0dba778051511acb971",
     "url": "https://public-files.gumroad.com/tf8y7dtw1f558udzznifnpjvd4kd",
     "original_url": "https://public-files.gumroad.com/fk1nmwb5f4423e4vhw7y5jocxi40"
+   },
+   {
+    "id": "bcfc8cd3bfc6a8a0e4bbee1c2a459dc8",
+    "url": "https://public-files.gumroad.com/6rh2iurlr1tej5uk70uvd0d0b6jh",
+    "original_url": "https://public-files.gumroad.com/b7zvq1mqnn4twv9gxsdwxp4efa47"
    }
   ]
  ],
  [
   "cover_deleted",
   "workspace",
-  "ecba9b3e9dd4efd6c5d898d4cfb29c12"
- ],
- [
-  "cover_deleted",
-  "workspace",
-  "ae64ff8004730548ae80ce9951befbd2"
+  "bcfc8cd3bfc6a8a0e4bbee1c2a459dc8"
  ],
  [
   "offer_code_ok",
