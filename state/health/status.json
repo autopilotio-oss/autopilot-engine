@@ -67,8 +67,48 @@
   "ok": true,
   "severity": "SEV-3"
  },
+ "gumroad_offer:front_desk_kit": {
+  "ok": false,
+  "severity": "SEV-1"
+ },
+ "gumroad_offer:office_autopilot": {
+  "ok": false,
+  "severity": "SEV-1"
+ },
+ "gumroad_offer:video_agent": {
+  "ok": false,
+  "severity": "SEV-1"
+ },
+ "gumroad_offer:workspace_founding": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "gumroad_sync_fresh": {
   "ok": true,
+  "severity": "SEV-2"
+ },
+ "landing_price:front_desk_kit": {
+  "ok": false,
+  "severity": "SEV-2"
+ },
+ "landing_price:office_autopilot": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "landing_price:video_agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "landing_price:workspace_founding": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "meta_pixel_configured": {
+  "ok": false,
+  "severity": "SEV-3"
+ },
+ "page:autopilot_redirect": {
+  "ok": false,
   "severity": "SEV-2"
  },
  "page:brain": {
@@ -77,6 +117,10 @@
  },
  "page:free": {
   "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:front_desk": {
+  "ok": false,
   "severity": "SEV-2"
  },
  "page:guide_bill": {
@@ -108,10 +152,22 @@
   "severity": "SEV-2"
  },
  "page:home": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-2"
  },
- "page:store": {
+ "page:library": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:marketplace": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:office_autopilot": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:store_redirect": {
   "ok": false,
   "severity": "SEV-2"
  },
