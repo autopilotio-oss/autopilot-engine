@@ -1,117 +1,150 @@
 {
-  "id": "subs-agent",
-  "ep": "001-subs-agent",
-  "kind": "product",
-  "hook": [
-    "This AI agent takes 10 min to set up",
-    "and finds every subscription you forgot"
-  ],
-  "keyword": "SUBS",
-  "video": "https://autopilotoi.app/media/freel/subs-agent.mp4",
-  "poster": "https://autopilotoi.app/media/freel/subs-agent-poster.jpg",
-  "caption": {
-    "ig": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Comment SUBS and I'll send you the free guide.\n\n#ai #claude #aiagents #subscriptions #moneytips",
-    "other": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Free guide at the link in bio.\n\n#ai #claude #aiagents #subscriptions #moneytips"
+ "id": "subs-agent",
+ "ep": "001-subs-agent",
+ "kind": "product",
+ "hook": [
+  "This AI agent takes 10 min to set up",
+  "and finds every subscription you forgot"
+ ],
+ "keyword": "SUBS",
+ "video": "https://autopilotoi.app/media/freel/subs-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/subs-agent-poster.jpg",
+ "caption": {
+  "ig": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Comment SUBS and I'll send you the free guide.\n\n#ai #claude #aiagents #subscriptions #moneytips",
+  "other": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Free guide at the link in bio.\n\n#ai #claude #aiagents #subscriptions #moneytips"
+ },
+ "rendered_at": "2026-10-31T20:10:26+00:00",
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412436979,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-10-31T20:30-03:00",
+   "uuid": "1187931931107149502"
   },
-  "rendered_at": "2026-10-31T20:10:26+00:00",
-  "status": "scheduled",
-  "gate": "owner_override",
-  "posts": [
-    {
-      "metricool_id": 412436979,
-      "networks": [
-        "instagram"
-      ],
-      "at": "2026-10-31T20:30-03:00",
-      "uuid": "1187931931107149502"
-    },
-    {
-      "metricool_id": 412437010,
-      "networks": [
-        "tiktok",
-        "threads"
-      ],
-      "at": "2026-10-31T20:30-03:00",
-      "uuid": "-1626008371432766121"
-    },
-    {
-      "metricool_id": 412437038,
-      "networks": [
-        "twitter"
-      ],
-      "at": "2026-10-31T20:30-03:00",
-      "uuid": "-9190714284898107202"
-    }
-  ],
-  "approval": {
-    "by": "Seb",
-    "at": "2026-10-31T17:14-03:00",
-    "quote": "Not bad post them tonight everywhere"
+  {
+   "metricool_id": 412437010,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-10-31T20:30-03:00",
+   "uuid": "-1626008371432766121"
   },
-  "test_read": {
-    "read_at": "2026-11-02T00:40-03:00",
-    "window": "~24h after post (Metricool, organic)",
-    "source": "Metricool getAnalyticsDataByMetrics",
-    "baseline": {
-      "instagram_reels_oct30_nov1_views": [
-        73,
-        41,
-        22,
-        74,
-        67
-      ],
-      "instagram_avg_watch_s_range": "2.1-5.9",
-      "tiktok_same_night_views": {
-        "shop-finder": 26,
-        "ai-employees": 1
-      },
-      "tiktok_earlier_oct31_views": [
-        87,
-        59
-      ],
-      "threads_oct31_evening_views": [
-        40,
-        36,
-        24,
-        17,
-        15
-      ]
-    },
-    "instagram": {
-      "views": 78,
-      "reach": 75,
-      "likes": 1,
-      "comments": 0,
-      "shares": 0,
-      "saves": 0,
-      "avg_watch_s": 2.108,
-      "view_rate_3s_pct": 13.5,
-      "retention": "MISSING",
-      "keyword_SUBS_comments": 0,
-      "profile_clicks": "MISSING"
-    },
-    "tiktok": {
-      "views": 40,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "reach": "MISSING",
-      "avg_watch_s": "MISSING",
-      "full_watch_rate": "MISSING",
-      "profile_clicks": "MISSING"
-    },
-    "threads": {
-      "views": 40,
-      "likes": "MISSING",
-      "replies": "MISSING"
-    },
-    "x": {
-      "impressions": 1,
-      "video_views": "MISSING",
-      "likes": "MISSING",
-      "link_clicks": "MISSING",
-      "profile_clicks": "MISSING"
-    },
-    "verdict": "adjust hooks: best IG reach of the batch but viewers leave after ~2s; zero saves, shares or SUBS comments"
+  {
+   "metricool_id": 412437038,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-10-31T20:30-03:00",
+   "uuid": "-9190714284898107202"
   }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T17:14-03:00",
+  "quote": "Not bad post them tonight everywhere"
+ },
+ "test_read": {
+  "read_at": "2026-11-02T00:40-03:00",
+  "window": "~24h after post (Metricool, organic)",
+  "source": "Metricool getAnalyticsDataByMetrics",
+  "baseline": {
+   "instagram_reels_oct30_nov1_views": [
+    73,
+    41,
+    22,
+    74,
+    67
+   ],
+   "instagram_avg_watch_s_range": "2.1-5.9",
+   "tiktok_same_night_views": {
+    "shop-finder": 26,
+    "ai-employees": 1
+   },
+   "tiktok_earlier_oct31_views": [
+    87,
+    59
+   ],
+   "threads_oct31_evening_views": [
+    40,
+    36,
+    24,
+    17,
+    15
+   ]
+  },
+  "instagram": {
+   "views": 78,
+   "reach": 75,
+   "likes": 1,
+   "comments": 0,
+   "shares": 0,
+   "saves": 0,
+   "avg_watch_s": 2.108,
+   "view_rate_3s_pct": 13.5,
+   "retention": "MISSING",
+   "keyword_SUBS_comments": 0,
+   "profile_clicks": "MISSING"
+  },
+  "tiktok": {
+   "views": 40,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "reach": "MISSING",
+   "avg_watch_s": "MISSING",
+   "full_watch_rate": "MISSING",
+   "profile_clicks": "MISSING"
+  },
+  "threads": {
+   "views": 40,
+   "likes": "MISSING",
+   "replies": "MISSING"
+  },
+  "x": {
+   "impressions": 1,
+   "video_views": "MISSING",
+   "likes": "MISSING",
+   "link_clicks": "MISSING",
+   "profile_clicks": "MISSING"
+  },
+  "verdict": "adjust hooks: best IG reach of the batch but viewers leave after ~2s; zero saves, shares or SUBS comments"
+ },
+ "results": [
+  {
+   "date": "2026-11-02",
+   "read_at": "2026-11-02T08:20-03:00",
+   "age_h": "about 33 to 36",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE, TKPO), organic",
+   "instagram": {
+    "views": 78,
+    "reach": 75,
+    "avg_watch_s": 2.108,
+    "view_rate_3s_pct": 13.5,
+    "shares": 0,
+    "saves": 0,
+    "comments": 0,
+    "keyword_comments": 0,
+    "retention": "MISSING"
+   },
+   "tiktok": {
+    "views": 100,
+    "shares": 0,
+    "comments": 0,
+    "likes": "MISSING",
+    "reach": "MISSING",
+    "avg_watch_s": "MISSING",
+    "full_watch_rate": "MISSING"
+   },
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (GoatCounter not readable from the operator)",
+   "checkout_clicks": "MISSING",
+   "attributed_orders": 0
+  }
+ ]
 }

@@ -47,5 +47,38 @@
   "by": "Seb",
   "at": "2026-10-31T18:14-03:00",
   "quote": "Post 2 tonight, rest 2 a day"
- }
+ },
+ "results": [
+  {
+   "date": "2026-11-02",
+   "read_at": "2026-11-02T08:20-03:00",
+   "age_h": "about 33 to 36",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE, TKPO), organic",
+   "instagram": {
+    "views": 67,
+    "reach": 54,
+    "avg_watch_s": 2.454,
+    "view_rate_3s_pct": 10.3,
+    "shares": 0,
+    "saves": 0,
+    "comments": 0,
+    "keyword_comments": 0,
+    "retention": "MISSING"
+   },
+   "tiktok": {
+    "views": 103,
+    "shares": 0,
+    "comments": 0,
+    "likes": "MISSING",
+    "reach": "MISSING",
+    "avg_watch_s": "MISSING",
+    "full_watch_rate": "MISSING"
+   },
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (GoatCounter not readable from the operator)",
+   "checkout_clicks": "MISSING",
+   "attributed_orders": 0
+  }
+ ]
 }

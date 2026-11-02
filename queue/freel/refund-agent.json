@@ -1,117 +1,150 @@
 {
-  "id": "refund-agent",
-  "ep": "002-refund-agent",
-  "kind": "product",
-  "hook": [
-    "Flight cancelled? This 10 min AI agent",
-    "writes your refund request for you"
-  ],
-  "keyword": "REFUND",
-  "video": "https://autopilotoi.app/media/freel/refund-agent.mp4",
-  "poster": "https://autopilotoi.app/media/freel/refund-agent-poster.jpg",
-  "caption": {
-    "ig": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Comment REFUND and I'll send you the free guide.\n\n#ai #claude #refund #travel #moneytips",
-    "other": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Free guide at the link in bio.\n\n#ai #claude #refund #travel #moneytips"
+ "id": "refund-agent",
+ "ep": "002-refund-agent",
+ "kind": "product",
+ "hook": [
+  "Flight cancelled? This 10 min AI agent",
+  "writes your refund request for you"
+ ],
+ "keyword": "REFUND",
+ "video": "https://autopilotoi.app/media/freel/refund-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/refund-agent-poster.jpg",
+ "caption": {
+  "ig": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Comment REFUND and I'll send you the free guide.\n\n#ai #claude #refund #travel #moneytips",
+  "other": "Airline cancelled your flight and offered a voucher? Under U.S. DOT rules you can usually turn it down and ask for your money back. This agent reads the booking and drafts the request for you to send. Sample booking shown. Free guide at the link in bio.\n\n#ai #claude #refund #travel #moneytips"
+ },
+ "rendered_at": "2026-10-31T20:10:28+00:00",
+ "status": "scheduled",
+ "gate": "owner_override",
+ "posts": [
+  {
+   "metricool_id": 412437071,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-10-31T22:00-03:00",
+   "uuid": "-3421018455171314451"
   },
-  "rendered_at": "2026-10-31T20:10:28+00:00",
-  "status": "scheduled",
-  "gate": "owner_override",
-  "posts": [
-    {
-      "metricool_id": 412437071,
-      "networks": [
-        "instagram"
-      ],
-      "at": "2026-10-31T22:00-03:00",
-      "uuid": "-3421018455171314451"
-    },
-    {
-      "metricool_id": 412437107,
-      "networks": [
-        "tiktok",
-        "threads"
-      ],
-      "at": "2026-10-31T22:00-03:00",
-      "uuid": "7018597068406934616"
-    },
-    {
-      "metricool_id": 412437127,
-      "networks": [
-        "twitter"
-      ],
-      "at": "2026-10-31T22:00-03:00",
-      "uuid": "7976310235226260342"
-    }
-  ],
-  "approval": {
-    "by": "Seb",
-    "at": "2026-10-31T17:14-03:00",
-    "quote": "Not bad post them tonight everywhere"
+  {
+   "metricool_id": 412437107,
+   "networks": [
+    "tiktok",
+    "threads"
+   ],
+   "at": "2026-10-31T22:00-03:00",
+   "uuid": "7018597068406934616"
   },
-  "test_read": {
-    "read_at": "2026-11-02T00:40-03:00",
-    "window": "~24h after post (Metricool, organic)",
-    "source": "Metricool getAnalyticsDataByMetrics",
-    "baseline": {
-      "instagram_reels_oct30_nov1_views": [
-        73,
-        41,
-        22,
-        74,
-        67
-      ],
-      "instagram_avg_watch_s_range": "2.1-5.9",
-      "tiktok_same_night_views": {
-        "shop-finder": 26,
-        "ai-employees": 1
-      },
-      "tiktok_earlier_oct31_views": [
-        87,
-        59
-      ],
-      "threads_oct31_evening_views": [
-        40,
-        36,
-        24,
-        17,
-        15
-      ]
-    },
-    "instagram": {
-      "views": 14,
-      "reach": 15,
-      "likes": 1,
-      "comments": 0,
-      "shares": 0,
-      "saves": 0,
-      "avg_watch_s": 6.5,
-      "view_rate_3s_pct": 36.4,
-      "retention": "MISSING",
-      "keyword_REFUND_comments": 0,
-      "profile_clicks": "MISSING"
-    },
-    "tiktok": {
-      "views": 14,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "reach": "MISSING",
-      "avg_watch_s": "MISSING",
-      "full_watch_rate": "MISSING",
-      "profile_clicks": "MISSING"
-    },
-    "threads": {
-      "views": 24,
-      "likes": 1,
-      "replies": "MISSING"
-    },
-    "x": {
-      "impressions": 2,
-      "video_views": "MISSING",
-      "likes": "MISSING",
-      "link_clicks": "MISSING",
-      "profile_clicks": "MISSING"
-    },
-    "verdict": "adjust hooks: best hold of the batch (6.5s, 36% past 3s) but very low distribution; zero REFUND comments"
+  {
+   "metricool_id": 412437127,
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-10-31T22:00-03:00",
+   "uuid": "7976310235226260342"
   }
+ ],
+ "approval": {
+  "by": "Seb",
+  "at": "2026-10-31T17:14-03:00",
+  "quote": "Not bad post them tonight everywhere"
+ },
+ "test_read": {
+  "read_at": "2026-11-02T00:40-03:00",
+  "window": "~24h after post (Metricool, organic)",
+  "source": "Metricool getAnalyticsDataByMetrics",
+  "baseline": {
+   "instagram_reels_oct30_nov1_views": [
+    73,
+    41,
+    22,
+    74,
+    67
+   ],
+   "instagram_avg_watch_s_range": "2.1-5.9",
+   "tiktok_same_night_views": {
+    "shop-finder": 26,
+    "ai-employees": 1
+   },
+   "tiktok_earlier_oct31_views": [
+    87,
+    59
+   ],
+   "threads_oct31_evening_views": [
+    40,
+    36,
+    24,
+    17,
+    15
+   ]
+  },
+  "instagram": {
+   "views": 14,
+   "reach": 15,
+   "likes": 1,
+   "comments": 0,
+   "shares": 0,
+   "saves": 0,
+   "avg_watch_s": 6.5,
+   "view_rate_3s_pct": 36.4,
+   "retention": "MISSING",
+   "keyword_REFUND_comments": 0,
+   "profile_clicks": "MISSING"
+  },
+  "tiktok": {
+   "views": 14,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "reach": "MISSING",
+   "avg_watch_s": "MISSING",
+   "full_watch_rate": "MISSING",
+   "profile_clicks": "MISSING"
+  },
+  "threads": {
+   "views": 24,
+   "likes": 1,
+   "replies": "MISSING"
+  },
+  "x": {
+   "impressions": 2,
+   "video_views": "MISSING",
+   "likes": "MISSING",
+   "link_clicks": "MISSING",
+   "profile_clicks": "MISSING"
+  },
+  "verdict": "adjust hooks: best hold of the batch (6.5s, 36% past 3s) but very low distribution; zero REFUND comments"
+ },
+ "results": [
+  {
+   "date": "2026-11-02",
+   "read_at": "2026-11-02T08:20-03:00",
+   "age_h": "about 33 to 36",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE, TKPO), organic",
+   "instagram": {
+    "views": 14,
+    "reach": 15,
+    "avg_watch_s": 6.5,
+    "view_rate_3s_pct": 36.4,
+    "shares": 0,
+    "saves": 0,
+    "comments": 0,
+    "keyword_comments": 0,
+    "retention": "MISSING"
+   },
+   "tiktok": {
+    "views": 97,
+    "shares": 0,
+    "comments": 0,
+    "likes": "MISSING",
+    "reach": "MISSING",
+    "avg_watch_s": "MISSING",
+    "full_watch_rate": "MISSING"
+   },
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (GoatCounter not readable from the operator)",
+   "checkout_clicks": "MISSING",
+   "attributed_orders": 0
+  }
+ ]
 }

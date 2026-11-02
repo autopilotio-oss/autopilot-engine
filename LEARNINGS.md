@@ -35,3 +35,9 @@
 
 ## Newsletter
 - 2026-11-01 (weekly newsletter): skipped, Kit shows 0 active subscribers, so no draft was created. Learned: the list needs its first signups (guide pages and Kit form) before a weekly email is worth drafting.
+
+## Campaign learnings
+
+- 2026-11-02 CONFIRMED: factory reels lose most Instagram viewers before 3 seconds. 3 of 4 reels at 24h+ (subs-agent, shop-finder, ai-employees) averaged 2.1 to 2.9s watch with a 10 to 14% 3s view rate on 54 to 75 reach each (Metricool IGRE). Applied: new episodes 013e/013f put the problem in the first 3 words and run hook_number_001 (dollar amount in line 1 vs plain problem).
+- 2026-11-02 CONFIRMED: reach is not converting yet. 4 factory reels, 233 IG views and 344 TikTok views combined, produced 0 saves, 0 shares, 0 keyword comments and 0 orders (orders.py sync 08:15 ART). No reel qualifies as a winner; reach alone never wins.
+- 2026-11-02 INCONCLUSIVE: the one rule based hook (refund-agent, "Flight cancelled?") held IG viewers longest (6.5s avg, 36.4% 3s view rate) but on only 15 reach; TikTok views were flat across topics (44 to 103). Needs a second reel with the same pattern before acting.
