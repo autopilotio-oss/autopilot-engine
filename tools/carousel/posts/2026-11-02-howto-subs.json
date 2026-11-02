@@ -1,0 +1,115 @@
+{
+ "kind": "howto",
+ "dateline": "NOV 02 2026",
+ "cover_bg": "bg-white",
+ "grain": false,
+ "music": "bright",
+ "seed": 11,
+ "cover_html": "<div class=\"fx\" style=\"left:0;top:70px;width:1080px;text-align:center\"><span class=\"chip\">HOW TO &middot; SUBSCRIPTIONS</span></div><div class=\"fx A\" style=\"left:56px;top:170px;width:968px;text-align:center;font-size:118px;color:#0c0c0c\">Stop paying for</div><div class=\"fx A\" style=\"left:116px;top:290px;width:848px;padding:16px 0 6px;text-align:center;font-size:118px;color:#D4FF3A;background:#0c0c0c\">stuff you forgot</div><div class=\"fx\" style=\"left:56px;top:470px;width:968px;height:580px;background:#0c0c0c;color:#f2f2ee;border-radius:22px\"><div class=\"Cc\" style=\"position:absolute;left:30px;top:30px;font-size:22px;color:#D4FF3A\">SAMPLE MONTH &middot; 6 AUTO CHARGES</div><div style=\"position:absolute;left:30px;top:86px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">01</div></div><div style=\"position:absolute;left:161px;top:86px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">02</div></div><div style=\"position:absolute;left:292px;top:86px;width:122px;height:84px;border-radius:10px;background:#D4FF3A\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#0c0c0c\">03</div><div class=\"Mm\" style=\"position:absolute;left:12px;top:44px;font-size:24px;font-weight:700;color:#0c0c0c\">$15.99</div></div><div style=\"position:absolute;left:423px;top:86px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">04</div></div><div style=\"position:absolute;left:554px;top:86px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">05</div></div><div style=\"position:absolute;left:685px;top:86px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">06</div></div><div style=\"position:absolute;left:816px;top:86px;width:122px;height:84px;border-radius:10px;background:#D4FF3A\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#0c0c0c\">07</div><div class=\"Mm\" style=\"position:absolute;left:12px;top:44px;font-size:24px;font-weight:700;color:#0c0c0c\">$2.99</div></div><div style=\"position:absolute;left:30px;top:179px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">08</div></div><div style=\"position:absolute;left:161px;top:179px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">09</div></div><div style=\"position:absolute;left:292px;top:179px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">10</div></div><div style=\"position:absolute;left:423px;top:179px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">11</div></div><div style=\"position:absolute;left:554px;top:179px;width:122px;height:84px;border-radius:10px;background:#D4FF3A\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#0c0c0c\">12</div><div class=\"Mm\" style=\"position:absolute;left:12px;top:44px;font-size:24px;font-weight:700;color:#0c0c0c\">$39.00</div></div><div style=\"position:absolute;left:685px;top:179px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">13</div></div><div style=\"position:absolute;left:816px;top:179px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">14</div></div><div style=\"position:absolute;left:30px;top:272px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">15</div></div><div style=\"position:absolute;left:161px;top:272px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">16</div></div><div style=\"position:absolute;left:292px;top:272px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">17</div></div><div style=\"position:absolute;left:423px;top:272px;width:122px;height:84px;border-radius:10px;background:#D4FF3A\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#0c0c0c\">18</div><div class=\"Mm\" style=\"position:absolute;left:12px;top:44px;font-size:24px;font-weight:700;color:#0c0c0c\">$9.99</div></div><div style=\"position:absolute;left:554px;top:272px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">19</div></div><div style=\"position:absolute;left:685px;top:272px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">20</div></div><div style=\"position:absolute;left:816px;top:272px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">21</div></div><div style=\"position:absolute;left:30px;top:365px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">22</div></div><div style=\"position:absolute;left:161px;top:365px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">23</div></div><div style=\"position:absolute;left:292px;top:365px;width:122px;height:84px;border-radius:10px;background:#D4FF3A\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#0c0c0c\">24</div><div class=\"Mm\" style=\"position:absolute;left:12px;top:44px;font-size:24px;font-weight:700;color:#0c0c0c\">$4.99</div></div><div style=\"position:absolute;left:423px;top:365px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">25</div></div><div style=\"position:absolute;left:554px;top:365px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">26</div></div><div style=\"position:absolute;left:685px;top:365px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">27</div></div><div style=\"position:absolute;left:816px;top:365px;width:122px;height:84px;border-radius:10px;background:#D4FF3A\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#0c0c0c\">28</div><div class=\"Mm\" style=\"position:absolute;left:12px;top:44px;font-size:24px;font-weight:700;color:#0c0c0c\">$11.99</div></div><div style=\"position:absolute;left:30px;top:458px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">29</div></div><div style=\"position:absolute;left:161px;top:458px;width:122px;height:84px;border-radius:10px;background:#f2f2ee10\"><div class=\"Mm\" style=\"position:absolute;left:12px;top:8px;font-size:20px;color:#f2f2ee88\">30</div></div><div style=\"position:absolute;left:292px;top:458px;width:122px;height:84px;border-radius:10px;border:2px solid #f2f2ee14;box-sizing:border-box\"></div><div style=\"position:absolute;left:423px;top:458px;width:122px;height:84px;border-radius:10px;border:2px solid #f2f2ee14;box-sizing:border-box\"></div><div style=\"position:absolute;left:554px;top:458px;width:122px;height:84px;border-radius:10px;border:2px solid #f2f2ee14;box-sizing:border-box\"></div><div style=\"position:absolute;left:685px;top:458px;width:122px;height:84px;border-radius:10px;border:2px solid #f2f2ee14;box-sizing:border-box\"></div><div style=\"position:absolute;left:816px;top:458px;width:122px;height:84px;border-radius:10px;border:2px solid #f2f2ee14;box-sizing:border-box\"></div></div><div class=\"fx A\" style=\"left:56px;top:1086px;width:968px;text-align:center;font-size:66px;color:#0c0c0c\">$84.95 a month = $1,019 a year</div><div class=\"fx Ii\" style=\"left:56px;top:1166px;width:968px;text-align:center;font-size:34px;line-height:1.25;color:#0c0c0c\">Find every one in 15 minutes with Claude. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "Pull *3 months* of statements",
+   "body": "Download the last 3 months from your bank, every card and PayPal. Three months catches the charges that only show up <b>every other month or once a quarter</b>."
+  },
+  {
+   "title": "Check your *app stores*",
+   "body": "iPhone: <b>Settings, tap your name, Subscriptions</b>. Android: <b>Play Store, your profile icon, Payments and subscriptions, Subscriptions</b>. App charges often hide here."
+  },
+  {
+   "title": "Let *Claude* find the leaks",
+   "body": "Black out your card numbers, upload the statements and ask: <b>Find every recurring charge, including annual renewals and free trials that turned paid. Make a table with the yearly cost of each.</b>"
+  },
+  {
+   "title": "Cancel where you *signed up*",
+   "body": "A new card does not stop it: Visa can send your <b>new card number</b> to the company. Cancel in the app store or on the company's account page and <b>screenshot the confirmation</b>."
+  },
+  {
+   "title": "Still charged? *Stop it*",
+   "body": "Paid from your bank account? Tell your bank to stop the payment at least <b>3 business days</b> before it is due (they may charge a fee). On a credit card, dispute it in writing within <b>60 days</b> of the statement."
+  }
+ ],
+ "cta": {
+  "big": "Find the *leaks*",
+  "keyword": "SUBS",
+  "gift": "Your free subscription guide: the Claude prompts to find every recurring charge, and how to cancel the right way.",
+  "small": "Free, right in your DMs. General info, *not financial advice.*"
+ },
+ "sources": [
+  [
+   "Apple",
+   "https://support.apple.com/en-au/HT202039"
+  ],
+  [
+   "TechRadar",
+   "https://techradar.com/phones/android/how-to-unsubscribe-from-subscriptions-through-the-google-play-store-on-your-android-phone"
+  ],
+  [
+   "Visa",
+   "https://www.visa.com/en-us/products/visa-account-updater"
+  ],
+  [
+   "Quartz",
+   "https://qz.com/netflix-streaming-services-charges-credit-card-visa-vau-1851441867"
+  ],
+  [
+   "CFPB",
+   "https://www.consumerfinance.gov/about-us/blog/you-have-protections-when-it-comes-to-automatic-debit-payments-from-your-account/"
+  ],
+  [
+   "CA AG",
+   "https://www.oag.ca.gov/consumers/general/credit-cards-dispute-charge"
+  ],
+  [
+   "Experian",
+   "https://www.experian.com/blogs/ask-experian/how-long-do-you-have-to-dispute-credit-card-charge/"
+  ]
+ ],
+ "bg_words": [
+  "SUBS",
+  "LEAKS",
+  "CANCEL",
+  "PROOF"
+ ],
+ "sources_all": [
+  [
+   "Apple",
+   "https://support.apple.com/en-au/HT202039"
+  ],
+  [
+   "iGeeks",
+   "https://www.igeeksblog.com/how-to-manage-subscriptions-iphone-ipad/"
+  ],
+  [
+   "TechRadar",
+   "https://techradar.com/phones/android/how-to-unsubscribe-from-subscriptions-through-the-google-play-store-on-your-android-phone"
+  ],
+  [
+   "SlashGear",
+   "https://www.slashgear.com/1656860/android-phone-check-cancel-subscriptions/"
+  ],
+  [
+   "Visa",
+   "https://www.visa.com/en-us/products/visa-account-updater"
+  ],
+  [
+   "Quartz",
+   "https://qz.com/netflix-streaming-services-charges-credit-card-visa-vau-1851441867"
+  ],
+  [
+   "CFPB",
+   "https://www.consumerfinance.gov/about-us/blog/you-have-protections-when-it-comes-to-automatic-debit-payments-from-your-account/"
+  ],
+  [
+   "Reg E",
+   "https://www.consumerfinance.gov/rules-policy/regulations/1005/10/"
+  ],
+  [
+   "CA AG",
+   "https://www.oag.ca.gov/consumers/general/credit-cards-dispute-charge"
+  ],
+  [
+   "Experian",
+   "https://www.experian.com/blogs/ask-experian/how-long-do-you-have-to-dispute-credit-card-charge/"
+  ]
+ ]
+}
