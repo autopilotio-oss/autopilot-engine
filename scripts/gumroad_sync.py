@@ -110,8 +110,8 @@ def prune_covers(st):
             covers = g.get("covers") or []
             DBG.append(["covers", slug, [{k: c.get(k) for k in ("id", "url", "original_url")} for c in covers]])
             if len(covers) <= 1: continue
-            keep = covers[-1]  # the last added is the new cover
-            for c in covers[:-1]:
+            keep = covers[0]  # Gumroad returns covers newest first (verified Nov 2: the cover uploaded that day was index 0)
+            for c in covers[1:]:
                 if not c.get("id"): continue
                 try: call("DELETE", f"/products/{pid}/covers/{c['id']}", {}); DBG.append(["cover_deleted", slug, c["id"]])
                 except Exception as e: DBG.append(["cover_delete_fail", slug, repr(e)[:200]])
