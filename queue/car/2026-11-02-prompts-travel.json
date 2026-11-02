@@ -1,12 +1,12 @@
 {
  "id": "2026-11-02-prompts-travel",
  "kind": "prompts",
- "status": "bank",
+ "status": "scheduled",
  "cover_idea": "Full lime cover: a tilted black SAMPLE boarding pass (JFK to LIS) slammed with a lime CANCELED stamp across the top, giant black headline FLIGHT CANCELED? ASK FOR CASH at the bottom.",
  "theme": "travel: 5 Claude prompts (cash refund not voucher, late bag fee back, 24 hour rule, pay in local currency, passport validity check), tied to refund-agent / REFUND guide",
  "gate": {
   "score": 91,
-  "notes": "Accuracy 27/30 (significant change 3h/6h, cash not voucher, card refunds 7 business days, bag fee back 12h domestic / 15 to 30h international: US DOT passenger page + WFAA and The Points Guy; 24 hour rule only for bookings 7+ days out and only one option required: DOT Buying a Ticket page + The Points Guy; DCC adds 3%+ and applies at ATMs: The Points Guy 3 to 5% + Motley Fool 3 to 7%; 6 month passport validity for many countries and check State Dept country pages: KHOU Verify + The Points Guy. US only, said on slides and CTA). Hook 22/25. Clarity 19/20. Design 13/15 vs last 5: full lime background (none of the last 5), boarding pass with stamp (new visual), headline at the bottom at 150px fitted (vs mid/top), only raise shares bottom position; inner slides standard prompt template. CTA 10/10 (REFUND confirmed in manychat.json, gift matches /g/refund: flight refund rule + copy paste requests). QA PASS, all 7 slides legible. No prompt repeats earlier posts."
+  "notes": "Accuracy 27/30 (significant change 3h/6h, cash not voucher, card refunds 7 business days, bag fee back 12h domestic / 15 to 30h international: US DOT passenger page + WFAA and The Points Guy; 24 hour rule only for bookings 7+ days out and only one option required: DOT Buying a Ticket page + The Points Guy; DCC adds 3%+ and applies at ATMs: The Points Guy 3 to 5% + Motley Fool 3 to 7%; 6 month passport validity for many countries and check State Dept country pages: KHOU Verify + The Points Guy. US only, said on slides and CTA). Hook 22/25. Clarity 19/20. Design 13/15 vs last 5: full lime background (none of the last 5), boarding pass with stamp (new visual), headline at the bottom at 150px fitted (vs mid/top), only raise shares bottom position; inner slides standard prompt template. CTA 10/10 (REFUND confirmed in manychat.json, gift matches /g/refund: flight refund rule + copy paste requests). QA PASS, all 7 slides legible. No prompt repeats earlier posts. | 14:03 ART Nov 2 news desk: used from bank as the daily prompts post. IG 18:00 full Nov 2 (php2shell), Nov 3 (banks-block-agents), Nov 4 (Claude prompts), so next free 18:00 is Nov 5. Re-checked: DOT automatic refund rule still in effect (TravelPulse, ABC), Pages deploy success, Metricool fetched all media. Slides re-read, legible."
  },
  "sources": [
   [
@@ -54,5 +54,45 @@
   "x": "Airline canceled your flight? Turn down the voucher. Under US DOT rules you are owed a cash refund. Paste the email into Claude and have it write the request. Free guide: autopilotoi.app/g/refund"
  },
  "media": "docs/media/car/2026-11-02-prompts-travel/",
- "built_at": "2026-11-02T13:20Z"
+ "built_at": "2026-11-02T13:20Z",
+ "story_key": "prompts-travel-2026-11-05",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels)"
+ },
+ "posts": [
+  {
+   "metricool_id": 414251989,
+   "uuid": "-1399054146443589977",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-05T18:00-03:00"
+  },
+  {
+   "metricool_id": 414252084,
+   "uuid": "5286110751240111968",
+   "networks": [
+    "tiktok"
+   ],
+   "at": "2026-11-05T18:00-03:00"
+  },
+  {
+   "metricool_id": 414252159,
+   "uuid": "-2358221934996207486",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-05T18:00-03:00"
+  },
+  {
+   "metricool_id": 414252233,
+   "uuid": "2750801452854691380",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-05T18:00-03:00"
+  }
+ ]
 }
