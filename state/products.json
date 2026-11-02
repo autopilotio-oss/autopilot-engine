@@ -35,7 +35,9 @@
   "published": true,
   "live": true,
   "version": 3,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Subscription Agent"
  },
  "refund-agent": {
   "id": "CayudpoEYLqNtawHm8nGIw==",
@@ -59,7 +61,9 @@
   "published": true,
   "live": true,
   "version": 5,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 3900,
+  "live_name": "AUTOPILOT.OI All 5 Money Agents"
  },
  "sell-agent": {
   "id": "3ovGglfKChBYmztor4awjw==",
@@ -67,7 +71,9 @@
   "published": true,
   "version": 4,
   "live": true,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Sales Agent"
  },
  "shop-agent": {
   "id": "8z26hcuQJVrhG506xb7zxg==",
@@ -75,7 +81,9 @@
   "published": true,
   "version": 5,
   "live": true,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Shop Agent"
  },
  "video-agent": {
   "id": "HO6TBwbYC3KpVc4VJFYLUg==",
@@ -84,7 +92,9 @@
   "version": 4,
   "adopted": true,
   "live": true,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Video Agent"
  },
  "tiktok-agents": {
   "id": "rRDPrOXhP7sxK2pG-XXuzQ==",
@@ -93,7 +103,9 @@
   "version": 1,
   "adopted": true,
   "live": true,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 2400,
+  "live_name": "AUTOPILOT.OI TikTok Agents Bundle"
  },
  "deposit-agent": {
   "id": "XUlcW8MPCFTzUR4GDIq2Zw==",
@@ -102,7 +114,9 @@
   "version": 2,
   "adopted": true,
   "live": true,
-  "cover_v": 1
+  "cover_v": 1,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Deposit Agent"
  },
  "workspace": {
   "id": "TU4m2U6Yau-RyJWQbsN8mw==",
@@ -111,7 +125,9 @@
   "version": 3,
   "adopted": true,
   "live": true,
-  "cover_v": 2
+  "cover_v": 2,
+  "live_price_cents": 7900,
+  "live_name": "Office Autopilot by AUTOPILOT.OI"
  },
  "autopilot": {
   "id": "yPCMPi3vNDhf-CHlO_CsRA==",
@@ -119,7 +135,9 @@
   "published": true,
   "version": 3,
   "live": true,
-  "cover_v": 2
+  "cover_v": 2,
+  "live_price_cents": 3900,
+  "live_name": "Front Desk Kit by AUTOPILOT.OI"
  },
  "workspace-founding": {
   "id": "XmPB321EqCacOI4blTqTFw==",
@@ -127,6 +145,8 @@
   "published": true,
   "version": 2,
   "live": true,
-  "cover_v": 1
+  "cover_v": 1,
+  "live_price_cents": 4900,
+  "live_name": "AUTOPILOT Workspace \u00b7 Founding Spot (refundable)"
  }
 }
