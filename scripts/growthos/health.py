@@ -76,7 +76,9 @@ def check_manifest(fetch=http_get, root=ROOT):
             code, body = fetch(CHECKOUT.format(o["permalink"]))
             name_ok = (o.get("gumroad_name") or o["name"]).split(" by ")[0].split(" ·")[0] in body
             ok = code == 200 and price in body and name_ok
-            out.append({"check": f"gumroad_offer:{o['id']}", "ok": ok, "severity": "SEV-1", "detail": f"{code}, price {price} {'found' if price in body else 'MISSING'}, name {'found' if name_ok else 'MISSING'}"})
+            import re as _re
+            seen = sorted(set(_re.findall(r"\$\d+(?:\.\d\d)?", body)))[:6]
+            out.append({"check": f"gumroad_offer:{o['id']}", "ok": ok, "severity": "SEV-1", "detail": f"{code}, price {price} {'found' if price in body else 'MISSING'} (page shows {', '.join(seen) or 'no $ amounts'}), name {'found' if name_ok else 'MISSING'}"})
         except Exception as e:
             out.append({"check": f"gumroad_offer:{o['id']}", "ok": False, "severity": "SEV-1", "detail": str(e)[:120]})
         if o.get("landing"):

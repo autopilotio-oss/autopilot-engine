@@ -47,6 +47,7 @@ def reconcile(st):
         if perm in st:
             if not st[perm].get("id"): st[perm]["id"] = pr.get("id"); DBG.append(["id_filled", perm])
             st[perm]["live"] = bool(pr.get("published"))
+            st[perm]["live_price_cents"] = pr.get("price"); st[perm]["live_name"] = pr.get("name")  # what buyers see; checked against config/offers.json
     for k, v in st.items():
         if v.get("published") and k not in live and v.get("id"):
             # The list endpoint does not return every product: ask for this one directly before calling it unpublished.
