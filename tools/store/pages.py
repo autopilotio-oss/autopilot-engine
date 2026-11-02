@@ -235,7 +235,7 @@ FOOT = """<div class="ft">Education only, not financial, legal or medical advice
 
 def video_block(id, label="Demo · sample data"):
     if not id: return ""
-    src, poster = (f"/media/{id}.mp4", f"/media/{id}-poster.jpg") if id.startswith("ads/") else (f"/media/freel/web/{id}.mp4", f"/media/freel/{id}-poster.jpg")
+    src, poster = (f"/media/ads/web/{id[4:]}.mp4", f"/media/{id}-poster.jpg") if id.startswith("ads/") else (f"/media/freel/web/{id}.mp4", f"/media/freel/{id}-poster.jpg")
     return f'<div class="vid"><video src="{src}" poster="{poster}" muted loop playsinline autoplay preload="metadata"></video><span class="lab">{e(label)}</span><span class="snd">🔇 tap for sound</span></div>'
 
 def page(slug, p):
