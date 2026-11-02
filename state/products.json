@@ -125,10 +125,10 @@
   "version": 3,
   "adopted": true,
   "live": true,
-  "cover_v": 3,
+  "cover_v": 4,
   "live_price_cents": 7900,
   "live_name": "Office Autopilot by AUTOPILOT.OI",
-  "cover_kept": "2e6f12f9a414c0dba778051511acb971"
+  "cover_kept": "c9839cc67729ff60018b9769bd36f213"
  },
  "autopilot": {
   "id": "yPCMPi3vNDhf-CHlO_CsRA==",
@@ -136,10 +136,10 @@
   "published": true,
   "version": 3,
   "live": true,
-  "cover_v": 3,
+  "cover_v": 4,
   "live_price_cents": 3900,
   "live_name": "Front Desk Kit by AUTOPILOT.OI",
-  "cover_kept": "f2c6c2579c954f99e6a8e47fa28ffcaa"
+  "cover_kept": "de84bb1db9273418e0a589ac1ab31f49"
  },
  "workspace-founding": {
   "id": "XmPB321EqCacOI4blTqTFw==",
@@ -149,6 +149,7 @@
   "live": true,
   "cover_v": 1,
   "live_price_cents": 4900,
-  "live_name": "AUTOPILOT Workspace \u00b7 Founding Spot (refundable)"
+  "live_name": "AUTOPILOT Workspace \u00b7 Founding Spot (refundable)",
+  "cover_kept": "1f651d6c4b80f2209d93648610af650e"
  }
 }
