@@ -131,7 +131,9 @@
      ]
     ],
     "total": "$520",
-    "foot": "$50 deposit holds Saturday 9 AM \u00b7 24 hr notice to cancel"
+    "foot": "$50 deposit holds Saturday 9 AM \u00b7 24 hr notice to cancel",
+    "headpos": "low",
+    "statuspos": "topright"
    },
    "agent": 2
   },
@@ -143,7 +145,7 @@
    ],
    "scene": {
     "type": "draft",
-    "plate": "s04",
+    "plate": "s02",
     "status": [
      "quote quiet 3 days",
      "drafting the nudge",
@@ -152,15 +154,15 @@
     "from": "Follow up \u00b7 Dave R. \u00b7 day 3",
     "q": "",
     "a": "Hi Dave, Mike from Northside. Just checking in on the SUV quote. Saturday 9 AM is still open and the $520 holds through the end of the month. Want me to lock it in?",
-    "pill": "DRAFT \u00b7 NOT SENT \u00b7 tap to approve"
+    "pill": "DRAFT \u00b7 NOT SENT \u00b7 tap to approve",
+    "clip_in": 2.0
    },
    "agent": 3
   },
   {
    "say": "Review ask. FAQ. Weekly plan.",
    "head": [
-    "YOUR WHOLE",
-    "*SYSTEM.*"
+    "*YOUR WHOLE SYSTEM.*"
    ],
    "scene": {
     "type": "tiles",
@@ -291,7 +293,8 @@
       765,
       450
      ]
-    ]
+    ],
+    "headpos": "none"
    },
    "agent": 5
   },
@@ -332,7 +335,8 @@
       549
      ]
     ],
-    "clip_in": 1.8
+    "clip_in": 1.8,
+    "headpos": "none"
    },
    "agent": 6
   }
@@ -349,6 +353,7 @@
  "cap_fix": {
   "eleven forty two": "11:42",
   "nineteen ninety nine": "$19.99",
-  "fifteen": "15"
+  "fifteen": "15",
+  "one time": "one time"
  }
 }
