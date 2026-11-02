@@ -95,5 +95,8 @@ def workspace():
 write("/", home()); write("/marketplace/", marketplace()); write("/workspace/", workspace())
 redirect("/check/", "/brain/"); redirect("/store/", "/library/")  # old store links (Kit money and TikTok emails) land on the full catalog
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import frontdesk
-write("/front-desk/", frontdesk.page(head, nav, FOOT)); redirect("/autopilot/", "/front-desk/"); redirect("/store/autopilot/", "/front-desk/")
+write("/front-desk/", frontdesk.page(head, nav, FOOT))
+import fdguides
+for _g in fdguides.GUIDES: write(f"/guides/{_g['slug']}/", fdguides.page(_g, head, nav, FOOT))
+redirect("/autopilot/", "/front-desk/"); redirect("/store/autopilot/", "/front-desk/")
 print("site built")

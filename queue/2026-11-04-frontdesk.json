@@ -1,0 +1,35 @@
+[
+ {
+  "id": "fd-price-1",
+  "at": "2026-11-04T09:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotoi.app/media/cards/fd-price.jpg"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "A customer texts \"how much?\" at 7:40 PM.\n\nThe reply that books the job: the real price, what's included, two specific times, one question.\n\nThis is what that looks like for an example detailing business. The owner reads it and hits send.\n\nThe full structure, with a free prompt you can paste into Claude: https://autopilotoi.app/guides/reply-to-price-inquiry/?utm_source=threads&utm_medium=social&utm_campaign=front_desk&utm_content=fd-price-1"
+ },
+ {
+  "id": "fd-late-1",
+  "at": "2026-11-05T09:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotoi.app/media/cards/fd-late.jpg"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "Messages that arrive after hours are often the most ready to buy.\n\nYou don't have to answer at 9 PM. Acknowledge fast, batch the real replies in the morning, and ask the one detail you need to price it.\n\nNotice the [CHECK]: when it doesn't know if a time is open, it says so instead of guessing.\n\nThe system: https://autopilotoi.app/guides/after-hours-customer-messages/?utm_source=threads&utm_medium=social&utm_campaign=front_desk&utm_content=fd-late-1"
+ },
+ {
+  "id": "fd-chase-1",
+  "at": "2026-11-06T09:30:00-05:00",
+  "kind": "image",
+  "media": [
+   "https://autopilotoi.app/media/cards/fd-chase.jpg"
+  ],
+  "topic": "Small Business",
+  "ig": false,
+  "text": "A quote with no reply isn't always a no. People get busy.\n\nDay 2: repeat the price, offer a time.\nDay 5: answer the likely objection.\nLast one: close the loop politely.\n\nThen stop. Most owners never send even the first one.\n\nExample messages for each: https://autopilotoi.app/guides/follow-up-on-a-quote/?utm_source=threads&utm_medium=social&utm_campaign=front_desk&utm_content=fd-chase-1"
+ }
+]

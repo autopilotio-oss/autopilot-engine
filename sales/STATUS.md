@@ -21,3 +21,5 @@ Updated 2026-11-02 by Claude. Source of truth for offers: `config/offers.json`.
 | Office Autopilot retest on current Claude plans | not started | advertising on hold |
 | Gumroad covers (one current cover per product) | tested | cover_check workflow: diff 0.0 vs current art for all 3 |
 | Gumroad thumbnails | blocked | Seb uploads the 3 thumbnail files (API can't set them) |
+| 3 search intent guides (/guides/reply-to-price-inquiry, after-hours-customer-messages, follow-up-on-a-quote) | live after deploy | hourly health check covers them |
+| 3 Threads demo posts (Nov 4, 5, 6, 9:30 ET) linking the guides | waiting for Seb's YES | queue/2026-11-04-frontdesk.json; approval issue opens about 1 hour before each |
