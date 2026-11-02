@@ -27,9 +27,12 @@ def budget(cfg_dir=None):
     return json.load(open(os.path.join(cfg_dir or CFG, "budget.json")))
 
 
-def record_usage(store, vendor, amount_minor, job_id, kind="usage", currency="USD", estimated=False, note=None):
+def record_usage(store, vendor, amount_minor, job_id, kind="usage", currency="USD", estimated=False, note=None, occurred_at=None):
+    """occurred_at (ISO UTC) books spend on the day it was billed (e.g. a Meta ads day read the next morning), so it lands in
+    the right day and month. Idempotent per (vendor, job_id)."""
     return store.append("spend.recorded", {"vendor": vendor, "amount_minor": int(amount_minor), "currency": currency, "kind": kind,
-                                           "job_id": job_id, "estimated": estimated, "note": note}, "growthos.costs", f"{vendor}:{job_id}", "costs")
+                                           "job_id": job_id, "estimated": estimated, "note": note}, "growthos.costs", f"{vendor}:{job_id}", "costs",
+                        occurred_at=occurred_at)
 
 
 def ai_spend_today(store, day=None):

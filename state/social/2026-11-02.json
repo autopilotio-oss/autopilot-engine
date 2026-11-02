@@ -1,0 +1,50 @@
+{
+ "date": "2026-11-02",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts (brand 7761544) + Kit get_growth_stats, pulled 2026-11-02 11:35 UTC by Daily Pulse. 7d window Oct 26 to Nov 1 (Metricool daily rows; latest day Nov 1).",
+ "kit": {
+  "subscribers": 0,
+  "new_7d": 0
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 83,
+   "posts_7d": 14,
+   "interactions_7d": 21,
+   "accounts_engaged_7d": 21,
+   "reel_views_7d": 369,
+   "note": "accounts_engaged_7d is the Nov 1 daily value (IGEV42, not additive); followers = IGEV01 on Nov 1"
+  },
+  "threads": {
+   "followers": 1,
+   "posts_7d": 14,
+   "views_7d": 184,
+   "interactions_7d": 7
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 8,
+  "queued": 22,
+  "failed": 0,
+  "window": "published/failed = last 24h (Nov 1 08:15 to Nov 2 08:15 ART), queued = next 48h non-draft pending, per network",
+  "unapproved_pending": 0,
+  "cadence_ok": "next 48h per day: IG 2, TikTok 3, Threads 3, X 3 (all at the cap, none over)"
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-01",
+  "campaign": "120248645551300265 (ACTIVE, LINK_CLICKS, 647 clicks, 0 conversions)",
+  "cap_usd": 60,
+  "source": "Adspirer get_meta_campaign_performance, cache as of Nov 1"
+ },
+ "decisions": [
+  "Meta boost 120248645551300265 is still ACTIVE at $49.89 through Nov 1 (~$18/day) and will pass the $60 campaign cap today: pause or continue (operator asked at 08:35 ART).",
+  "Viral Lab: pick a source for public view counts so references can be certified (YouTube Data API key, or you capture URL + views + creator's last 10 from your phone). Open since Oct 31."
+ ]
+}
