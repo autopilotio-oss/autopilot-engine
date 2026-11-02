@@ -1,0 +1,178 @@
+{
+ "_doc": "Canonical offer manifest (Nov 2, 2026). Every surface (Gumroad product.json, site pages, keyword replies, emails, queued posts) must match this. tests/test_manifest.py enforces it; scripts/growthos/health.py checks production against it hourly. Change prices here AND in products/<slug>/product.json, only with Seb's approval.",
+ "updated": "2026-11-02",
+ "hero_offer": "front_desk_kit",
+ "offers": [
+  {
+   "id": "front_desk_kit",
+   "permalink": "autopilot",
+   "name": "Front Desk Kit",
+   "gumroad_name": "Front Desk Kit by AUTOPILOT.OI",
+   "price_cents": 3900,
+   "type": "setup_kit",
+   "division": "marketplace",
+   "placement": "marketplace",
+   "claude_plan": "Claude free plan works",
+   "sends_messages": false,
+   "what_it_is": "A setup kit (PDF and prompts) installed in the buyer's own Claude account. It drafts replies, quotes and follow ups; the owner reviews and sends.",
+   "includes": [
+    "Setup agent and 15 question business interview",
+    "9 commands: reply, quote, chase, review, faq, plan week and more",
+    "Message templates, cheat sheet and time back tracker"
+   ],
+   "setup_time": "about 30 minutes (our estimate; being measured in owner tests)",
+   "refund": "30 day refund: reply to the Gumroad receipt",
+   "verification": "not yet tested end to end by an outside buyer",
+   "advertise": "hold until 3 owner usability tests pass",
+   "landing": "/front-desk/",
+   "checkout": "https://autopilotoi.gumroad.com/l/autopilot"
+  },
+  {
+   "id": "office_autopilot",
+   "permalink": "workspace",
+   "name": "Office Autopilot",
+   "gumroad_name": "Office Autopilot by AUTOPILOT.OI",
+   "price_cents": 7900,
+   "type": "setup_kit",
+   "division": "marketplace",
+   "placement": "marketplace",
+   "claude_plan": "Paid Claude plan (Pro or higher); scheduled tasks that read Gmail may need the Claude desktop app open",
+   "sends_messages": false,
+   "what_it_is": "A setup kit for 7 scheduled Claude agents on Gmail and Calendar. They draft; the owner approves.",
+   "refund": "30 day refund: reply to the Gumroad receipt",
+   "verification": "scheduled agents not retested on current Claude plans",
+   "advertise": "hold until retested",
+   "landing": "/office-autopilot/",
+   "checkout": "https://autopilotoi.gumroad.com/l/workspace",
+   "formerly": "THE WORKSPACE kit ($49)"
+  },
+  {
+   "id": "workspace_founding",
+   "permalink": "workspace-founding",
+   "name": "Workspace Founding Spot",
+   "gumroad_name": "AUTOPILOT Workspace · Founding Spot (refundable)",
+   "price_cents": 4900,
+   "type": "refundable_deposit",
+   "division": "workspace",
+   "placement": "workspace",
+   "software_built": false,
+   "what_it_is": "A refundable deposit for software that is in development. Not access to software, not a subscription.",
+   "terms": [
+    "$49 credited to the first paid month",
+    "$99 a month planned, locked 12 months for founders",
+    "Refund anytime before the first paid month",
+    "Full refund to every founder if not open to founders by 2027-02-28 (manual refunds in Gumroad)"
+   ],
+   "advertise": "no paid ads; validation only",
+   "landing": "/workspace/",
+   "checkout": "https://autopilotoi.gumroad.com/l/workspace-founding"
+  },
+  {
+   "id": "video_agent",
+   "permalink": "video-agent",
+   "name": "Video Agent",
+   "price_cents": 1000,
+   "type": "setup_kit",
+   "division": "marketplace",
+   "placement": "marketplace",
+   "advertise": "no",
+   "landing": "/store/video/"
+  }
+ ],
+ "library": {
+  "all-money-agents": {
+   "name": "AUTOPILOT.OI All 5 Money Agents",
+   "price_cents": 3900,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "bill-agent": {
+   "name": "AUTOPILOT.OI Bill Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "debt-agent": {
+   "name": "AUTOPILOT.OI Debt Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "deposit-agent": {
+   "name": "AUTOPILOT.OI Deposit Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "raise-agent": {
+   "name": "AUTOPILOT.OI Raise Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "refund-agent": {
+   "name": "AUTOPILOT.OI Refund Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "sell-agent": {
+   "name": "AUTOPILOT.OI Sales Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "shop-agent": {
+   "name": "AUTOPILOT.OI Shop Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "subs-agent": {
+   "name": "AUTOPILOT.OI Subscription Agent",
+   "price_cents": 1000,
+   "placement": "library",
+   "advertise": "no"
+  },
+  "tiktok-agents": {
+   "name": "AUTOPILOT.OI TikTok Agents Bundle",
+   "price_cents": 2400,
+   "placement": "library",
+   "advertise": "no"
+  }
+ },
+ "promotions": [
+  {
+   "code": "LAUNCH30",
+   "percent_off": 30,
+   "until": "2026-11-11T03:00:00Z",
+   "note": "list prices unchanged; applies only to config/growthos/campaign.json offer_code.products"
+  }
+ ],
+ "budget": {
+  "paid_ads_usd_cap": 60,
+  "note": "Binding cap until Seb explicitly confirms a different amount (recovery plan, Nov 2). No ads until purchase tracking and owner tests pass."
+ },
+ "stale_phrases": [
+  "THE WORKSPACE",
+  "The Workspace",
+  "$19.99 once",
+  "Autopilot · $19.99",
+  "Autopilot $19.99",
+  "$49 one time",
+  "See The Workspace",
+  "Get The Workspace",
+  "answer 15 questions and get"
+ ],
+ "forbidden_claims": [
+  "while you sleep",
+  "fully autonomous",
+  "runs your business for you",
+  "sends automatically",
+  "replies automatically",
+  "guaranteed results",
+  "30 day guarantee",
+  "\"it works\" guarantee",
+  "make money while"
+ ]
+}

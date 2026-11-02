@@ -115,7 +115,7 @@ P = {
   sample_rows=[["reply: how much for a full detail on an SUV? Free Saturday?", "A full SUV detail is $250, about 3 hours. We come to you. Saturday at 9 AM or 1 PM?"], ["quote: Dave, SUV, ceramic, pet hair", "$250 + $240 + $30 = $520 · $50 deposit holds the slot · 24 hr notice to cancel"], ["chase: Dave, day 3", "Saturday 9 AM is still open and the $520 holds through the end of the month. Want me to lock it in?"], ["review: Maria, full detail", "Thanks for having us out today! A quick Google review would mean a lot: [your link]"]],
   sample_after=["Missing information shows up as [CHECK: ...], so it never guesses a price or a rule.", "Then type build me a system for [any task] and it builds a new command with you."],
   does=["Interviews you and writes your Business Brain", "Builds 6 core systems: reply, quote, chase, review, faq, plan week", "Builds 3 extra systems from the busy work you name", "Drafts in your voice with your real prices and rules"],
-  doesnt=["Send, post or call anyone for you", "Log into your email, calendar or accounts", "Run on a schedule by itself (that's The Workspace)"],
+  doesnt=["Send, post or call anyone for you", "Log into your email, calendar or accounts", "Run on a schedule by itself (that's Office Autopilot)"],
   need=["A free Claude account (claude.ai) on your phone or computer", "Your price list and 2 real messages you've sent customers", "About 30 minutes"],
   faq=[("Why not just use ChatGPT?", "You can, but a blank chat starts from zero every time and will guess your prices. The kit interviews you once, saves your Business Brain in a Claude Project, and drafts from it every time. When something is missing it writes [CHECK] instead of guessing. You also get 9 ready commands, templates and a 30 minute setup plan."),
        ("I've never used Claude. Can I do this?", "Yes. Make a free account at claude.ai, then follow the 3 step plan in the PDF: make a Project, paste one prompt, answer the questions. About 30 minutes."),
@@ -283,7 +283,7 @@ def card(slug):
 def index():
     money = "".join(card(s) for s in ["bill", "debt", "subs", "refund", "raise", "deposit"])
     tiktok = "".join(card(s) for s in ["video", "shop", "sell"])
-    return HEAD("Library · every AUTOPILOT.OI kit", "Claude prompt kits from $10: money agents, TikTok agents and The Workspace for small businesses. Each one reads what you upload and drafts. You decide and send.", "https://autopilotoi.app/store/", "https://autopilotoi.app/store/all6-cover.png") + f"""
+    return HEAD("Library · every AUTOPILOT.OI kit", "Claude prompt kits from $10: money agents, TikTok agents and Office Autopilot for small businesses. Each one reads what you upload and drafts. You decide and send.", "https://autopilotoi.app/store/", "https://autopilotoi.app/store/all6-cover.png") + f"""
 <div class="hd"><a href="/"><img src="/logo.png" alt=""></a><b>AUTOPILOT.OI</b><a class="bk" href="/">Home</a></div>
 <div class="tag">Library · every kit · from $10</div><p class="sm" style="text-align:left;margin:6px 0 0">Looking for our business tools? <a href="/marketplace/" style="color:var(--l)">Go to the Marketplace</a>.</p>
 <h1>Claude agents<br>for <em>real jobs.</em></h1>
@@ -303,7 +303,7 @@ def index():
 <div class="cathd" id="business"><span class="tag">{e(CATS[2][1])}</span><h2>Hand your busy work to a team</h2><p>{e(CATS[2][2])}</p></div>
 <a class="hero" href="/store/autopilot/"><span class="tag">New · for any small business</span><span class="H">Front Desk<br>Kit · $39</span><p>Learns your business in a 15 minute interview, then builds your systems in Claude: replies with your prices, quotes, follow ups, reviews, FAQ and your weekly plan. Every draft waits for your OK.</p><span class="btn">See Autopilot →</span><span class="sm">One time · 30 day refund</span></a>
 <div style="height:10px"></div>
-<a class="hero" href="/office-autopilot/"><span class="tag">Hands off · $79</span><span class="H">Office<br>Autopilot</span><p>7 agent setups for customers, quotes, bookings and a morning brief. Drafts for your approval, never sends on its own. About an hour to set up. 30 day guarantee.</p><span class="btn">See Office Autopilot →</span></a>
+<a class="hero" href="/office-autopilot/"><span class="tag">Hands off · $79</span><span class="H">Office<br>Autopilot</span><p>7 agent setups for customers, quotes, bookings and a morning brief. Drafts for your approval, never sends on its own. About an hour to set up. 30 day refund.</p><span class="btn">See Office Autopilot →</span></a>
 <div class="grid" style="margin-top:10px"><a class="card" href="/brain/"><span class="th">🧠</span><div><b>AI Front Desk</b><p>Free: answer 10 questions, get a setup that replies with your real prices and rules</p></div><span class="go">FREE</span></a></div>
 <h2>Good to know</h2>
 <div class="trust"><div><b>Prompt kits, not apps</b>They run inside Claude. Nothing to install.</div><div><b>Free plan works</b>Claude's free plan allows 5 Projects.</div><div><b>You stay in control</b>They draft. They never send, post or pay.</div><div><b>Try before you buy</b><a href="/free/" style="color:var(--l)">Every kit has a free guide</a>.</div></div>
@@ -313,7 +313,7 @@ for slug, p in P.items():
     d = os.path.join(ROOT, "docs", "store", slug); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w").write(page(slug, p))
 os.makedirs(os.path.join(ROOT, "docs", "autopilot"), exist_ok=True)  # short link used in the ads
-open(os.path.join(ROOT, "docs", "autopilot", "index.html"), "w").write(page("autopilot", P["autopilot"]))
+pass  # /autopilot/ and /store/autopilot/ redirect to /front-desk/ (tools/site/build.py)
 os.makedirs(os.path.join(ROOT, "docs", "library"), exist_ok=True)  # the full kit library; /store/ redirects to /marketplace/ (tools/site/build.py)
 open(os.path.join(ROOT, "docs", "library", "index.html"), "w").write(index())
 print("built store:", ", ".join(P), "+ index")

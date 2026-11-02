@@ -11,9 +11,12 @@ import datetime as dt, json, os, sys, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from events import Store, ROOT, now  # noqa: E402
 
-PAGES = [("home", "https://autopilotoi.app/", "href=\"g/subs/\""), ("free", "https://autopilotoi.app/free/", "/g/subs/"),
-         ("store", "https://autopilotoi.app/store/", "/store/subs/"), ("workspace", "https://autopilotoi.app/workspace/", "gumroad.com/l/workspace"),
-         ("guide_subs", "https://autopilotoi.app/g/subs/", "gumroad.com/l/subs-agent"), ("brain", "https://autopilotoi.app/brain/", "kit.com"),
+PAGES = [("home", "https://autopilotoi.app/", "/marketplace/"), ("marketplace", "https://autopilotoi.app/marketplace/", "gumroad.com/l/autopilot"),
+         ("front_desk", "https://autopilotoi.app/front-desk/", "gumroad.com/l/autopilot"), ("workspace", "https://autopilotoi.app/workspace/", "gumroad.com/l/workspace-founding"),
+         ("office_autopilot", "https://autopilotoi.app/office-autopilot/", "gumroad.com/l/workspace"), ("library", "https://autopilotoi.app/library/", "/store/subs/"),
+         ("store_redirect", "https://autopilotoi.app/store/", "/library/"), ("autopilot_redirect", "https://autopilotoi.app/autopilot/", "/front-desk/"),
+         ("free", "https://autopilotoi.app/free/", "/g/subs/"), ("brain", "https://autopilotoi.app/brain/", "kit.com"),
+         ("guide_subs", "https://autopilotoi.app/g/subs/", "gumroad.com/l/subs-agent"),
          ("guide_refund", "https://autopilotoi.app/g/refund/", "gumroad.com/l/refund-agent"), ("guide_bill", "https://autopilotoi.app/g/bill/", "gumroad.com/l/bill-agent"),
          ("guide_shop", "https://autopilotoi.app/g/shop/", "gumroad.com/l/shop-agent"), ("guide_video", "https://autopilotoi.app/g/video/", "gumroad.com/l/video-agent"),
          ("guide_sell", "https://autopilotoi.app/g/sell/", "gumroad.com/l/sell-agent"), ("guide_raise", "https://autopilotoi.app/g/raise/", "gumroad.com/l/raise-agent")]
@@ -58,6 +61,37 @@ def check_checkout(fetch=http_get, root=ROOT):
             out.append({"check": f"checkout:{slug}", "ok": code == 200 and "gumroad" in body.lower(), "severity": "SEV-1", "detail": f"{code}"})
         except Exception as e:
             out.append({"check": f"checkout:{slug}", "ok": False, "severity": "SEV-1", "detail": str(e)[:120]})
+    return out
+
+
+def check_manifest(fetch=http_get, root=ROOT):
+    """Production matches config/offers.json: each offer's Gumroad page shows its manifest price and name, and its landing
+    page shows the same price. A mismatch is SEV-1 (customers would see the wrong offer); promotions must stop on time."""
+    out = []
+    try: M = json.load(open(os.path.join(root, "config", "offers.json")))
+    except Exception as e: return [{"check": "manifest:load", "ok": False, "severity": "SEV-1", "detail": str(e)[:120]}]
+    for o in M["offers"]:
+        price = f"${o['price_cents'] // 100}"
+        try:
+            code, body = fetch(CHECKOUT.format(o["permalink"]))
+            name_ok = (o.get("gumroad_name") or o["name"]).split(" by ")[0].split(" ·")[0] in body
+            ok = code == 200 and price in body and name_ok
+            out.append({"check": f"gumroad_offer:{o['id']}", "ok": ok, "severity": "SEV-1", "detail": f"{code}, price {price} {'found' if price in body else 'MISSING'}, name {'found' if name_ok else 'MISSING'}"})
+        except Exception as e:
+            out.append({"check": f"gumroad_offer:{o['id']}", "ok": False, "severity": "SEV-1", "detail": str(e)[:120]})
+        if o.get("landing"):
+            try:
+                code, body = fetch("https://autopilotoi.app" + o["landing"])
+                out.append({"check": f"landing_price:{o['id']}", "ok": code == 200 and price in body, "severity": "SEV-2", "detail": f"{code}, {price} {'found' if price in body else 'MISSING'}"})
+            except Exception as e:
+                out.append({"check": f"landing_price:{o['id']}", "ok": False, "severity": "SEV-2", "detail": str(e)[:120]})
+    try:
+        code, js = fetch("https://autopilotoi.app/assets/ap.js")
+        import re as _re
+        px = _re.search(r"var PIXEL = '([^']*)'", js)
+        out.append({"check": "meta_pixel_configured", "ok": bool(px and px.group(1)), "severity": "SEV-3", "detail": "pixel id set" if px and px.group(1) else "no pixel id (purchase tracking off)"})
+    except Exception as e:
+        out.append({"check": "meta_pixel_configured", "ok": False, "severity": "SEV-3", "detail": str(e)[:120]})
     return out
 
 
@@ -198,7 +232,7 @@ def recover(results, dispatch):
 
 if __name__ == "__main__":
     from jobs import Queue
-    st = Store(); res = check_pages() + check_checkout() + check_files()
+    st = Store(); res = check_pages() + check_checkout() + check_files() + check_manifest()
     ps = os.path.join(ROOT, "state", "products.json")
     res += check_fulfillment(st, json.load(open(ps)) if os.path.exists(ps) else {}) + check_integrity(st) + check_jobs(Queue())
     import heartbeat

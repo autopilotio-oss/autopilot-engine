@@ -37,8 +37,8 @@
   if (PIXEL) {
     !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', PIXEL); fbq('track', 'PageView');
-    var pm = location.pathname.match(/^\/(store\/([a-z0-9-]+)|autopilot)\/?$/);
-    if (pm) fbq('track', 'ViewContent', { content_ids: [pm[2] || 'autopilot'], content_type: 'product' });
+    var pm = location.pathname.match(/^\/(store\/([a-z0-9-]+)|autopilot|front-desk|office-autopilot|workspace)\/?$/);
+    if (pm) fbq('track', 'ViewContent', { content_ids: [pm[2] || ({ 'front-desk': 'autopilot', 'office-autopilot': 'workspace', 'workspace': 'workspace-founding' })[pm[1]] || 'autopilot'], content_type: 'product' });
   }
   var LAUNCH = { code: 'LAUNCH30', until: Date.parse('2026-11-11T03:00:00Z'), slugs: ['subs-agent', 'refund-agent', 'bill-agent', 'all-money-agents', 'raise-agent', 'debt-agent', 'shop-agent', 'video-agent', 'sell-agent', 'deposit-agent', 'workspace', 'tiktok-agents'] };
   LAUNCH.on = Date.now() < LAUNCH.until;

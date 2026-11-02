@@ -1,9 +1,9 @@
 {
  "replies": {
-  "WORKSPACE": "Here it is ⚡ THE WORKSPACE: 7 AI agents that handle your busy work, set up in about an hour. $49 one time, 30 day refund if it doesn't save you time. https://autopilotoi.app/workspace/",
-  "BRAIN": "Here you go 🧠 Your free AI Front Desk: answer 15 questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
-  "AGENTS": "Here you go 🧠 Your free AI Front Desk: answer 15 questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
-  "AGENT": "Here you go 🧠 Your free AI Front Desk: answer 15 questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
+  "WORKSPACE": "Here you go ⚡ The Workspace kit is now called Office Autopilot: 7 scheduled Claude agents that draft your replies, follow ups and morning brief ($79, needs a paid Claude plan): https://autopilotoi.app/office-autopilot/ Most owners start with the Front Desk Kit ($39, free Claude plan works): https://autopilotoi.app/front-desk/",
+  "BRAIN": "Here you go 🧠 Your free AI Front Desk: answer 10 quick questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
+  "AGENTS": "Here you go 🧠 Your free AI Front Desk: answer 10 quick questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
+  "AGENT": "Here you go 🧠 Your free AI Front Desk: answer 10 quick questions and get an AI that knows your prices, rules and voice, plus 10 ready prompts. https://autopilotoi.app/brain/",
   "CREDIT": "Here you go 💳 Check your credit report yourself with Claude: the exact prompts and the dispute letter you send yourself. Free: https://autopilotoi.app/g/credit/",
   "BILL": "Here you go 🧾 How to check a medical bill with Claude before you pay, with the call script. Free: https://autopilotoi.app/g/bill/",
   "DEBT": "Here you go 💸 The call script to ask for a lower rate and a payoff plan you can check in on each payday. Free: https://autopilotoi.app/g/debt/",
@@ -13,7 +13,8 @@
   "VIDEO": "Here you go 🎬 How to plan TikToks with AI: scripts, CapCut edit plans and a posting schedule. Free: https://autopilotoi.app/g/video/",
   "SHOP": "Here you go 🛍️ Start selling on TikTok Shop: pick a product, check your profit, write the listing, get creators. Free: https://autopilotoi.app/g/shop/",
   "SELL": "Here you go 💬 Use AI to sell on TikTok: videos that sell, LIVE scripts and replies to your DMs. Free: https://autopilotoi.app/g/sell/",
-  "DEPOSIT": "Here's your free guide 🏠 How to get your security deposit back, step by step with Claude: https://autopilotoi.app/g/deposit/"
+  "DEPOSIT": "Here's your free guide 🏠 How to get your security deposit back, step by step with Claude: https://autopilotoi.app/g/deposit/",
+  "FRONTDESK": "Here you go 🧾 The Front Desk Kit: a setup for your Claude account that drafts customer replies, quotes and follow ups with your real prices. You read and send. $39 one time, 30 day refund: https://autopilotoi.app/front-desk/"
  },
  "max_per_run": 20
 }

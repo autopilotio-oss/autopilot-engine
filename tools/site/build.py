@@ -46,7 +46,7 @@ def home():
 <div class="sec"><div class="wrap grid2" style="align-items:center"><div><div class="k" style="margin-bottom:14px">Free · 2 minutes</div><h2>Where are your leads <em>leaking?</em></h2><p class="lead" style="margin-top:14px">Answer 10 questions and get your own AI front desk prompt, free.</p><a class="btn" style="margin-top:24px" href="/brain/">Start the free check</a></div>{INBOX}</div></div>""" + FOOT
 
 PRODUCTS = [
- ("Front Desk Kit", "39", "/store/autopilot/", GR + "autopilot", "Customer replies, quotes and follow ups, drafted in your voice from your real prices.", ["15 question business interview", "Reply, quote, chase, review, FAQ, plan week", "3 extra systems built for your business", "Free Claude plan works"]),
+ ("Front Desk Kit", "39", "/front-desk/", GR + "autopilot", "Customer replies, quotes and follow ups, drafted in your voice from your real prices.", ["15 question business interview", "Reply, quote, chase, review, FAQ, plan week", "3 extra systems built for your business", "Free Claude plan works"]),
  ("Office Autopilot", "79", "/office-autopilot/", GR + "workspace", "Seven scheduled Claude agents on your Gmail and Calendar: inbox, brief, bookings, follow ups.", ["Morning brief and inbox drafts", "Booking, follow up, invoice, review agents", "50 phone commands", "Needs a paid Claude plan"]),
  ("Video Agent", "10", "/store/video/", GR + "video-agent", "One idea into a week of short videos: hooks, scripts and a cut by cut edit plan.", ["5 hooks per idea", "Scripts in your voice", "CapCut edit plans", "Weekly numbers review"]),
 ]
@@ -93,5 +93,7 @@ def workspace():
 <script>document.getElementById('wl').addEventListener('submit',function(ev){{ev.preventDefault();var f=new FormData(this);f.append('fields[source]','workspace_list');fetch('https://app.kit.com/forms/10118407/subscriptions',{{method:'POST',body:f,mode:'no-cors'}}).finally(function(){{document.getElementById('wlm').textContent="You're on the list. Check your email to confirm.";}});try{{if(window.fbq)fbq('track','Lead',{{content_name:'workspace_list'}})}}catch(e){{}};try{{if(window.goatcounter)goatcounter.count({{path:'optin/workspace-list',event:true}})}}catch(e){{}}}});</script>""" + FOOT
 
 write("/", home()); write("/marketplace/", marketplace()); write("/workspace/", workspace())
-redirect("/check/", "/brain/"); redirect("/store/", "/marketplace/")
+redirect("/check/", "/brain/"); redirect("/store/", "/library/")  # old store links (Kit money and TikTok emails) land on the full catalog
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import frontdesk
+write("/front-desk/", frontdesk.page(head, nav, FOOT)); redirect("/autopilot/", "/front-desk/"); redirect("/store/autopilot/", "/front-desk/")
 print("site built")

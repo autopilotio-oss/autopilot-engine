@@ -1,9 +1,16 @@
 # AUTOPILOT.OI content playbook (read this before writing any post)
 
+> **Current offers (Nov 2, 2026): `config/offers.json` is the only source of truth for names, prices, plan requirements, links and promotions.** CI (`tests/test_manifest.py`) fails on stale copy, and the hourly health check compares production with it. Where this playbook disagrees, the manifest wins.
+>
+> - Hero offer: **Front Desk Kit, $39**, setup kit in the buyer's own Claude account (free plan works), drafts only, landing https://autopilotoi.app/front-desk/ , keyword FRONTDESK. Not advertised until 3 owner usability tests pass.
+> - **Office Autopilot, $79** (formerly THE WORKSPACE kit, $49): paid Claude plan, scheduled agents not retested. Do not advertise.
+> - **Workspace** is software in development. Only a refundable founding deposit exists. Never describe it as working.
+> - Sales Recovery Plan (Nov 2): no new products, no cinematic ads, no paid spend above the $60 cap without Seb. Money and TikTok kits stay on /library and out of the primary funnel.
+
 ## The business
 - Brand: AUTOPILOT.OI (@autopilot.oi on Threads). Faceless. Mascot: AP, a lime robot with a black screen face.
-- Free lead magnet: THE BUSINESS BRAIN, https://autopilotio-oss.github.io/autopilot-engine/brain/ (keyword BRAIN). The site root is the link in bio home page.
-- Paid: THE WORKSPACE, $49 one time, 30 day refund, 7 Claude agents set up in about an hour, https://autopilotio-oss.github.io/autopilot-engine/workspace/ (keyword WORKSPACE). Checkout: https://autopilotoi.gumroad.com/l/workspace
+- Free lead magnet: The AI Front Desk, https://autopilotoi.app/brain/ (keyword BRAIN). The site root is the link in bio home page.
+- Paid (superseded Nov 2, see the banner): was THE WORKSPACE $49. Now Front Desk Kit $39 (hero) and Office Autopilot $79 (hold). Keyword WORKSPACE now replies with both.
 - Audience: small business owners (trades, salons, shops, cleaners, bakers, roofers), not tech people.
 
 ## Hard rules

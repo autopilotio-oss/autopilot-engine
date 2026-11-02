@@ -52,6 +52,13 @@
     "Paid test about $300 over 14 days replacing the $10/day $19.99 ad test (needs Meta pixel + payment method first)",
     "Typography: software grotesk (Inter) for the new site"
    ]
+  },
+  {
+   "date": "2026-11-02",
+   "by": "Seb (independent audit adopted)",
+   "what": "Sales Recovery Plan: the stricter $60 Meta cap is binding; the ~$300 test is NOT authorized until Seb confirms a new amount. No ads until purchase tracking and 3 owner tests pass.",
+   "quote": "Do not spend money ... without authorization"
   }
- ]
+ ],
+ "paid_ads_cap_usd": 60
 }

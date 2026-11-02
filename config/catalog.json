@@ -327,7 +327,8 @@
   {
    "keyword": "WORKSPACE",
    "links": [
-    "workspace/"
+    "office-autopilot/",
+    "front-desk/"
    ]
   },
   {
@@ -406,6 +407,12 @@
    "keyword": "DEPOSIT",
    "links": [
     "g/deposit/"
+   ]
+  },
+  {
+   "keyword": "FRONTDESK",
+   "links": [
+    "front-desk/"
    ]
   }
  ],
