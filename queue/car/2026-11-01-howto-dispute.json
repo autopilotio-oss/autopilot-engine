@@ -28,8 +28,8 @@
  "media": "docs/media/car/2026-11-01-howto-dispute/",
  "built_at": "2026-11-01T18:40Z",
  "rechecked": {
-  "at": "2026-11-02T18:50Z",
+  "at": "2026-11-02T20:40Z",
   "result": "still bank",
-  "notes": "Bank full (6). Re-verified today: CA AG page live and confirms written dispute within 60 days to billing inquiries address, 30 day acknowledgement, 90 day investigation, may withhold disputed amount; CFPB confirms 60 day written notice; Experian article still indexed. docs/g/refund present for autopilotoi.app/g/refund; REFUND keyword in manychat.json."
+  "notes": "Bank full (6). FCBA rules unchanged (60 day written notice to billing inquiries address, 30 day acknowledgement, 2 billing cycles max 90 days, may withhold disputed amount); corroborated today via Cornell LII and Fairfax County consumer page search results. Source pages could not be fetched this run (fetch permission timed out); last confirmed live 2026-11-02T18:50Z. docs/g/refund present; REFUND keyword in manychat.json."
  }
 }
