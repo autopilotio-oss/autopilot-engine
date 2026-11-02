@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-02T18:27:00Z",
+  "at": "2026-11-02T19:33:00Z",
   "posts_today": {
     "threads": {
       "published": 2,
@@ -35,7 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-02T18:27:00Z"
+      "metrics_seen_at": "2026-11-02T19:33:00Z"
     },
     {
       "network": "instagram",
@@ -49,7 +49,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-02T18:27:00Z"
+      "metrics_seen_at": "2026-11-02T19:33:00Z"
     },
     {
       "network": "instagram",
@@ -63,7 +63,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-02T18:27:00Z"
+      "metrics_seen_at": "2026-11-02T19:33:00Z"
     }
   ],
   "kit": {
@@ -74,5 +74,5 @@
     "orders_all_time": 0,
     "orders_7d": 0
   },
-  "notes": "15:27 ART: 7 provider slots published today (10:00 subs leak on IG, TikTok, Threads, X; 12:00 PHP alert on Threads, TikTok, X), 16 pending, 0 ERROR. Past-due pending slots are draft=true awaiting approval, not errors. 6-72h analytics unchanged since last run: IG 7 reels all 0 saves, 0 shares, 0 comments (ranked by reach only, no winner). TikTok 9 videos: views 1 to 103 (top: 7 agents for small business 103, subs bank statement 100, airline refund 97), 0 shares, 1 comment (Binance hack), saves and reach not provided by Metricool (MISSING). Threads and X analytics MISSING. Kit subscribers 0, new today 0. Revenue: 0 verified orders all time (unchanged). All 8 workflows latest run success; ci.yml latest success (4 of 9 failed in 24h). HQ feed written to status/hub (v16)."
+  "notes": "16:33 ART: 7 provider slots published today (10:00 subs leak on IG, TikTok, Threads, X; 12:00 PHP alert on Threads, TikTok, X), 16 pending, 0 ERROR. Past-due pending slots are draft=true awaiting approval, not errors. IG reels 6-72h re-pulled: 7 reels all 0 saves, 0 shares, 0 comments; reach 15 to 75 (ranked by reach only, no winner). TikTok saves and reach, Threads and X analytics not re-pulled this run (MISSING). Kit subscribers 0, new today 0. Revenue: 0 verified orders all time (unchanged). All 8 workflows latest run success; ci.yml latest success (5 failures in 24h). HQ feed written to status/hub (v17)."
 }
