@@ -1,74 +1,16 @@
 {
-  "at": "2026-11-02T02:25:00Z",
+  "at": "2026-11-02T12:30:00Z",
   "posts_today": {
-    "threads": {
-      "published": 3,
-      "pending": 8,
-      "error": 2
-    },
-    "twitter": {
-      "published": 3,
-      "pending": 5,
-      "error": 0
-    },
-    "instagram": {
-      "published": 3,
-      "pending": 7,
-      "error": 0
-    },
-    "tiktok": {
-      "published": 3,
-      "pending": 5,
-      "error": 0
-    }
+    "threads": {"published": 0, "pending": 8, "error": 0},
+    "twitter": {"published": 0, "pending": 6, "error": 0},
+    "instagram": {"published": 0, "pending": 6, "error": 0},
+    "tiktok": {"published": 0, "pending": 4, "error": 0}
   },
   "top_posts": [
-    {
-      "network": "instagram",
-      "published_at": "2026-10-31T17:47:12-03:00",
-      "text": "$133 a month. $1,596 a year. On things you don't even use.",
-      "metrics": {
-        "reach": 47,
-        "views": 49,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
-      "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-02T01:25:00Z"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-10-30T16:45:06-03:00",
-      "text": "1 in 5 people have an error on their credit report. Here's how to find yours and dispute it with Claude, then turn it into a Credit Agent that checks every month.",
-      "metrics": {
-        "reach": 19,
-        "views": 19,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
-      "url": "https://www.instagram.com/reel/DfICnFKkhRn/",
-      "metrics_seen_at": "2026-11-02T01:25:00Z"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-10-31T23:31:15-03:00",
-      "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds. Sample data, but your statement works the same way. Comment SUBS and I'll send you the free guide.",
-      "metrics": {
-        "reach": 10,
-        "views": 15,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
-      "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-02T01:25:00Z"
-    }
+    {"network": "instagram", "published_at": "2026-10-31T23:31:15-03:00", "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds.", "metrics": {"reach": 75, "views": 78, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/", "metrics_seen_at": "2026-11-02T12:30:00Z"},
+    {"network": "instagram", "published_at": "2026-10-31T17:47:12-03:00", "text": "$133 a month. $1,596 a year. On things you don't even use.", "metrics": {"reach": 73, "views": 73, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfKufU-D6S_/", "metrics_seen_at": "2026-11-02T12:30:00Z"},
+    {"network": "instagram", "published_at": "2026-11-01T00:15:58-03:00", "text": "Stop guessing what to sell on TikTok Shop.", "metrics": {"reach": 61, "views": 74, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLbAPnCFj2/", "metrics_seen_at": "2026-11-02T12:30:00Z"}
   ],
-  "kit": {
-    "subscribers": 0,
-    "new_today": 0
-  },
-  "notes": "Today = Nov 1 ART. Post counts unchanged vs 01:25Z. Analytics not re-pulled this run: top_posts carried from 01:25Z run (metrics_seen_at), all 0 saves and 0 shares, no winner. TikTok, Threads, X analytics MISSING. Threads ERRORs are the 00:52/00:59 ART Binance news posts (media container), already in next-actions today. Kit 0 subscribers. Revenue feed: 0 verified orders all time (unchanged). No workflow with latest conclusion failure (ci.yml latest success, 5 fails in 24h; daily.yml 1 fail). HQ feed written to status/hub (v10)."
+  "kit": {"subscribers": 0, "new_today": 0},
+  "notes": "09:30 ART: nothing published yet today; 24 provider slots pending (many still draft=true in Metricool), 0 ERROR visible. IG reels 6 to 72h: 7 reels, all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok, Threads, X analytics MISSING (not pulled). Revenue feed: 0 verified orders all time (unchanged). ci.yml latest conclusion failure (4 of 6 runs failed in 24h), logged in next-actions. HQ feed written to status/hub (v11)."
 }

@@ -42,3 +42,4 @@
 - Skipped 2026-11-02: FTC "we'll deactivate your phone number" impersonation calls (Oct 22, outside window), Pennsylvania AG crypto ATM scam campaign (Oct 30, real and useful but no scam agent in config/catalog.json), Claude plan rename Max/Ultra and Nov 3 watermark extension (not useful to our audience), Paramount+ price hike story (Nov 2025, stale), Texas AG website privacy demand letters (could not open the release; legal territory).
 
 ## Fix needed
+- 2026-11-02 analyst: Tests (ci.yml) latest run failed 2026-11-02T11:24Z (4 of 6 runs failed in 24h). Check job logs.
