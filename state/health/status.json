@@ -3,6 +3,10 @@
   "ok": true,
   "severity": "SEV-1"
  },
+ "checkout:autopilot": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "checkout:bill-agent": {
   "ok": true,
   "severity": "SEV-1"
@@ -104,7 +108,7 @@
   "severity": "SEV-2"
  },
  "page:store": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-2"
  },
  "page:workspace": {
