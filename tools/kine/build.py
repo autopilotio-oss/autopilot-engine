@@ -5,12 +5,13 @@ Cut: a cold open that shows the payoff on frame 0, the voice's hook as slammed k
 then each agent step as one big full screen card, light streak transitions, word captions."""
 import os, sys, json, re
 D = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.path.dirname(D)); FR = f"{ROOT}/tools/freel"
-ep = sys.argv[1]; E = json.load(open(f"{FR}/eps/{ep}.json"))
-wf = f"{FR}/{ep}.words.json" if os.path.exists(f"{FR}/{ep}.words.json") else f"{FR}/voice/{ep}.words.json"
+ep = sys.argv[1]; AD = os.path.exists(f"{D}/ads/{ep}.json")
+E = json.load(open(f"{D}/ads/{ep}.json" if AD else f"{FR}/eps/{ep}.json"))
+wf = f"{D}/out/{ep}.words.json" if AD else (f"{FR}/{ep}.words.json" if os.path.exists(f"{FR}/{ep}.words.json") else f"{FR}/voice/{ep}.words.json")
 OFF = float(E.get("cold_open", 0.85))  # seconds of silent payoff before the voice starts
 W = [[w, round(s + OFF, 3), round(e + OFF, 3)] for w, s, e in json.load(open(wf))]
 NUMW = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
-        "eleven": "11", "twelve": "12", "fifteen": "15", "twenty": "20", "thirty": "30", "fifty": "50", "hundred": "100"}
+        "eleven": "11", "twelve": "12", "fifteen": "15", "twenty": "20", "thirty": "30", "forty": "40", "fifty": "50", "sixty": "60", "ninety": "90", "hundred": "100"}
 star = set()
 for ln in E.get("hook_lines", []):
     for m in re.findall(r"\*([^*]+)\*", ln): star |= {x.lower() for x in re.findall(r"[a-z0-9$']+", m.lower())}
@@ -38,7 +39,9 @@ def phrases(ws, maxw=3, iso=True):
         if iso and hi(w[0]):
             if cur: out.append(cur); cur = []
             grp = [w]
-            if clean(w[0]) in NUMW and k + 1 < len(ws) and not ends(w[0]): grp.append(ws[k + 1]); k += 1
+            if clean(w[0]) in NUMW and NUMW[clean(w[0])].endswith("0") and k + 1 < len(ws) and clean(ws[k + 1][0]) in NUMW and len(NUMW[clean(ws[k + 1][0])]) == 1:
+                grp = [[NUMW[clean(w[0])][:-1] + NUMW[clean(ws[k + 1][0])] + ws[k + 1][0][-1:].replace("s", "").strip("abcdefghijklmnopqrstuvwxyz"), w[1], ws[k + 1][2]]]; k += 1
+            elif clean(w[0]) in NUMW and k + 1 < len(ws) and not ends(w[0]): grp.append(ws[k + 1]); k += 1
             out.append(grp); k += 1; continue
         cur.append(w)
         if len(cur) >= maxw or ends(w[0]): out.append(cur); cur = []
@@ -56,6 +59,7 @@ for w in first:
 if cur: sent.append(cur)
 if len(sent) == 1: h = max(1, len(first) // 2); sent = [first[:h], first[h:]]
 kin = [w for s in sent[:-1] for w in s]; tail = sent[-1]
+if AD: kin, tail = first, None  # ads: the whole first beat is kinetic type, the next beat brings the first screen
 
 # payoff for the cold open (episode field wins, else the biggest money figure on screen)
 po = E.get("payoff")
@@ -66,11 +70,14 @@ if not po:
         for m in re.findall(r"\$[\d,]+(?:\.\d+)?", txt): big, src = m, txt
     po = {"big": (big or "").split(".")[0], "lines": [re.sub(r"\*", "", E.get("hook_lines", E["hook"])[-1])], "tag": "sample data"}
 shots.append({"type": "cold", "s": 0, "e": kin[0][1] if kin else tail[0][1], "po": po})
+po2 = E.get("payoff2"); tail_t = (tail[0][1] - .12) if tail else (beats[1]["s"] - .15)
 ev.append(["impact", 0.0, 0]); bursts.append({"t": 0.02, "x": 540, "y": 800, "n": 46, "seed": 3})
 
 ph = phrases(kin)
 for j, p in enumerate(ph):
-    s = p[0][1] - .03; e = ph[j + 1][0][1] - .03 if j + 1 < len(ph) else tail[0][1] - .12
+    s = p[0][1] - .03; e = ph[j + 1][0][1] - .03 if j + 1 < len(ph) else tail_t
+    if po2 and any(clean(w[0]) == po2.get("on", "three") for w in p):
+        shots.append({"type": "cold", "s": round(s, 3), "e": round(tail_t, 3), "po": po2}); ev.append(["impact", s, 1]); bursts.append({"t": s + .03, "x": 540, "y": 800, "n": 50, "seed": 5 + j}); break
     shots.append({"type": "phrase", "s": round(s, 3), "e": round(e, 3), "words": [[disp(w[0]), hi(w[0])] for w in p], "j": j})
     ev.append(["slam", s, j]);
     if any(hi(w[0]) for w in p) and any(ch.isdigit() for w in p for ch in disp(w[0])): bursts.append({"t": s + .04, "x": 540, "y": 860, "n": 30, "seed": 11 + j})
@@ -111,14 +118,15 @@ def screen_shot(sc, s, e, bi):
 
 # beat 0 tail = ask screen; later beats = their screens
 for bi, b in enumerate(beats):
-    s = (tail[0][1] - .12) if bi == 0 else b["s"] - .15
+    if AD and bi == 0: continue
+    s = tail_t if bi == 0 else b["s"] - .15
     e = beats[bi + 1]["s"] - .15 if bi + 1 < len(beats) else dur
-    shots.append(screen_shot(b["b"]["screen"], s, e, bi)); trans.append(round(s, 3)); ev.append(["trans", s, bi])
+    shots.append(screen_shot(b["b"]["screen"], s, e, bi - (1 if AD else 0))); trans.append(round(s, 3)); ev.append(["trans", s, bi])
     for p in phrases([w for w in b["ws"] if w[1] >= s], 3, False):
         caps.append({"s": p[0][1] - .02, "e": p[-1][2] + .12, "w": [[w[0].strip(), w[1], hi(w[0])] for w in p]})
 for j, c in enumerate(caps[:-1]): c["e"] = min(c["e"], caps[j + 1]["s"])
 
-data = {"dur": dur, "off": OFF, "agent": E["agent"], "id": E["id"], "nb": len(beats), "shots": shots, "caps": caps, "trans": trans, "bursts": bursts,
+data = {"dur": dur, "off": OFF, "agent": E["agent"], "id": E["id"], "nb": len(beats) - (1 if AD else 0), "ad": AD, "shots": shots, "caps": caps, "trans": trans, "bursts": bursts,
         "slams": [e[1] for e in ev if e[0] in ("slam", "impact", "stat", "stamp_ok", "stamp_no")]}
 os.makedirs(f"{D}/out", exist_ok=True)
 html = open(f"{D}/kine.html").read().replace("/*DATA*/null", json.dumps(data))

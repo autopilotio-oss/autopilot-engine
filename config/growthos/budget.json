@@ -33,6 +33,13 @@
    "channel": "chat",
    "what": "Render all remaining factory reels now (7 voice renders: 003 to 006, 011 to 013)",
    "quote": "Just make everything now and show me when done let's keep ball rolling"
+  },
+  {
+   "by": "Seb",
+   "at": "2026-11-02T10:11-03:00",
+   "channel": "chat",
+   "what": "Autopilot ad: 3 voice renders (hooks ap-a, ap-b, ap-c), ElevenLabs",
+   "quote": "Make everything and give me eta"
   }
  ]
 }

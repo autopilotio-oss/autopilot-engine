@@ -57,6 +57,7 @@
 .kw{position:absolute;left:50%;top:720px;transform-origin:50% 50%;background:var(--L);color:#0a0b09;font:400 280px/1 BB;padding:30px 60px 10px;border-radius:30px;box-shadow:0 0 120px rgba(204,255,51,.5);white-space:nowrap}
 .cta2{position:absolute;left:0;right:0;top:1090px;text-align:center;font:700 44px SM;color:var(--W);letter-spacing:3px;text-transform:uppercase}
 .cta3{position:absolute;left:0;right:0;top:1170px;text-align:center;font:400 34px SM;color:var(--G);letter-spacing:2px;text-transform:uppercase}
+.url{position:absolute;left:60px;right:60px;top:1150px;text-align:center;font:700 54px SM;color:var(--W);border:3px solid var(--L);border-radius:20px;padding:22px 10px;background:rgba(204,255,51,.08);box-shadow:0 0 50px rgba(204,255,51,.25)}
 .arw{position:absolute;left:0;right:0;top:1300px;text-align:center;font:700 120px SM;color:var(--L);text-shadow:0 0 40px rgba(204,255,51,.6)}
 .cold .tg{position:absolute;left:0;right:0;top:470px;text-align:center}
 .cold .big{position:absolute;left:0;right:0;top:560px;text-align:center;font:400 380px/1 BB;color:var(--L);-webkit-text-stroke:5px var(--L);text-shadow:0 0 90px rgba(204,255,51,.5)}
@@ -95,6 +96,7 @@ function build(sh){const sc=sh.sc||{};let el;
  else if(sh.type==='checks'){el=$(`<div class="shot"><div class="hd">${esc(sc.title)}</div><div class="rows" style="top:540px">${sc.rows.map(r=>`<div class="chk"><div class="c ${r[2]?'':'x'}">${r[2]?'✓':'!'}</div><div class="t">${esc(r[0])}</div><div class="v">${esc(r[1])}</div></div>`).join('')}</div><div class="stamp ${sc.ok?'':'no'}" style="left:70px;right:auto;top:${600+sc.rows.length*150+60}px;font-size:70px">${esc(sc.verdict||'DONE')}</div></div>`)}
  else if(sh.type==='doc'){el=$(`<div class="shot"><div class="hd">${esc(sc.title)}</div>${sc.sub?`<div class="sub">${esc(sc.sub)}</div>`:''}<div class="paper"></div><div class="stamp">READY TO SEND</div></div>`)}
  else if(sh.type==='dm'){el=$(`<div class="shot"><div class="hd">${esc(sc.title)}</div><div class="rows" style="top:540px">${sc.msgs.map(m=>`<div class="bub">${esc(m[1])}</div>`).join('')}</div></div>`)}
+ else if(sh.type==='cta'&&sc.url){el=$(`<div class="shot"><div class="cta1" style="top:430px;font-size:150px">${esc(sc.name).toUpperCase()}</div><div class="kw" style="top:640px;font-size:300px">${esc(sc.price)}</div><div class="cta2" style="top:1060px;font-size:34px">${esc(sc.sub||'')}</div><div class="url">${esc(sc.url)}</div><div class="arw">↓</div></div>`)}
  else if(sh.type==='cta'){el=$(`<div class="shot"><div class="cta1">COMMENT</div><div class="kw">${esc(sc.kw)}</div><div class="cta2">${/free/i.test(sc.name)?'':esc(sc.price||'FREE')+' · '}${esc(sc.name)}</div><div class="cta3">${esc(sc.sub||'')}</div><div class="arw">↓</div></div>`)}
  stage.appendChild(el);const hd=el.querySelector('.hd');if(hd){meas.font='400 100px BB';hd.style.fontSize=Math.min(150,930/(meas.measureText(hd.textContent).width/100*1.02))+'px';hd.style.whiteSpace='nowrap'}sh.el=el;return el}
 function typed(text,k,hl){const n=Math.floor(text.length*cl(k));let out='',pos=0;text.split(' ').forEach((w,i)=>{const a=pos,b=pos+w.length;pos=b+1;if(a>=n)return;const part=esc(w.slice(0,Math.max(0,n-a)));out+=(i?' ':'')+(hl&&hl[i]&&n>=b?`<span class="hl">${part}</span>`:part)});return out}
@@ -123,7 +125,7 @@ function upd(sh,t){const u=t-sh.s,L=sh.e-sh.s,el=sh.el,sc=sh.sc||{};const q=s=>e
   const st=q('.stamp'),v=t-sh.stamp_t;st.style.opacity=v<0?0:1;st.style.transform=`rotate(-8deg) scale(${v<0?2:1+1.4*(1-ex(v/.16))})`}
  else if(sh.type==='dm'){qa('.bub').forEach((b,i)=>{const v=t-sh.msgs_t[i];b.style.opacity=v<0?0:1;b.style.transform=`scale(${v<0?0:bk(v/.3)})`})}
  else if(sh.type==='cta'){slam(q('.cta1'),u,.18,{sx:.7});const kw=q('.kw'),v=t-sh.kw_t;kw.style.opacity=v<0?0:1;kw.style.transform=`translateX(-50%) rotate(-3deg) scale(${v<0?2.4:1+1.4*(1-ex(v/.15))+.03*Math.sin(t*6)})`;
-  q('.cta2').style.opacity=cl((v-.25)/.2);q('.cta3').style.opacity=cl((v-.45)/.2);const ar=q('.arw');ar.style.opacity=cl((v-.7)/.2);ar.style.transform=`translateY(${Math.abs(Math.sin(t*4.2))*-34}px)`;q('.cta1').style.transform+=` scale(${1+.015*Math.sin(t*3)})`}}
+  q('.cta2').style.opacity=cl((v-.25)/.2);const c3=q('.cta3');if(c3)c3.style.opacity=cl((v-.45)/.2);const ar=q('.arw');ar.style.opacity=cl((v-.7)/.2);const ur=q('.url');if(ur){ur.style.opacity=cl((v-.35)/.2);ur.style.transform=`scale(${bk(cl((v-.35)/.3))})`}ar.style.transform=`translateY(${Math.abs(Math.sin(t*4.2))*-34}px)`;q('.cta1').style.transform+=` scale(${1+.015*Math.sin(t*3)})`}}
 // fx canvas: grain, light streak transitions, bursts
 const fx=document.getElementById('fx').getContext('2d');const grain=[];for(let g=0;g<4;g++){const c=document.createElement('canvas');c.width=360;c.height=640;const x=c.getContext('2d'),im=x.createImageData(360,640),r=rnd(g+1);for(let i=0;i<im.data.length;i+=4){const v=r()*255;im.data[i]=im.data[i+1]=im.data[i+2]=v;im.data[i+3]=255}x.putImageData(im,0,0);grain.push(c)}
 function streak(v){if(v<0||v>.34)return;const k=v/.34;const ax=-260,ay=1560,bx=1340,by=240;const h=ex(k*1.6),tl=ex(cl((k-.25)/.75));const hx=ax+(bx-ax)*h,hy=ay+(by-ay)*h,tx=ax+(bx-ax)*tl,ty=ay+(by-ay)*tl;
@@ -141,7 +143,7 @@ window.render=function(t){let sh=D.shots[0];for(const s of D.shots)if(t>=s.s)sh=
  const sc=1+.05*Math.exp(-u*9)+.02*cl(u/3);stage.style.transform=`translate(${sx}px,${sy}px) scale(${sc})`;
  document.getElementById('bg').style.transform=`translateY(${-(t*14)%42}px)`;document.getElementById('mq').style.transform=`translateX(${-t*70}px)`;
  const isScreen=!['cold','phrase'].includes(sh.type);caption(t,isScreen&&sh.type!=='cta');
- document.getElementById('stp').innerHTML=sh.bi!=null?`STEP <b>${sh.bi+1}</b>/${D.nb}`:'<b>●</b> SAMPLE DATA';
+ document.getElementById('stp').innerHTML=sh.bi!=null?`STEP <b>${sh.bi+1}</b>/${D.nb}${D.ad?' · SAMPLE BUSINESS':''}`:'<b>●</b> SAMPLE '+(D.ad?'BUSINESS':'DATA');
  fx.clearRect(0,0,1080,1920);for(const tr of D.trans)streak(t-tr);for(const b of D.bursts)burst(b,t);
  fx.globalAlpha=.045;fx.drawImage(grain[Math.floor(t*30)%4],0,0,1080,1920);fx.globalAlpha=1};
 (async()=>{for(const f of['400 100px BB','400 20px SM','700 20px SM','800 20px IN','600 20px IN'])await document.fonts.load(f);

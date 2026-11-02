@@ -1,0 +1,354 @@
+{
+ "id": "ap-b",
+ "product": "autopilot",
+ "agents": [
+  "11:42 PM",
+  "IT KNOWS YOU",
+  "YOUR QUOTE",
+  "YOUR FOLLOW UP",
+  "YOUR SYSTEM",
+  "YOU PRESS SEND",
+  "$19.99"
+ ],
+ "cold_open": 0.6,
+ "beats": [
+  {
+   "say": "I pay nineteen ninety nine, one time, for an assistant that knows my prices. A lead texts at eleven forty two at night. Paste it in. Drafted in seconds.",
+   "head": [
+    "$19.99 FOR AN ASSISTANT",
+    "*THAT KNOWS YOUR PRICES.*"
+   ],
+   "scene": {
+    "type": "screenchat",
+    "plate": "s01",
+    "status": [
+     "reading your prices",
+     "drafting the reply",
+     "ready, you press send"
+    ],
+    "from": "New lead \u00b7 11:42 PM",
+    "q": "Hey how much for a full detail on an SUV? Free Saturday?",
+    "a": "Hi! A full SUV detail is $250 and takes about 3 hours. We come to you. I have Saturday at 9 AM or 1 PM. Want me to lock one in? Mike, Northside Detail",
+    "pill": "YOUR PRICE \u00b7 YOUR HOURS \u00b7 YOUR NAME",
+    "track": [
+     [
+      0.1,
+      384,
+      564,
+      306,
+      660
+     ],
+     [
+      1.5,
+      372,
+      546,
+      324,
+      699
+     ],
+     [
+      3.0,
+      360,
+      510,
+      348,
+      765
+     ],
+     [
+      4.9,
+      339,
+      471,
+      387,
+      837
+     ]
+    ]
+   },
+   "agent": 0
+  },
+  {
+   "say": "Autopilot got to know you first. Fifteen minutes of questions, then it builds your systems.",
+   "head": [
+    "IT KNOWS",
+    "*YOUR BUSINESS.*"
+   ],
+   "scene": {
+    "type": "quizrow",
+    "plate": "s02",
+    "qs": [
+     [
+      "What is your business called?",
+      "Northside Detail Co."
+     ],
+     [
+      "Your services, with prices",
+      "Full detail SUV $250 \u00b7 Interior $150"
+     ],
+     [
+      "Your days and hours",
+      "Mon to Sat, 8 to 6"
+     ],
+     [
+      "Deposit or cancel rules",
+      "$50 deposit \u00b7 24 hr notice"
+     ],
+     [
+      "How should it sound?",
+      "Warm and friendly"
+     ],
+     [
+      "What eats your week?",
+      "Replies, quotes, follow ups"
+     ]
+    ]
+   },
+   "agent": 1
+  },
+  {
+   "say": "They say yes? It writes the quote. Total, what's included, your deposit rule.",
+   "head": [
+    "YOUR",
+    "*QUOTE.*"
+   ],
+   "scene": {
+    "type": "quote",
+    "plate": "s03",
+    "status": [
+     "pulling your services",
+     "adding your deposit rule",
+     "quote ready"
+    ],
+    "title": "QUOTE \u00b7 DAVE R.",
+    "lines": [
+     [
+      "Full detail, SUV",
+      "$250"
+     ],
+     [
+      "Ceramic coating add on",
+      "$240"
+     ],
+     [
+      "Pet hair removal",
+      "$30"
+     ]
+    ],
+    "total": "$520",
+    "foot": "$50 deposit holds Saturday 9 AM \u00b7 24 hr notice to cancel"
+   },
+   "agent": 2
+  },
+  {
+   "say": "Quote goes quiet? It writes the nudge.",
+   "head": [
+    "YOUR",
+    "*FOLLOW UP.*"
+   ],
+   "scene": {
+    "type": "draft",
+    "plate": "s04",
+    "status": [
+     "quote quiet 3 days",
+     "drafting the nudge",
+     "ready, you press send"
+    ],
+    "from": "Follow up \u00b7 Dave R. \u00b7 day 3",
+    "q": "",
+    "a": "Hi Dave, Mike from Northside. Just checking in on the SUV quote. Saturday 9 AM is still open and the $520 holds through the end of the month. Want me to lock it in?",
+    "pill": "DRAFT \u00b7 NOT SENT \u00b7 tap to approve"
+   },
+   "agent": 3
+  },
+  {
+   "say": "Review ask. FAQ. Weekly plan.",
+   "head": [
+    "YOUR WHOLE",
+    "*SYSTEM.*"
+   ],
+   "scene": {
+    "type": "tiles",
+    "plate": "s05",
+    "tiles": {
+     "t": [
+      [
+       3.0,
+       [
+        [
+         105,
+         375
+        ],
+        [
+         405,
+         666
+        ],
+        [
+         696,
+         966
+        ]
+       ],
+       [
+        [
+         645,
+         921
+        ],
+        [
+         954,
+         1230
+        ]
+       ]
+      ],
+      [
+       4.9,
+       [
+        [
+         54,
+         360
+        ],
+        [
+         384,
+         690
+        ],
+        [
+         714,
+         1020
+        ]
+       ],
+       [
+        [
+         630,
+         939
+        ],
+        [
+         975,
+         1251
+        ]
+       ]
+      ]
+     ],
+     "labels": [
+      [
+       0,
+       0,
+       "REVIEW ASK"
+      ],
+      [
+       0,
+       1,
+       "FAQ BANK"
+      ],
+      [
+       0,
+       2,
+       "WEEKLY PLAN"
+      ],
+      [
+       1,
+       0,
+       "QUOTE TEMPLATE"
+      ],
+      [
+       1,
+       2,
+       "FOLLOW UPS"
+      ]
+     ]
+    }
+   },
+   "agent": 4
+  },
+  {
+   "say": "Runs in the Claude app. Every draft waits for your OK.",
+   "head": [
+    "YOU STILL",
+    "*PRESS SEND.*"
+   ],
+   "scene": {
+    "type": "approve",
+    "plate": "s06",
+    "track": [
+     [
+      0.1,
+      219,
+      1080,
+      645,
+      384
+     ],
+     [
+      1.5,
+      195,
+      1095,
+      696,
+      405
+     ],
+     [
+      3.0,
+      165,
+      1104,
+      765,
+      450
+     ],
+     [
+      4.9,
+      165,
+      1104,
+      765,
+      450
+     ]
+    ]
+   },
+   "agent": 5
+  },
+  {
+   "say": "Autopilot. Nineteen ninety nine, one time. Less than an hour of an assistant. Link below.",
+   "head": [
+    "$19.99",
+    "*ONE TIME.*"
+   ],
+   "scene": {
+    "type": "cardprice",
+    "plate": "s07",
+    "name": "AUTOPILOT",
+    "price": "$19.99",
+    "sub": "one time \u00b7 less than an hour of an assistant \u00b7 runs in Claude",
+    "url": "autopilotoi.app/autopilot",
+    "kw": "AUTOPILOT",
+    "track": [
+     [
+      2.2,
+      270,
+      880,
+      530,
+      350
+     ],
+     [
+      3.0,
+      240,
+      855,
+      591,
+      390
+     ],
+     [
+      4.9,
+      120,
+      825,
+      831,
+      549
+     ]
+    ],
+    "clip_in": 1.8
+   },
+   "agent": 6
+  }
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/autopilot/",
+  "primary_text": "$19.99, one time, for an assistant that knows your prices. Autopilot gets to know your business in 15 minutes of questions, then builds your systems inside the Claude app: replies with your real prices, your quote template, your follow ups, your review ask, your FAQ and your weekly plan. Every draft waits for your OK. $19.99, one time. Example business shown.",
+  "headline": "Put the busy work on Autopilot",
+  "description": "$19.99 one time \u00b7 runs in Claude \u00b7 you press send",
+  "cta": "SHOP_NOW",
+  "refund_line": "PENDING: Seb to set the policy words"
+ },
+ "template": "ad2.html",
+ "cap_fix": {
+  "eleven forty two": "11:42",
+  "nineteen ninety nine": "$19.99",
+  "fifteen": "15"
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "id": "ad-ws-c",
+ "kind": "ad",
+ "room": "owner",
+ "agent": "Inbox Agent",
+ "hook": [
+  "Your inbox on Monday",
+  "47 unread. 3 need you."
+ ],
+ "hook_lines": [
+  "*47* unread",
+  "*3* need you"
+ ],
+ "emph": [
+  "unread",
+  "forty",
+  "seven",
+  "three",
+  "minute",
+  "sentence",
+  "monday",
+  "inbox",
+  "seconds",
+  "need"
+ ],
+ "payoff": {
+  "big": "30 SEC",
+  "lines": [
+   "YOUR *MONDAY*"
+  ],
+  "tag": "sample business"
+ },
+ "cold_open": 0.9,
+ "beats": [
+  {
+   "chip": "hook",
+   "say": "Watch an AI do a business owner's Monday in thirty seconds. Forty seven emails in. Three things that need you out.",
+   "screen": {
+    "type": "ask",
+    "files": [],
+    "text": ""
+   }
+  },
+  {
+   "chip": "ask",
+   "say": "Give it your inbox and one sentence.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "inbox_monday.eml",
+     "business_brain.pdf"
+    ],
+    "text": "sort these, draft the replies, tell me what needs me"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It reads every email, drafts the replies in your voice with your real prices, chases the quote that went quiet, and flags the invoice that's late.",
+   "screen": {
+    "type": "work",
+    "title": "Working the inbox",
+    "lines": [
+     "read 47 emails",
+     "drafted 11 replies, your prices",
+     "chased 2 quiet quotes",
+     "flagged 1 late invoice"
+    ]
+   }
+  },
+  {
+   "chip": "result",
+   "say": "Then it hands you a list of three things that actually need you. The rest is drafted, waiting for your OK. Sample business, but yours works the same way.",
+   "screen": {
+    "type": "checks",
+    "title": "Needs you today",
+    "rows": [
+     [
+      "Approve 11 reply drafts",
+      "11",
+      1
+     ],
+     [
+      "Call Dave back, $240 ceramic quote",
+      "CALL",
+      1
+     ],
+     [
+      "Invoice 1042 is 12 days late",
+      "LATE",
+      0
+     ]
+    ],
+    "verdict": "THE REST IS DRAFTED",
+    "ok": true
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Seven agents like this, set up in about an hour, forty nine dollars, thirty day guarantee. autopilot o i dot app slash workspace.",
+   "screen": {
+    "type": "cta",
+    "name": "The Workspace",
+    "sub": "7 agents \u00b7 about 1 hour setup \u00b7 30 day guarantee",
+    "price": "$49",
+    "url": "autopilotoi.app/workspace",
+    "topic": "Stop doing busy work"
+   }
+  }
+ ],
+ "meta": {
+  "product": "workspace",
+  "landing": "https://autopilotoi.app/workspace/",
+  "primary_text": "47 unread. 3 need you. The Workspace sets up 7 AI agents that read your inbox, draft replies with your real prices, chase quiet quotes and flag late invoices. You approve, it never sends on its own. $49, about an hour to set up, 30 day guarantee. Sample business shown.",
+  "headline": "Your Monday inbox, handled",
+  "description": "7 AI agents \u00b7 $49 \u00b7 30 day guarantee",
+  "cta": "LEARN_MORE"
+ }
+}

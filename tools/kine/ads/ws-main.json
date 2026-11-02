@@ -1,0 +1,24 @@
+{
+ "id": "ws-main",
+ "product": "workspace",
+ "agents": ["INBOX", "FOLLOW UP", "QUOTES", "BOOKINGS", "REVIEWS", "INVOICES", "BRIEF"],
+ "cold_open": 0.7,
+ "beats": [
+  {"say": "This is a business owner's Monday. Forty seven unread.", "head": ["YOUR MONDAY.", "*47 UNREAD.*"], "scene": {"type": "inbox", "n": 47}, "agent": 0},
+  {"say": "You can hire help. Interviews, training, payroll. Or you can type one sentence.", "head": ["HIRE HELP?", "*OR ONE SENTENCE.*"], "scene": {"type": "lock", "title": "Office assistant · part time", "chips": ["INTERVIEWS", "TRAINING", "PAYROLL"]}, "agent": 0},
+  {"say": "Sort these. Draft the replies. Tell me what needs me.", "head": ["ONE", "*SENTENCE.*"], "scene": {"type": "term", "files": ["inbox_monday.eml", "business_brain.pdf"], "text": "sort these, draft the replies, tell me what needs me"}, "agent": 1},
+  {"say": "Seven agents wake up. Inbox, follow ups, quotes, bookings, reviews, invoices, and a morning brief.", "head": ["7 AGENTS", "*WAKE UP.*"], "scene": {"type": "grid"}, "agent": 1},
+  {"say": "They read every email, draft the replies with your real prices, chase the quote that went quiet, and flag the invoice that's late.", "head": ["THEY DO", "*THE BUSY WORK.*"], "scene": {"type": "work", "lines": ["read 47 emails", "drafted 11 replies, your prices", "chased 2 quiet quotes", "flagged 1 late invoice"]}, "agent": 2},
+  {"say": "Every draft waits for your OK. Nothing sends on its own.", "head": ["IT DRAFTS.", "*YOU SEND.*"], "scene": {"type": "phone", "from": "New lead · 11:42 PM", "q": "How much for an interior clean on a minivan? Kids destroyed it lol", "a": "Interior for a minivan starts at $160, heavy stains $30 extra. I have Wednesday at 10 or Thursday at 2. Want one of those?", "pill": "DRAFT · NOT SENT · tap to approve"}, "agent": 3},
+  {"say": "And your Monday goes from forty seven unread to three things that need you.", "head": ["47 → 3", "*NEED YOU.*"], "scene": {"type": "result", "from": 47, "to": 3, "rows": [["Approve 11 reply drafts", "11"], ["Call Dave back, $240 ceramic quote", "CALL"], ["Invoice 1042 is 12 days late", "LATE"]]}, "agent": 5},
+  {"say": "Tomorrow at seven, the brief is waiting. Today's jobs, what needs you, one idea to fill the open slot.", "head": ["7:00 AM.", "*THE BRIEF.*"], "scene": {"type": "brief", "time": "7:00 AM · TUESDAY", "today": ["9:00 Full detail, 2021 Tacoma (Maria)", "1:30 Interior only, Civic (new)"], "needs": ["2 new leads overnight, replies drafted", "Quote to Dave is 3 days quiet, nudge drafted"], "idea": "Thursday 3 PM is open. 4 past customers are due. Draft a text?"}, "agent": 6},
+  {"say": "The Workspace. Seven agents, about an hour to set up, forty nine dollars, thirty day guarantee. Sample business shown. Yours works the same way.", "head": ["THE WORKSPACE.", "*$49.*"], "scene": {"type": "cta", "name": "THE WORKSPACE", "price": "$49", "sub": "7 agents · about 1 hour setup · 30 day guarantee", "url": "autopilotoi.app/workspace", "kw": "AGENTS"}, "agent": 7}
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/workspace/",
+  "primary_text": "47 unread. 3 need you. The Workspace sets up 7 AI agents in Claude that read your inbox, draft replies with your real prices, chase quiet quotes, flag late invoices and brief you every morning. Every draft waits for your OK. $49, about an hour to set up, 30 day guarantee. Sample business shown.",
+  "headline": "Your Monday inbox, handled",
+  "description": "7 AI agents · $49 · 30 day guarantee",
+  "cta": "LEARN_MORE"
+ }
+}

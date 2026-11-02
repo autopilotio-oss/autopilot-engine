@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The AI Front Desk · Free from AUTOPILOT.OI</title>
-<meta name="description" content="Answer 15 questions and get an AI assistant that knows your prices, rules and voice, plus 10 ready prompts. Free, 5 minutes.">
+<meta name="description" content="Answer 10 questions and get an AI assistant that knows your prices, rules and voice, plus 10 ready prompts. Free, 5 minutes.">
 <meta property="og:title" content="The AI Front Desk · Free">
 <meta property="og:description" content="An AI that knows your prices, rules and voice. 5 minutes, free.">
 <meta property="og:image" content="https://autopilotoi.app/logo.png">
@@ -106,7 +106,7 @@ pre{white-space:pre-wrap;word-wrap:break-word;font:500 13.5px/1.6 "Geist Mono",m
 <header class="hero">
  <div class="tag">Free · 5 minutes · for any business</div>
  <h1 class="H">Your AI<br><em>front desk.</em></h1>
- <p>Answer 15 quick questions. Get an AI assistant that knows your prices, your rules and how you talk, ready to reply to customers in seconds.</p>
+ <p>Answer 10 quick questions. Get an AI assistant that knows your prices, your rules and how you talk, ready to reply to customers in seconds.</p>
  <a class="big" href="#quiz"><b>Build mine free</b><span>Start →</span></a>
  <div class="trust"><span>No sign up</span><span>Free Claude or ChatGPT</span><span>Answers stay on your phone</span></div>
 </header>
@@ -189,17 +189,12 @@ const Q=[
  {k:'what',q:'What do you do, and for who?',t:'text',ph:'Mobile car detailing for busy families'},
  {k:'offers',q:'Your main services or products, with prices',t:'area',ph:'Full detail SUV $250 (3 hrs)\nInterior only $150 (2 hrs)'},
  {k:'hours',q:'Your days and hours',t:'text',ph:'Mon to Sat, 8 AM to 6 PM'},
- {k:'area',q:'Where do you work or serve?',t:'text',ph:'Within 20 miles of downtown'},
  {k:'book',q:'How do customers book or buy?',t:'text',ph:'Text me or book at mysite.com/book'},
  {k:'policy',q:'Deposit, cancellation or refund rules',t:'area',ph:'$50 deposit. 24 hr notice to cancel.'},
- {k:'pay',q:'How do customers pay?',t:'many',o:['Card','Cash','Zelle','Venmo','Cash App','PayPal','Bank transfer']},
  {k:'voice',q:'How should your AI sound?',t:'one',o:['Warm and friendly','Professional','Short and direct','High energy']},
- {k:'sign',q:'How do you sign off messages?',t:'text',ph:'Mike, Northside Detail'},
  {k:'faq',q:'Top questions customers ask, with your answers',t:'area',ph:'Do you need water or power? No, we bring everything.'},
  {k:'never',q:'What should your AI never say or promise?',t:'area',ph:'Never offer discounts. Never promise same day.'},
- {k:'review',q:'Your Google review link (optional)',t:'text',ph:'https://g.page/r/...'},
- {k:'pain',q:'What busy work eats your week?',t:'many',o:Object.keys(PAINS)},
- {k:'goal',q:'Your number one goal for the next 90 days',t:'one',o:['Book more jobs','Get my time back','Reply faster','More 5 star reviews','Get paid faster']}];
+ {k:'pain',q:'What busy work eats your week?',t:'many',o:Object.keys(PAINS)}];
 let A=store.get('a',{}),qi=Math.min(store.get('qi',0),Q.length-1);
 function rq(){const q=Q[qi],v=A[q.k];let b='';
  if(q.t=='text')b=`<input type="text" id="qin" placeholder="${esc(q.ph)}" value="${esc(v||'')}">`;
@@ -224,9 +219,8 @@ ${N}: ${v('what','(add what you do)')}
 SERVICES AND PRICES
 ${v('offers','(add your services and prices)')}
 
-HOURS AND AREA
+HOURS
 Hours: ${v('hours','(add hours)')}
-Area: ${v('area','(add area)')}
 
 HOW CUSTOMERS BOOK OR BUY
 ${v('book','(add how to book)')}
@@ -234,11 +228,8 @@ ${v('book','(add how to book)')}
 POLICIES
 ${v('policy','(add deposit, cancellation and refund rules)')}
 
-PAYMENT
-${v('pay','(add payment methods)')}
-
 VOICE
-Tone: ${v('voice','Warm and friendly')}. Keep messages short and easy to read on a phone. Sign off as: ${v('sign',N)}.
+Tone: ${v('voice','Warm and friendly')}. Keep messages short and easy to read on a phone. Sign off with the business name.
 
 FAQ
 ${v('faq','(add common questions and answers)')}
@@ -246,11 +237,8 @@ ${v('faq','(add common questions and answers)')}
 NEVER
 ${v('never','Never offer discounts or promise anything not listed here.')}
 
-REVIEW LINK
-${v('review','(none yet)')}
-
 GOAL
-${v('goal','Book more jobs')}. When it fits naturally, steer conversations toward booking.`;
+When it fits naturally, steer conversations toward booking.`;
  $('brainText').textContent=brain;
  const P=[['Reply to a lead','Write a reply to this customer message. Answer their question with my real prices, and end by offering to book them in. Message: [paste]'],
   ['Price question','A customer asked how much it costs. Reply with the right price from my services, what is included, and how to book. Message: [paste]'],
@@ -258,7 +246,7 @@ ${v('goal','Book more jobs')}. When it fits naturally, steer conversations towar
   ['Write a quote','Write a clean quote for [name]: [services]. Include the total, what\'s included, my deposit rule and how to pay.'],
   ['Booking confirmation','Write a confirmation for [name], [service], [day and time]. Include what they need to know from my FAQ and my cancellation policy.'],
   ['Reminder for tomorrow','Write a short reminder text for [name] about tomorrow\'s [service] at [time].'],
-  ['Review request','Write a 3 sentence thank you to [name] for today\'s [service] that asks for a Google review with my link.'],
+  ['Review request','Write a 3 sentence thank you to [name] for today\'s [service] that asks for a Google review (paste your review link where it fits).'],
   ['Unhappy customer','A customer is unhappy. Write a calm, kind reply that takes ownership and offers a next step, without promising anything I don\'t allow. Message: [paste]'],
   ['Win back an old customer','Write a friendly check in to [name], who last bought [service] a while ago, with a reason to book again.'],
   ['Turn my day into posts','Write 3 short social posts about today\'s work: [describe the job]. In my voice, ending with how to book.']];

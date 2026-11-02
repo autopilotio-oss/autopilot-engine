@@ -1,0 +1,196 @@
+{
+ "id": "fd-main",
+ "product": "brain",
+ "agents": [
+  "10 QUESTIONS",
+  "REPLY TO A LEAD",
+  "WRITE A QUOTE",
+  "CHASE A QUOTE",
+  "ASK FOR A REVIEW",
+  "ANSWER THE FAQ",
+  "FREE"
+ ],
+ "cold_open": 0.6,
+ "beats": [
+  {
+   "say": "Answer ten questions about your business, and walk out with your own AI assistant.",
+   "head": [
+    "10 QUESTIONS.",
+    "*YOUR OWN AI.*"
+   ],
+   "scene": {
+    "type": "quiz",
+    "qs": [
+     [
+      "What is your business called?",
+      "Northside Detail Co."
+     ],
+     [
+      "Your services, with prices",
+      "Full detail SUV $250 \u00b7 Interior $150"
+     ],
+     [
+      "Your days and hours",
+      "Mon to Sat, 8 to 6"
+     ],
+     [
+      "Deposit or cancel rules",
+      "$50 deposit \u00b7 24 hr notice"
+     ],
+     [
+      "How should it sound?",
+      "Warm and friendly"
+     ],
+     [
+      "What should it never say?",
+      "Never promise same day"
+     ]
+    ],
+    "plate": "ap2"
+   },
+   "agent": 0
+  },
+  {
+   "say": "A lead texts at eleven pm. It reads your prices and drafts the reply. Your price, your open slots, your name.",
+   "head": [
+    "IT REPLIES",
+    "*WITH YOUR PRICES.*"
+   ],
+   "scene": {
+    "type": "phone",
+    "status": [
+     "reading your prices",
+     "drafting the reply",
+     "ready for your OK"
+    ],
+    "from": "New lead \u00b7 11:42 PM",
+    "q": "Hey how much for a full detail on an SUV? Free Saturday?",
+    "a": "Hi! A full SUV detail is $250 and takes about 3 hours. We come to you. I have Saturday at 9 AM or 1 PM. Want me to lock one in? Mike, Northside Detail",
+    "pill": "DRAFT \u00b7 YOUR PRICE \u00b7 YOUR HOURS",
+    "plate": "ap3"
+   },
+   "agent": 1
+  },
+  {
+   "say": "They say yes. It writes the quote. Total, what's included, your deposit rule.",
+   "head": [
+    "IT WRITES",
+    "*THE QUOTE.*"
+   ],
+   "scene": {
+    "type": "quote",
+    "status": [
+     "pulling your services",
+     "adding your deposit rule",
+     "quote ready"
+    ],
+    "title": "QUOTE \u00b7 DAVE R.",
+    "lines": [
+     [
+      "Full detail, SUV",
+      "$250"
+     ],
+     [
+      "Ceramic coating add on",
+      "$240"
+     ],
+     [
+      "Pet hair removal",
+      "$30"
+     ]
+    ],
+    "total": "$520",
+    "foot": "$50 deposit holds Saturday 9 AM \u00b7 24 hr notice to cancel",
+    "plate": "ap4"
+   },
+   "agent": 2
+  },
+  {
+   "say": "The quote goes quiet for three days. It drafts the follow up before you remember to.",
+   "head": [
+    "IT CHASES",
+    "*THE QUIET ONES.*"
+   ],
+   "scene": {
+    "type": "phone",
+    "status": [
+     "quote quiet 3 days",
+     "drafting a nudge",
+     "ready for your OK"
+    ],
+    "from": "Follow up \u00b7 Dave R. \u00b7 day 3",
+    "q": "",
+    "a": "Hi Dave, Mike from Northside. Just checking in on the SUV quote. Saturday 9 AM is still open and the $520 holds through the end of the month. Want me to lock it in?",
+    "pill": "DRAFT \u00b7 NOT SENT \u00b7 tap to approve",
+    "plate": "ap1"
+   },
+   "agent": 3
+  },
+  {
+   "say": "Job done? It asks for the review, with your link, in your voice.",
+   "head": [
+    "IT ASKS FOR",
+    "*THE REVIEW.*"
+   ],
+   "scene": {
+    "type": "phone",
+    "status": [
+     "job marked done",
+     "drafting the thank you",
+     "ready for your OK"
+    ],
+    "from": "After the job \u00b7 Maria T.",
+    "q": "",
+    "a": "Thanks for having us out today, Maria! If you have a minute, a quick Google review would mean a lot: g.page/r/northside. Mike",
+    "pill": "DRAFT \u00b7 NOT SENT \u00b7 tap to approve",
+    "plate": "ap3"
+   },
+   "agent": 4
+  },
+  {
+   "say": "And the question you answer ten times a day? Answered, before you even see it.",
+   "head": [
+    "THE SAME QUESTION,",
+    "*EVERY DAY. HANDLED.*"
+   ],
+   "scene": {
+    "type": "phone",
+    "status": [
+     "matching your FAQ",
+     "drafting",
+     "ready for your OK"
+    ],
+    "from": "New message \u00b7 8:05 AM",
+    "q": "Do you need water or power at my place?",
+    "a": "Nope, we bring everything, water and power included. You just leave the keys. Want a day this week?",
+    "pill": "FROM YOUR FAQ \u00b7 NEVER GUESSES",
+    "plate": "ap2"
+   },
+   "agent": 5
+  },
+  {
+   "say": "Free. No sign up. About five minutes. Build yours, link below.",
+   "head": [
+    "FREE.",
+    "*BUILD YOURS.*"
+   ],
+   "scene": {
+    "type": "cta",
+    "name": "THE AI FRONT DESK",
+    "price": "FREE",
+    "sub": "answer 10 questions \u00b7 5 minutes \u00b7 no sign up",
+    "url": "autopilotoi.app/brain",
+    "kw": "DESK",
+    "plate": "ap1"
+   },
+   "agent": 6
+  }
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/brain/",
+  "primary_text": "Answer 10 questions about your business and walk out with your own AI assistant. It replies to leads with your real prices, writes the quote, chases the ones that go quiet, asks for the review and answers the question you get every day. Every draft waits for your OK. Free, no sign up, about 5 minutes. Example business shown.",
+  "headline": "Build your AI front desk in 5 minutes",
+  "description": "Free \u00b7 no sign up \u00b7 10 questions",
+  "cta": "LEARN_MORE"
+ }
+}
