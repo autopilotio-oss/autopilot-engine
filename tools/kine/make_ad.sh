@@ -6,7 +6,12 @@ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"; K="$ROOT/tools/kine"; EP="$1"; P="$
 mkdir -p "$K/out"
 if [ -z "${FAKE:-}" ] && [ -f "$K/voice/$EP.wav" ]; then cp "$K/voice/$EP.wav" "$K/voice/$EP.words.json" "$K/out/"; echo "reusing saved voice"
 else python3 "$K/voice.py" "$EP" ${FAKE:+--fake}; fi
-python3 "$K/build_ad.py" "$EP"; python3 "$K/mix.py" "$EP"
+python3 "$K/build_ad.py" "$EP"
+if grep -q '"music_prompt"' "$K/ads/$EP.json"; then
+  if [ -f "$K/voice/${EP}_music.wav" ]; then cp "$K/voice/${EP}_music.wav" "$K/out/"; echo "reusing saved score"
+  elif [ -n "${FAKE:-}" ]; then ELEVENLABS_API_KEY= python3 "$K/music.py" "$EP"; else python3 "$K/music.py" "$EP"; fi
+fi
+python3 "$K/mix.py" "$EP"
 (cd "$ROOT" && python3 -m http.server 8778 >/dev/null 2>&1 & echo $! > "/tmp/kad_$EP.pid"); sleep 1
 for i in $(seq 0 $((P - 1))); do (cd "$ROOT" && RANGE="$i/$P" node tools/kine/rend_alpha.js "tools/kine/out/$EP.html" "$K/out/${EP}_a$i.mov") & done; wait
 kill "$(cat "/tmp/kad_$EP.pid")" 2>/dev/null || true

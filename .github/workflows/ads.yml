@@ -31,7 +31,7 @@ jobs:
         run: bash tools/kine/make_ad.sh "${{ matrix.ep }}" 4
       - if: always()
         uses: actions/upload-artifact@v4
-        with: { name: "ad-${{ matrix.ep }}", path: "docs/media/ads/${{ matrix.ep }}*\ntools/kine/out/${{ matrix.ep }}.wav\ntools/kine/out/${{ matrix.ep }}.words.json" }
+        with: { name: "ad-${{ matrix.ep }}", path: "docs/media/ads/${{ matrix.ep }}*\ntools/kine/out/${{ matrix.ep }}.wav\ntools/kine/out/${{ matrix.ep }}.words.json\ntools/kine/out/${{ matrix.ep }}_music.wav" }
   commit:
     needs: render
     if: always()

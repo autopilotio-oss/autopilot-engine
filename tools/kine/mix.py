@@ -80,12 +80,17 @@ while t0 + k * b < dur:
         pd = ts(8 * b); pad = sum(np.sin(2 * np.pi * f * ph2) for f, ph2 in [(root * 4, pd), (root * 4 * 1.189, pd), (root * 4 * 1.498, pd)]) / 3
         put(lp(pad * np.minimum(1, pd / 1.2) * np.minimum(1, (8 * b - pd) / 1.2).clip(0), .15), t, .22)
     k += 1
+STORY = os.path.exists(f"{D}/out/{EP}_music.wav")
+if STORY:  # scored story ad: the music replaces the pulse bed
+    mw = wave.open(f"{D}/out/{EP}_music.wav"); ch = mw.getnchannels(); ma = np.frombuffer(mw.readframes(mw.getnframes()), np.int16).reshape(-1, ch) / 32768; mw.close()
+    if ch == 1: ma = np.repeat(ma, 2, 1)
+    B = np.zeros((N, 2)); k = min(len(ma), N); B[:k] = ma[:k]
 # --- voice + ducking ---
 v = wave.open(M["voice"]); a = np.frombuffer(v.readframes(v.getnframes()), np.int16) / 32768; v.close()
 voice = np.zeros(N); o = int(OFF * SR); n = min(len(a), N - o); voice[o:o + n] = a[:n]; voice = voice / (np.max(np.abs(voice)) or 1) * .92
 envv = np.convolve((np.abs(voice) > .02).astype(float), np.ones(4410) / 4410, 'same')
 duck = (1 - .55 * np.clip(envv * 3, 0, 1))[:, None]
-bed = B / (np.max(np.abs(B)) or 1) * .22 * duck
+bed = B / (np.max(np.abs(B)) or 1) * (.32 if STORY else .22) * ((1 - .35 * np.clip(envv * 3, 0, 1))[:, None] if STORY else duck)
 s = sfx / (np.max(np.abs(sfx)) or 1) * .5 * (1 - .25 * np.clip(envv * 3, 0, 1))[:, None]
 m = bed + s + voice[:, None]; m = m / max(1, np.max(np.abs(m)) / .97)
 f = np.ones(N); kk = int(.8 * SR); f[-kk:] = np.linspace(1, 0, kk); m *= f[:, None]

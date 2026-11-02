@@ -1,0 +1,306 @@
+{
+ "id": "st-v2",
+ "template": "ad3.html",
+ "agents": [
+  "NIGHT",
+  "NIGHT",
+  "HOME",
+  "HOME",
+  "THE SETUP",
+  "THE SETUP",
+  "THE SETUP",
+  "HOME",
+  "HOME",
+  "HOME",
+  "AUTOPILOT"
+ ],
+ "cold_open": 0.3,
+ "cap_fix": {},
+ "beats": [
+  {
+   "say": "Are you done yet? … She asks every night.",
+   "head": [
+    "“ARE YOU",
+    "*DONE YET?”*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh02",
+     "sh01"
+    ],
+    "clip_ins": {
+     "sh02": 0.4,
+     "sh01": 1.0
+    }
+   },
+   "agent": 0
+  },
+  {
+   "say": "He never is.",
+   "head": [
+    "HE NEVER",
+    "*IS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh03"
+    ],
+    "clip_ins": {
+     "sh03": 1.2
+    }
+   },
+   "agent": 1
+  },
+  {
+   "say": "He started this business for this.",
+   "head": [
+    "HE STARTED IT",
+    "*FOR THIS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh18"
+    ],
+    "clip_ins": {
+     "sh18": 1.6
+    }
+   },
+   "agent": 2
+  },
+  {
+   "say": "Not to miss this.",
+   "head": [
+    "NOT TO",
+    "*MISS THIS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh05"
+    ],
+    "clip_ins": {
+     "sh05": 1.8
+    }
+   },
+   "agent": 3
+  },
+  {
+   "say": "So one night, he set me up.",
+   "head": [
+    "SO ONE NIGHT,",
+    "*HE SET ME UP.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh07"
+    ],
+    "clip_ins": {
+     "sh07": 1.4
+    }
+   },
+   "agent": 4
+  },
+  {
+   "say": "One prompt. Fifteen questions. His prices, his rules, how he talks.",
+   "head": [
+    "15 QUESTIONS.",
+    "*HIS BUSINESS.*"
+   ],
+   "scene": {
+    "type": "interview",
+    "plates": [
+     "sh09"
+    ],
+    "clip_ins": {
+     "sh09": 0.0
+    },
+    "qs": [
+     [
+      "What do you sell?",
+      "Mobile car detailing. Interior and exterior."
+     ],
+     [
+      "What does a full detail cost?",
+      "$250 for an SUV, about 3 hours."
+     ],
+     [
+      "How do you talk to customers?",
+      "Friendly, short, no jargon."
+     ],
+     [
+      "What can I never promise?",
+      "Same day bookings."
+     ],
+     [
+      "How do you take deposits?",
+      "$50 holds the slot."
+     ],
+     [
+      "When do you follow up?",
+      "Day 3, then day 7."
+     ]
+    ],
+    "nums": [
+     1,
+     3,
+     6,
+     9,
+     12,
+     15
+    ]
+   },
+   "agent": 5
+  },
+  {
+   "say": "Then I built his systems. Replies. Quotes. Follow ups.",
+   "head": [
+    "THEN I BUILT",
+    "*HIS SYSTEMS.*"
+   ],
+   "scene": {
+    "type": "systems",
+    "plates": [
+     "sh10"
+    ],
+    "clip_ins": {
+     "sh10": 0.6
+    },
+    "tiles": [
+     "Lead replies",
+     "Quotes",
+     "Follow ups",
+     "Reviews",
+     "FAQ answers",
+     "Weekly plan"
+    ]
+   },
+   "agent": 6
+  },
+  {
+   "say": "Now he does the work. I draft the rest.",
+   "head": [
+    "HE DOES THE WORK.",
+    "*I DRAFT THE REST.*"
+   ],
+   "scene": {
+    "type": "drafts",
+    "plates": [
+     "sh19"
+    ],
+    "clip_ins": {
+     "sh19": 2.6
+    }
+   },
+   "agent": 7
+  },
+  {
+   "say": "He reads them. Hits send.",
+   "head": [
+    "HE HITS",
+    "*SEND.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh11"
+    ],
+    "clip_ins": {
+     "sh11": 0.8
+    }
+   },
+   "agent": 8
+  },
+  {
+   "say": "Are you done yet? … Yeah. I'm done.",
+   "head": [
+    "“YEAH.",
+    "*I'M DONE.”*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh13"
+    ],
+    "clip_ins": {
+     "sh13": 0.6
+    }
+   },
+   "agent": 9
+  },
+  {
+   "say": "Fifteen minutes to set me up. Comment Autopilot, and I'll send you the setup.",
+   "head": [],
+   "scene": {
+    "type": "commentcard",
+    "plates": [
+     "sh14",
+     "sh15"
+    ],
+    "clip_ins": {
+     "sh14": 0.8,
+     "sh15": 2.3
+    },
+    "card_at": 2.7,
+    "track": [
+     [
+      3.0,
+      186,
+      1215,
+      654,
+      405
+     ],
+     [
+      4.0,
+      141,
+      990,
+      774,
+      570
+     ],
+     [
+      4.9,
+      69,
+      999,
+      921,
+      681
+     ]
+    ],
+    "splits": [
+     0.45,
+     0.55
+    ]
+   },
+   "agent": 10
+  }
+ ],
+ "voice_speed": 1.0,
+ "soft": [
+  "NIGHT",
+  "HOME",
+  "THE SETUP"
+ ],
+ "dip": [
+  "HOME",
+  "AUTOPILOT"
+ ],
+ "sfx_only": [
+  "tick",
+  "row",
+  "cta"
+ ],
+ "foley": 0.8,
+ "music_prompt": "Cinematic emotional score for a {dur} second film. Opens with soft solo felt piano, lonely late night mood, slow, about 70 bpm, lots of space. Around the middle, warm strings and a gentle heartbeat pulse enter as hope arrives. Final third is warm, uplifting and resolved, with a soft swell in the last five seconds that lands and rings out. No vocals, no drums, no EDM, no risers.",
+ "music_turn": 11.0,
+ "music_warm": 20.0,
+ "meta": {
+  "landing": "https://autopilotoi.app/autopilot/",
+  "primary_text": "“Are you done yet?” She asks every night. One prompt and 15 questions, and Autopilot learns your prices, your rules and how you talk. Then it builds your systems and drafts your replies, quotes and follow ups. You read, hit send, and get your evening back. Comment AUTOPILOT and I'll send you the setup.",
+  "headline": "Get your evenings back",
+  "description": "$19.99 once · runs in Claude · you press send",
+  "cta": "LEARN_MORE"
+ },
+ "streaks": false
+}
