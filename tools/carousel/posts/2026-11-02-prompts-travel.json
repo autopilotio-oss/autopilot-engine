@@ -1,0 +1,72 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 02 2026",
+ "cover_bg": "bg-lime",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 5,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">5 PROMPTS &middot; TRAVEL</div><div class=\"fx\" style=\"left:56px;top:170px;width:968px;height:560px;background:#0c0c0c;border-radius:28px;transform:rotate(-3deg);box-shadow:0 30px 60px #0c0c0c55;color:#f2f2ee\"><div class=\"Cc\" style=\"position:absolute;left:44px;top:38px;font-size:24px;color:#D4FF3A\">BOARDING PASS &middot; SAMPLE</div><div class=\"Mm\" style=\"position:absolute;right:44px;top:40px;font-size:24px;color:#f2f2eecc\">SAMPLE AIR 204</div><div class=\"A\" style=\"position:absolute;left:44px;top:100px;font-size:170px;color:#f2f2ee\">JFK</div><div class=\"Cc\" style=\"position:absolute;left:350px;top:170px;font-size:30px;color:#D4FF3A\">TO</div><div class=\"A\" style=\"position:absolute;left:440px;top:100px;font-size:170px;color:#f2f2ee\">LIS</div><div style=\"position:absolute;left:44px;right:44px;top:300px;border-top:4px dashed #f2f2ee44\"></div><div class=\"Mm\" style=\"position:absolute;left:44px;top:330px;font-size:26px;line-height:1.6;color:#f2f2eecc\">DATE &nbsp;NOV 21<br>GATE &nbsp;B12<br>SEAT &nbsp;14C<br>BAG &nbsp;&nbsp;1 CHECKED</div><div class=\"A\" style=\"position:absolute;left:470px;top:350px;font-size:96px;color:#D4FF3A;border:8px solid #D4FF3A;padding:14px 26px 6px;transform:rotate(-8deg);border-radius:10px\">CANCELED</div></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"18\" style=\"left:56px;top:830px;font-size:150px;white-space:nowrap;color:#0c0c0c\">Flight canceled?</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:990px;font-size:150px;white-space:nowrap;color:#0c0c0c\">Ask for cash</div><div class=\"fx Ii\" data-after=\"h\" data-gap=\"30\" style=\"left:56px;top:1150px;width:860px;font-size:34px;line-height:1.25;color:#0c0c0c\">Not a voucher. 5 Claude prompts for flights, bags and money abroad. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "Cash, *not a voucher*",
+   "prompt": "My airline canceled or changed my flight. Here is their email, booking number blacked out. Tell me if this counts as a significant change under US DOT rules. Then write a short reply that turns down the new flight and the voucher and asks for a refund to my original payment.",
+   "why": "Canceled, or moved 3+ hours (6+ international), and you decline? You are owed <b>your money back</b>. Card refunds: 7 business days."
+  },
+  {
+   "title": "Late bag, *fee back*",
+   "prompt": "My checked bag reached me [hours] hours after my [domestic or international] flight landed. Here is my bag fee receipt and the delay report. Write a short, polite request to the airline for my bag fee back that names the US DOT rule.",
+   "why": "US rule: your bag fee comes back if the bag is <b>12+ hours late</b> on a domestic flight, 15 to 30 hours on international."
+  },
+  {
+   "title": "Beat the *24 hour clock*",
+   "prompt": "Here is my flight confirmation. Tell me when I booked, whether that was at least 7 days before departure, and the exact time my free cancellation ends. Then list every other cancel deadline in my hotel and car bookings.",
+   "why": "Booked with the airline 7+ days out? It must let you <b>cancel free within 24 hours</b> or hold the fare. Travel sites may differ."
+  },
+  {
+   "title": "Pay in *their money*",
+   "prompt": "I am going to [country]. Here are my card's terms. In 3 short lines: what should I tap when a card machine or ATM asks if I want to pay in US dollars or local currency, and what does my card charge on foreign purchases?",
+   "why": "Pick <b>local currency</b>. Paying in dollars lets the shop or ATM set the rate, often 3% or more worse."
+  },
+  {
+   "title": "Check your *passport*",
+   "prompt": "I am a [nationality] citizen flying to [countries] from [date] to [date]. My passport expires on [date]. For each country, list what I must check: passport validity, visa or entry permit, blank pages. Link only official government sites and flag anything I should confirm.",
+   "why": "Many countries want your passport valid <b>6 months past your trip</b>. US travelers: check each country page on travel.state.gov."
+  }
+ ],
+ "cta": {
+  "big": "Get your *money back*",
+  "keyword": "REFUND",
+  "gift": "Your free refund guide: the flight refund rule and copy and paste refund requests.",
+  "small": "Free in your DMs. *US rules. Not legal advice.*"
+ },
+ "sources": [
+  [
+   "US DOT",
+   "https://www.transportation.gov/briefing-room/what-airline-passengers-need-know-about-dots-automatic-refund-rule"
+  ],
+  [
+   "The Points Guy",
+   "https://thepointsguy.com/guide/avoid-dynamic-currency-conversion/"
+  ],
+  [
+   "Motley Fool",
+   "https://www.fool.com/money/credit-cards/articles/why-you-should-never-accept-the-currency-conversion-when-paying-with-a-credit-card-abroad"
+  ],
+  [
+   "KHOU",
+   "https://khou.com/article/news/verify/travel-verify/passport-at-least-six-months-before-expiration-to-travel-to-some-countries/536-af6a34c7-5a0f-49e1-93e0-95ac2f060ee7"
+  ]
+ ],
+ "bg_words": [
+  "FLIGHT",
+  "REFUND",
+  "BAGS",
+  "PASSPORT"
+ ],
+ "bg_facts": [
+  "Canceled flight and you decline? You are owed a refund.",
+  "Bag fee back if the bag is 12+ hours late domestic.",
+  "Booked 7+ days out: cancel free within 24 hours or hold.",
+  "Pay in local currency abroad."
+ ]
+}

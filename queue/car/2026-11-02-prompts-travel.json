@@ -1,0 +1,58 @@
+{
+ "id": "2026-11-02-prompts-travel",
+ "kind": "prompts",
+ "status": "bank",
+ "cover_idea": "Full lime cover: a tilted black SAMPLE boarding pass (JFK to LIS) slammed with a lime CANCELED stamp across the top, giant black headline FLIGHT CANCELED? ASK FOR CASH at the bottom.",
+ "theme": "travel: 5 Claude prompts (cash refund not voucher, late bag fee back, 24 hour rule, pay in local currency, passport validity check), tied to refund-agent / REFUND guide",
+ "gate": {
+  "score": 91,
+  "notes": "Accuracy 27/30 (significant change 3h/6h, cash not voucher, card refunds 7 business days, bag fee back 12h domestic / 15 to 30h international: US DOT passenger page + WFAA and The Points Guy; 24 hour rule only for bookings 7+ days out and only one option required: DOT Buying a Ticket page + The Points Guy; DCC adds 3%+ and applies at ATMs: The Points Guy 3 to 5% + Motley Fool 3 to 7%; 6 month passport validity for many countries and check State Dept country pages: KHOU Verify + The Points Guy. US only, said on slides and CTA). Hook 22/25. Clarity 19/20. Design 13/15 vs last 5: full lime background (none of the last 5), boarding pass with stamp (new visual), headline at the bottom at 150px fitted (vs mid/top), only raise shares bottom position; inner slides standard prompt template. CTA 10/10 (REFUND confirmed in manychat.json, gift matches /g/refund: flight refund rule + copy paste requests). QA PASS, all 7 slides legible. No prompt repeats earlier posts."
+ },
+ "sources": [
+  [
+   "US DOT: automatic refund rule",
+   "https://www.transportation.gov/briefing-room/what-airline-passengers-need-know-about-dots-automatic-refund-rule"
+  ],
+  [
+   "US DOT: buying a ticket (24 hour rule)",
+   "https://www.transportation.gov/individuals/aviation-consumer-protection/buying-ticket"
+  ],
+  [
+   "US DOT: 24 hour reservation guidance",
+   "https://www.transportation.gov/airconsumer/notice-24hour-reservation"
+  ],
+  [
+   "WFAA: new airline refund rules",
+   "https://wfaa.com/article/news/nation-world/new-airline-refund-rules-take-effect/507-491be7df-dee6-44cb-a22f-836a0eca9f73"
+  ],
+  [
+   "The Points Guy: passenger rights",
+   "https://thepointsguy.com/news/passenger-rights"
+  ],
+  [
+   "The Points Guy: dynamic currency conversion",
+   "https://thepointsguy.com/guide/avoid-dynamic-currency-conversion/"
+  ],
+  [
+   "Motley Fool: currency conversion abroad",
+   "https://www.fool.com/money/credit-cards/articles/why-you-should-never-accept-the-currency-conversion-when-paying-with-a-credit-card-abroad"
+  ],
+  [
+   "KHOU Verify: six month passport rule",
+   "https://khou.com/article/news/verify/travel-verify/passport-at-least-six-months-before-expiration-to-travel-to-some-countries/536-af6a34c7-5a0f-49e1-93e0-95ac2f060ee7"
+  ],
+  [
+   "The Points Guy: six month passport rule",
+   "https://thepointsguy.com/guide/complete-guide-to-the-six-month-passport-validity-rule/"
+  ]
+ ],
+ "captions": {
+  "ig": "Flight canceled? You can ask for cash, not a voucher. Let Claude write the request.\n\n5 prompts to copy:\n1. Cash, not a voucher: canceled or moved 3+ hours (6+ international) and you decline? You are owed a refund.\n2. Late bag, fee back: 12+ hours late on a domestic flight, 15 to 30 hours on international.\n3. Beat the 24 hour clock: booked with the airline 7+ days out? Cancel free within 24 hours or hold the fare.\n4. Pay in their money: pick local currency at card machines and ATMs abroad.\n5. Check your passport: many countries want it valid 6 months past your trip.\n\nBlack out booking and card numbers before you paste anything.\n\nComment REFUND and we will DM you our free refund guide: the flight refund rule and copy and paste refund requests.\n\nUS rules. General info, not legal advice. Sources: US DOT, The Points Guy, Motley Fool, KHOU.\n\n#claudeai #aiprompts #travelhacks #flightrefund #traveltips",
+  "tiktok": "5 Claude prompts for canceled flights, late bags and travel money\n\nCash refund not a voucher, bag fee back, the 24 hour rule, pay in local currency, passport check. Save this. Free refund guide: link in bio.\n\n#claudeai #aiprompts #travelhacks #flightrefund",
+  "tiktok_title": "5 Claude prompts for canceled flights, late bags and travel money",
+  "threads": "Flight canceled, or moved 3+ hours, and you turn down the new flight? Under US DOT rules you are owed your money back, not a voucher. Paste the airline's email into Claude (booking number blacked out) and ask it to write a short reply declining the rebooking and asking for a refund to your original payment. Free refund guide: autopilotoi.app/g/refund",
+  "x": "Airline canceled your flight? Turn down the voucher. Under US DOT rules you are owed a cash refund. Paste the email into Claude and have it write the request. Free guide: autopilotoi.app/g/refund"
+ },
+ "media": "docs/media/car/2026-11-02-prompts-travel/",
+ "built_at": "2026-11-02T13:20Z"
+}
