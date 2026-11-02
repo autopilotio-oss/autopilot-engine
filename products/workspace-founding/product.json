@@ -15,5 +15,6 @@
  "version": 2,
  "cover_v": 1,
  "priority": 6,
- "landing": "workspace/"
+ "landing": "workspace/",
+ "single_cover": true
 }

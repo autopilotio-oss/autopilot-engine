@@ -98,6 +98,25 @@ def sync_offer_code(st):
                     call("DELETE", f"/products/{pid}/offer_codes/{c['id']}", {}); DBG.append(["offer_code_deleted", slug, oc["name"]])
             else: DBG.append(["offer_code_ok", slug])
         except Exception as e: DBG.append(["offer_code_fail", slug, repr(e)[:200]])
+
+def prune_covers(st):
+    """Keep only the newest cover on products whose product.json sets "single_cover": true (old covers showed stale prices).
+    Logs everything; a failure changes nothing."""
+    for f in glob.glob(os.path.join(ROOT, "products", "*", "product.json")):
+        slug = os.path.basename(os.path.dirname(f)); p = json.load(open(f)); pid = (st.get(slug) or {}).get("id")
+        if not p.get("single_cover") or not pid: continue
+        try:
+            g = call_get(f"/products/{pid}?" + urllib.parse.urlencode({"access_token": TOK})).get("product", {})
+            covers = g.get("covers") or []
+            DBG.append(["covers", slug, [{k: c.get(k) for k in ("id", "url", "original_url")} for c in covers]])
+            if len(covers) <= 1: continue
+            keep = covers[-1]  # the last added is the new cover
+            for c in covers[:-1]:
+                if not c.get("id"): continue
+                try: call("DELETE", f"/products/{pid}/covers/{c['id']}", {}); DBG.append(["cover_deleted", slug, c["id"]])
+                except Exception as e: DBG.append(["cover_delete_fail", slug, repr(e)[:200]])
+            st[slug]["cover_kept"] = keep.get("id")
+        except Exception as e: DBG.append(["covers_fail", slug, repr(e)[:200]])
 def main():
     if not TOK: print("No GUMROAD_TOKEN yet"); return
     try:
@@ -175,6 +194,7 @@ def main():
             DBG.append(["fail", slug, repr(e)[:300]]); print(f"::warning title=Gumroad failed::{slug} {str(e)[:300]}")
     reconcile(st)
     heal_unpublished(st)
+    prune_covers(st)
     sync_offer_code(st)
     reconcile(st)
     json.dump(st, open(sp, "w"), indent=1)

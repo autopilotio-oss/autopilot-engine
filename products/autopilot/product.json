@@ -15,5 +15,6 @@
  "version": 3,
  "cover_v": 2,
  "priority": 5,
- "landing": "autopilot/"
+ "landing": "autopilot/",
+ "single_cover": true
 }
