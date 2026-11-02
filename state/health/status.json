@@ -88,7 +88,7 @@
   "severity": "SEV-2"
  },
  "landing_price:front_desk_kit": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-2"
  },
  "landing_price:office_autopilot": {
@@ -108,7 +108,7 @@
   "severity": "SEV-3"
  },
  "page:autopilot_redirect": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-2"
  },
  "page:brain": {
@@ -120,10 +120,22 @@
   "severity": "SEV-2"
  },
  "page:front_desk": {
-  "ok": false,
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_after_hours": {
+  "ok": true,
   "severity": "SEV-2"
  },
  "page:guide_bill": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_price_reply": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:guide_quote_follow_up": {
   "ok": true,
   "severity": "SEV-2"
  },
@@ -168,7 +180,7 @@
   "severity": "SEV-2"
  },
  "page:store_redirect": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-2"
  },
  "page:workspace": {
@@ -196,7 +208,7 @@
   "severity": "SEV-1"
  },
  "viral_queue_guard": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-1"
  },
  "worker:daily_pulse": {
