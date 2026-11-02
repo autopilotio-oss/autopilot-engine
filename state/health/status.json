@@ -208,7 +208,7 @@
   "severity": "SEV-1"
  },
  "viral_queue_guard": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-1"
  },
  "worker:daily_pulse": {
