@@ -1,0 +1,14 @@
+name: Gumroad test code (one use, 100% off)
+on:
+  workflow_dispatch:
+    inputs:
+      action: { description: "create or delete", required: true, default: "create" }
+      product: { description: "permalink", required: true, default: "autopilot" }
+      code: { description: "code name", required: true }
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/gumroad_test_code.py "${{ github.event.inputs.action }}" "${{ github.event.inputs.product }}" "${{ github.event.inputs.code }}"
+        env: { GUMROAD_TOKEN: "${{ secrets.GUMROAD_TOKEN }}" }
