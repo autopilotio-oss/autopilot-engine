@@ -128,6 +128,9 @@ for b in beats:
     elif k == "drafts":
         b["d_t"] = [T(.12 + .22 * q) for q in range(3)]
         for q, t in enumerate(b["d_t"]): ev.append(["msg", t, q])
+    elif k == "commentcard":
+        L2 = e - s; off = sc.get("clip_ins", {}).get(sc["plates"][0], 0); rate = min(1, (4.95 - off) / L2)
+        tc = round(s + max(.1, sc["card_at"] - off) / rate, 3); ev.append(["impact", tc, 1]); ev.append(["cta", tc + .1, 0]); bursts.append({"t": tc + .05, "x": 540, "y": 1250, "n": 60, "seed": 41})
     elif k == "comment":
         b["c_t"] = [T(.05), T(.38), T(.5), T(.62)]
         for c in range(len(sc["kw"])): ev.append(["key", round(b["c_t"][0] + .3 + c * .08, 3), c])

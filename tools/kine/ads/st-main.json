@@ -5,6 +5,7 @@
   "NIGHT",
   "NIGHT",
   "NIGHT",
+  "HOME",
   "NIGHT",
   "THE TURN",
   "THE TURN",
@@ -26,9 +27,13 @@
    "scene": {
     "type": "plain",
     "plates": [
-     "sh01",
-     "sh02"
-    ]
+     "sh02",
+     "sh01"
+    ],
+    "clip_ins": {
+     "sh02": 0.4,
+     "sh01": 1.0
+    }
    },
    "agent": 0
   },
@@ -42,7 +47,10 @@
     "type": "plain",
     "plates": [
      "sh03"
-    ]
+    ],
+    "clip_ins": {
+     "sh03": 1.4
+    }
    },
    "agent": 1
   },
@@ -55,24 +63,48 @@
     "type": "plain",
     "plates": [
      "sh04"
-    ]
+    ],
+    "clip_ins": {
+     "sh04": 0.0
+    }
    },
    "agent": 2
   },
   {
-   "say": "He didn't start a business to miss this.",
+   "say": "He started this business for this.",
    "head": [
-    "HE MISSED",
-    "*THIS.*"
+    "HE STARTED IT",
+    "*FOR THIS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh18"
+    ],
+    "clip_ins": {
+     "sh18": 1.6
+    }
+   },
+   "agent": 3
+  },
+  {
+   "say": "Not to miss this.",
+   "head": [
+    "NOT TO",
+    "*MISS THIS.*"
    ],
    "scene": {
     "type": "plain",
     "plates": [
      "sh05",
      "sh06"
-    ]
+    ],
+    "clip_ins": {
+     "sh05": 2.0,
+     "sh06": 2.2
+    }
    },
-   "agent": 3
+   "agent": 4
   },
   {
    "say": "So he hired me.",
@@ -84,9 +116,12 @@
     "type": "plain",
     "plates": [
      "sh07"
-    ]
+    ],
+    "clip_ins": {
+     "sh07": 1.6
+    }
    },
-   "agent": 4
+   "agent": 5
   },
   {
    "say": "Fifteen minutes, and I knew his prices, his rules, how he talks.",
@@ -97,26 +132,32 @@
    "scene": {
     "type": "plain",
     "plates": [
-     "sh08",
      "sh09"
-    ]
+    ],
+    "clip_ins": {
+     "sh09": 0.0
+    }
    },
-   "agent": 5
+   "agent": 6
   },
   {
-   "say": "Now I draft the replies, the quotes, the follow ups.",
+   "say": "Now he does the work he loves, and I draft the rest. Replies. Quotes. Follow ups.",
    "head": [
-    "NOW I",
-    "*DRAFT IT ALL.*"
+    "HE DOES THE WORK.",
+    "*I DRAFT THE REST.*"
    ],
    "scene": {
     "type": "drafts",
     "plates": [
-     "sh10",
-     "sh16"
-    ]
+     "sh19",
+     "sh10"
+    ],
+    "clip_ins": {
+     "sh19": 3.2,
+     "sh10": 1.0
+    }
    },
-   "agent": 6
+   "agent": 7
   },
   {
    "say": "He reads them. Hits send.",
@@ -128,9 +169,12 @@
     "type": "plain",
     "plates": [
      "sh11"
-    ]
+    ],
+    "clip_ins": {
+     "sh11": 0.8
+    }
    },
-   "agent": 7
+   "agent": 8
   },
   {
    "say": "Are you done yet? Yeah. I'm done.",
@@ -141,11 +185,15 @@
    "scene": {
     "type": "plain",
     "plates": [
-     "sh12",
-     "sh13"
-    ]
+     "sh13",
+     "sh17"
+    ],
+    "clip_ins": {
+     "sh13": 1.0,
+     "sh17": 1.5
+    }
    },
-   "agent": 8
+   "agent": 9
   },
   {
    "say": "Every night.",
@@ -155,26 +203,53 @@
    "scene": {
     "type": "plain",
     "plates": [
-     "sh17",
+     "sh16",
      "sh14"
-    ]
+    ],
+    "clip_ins": {
+     "sh16": 0.0,
+     "sh14": 1.0
+    }
    },
-   "agent": 9
+   "agent": 10
   },
   {
    "say": "Want me for your business? Comment Autopilot, and I'll send you the setup.",
-   "head": [
-    "COMMENT",
-    "*\u201cAUTOPILOT\u201d*"
-   ],
+   "head": [],
    "scene": {
-    "type": "comment",
+    "type": "commentcard",
     "plates": [
      "sh15"
     ],
-    "kw": "AUTOPILOT"
+    "clip_ins": {
+     "sh15": 1.0
+    },
+    "card_at": 2.7,
+    "track": [
+     [
+      3.0,
+      186,
+      1215,
+      654,
+      405
+     ],
+     [
+      4.0,
+      141,
+      990,
+      774,
+      570
+     ],
+     [
+      4.9,
+      69,
+      999,
+      921,
+      681
+     ]
+    ]
    },
-   "agent": 10
+   "agent": 11
   }
  ],
  "meta": {
