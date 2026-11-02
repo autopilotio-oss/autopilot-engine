@@ -8,34 +8,14 @@
   "ok"
  ],
  [
-  "cover",
-  "workspace",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/tf8y7dtw1f558udzznifnpjvd4kd', 'original_url': 'https://public-files.gumroad.com/fk1nmwb5f4423e4vhw7y5jocxi40', 'thumbnail': None"
- ],
- [
-  "cover",
-  "autopilot",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/ro978digujx0lxen6oxi0tsa4boq', 'original_url': 'https://public-files.gumroad.com/1gl2x7ky4lw8ojfblwuy66dfvy2f', 'thumbnail': None"
- ],
- [
   "covers",
   "autopilot",
   [
-   [
-    44.7,
-    "f2c6c2579c954f99e6a8e47fa28ffcaa"
-   ],
    [
     0.0,
     "de84bb1db9273418e0a589ac1ab31f49"
    ]
   ]
- ],
- [
-  "cover_deleted",
-  "autopilot",
-  "f2c6c2579c954f99e6a8e47fa28ffcaa",
-  44.7
  ],
  [
   "covers",
@@ -52,20 +32,10 @@
   "workspace",
   [
    [
-    75.0,
-    "2e6f12f9a414c0dba778051511acb971"
-   ],
-   [
     0.0,
     "c9839cc67729ff60018b9769bd36f213"
    ]
   ]
- ],
- [
-  "cover_deleted",
-  "workspace",
-  "2e6f12f9a414c0dba778051511acb971",
-  75.0
  ],
  [
   "offer_code_ok",

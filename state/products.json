@@ -5,7 +5,9 @@
   "published": true,
   "live": true,
   "version": 2,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Bill Agent"
  },
  "credit-agent": {
   "id": "foI8-MiTn-D_fGDn6BTG-A==",
@@ -20,7 +22,9 @@
   "published": true,
   "live": true,
   "version": 2,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Debt Agent"
  },
  "money-agents": {
   "id": "x6n2xi-MW0lqHI5dXfS10g==",
@@ -45,7 +49,9 @@
   "published": true,
   "live": true,
   "version": 3,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Refund Agent"
  },
  "raise-agent": {
   "id": "kLaDgPTtWVpuxwJoKv995g==",
@@ -53,7 +59,9 @@
   "published": true,
   "live": true,
   "version": 3,
-  "cover_v": 3
+  "cover_v": 3,
+  "live_price_cents": 1000,
+  "live_name": "AUTOPILOT.OI Raise Agent"
  },
  "all-money-agents": {
   "id": "46txwcc0xEUbjJR-kM3Yfw==",
