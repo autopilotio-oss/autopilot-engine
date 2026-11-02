@@ -13,7 +13,7 @@ GUIDES = [
             ("End with one question", "Ask for the booking, not for more questions.")],
   "ex": [("How much for a full detail on an SUV? Free Saturday?", "Hi! A full SUV detail is $250 and takes about 3 hours. We come to you. I have Saturday at 9 AM or 1 PM. Want me to lock one in?")],
   "prompt": "You write customer replies for my business. My services and prices: [paste your price list]. Reply to this message in 3 short sentences: give the real price, what's included and how long it takes, offer two times from my availability [times], and end with one question that books the job. If you don't know a price, write [CHECK] instead of guessing. Message: [paste]"},
- {"slug": "after-hours-customer-messages", "title": "What to do with customer messages that arrive after hours", "k": "After hours",
+ {"slug": "after-hours-customer-messages", "title": "Answering customer messages after hours", "k": "After hours",
   "desc": "How to handle texts and calls that come in while you're on a job or done for the day, without living on your phone.",
   "lead": "Messages that arrive at 7 or 9 PM are often the most ready to buy, and they're the easiest to lose. You don't have to answer instantly, but you do need a system.",
   "steps": [("Acknowledge fast, answer properly later", "A short note you write once (\"Thanks, I'm on a job, I'll send your price by 8 AM\") keeps the lead warm without you typing a quote at night."),

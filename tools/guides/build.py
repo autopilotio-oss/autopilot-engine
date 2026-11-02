@@ -79,7 +79,7 @@ def OPTIN_TOP(g):
 def page(slug, g):
     pslug = slug; slug = g.get("base", slug)  # drafts reuse the live guide's canonical, og and kit links
     out = [f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(g['title'])} · Free guide · AUTOPILOT.OI</title><meta name="description" content="{e(g['sub'])}">
+<title>{e(g['title'])}{' · Free guide' if len(g['title']) < 34 else ''} · AUTOPILOT.OI</title><meta name="description" content="{e(g['sub'])}">
 {'<meta name="robots" content="noindex,nofollow">' if g.get("draft") else ''}<link rel="canonical" href="https://autopilotoi.app/g/{slug}/"><meta property="og:type" content="article"><meta property="og:site_name" content="AUTOPILOT.OI">
 <meta property="og:title" content="{e(g['title'])} (free guide)"><meta property="og:description" content="{e(g['sub'])}"><meta property="og:url" content="https://autopilotoi.app/g/{slug}/">
 <meta property="og:image" content="https://autopilotoi.app/g/{slug}/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://autopilotoi.app/g/{slug}/og.png">

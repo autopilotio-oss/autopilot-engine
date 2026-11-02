@@ -89,6 +89,14 @@ def check_manifest(fetch=http_get, root=ROOT):
                 out.append({"check": f"landing_price:{o['id']}", "ok": code == 200 and price in body, "severity": "SEV-2", "detail": f"{code}, {price} {'found' if price in body else 'MISSING'}"})
             except Exception as e:
                 out.append({"check": f"landing_price:{o['id']}", "ok": False, "severity": "SEV-2", "detail": str(e)[:120]})
+    try:  # parked library kits: price on Gumroad must match the manifest (read from the API state, not the JS page)
+        stall = json.load(open(os.path.join(root, "state", "products.json")))
+        for perm, lib in (M.get("library") or {}).items():
+            lp = stall.get(perm, {}).get("live_price_cents")
+            out.append({"check": f"library_price:{perm}", "ok": lp == lib["price_cents"], "severity": "SEV-2",
+                        "detail": f"Gumroad API price {lp} vs manifest {lib['price_cents']}"})
+    except Exception as e:
+        out.append({"check": "library_price", "ok": False, "severity": "SEV-2", "detail": str(e)[:120]})
     try:
         code, js = fetch("https://autopilotoi.app/assets/ap.js")
         import re as _re

@@ -3,10 +3,10 @@ Product pages (/store/<slug>, /office-autopilot) stay where they are; this only 
 import os, html
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))); D = f"{ROOT}/docs"
 e = html.escape; GR = "https://autopilotoi.gumroad.com/l/"
-def head(title, desc, path):
+def head(title, desc, path, img="autopilot-cover.png"):  # share image: the product the page sells
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="https://autopilotoi.app{path}">
-<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="https://autopilotoi.app/store/workspace-founding-cover.png">
+<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="https://autopilotoi.app/store/{img}">
 <meta name="theme-color" content="#050605"><link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -62,7 +62,7 @@ def marketplace():
 <div class="sec"><div class="wrap grid2" style="align-items:center"><div><span class="tagline dev">In development</span><h2 style="margin:16px 0 14px">Want it to run <em>without opening Claude?</em></h2><p class="lead">Kits draft when you ask. Workspace, our software, will catch the lead while you're on a job and have the reply waiting. Kit buyers get their purchase credited to the first month.</p><a class="btn" style="margin-top:24px" href="/workspace/">See Workspace</a></div>{INBOX}</div></div>""" + FOOT
 
 def workspace():
-    return head("Workspace · every lead answered · AUTOPILOT.OI", "Software for owner operated service businesses: every new lead answered within a minute, replies and quotes drafted, quiet quotes followed up. In development; founding spots open.", "/workspace/") + nav("w") + f"""
+    return head("Workspace · every lead answered · AUTOPILOT.OI", "Software for owner operated service businesses: every new lead answered within a minute, replies and quotes drafted, quiet quotes followed up. In development; founding spots open.", "/workspace/", "workspace-founding-cover.png") + nav("w") + f"""
 <div class="wrap hero grid2" style="align-items:center;gap:40px"><div><span class="tagline dev">In development · founding spots open</span>
 <h1 style="margin:20px 0 22px">Every lead answered.<br><em>Every quote followed up.</em></h1>
 <p class="lead">Workspace is the software we're building for owner operated service businesses. New calls, texts and form leads get your acknowledgment within a minute. The real reply and quote are drafted from your prices, and quiet quotes get chased. You approve from your phone.</p>

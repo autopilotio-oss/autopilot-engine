@@ -53,7 +53,8 @@ def reconcile(st):
             # The list endpoint does not return every product: ask for this one directly before calling it unpublished.
             try:
                 g = call_get(f"/products/{v['id']}?" + urllib.parse.urlencode({"access_token": TOK})).get("product", {})
-                if g.get("published") and not g.get("deleted"): live.append(k); v["live"] = True; continue
+                if g.get("published") and not g.get("deleted"):
+                    live.append(k); v["live"] = True; v["live_price_cents"] = g.get("price"); v["live_name"] = g.get("name"); continue
             except Exception as e: DBG.append(["product_get_fail", k, repr(e)[:120]])
         if v.get("published") and k not in live:
             DBG.append(["not_live_on_gumroad", k]); v["live"] = False
