@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-02T16:30:00Z",
+  "at": "2026-11-02T17:38:06Z",
   "posts_today": {
     "threads": {
       "published": 2,
@@ -35,7 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-02T16:28:00Z"
+      "metrics_seen_at": "2026-11-02T17:38:06Z"
     },
     {
       "network": "instagram",
@@ -49,7 +49,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-02T16:28:00Z"
+      "metrics_seen_at": "2026-11-02T17:38:06Z"
     },
     {
       "network": "instagram",
@@ -63,7 +63,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-02T16:28:00Z"
+      "metrics_seen_at": "2026-11-02T17:38:06Z"
     }
   ],
   "kit": {
@@ -74,5 +74,5 @@
     "orders_all_time": 0,
     "orders_7d": 0
   },
-  "notes": "13:28 ART: 7 provider slots published today (10:00 subs leak on IG, TikTok, Threads, X; 12:00 PHP alert on Threads, TikTok, X), 16 provider slots pending, 0 ERROR. Past-due pending slots (Threads 09:30, 11:00, 13:00; X 12:00 x2; IG 12:30) are all draft=true, awaiting approval, not errors. IG reels analytics re-pulled 16:28Z for 6-72h window: 7 reels, all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. Threads, X and TikTok analytics MISSING. Revenue feed: 0 verified orders all time (unchanged). ci.yml latest run failure (5 of 9 failed in 24h), already listed in Fix needed today. HQ feed written to status/hub (v14). git fetch timed out this run; committed via GitHub API."
+  "notes": "14:40 ART: 7 provider slots published today (10:00 subs leak on IG, TikTok, Threads, X; 12:00 PHP alert on Threads, TikTok, X), 16 pending, 0 ERROR. Past-due pending slots are draft=true awaiting approval, not errors. 6-72h analytics: IG 7 reels all 0 saves, 0 shares, 0 comments (ranked by reach only, no winner). TikTok 9 videos: views 1 to 103 (top: 7 agents for small business 103, subs bank statement 100, airline refund 97), 0 shares, 1 comment (Binance hack), saves and reach not provided by Metricool (MISSING). Threads and X analytics MISSING. Revenue: 0 verified orders all time (unchanged). ci.yml latest run success (4 of 9 failed in 24h), no workflow failing now. HQ feed written to status/hub (v15)."
 }
