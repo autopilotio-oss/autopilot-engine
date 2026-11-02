@@ -57,7 +57,7 @@ G["debt"] = dict(
  sources=[("CFPB: debt and credit tools","https://www.consumerfinance.gov/consumer-tools/credit-cards/"),("FTC: how to get out of debt","https://consumer.ftc.gov/articles/how-get-out-debt")],
 )
 G["subs"] = dict(
- kw="SUBS", bundle=False, title="Find and kill forgotten subscriptions", sub="Most people pay for at least one subscription they forgot about. Here's how to find every one in 10 minutes with Claude, and cancel the right way.",
+ kw="SUBS", bundle=False, title="Find and kill forgotten subscriptions", sub="A subscription you forgot about keeps charging until you stop it. Here's how to find every one in your own statements with Claude, and cancel the right way.",
  time="About 15 minutes", need="2 to 3 months of bank and card statements, and Claude",
  why="Subscriptions are built to be forgotten: small amounts, automatic charges, free trials that quietly convert. Ten minutes with your statements usually finds money you can keep every single month.",
  steps=[
