@@ -8,6 +8,16 @@
   "ok"
  ],
  [
+  "cover",
+  "autopilot",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/i7218a4036chzbk0a95bhtbn924w', 'original_url': 'https://public-files.gumroad.com/i7218a4036chzbk0a95bhtbn924w', 'thumbnail': None"
+ ],
+ [
+  "update",
+  "autopilot",
+  "{'success': True, 'product': {'name': 'Autopilot', 'description': \"<p><strong>Put the busy work on Autopilot.</strong></p><p>Autopilot is an agent that interviews you for about 15 minutes, learns your prices, your rules and how you talk, then builds your systems inside the Claude app with you:</p><u"
+ ],
+ [
   "offer_code_ok",
   "subs-agent"
  ],
