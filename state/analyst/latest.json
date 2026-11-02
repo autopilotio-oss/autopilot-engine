@@ -1,16 +1,17 @@
 {
-  "at": "2026-11-02T12:30:00Z",
+  "at": "2026-11-02T13:50:00Z",
   "posts_today": {
-    "threads": {"published": 0, "pending": 8, "error": 0},
-    "twitter": {"published": 0, "pending": 6, "error": 0},
-    "instagram": {"published": 0, "pending": 6, "error": 0},
-    "tiktok": {"published": 0, "pending": 4, "error": 0}
+    "threads": {"published": 1, "pending": 7, "error": 0},
+    "twitter": {"published": 1, "pending": 4, "error": 0},
+    "instagram": {"published": 1, "pending": 5, "error": 0},
+    "tiktok": {"published": 1, "pending": 3, "error": 0}
   },
   "top_posts": [
-    {"network": "instagram", "published_at": "2026-10-31T23:31:15-03:00", "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds.", "metrics": {"reach": 75, "views": 78, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/", "metrics_seen_at": "2026-11-02T12:30:00Z"},
-    {"network": "instagram", "published_at": "2026-10-31T17:47:12-03:00", "text": "$133 a month. $1,596 a year. On things you don't even use.", "metrics": {"reach": 73, "views": 73, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfKufU-D6S_/", "metrics_seen_at": "2026-11-02T12:30:00Z"},
-    {"network": "instagram", "published_at": "2026-11-01T00:15:58-03:00", "text": "Stop guessing what to sell on TikTok Shop.", "metrics": {"reach": 61, "views": 74, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLbAPnCFj2/", "metrics_seen_at": "2026-11-02T12:30:00Z"}
+    {"network": "instagram", "published_at": "2026-10-31T23:31:15-03:00", "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds.", "metrics": {"reach": 75, "views": 78, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/", "metrics_seen_at": "2026-11-02T13:50:00Z"},
+    {"network": "instagram", "published_at": "2026-10-31T17:47:12-03:00", "text": "$133 a month. $1,596 a year. On things you don't even use.", "metrics": {"reach": 73, "views": 73, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfKufU-D6S_/", "metrics_seen_at": "2026-11-02T13:50:00Z"},
+    {"network": "instagram", "published_at": "2026-11-01T00:15:58-03:00", "text": "Stop guessing what to sell on TikTok Shop.", "metrics": {"reach": 61, "views": 74, "saves": 0, "shares": 0, "comments": 0}, "url": "https://www.instagram.com/reel/DfLbAPnCFj2/", "metrics_seen_at": "2026-11-02T13:50:00Z"}
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "09:30 ART: nothing published yet today; 24 provider slots pending (many still draft=true in Metricool), 0 ERROR visible. IG reels 6 to 72h: 7 reels, all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok, Threads, X analytics MISSING (not pulled). Revenue feed: 0 verified orders all time (unchanged). ci.yml latest conclusion failure (4 of 6 runs failed in 24h), logged in next-actions. HQ feed written to status/hub (v11)."
+  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0},
+  "notes": "10:50 ART: 4 published today (10:00 subs leak slot on IG, TikTok, Threads, X), 19 provider slots pending, 0 ERROR. Threads 09:30 post (412092221) is past due but still draft=true, not an error. IG reels 6 to 72h: 7 reels, all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok 6 to 72h: 9 videos, views up to 103 (ai-employees), shares 0, 1 comment (Binance hack); reach MISSING from Metricool. Threads and X analytics MISSING (not pulled). Revenue feed: 0 verified orders all time (unchanged). ci.yml latest run success (3 of 6 failed in 24h, already listed). HQ feed written to status/hub (v12)."
 }
