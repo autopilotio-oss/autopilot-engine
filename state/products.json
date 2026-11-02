@@ -108,17 +108,24 @@
   "id": "TU4m2U6Yau-RyJWQbsN8mw==",
   "url": "https://autopilotoi.gumroad.com/l/workspace",
   "published": true,
-  "version": 2,
+  "version": 3,
   "adopted": true,
   "live": true,
-  "cover_v": 1
+  "cover_v": 2
  },
  "autopilot": {
   "id": "yPCMPi3vNDhf-CHlO_CsRA==",
   "url": "https://autopilotoi.gumroad.com/l/autopilot",
   "published": true,
-  "version": 2,
+  "version": 3,
   "live": true,
-  "cover_v": 1
+  "cover_v": 2
+ },
+ "workspace-founding": {
+  "id": "XmPB321EqCacOI4blTqTFw==",
+  "url": "https://autopilotoi.gumroad.com/l/workspace-founding",
+  "published": true,
+  "version": 1,
+  "live": true
  }
 }

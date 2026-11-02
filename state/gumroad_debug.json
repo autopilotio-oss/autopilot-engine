@@ -9,13 +9,23 @@
  ],
  [
   "cover",
+  "workspace",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/wlk0m895a2g9wd8azktt0v61wtoh', 'original_url': 'https://public-files.gumroad.com/u76ew7zwdwmdt34xjuv6z3qx1m3l', 'thumbnail': None"
+ ],
+ [
+  "update",
+  "workspace",
+  "{'success': True, 'product': {'name': 'Office Autopilot by AUTOPILOT.OI', 'description': \"<p><em>Office Autopilot (formerly The Workspace kit).</em></p><p><strong>Set up 7 Claude agents for your business in about an hour.</strong></p><p>Morning Brief, Inbox, Booking, Follow Up, Invoice, Review and D"
+ ],
+ [
+  "cover",
   "autopilot",
-  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/i7218a4036chzbk0a95bhtbn924w', 'original_url': 'https://public-files.gumroad.com/i7218a4036chzbk0a95bhtbn924w', 'thumbnail': None"
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/rz6ky7kanik2c1d8m6ph478baeuv', 'original_url': 'https://public-files.gumroad.com/i7218a4036chzbk0a95bhtbn924w', 'thumbnail': None"
  ],
  [
   "update",
   "autopilot",
-  "{'success': True, 'product': {'name': 'Autopilot', 'description': \"<p><strong>Put the busy work on Autopilot.</strong></p><p>Autopilot is an agent that interviews you for about 15 minutes, learns your prices, your rules and how you talk, then builds your systems inside the Claude app with you:</p><u"
+  "{'success': True, 'product': {'name': 'Front Desk Kit by AUTOPILOT.OI', 'description': \"<p><strong>Every customer, answered in your voice.</strong></p><p>A setup kit you install in your own Claude account. Its agent interviews you for about 15 minutes, learns your prices, your rules and how you talk"
  ],
  [
   "offer_code_ok",
