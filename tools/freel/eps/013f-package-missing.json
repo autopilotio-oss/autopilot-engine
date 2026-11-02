@@ -1,0 +1,106 @@
+{
+ "id": "package-missing",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Refund Fighter",
+ "lane": "money traps",
+ "hook": [
+  "Your package never showed up",
+  "AI builds the refund case"
+ ],
+ "hook_lines": [
+  "Your *package*",
+  "never",
+  "*showed up*"
+ ],
+ "tests": "hook_number_001 arm A: plain problem statement hook, no number in the first voice line",
+ "caption": {
+  "ig": "Order never arrived and the store keeps saying wait? This agent reads your order email and tracking, checks the store's own refund policy and writes a short request that quotes it, plus the next step if they say no. Sample order shown. Comment REFUND and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Order never arrived and the store keeps saying wait? This agent reads your order email and tracking, checks the store's own refund policy and writes a short request that quotes it, plus the next step if they say no. Sample order shown. Refund Fighter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "stat": {
+  "count": 64,
+  "dec": 0,
+  "prefix": "$",
+  "label": "refund requested, policy quoted",
+  "note": "sample order"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Your package never showed up and the store keeps saying wait. Give this agent the order email.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "order_confirmation.eml",
+     "tracking_page.png"
+    ],
+    "text": "my order never arrived, help me get a refund"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It checks the date they promised, the tracking, and the store's own refund policy.",
+   "screen": {
+    "type": "work",
+    "title": "Building the case",
+    "lines": [
+     "read the order email",
+     "promised by Oct 14",
+     "tracking stuck since Oct 9",
+     "find the refund policy line"
+    ]
+   }
+  },
+  {
+   "chip": "case",
+   "say": "Three weeks late, no tracking update, and their policy covers it. Sample order shown.",
+   "screen": {
+    "type": "checks",
+    "title": "Case check",
+    "rows": [
+     [
+      "Promised delivery date passed",
+      "21 DAYS",
+      0
+     ],
+     [
+      "No tracking update since Oct 9",
+      "STUCK",
+      0
+     ],
+     [
+      "Policy refunds orders not delivered",
+      "MATCH",
+      1
+     ]
+    ],
+    "verdict": "ASK FOR A REFUND",
+    "ok": true
+   }
+  },
+  {
+   "chip": "request",
+   "say": "Then it writes the request that quotes their policy, and the next step if they say no.",
+   "screen": {
+    "type": "doc",
+    "title": "Refund request",
+    "sub": "sample order  ·  ready for you to send",
+    "text": "Hi,\n\nMy order 2291 ($64.00) was due by Oct 14 and has not arrived. Tracking has not updated since Oct 9.\n\nYour refund policy covers orders that are not delivered. Please refund $64.00 to my original payment method.\n\nThank you."
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the Refund Fighter at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Refund Fighter",
+    "sub": "the full agent",
+    "cover": "refund",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}

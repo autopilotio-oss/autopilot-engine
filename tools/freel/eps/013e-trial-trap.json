@@ -1,0 +1,110 @@
+{
+ "id": "trial-trap",
+ "kind": "product",
+ "room": "ledger",
+ "agent": "Subscription Leak Hunter",
+ "lane": "money traps",
+ "hook": [
+  "Your free trial just turned paid",
+  "AI catches every one"
+ ],
+ "hook_lines": [
+  "Your free *trial*",
+  "just turned",
+  "*paid*"
+ ],
+ "tests": "hook_number_001 arm B: hook scenario names the charge (sample $14.99) in the first voice line; EARLY learning: subs-agent IG avg watch 2.1s, 13.5% 3s view rate (1 reel)",
+ "caption": {
+  "ig": "Free trials that quietly turn into monthly charges are easy to miss. This agent reads your statement, finds every trial that turned paid and every price that went up, and writes the cancel message for you to send. Sample statement shown. Comment SUBS and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Free trials that quietly turn into monthly charges are easy to miss. This agent reads your statement, finds every trial that turned paid and every price that went up, and writes the cancel message for you to send. Sample statement shown. Subscription Leak Hunter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "stat": {
+  "count": 36.97,
+  "dec": 2,
+  "prefix": "$",
+  "label": "a month in charges to review",
+  "note": "sample statement"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Free trial ended and now it's fifteen dollars a month? Give this agent your statement.",
+   "screen": {
+    "type": "ask",
+    "files": [
+     "bank_statement.csv"
+    ],
+    "text": "find trials that turned paid"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It finds every charge that started after a free trial, and every price that went up.",
+   "screen": {
+    "type": "work",
+    "title": "Checking recurring charges",
+    "lines": [
+     "read 3 months of charges",
+     "find first charge after a trial",
+     "compare each price to last month",
+     "flag anything new or higher"
+    ]
+   }
+  },
+  {
+   "chip": "found",
+   "say": "Two trials turned paid and one price went up. Sample statement shown.",
+   "screen": {
+    "type": "table",
+    "title": "Charges to review",
+    "sample": true,
+    "cols": [
+     "Merchant",
+     "Monthly",
+     "What changed"
+    ],
+    "rows": [
+     [
+      "PhotoPro",
+      "$14.99",
+      "trial ended Oct 2"
+     ],
+     [
+      "MealBox",
+      "$9.99",
+      "trial ended Sep 18"
+     ],
+     [
+      "MusicNow",
+      "$11.99",
+      "was $10.99"
+     ]
+    ],
+    "foot": "$36.97 a month  ·  sample statement"
+   }
+  },
+  {
+   "chip": "cancel",
+   "say": "Then it writes the cancel message for each one, ready for you to send.",
+   "screen": {
+    "type": "doc",
+    "title": "Cancel message",
+    "sub": "sample statement  ·  ready for you to send",
+    "text": "Hi,\n\nPlease cancel my PhotoPro subscription today and confirm by email.\n\nI did not mean to continue after the free trial. If your policy allows, please refund the Oct 2 charge of $14.99.\n\nThank you."
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Get the Subscription Leak Hunter at the link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Subscription Leak Hunter",
+    "sub": "the full agent",
+    "cover": "subs",
+    "price": "$10",
+    "url": "autopilotoi.app"
+   }
+  }
+ ]
+}
