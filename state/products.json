@@ -127,7 +127,8 @@
   "live": true,
   "cover_v": 2,
   "live_price_cents": 7900,
-  "live_name": "Office Autopilot by AUTOPILOT.OI"
+  "live_name": "Office Autopilot by AUTOPILOT.OI",
+  "cover_kept": "2e6f12f9a414c0dba778051511acb971"
  },
  "autopilot": {
   "id": "yPCMPi3vNDhf-CHlO_CsRA==",
@@ -137,7 +138,8 @@
   "live": true,
   "cover_v": 2,
   "live_price_cents": 3900,
-  "live_name": "Front Desk Kit by AUTOPILOT.OI"
+  "live_name": "Front Desk Kit by AUTOPILOT.OI",
+  "cover_kept": "f2c6c2579c954f99e6a8e47fa28ffcaa"
  },
  "workspace-founding": {
   "id": "XmPB321EqCacOI4blTqTFw==",
