@@ -230,7 +230,7 @@ HEAD = lambda title, desc, canon, og: f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{og}"><link rel="canonical" href="{canon}">
-<meta name="theme-color" content="#000000"><link rel="icon" href="/logo.png">
+<meta name="theme-color" content="#000000"><link rel="icon" href="/logo-128.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600;14..32,700;14..32,900&display=swap" rel="stylesheet">
 <style>{CSS}</style><link rel="stylesheet" href="/assets/brand.css"></head><body><div class="glow"></div><div class="w">"""
@@ -253,7 +253,7 @@ def page(slug, p):
     got = ("A PDF with the setup agent, the 15 interview questions, the Autopilot instructions (9 commands), a worked example, message templates, a cheat sheet and a time back tracker." if slug == "autopilot" else KIT) if not p.get("bundle") else f"{KIT[:-1]}, for each kit, plus the Pro setup that installs them together in one Claude Project."
     og = f"https://autopilotoi.app/store/{slug}-cover.png" if os.path.exists(f"{ROOT}/docs/store/{slug}-cover.png") else "https://autopilotoi.app/logo.png"
     return HEAD(f"{p['name']} · {p['price']} · AUTOPILOT.OI", p["lead"], f"https://autopilotoi.app/store/{slug}/", og) + f"""
-<div class="hd"><a href="/"><img src="/logo.png" alt=""></a><b>AUTOPILOT.OI</b><a class="bk" href="/store/">← Store</a></div>
+<div class="hd"><a href="/"><img src="/logo-128.png" alt=""></a><b>AUTOPILOT.OI</b><a class="bk" href="/store/">← Store</a></div>
 <div class="tag">{'Claude setup · one time' if slug == 'autopilot' else 'Claude prompt kit'} · {p['price']}{' · bundle' if p.get('bundle') else ''}</div>
 <h1>{(e(p['title'].split('|')[0]) + '<br><em>' + e(p['title'].split('|')[1]) + '</em>') if '|' in p['title'] else e(p['title'])}</h1>
 <p class="lead">{e(p['lead'])}</p>
@@ -284,7 +284,7 @@ def index():
     money = "".join(card(s) for s in ["bill", "debt", "subs", "refund", "raise", "deposit"])
     tiktok = "".join(card(s) for s in ["video", "shop", "sell"])
     return HEAD("Library · every AUTOPILOT.OI kit", "Claude prompt kits from $10: money agents, TikTok agents and Office Autopilot for small businesses. Each one reads what you upload and drafts. You decide and send.", "https://autopilotoi.app/store/", "https://autopilotoi.app/store/all6-cover.png") + f"""
-<div class="hd"><a href="/"><img src="/logo.png" alt=""></a><b>AUTOPILOT.OI</b><a class="bk" href="/">Home</a></div>
+<div class="hd"><a href="/"><img src="/logo-128.png" alt=""></a><b>AUTOPILOT.OI</b><a class="bk" href="/">Home</a></div>
 <div class="tag">Library · every kit · from $10</div><p class="sm" style="text-align:left;margin:6px 0 0">Looking for our business tools? <a href="/marketplace/" style="color:var(--l)">Go to the Marketplace</a>.</p>
 <h1>Claude agents<br>for <em>real jobs.</em></h1>
 <p class="lead">Each one runs in a Claude Project. It reads what you upload, checks it and drafts the reply, the plan or the letter. You decide and send. Every kit has a free guide you can try first.</p>
