@@ -1,0 +1,114 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 02 2026",
+ "cover_bg": "bg-white",
+ "theme": "dark",
+ "music": "tense",
+ "seed": 11,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">5 PROMPTS &middot; CARD DEBT</div><div class=\"fx Cc\" style=\"left:56px;top:176px;font-size:22px;color:#0c0c0caa\">SAMPLE MATH &middot; $5,000 AT 22% APR</div><div class=\"fx\" style=\"left:56px;top:222px;width:968px;height:170px;background:#0c0c0c;color:#f2f2ee;border-radius:14px\"><div class=\"Cc\" style=\"position:absolute;left:34px;top:26px;font-size:24px;color:#D4FF3A\">ONLY THE MINIMUM</div><div class=\"A\" style=\"position:absolute;left:34px;top:70px;font-size:84px;color:#f2f2ee\">19 YEARS</div><div class=\"Mm\" style=\"position:absolute;right:34px;top:96px;font-size:30px;color:#f2f2ee\">ABOUT $13,100 PAID</div></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"16\" style=\"left:56px;top:460px;font-size:180px;white-space:nowrap;color:#0c0c0c\">Stop paying</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:640px;font-size:120px;white-space:nowrap;color:#0c0c0c\">just the minimum</div><div class=\"fx Ii\" data-after=\"h\" data-gap=\"30\" style=\"left:56px;top:800px;width:900px;font-size:34px;line-height:1.25;color:#0c0c0c\">5 Claude prompts to get out of card debt faster. Swipe &#9656;</div><div class=\"fx\" style=\"left:56px;top:960px;width:968px;height:170px;border:4px dashed #0c0c0c55;border-radius:14px;box-sizing:border-box;color:#0c0c0c\"><div style=\"position:absolute;left:-4px;top:-4px;width:153px;height:170px;background:#D4FF3A;border:4px solid #0c0c0c;border-radius:14px;box-sizing:border-box\"></div><div class=\"Cc\" style=\"position:absolute;left:186px;top:22px;font-size:24px\">3 YEAR PLAN &middot; $191 A MONTH</div><div class=\"A\" style=\"position:absolute;left:186px;top:66px;font-size:84px\">3 YEARS</div><div class=\"Mm\" style=\"position:absolute;right:30px;top:92px;font-size:30px\">ABOUT $6,870 PAID</div></div><div class=\"fx Ii\" style=\"left:56px;top:1176px;width:760px;font-size:22px;line-height:1.3;color:#0c0c0caa\">Bar length shows the time, to scale. Your card's minimum formula may differ: check the box on your own statement.</div>",
+ "slides": [
+  {
+   "title": "Read the *warning box*",
+   "prompt": "Here is the minimum payment box from my card statement, account number blacked out. In plain words: how long will paying only the minimum take, what will it cost in total, and what monthly payment clears it in 3 years?",
+   "why": "Your statement must show this box. It assumes you add <b>no new purchases</b>."
+  },
+  {
+   "title": "Rehearse the *call*",
+   "prompt": "Play a card company rep. I am calling to ask for a lower APR. Push back like a real rep would. After the call, tell me what to say better and what I should write down.",
+   "why": "Practice first. Then ask about a <b>hardship program</b>: some lower the rate or waive fees for a while."
+  },
+  {
+   "title": "Pick your *order*",
+   "prompt": "Here are my cards with balance, APR and minimum payment. With $[amount] a month in total, compare paying the highest APR first versus the smallest balance first: months to debt free and total interest for each.",
+   "why": "Highest APR first usually saves <b>the most interest</b>. Smallest balance first gives quicker wins."
+  },
+  {
+   "title": "Test the *transfer*",
+   "prompt": "Here is a balance transfer offer. Work out the fee, how much I would still owe when the intro rate ends on [date] if I pay $[amount] a month, and what that leftover costs at the regular APR.",
+   "why": "Fees are usually <b>3% to 5%</b>. Whatever is left when the promo ends gets the card's regular APR."
+  },
+  {
+   "title": "Answer a *collector*",
+   "prompt": "A debt collector sent me this letter, my details blacked out. List who they say I owe, how much, and the dispute deadline. Then draft a short letter asking them to verify the debt.",
+   "why": "You usually have <b>30 days</b> to dispute in writing. Miss it and you can lose some rights."
+  }
+ ],
+ "cta": {
+  "big": "Get out of *card debt*",
+  "keyword": "DEBT",
+  "gift": "Your free debt guide: the script to ask for a lower rate and a payoff plan built on your real numbers.",
+  "small": "Free in your DMs. *Not financial advice.*"
+ },
+ "sources": [
+  [
+   "CFPB",
+   "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-collection-validation-notice-en-2109/"
+  ],
+  [
+   "Consumer Action",
+   "https://www.consumer-action.org/helpdesk/articles/minimum_payment_warning"
+  ],
+  [
+   "Experian",
+   "https://www.experian.com/blogs/ask-experian/what-is-the-avalanche-method/"
+  ],
+  [
+   "NerdWallet",
+   "https://www.nerdwallet.com/credit-cards/learn/what-is-a-balance-transfer-fee-on-a-credit-card"
+  ]
+ ],
+ "bg_words": [
+  "DEBT",
+  "APR",
+  "MINIMUM",
+  "PLAN"
+ ],
+ "bg_facts": [
+  "Your statement shows what paying only the minimum costs.",
+  "Balance transfer fees are usually 3% to 5%.",
+  "Highest APR first usually saves the most interest.",
+  "You usually have 30 days to dispute a collection in writing."
+ ],
+ "full_sources": [
+  [
+   "CFPB: 3 year payment box",
+   "https://www.consumerfinance.gov/ask-cfpb/what-is-the-three-year-payment-information-on-a-credit-card-statement-en-36/"
+  ],
+  [
+   "Consumer Action: minimum payment warning",
+   "https://www.consumer-action.org/helpdesk/articles/minimum_payment_warning"
+  ],
+  [
+   "CFPB: validation notice",
+   "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-collection-validation-notice-en-2109/"
+  ],
+  [
+   "CFPB: what a collector must tell you",
+   "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-a-debt-en-331/"
+  ],
+  [
+   "Experian: balance transfer fee",
+   "https://www.experian.com/blogs/ask-experian/what-is-a-balance-transfer-fee/"
+  ],
+  [
+   "NerdWallet: balance transfer fee",
+   "https://www.nerdwallet.com/credit-cards/learn/what-is-a-balance-transfer-fee-on-a-credit-card"
+  ],
+  [
+   "Experian: avalanche method",
+   "https://www.experian.com/blogs/ask-experian/what-is-the-avalanche-method/"
+  ],
+  [
+   "NerdWallet: debt avalanche",
+   "https://www.nerdwallet.com/blog/finance/what-is-a-debt-avalanche/"
+  ],
+  [
+   "Experian: hardship programs",
+   "https://www.experian.com/blogs/ask-experian/what-is-credit-card-hardship-program/"
+  ],
+  [
+   "NerdWallet: hardship programs",
+   "https://www.nerdwallet.com/credit-cards/learn/what-is-a-credit-card-hardship-program"
+  ]
+ ]
+}
