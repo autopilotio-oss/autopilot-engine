@@ -99,6 +99,14 @@ def sync_offer_code(st):
                     call("DELETE", f"/products/{pid}/offer_codes/{c['id']}", {}); DBG.append(["offer_code_deleted", slug, oc["name"]])
             else: DBG.append(["offer_code_ok", slug])
         except Exception as e: DBG.append(["offer_code_fail", slug, repr(e)[:200]])
+    for slug in oc.get("withdrawn", []):  # products taken off the code early: delete it there
+        pid = (st.get(slug) or {}).get("id")
+        if not pid: continue
+        try:
+            for c in call_get(f"/products/{pid}/offer_codes?" + urllib.parse.urlencode({"access_token": TOK})).get("offer_codes", []):
+                if (c.get("name") or "").upper() == oc["name"].upper():
+                    call("DELETE", f"/products/{pid}/offer_codes/{c['id']}", {}); DBG.append(["offer_code_withdrawn", slug, oc["name"]])
+        except Exception as e: DBG.append(["offer_code_withdraw_fail", slug, repr(e)[:200]])
 
 def prune_covers(st):
     """Products with "single_cover": true keep only the Gumroad cover that matches the current art in docs/store/<slug>-cover.png

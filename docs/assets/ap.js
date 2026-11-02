@@ -40,7 +40,7 @@
     var pm = location.pathname.match(/^\/(store\/([a-z0-9-]+)|autopilot|front-desk|office-autopilot|workspace)\/?$/);
     if (pm) fbq('track', 'ViewContent', { content_ids: [pm[2] || ({ 'front-desk': 'autopilot', 'office-autopilot': 'workspace', 'workspace': 'workspace-founding' })[pm[1]] || 'autopilot'], content_type: 'product' });
   }
-  var LAUNCH = { code: 'LAUNCH30', until: Date.parse('2026-11-11T03:00:00Z'), slugs: ['subs-agent', 'refund-agent', 'bill-agent', 'all-money-agents', 'raise-agent', 'debt-agent', 'shop-agent', 'video-agent', 'sell-agent', 'deposit-agent', 'workspace', 'tiktok-agents'] };
+  var LAUNCH = { code: 'LAUNCH30', until: Date.parse('2026-11-11T03:00:00Z'), slugs: ['subs-agent', 'refund-agent', 'bill-agent', 'all-money-agents', 'raise-agent', 'debt-agent', 'shop-agent', 'video-agent', 'sell-agent', 'deposit-agent', 'tiktok-agents'] };
   LAUNCH.on = Date.now() < LAUNCH.until;
   function banner() {
     if (!LAUNCH.on || document.getElementById('ap-launch')) return;
