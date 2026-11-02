@@ -6,7 +6,7 @@
   "Don't pay that medical bill yet",
   "AI checks it line by line"
  ],
- "keyword": null,
+ "keyword": "BILL",
  "video": "https://autopilotoi.app/media/freel/bill-coach.mp4",
  "poster": "https://autopilotoi.app/media/freel/bill-coach-poster.jpg",
  "caption": {
@@ -15,6 +15,20 @@
  },
  "rendered_at": "2026-11-02T10:13:18+00:00",
  "status": "rendered",
- "gate": "pending",
+ "gate": {
+  "score": 82,
+  "result": "hold, re-render",
+  "by": "campaign operator",
+  "at": "2026-11-02T07:40-03:00",
+  "breakdown": {
+   "hook": 24,
+   "demo": 24,
+   "legibility": 13,
+   "honesty": 5,
+   "cta": 8,
+   "brand_sound": 8
+  },
+  "notes": "21.3s, -15.0 LUFS. Voice says 'Three lines don't match' and stat shows 3 FLAGS, but the checks screen flagged only 2 rows (third row was OK): claim not backed by the sample. Fixed the episode screen (third row: facility fee not on the EOB; question 3 added), voice unchanged so it is reused. Re-render dispatched with voice reuse. End card cover still reads 'BILL AGENT' (old name, fixed with the Nov 3 to 4 cover update)."
+ },
  "posts": []
 }

@@ -68,9 +68,9 @@
       0
      ],
      [
-      "Room charge matches the EOB",
-      "OK",
-      1
+      "Facility fee not listed on the EOB",
+      "ASK",
+      0
      ]
     ],
     "verdict": "ASK BEFORE YOU PAY",
@@ -84,7 +84,7 @@
     "type": "doc",
     "title": "Questions for billing",
     "sub": "sample bill  ·  for your call",
-    "text": "1. The lab panel on Jun 3 appears twice. Can you remove the duplicate?\n\n2. My insurance EOB shows $0 owed for the Jun 10 visit. Why am I billed $185?\n\n3. Please send an updated bill once these are fixed."
+    "text": "1. The lab panel on Jun 3 appears twice. Can you remove the duplicate?\n\n2. My insurance EOB shows $0 owed for the Jun 10 visit. Why am I billed $185?\n\n3. The facility fee is not on my EOB. Was it sent to my insurance?"
    }
   },
   {
@@ -100,5 +100,6 @@
     "url": "autopilotoi.app"
    }
   }
- ]
+ ],
+ "fix_note": "Nov 2 gate: screen showed 2 flags while voice and stat said 3; third row is now a real flag (voice unchanged, reused)."
 }
