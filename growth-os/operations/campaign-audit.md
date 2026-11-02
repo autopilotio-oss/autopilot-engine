@@ -26,3 +26,11 @@ Site checked against the local docs/ folder served on localhost (autopilotoi.app
 - bill-agent sealed file is about 0.35 MB (4 pages) vs 1.4 to 1.9 MB for the others: Nov 3 to 4 work (step a).
 - "Keep the Threads key alive" workflow failed at 04:36 ART: Threads API says the stored token cannot be parsed (OAuth 190). Campaign posts go to Threads through Metricool, so reels are not affected; the direct Threads workflow may be posting nothing. Needs a new Threads token from Seb if the direct workflow matters.
 - Audio: refund-fighter true peak +0.4 dBTP after single pass loudnorm (target -1.5). Audible clipping not observed; consider two pass loudnorm in make.sh final.
+
+## Nov 2 (operator, morning run)
+- Health: all workflows green in the last 40 runs; state/health/status.json 44 checks, 0 failing (all 12 checkout:<slug> ok).
+- Delivery re-check: 10 single products have file.enc and product.json version = state/products.json version; bundles unchanged (v5, v1).
+- Gate: bill-coach held at 82 (voice and stat said 3 flags, screen flagged 2). Episode screen fixed, re-render with saved voice (no new voice spend). charged-twice passed 92, scheduled Nov 5 10:00 ART.
+- Schedule: Nov 2 to Nov 4 are at the cap on every network; queue post ids resynced to Metricool after the Nov 1 thinning (uuids unchanged).
+- Site walk not repeated: autopilotoi.app is not reachable from the operator sandbox today (proxy refuses the host); Metricool fetched the new reel media from it, so pages are serving.
+- Carried to Nov 3 to 4: bill-agent PDF rebuild, product renames + thumbnails (end card covers still show old names), guide page hero video.
