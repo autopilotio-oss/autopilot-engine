@@ -1,0 +1,243 @@
+{
+ "template": "ad3.html",
+ "cold_open": 0.3,
+ "cap_fix": {},
+ "voice_speed": 1.0,
+ "sfx_only": [
+  "tick",
+  "cta"
+ ],
+ "foley": 0.8,
+ "music_prompt": "Cinematic emotional score for a {dur} second film. Opens with soft solo felt piano, lonely late night mood, slow, about 70 bpm, lots of space. Around the middle, warm strings and a gentle heartbeat pulse enter as hope arrives. Final third is warm, uplifting and resolved, with a soft swell in the last five seconds that lands and rings out. No vocals, no drums, no EDM, no risers.",
+ "streaks": false,
+ "id": "st-v3",
+ "agents": [
+  "NIGHT",
+  "NIGHT",
+  "SETUP",
+  "SETUP",
+  "DEMO",
+  "HOME",
+  "OFFER"
+ ],
+ "soft": [
+  "NIGHT",
+  "SETUP",
+  "DEMO",
+  "HOME",
+  "OFFER"
+ ],
+ "dip": [
+  "HOME",
+  "OFFER"
+ ],
+ "beats": [
+  {
+   "say": "Are you done yet? … She asks every night.",
+   "head": [
+    "“ARE YOU",
+    "*DONE YET?”*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh02",
+     "sh01"
+    ],
+    "clip_ins": {
+     "sh02": 0.4,
+     "sh01": 1.0
+    }
+   },
+   "agent": 0
+  },
+  {
+   "say": "He's still answering customers.",
+   "head": [
+    "STILL ANSWERING",
+    "*CUSTOMERS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh03"
+    ],
+    "clip_ins": {
+     "sh03": 1.0
+    }
+   },
+   "agent": 1
+  },
+  {
+   "say": "So he set up Autopilot. It writes his replies. He hits send.",
+   "head": [
+    "IT WRITES.",
+    "*HE SENDS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh07"
+    ],
+    "clip_ins": {
+     "sh07": 0.8
+    },
+    "shifts": {
+     "sh07": -320
+    }
+   },
+   "agent": 2
+  },
+  {
+   "say": "Fifteen minutes in Claude. It learned his prices, his rules, his voice.",
+   "head": [
+    "15 MINUTES.",
+    "*HIS BUSINESS.*"
+   ],
+   "scene": {
+    "type": "interview",
+    "plates": [
+     "sh09"
+    ],
+    "clip_ins": {
+     "sh09": 0.0
+    },
+    "qs": [
+     [
+      "What do you sell?",
+      "Mobile car detailing."
+     ],
+     [
+      "What does a full detail cost?",
+      "$250 for an SUV, about 3 hours."
+     ],
+     [
+      "How do you talk to customers?",
+      "Friendly, short, no jargon."
+     ],
+     [
+      "What can I never promise?",
+      "Same day bookings."
+     ],
+     [
+      "When do you follow up?",
+      "Day 3, then day 7."
+     ]
+    ],
+    "nums": [
+     1,
+     4,
+     8,
+     12,
+     15
+    ]
+   },
+   "agent": 3
+  },
+  {
+   "say": "A customer asks for a price. The reply's ready. He hits send.",
+   "head": [
+    "THE REPLY'S READY.",
+    "*HE HITS SEND.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh19",
+     "sh11"
+    ],
+    "clip_ins": {
+     "sh19": 2.0,
+     "sh11": 0.8
+    },
+    "kind": "REPLY",
+    "msg": "How much for a full detail on an SUV? Free Saturday?",
+    "draft": "A full SUV detail is $250, about 3 hours. I have Saturday at 9 or 1. Want one? Mike",
+    "splits": [
+     0.7,
+     0.3
+    ]
+   },
+   "agent": 4
+  },
+  {
+   "say": "Are you done yet? … Yeah. I'm done.",
+   "head": [
+    "“YEAH.",
+    "*I'M DONE.”*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh13",
+     "sh14"
+    ],
+    "clip_ins": {
+     "sh13": 0.6,
+     "sh14": 0.8
+    },
+    "splits": [
+     0.55,
+     0.45
+    ]
+   },
+   "agent": 5
+  },
+  {
+   "say": "Autopilot. Nineteen ninety nine, once. Thirty day refund. Tap Learn More.",
+   "head": [],
+   "scene": {
+    "type": "commentcard",
+    "plates": [
+     "sh14b",
+     "sh15"
+    ],
+    "clip_ins": {
+     "sh14b": 2.2,
+     "sh15": 2.3
+    },
+    "splits": [
+     0.25,
+     0.75
+    ],
+    "card_at": 2.7,
+    "track": [
+     [
+      3.0,
+      186,
+      1215,
+      654,
+      405
+     ],
+     [
+      4.0,
+      141,
+      990,
+      774,
+      570
+     ],
+     [
+      4.9,
+      69,
+      999,
+      921,
+      681
+     ]
+    ],
+    "card": {
+     "n": "AUTOPILOT",
+     "p": "$19.99",
+     "s": "ONCE · 30 DAY REFUND"
+    }
+   },
+   "agent": 6
+  }
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/autopilot/?utm_source=meta&utm_medium=paid&utm_campaign=autopilot_nov&utm_content=story",
+  "primary_text": "“Are you done yet?” Autopilot learns your prices, rules and voice in a 15 minute setup inside Claude, then drafts your replies, quotes and follow ups. You read them and hit send. $19.99 once. 30 day refund.",
+  "headline": "It writes. You send. Evenings back.",
+  "description": "$19.99 once · 30 day refund",
+  "cta": "LEARN_MORE"
+ }
+}

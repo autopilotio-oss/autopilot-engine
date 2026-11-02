@@ -1,0 +1,215 @@
+{
+ "template": "ad3.html",
+ "cold_open": 0.3,
+ "cap_fix": {},
+ "voice_speed": 1.0,
+ "sfx_only": [
+  "tick",
+  "cta"
+ ],
+ "foley": 0.8,
+ "music_prompt": "Cinematic emotional score for a {dur} second film. Opens with soft solo felt piano, lonely late night mood, slow, about 70 bpm, lots of space. Around the middle, warm strings and a gentle heartbeat pulse enter as hope arrives. Final third is warm, uplifting and resolved, with a soft swell in the last five seconds that lands and rings out. No vocals, no drums, no EDM, no risers.",
+ "streaks": false,
+ "id": "st-demo",
+ "agents": [
+  "NIGHT",
+  "SETUP",
+  "DEMO",
+  "DEMO",
+  "DEMO",
+  "SETUP",
+  "OFFER"
+ ],
+ "soft": [
+  "NIGHT",
+  "SETUP",
+  "DEMO",
+  "HOME",
+  "OFFER"
+ ],
+ "dip": [
+  "HOME",
+  "OFFER"
+ ],
+ "beats": [
+  {
+   "say": "Are you done yet? … Not till every customer's answered.",
+   "head": [
+    "“ARE YOU",
+    "*DONE YET?”*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh02",
+     "sh01"
+    ],
+    "clip_ins": {
+     "sh02": 0.4,
+     "sh01": 1.0
+    }
+   },
+   "agent": 0
+  },
+  {
+   "say": "Meet Autopilot. It drafts your replies, quotes and follow ups.",
+   "head": [
+    "IT DRAFTS.",
+    "*YOU SEND.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh07"
+    ],
+    "clip_ins": {
+     "sh07": 0.6
+    },
+    "shifts": {
+     "sh07": -320
+    }
+   },
+   "agent": 1
+  },
+  {
+   "say": "A customer asks the price. The reply's ready. Your price, two times.",
+   "head": [
+    "YOUR PRICE.",
+    "*YOUR VOICE.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh04"
+    ],
+    "clip_ins": {
+     "sh04": 0.4
+    },
+    "kind": "REPLY",
+    "msg": "How much for a full detail on an SUV? Free Saturday?",
+    "draft": "A full SUV detail is $250, about 3 hours. I have Saturday at 9 or 1. Want one? Mike"
+   },
+   "agent": 2
+  },
+  {
+   "say": "Then the quote, with your deposit rules.",
+   "head": [
+    "THEN",
+    "*THE QUOTE.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh19"
+    ],
+    "clip_ins": {
+     "sh19": 2.4
+    },
+    "kind": "QUOTE",
+    "msg": "quote: Dave, SUV, ceramic, pet hair",
+    "draft": "$250 + $240 + $30 = $520. $50 deposit holds Saturday. 24 hr notice to cancel."
+   },
+   "agent": 3
+  },
+  {
+   "say": "Quote goes quiet? It drafts the follow up. Not sure? It asks.",
+   "head": [
+    "IT ASKS.",
+    "*IT NEVER GUESSES.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh18"
+    ],
+    "clip_ins": {
+     "sh18": 1.2
+    },
+    "kind": "FOLLOW UP",
+    "msg": "chase: Dave, day 3",
+    "draft": "Saturday 9 AM and the $520 still hold. Want me to lock it in?",
+    "check": "[CHECK: Saturday still open?]"
+   },
+   "agent": 4
+  },
+  {
+   "say": "Fifteen minutes to set up in Claude. You hit send.",
+   "head": [
+    "15 MIN SETUP.",
+    "*YOU HIT SEND.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh09",
+     "sh11"
+    ],
+    "clip_ins": {
+     "sh09": 1.5,
+     "sh11": 0.8
+    },
+    "splits": [
+     0.5,
+     0.5
+    ]
+   },
+   "agent": 5
+  },
+  {
+   "say": "Done for the night. Nineteen ninety nine, once. Thirty day refund. Tap Learn More.",
+   "head": [],
+   "scene": {
+    "type": "commentcard",
+    "plates": [
+     "sh14",
+     "sh15"
+    ],
+    "clip_ins": {
+     "sh14": 0.8,
+     "sh15": 2.3
+    },
+    "splits": [
+     0.3,
+     0.7
+    ],
+    "card_at": 2.7,
+    "track": [
+     [
+      3.0,
+      186,
+      1215,
+      654,
+      405
+     ],
+     [
+      4.0,
+      141,
+      990,
+      774,
+      570
+     ],
+     [
+      4.9,
+      69,
+      999,
+      921,
+      681
+     ]
+    ],
+    "card": {
+     "n": "AUTOPILOT",
+     "p": "$19.99",
+     "s": "ONCE · 30 DAY REFUND"
+    }
+   },
+   "agent": 6
+  }
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/autopilot/?utm_source=meta&utm_medium=paid&utm_campaign=autopilot_nov&utm_content=demo",
+  "primary_text": "“Are you done yet?” Autopilot learns your prices, rules and voice in a 15 minute setup inside Claude, then drafts your replies, quotes and follow ups. You read them and hit send. $19.99 once. 30 day refund.",
+  "headline": "Your replies, drafted in your voice",
+  "description": "$19.99 once · 30 day refund",
+  "cta": "LEARN_MORE"
+ }
+}

@@ -10,7 +10,7 @@ ins, fc = [], []
 for i, p in enumerate(P):
     ins += ["-i", f"{D}/plates/{p['plate']}.mp4"]
     L = p["e"] - p["s"]; N = round(p["e"] * 30) - round(p["s"] * 30)  # exact frame count from absolute boundaries: no drift
-    S = int(p.get("shift", 0)); sh = f",crop=1080:{1920 - S}:0:0,pad=1080:1920:0:{S}:color=0x050605" if S else ""
+    S = int(p.get("shift", 0)); sh = (f",crop=1080:{1920 - S}:0:0,pad=1080:1920:0:{S}:color=0x050605" if S > 0 else f",crop=1080:{1920 + S}:0:{-S},pad=1080:1920:0:0:color=0x050605") if S else ""
     fc.append(f"[{i}:v]trim=start={p['off']}:duration={L * p['rate'] + .1},setpts=(PTS-STARTPTS)/{p['rate']},fps=30,scale=1080:1920{sh},tpad=stop_mode=clone:stop=60,trim=end_frame={N},setpts=PTS-STARTPTS[p{i}]")
     if FOLEY: fc.append(f"[{i}:a]atrim=start={p['off']}:duration={L},asetpts=PTS-STARTPTS,aformat=sample_rates=44100:channel_layouts=stereo,apad=whole_dur={L},afade=t=in:d=.08,afade=t=out:st={max(0, L - .12)}:d=.12[a{i}]")
 n = len(P); fc.append("".join(f"[p{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0[bg]")

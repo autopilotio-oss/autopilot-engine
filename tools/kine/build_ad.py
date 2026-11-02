@@ -129,6 +129,9 @@ for b in beats:
     elif k == "drafts":
         b["d_t"] = [T(.12 + .22 * q) for q in range(3)]
         for q, t in enumerate(b["d_t"]): ev.append(["msg", t, q])
+    elif k == "thread":
+        b["m_t"], b["d_t"], b["d_end"] = T(.04), T(.2), T(.72 if sc.get("check") else .82); b["chk_t"] = T(.8)
+        ev.append(["msg", b["m_t"], 0]); ev.append(["tick", b["d_end"], 0])
     elif k == "interview":
         n = len(sc["qs"]); b["q_t"] = [T(.04 + .9 * q / n) for q in range(n)]
         for q, t in enumerate(b["q_t"]): ev.append(["row", t, q])
