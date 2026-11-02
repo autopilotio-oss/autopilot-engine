@@ -1,0 +1,13 @@
+name: Cover check (read only)
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q pillow && python3 scripts/cover_check.py
+        env: { GUMROAD_TOKEN: "${{ secrets.GUMROAD_TOKEN }}" }
+      - run: |
+          git config user.name "autopilot-bot"; git config user.email "bot@users.noreply.github.com"
+          git add state/cover_check.json; git commit -qm "cover check" || exit 0; for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
