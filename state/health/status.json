@@ -68,15 +68,15 @@
   "severity": "SEV-3"
  },
  "gumroad_offer:front_desk_kit": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-1"
  },
  "gumroad_offer:office_autopilot": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-1"
  },
  "gumroad_offer:video_agent": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-1"
  },
  "gumroad_offer:workspace_founding": {
