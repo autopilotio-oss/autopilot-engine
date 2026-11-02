@@ -66,6 +66,16 @@ def TOPCARD(slug, g):
             f'<div class="ap-launch-price" style="display:none;font-size:12px;margin-top:6px;color:#D4FF3A">$7 this week with LAUNCH30, applied at checkout</div>'
             f'<div style="font-size:12px;opacity:.6;margin-top:6px">Or follow the free guide below.</div></div></div>')
 
+def KFORM(btn="SEND ME TIPS"):
+    return (f'<form id="kf"><input type="email" id="ke" placeholder="your@email.com" required autocomplete="email"><button id="kb">{btn}</button></form>'
+            '<p id="km" style="margin:10px 0 0;font-size:14px"></p>')
+def OPTIN_TOP(g):
+    # experiment optin_top_001: email capture right under the intro (drafts only until Seb approves)
+    if not g.get("optin_top"): return ""
+    return ('<div class="ag" style="margin:18px 0 6px"><span class="tag">FREE BY EMAIL</span>'
+            f'<p style="margin:12px 0 10px;font-size:17px">{e(g.get("optin_head", "Get every prompt in this guide in your inbox, plus one money fix a week."))}</p>'
+            + KFORM(g.get("optin_btn", "EMAIL ME THE PROMPTS")) + '</div>')
+
 def page(slug, g):
     pslug = slug; slug = g.get("base", slug)  # drafts reuse the live guide's canonical, og and kit links
     out = [f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -80,7 +90,7 @@ def page(slug, g):
 <div class="top"><img src="../../logo.png" alt=""><b>AUTOPILOT.OI</b><span>FREE GUIDE</span></div>
 <div class="hero"><span class="tag">{e(g.get('cat','MONEY × AI'))} · {e(g['kw'])}</span><h1>{e(g['title'])}</h1><p class="sub">{e(g['sub'])}</p>
 {TOPCARD(slug, g)}<div class="meta"><div><b>TIME</b>{e(g['time'])}</div><div><b>YOU NEED</b>{e(g['need'])}</div><div><b>COST</b>Free</div></div></div>
-<div class="why">{e(g['why'])}</div><h2>Step by step</h2>"""]
+<div class="why">{e(g['why'])}</div>{OPTIN_TOP(g)}<h2>Step by step</h2>"""]
     for i, (h, p, prompt, links) in enumerate(g["steps"], 1):
         s = f'<div class="st"><div class="n">{i}</div><h3>{e(h)}</h3><p>{e(p)}</p>'
         if prompt: s += f'<div class="pr" id="p{i}">{e(prompt)}<button class="cp" data-c="p{i}">COPY</button></div>'
@@ -99,7 +109,7 @@ def page(slug, g):
     out.append(f"""<h2>Make it repeatable</h2><div class="ag"><span class="tag">YOUR {e(a['name']).upper()}</span>
 <p style="margin-top:12px;font-size:19px">{e(a['what'])}</p><ol>{''.join(f'<li>{e(x)}</li>' for x in a['setup'])}</ol>
 <div class="pr" id="ag">{e(a['instr'])}<button class="cp" data-c="ag">COPY</button></div>
-{DFY}<form id="kf"><input type="email" id="ke" placeholder="your@email.com" required autocomplete="email"><button id="kb">SEND ME TIPS</button></form><p id="km" style="margin:10px 0 0;font-size:14px"></p></div></div>""")
+{DFY.replace('<p style="margin:0 0 10px;font-size:14px">Or get free tips by email:</p>', '') if g.get("optin_top") else DFY + KFORM()}</div></div>""")
     out.append('<div class="src">Sources: ' + " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in g["sources"]) + "</div>")
     out.append("""<div class="foot">Educational only. Not financial, legal or medical advice. Check details with the company or a professional before you act. AUTOPILOT.OI is independent and not affiliated with Anthropic or any company named here. Claude is a product of Anthropic.</div></div>
 <div class="toast" id="t">COPIED ✓</div><script>

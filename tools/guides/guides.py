@@ -196,3 +196,7 @@ for _f in sorted(_glob.glob(_os.path.join(_os.path.dirname(_os.path.abspath(__fi
     _g = _json.load(open(_f)); _k = _os.path.basename(_f)[:-5]
     _g["steps"] = [tuple(s) for s in _g.get("steps", [])]; _g["sources"] = [tuple(s) for s in _g.get("sources", [])]
     G[_k] = _g
+
+# Experiment optin_top_001 (weekly sprint 2026-11-02): staging copy of /g/subs/ with the email opt-in under the intro.
+# noindex, not in sitemap, not linked anywhere. Goes live only when Seb approves.
+G["subs-v2"] = dict(G["subs"], draft=True, base="subs", optin_top=True)

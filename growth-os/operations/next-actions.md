@@ -1,5 +1,11 @@
 # Next actions (handoff between runs)
 
+## Weekly Sprint 2026-11-02 (handoff)
+- Experiment optin_top_001 drafted: /g/subs-v2/ (noindex, unlinked) built from G["subs-v2"] in tools/guides/guides.py with optin_top=True. Do NOT link it or route traffic until Seb approves; then split /free/ subs row 50/50 or alternate weeks. Decision rule in experiments/experiments.jsonl.
+- Tests green again: /g/bill rebuilt with bill-coach (commit 214ef55). Next guide reel swap: rebuild and commit the page in the same commit.
+- Monthly drill issue #5 opened 12:49 UTC; confirm it closes on the next scheduled health run. If still open after 15:00 UTC, treat alert close path as broken (SEV-2).
+- Proposed to Seb (waiting): pause Meta boost; kit_sync to daily until first subscriber; pause viral_lab until a view count source exists; raise support_agent late limit to its schedule (system can do this, SEV-3 noise).
+
 - Daily Pulse writes run-history/<date>-daily.md; the Weekly Sprint reads the last 7.
 - Viral Lab: Subscription first (viral/demos/subscription has the tested synthetic demo). Need 3 qualified references before a concept can pass. BLOCKER (Oct 31, Nov 1, Nov 2 runs; Nov 2: TikTok fetch still refused, only lead found was a Jan 2024 Daily Dot article, too old and secondary): from the cloud runner, YouTube serves a bot-protection shell (no views, wrong metadata on watch?v=) and TikTok/IG are robots-blocked, so no reference can be certified. Needs Seb's call: a source that shows public view counts (e.g. YouTube Data API key, or Seb captures URL + views + creator's last 10 from his phone).
 - Publisher: nothing QUEUED yet; `python3 scripts/growthos/publish.py plan` is empty until Seb approves a concept.
