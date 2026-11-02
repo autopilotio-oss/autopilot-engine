@@ -29,7 +29,14 @@
    "components": [],
    "status": "live",
    "checkout_url": "https://autopilotoi.gumroad.com/l/autopilot",
-   "guides": [],
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "autopilot/",
+     "keyword": null,
+     "paid": true
+    }
+   ],
    "managed_by": "products/"
   },
   {
