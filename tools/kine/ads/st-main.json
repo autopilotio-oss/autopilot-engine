@@ -1,0 +1,187 @@
+{
+ "id": "st-main",
+ "template": "ad3.html",
+ "agents": [
+  "NIGHT",
+  "NIGHT",
+  "NIGHT",
+  "NIGHT",
+  "THE TURN",
+  "THE TURN",
+  "THE TURN",
+  "HOME",
+  "HOME",
+  "HOME",
+  "AUTOPILOT"
+ ],
+ "cold_open": 0.3,
+ "cap_fix": {},
+ "beats": [
+  {
+   "say": "She asks the same thing every night.",
+   "head": [
+    "\u201cARE YOU",
+    "*DONE YET?\u201d*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh01",
+     "sh02"
+    ]
+   },
+   "agent": 0
+  },
+  {
+   "say": "Five more minutes.",
+   "head": [
+    "FIVE MORE",
+    "*MINUTES.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh03"
+    ]
+   },
+   "agent": 1
+  },
+  {
+   "say": "Then an hour. Quotes. Replies. Follow ups.",
+   "head": [
+    "*THEN AN HOUR.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh04"
+    ]
+   },
+   "agent": 2
+  },
+  {
+   "say": "He didn't start a business to miss this.",
+   "head": [
+    "HE MISSED",
+    "*THIS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh05",
+     "sh06"
+    ]
+   },
+   "agent": 3
+  },
+  {
+   "say": "So he hired me.",
+   "head": [
+    "SO HE",
+    "*HIRED ME.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh07"
+    ]
+   },
+   "agent": 4
+  },
+  {
+   "say": "Fifteen minutes, and I knew his prices, his rules, how he talks.",
+   "head": [
+    "I LEARNED",
+    "*HIS BUSINESS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh08",
+     "sh09"
+    ]
+   },
+   "agent": 5
+  },
+  {
+   "say": "Now I draft the replies, the quotes, the follow ups.",
+   "head": [
+    "NOW I",
+    "*DRAFT IT ALL.*"
+   ],
+   "scene": {
+    "type": "drafts",
+    "plates": [
+     "sh10",
+     "sh16"
+    ]
+   },
+   "agent": 6
+  },
+  {
+   "say": "He reads them. Hits send.",
+   "head": [
+    "HE HITS",
+    "*SEND.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh11"
+    ]
+   },
+   "agent": 7
+  },
+  {
+   "say": "Are you done yet? Yeah. I'm done.",
+   "head": [
+    "\u201cYEAH.",
+    "*I'M DONE.\u201d*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh12",
+     "sh13"
+    ]
+   },
+   "agent": 8
+  },
+  {
+   "say": "Every night.",
+   "head": [
+    "*EVERY NIGHT.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh17",
+     "sh14"
+    ]
+   },
+   "agent": 9
+  },
+  {
+   "say": "Want me for your business? Comment Autopilot, and I'll send you the setup.",
+   "head": [
+    "COMMENT",
+    "*\u201cAUTOPILOT\u201d*"
+   ],
+   "scene": {
+    "type": "comment",
+    "plates": [
+     "sh15"
+    ],
+    "kw": "AUTOPILOT"
+   },
+   "agent": 10
+  }
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/autopilot/",
+  "primary_text": "\u201cAre you done yet?\u201d She asks every night. Autopilot learns your business in 15 minutes, then drafts your replies, quotes and follow ups, so you read, hit send, and get your evening back. Comment AUTOPILOT and I'll send you the setup. Example story.",
+  "headline": "Get your evenings back",
+  "description": "$19.99 once \u00b7 runs in Claude \u00b7 you press send",
+  "cta": "LEARN_MORE"
+ }
+}

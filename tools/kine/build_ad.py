@@ -123,6 +123,15 @@ for b in beats:
         b["draft_t"], b["tap_t"] = T(.08), T(.55); ev.append(["msg", b["draft_t"], 0]); ev.append(["send", b["tap_t"], 0]); ev.append(["stamp_ok", b["tap_t"] + .15, 0])
     elif k == "cardprice":
         b["kw_t"] = CT(2.75); ev.append(["cta", s + .05, 0]); ev.append(["impact", b["kw_t"], 1]); bursts.append({"t": b["kw_t"] + .03, "x": 540, "y": 1050, "n": 70, "seed": 41})
+    elif k == "plain":
+        pass
+    elif k == "drafts":
+        b["d_t"] = [T(.12 + .22 * q) for q in range(3)]
+        for q, t in enumerate(b["d_t"]): ev.append(["msg", t, q])
+    elif k == "comment":
+        b["c_t"] = [T(.05), T(.38), T(.5), T(.62)]
+        for c in range(len(sc["kw"])): ev.append(["key", round(b["c_t"][0] + .3 + c * .08, 3), c])
+        ev.append(["send", b["c_t"][1], 0]); ev.append(["msg", b["c_t"][2], 0]); ev.append(["cta", b["c_t"][3], 0])
     elif k == "cta":
         b["kw_t"] = T(.12); ev.append(["impact", b["kw_t"], 1]); ev.append(["cta", s + .05, 0]); bursts.append({"t": b["kw_t"] + .03, "x": 540, "y": 820, "n": 70, "seed": 41})
     b.pop("ws")
@@ -137,5 +146,10 @@ for bb in beats:
     if sc.get("plate"):
         L = bb["e"] - bb["s"]; off = max(sc.get("clip_in", 0), 4.95 - L); rate = min(1, (4.95 - off) / L)
         plates.append({"s": bb["s"], "e": bb["e"], "plate": sc["plate"], "off": round(off, 4), "rate": round(rate, 5)})
+    elif sc.get("plates"):
+        n = len(sc["plates"]); L = (bb["e"] - bb["s"]) / n
+        for j, pl in enumerate(sc["plates"]):
+            s0 = bb["s"] + j * L; off = sc.get("clip_ins", {}).get(pl, min(1.2, max(0, 4.95 - L))); rate = min(1, (4.95 - off) / L)
+            plates.append({"s": round(s0, 3), "e": round(s0 + L, 3), "plate": pl, "off": round(off, 4), "rate": round(rate, 5)})
 json.dump({"dur": dur, "off": OFF, "voice": f"{D}/out/{ep}.wav", "events": ev, "plates": plates}, open(f"{D}/out/{ep}.meta.json", "w"))
 print("built ad", ep, dur, "s,", len(beats), "scenes,", len(caps), "captions,", len(ev), "sfx")
