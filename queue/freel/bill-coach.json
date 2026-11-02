@@ -1,0 +1,20 @@
+{
+ "id": "bill-coach",
+ "ep": "013c-bill-coach",
+ "kind": "product",
+ "hook": [
+  "Don't pay that medical bill yet",
+  "AI checks it line by line"
+ ],
+ "keyword": null,
+ "video": "https://autopilotoi.app/media/freel/bill-coach.mp4",
+ "poster": "https://autopilotoi.app/media/freel/bill-coach-poster.jpg",
+ "caption": {
+  "ig": "Medical bills often have errors. This agent compares your itemized bill with your insurance EOB line by line, flags what doesn't match and writes the questions to ask billing before you pay. Sample bill shown. Comment BILL and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not medical or financial advice.\n\n#ai #claude #medicalbills #moneytips #healthcare",
+  "other": "Medical bills often have errors. This agent compares your itemized bill with your insurance EOB line by line, flags what doesn't match and writes the questions to ask billing before you pay. Sample bill shown. Bill Lowering Coach at the link in bio.\n\nEducation only, not medical or financial advice.\n\n#ai #claude #medicalbills #moneytips #healthcare"
+ },
+ "rendered_at": "2026-11-02T10:13:18+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}

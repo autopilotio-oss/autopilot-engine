@@ -1,0 +1,20 @@
+{
+ "id": "charged-twice",
+ "ep": "013d-charged-twice",
+ "kind": "product",
+ "hook": [
+  "Charged twice?",
+  "AI writes the refund request"
+ ],
+ "keyword": null,
+ "video": "https://autopilotoi.app/media/freel/charged-twice.mp4",
+ "poster": "https://autopilotoi.app/media/freel/charged-twice-poster.jpg",
+ "caption": {
+  "ig": "Charged twice for the same order? This agent finds duplicate charges on your statement and drafts a short refund request with the details, for you to send. Sample statement shown. Comment MONEY and I'll DM you all 5.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Charged twice for the same order? This agent finds duplicate charges on your statement and drafts a short refund request with the details, for you to send. Sample statement shown. All 5 Money Agents at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "rendered_at": "2026-11-02T10:13:23+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
