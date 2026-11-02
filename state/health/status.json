@@ -103,6 +103,46 @@
   "ok": true,
   "severity": "SEV-2"
  },
+ "library_price:all-money-agents": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:bill-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:debt-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:deposit-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:raise-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:refund-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:sell-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:shop-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:subs-agent": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "library_price:tiktok-agents": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
  "meta_pixel_configured": {
   "ok": false,
   "severity": "SEV-3"
