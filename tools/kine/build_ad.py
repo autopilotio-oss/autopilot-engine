@@ -55,7 +55,8 @@ for j, c in enumerate(caps[:-1]): c["e"] = min(c["e"], caps[j + 1]["s"])
 for b in beats:
     s, e, sc = b["s"], b["e"], b["scene"]; L = max(.8, e - s); T = lambda f: round(s + f * L, 3); k = sc["type"]
     off = max(sc.get("clip_in", 0), 4.95 - L); rate = min(1, (4.95 - off) / L); CT = lambda ct: round(s + max(.15, ct - off) / rate, 3)
-    ev.append(["slam", s, b["i"]]); ev.append(["trans", s, 0]) if b["i"] else None
+    soft = E.get("agents") and E["agents"][b["agent"]] in E.get("soft", []) or sc["type"] == "commentcard"
+    if not soft: ev.append(["slam", s, b["i"]]); ev.append(["trans", s, 0]) if b["i"] else None
     if k == "inbox":
         for q in range(sc["n"]): ev.append(["blip", T(.04 + .6 * (q / sc["n"]) ** 1.4), q % 4])
         ev.append(["impact", T(.66), 2]); bursts.append({"t": T(.67), "x": 540, "y": 900, "n": 40, "seed": 2})
@@ -129,8 +130,9 @@ for b in beats:
         b["d_t"] = [T(.12 + .22 * q) for q in range(3)]
         for q, t in enumerate(b["d_t"]): ev.append(["msg", t, q])
     elif k == "commentcard":
-        L2 = e - s; off = sc.get("clip_ins", {}).get(sc["plates"][0], 0); rate = min(1, (4.95 - off) / L2)
-        tc = round(s + max(.1, sc["card_at"] - off) / rate, 3); ev.append(["impact", tc, 1]); ev.append(["cta", tc + .1, 0]); bursts.append({"t": tc + .05, "x": 540, "y": 1250, "n": 60, "seed": 41})
+        spl = sc.get("splits") or [1]; pl = sc["plates"][-1]; s1 = s + (e - s) * (1 - spl[-1]); L2 = e - s1
+        off = sc.get("clip_ins", {}).get(pl, 0); rate = min(1, (4.95 - off) / L2)
+        tc = round(s1 + max(.1, sc["card_at"] - off) / rate, 3); ev.append(["cta", tc + .1, 0])
     elif k == "comment":
         b["c_t"] = [T(.05), T(.38), T(.5), T(.62)]
         for c in range(len(sc["kw"])): ev.append(["key", round(b["c_t"][0] + .3 + c * .08, 3), c])
@@ -138,11 +140,6 @@ for b in beats:
     elif k == "cta":
         b["kw_t"] = T(.12); ev.append(["impact", b["kw_t"], 1]); ev.append(["cta", s + .05, 0]); bursts.append({"t": b["kw_t"] + .03, "x": 540, "y": 820, "n": 70, "seed": 41})
     b.pop("ws")
-data = {"dur": dur, "off": OFF, "agents": E["agents"], "beats": beats, "caps": caps, "bursts": bursts,
-        "slams": sorted(e[1] for e in ev if e[0] in ("slam", "impact", "stat", "stamp_ok", "stamp_no"))}
-os.makedirs(f"{D}/out", exist_ok=True)
-open(f"{D}/out/{ep}.html", "w").write(open(f"{D}/" + E.get("template", "ad.html")).read().replace("/*DATA*/null", json.dumps(data)))
-ev = sorted([x for x in ev if x and 0 <= x[1] < dur], key=lambda x: x[1])
 plates = []
 for bb in beats:
     sc = bb["scene"]
@@ -150,9 +147,15 @@ for bb in beats:
         L = bb["e"] - bb["s"]; off = max(sc.get("clip_in", 0), 4.95 - L); rate = min(1, (4.95 - off) / L)
         plates.append({"s": bb["s"], "e": bb["e"], "plate": sc["plate"], "off": round(off, 4), "rate": round(rate, 5)})
     elif sc.get("plates"):
-        n = len(sc["plates"]); L = (bb["e"] - bb["s"]) / n
+        n = len(sc["plates"]); spl = sc.get("splits") or [1 / n] * n; acc = 0
         for j, pl in enumerate(sc["plates"]):
-            s0 = bb["s"] + j * L; off = sc.get("clip_ins", {}).get(pl, min(1.2, max(0, 4.95 - L))); rate = min(1, (4.95 - off) / L)
+            L = (bb["e"] - bb["s"]) * spl[j]; s0 = bb["s"] + (bb["e"] - bb["s"]) * acc; acc += spl[j]; off = sc.get("clip_ins", {}).get(pl, min(1.2, max(0, 4.95 - L))); rate = min(1, (4.95 - off) / L)
             plates.append({"s": round(s0, 3), "e": round(s0 + L, 3), "plate": pl, "off": round(off, 4), "rate": round(rate, 5)})
+softcuts = [p["s"] for k, p in enumerate(plates) if p["s"] > 0 and not (k and p["plate"].rstrip("b") == plates[k - 1]["plate"]) and E.get("agents") and any(bb["s"] <= p["s"] < bb["e"] and E["agents"][bb["agent"]] in E.get("dip", E.get("soft", [])) for bb in beats)]
+data = {"dur": dur, "off": OFF, "agents": E["agents"], "beats": beats, "softcuts": softcuts, "caps": caps, "bursts": bursts,
+        "slams": sorted(e[1] for e in ev if e[0] in ("slam", "impact", "stat", "stamp_ok", "stamp_no"))}
+os.makedirs(f"{D}/out", exist_ok=True)
+open(f"{D}/out/{ep}.html", "w").write(open(f"{D}/" + E.get("template", "ad.html")).read().replace("/*DATA*/null", json.dumps(data)))
+ev = sorted([x for x in ev if x and 0 <= x[1] < dur], key=lambda x: x[1])
 json.dump({"dur": dur, "off": OFF, "voice": f"{D}/out/{ep}.wav", "events": ev, "plates": plates}, open(f"{D}/out/{ep}.meta.json", "w"))
 print("built ad", ep, dur, "s,", len(beats), "scenes,", len(caps), "captions,", len(ev), "sfx")

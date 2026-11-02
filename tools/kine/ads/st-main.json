@@ -185,12 +185,10 @@
    "scene": {
     "type": "plain",
     "plates": [
-     "sh13",
-     "sh17"
+     "sh13"
     ],
     "clip_ins": {
-     "sh13": 1.0,
-     "sh17": 1.5
+     "sh13": 0.6
     }
    },
    "agent": 9
@@ -203,12 +201,10 @@
    "scene": {
     "type": "plain",
     "plates": [
-     "sh16",
      "sh14"
     ],
     "clip_ins": {
-     "sh16": 0.0,
-     "sh14": 1.0
+     "sh14": 0.8
     }
    },
    "agent": 10
@@ -219,10 +215,12 @@
    "scene": {
     "type": "commentcard",
     "plates": [
+     "sh14b",
      "sh15"
     ],
     "clip_ins": {
-     "sh15": 1.0
+     "sh14b": 1.67,
+     "sh15": 2.3
     },
     "card_at": 2.7,
     "track": [
@@ -247,6 +245,10 @@
       921,
       681
      ]
+    ],
+    "splits": [
+     0.38,
+     0.62
     ]
    },
    "agent": 11
@@ -258,5 +260,13 @@
   "headline": "Get your evenings back",
   "description": "$19.99 once \u00b7 runs in Claude \u00b7 you press send",
   "cta": "LEARN_MORE"
- }
+ },
+ "soft": [
+  "NIGHT",
+  "HOME"
+ ],
+ "dip": [
+  "HOME",
+  "AUTOPILOT"
+ ]
 }
