@@ -31,3 +31,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-02T00:32:56+00:00", "note": "0 routed"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-02T00:41:05+00:00", "note": "built 2026-11-02-prompts-card-debt, score 89, bank 4"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-02T01:23:09+00:00", "note": "12 posts out today, top post 0 saves+shares, feed written yes"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-02T01:46:33+00:00", "note": "/free/ OPEN labels kept on one line at 390px (ManyChat landing); Pages deploy of c50a4b0 succeeded, live fetch blocked by sandbox proxy"}
