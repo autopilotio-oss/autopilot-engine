@@ -1,0 +1,68 @@
+{
+ "kind": "howto",
+ "dateline": "NOV 03 2026",
+ "cover_bg": "bg-white",
+ "grain": false,
+ "music": "bright",
+ "seed": 41,
+ "lava_opacity": 0.5,
+ "cover_html": "<div class=\"fx\" style=\"left:0;top:0;width:440px;height:1350px;background:#0c0c0c\"></div><div class=\"fx chip l\" style=\"left:56px;top:70px\">HOW TO &middot; PRICES</div><div class=\"fx A\" data-fit=\"328\" data-stack=\"h\" data-gap=\"14\" style=\"left:56px;top:360px;white-space:nowrap;font-size:150px;color:#f2f2ee;background:#0c0c0c\">ONE</div><div class=\"fx A\" data-fit=\"328\" data-stack=\"h\" style=\"left:56px;top:520px;white-space:nowrap;font-size:150px;color:#f2f2ee;background:#0c0c0c\">TEXT.</div><div class=\"fx A\" data-fit=\"328\" data-stack=\"h\" style=\"left:56px;top:680px;white-space:nowrap;font-size:150px;color:#D4FF3A;background:#0c0c0c\">FOUR</div><div class=\"fx A\" data-fit=\"328\" data-stack=\"h\" style=\"left:56px;top:840px;white-space:nowrap;font-size:150px;color:#D4FF3A;background:#0c0c0c\">PARTS.</div><div class=\"fx Ii\" data-after=\"h\" data-gap=\"40\" style=\"left:56px;top:1040px;width:328px;font-size:30px;line-height:1.25;color:#f2f2ee;background:#0c0c0c\">The reply to <b style=\"color:#D4FF3A\">how much?</b> that books the job. Swipe &#9656;</div><div class=\"fx Cc\" style=\"left:484px;top:200px;font-size:21px;color:#0c0c0c;background:#f2f2ee\">SAMPLE &middot; DOG GROOMER</div><div class=\"fx Mm\" style=\"left:484px;top:1120px;width:540px;font-size:22px;color:#0c0c0c;background:#f2f2ee\">SENT AS ONE TEXT &#10003;</div><div class=\"fx Ii\" style=\"left:484px;top:246px;width:470px;box-sizing:border-box;padding:22px 26px;background:#ffffff;border:3px solid #0c0c0c;border-radius:26px 26px 26px 6px;color:#0c0c0c;font-size:30px;line-height:1.22\">How much to groom my doodle? Free Thursday?</div><div class=\"fx Mm\" style=\"left:484px;top:420px;font-size:22px;color:#0c0c0c;background:#f2f2ee\">YOUR REPLY, IN 4 PARTS &#9662;</div><div class=\"fx\" style=\"left:484px;top:470px;width:540px;height:130px;box-sizing:border-box;padding:20px 24px;background:#0c0c0c;border-radius:22px;color:#f2f2ee\"><div class=\"Mm\" style=\"position:absolute;left:24px;top:18px;font-size:22px;font-weight:700;color:#D4FF3A\">1 &middot; PRICE</div><div class=\"Ii\" style=\"position:absolute;left:24px;top:56px;width:492px;font-size:31px;line-height:1.22;color:#f2f2ee\">Full groom, medium dog: <b style=\"color:#D4FF3A\">$85</b>.</div></div><div class=\"fx\" style=\"left:484px;top:620px;width:540px;height:170px;box-sizing:border-box;padding:20px 24px;background:#0c0c0c;border-radius:22px;color:#f2f2ee\"><div class=\"Mm\" style=\"position:absolute;left:24px;top:18px;font-size:22px;font-weight:700;color:#D4FF3A\">2 &middot; WHAT + HOW LONG</div><div class=\"Ii\" style=\"position:absolute;left:24px;top:56px;width:492px;font-size:31px;line-height:1.22;color:#f2f2ee\">Bath, cut, nails, ears. About 2 hours, at your door.</div></div><div class=\"fx\" style=\"left:484px;top:810px;width:540px;height:130px;box-sizing:border-box;padding:20px 24px;background:#0c0c0c;border-radius:22px;color:#f2f2ee\"><div class=\"Mm\" style=\"position:absolute;left:24px;top:18px;font-size:22px;font-weight:700;color:#D4FF3A\">3 &middot; TWO REAL TIMES</div><div class=\"Ii\" style=\"position:absolute;left:24px;top:56px;width:492px;font-size:31px;line-height:1.22;color:#f2f2ee\">Thursday at 10 AM or 2 PM.</div></div><div class=\"fx\" style=\"left:484px;top:960px;width:540px;height:130px;box-sizing:border-box;padding:20px 24px;background:#0c0c0c;border-radius:22px;color:#f2f2ee\"><div class=\"Mm\" style=\"position:absolute;left:24px;top:18px;font-size:22px;font-weight:700;color:#D4FF3A\">4 &middot; ONE QUESTION</div><div class=\"Ii\" style=\"position:absolute;left:24px;top:56px;width:492px;font-size:31px;line-height:1.22;color:#f2f2ee\">Want me to hold one?</div></div>",
+ "slides": [
+  {
+   "title": "1. Lead with the *real price*",
+   "body": "Put the number first. If it truly depends, give your <b>starting price</b> and name the one thing that changes it. <b>SAMPLE:</b> “A full groom for a medium dog is $85. Big or matted coats can run more.”"
+  },
+  {
+   "title": "2. Say what is *included*",
+   "body": "One line on what they get and <b>how long it takes</b>. It answers the next two questions before they ask. <b>SAMPLE:</b> “Bath, cut, nails and ears, about 2 hours, in our van at your door.”"
+  },
+  {
+   "title": "3. Offer *two real times*",
+   "body": "Skip “when works for you?” Give <b>two specific slots</b> you actually have open. <b>SAMPLE:</b> “I have Thursday at 10 AM or 2 PM.”"
+  },
+  {
+   "title": "4. End on *one question*",
+   "body": "Ask for the booking, not for more questions. One short question keeps the chat going. <b>SAMPLE:</b> “Want me to hold one?”"
+  },
+  {
+   "title": "5. Let *Claude* draft it",
+   "body": "Paste into Claude (the free plan works): <b>You write customer replies for my business. My services and prices: [paste]. Reply to this message in 3 short sentences: the real price, what is included and how long it takes, two times from [my open slots], and one question that books the job. If you do not know a price, write [CHECK]. Message: [paste]</b>"
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "sources": [
+  [
+   "WeddingPro",
+   "https://pros.weddingpro.com/?p=3527"
+  ],
+  [
+   "Greenlit Content",
+   "https://greenlitcontent.com/sales/5-highly-effective-ways-to-respond-to-how-much-does-it-cost"
+  ],
+  [
+   "Readymode",
+   "https://readymode.com/appointment-setting-tips/"
+  ],
+  [
+   "Bloom",
+   "https://blog.bloom.io/getting-your-clients-to-pick-a-time-instead-of-asking-what-time-works-best-for-you/"
+  ]
+ ],
+ "bg_words": [
+  "PRICE",
+  "REPLY",
+  "BOOK",
+  "JOB"
+ ],
+ "bg_facts": [
+  "Lead with the real price.",
+  "Say what is included.",
+  "Offer two real times.",
+  "End on one question."
+ ]
+}
