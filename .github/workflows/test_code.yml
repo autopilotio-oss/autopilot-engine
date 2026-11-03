@@ -11,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { sparse-checkout: "scripts\nstate", filter: "blob:none" }   # skip 1.4 GB of media: full checkouts now take 10+ minutes
       - run: python3 scripts/gumroad_test_code.py "${{ github.event.inputs.action }}" "${{ github.event.inputs.product }}" "${{ github.event.inputs.code }}" "${{ github.event.inputs.cents_off }}"
         env: { GUMROAD_TOKEN: "${{ secrets.GUMROAD_TOKEN }}" }
