@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-03T16:30:00Z",
+  "at": "2026-11-03T17:43:00Z",
   "posts_today": {
     "threads": {
       "published": 1,
@@ -35,7 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-03T16:30:00Z"
+      "metrics_seen_at": "2026-11-03T17:43:00Z"
     },
     {
       "network": "instagram",
@@ -49,7 +49,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-03T16:30:00Z"
+      "metrics_seen_at": "2026-11-03T17:43:00Z"
     },
     {
       "network": "instagram",
@@ -63,12 +63,12 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-03T16:30:00Z"
+      "metrics_seen_at": "2026-11-03T17:43:00Z"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "13:30 ART: 3 posts published today (banks story on threads, twitter, tiktok at 12:00), 17 provider slots pending (16 draft=true awaiting approval; approved instagram banks post at 18:00), 0 ERROR. Instagram reels 6-72h (7 reels): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok videos 6-72h (13): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1), one comment on Binance heist video. Threads, X and Instagram feed post analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). All 8 workflows latest run success (ci.yml 1 fail in 24h, latest success). HQ feed written to status/hub (v29)."
+  "notes": "14:45 ART: 3 posts published today (banks story on threads, twitter, tiktok at 12:00), 17 provider slots pending (approved instagram banks post at 18:00, rest draft=true), 0 ERROR. Instagram reels 6-72h (7 reels): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok videos 6-72h (13): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1), one comment on Binance heist video. Threads, X and Instagram feed post analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). Workflows: latest runs success, post.yml in progress, ci.yml 1 fail in 24h (latest success). HQ feed written to status/hub (v30). Local git fetch stalls (repo tarball ~1.7GB); this run read the repo via GitHub API and committed via API."
 }
