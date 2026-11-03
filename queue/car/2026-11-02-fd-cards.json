@@ -4,13 +4,61 @@
   "status": "scheduled",
   "cover": "Front Desk demo cards: price question, after hours request, quiet quote (example businesses, drafts only)",
   "theme": "dark",
-  "media": ["docs/media/cards/fd-price.jpg", "docs/media/cards/fd-late.jpg", "docs/media/cards/fd-chase.jpg"],
-  "approval": {"by": "Seb", "quote": "Post now on all platforms than analyze what works and double down on it tomorrow", "at": "2026-11-02T22:23:00-03:00", "basis": "explicit owner request in chat; posted outside the daily cap on purpose"},
-  "posts": [
-    {"network": "instagram", "metricool_id": 414727819, "uuid": "1486812541758358080", "at": "2026-11-02T22:30:00-03:00", "cta": "Comment AGENTS"},
-    {"network": "tiktok", "metricool_id": 414727857, "uuid": "-3979881325309571286", "at": "2026-11-02T22:30:00-03:00", "cta": "link in bio"},
-    {"network": "threads", "metricool_id": 414727898, "uuid": "-4915258675234323049", "at": "2026-11-02T22:30:00-03:00", "cta": "/brain/ utm_content=fd_cards_1102"},
-    {"network": "twitter", "metricool_id": 414727923, "uuid": "8918850294438579023", "at": "2026-11-02T22:30:00-03:00", "cta": "/brain/ utm_content=fd_cards_1102"}
+  "media": [
+    "docs/media/cards/fd-price.jpg",
+    "docs/media/cards/fd-late.jpg",
+    "docs/media/cards/fd-chase.jpg"
   ],
-  "results": null
+  "approval": {
+    "by": "Seb",
+    "quote": "Post now on all platforms than analyze what works and double down on it tomorrow",
+    "at": "2026-11-02T22:23:00-03:00",
+    "basis": "explicit owner request in chat; posted outside the daily cap on purpose"
+  },
+  "posts": [
+    {
+      "network": "instagram",
+      "metricool_id": 414727819,
+      "uuid": "1486812541758358080",
+      "at": "2026-11-02T22:30:00-03:00",
+      "cta": "Comment AGENTS"
+    },
+    {
+      "network": "tiktok",
+      "metricool_id": 414727857,
+      "uuid": "-3979881325309571286",
+      "at": "2026-11-02T22:30:00-03:00",
+      "cta": "link in bio"
+    },
+    {
+      "network": "threads",
+      "metricool_id": 414727898,
+      "uuid": "-4915258675234323049",
+      "at": "2026-11-02T22:30:00-03:00",
+      "cta": "/brain/ utm_content=fd_cards_1102"
+    },
+    {
+      "network": "twitter",
+      "metricool_id": 414727923,
+      "uuid": "8918850294438579023",
+      "at": "2026-11-02T22:30:00-03:00",
+      "cta": "/brain/ utm_content=fd_cards_1102"
+    }
+  ],
+  "results": {
+    "pulled": "2026-11-03T15:20:00-03:00",
+    "instagram": {
+      "views": 2,
+      "reach": 0,
+      "likes": 0,
+      "saves": 0,
+      "shares": 0
+    },
+    "tiktok": {
+      "views": 0
+    },
+    "threads": "not yet in analytics",
+    "twitter": "not yet in analytics",
+    "read": "weak after about 17h; photo cards underperform video on TikTok"
+  }
 }

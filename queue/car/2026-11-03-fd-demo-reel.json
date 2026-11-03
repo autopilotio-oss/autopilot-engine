@@ -1,0 +1,15 @@
+{
+  "id": "2026-11-03-fd-demo-reel",
+  "kind": "reel",
+  "status": "scheduled",
+  "cover": "Front Desk demo reel, 24s: price reply, quote with deposit rules, follow up with a CHECK line (example business, drafts only). Cut from docs/media/ads/st-demo.mp4 before the retired $19.99 offer; new free Starter end card.",
+  "media": ["docs/media/reels/fd-demo-tt.mp4", "docs/media/reels/fd-demo-ig.mp4"],
+  "why": "Nov 1 to 3 data: TikTok videos 44 to 113 views vs Front Desk photo cards 0 (TikTok) and 2 (IG). Samples tiny; this is a format test, not a proven winner.",
+  "approval": {"by": "Seb", "quote": "Post now on all platforms than analyze what works and double down on it tomorrow", "at": "2026-11-02T22:23:00-03:00", "basis": "explicit owner request in chat; executed by scheduled follow up trig_017u1PTM4BVRGfyrmhgZiNnk; within daily caps"},
+  "posts": [
+    {"network": "tiktok", "metricool_id": 415632763, "uuid": "561923309309543313", "at": "2026-11-03T18:00:00-03:00", "cta": "link in bio"},
+    {"network": "threads", "metricool_id": 415632533, "uuid": "7901170287263172875", "at": "2026-11-04T12:30:00-03:00", "cta": "/brain/ utm_content=fd_demo_1104"},
+    {"network": "instagram", "metricool_id": 415632492, "uuid": "-8523647425235367558", "at": "2026-11-04T18:00:00-03:00", "cta": "Comment AGENTS"}
+  ],
+  "results": null
+}
