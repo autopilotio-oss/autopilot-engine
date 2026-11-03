@@ -1,6 +1,6 @@
 # Daily report
 
-Generated 2026-11-03 12:59 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-03T10:43:24Z.
+Generated 2026-11-03 13:57 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-03T13:57:11Z.
 Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown attribution stays unknown.
 
 | Metric | Value | Source |
@@ -15,7 +15,7 @@ Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown 
 | Landing conversion | 0 orders / sessions MISSING (GoatCounter token not set) | ledger + GoatCounter |
 | Activation | 0/0 buyers | sales/activations.csv |
 | Attribution quality | 0/0 orders with a source | ledger UTMs |
-| System health | failing: meta_pixel_configured, worker:support_agent | state/health/status.json |
+| System health | failing: meta_pixel_configured | state/health/status.json |
 
 ## Gates (Master Plan p17)
 - G0 technically sellable: NOT PASSED (needs a paid test order through ledger, Kit and pixel; see tests/e2e_purchase.md)
