@@ -1,0 +1,69 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 03 2026",
+ "cover_bg": "bg-black",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 31,
+ "lava_opacity": 0.35,
+ "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">5 PROMPTS &middot; QUOTES</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"18\" style=\"left:56px;top:150px;white-space:nowrap;font-size:170px;color:#f2f2ee;background:#0a0a0a\">Write the quote</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:320px;white-space:nowrap;font-size:170px;color:#D4FF3A;background:#0a0a0a\">They say yes to</div><div class=\"fx\" style=\"left:56px;top:500px;width:830px;height:630px;background:#f2f2ee;border-radius:10px\"></div><div class=\"fx Cc\" style=\"left:96px;top:534px;font-size:21px;color:#0c0c0c;background:#f2f2ee\">SAMPLE &middot; FENCE REPAIR &middot; QUOTE 0142</div><div class=\"fx Ii\" style=\"left:96px;top:596px;font-size:30px;color:#0c0c0c;background:#f2f2ee\">Labor, 2 days</div><div class=\"fx Mm\" style=\"left:640px;top:598px;width:206px;text-align:right;font-size:28px;font-weight:700;color:#0c0c0c;background:#f2f2ee\">$640</div><div class=\"fx Ii\" style=\"left:96px;top:658px;font-size:30px;color:#0c0c0c;background:#f2f2ee\">Cedar boards x 24</div><div class=\"fx Mm\" style=\"left:640px;top:660px;width:206px;text-align:right;font-size:28px;font-weight:700;color:#0c0c0c;background:#f2f2ee\">$310</div><div class=\"fx Ii\" style=\"left:96px;top:720px;font-size:30px;color:#0c0c0c;background:#f2f2ee\">Haul away old fence</div><div class=\"fx Mm\" style=\"left:640px;top:722px;width:206px;text-align:right;font-size:28px;font-weight:700;color:#0c0c0c;background:#f2f2ee\">$90</div><div class=\"fx Ii\" style=\"left:96px;top:782px;font-size:34px;color:#0c0c0c;background:#f2f2ee\">TOTAL</div><div class=\"fx Mm\" style=\"left:640px;top:784px;width:206px;text-align:right;font-size:32px;font-weight:700;color:#0c0c0c;background:#f2f2ee\">$1,040</div><div class=\"fx\" style=\"left:96px;top:830px;width:750px;height:3px;background:#0c0c0c\"></div><div class=\"fx\" style=\"left:90px;top:860px;width:756px;height:58px;background:#D4FF3A;border-radius:6px\"></div><div class=\"fx Mm\" style=\"left:110px;top:875px;font-size:22px;font-weight:700;color:#0c0c0c;background:#D4FF3A\">NOT INCLUDED</div><div class=\"fx Ii\" style=\"left:350px;top:869px;font-size:30px;color:#0c0c0c;background:#D4FF3A\">Paint, permits</div><div class=\"fx\" style=\"left:90px;top:936px;width:756px;height:58px;background:#D4FF3A;border-radius:6px\"></div><div class=\"fx Mm\" style=\"left:110px;top:951px;font-size:22px;font-weight:700;color:#0c0c0c;background:#D4FF3A\">GOOD FOR</div><div class=\"fx Ii\" style=\"left:350px;top:945px;font-size:30px;color:#0c0c0c;background:#D4FF3A\">30 days</div><div class=\"fx\" style=\"left:90px;top:1012px;width:756px;height:58px;background:#D4FF3A;border-radius:6px\"></div><div class=\"fx Mm\" style=\"left:110px;top:1027px;font-size:22px;font-weight:700;color:#0c0c0c;background:#D4FF3A\">TO BOOK</div><div class=\"fx Ii\" style=\"left:350px;top:1021px;font-size:30px;color:#0c0c0c;background:#D4FF3A\">$312 deposit</div><div class=\"fx Ii\" style=\"left:56px;top:1180px;white-space:nowrap;font-size:32px;line-height:1.25;color:#f2f2ee;background:#0a0a0a\">5 Claude prompts. No surprises. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "Notes into *clear lines*",
+   "prompt": "Here are my notes for a [job] for [customer]: [paste notes]. Turn them into a quote with one line per item: labor, each material with how many, any fees, then the total. Plain words a customer gets on the first read.",
+   "why": "One lump sum makes people wonder what they are paying for. Lines answer that before they ask."
+  },
+  {
+   "title": "Say what is *not included*",
+   "prompt": "Here is my quote for [job]: [paste]. List 3 to 5 things a customer might think are included but are not, like [cleanup, paint, permits]. Write each as one short line for a Not included section.",
+   "why": "Unclear scope is a common cause of price fights after the job. One short list heads most of them off."
+  },
+  {
+   "title": "Give it an *end date*",
+   "prompt": "Add one line to this quote saying the price is good until [date], and one plain sentence on why: my material costs can change. Friendly, not pushy.",
+   "why": "With no end date, a yes months later can lock in an old price. Many shops use 14 to 30 days."
+  },
+  {
+   "title": "Spell out *how they pay*",
+   "prompt": "Write the payment terms for this quote in 3 short lines: a deposit of [amount] to book the date, the rest due [when], and how they can pay: [methods].",
+   "why": "If it is not written down, people pay on their own schedule and you cover the costs meanwhile."
+  },
+  {
+   "title": "Read it like *the customer*",
+   "prompt": "Read this quote as if you were my customer: [paste]. List every question you would text me after reading it. Then rewrite the unclear lines so those questions are already answered.",
+   "why": "Every question the quote answers is one less text before they say yes."
+  }
+ ],
+ "cta": {
+  "big": "Let Claude draft *replies*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "sources": [
+  [
+   "Joblogic",
+   "https://www.joblogic.com/blog/how-to-quote-a-job"
+  ],
+  [
+   "Zigaflow",
+   "https://zigaflow.com/resources/guides/what-to-include-in-a-quote"
+  ],
+  [
+   "Arrivy",
+   "https://www.arrivy.com/blog/how-to-write-a-quote-for-a-job/"
+  ]
+ ],
+ "bg_words": [
+  "QUOTE",
+  "LINES",
+  "TERMS",
+  "YES"
+ ],
+ "bg_facts": [
+  "One line per item.",
+  "List what is not included.",
+  "Good for 14 to 30 days.",
+  "Deposit to book."
+ ]
+}
