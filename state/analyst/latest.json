@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-03T00:26:00Z",
+  "at": "2026-11-03T01:24:00Z",
   "posts_today": {
     "threads": {
       "published": 3,
@@ -70,5 +70,5 @@
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "21:26 ART: 11 provider slots published today (unchanged), 12 pending (all draft=true awaiting approval), 0 ERROR. Post analytics not re-pulled this run; top_posts keep the metrics seen at 22:27Z (all 0 saves, 0 shares, ranked by reach only, no winner). TikTok, Threads and X post analytics MISSING. Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). All 8 workflows latest run success. HQ feed written to status/hub (v22)."
+  "notes": "22:24 ART: 11 provider slots published today (unchanged), 12 pending (all draft=true awaiting approval), 0 ERROR. Post analytics not re-pulled this run; top_posts keep the metrics seen at 22:27Z (all 0 saves, 0 shares, ranked by reach only, no winner). TikTok, Threads and X post analytics MISSING. Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). All 8 workflows latest run success (ci.yml 5 fails in 24h, latest success). HQ feed written to status/hub (v23)."
 }
