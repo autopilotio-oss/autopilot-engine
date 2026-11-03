@@ -5,10 +5,11 @@ on:
       action: { description: "create or delete", required: true, default: "create" }
       product: { description: "permalink", required: true, default: "autopilot" }
       code: { description: "code name", required: true }
+      cents_off: { description: "blank = 100% off; cents off for a small paid test (3800 on the $39 kit = $1)", required: false, default: "" }
 jobs:
   code:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/gumroad_test_code.py "${{ github.event.inputs.action }}" "${{ github.event.inputs.product }}" "${{ github.event.inputs.code }}"
+      - run: python3 scripts/gumroad_test_code.py "${{ github.event.inputs.action }}" "${{ github.event.inputs.product }}" "${{ github.event.inputs.code }}" "${{ github.event.inputs.cents_off }}"
         env: { GUMROAD_TOKEN: "${{ secrets.GUMROAD_TOKEN }}" }

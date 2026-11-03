@@ -21,3 +21,8 @@ date,contact_ref,trade,channel,campaign,status,score,offer,attribution_id,object
 2026-11-03,det-97400f88c0,detailing,,v3_pilot,DRAFTED,75,front_desk_setup,det-97400f88c0,,,claim check: sender identity or postal address missing (CAN-SPAM)
 2026-11-03,det-1464bd1dce,detailing,,v3_pilot,RESEARCHED,65,,det-1464bd1dce,,,
 2026-11-03,det-d5c5496bd5,detailing,,v3_pilot,RESEARCHED,65,,det-d5c5496bd5,,,
+2026-11-03,det-7ee539821c,detailing,,v3_pilot,APPROVED,,,det-7ee539821c,,Seb,Seb in chat 2026-11-03 16:49 ART: 'Approve everything' (draft as shown in claude/outbound/leads-and-drafts.md; send blocked until postal address added)
+2026-11-03,det-24c2ef5027,detailing,,v3_pilot,APPROVED,,,det-24c2ef5027,,Seb,Seb in chat 2026-11-03 16:49 ART: 'Approve everything' (draft as shown in claude/outbound/leads-and-drafts.md; send blocked until postal address added)
+2026-11-03,det-c9262c4d90,detailing,,v3_pilot,APPROVED,,,det-c9262c4d90,,Seb,Seb in chat 2026-11-03 16:49 ART: 'Approve everything' (draft as shown in claude/outbound/leads-and-drafts.md; send blocked until postal address added)
+2026-11-03,det-da8056815f,detailing,,v3_pilot,APPROVED,,,det-da8056815f,,Seb,Seb in chat 2026-11-03 16:49 ART: 'Approve everything' (draft as shown in claude/outbound/leads-and-drafts.md; send blocked until postal address added)
+2026-11-03,det-f5c1a211a1,detailing,,v3_pilot,APPROVED,,,det-f5c1a211a1,,Seb,Seb in chat 2026-11-03 16:49 ART: 'Approve everything' (draft as shown in claude/outbound/leads-and-drafts.md; send blocked until postal address added)
