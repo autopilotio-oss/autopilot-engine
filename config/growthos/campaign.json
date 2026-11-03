@@ -79,7 +79,14 @@
     "daily_usd": 10,
     "cap_usd": 60,
     "from": "2026-11-05",
-    "rule": "Boost only the verified winning reel (best purchases, then guide clicks, then retention). Traffic or sales objective to the guide page, never engagement. Pause at the cap, on Nov 10 23:59 ART, or if 3 days spend gives zero guide clicks."
+    "rule": "Boost only the verified winning reel (best purchases, then guide clicks, then retention). Traffic or sales objective to the guide page, never engagement. Pause at the cap, on Nov 10 23:59 ART, or if 3 days spend gives zero guide clicks.",
+    "status": "off",
+    "withdrawn": {
+      "at": "2026-11-02",
+      "by": "Seb",
+      "quote": "Fix it",
+      "why": "Sales recovery plan: no paid ads while tracking is broken (no Meta Pixel). Needs Seb's explicit yes and a live pixel to restart."
+    }
   },
   "approvals": [
     {
@@ -92,7 +99,8 @@
     },
     {
       "what": "Meta ads, $10 a day, $60 total cap, behind the best performing reel from day 5",
-      "quote": "$10/day, $60 cap"
+      "quote": "$10/day, $60 cap",
+      "withdrawn": "2026-11-02, Seb: \"Fix it\" (no ads until the pixel is live and Seb approves again)"
     },
     {
       "what": "Launch discount code up to 30% off until Nov 10, list prices unchanged",
@@ -168,5 +176,13 @@
       "frequency": "Kontentino 2026: feed posts 3 to 5 per week, Reels 4 to 7 per week. socialcal.app: effective feed ceiling about 1 per day. TikTok creator resources: 1 to 4 per day."
     },
     "draft_bank": "Posts over the cap were moved to Metricool drafts (not deleted). The operator may promote one into an open slot when its topic or format is a proven winner."
+  },
+  "focus": {
+    "since": "2026-11-02",
+    "by": "Seb",
+    "quote": "Fix it",
+    "offer": "Front Desk Kit $39 (/front-desk/) with the free Front Desk Starter (/brain/) as entry",
+    "parked": "$10 money agents and Office Autopilot: no new posts or CTAs; LAUNCH30 not mentioned in new content",
+    "instagram_keyword": "AGENTS (ManyChat confirmed; DMs autopilotoi.app/free/, which leads with the Front Desk Kit)"
   }
 }
