@@ -16,6 +16,10 @@
   [
    "Experian",
    "https://www.experian.com/blogs/ask-experian/how-long-do-you-have-to-dispute-credit-card-charge/"
+  ],
+  [
+   "Maryland Attorney General",
+   "https://oag.maryland.gov/resources-info/Documents/pdfs/CPD%20Publications/Credit_Cards_Disputing_a_Charge.pdf"
   ]
  ],
  "captions": {
@@ -28,8 +32,8 @@
  "media": "docs/media/car/2026-11-01-howto-dispute/",
  "built_at": "2026-11-01T18:40Z",
  "rechecked": {
-  "at": "2026-11-02T22:40Z",
+  "at": "2026-11-03T00:42Z",
   "result": "still bank",
-  "notes": "Bank full (6). FCBA rules unchanged (60 day written notice to billing inquiries address, 30 day acknowledgement, 2 billing cycles max 90 days); corroborated via NYC Bar, Cornell LII, Fairfax County search results. CA AG source URL still indexed at same address; direct fetch of both sources timed out on permission this run. docs/g/refund present; REFUND keyword in manychat.json."
+  "notes": "Bank full (6), oldest item rechecked. FCBA rules unchanged (60 day written notice to billing inquiries address, 30 day acknowledgement, 2 billing cycles max 90 days); corroborated via Maryland AG, Fairfax County, Wikipedia search results. CA AG URL still indexed at same address; Experian URL not surfaced by search this run and direct fetch of both timed out on permission, so Maryland AG added as backup source. REFUND keyword in manychat.json; docs/g/refund present."
  }
 }
