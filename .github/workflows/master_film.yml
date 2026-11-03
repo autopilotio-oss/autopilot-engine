@@ -1,0 +1,89 @@
+name: Master ecosystem film (4K, 3 cuts)
+on:
+  workflow_dispatch:
+    inputs:
+      cuts: { description: "space separated: master c60 c30", required: true, default: "master c60 c30" }
+permissions:
+  contents: write
+concurrency: master_film
+env:
+  SPARSE: "tools/master_film\ntools/office/fonts\ntools/story/fonts\ntools/character/out/operative\ntools/series\ntools/reel\nscripts"
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: "tools/master_film\ntools/series\ntools/reel\nscripts", filter: "blob:none" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy
+      - name: Voice (ElevenLabs Brian, existing credits) + build + mix
+        env: { ELEVENLABS_API_KEY: "${{ secrets.ELEVENLABS_API_KEY }}" }
+        run: for c in ${{ github.event.inputs.cuts }}; do bash tools/master_film/make.sh prep $c; done
+      - uses: actions/upload-artifact@v4
+        with: { name: prep, path: "tools/master_film/*.html\ntools/master_film/*_mix.wav\ntools/master_film/*.words.json\ntools/master_film/*.meta.json" }
+  render:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { cut: master, k: 0, n: 14 }
+          - { cut: master, k: 1, n: 14 }
+          - { cut: master, k: 2, n: 14 }
+          - { cut: master, k: 3, n: 14 }
+          - { cut: master, k: 4, n: 14 }
+          - { cut: master, k: 5, n: 14 }
+          - { cut: master, k: 6, n: 14 }
+          - { cut: master, k: 7, n: 14 }
+          - { cut: master, k: 8, n: 14 }
+          - { cut: master, k: 9, n: 14 }
+          - { cut: master, k: 10, n: 14 }
+          - { cut: master, k: 11, n: 14 }
+          - { cut: master, k: 12, n: 14 }
+          - { cut: master, k: 13, n: 14 }
+          - { cut: c60, k: 0, n: 4 }
+          - { cut: c60, k: 1, n: 4 }
+          - { cut: c60, k: 2, n: 4 }
+          - { cut: c60, k: 3, n: 4 }
+          - { cut: c30, k: 0, n: 2 }
+          - { cut: c30, k: 1, n: 2 }
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: "${{ env.SPARSE }}", filter: "blob:none" }
+      - uses: actions/download-artifact@v4
+        with: { name: prep, path: tools/master_film }
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm i -g --silent playwright@1 && npx playwright install --with-deps chromium
+          echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
+      - name: Render chunk
+        run: |
+          if [ ! -f tools/master_film/${{ matrix.cut }}.html ]; then echo "cut not requested"; exit 0; fi
+          CUT=${{ matrix.cut }} RANGE=${{ matrix.k }}/${{ matrix.n }} bash tools/master_film/make.sh chunk
+      - uses: actions/upload-artifact@v4
+        with: { name: "chunk-${{ matrix.cut }}-${{ matrix.k }}", path: "tools/master_film/${{ matrix.cut }}_chunk_${{ matrix.k }}.mp4", if-no-files-found: ignore }
+  final:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: "tools/master_film\ndocs/media/film", filter: "blob:none" }
+      - uses: actions/download-artifact@v4
+        with: { name: prep, path: tools/master_film }
+      - uses: actions/download-artifact@v4
+        with: { pattern: "chunk-*", path: tools/master_film, merge-multiple: true }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Join, add sound, 1080p copies
+        run: |
+          for c in ${{ github.event.inputs.cuts }}; do bash tools/master_film/make.sh final $c; done
+          mkdir -p docs/media/film && cp tools/master_film/out/* docs/media/film/ && ls -la docs/media/film
+          for c in ${{ github.event.inputs.cuts }}; do cp tools/master_film/$c.words.json tools/master_film/$c.voiced.words.json; done
+      - name: Commit
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add docs/media/film tools/master_film/*.voiced.words.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Master ecosystem film: rendered cuts (4K + 1080p)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done

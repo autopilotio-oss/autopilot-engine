@@ -1,0 +1,161 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:D;src:url(/tools/story/fonts/InterDisplay-SemiBold.otf)}
+@font-face{font-family:DM;src:url(/tools/story/fonts/InterDisplay-Medium.otf)}
+@font-face{font-family:DL;src:url(/tools/story/fonts/InterDisplay-Light.otf)}
+@font-face{font-family:I;src:url(/tools/story/fonts/Inter-Medium.otf)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--l:#C6FF3D;--a:#FFB547;--g:#8b918a;--t:#e9ece6}
+*{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#070808}
+#st{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 45%,#141716 0%,#0a0b0b 60%,#050606 100%);color:var(--t);font-family:I}
+.sc{position:absolute;inset:0;opacity:0;will-change:opacity,transform}
+.floor{position:absolute;left:-20%;right:-20%;top:58%;height:70%;transform:perspective(900px) rotateX(72deg);transform-origin:top;background-image:linear-gradient(rgba(198,255,61,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(198,255,61,.07) 1px,transparent 1px);background-size:80px 80px;-webkit-mask-image:linear-gradient(#000,transparent 85%)}
+.glass{position:absolute;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.10);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.06)}
+.mono{font-family:M;letter-spacing:.14em;text-transform:uppercase}
+.chip{display:inline-block;font-family:M;font-size:15px;letter-spacing:.14em;padding:6px 12px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
+.LIVE{background:var(--l);color:#0b0c0b}.PARTIAL{border:1.5px solid var(--a);color:var(--a)}.CONCEPT{border:1.5px dashed #6d736c;color:#a3a9a1}.PILOT{border:1.5px solid var(--a);color:var(--a)}.PROJECTION{border:1.5px dashed var(--l);color:var(--l)}
+.h1{font-family:D;letter-spacing:-.02em}.lime{color:var(--l)}
+#sub{position:absolute;left:260px;right:260px;bottom:46px;text-align:center;font-family:DM;font-size:30px;line-height:1.35;color:#e9ece6;text-shadow:0 2px 14px #000,0 0 3px #000}
+#label{position:absolute;left:64px;top:52px;font-family:M;font-size:16px;letter-spacing:.3em;color:#7d837c}
+#label b{color:var(--l);font-weight:400}
+#corner{position:absolute;right:64px;top:52px;font-family:M;font-size:16px;letter-spacing:.24em;color:#5e645d}
+#grain{display:none;position:absolute;left:0;top:0;width:1920px;height:1080px;opacity:0;mix-blend-mode:screen;pointer-events:none}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55));pointer-events:none}
+.op{position:absolute;width:auto;filter:drop-shadow(0 0 30px rgba(198,255,61,.08))}
+.row{display:flex;align-items:center;gap:14px}
+.tick{width:28px;height:28px;border-radius:50%;border:2px solid #3b403a;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.tick.on{border-color:var(--l);background:rgba(198,255,61,.12)}
+.tick.on:after{content:"";width:10px;height:6px;border-left:2.5px solid var(--l);border-bottom:2.5px solid var(--l);transform:rotate(-45deg) translate(1px,-1px)}
+</style></head><body><div id="st"></div><canvas id="grain" width="960" height="540"></canvas><div id="vig"></div><div id="label">AUTOPILOT<b>.OI</b></div><div id="corner"></div><div id="sub"></div>
+<script>
+const DATA=/*DATA*/null;
+const T=DATA.truth, st=document.getElementById('st');
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), E=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}, eo=x=>1-Math.pow(1-cl(x),3);
+const R=(p,a,b)=>cl((p-a)/(b-a));
+const el=(h)=>{const d=document.createElement('div');d.innerHTML=h.trim();return d.firstChild};
+const chip=s=>`<span class="chip ${s.split(' ')[0]}">${s}</span>`;
+const OP=['/tools/master_film/op/op_back.png','/tools/master_film/op/op_back2.png'];
+const S={};
+
+S.open=()=>{const d=el(`<div class="sc"><div class="floor" style="opacity:0"></div><svg width="1920" height="1080" style="position:absolute;inset:0">
+<defs><filter id="gl"><feGaussianBlur stdDeviation="6"/></filter></defs>
+<g id="ln"></g></svg><div class="ops"></div><div class="screens"></div></div>`);
+ const g=d.querySelector('#ln');const ys=[380,470,610,700];
+ for(let i=0;i<4;i++){g.insertAdjacentHTML('beforeend',`<path d="M120 540 L760 540 C980 540 1040 ${ys[i]} 1260 ${ys[i]} L1800 ${ys[i]}" stroke="#C6FF3D" stroke-opacity=".55" stroke-width="2" fill="none" pathLength="1"/><circle r="7" fill="#C6FF3D" filter="url(#gl)"/><circle r="3.5" fill="#fff"/>`)}
+ const scr=d.querySelector('.screens');for(let i=0;i<3;i++)scr.insertAdjacentHTML('beforeend',`<div class="glass" style="left:${330+i*470}px;top:300px;width:400px;height:240px;border-color:rgba(198,255,61,.25);background:linear-gradient(180deg,rgba(198,255,61,.10),rgba(198,255,61,.02))"><div class="mono" style="font-size:13px;color:#C6FF3D;padding:18px">${['RESEARCH','DRAFTS','HEALTH'][i]}</div>${[0,1,2,3].map(k=>`<div style="margin:10px 18px;height:10px;border-radius:5px;background:rgba(255,255,255,${.08+.04*k});width:${[80,62,70,45][k]}%"></div>`).join('')}</div>`);
+ const ops=d.querySelector('.ops');for(let i=0;i<3;i++)ops.insertAdjacentHTML('beforeend',`<img class="op" src="${OP[i%2]}" style="left:${400+i*470}px;top:470px;height:560px">`);
+ d.u=(p)=>{const paths=g.querySelectorAll('path'),cs=g.querySelectorAll('circle');const a=1-R(p,.55,.75);
+  paths.forEach((pa,i)=>{const L=pa.getTotalLength();const q=eo(R(p,.02,.5));pa.style.strokeDasharray=L;pa.style.strokeDashoffset=L*(1-q);pa.style.opacity=a;
+   const pt=pa.getPointAtLength(L*q);[cs[i*2],cs[i*2+1]].forEach(c=>{c.setAttribute('cx',pt.x);c.setAttribute('cy',pt.y);c.style.opacity=a*(q<1?1:0)})});
+  const b=E(R(p,.55,.95));d.querySelector('.floor').style.opacity=b;scr.style.opacity=b;scr.style.transform=`translateY(${(1-b)*30}px)`;ops.style.opacity=b;ops.style.transform=`scale(${1+.04*p})`;ops.style.transformOrigin='50% 100%'};return d};
+
+S.mark=()=>{const d=el(`<div class="sc"><div style="position:absolute;left:0;right:0;top:330px;text-align:center"><div class="lg" style="display:inline-block;width:110px;height:110px;border-radius:26px;background:#C6FF3D;color:#0b0c0b;font-family:D;font-size:56px;line-height:104px;letter-spacing:-.04em">ap.</div></div>
+<div class="wm h1" style="position:absolute;left:0;right:0;top:470px;text-align:center;font-size:150px;line-height:1">AUTOPILOT<span class="lime">.OI</span></div>
+<div class="mono sm" style="position:absolute;left:0;right:0;top:668px;text-align:center;font-size:19px;color:#8b918a">One system · four divisions · as of ${T.as_of}</div></div>`);
+ d.u=p=>{const a=E(R(p,0,.35)),b=E(R(p,.15,.55)),c=E(R(p,.4,.8));d.querySelector('.lg').style.cssText+=`;opacity:${a};transform:scale(${.85+.15*a})`;
+  const w=d.querySelector('.wm');w.style.clipPath=`inset(0 ${50-50*b}% 0 ${50-50*b}%)`;w.style.letterSpacing=`${.1-.12*b}em`;d.querySelector('.sm').style.opacity=c};return d};
+
+S.pillars=()=>{const dv=T.divisions;const d=el(`<div class="sc"><div class="floor"></div><div class="mono base" style="position:absolute;left:180px;right:180px;top:842px;text-align:center;font-size:16px;color:#C6FF3D;border-top:2px solid rgba(198,255,61,.6);padding-top:16px;box-shadow:0 -10px 40px rgba(198,255,61,.15)">Shared data layer · one record of truth</div></div>`);
+ dv.forEach((v,i)=>d.insertAdjacentHTML('beforeend',`<div class="glass pl" style="left:${180+i*400}px;top:260px;width:360px;height:560px;padding:34px;${v.status=='CONCEPT'?'border-style:dashed;background:rgba(255,255,255,.015)':''}">
+ <div class="mono" style="font-size:14px;color:#6d736c">0${i+1}</div><div class="h1" style="font-size:44px;line-height:1.05;margin:16px 0 18px">${v.name}</div><div style="font-size:22px;line-height:1.4;color:#aab0a8;min-height:96px">${v.line}</div>
+ <div style="margin-top:30px">${chip(v.status)}</div>${v.status!='CONCEPT'?`<div style="position:absolute;left:34px;right:34px;bottom:34px;height:3px;border-radius:2px;background:${v.status=='LIVE'?'#C6FF3D':'#FFB547'};opacity:.7"></div>`:''}</div>`));
+ d.u=p=>{d.querySelectorAll('.pl').forEach((e,i)=>{const q=E(R(p,.05+i*.1,.3+i*.1));e.style.opacity=q;e.style.transform=`translateY(${(1-q)*120}px)`});d.querySelector('.base').style.opacity=E(R(p,.45,.6))};return d};
+
+S.market=()=>{const k=T.divisions[0];const d=el(`<div class="sc"><div class="glass card" style="left:170px;top:210px;width:640px;height:620px;padding:48px">
+<div class="mono" style="font-size:16px;color:#8b918a">Marketplace</div><div class="h1" style="font-size:66px;margin:18px 0 6px">Front Desk Kit</div>
+<div class="h1 lime" style="font-size:110px;line-height:1">$39</div><div style="margin:18px 0 30px">${chip('LIVE')} <span class="mono" style="font-size:14px;color:#8b918a;margin-left:10px">one time · Gumroad</span></div>
+${['Setup agent + business interview','Drafts replies, quotes and follow ups','Runs in your own Claude account'].map(x=>`<div class="row" style="font-size:24px;color:#cfd3c8;margin:14px 0"><span style="width:8px;height:8px;background:#C6FF3D;border-radius:2px"></span>${x}</div>`).join('')}</div>
+<div class="flow" style="position:absolute;left:930px;top:250px;width:820px"></div><div class="mono note" style="position:absolute;left:930px;top:790px;font-size:15px;color:#6d736c">Checkout + delivery verified with a test order · Nov 2</div></div>`);
+ const f=d.querySelector('.flow');['Checkout on Gumroad','Receipt','Setup files in your inbox'].forEach((x,i)=>f.insertAdjacentHTML('beforeend',`<div class="glass st" style="position:relative;height:140px;margin-bottom:40px;padding:0 40px;display:flex;align-items:center;gap:26px"><span class="tick"></span><div><div class="mono" style="font-size:14px;color:#6d736c">Step ${i+1}</div><div class="h1" style="font-size:38px;margin-top:6px">${x}</div></div></div>`));
+ d.u=p=>{const c=d.querySelector('.card');const a=E(R(p,0,.25));c.style.opacity=a;c.style.transform=`translateX(${(1-a)*-60}px)`;
+  d.querySelectorAll('.st').forEach((s,i)=>{const q=E(R(p,.22+i*.16,.38+i*.16));s.style.opacity=.25+.75*q;s.querySelector('.tick').classList.toggle('on',q>.6);s.style.borderColor=q>.6?'rgba(198,255,61,.35)':''});d.querySelector('.note').style.opacity=E(R(p,.75,.9))};return d};
+
+S.draft=()=>{const msg='Hi, how much for a full detail on an SUV? Free Saturday?',rep='A full SUV detail is $250, about 3 hours. I have Saturday at 9 or 1. Want one?';
+ const d=el(`<div class="sc"><img class="op" src="${OP[1]}" style="left:1360px;top:300px;height:760px;opacity:.9">
+<div class="glass ph" style="left:560px;top:150px;width:720px;height:760px;padding:40px;border-radius:30px">
+<div class="row" style="justify-content:space-between"><span class="mono" style="font-size:15px;color:#8b918a">Messages · 11:48 PM</span><span class="mono" style="font-size:13px;color:#6d736c">Example business</span></div>
+<div class="in" style="margin-top:40px;max-width:520px;background:#1d201f;border-radius:22px 22px 22px 6px;padding:22px 26px;font-size:28px;line-height:1.4">${msg}</div>
+<div class="mono dl" style="margin:40px 0 10px;text-align:right;font-size:14px;color:#C6FF3D">Front Desk draft · not sent</div>
+<div class="out" style="margin-left:auto;max-width:560px;background:rgba(198,255,61,.12);border:1.5px dashed rgba(198,255,61,.6);border-radius:22px 22px 6px 22px;padding:22px 26px;font-size:28px;line-height:1.4;min-height:120px"><span class="ty"></span></div>
+<div class="row ap" style="justify-content:flex-end;margin-top:38px;gap:16px"><span class="mono" style="font-size:15px;color:#8b918a">You decide</span><span class="btn h1" style="background:#C6FF3D;color:#0b0c0b;font-size:28px;padding:16px 34px;border-radius:999px">Approve + send</span></div></div>
+<div style="position:absolute;left:170px;top:420px" class="side">${chip('DRAFTS, NOT SENDS')}<div class="h1" style="font-size:54px;line-height:1.05;margin-top:24px">It drafts.<br><span class="lime">You send.</span></div></div></div>`);
+ d.querySelector('.side .chip').className='chip LIVE';
+ d.u=p=>{const a=E(R(p,0,.15));d.querySelector('.ph').style.cssText+=`;opacity:${a};transform:translateY(${(1-a)*40}px)`;d.querySelector('.in').style.opacity=E(R(p,.08,.2));
+  d.querySelector('.dl').style.opacity=E(R(p,.25,.32));d.querySelector('.out').style.opacity=E(R(p,.25,.32));const n=Math.round(rep.length*R(p,.3,.68));d.querySelector('.ty').textContent=rep.slice(0,n)+(n<rep.length&&n>0?'▍':'');
+  const b=R(p,.74,.86);d.querySelector('.ap').style.opacity=E(b);d.querySelector('.btn').style.boxShadow=`0 0 ${40*Math.sin(Math.PI*R(p,.82,1))}px rgba(198,255,61,.6)`;d.querySelector('.side').style.opacity=E(R(p,.55,.7))};return d};
+
+S.solutions=()=>{const d=el(`<div class="sc"><div class="glass main" style="left:610px;top:250px;width:700px;height:440px;padding:46px;border-color:rgba(255,181,71,.45);box-shadow:0 0 80px rgba(255,181,71,.10),0 30px 80px rgba(0,0,0,.6)">
+<div class="mono" style="font-size:15px;color:#8b918a">AI Solutions · auto detailing</div><div class="h1" style="font-size:60px;margin:18px 0 8px">Front Desk Setup</div><div class="h1" style="font-size:96px;line-height:1;color:#FFB547">$299</div>
+<div style="margin-top:22px">${chip('PILOT')} <span class="mono" style="font-size:14px;color:#8b918a;margin-left:10px">we configure it with your real prices</span></div></div></div>`);
+ [['Real estate',150,150],['Agencies',1430,150],['E-commerce',150,760],['Professional services',1430,760]].forEach(([n,x,y])=>d.insertAdjacentHTML('beforeend',`<div class="glass cc" style="left:${x}px;top:${y}px;width:340px;height:150px;padding:26px;border-style:dashed;background:rgba(255,255,255,.015)"><div class="h1" style="font-size:30px;color:#aab0a8">${n}</div><div style="margin-top:16px">${chip('CONCEPT')}</div></div>`));
+ d.insertAdjacentHTML('beforeend',`<div class="mono rd" style="position:absolute;left:0;right:0;top:960px;text-align:center;font-size:16px;color:#6d736c">Roadmap · not on sale</div>`);
+ d.u=p=>{const a=E(R(p,0,.2));d.querySelector('.main').style.cssText+=`;opacity:${a};transform:scale(${.94+.06*a})`;d.querySelectorAll('.cc').forEach((c,i)=>{const q=E(R(p,.5+i*.06,.65+i*.06));c.style.opacity=q*.85;c.style.transform=`translateY(${(1-q)*30}px)`});d.querySelector('.rd').style.opacity=E(R(p,.75,.85))};return d};
+
+S.workspace=()=>{const d=el(`<div class="sc"><svg width="1920" height="1080" style="position:absolute;left:-190px;top:0;transform:scale(.9);transform-origin:50% 50%" class="wf" fill="none" stroke="#7d837c" stroke-width="2" stroke-dasharray="10 9">
+<rect x="360" y="170" width="1200" height="680" rx="22"/><rect x="390" y="230" width="240" height="590" rx="12"/><rect x="660" y="230" width="870" height="120" rx="12"/>
+<rect x="660" y="380" width="420" height="200" rx="12"/><rect x="1110" y="380" width="420" height="200" rx="12"/><rect x="660" y="610" width="870" height="210" rx="12"/>
+${[0,1,2,3,4,5].map(i=>`<line x1="420" y1="${280+i*60}" x2="${560-i*12}" y2="${280+i*60}"/>`).join('')}</svg>
+<div class="stamp mono" style="position:absolute;left:570px;top:420px;width:400px;text-align:center;font-size:54px;letter-spacing:.3em;color:#a3a9a1;border:3px dashed #6d736c;border-radius:14px;padding:18px 0;transform:rotate(-6deg);background:rgba(10,11,11,.8)">CONCEPT</div>
+<div class="glass dep" style="left:1330px;top:640px;width:470px;height:200px;padding:30px;border-color:rgba(198,255,61,.4)"><div class="mono" style="font-size:14px;color:#8b918a">Exists today</div><div class="h1" style="font-size:36px;margin:10px 0 14px">Founding spot · <span class="lime">$49</span></div><div class="row">${chip('LIVE')}<span class="mono" style="font-size:13px;color:#8b918a">refundable deposit</span></div></div>
+<div class="mono" style="position:absolute;left:230px;top:120px;font-size:16px;color:#8b918a">Workspace · not built yet</div></div>`);
+ d.u=p=>{const s=d.querySelector('.wf');s.style.opacity=E(R(p,0,.15));s.querySelectorAll('rect,line').forEach((r,i)=>{r.style.strokeDashoffset=-(p*120)});const q=E(R(p,.3,.42));const sp=d.querySelector('.stamp');sp.style.opacity=q;sp.style.transform=`rotate(-6deg) scale(${1.4-.4*q})`;
+  const a=E(R(p,.62,.78));const dp=d.querySelector('.dep');dp.style.opacity=a;dp.style.transform=`translateY(${(1-a)*40}px)`};return d};
+
+S.engine=()=>{const g=T.divisions[3].items;const cx=960,cy=540;const pos=g.map((x,i)=>{const a=-Math.PI/2+i*Math.PI/3;return [cx+Math.cos(a)*560,cy+Math.sin(a)*330]});
+ const d=el(`<div class="sc"><svg width="1920" height="1080" style="position:absolute;inset:0"><g class="ls"></g><g class="dots"></g></svg>
+<div class="core" style="position:absolute;left:${cx-150}px;top:${cy-150}px;width:300px;height:300px;border-radius:50%;border:2px solid rgba(198,255,61,.6);background:radial-gradient(circle,rgba(198,255,61,.18),rgba(198,255,61,.02) 70%);box-shadow:0 0 90px rgba(198,255,61,.25);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+<div class="mono" style="font-size:14px;color:#C6FF3D">One data core</div><div class="h1" style="font-size:30px;margin:10px 0">Growth Engine</div><div class="mono" style="font-size:12px;color:#8b918a;line-height:1.7">Ledger · health<br>outreach log</div></div></div>`);
+ const ls=d.querySelector('.ls'),dots=d.querySelector('.dots');
+ g.forEach(([n,s],i)=>{const [x,y]=pos[i];ls.insertAdjacentHTML('beforeend',`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="${s=='CONCEPT'?'#4a4f49':'rgba(198,255,61,.35)'}" stroke-width="2" ${s=='CONCEPT'?'stroke-dasharray="8 8"':''}/>`);
+  for(let k=0;k<(s=='CONCEPT'?0:3);k++)dots.insertAdjacentHTML('beforeend',`<circle r="5" fill="#C6FF3D" data-i="${i}" data-k="${k}"/>`);
+  const [title,sub]=n.split(' · ');d.insertAdjacentHTML('beforeend',`<div class="glass sn" style="left:${x-190}px;top:${y-70}px;width:380px;height:140px;padding:22px 26px;${s=='CONCEPT'?'border-style:dashed;background:rgba(10,11,11,.92)':'background:rgba(16,18,17,.95)'}"><div class="h1" style="font-size:27px;line-height:1.15">${title}</div><div class="mono" style="font-size:12px;color:#8b918a;margin:8px 0 12px">${sub||'&nbsp;'}</div>${chip(s)}</div>`)});
+ d.u=(p,t)=>{d.querySelector('.core').style.opacity=E(R(p,0,.12));d.querySelectorAll('.sn').forEach((e,i)=>{const q=E(R(p,.06+i*.07,.2+i*.07));e.style.opacity=q;e.style.transform=`scale(${.9+.1*q})`});ls.style.opacity=E(R(p,.1,.4));
+  dots.querySelectorAll('circle').forEach(c=>{const i=+c.dataset.i,k=+c.dataset.k;const [x,y]=pos[i];const f=((t*.35+k/3+i*.13)%1);c.setAttribute('cx',x+(cx-x)*f);c.setAttribute('cy',y+(cy-y)*f);c.style.opacity=E(R(p,.4,.55))*Math.sin(Math.PI*f)})};return d};
+
+S.journey=()=>{const st=['Researched','Scored','Drafted','Approved','Contacted','Replied','Call','Offer','Paid','Onboarded','Live','Referral'];const gate={3:'Human yes',8:'Verified payment'};
+ const d=el(`<div class="sc"><div class="mono" style="position:absolute;left:150px;top:250px;font-size:16px;color:#8b918a">One customer · example path</div><div class="rail" style="position:absolute;left:150px;right:150px;top:520px;height:2px;background:#2b2f2a"></div><div class="fill" style="position:absolute;left:150px;top:520px;height:2px;background:#C6FF3D;box-shadow:0 0 12px #C6FF3D"></div><div class="dot" style="position:absolute;top:508px;width:26px;height:26px;border-radius:50%;background:#C6FF3D;box-shadow:0 0 30px #C6FF3D"></div></div>`);
+ st.forEach((n,i)=>{const x=150+i*(1620/11);d.insertAdjacentHTML('beforeend',`<div class="sp" style="position:absolute;left:${x-80}px;top:${i%2?560:380}px;width:160px;text-align:center"><div class="mono" style="font-size:13px;color:#6d736c">${String(i+1).padStart(2,'0')}</div><div class="h1 nm" style="font-size:25px;margin-top:6px;color:#6d736c">${n}</div></div><div class="nd" style="position:absolute;left:${x-9}px;top:512px;width:18px;height:18px;border-radius:50%;background:#0b0c0b;border:2px solid #3b403a"></div>`);
+  if(gate[i])d.insertAdjacentHTML('beforeend',`<div class="gt" data-i="${i}" style="position:absolute;left:${x-120}px;top:${i%2?680:250}px;width:240px;text-align:center"><span class="chip" style="border:1.5px solid #C6FF3D;color:#C6FF3D">🔒 ${gate[i]}</span></div>`)});
+ d.u=p=>{const q=E(R(p,.04,.92))*11;const x=150+q*(1620/11);d.querySelector('.dot').style.left=(x-13)+'px';d.querySelector('.fill').style.width=(x-150)+'px';
+  d.querySelectorAll('.nm').forEach((n,i)=>{const on=q>=i-.05;n.style.color=on?'#e9ece6':'#4f554e'});d.querySelectorAll('.nd').forEach((n,i)=>{const on=q>=i-.05;n.style.borderColor=on?'#C6FF3D':'#3b403a';n.style.background=on?'#C6FF3D':'#0b0c0b'});
+  d.querySelectorAll('.gt').forEach(g=>{const i=+g.dataset.i;const near=Math.exp(-Math.pow((q-i)*1.6,2));g.style.opacity=.35+.65*Math.max(near,q>i?.6:0);g.style.transform=`scale(${1+.15*near})`})};return d};
+
+S.gates=()=>{const d=el(`<div class="sc"><div style="position:absolute;left:170px;top:190px;width:700px"><div class="mono" style="font-size:16px;color:#C6FF3D">Runs on its own</div><div class="au" style="margin-top:30px"></div></div>
+<div style="position:absolute;left:1000px;top:190px;width:760px"><div class="mono" style="font-size:16px;color:#FFB547">Waits for a human yes</div><div class="lk" style="margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:22px"></div></div></div>`);
+ T.auto.forEach(a=>d.querySelector('.au').insertAdjacentHTML('beforeend',`<div class="row ai" style="font-size:30px;margin:0 0 24px"><span class="tick"></span>${a}</div>`));
+ T.gates.forEach(g=>d.querySelector('.lk').insertAdjacentHTML('beforeend',`<div class="glass lc" style="position:relative;height:150px;padding:26px;border-color:rgba(255,181,71,.35)"><svg width="34" height="40" viewBox="0 0 34 40"><rect x="3" y="17" width="28" height="21" rx="5" fill="none" stroke="#FFB547" stroke-width="3"/><path class="sh" d="M9 17 V11 a8 8 0 0 1 16 0 V17" fill="none" stroke="#FFB547" stroke-width="3"/></svg><div class="h1" style="font-size:30px;margin-top:14px">${g}</div></div>`));
+ d.u=p=>{d.querySelectorAll('.ai').forEach((a,i)=>{const q=E(R(p,.03+i*.05,.1+i*.05));a.style.opacity=.2+.8*q;a.querySelector('.tick').classList.toggle('on',q>.7)});
+  d.querySelectorAll('.lc').forEach((c,i)=>{const q=E(R(p,.48+i*.06,.58+i*.06));c.style.opacity=q;c.style.transform=`translateY(${(1-q)*24}px)`})};return d};
+
+S.revenue=()=>{const P=T.projection;const vals=[2340,3588,4158];const d=el(`<div class="sc"><div style="position:absolute;left:0;right:0;top:120px;text-align:center">${chip(P.label)}</div>
+<div class="bars" style="position:absolute;left:220px;top:250px;width:760px;height:620px"><div class="tg" style="position:absolute;left:-20px;right:-20px;top:22px;border-top:2px dashed #C6FF3D"><span class="mono" style="position:absolute;right:0;top:-34px;font-size:16px;color:#C6FF3D">Target · ${P.target}</span></div></div>
+<div class="mth" style="position:absolute;left:1100px;top:300px;width:640px"></div></div>`);
+ const b=d.querySelector('.bars');const H=598/10000;let acc=0;const col=['#C6FF3D','#FFB547','#8b918a'],bg=['rgba(198,255,61,.12)','rgba(255,181,71,.12)','rgba(139,145,138,.10)'];
+ P.streams.forEach(([n,pr,k],i)=>{const h=vals[i]*H;b.insertAdjacentHTML('beforeend',`<div class="br" style="position:absolute;left:120px;width:300px;bottom:${acc}px;height:${h-6}px;border:2px dashed ${col[i]};border-radius:10px;background:${bg[i]}"></div><div class="bl" style="position:absolute;left:460px;bottom:${acc+h/2-30}px"><div class="h1" style="font-size:30px">${n}</div><div class="mono" style="font-size:13px;color:#8b918a;margin-top:8px">${pr} · ${k}</div></div>`);acc+=h});
+ P.example.forEach((x,i)=>d.querySelector('.mth').insertAdjacentHTML('beforeend',`<div class="h1 ml" style="font-size:${i==3?52:38}px;margin:0 0 26px;${i==3?'color:#C6FF3D;border-top:1px solid #2b2f2a;padding-top:24px':''}">${x}</div>`));
+ d.u=p=>{d.querySelectorAll('.br').forEach((e,i)=>{const q=E(R(p,.06+i*.1,.22+i*.1));e.style.opacity=q;e.style.transform=`translateY(${(1-q)*-40}px)`});d.querySelectorAll('.bl').forEach((e,i)=>{e.style.opacity=E(R(p,.1+i*.1,.26+i*.1))});d.querySelector('.tg').style.opacity=E(R(p,.35,.5));d.querySelectorAll('.ml').forEach((m,i)=>{const q=E(R(p,.3+i*.1,.4+i*.1));m.style.opacity=q;m.style.transform=`translateX(${(1-q)*30}px)`})};return d};
+
+S.board=()=>{const N=T.live_numbers;const tiles=[['Verified orders',N.verified_orders],['Net receipts',N.net_receipts],['Ad spend, all time',N.ad_spend],['Ads running',N.ads_running],['Leads researched',N.leads_researched],['Drafts awaiting approval',N.drafts_awaiting_approval],['Messages sent by software',N.messages_auto_sent],['Health checks',N.health_checks,N.health_failing]];
+ const d=el(`<div class="sc"><div class="row" style="position:absolute;left:170px;top:150px;gap:18px"><span class="chip LIVE">Live board</span><span class="mono" style="font-size:15px;color:#8b918a">As of ${T.as_of} · source: Gumroad ledger + hourly health</span></div><div class="gr" style="position:absolute;left:170px;top:240px;width:1580px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px"></div></div>`);
+ tiles.forEach(([k,v,n])=>d.querySelector('.gr').insertAdjacentHTML('beforeend',`<div class="glass tl" style="position:relative;height:290px;padding:32px"><div class="mono" style="font-size:14px;color:#8b918a">${k}</div><div class="h1" style="font-size:78px;margin-top:48px;line-height:1.05">${v}</div>${n?`<div class="mono" style="font-size:14px;color:#FFB547;margin-top:18px">${n}</div>`:''}</div>`));
+ d.u=p=>{d.querySelectorAll('.tl').forEach((e,i)=>{const q=E(R(p,.04+i*.05,.16+i*.05));e.style.opacity=q;e.style.transform=`translateY(${(1-q)*30}px)`})};return d};
+
+S.finale=()=>{const w=['MARKETPLACE.','AI SOLUTIONS.','WORKSPACE.','GROWTH ENGINE.'];const d=el(`<div class="sc"><div class="ws" style="position:absolute;left:0;right:0;top:380px;text-align:center"></div>
+<div class="end" style="position:absolute;left:0;right:0;top:380px;text-align:center;opacity:0"><div class="h1" style="font-size:140px;line-height:1">AUTOPILOT<span class="lime">.OI</span></div><div class="mono" style="font-size:24px;letter-spacing:.5em;margin-top:34px;color:#cfd3c8">Build. Sell. Deliver. Grow.</div></div>
+<div class="lg" style="position:absolute;left:905px;top:500px;width:110px;height:110px;border-radius:26px;background:#C6FF3D;color:#0b0c0b;font-family:D;font-size:56px;line-height:104px;text-align:center;opacity:0">ap.</div></div>`);
+ w.forEach((x,i)=>d.querySelector('.ws').insertAdjacentHTML('beforeend',`<span class="h1 wd" style="display:inline-block;font-size:62px;margin:0 22px;${i==3?'color:#C6FF3D':''}">${x}</span>`));
+ d.u=p=>{const out=1-E(R(p,.36,.42));d.querySelectorAll('.wd').forEach((e,i)=>{const q=E(R(p,i*.07,.06+i*.07));e.style.opacity=q*out;e.style.transform=`translateY(${(1-q)*30}px)`});
+  const e2=E(R(p,.42,.52))*(1-E(R(p,.8,.86)));d.querySelector('.end').style.opacity=e2;const l=E(R(p,.86,.94));const lg=d.querySelector('.lg');lg.style.opacity=l*(1-E(R(p,.97,1)));lg.style.transform=`scale(${.8+.2*l})`;
+  document.getElementById('label').style.opacity=1-E(R(p,.4,.5));document.getElementById('sub').style.opacity=1-E(R(p,.5,.6))};return d};
+
+// ---------- timeline ----------
+const scenes=DATA.beats.map(b=>{const d=S[b.scene]();st.appendChild(d);return {...b,d}});
+const XF=.55;window.DUR=DATA.dur;
+const gc=document.getElementById('grain').getContext('2d');const noise=[0,1,2].map(()=>{const im=gc.createImageData(960,540);for(let i=0;i<im.data.length;i+=4){const v=Math.random()*255;im.data[i]=im.data[i+1]=im.data[i+2]=v;im.data[i+3]=255}return im});
+const subs=[];{let cur=null;for(const w of DATA.words){if(!cur){cur={t:w[0],s:w[1],e:w[2]};subs.push(cur)}else{cur.t+=' '+w[0];cur.e=w[2]}if(/[.?!:]$/.test(w[0])||(cur.t.length>58&&/,$/.test(w[0]))||cur.t.length>84)cur=null}}
+window.render=t=>{scenes.forEach((s,i)=>{const s0=i==0?0:s.s-.15,s1=i==scenes.length-1?DATA.dur:scenes[i+1].s-.15;const a=i==0?1:E(R(t,s0-XF/2,s0+XF/2)),b=i==scenes.length-1?1:1-E(R(t,s1-XF/2,s1+XF/2));const o=Math.min(a,b);
+  s.d.style.opacity=o;s.d.style.display=o>0.001?'block':'none';if(o>0.001){const p=cl((t-s0)/(s1-s0));s.d.style.transform=`scale(${1.0+.025*p})`;s.d.u(p,t)}});
+ const sb=subs.find(x=>t>=x.s-.05&&t<=x.e+.35);document.getElementById('sub').textContent=sb?sb.t:'';gc.putImageData(noise[Math.floor(t*24)%3],0,0);
+ document.getElementById('corner').textContent=DATA.cut==='master'?'Ecosystem · '+T.as_of:T.as_of;
+ const op=E(R(t,0,.6));document.getElementById('st').style.opacity=op};
+document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r})))).then(()=>{window.render(0);window.READY=1});
+</script></body></html>

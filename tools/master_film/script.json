@@ -1,0 +1,114 @@
+{
+ "_doc": "Narration per cut. scene = engine scene id. Text approved by Seb 2026-11-03 (storyboard v1). Numbers on screen come from truth.json, never from here.",
+ "show": [
+  [
+   "Autopilot",
+   "O.I.",
+   "AUTOPILOT.OI"
+  ]
+ ],
+ "cuts": {
+  "master": [
+   {
+    "scene": "open",
+    "say": "Most small businesses don't need more software. They need work that gets done while they're busy."
+   },
+   {
+    "scene": "mark",
+    "say": "This is Autopilot O.I. One system, four divisions, built in the open."
+   },
+   {
+    "scene": "pillars",
+    "say": "A marketplace of setup kits. Done for you AI solutions. A workspace for owners. And a growth engine underneath, sharing one record of truth. Some of it is live today. Some is still a plan. We'll label every piece."
+   },
+   {
+    "scene": "market",
+    "say": "It starts with the Marketplace. The Front Desk Kit is thirty nine dollars. You buy it, and the setup lands in your inbox in seconds."
+   },
+   {
+    "scene": "draft",
+    "say": "You install it in your own Claude account. When a customer messages after hours, it captures the details and writes the reply. It drafts. You decide what goes out."
+   },
+   {
+    "scene": "solutions",
+    "say": "Some owners would rather not set it up themselves. For them, AI Solutions configures it for the business. The first pilot is a two hundred ninety nine dollar setup for auto detailers. Other industries are on the roadmap, not on sale."
+   },
+   {
+    "scene": "workspace",
+    "say": "Workspace is the long term product: one place for an owner to run it all. It isn't built yet. What exists today is a refundable founding spot for people who want in early."
+   },
+   {
+    "scene": "engine",
+    "say": "Underneath it all is the Growth Engine. It researches the market, finds businesses that fit, drafts outreach for approval, makes content, and checks every page every hour. Every sale is matched to where it came from, so we only scale what actually pays."
+   },
+   {
+    "scene": "journey",
+    "say": "Here is one customer's path. A detailer is researched and scored. A message is drafted, and nothing is sent until a person approves it. If they reply, there's a call and an offer. A sale only counts when the payment is verified. Then onboarding, and the setup goes live."
+   },
+   {
+    "scene": "gates",
+    "say": "The routine work runs on its own: research, drafting, delivery, onboarding, monitoring, reporting. Anything that spends money, contacts a customer, publishes, or changes a price waits for a human yes."
+   },
+   {
+    "scene": "revenue",
+    "say": "Three ways it earns: one time kits, per project setups, and a planned monthly workspace. Ten thousand dollars a month is the target. This is the math to get there, not a result."
+   },
+   {
+    "scene": "board",
+    "say": "And this is where it actually stands today. Zero verified orders. Ten businesses researched. Six drafts waiting for approval. Nothing sent without a yes. We'd rather show you the real board than a pretty one."
+   },
+   {
+    "scene": "finale",
+    "say": "Build. Sell. Deliver. Grow. Autopilot O.I."
+   }
+  ],
+  "c60": [
+   {
+    "scene": "mark",
+    "say": "This is Autopilot O.I. One system, four divisions, built in the open, with every piece labeled live or planned."
+   },
+   {
+    "scene": "market",
+    "say": "It starts with the Front Desk Kit. Thirty nine dollars, and the setup lands in your inbox in seconds."
+   },
+   {
+    "scene": "draft",
+    "say": "When a customer messages after hours, it writes the reply from your own prices and rules. It drafts. You decide what goes out."
+   },
+   {
+    "scene": "solutions",
+    "say": "For owners who want it done for them, there's a two hundred ninety nine dollar setup, starting with auto detailers."
+   },
+   {
+    "scene": "engine",
+    "say": "Underneath, the Growth Engine researches, drafts outreach for approval, checks every page every hour, and ties every sale to its source."
+   },
+   {
+    "scene": "gates",
+    "say": "Spending, outreach, publishing and prices all wait for a human yes."
+   },
+   {
+    "scene": "finale",
+    "say": "Real numbers, no shortcuts. Build. Sell. Deliver. Grow."
+   }
+  ],
+  "c30": [
+   {
+    "scene": "mark",
+    "say": "This is Autopilot O.I."
+   },
+   {
+    "scene": "draft",
+    "say": "A thirty nine dollar kit that catches after hours messages and drafts the replies from your own prices. You approve what goes out."
+   },
+   {
+    "scene": "gates",
+    "say": "Behind it, an engine that finds customers, checks itself every hour, and never spends or sends without a yes."
+   },
+   {
+    "scene": "finale",
+    "say": "Build. Sell. Deliver. Grow."
+   }
+  ]
+ }
+}

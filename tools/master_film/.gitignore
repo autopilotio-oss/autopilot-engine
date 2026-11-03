@@ -1,0 +1,11 @@
+master.html
+c60.html
+c30.html
+*.wav
+*.words.json
+!*.voiced.words.json
+*.meta.json
+*_chunk_*.mp4
+*_silent.mp4
+chunks.txt
+out/
