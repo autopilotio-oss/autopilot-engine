@@ -1,0 +1,20 @@
+{
+ "id": "package-missing",
+ "ep": "013f-package-missing",
+ "kind": "product",
+ "hook": [
+  "Your package never showed up",
+  "AI builds the refund case"
+ ],
+ "keyword": null,
+ "video": "https://autopilotoi.app/media/freel/package-missing.mp4",
+ "poster": "https://autopilotoi.app/media/freel/package-missing-poster.jpg",
+ "caption": {
+  "ig": "Order never arrived and the store keeps saying wait? This agent reads your order email and tracking, checks the store's own refund policy and writes a short request that quotes it, plus the next step if they say no. Sample order shown. Comment REFUND and I'll DM you the agent. 30% off this week with LAUNCH30.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips",
+  "other": "Order never arrived and the store keeps saying wait? This agent reads your order email and tracking, checks the store's own refund policy and writes a short request that quotes it, plus the next step if they say no. Sample order shown. Refund Fighter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
+ },
+ "rendered_at": "2026-11-03T10:04:51+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
