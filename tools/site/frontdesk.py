@@ -42,7 +42,7 @@ def page(head, nav, foot):
 <div style="margin-top:16px">{buy}</div>
 <p class="label" style="margin-top:12px;line-height:1.6">Runs in your Claude account ({e(O['claude_plan'][0].lower() + O['claude_plan'][1:]).replace('claude', 'Claude')}). It drafts; you send. Not an auto reply service.</p></div>
 <div class="ui" id="fdc"><div class="bar"><span>Front Desk Check</span><span>Sample output</span></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px"><select id="fdt" class="sel">{trades}</select><select id="fdk" class="sel">{types}</select></div>
+<div class="fdsel"><select id="fdt" class="sel">{trades}</select><select id="fdk" class="sel">{types}</select></div>
 <div class="label" id="fdb" style="margin:4px 4px 8px"></div>
 <div class="msg" id="fdm"></div>
 <div class="draft"><div class="label" style="margin-bottom:8px">KIT DRAFT · YOU REVIEW AND SEND</div><div class="dr" id="fdd"></div></div>
@@ -58,5 +58,5 @@ def page(head, nav, foot):
 <details><summary>Why not just use ChatGPT?</summary><p>A blank chat starts from zero every time and will guess your prices. The kit interviews you once, saves your Business Brain in a Claude Project and drafts from it every time. When something is missing it writes [CHECK] instead of guessing.</p></details>
 <details><summary>What if it doesn't work for me?</summary><p>{e(O['refund'])}. Not working for you within 30 days? You get your money back.</p></details>
 <div style="margin-top:34px">{buy}</div></div></div>
-<style>.sel{{width:100%;min-width:0;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--g2);color:var(--tx);padding:0 10px;font:600 14px Inter}}</style>
+<style>.fdsel{{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}}@media (max-width:520px){{.fdsel{{grid-template-columns:1fr}}}}.sel{{width:100%;min-width:0;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--g2);color:var(--tx);padding:0 10px;font:600 14px Inter}}</style>
 <script>(function(){{var S={data},t=document.getElementById('fdt'),k=document.getElementById('fdk');function r(){{var b=S[t.value],x=b.items[k.value];document.getElementById('fdb').textContent=b.biz.toUpperCase();document.getElementById('fdm').textContent=x[0];document.getElementById('fdd').textContent=x[1];try{{if(window.goatcounter)goatcounter.count({{path:'fdc/'+t.value+'/'+k.value,event:true}})}}catch(e){{}}}}t.onchange=r;k.onchange=r;r();}})();</script>""" + foot
