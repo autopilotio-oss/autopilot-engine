@@ -83,3 +83,4 @@
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-03T11:19:26+00:00", "note": "0 orders, $0 net, 0 failing checks except pixel (SEV-3), 0 unapproved posts, ads off; fix: commander funnel follows campaign focus"}
 {"worker": "trend_scout", "status": "ok", "at": "2026-11-03T11:53:03+00:00", "note": "1 candidate, 2 research records"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-03T12:26:14+00:00", "note": "0 posts out today (first slot 09:30, 20 pending, 0 error), top post saves+shares 0, feed written yes"}
+{"worker": "publisher", "status": "ok", "at": "2026-11-03T12:29:00+00:00", "note": "0 staged, 0 published, 0 errors (plan empty, no QUEUED concepts)"}
