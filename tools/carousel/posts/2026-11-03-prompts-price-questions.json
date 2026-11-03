@@ -1,0 +1,88 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 03 2026",
+ "cover_bg": "bg-white",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 23,
+ "cover_html": "<div class=\"fx\" style=\"left:0;top:720px;width:1080px;height:630px;background:#0a0a0a\"></div><div class=\"fx chip\" style=\"left:56px;top:70px\">5 PROMPTS &middot; PRICE QUESTIONS</div><div class=\"fx Cc\" style=\"left:56px;top:160px;font-size:22px;color:#0c0c0cb3\">SAMPLE &middot; HOUSE CLEANING &middot; NEW TEXT</div><div class=\"fx A\" style=\"left:56px;top:210px;width:968px;height:280px;box-sizing:border-box;padding:52px 0 0 52px;background:#0c0c0c;border-radius:56px 56px 0 0;font-size:196px;white-space:nowrap;color:#D4FF3A\">How much?</div><div class=\"fx Ii\" style=\"left:56px;top:490px;width:968px;height:100px;box-sizing:border-box;padding:6px 0 0 54px;background:#0c0c0c;border-radius:0 0 56px 12px;font-size:36px;color:#f2f2ee\">3 bedrooms, this Friday?</div><div class=\"fx Cc\" style=\"left:56px;top:620px;font-size:22px;color:#0c0c0cb3\">DELIVERED 6:12 PM</div><div class=\"fx A\" style=\"left:56px;top:790px;width:968px;text-align:center;font-size:112px;white-space:nowrap;color:#f2f2ee;background:#0a0a0a\">Answer the price text</div><div class=\"fx A\" style=\"left:56px;top:905px;width:968px;text-align:center;font-size:112px;white-space:nowrap;color:#D4FF3A;background:#0a0a0a\">Book the job</div><div class=\"fx Ii\" style=\"left:150px;top:1060px;width:780px;box-sizing:border-box;padding:24px 30px;background:#D4FF3A;color:#0a0a0a;border-radius:30px 30px 8px 30px;font-size:32px;line-height:1.25;text-align:center\">$180, about 3 hours. Friday at 9 AM or 1 PM?</div><div class=\"fx Ii\" style=\"left:56px;top:1200px;width:968px;text-align:center;font-size:32px;color:#f2f2ee;background:#0a0a0a\">5 Claude prompts for every price question. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "Save *ready answers*",
+   "prompt": "Here is my price list: [paste]. Write ready to send answers to the 3 price questions I get most: [questions]. Each one gives the price, what is included, how long it takes, and one question that books the job. Under 40 words each.",
+   "why": "Research in Harvard Business Review: firms that replied <b>within an hour</b> were about 7 times as likely to land a real conversation."
+  },
+  {
+   "title": "When it *depends*",
+   "prompt": "A customer asked: [paste]. My price depends on [size, condition, model]. Reply with my starting price, [price], say in one line what changes it, and ask for the one detail or photo I need to give a firm number.",
+   "why": "They get <b>a real number now</b>, and you get the one detail you need for a firm quote."
+  },
+  {
+   "title": "Give *3 options*",
+   "prompt": "Turn my [service] into 3 options for this customer: basic, standard and full, using my prices [prices]. One line each on what is included. End by asking which one fits. No pressure, no fake deadlines.",
+   "why": "Options let each customer pick <b>the package that fits</b> their needs and budget."
+  },
+  {
+   "title": "When they ask for *cheaper*",
+   "prompt": "A customer asked: [paste]. My price is [price] and I will not drop it for the same job. Write a friendly reply that says what the price covers in one line and offers a smaller job: [what I can leave out] for [lower price].",
+   "why": "Change <b>the scope</b>, not the price of the same job."
+  },
+  {
+   "title": "Raising *your prices*",
+   "prompt": "My prices go up on [date], from [old] to [new], because [real reason]. Write a short, warm text for my regular customers: thank them, state the change and the date, give the reason in one line, and invite questions. No apology.",
+   "why": "Give <b>a few weeks of notice</b> and the real reason. You do not need to apologize."
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "sources": [
+  [
+   "SmartCompany (HBR study)",
+   "https://www.smartcompany.com.au/marketing/20110704-are-you-letting-online-leads-go-cold/"
+  ],
+  [
+   "CrankWheel (HBR study)",
+   "https://crankwheel.com/how-to-massively-increase-the-chance-of-qualifying-sales-leads/"
+  ],
+  [
+   "Jobber",
+   "https://getjobber.com/academy/good-better-best-pricing-examples/"
+  ],
+  [
+   "JobNimbus",
+   "https://wf.jobnimbus.com/blog/good-better-best-roofing-estimate-example"
+  ],
+  [
+   "Selling Energy",
+   "https://www.sellingenergy.com/blog/how-to-respond-when-a-customer-asks-you-to-lower-your-price"
+  ],
+  [
+   "Home Service Pros",
+   "https://home-service-pros.beehiiv.com/p/what-to-do-when-clients-ask-for-a-discount"
+  ],
+  [
+   "Xero",
+   "https://www.xero.com/us/guides/how-to-increase-prices/"
+  ],
+  [
+   "Simply Business",
+   "https://www.simplybusiness.co.uk/knowledge/marketing/5-ways-to-tell-your-customers-about-a-price-increase/"
+  ]
+ ],
+ "bg_words": [
+  "PRICE",
+  "QUOTE",
+  "BOOK",
+  "REPLY"
+ ],
+ "bg_facts": [
+  "Reply within the hour.",
+  "Give a starting price.",
+  "Offer 3 options.",
+  "Change scope, not price."
+ ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-03-prompts-price-questions",
+  "kind": "prompts",
+  "status": "bank",
+  "cover_idea": "Split cover: white top with a giant black SAMPLE house cleaning text bubble HOW MUCH? in lime Anton, black bottom with a centered headline ANSWER THE PRICE TEXT / BOOK THE JOB and a lime reply bubble.",
+  "theme": "small business: 5 Claude prompts for price questions (ready answers, starting price when it depends, 3 options, asked for cheaper, raising prices), tied to /guides/reply-to-price-inquiry/, leading to the free Front Desk Starter (/brain/) and the Front Desk Kit",
+  "guide": "https://autopilotoi.app/guides/reply-to-price-inquiry/",
+  "gate": {
+    "score": 88,
+    "notes": "Accuracy 26/30 (reply within an hour, nearly 7x as likely to qualify: 2011 HBR lead response study via SmartCompany + CrankWheel, phrased as 'land a real conversation' per HBR's definition of qualify; options let customers pick what fits needs and budget: Jobber + JobNimbus; change scope not price for the same job: Selling Energy + Home Service Pros; price increase with notice, real reason, no apology: Xero (30 to 60 days) + Simply Business (14 to 30 days), so the slide says 'a few weeks'; sample business and $180 price labeled SAMPLE). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5 covers: first split white/black background, first centered headline, main visual is a giant incoming text bubble (vs stars, calendar, timeline, clock, boarding pass), mid scale headline (112px) under a 196px bubble. CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 2 fixes (contrast read against the white page until text carried its own background; HOW MUCH? too wide). All 7 slides read on a phone. No prompt repeats earlier posts."
+  },
+  "sources": [
+    [
+      "SmartCompany (HBR study)",
+      "https://www.smartcompany.com.au/marketing/20110704-are-you-letting-online-leads-go-cold/"
+    ],
+    [
+      "CrankWheel (HBR study)",
+      "https://crankwheel.com/how-to-massively-increase-the-chance-of-qualifying-sales-leads/"
+    ],
+    [
+      "Jobber",
+      "https://getjobber.com/academy/good-better-best-pricing-examples/"
+    ],
+    [
+      "JobNimbus",
+      "https://wf.jobnimbus.com/blog/good-better-best-roofing-estimate-example"
+    ],
+    [
+      "Selling Energy",
+      "https://www.sellingenergy.com/blog/how-to-respond-when-a-customer-asks-you-to-lower-your-price"
+    ],
+    [
+      "Home Service Pros",
+      "https://home-service-pros.beehiiv.com/p/what-to-do-when-clients-ask-for-a-discount"
+    ],
+    [
+      "Xero",
+      "https://www.xero.com/us/guides/how-to-increase-prices/"
+    ],
+    [
+      "Simply Business",
+      "https://www.simplybusiness.co.uk/knowledge/marketing/5-ways-to-tell-your-customers-about-a-price-increase/"
+    ]
+  ],
+  "captions": {
+    "ig": "Most jobs start with a text that says \"how much?\". Here are 5 Claude prompts to answer it and book the job.\n\n1. Save ready answers to your 3 most common price questions.\n2. When it depends: a starting price and the one detail you need.\n3. Give 3 options so each customer picks what fits.\n4. Asked for cheaper? Offer a smaller job, not a lower price for the same job.\n5. Raising prices: a few weeks of notice and the real reason. No apology.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Harvard Business Review study (via SmartCompany, CrankWheel), Jobber, JobNimbus, Selling Energy, Home Service Pros, Xero, Simply Business.\n\n#smallbusiness #pricing #claudeai #customerservice #smallbusinessowner",
+    "tiktok": {
+      "title": "5 Claude prompts to answer \"how much?\" and book the job",
+      "caption": "5 Claude prompts to answer \"how much?\" and book the job\n\nReady answers, a starting price when it depends, 3 options, a smaller job instead of a discount, and a calm price increase text.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #pricing #claudeai"
+    },
+    "threads": "Most jobs start with a text that says \"how much?\".\n\n5 Claude prompts: ready answers to your top 3 price questions, a starting price when it depends, 3 options, a smaller job instead of a discount, and a price increase text with no apology.\n\nHow to reply to a price inquiry: https://autopilotoi.app/guides/reply-to-price-inquiry/?utm_source=threads&utm_content=prompts_price",
+    "x": "Most jobs start with \"how much?\".\n\n5 Claude prompts to answer it and book the job, including what to say when they ask for cheaper.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_price"
+  },
+  "built_at": "2026-11-03T18:47Z"
+}
