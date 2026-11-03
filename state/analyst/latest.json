@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-03T12:27:00Z",
+  "at": "2026-11-03T13:27:00Z",
   "posts_today": {
     "threads": {
       "published": 0,
@@ -35,7 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-03T12:27:00Z"
+      "metrics_seen_at": "2026-11-03T13:27:00Z"
     },
     {
       "network": "instagram",
@@ -49,7 +49,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-03T12:27:00Z"
+      "metrics_seen_at": "2026-11-03T13:27:00Z"
     },
     {
       "network": "instagram",
@@ -63,12 +63,12 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-03T12:27:00Z"
+      "metrics_seen_at": "2026-11-03T13:27:00Z"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "09:27 ART: 0 posts published yet today (first slot 09:30), 20 provider slots pending (16 draft=true awaiting approval, 4 approved: banks story on threads/tiktok/twitter 12:00 and instagram 18:00), 0 ERROR. Instagram reels 6-72h re-pulled (UTC timestamps): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. Instagram feed posts, TikTok, Threads and X analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). All 8 workflows latest run success (ci.yml 4 fails in 24h, latest success). HQ feed written to status/hub (v25)."
+  "notes": "10:27 ART: 0 posts published yet today, 20 provider slots pending (16 draft=true awaiting approval; approved: banks story threads/tiktok/twitter 12:00, instagram 18:00), 0 ERROR. Past 09:30/10:00/11:00 slots still PENDING as unapproved drafts. Instagram reels 6-72h: all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok 6-72h (13 videos): 0 shares on all, 1 comment (Binance hack news, 72 views); top views ai-employees 113, subs 100, refund 99; TikTok reach MISSING (null), saves not provided. Instagram feed posts, Threads and X analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). All 8 workflows latest run success (ci.yml 4 fails in 24h, latest success). HQ feed written to status/hub (v26)."
 }
