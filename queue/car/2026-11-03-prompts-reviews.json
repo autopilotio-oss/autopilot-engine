@@ -1,0 +1,43 @@
+{
+  "id": "2026-11-03-prompts-reviews",
+  "kind": "prompts",
+  "status": "bank",
+  "cover_idea": "Black cover, giant fitted headline at the top (GET MORE white, 5 STAR REVIEWS lime), a row of five big lime stars, then a SAMPLE mobile detailing text thread where the owner asks for a Google review.",
+  "theme": "small business: 5 Claude prompts to ask every customer for a Google review and reply to good and bad reviews, leading to the free Front Desk Starter (/brain/) and the Front Desk Kit",
+  "gate": {
+    "score": 89,
+    "notes": "Accuracy 27/30 (review link or QR code from the Business Profile: Google 7035772 + Google 3474050; no incentives for reviews: Google 7035772 + BrightLocal, FTC rule bans incentives conditioned on sentiment; ask all customers, no review gating: ReviewTrackers quoting Google policy + BrightLocal; short conversational non promotional replies: Google 7035772 + 3474050 (helpful and positive); replies are public: Google 3474050; baseless threats to remove negative reviews banned: FTC Aug 2024 final rule press release). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5: black bg vs last lime, headline at top in the largest scale so far vs bottom on last, new main visual (star row plus text thread). CTA 10/10 (AGENTS confirmed in manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS, all 7 slides legible on a phone. No prompt repeats earlier posts."
+  },
+  "sources": [
+    [
+      "Google",
+      "https://support.google.com/business/answer/7035772"
+    ],
+    [
+      "Google Help",
+      "https://support.google.com/business/answer/3474050?hl=en"
+    ],
+    [
+      "BrightLocal",
+      "https://www.brightlocal.com/learn/review-management/dos-and-donts/review-platform-guidelines/"
+    ],
+    [
+      "ReviewTrackers",
+      "https://www.reviewtrackers.com/review-gating-google/"
+    ],
+    [
+      "FTC",
+      "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials"
+    ]
+  ],
+  "captions": {
+    "ig": "Most happy customers never leave a review because nobody asked. Here are 5 Claude prompts to ask every customer, the honest way.\n\n1. Ask right after the job, with one real detail and your link.\n2. Ask everyone the same way, not only the happy ones.\n3. A short thank you card with your review QR code.\n4. Reply to a 5 star in 2 personal sentences.\n5. Answer a 1 star calmly, in public, with a way to fix it.\n\nRule of thumb: Google does not allow freebies or discounts in exchange for reviews.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Google Business Profile Help, BrightLocal, ReviewTrackers, FTC.\n\n#smallbusiness #googlereviews #claudeai #customerservice #smallbusinessowner",
+    "tiktok": {
+      "title": "5 Claude prompts to get more Google reviews",
+      "caption": "5 Claude prompts to get more Google reviews\n\nAsk right after the job, ask everyone, hand over a QR card, reply to a 5 star, answer a 1 star calmly. No freebies for reviews: Google does not allow it.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #googlereviews #claudeai"
+    },
+    "threads": "Most happy customers never review you because nobody asked.\n\n5 Claude prompts: ask right after the job, ask everyone the same way, a QR thank you card, a personal reply to a 5 star, a calm public answer to a 1 star.\n\nNo freebies for reviews: Google does not allow it.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=threads&utm_content=prompts_reviews",
+    "x": "Most happy customers never review you because nobody asked.\n\n5 Claude prompts to ask every customer the honest way (no freebies, Google bans that).\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_reviews"
+  },
+  "built_at": "2026-11-03T02:36Z"
+}

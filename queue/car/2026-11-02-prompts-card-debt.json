@@ -1,62 +1,64 @@
 {
- "id": "2026-11-02-prompts-card-debt",
- "kind": "prompts",
- "status": "bank",
- "cover_idea": "Off-white cover with the headline in the middle, sandwiched between two to-scale time bars: a full width black bar (ONLY THE MINIMUM, 19 YEARS) above and a short lime bar (3 YEAR PLAN, 3 YEARS) below, SAMPLE $5,000 at 22% APR.",
- "theme": "money: 5 Claude prompts for card debt (statement warning box, rehearse the lower APR call, payoff order, balance transfer check, debt collector letter), tied to debt-agent / DEBT guide",
- "gate": {
-  "score": 89,
-  "notes": "Accuracy 27/30 (minimum payment box and 3 year payment: CFPB + Consumer Action; 30 days to dispute in writing: two CFPB pages; balance transfer fee 3% to 5% and regular APR after promo: Experian + NerdWallet; avalanche saves most interest: Experian + NerdWallet; hardship programs may lower rate or waive fees: Experian + NerdWallet. Cover math is a SAMPLE model: $5,000 at 22% APR, minimum = interest + 1% with $25 floor gives about 19 years and $13,100; 36 month payment $191, about $6,870; footnote says card formulas differ). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5: off-white background (last 5 all black or lime), headline in the middle (others top or bottom), to-scale time bars sandwiching the headline (new visual), fitted mid scale headline vs giant number; inner slides use the standard prompt template. CTA 10/10 (DEBT confirmed in manychat.json, gift matches /g/debt: lower rate script and payoff plan). QA PASS, all 7 slides legible. No prompt repeats earlier posts."
- },
- "sources": [
-  [
-   "CFPB: 3 year payment box",
-   "https://www.consumerfinance.gov/ask-cfpb/what-is-the-three-year-payment-information-on-a-credit-card-statement-en-36/"
+  "id": "2026-11-02-prompts-card-debt",
+  "kind": "prompts",
+  "status": "stale",
+  "cover_idea": "Off-white cover with the headline in the middle, sandwiched between two to-scale time bars: a full width black bar (ONLY THE MINIMUM, 19 YEARS) above and a short lime bar (3 YEAR PLAN, 3 YEARS) below, SAMPLE $5,000 at 22% APR.",
+  "theme": "money: 5 Claude prompts for card debt (statement warning box, rehearse the lower APR call, payoff order, balance transfer check, debt collector letter), tied to debt-agent / DEBT guide",
+  "gate": {
+    "score": 89,
+    "notes": "Accuracy 27/30 (minimum payment box and 3 year payment: CFPB + Consumer Action; 30 days to dispute in writing: two CFPB pages; balance transfer fee 3% to 5% and regular APR after promo: Experian + NerdWallet; avalanche saves most interest: Experian + NerdWallet; hardship programs may lower rate or waive fees: Experian + NerdWallet. Cover math is a SAMPLE model: $5,000 at 22% APR, minimum = interest + 1% with $25 floor gives about 19 years and $13,100; 36 month payment $191, about $6,870; footnote says card formulas differ). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5: off-white background (last 5 all black or lime), headline in the middle (others top or bottom), to-scale time bars sandwiching the headline (new visual), fitted mid scale headline vs giant number; inner slides use the standard prompt template. CTA 10/10 (DEBT confirmed in manychat.json, gift matches /g/debt: lower rate script and payoff plan). QA PASS, all 7 slides legible. No prompt repeats earlier posts."
+  },
+  "sources": [
+    [
+      "CFPB: 3 year payment box",
+      "https://www.consumerfinance.gov/ask-cfpb/what-is-the-three-year-payment-information-on-a-credit-card-statement-en-36/"
+    ],
+    [
+      "Consumer Action: minimum payment warning",
+      "https://www.consumer-action.org/helpdesk/articles/minimum_payment_warning"
+    ],
+    [
+      "CFPB: validation notice",
+      "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-collection-validation-notice-en-2109/"
+    ],
+    [
+      "CFPB: what a collector must tell you",
+      "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-a-debt-en-331/"
+    ],
+    [
+      "Experian: balance transfer fee",
+      "https://www.experian.com/blogs/ask-experian/what-is-a-balance-transfer-fee/"
+    ],
+    [
+      "NerdWallet: balance transfer fee",
+      "https://www.nerdwallet.com/credit-cards/learn/what-is-a-balance-transfer-fee-on-a-credit-card"
+    ],
+    [
+      "Experian: avalanche method",
+      "https://www.experian.com/blogs/ask-experian/what-is-the-avalanche-method/"
+    ],
+    [
+      "NerdWallet: debt avalanche",
+      "https://www.nerdwallet.com/blog/finance/what-is-a-debt-avalanche/"
+    ],
+    [
+      "Experian: hardship programs",
+      "https://www.experian.com/blogs/ask-experian/what-is-credit-card-hardship-program/"
+    ],
+    [
+      "NerdWallet: hardship programs",
+      "https://www.nerdwallet.com/credit-cards/learn/what-is-a-credit-card-hardship-program"
+    ]
   ],
-  [
-   "Consumer Action: minimum payment warning",
-   "https://www.consumer-action.org/helpdesk/articles/minimum_payment_warning"
-  ],
-  [
-   "CFPB: validation notice",
-   "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-collection-validation-notice-en-2109/"
-  ],
-  [
-   "CFPB: what a collector must tell you",
-   "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-a-debt-en-331/"
-  ],
-  [
-   "Experian: balance transfer fee",
-   "https://www.experian.com/blogs/ask-experian/what-is-a-balance-transfer-fee/"
-  ],
-  [
-   "NerdWallet: balance transfer fee",
-   "https://www.nerdwallet.com/credit-cards/learn/what-is-a-balance-transfer-fee-on-a-credit-card"
-  ],
-  [
-   "Experian: avalanche method",
-   "https://www.experian.com/blogs/ask-experian/what-is-the-avalanche-method/"
-  ],
-  [
-   "NerdWallet: debt avalanche",
-   "https://www.nerdwallet.com/blog/finance/what-is-a-debt-avalanche/"
-  ],
-  [
-   "Experian: hardship programs",
-   "https://www.experian.com/blogs/ask-experian/what-is-credit-card-hardship-program/"
-  ],
-  [
-   "NerdWallet: hardship programs",
-   "https://www.nerdwallet.com/credit-cards/learn/what-is-a-credit-card-hardship-program"
-  ]
- ],
- "captions": {
-  "ig": "Paying only the minimum on a card can take years. Let Claude do the math and the hard parts.\n\n5 prompts to copy:\n1. Read the warning box: your statement shows how long the minimum takes and what pays it off in 3 years.\n2. Rehearse the call: practice asking for a lower APR, then ask about a hardship program.\n3. Pick your order: highest APR first usually saves the most interest.\n4. Test a balance transfer: fees are usually 3% to 5%, and the promo rate ends.\n5. Answer a collector: you usually have 30 days to dispute in writing.\n\nBlack out account numbers before you paste anything.\n\nComment DEBT and we will DM you our free debt guide: the script to ask for a lower rate and a payoff plan built on your real numbers.\n\nCover numbers are a sample. General info, not financial advice. Sources: CFPB, Consumer Action, Experian, NerdWallet.\n\n#claudeai #aiprompts #creditcarddebt #debtfree #moneytips",
-  "tiktok": "5 Claude prompts to get out of card debt faster\n\nRead the minimum payment box on your statement, rehearse the lower rate call, pick your payoff order, test a balance transfer, answer a collector. Save this. Free debt guide: link in bio.\n\n#claudeai #aiprompts #creditcarddebt #moneytips",
-  "tiktok_title": "5 Claude prompts to get out of card debt faster",
-  "threads": "Card tip: your statement has a box showing how long paying only the minimum takes, and what monthly payment clears it in 3 years. Paste it into Claude (account number blacked out) and ask it to explain the cost in plain words. Then compare paying the highest APR first vs the smallest balance first. Free debt guide: autopilotoi.app/g/debt",
-  "x": "Your card statement shows how long paying only the minimum takes. Paste that box into Claude (account number blacked out) and ask what monthly payment clears it in 3 years. Free guide: autopilotoi.app/g/debt"
- },
- "media": "docs/media/car/2026-11-02-prompts-card-debt/",
- "built_at": "2026-11-02T00:37Z"
+  "captions": {
+    "ig": "Paying only the minimum on a card can take years. Let Claude do the math and the hard parts.\n\n5 prompts to copy:\n1. Read the warning box: your statement shows how long the minimum takes and what pays it off in 3 years.\n2. Rehearse the call: practice asking for a lower APR, then ask about a hardship program.\n3. Pick your order: highest APR first usually saves the most interest.\n4. Test a balance transfer: fees are usually 3% to 5%, and the promo rate ends.\n5. Answer a collector: you usually have 30 days to dispute in writing.\n\nBlack out account numbers before you paste anything.\n\nComment DEBT and we will DM you our free debt guide: the script to ask for a lower rate and a payoff plan built on your real numbers.\n\nCover numbers are a sample. General info, not financial advice. Sources: CFPB, Consumer Action, Experian, NerdWallet.\n\n#claudeai #aiprompts #creditcarddebt #debtfree #moneytips",
+    "tiktok": "5 Claude prompts to get out of card debt faster\n\nRead the minimum payment box on your statement, rehearse the lower rate call, pick your payoff order, test a balance transfer, answer a collector. Save this. Free debt guide: link in bio.\n\n#claudeai #aiprompts #creditcarddebt #moneytips",
+    "tiktok_title": "5 Claude prompts to get out of card debt faster",
+    "threads": "Card tip: your statement has a box showing how long paying only the minimum takes, and what monthly payment clears it in 3 years. Paste it into Claude (account number blacked out) and ask it to explain the cost in plain words. Then compare paying the highest APR first vs the smallest balance first. Free debt guide: autopilotoi.app/g/debt",
+    "x": "Your card statement shows how long paying only the minimum takes. Paste that box into Claude (account number blacked out) and ask what monthly payment clears it in 3 years. Free guide: autopilotoi.app/g/debt"
+  },
+  "media": "docs/media/car/2026-11-02-prompts-card-debt/",
+  "built_at": "2026-11-02T00:37Z",
+  "reason": "sales recovery: Front Desk focus",
+  "staled_at": "2026-11-03"
 }

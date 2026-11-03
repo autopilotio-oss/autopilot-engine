@@ -1,62 +1,64 @@
 {
- "id": "2026-11-02-howto-subs",
- "kind": "howto",
- "status": "bank",
- "cover_idea": "White cover, centered headline STOP PAYING FOR / STUFF YOU FORGOT (black box, lime), black SAMPLE month calendar with 6 lime charge days, centered total $84.95 a month = $1,019 a year.",
- "theme": "money: find and cancel forgotten subscriptions (app stores, Claude statement scan, cancel where you signed up, stop payment, dispute), tied to subs-agent / SUBS guide",
- "gate": {
-  "score": 90,
-  "notes": "Accuracy 27/30 (iPhone Settings > name > Subscriptions: Apple + iGeeksBlog; Play Store profile > Payments & subscriptions > Subscriptions: TechRadar + SlashGear; new card does not stop charges, Visa Account Updater sends new number to merchants: Visa + Quartz; stop payment on preauthorized debit 3 business days before, fee possible: CFPB + Reg E 1005.10(c); 60 day written credit card dispute: CA AG + Experian; calendar labeled SAMPLE, math checked 84.95 x 12 = 1,019.40). Dropped: federal click to cancel status (vacated 2025, FTC ANPRM March 2026, NYC rule Oct 1 2026) as too fluid for an evergreen bank item. Hook 22/25. Clarity 18/20. Design 13/15 vs last 5: centered headline (all 5 left aligned), calendar grid as main visual (new), mid scale headline at top with total line under the visual; white bg like card debt but different layout. CTA 10/10 (SUBS confirmed in manychat.json, gift matches /g/subs guide). QA PASS, all 7 slides legible."
- },
- "sources": [
-  [
-   "Apple",
-   "https://support.apple.com/en-au/HT202039"
+  "id": "2026-11-02-howto-subs",
+  "kind": "howto",
+  "status": "stale",
+  "cover_idea": "White cover, centered headline STOP PAYING FOR / STUFF YOU FORGOT (black box, lime), black SAMPLE month calendar with 6 lime charge days, centered total $84.95 a month = $1,019 a year.",
+  "theme": "money: find and cancel forgotten subscriptions (app stores, Claude statement scan, cancel where you signed up, stop payment, dispute), tied to subs-agent / SUBS guide",
+  "gate": {
+    "score": 90,
+    "notes": "Accuracy 27/30 (iPhone Settings > name > Subscriptions: Apple + iGeeksBlog; Play Store profile > Payments & subscriptions > Subscriptions: TechRadar + SlashGear; new card does not stop charges, Visa Account Updater sends new number to merchants: Visa + Quartz; stop payment on preauthorized debit 3 business days before, fee possible: CFPB + Reg E 1005.10(c); 60 day written credit card dispute: CA AG + Experian; calendar labeled SAMPLE, math checked 84.95 x 12 = 1,019.40). Dropped: federal click to cancel status (vacated 2025, FTC ANPRM March 2026, NYC rule Oct 1 2026) as too fluid for an evergreen bank item. Hook 22/25. Clarity 18/20. Design 13/15 vs last 5: centered headline (all 5 left aligned), calendar grid as main visual (new), mid scale headline at top with total line under the visual; white bg like card debt but different layout. CTA 10/10 (SUBS confirmed in manychat.json, gift matches /g/subs guide). QA PASS, all 7 slides legible."
+  },
+  "sources": [
+    [
+      "Apple",
+      "https://support.apple.com/en-au/HT202039"
+    ],
+    [
+      "iGeeks",
+      "https://www.igeeksblog.com/how-to-manage-subscriptions-iphone-ipad/"
+    ],
+    [
+      "TechRadar",
+      "https://techradar.com/phones/android/how-to-unsubscribe-from-subscriptions-through-the-google-play-store-on-your-android-phone"
+    ],
+    [
+      "SlashGear",
+      "https://www.slashgear.com/1656860/android-phone-check-cancel-subscriptions/"
+    ],
+    [
+      "Visa",
+      "https://www.visa.com/en-us/products/visa-account-updater"
+    ],
+    [
+      "Quartz",
+      "https://qz.com/netflix-streaming-services-charges-credit-card-visa-vau-1851441867"
+    ],
+    [
+      "CFPB",
+      "https://www.consumerfinance.gov/about-us/blog/you-have-protections-when-it-comes-to-automatic-debit-payments-from-your-account/"
+    ],
+    [
+      "Reg E",
+      "https://www.consumerfinance.gov/rules-policy/regulations/1005/10/"
+    ],
+    [
+      "CA AG",
+      "https://www.oag.ca.gov/consumers/general/credit-cards-dispute-charge"
+    ],
+    [
+      "Experian",
+      "https://www.experian.com/blogs/ask-experian/how-long-do-you-have-to-dispute-credit-card-charge/"
+    ]
   ],
-  [
-   "iGeeks",
-   "https://www.igeeksblog.com/how-to-manage-subscriptions-iphone-ipad/"
-  ],
-  [
-   "TechRadar",
-   "https://techradar.com/phones/android/how-to-unsubscribe-from-subscriptions-through-the-google-play-store-on-your-android-phone"
-  ],
-  [
-   "SlashGear",
-   "https://www.slashgear.com/1656860/android-phone-check-cancel-subscriptions/"
-  ],
-  [
-   "Visa",
-   "https://www.visa.com/en-us/products/visa-account-updater"
-  ],
-  [
-   "Quartz",
-   "https://qz.com/netflix-streaming-services-charges-credit-card-visa-vau-1851441867"
-  ],
-  [
-   "CFPB",
-   "https://www.consumerfinance.gov/about-us/blog/you-have-protections-when-it-comes-to-automatic-debit-payments-from-your-account/"
-  ],
-  [
-   "Reg E",
-   "https://www.consumerfinance.gov/rules-policy/regulations/1005/10/"
-  ],
-  [
-   "CA AG",
-   "https://www.oag.ca.gov/consumers/general/credit-cards-dispute-charge"
-  ],
-  [
-   "Experian",
-   "https://www.experian.com/blogs/ask-experian/how-long-do-you-have-to-dispute-credit-card-charge/"
-  ]
- ],
- "captions": {
-  "ig": "Most people pay for at least one subscription they forgot. Here is how to find and stop them.\n\n1. Download 3 months of statements from your bank, every card and PayPal.\n2. Check your app stores. iPhone: Settings, tap your name, Subscriptions. Android: Play Store, profile icon, Payments and subscriptions, Subscriptions.\n3. Black out card numbers, upload the statements to Claude and ask it to find every recurring charge, renewal and trial that turned paid, with the yearly cost of each.\n4. Cancel where you signed up and screenshot the confirmation. A new card does not stop it: Visa can send your new number to the company.\n5. Still charged? For bank debits, tell your bank to stop the payment at least 3 business days before it is due. On a credit card, dispute in writing within 60 days of the statement.\n\nComment SUBS and we will DM you our free subscription guide: the Claude prompts to find every recurring charge, and how to cancel the right way.\n\nCalendar numbers are a sample. General info, not financial advice. Sources: Apple, iGeeksBlog, TechRadar, SlashGear, Visa, Quartz, CFPB, California AG, Experian.\n\n#subscriptions #moneytips #budgeting #claudeai #savemoney",
-  "tiktok": "Find the subscriptions you forgot you pay for\n\nCheck your app stores, let Claude scan 3 months of statements for every recurring charge, then cancel where you signed up. Save this. Free subscription guide: link in bio.\n\n#subscriptions #moneytips #savemoney #claudeai",
-  "tiktok_title": "Find the subscriptions you forgot you pay for",
-  "threads": "Find the subscriptions you forgot. Check your app stores (iPhone: Settings, your name, Subscriptions). Upload 3 months of statements to Claude, card numbers blacked out, and ask for every recurring charge with its yearly cost. Cancel where you signed up and screenshot it: a new card does not stop it, since Visa can send your new number to the company. Free guide: autopilotoi.app/g/subs",
-  "x": "Forgotten subscriptions: check your app stores, have Claude scan 3 months of statements for every recurring charge, then cancel where you signed up. A new card will not stop it. Free guide: autopilotoi.app/g/subs"
- },
- "media": "docs/media/car/2026-11-02-howto-subs/",
- "built_at": "2026-11-02T02:49Z"
+  "captions": {
+    "ig": "Most people pay for at least one subscription they forgot. Here is how to find and stop them.\n\n1. Download 3 months of statements from your bank, every card and PayPal.\n2. Check your app stores. iPhone: Settings, tap your name, Subscriptions. Android: Play Store, profile icon, Payments and subscriptions, Subscriptions.\n3. Black out card numbers, upload the statements to Claude and ask it to find every recurring charge, renewal and trial that turned paid, with the yearly cost of each.\n4. Cancel where you signed up and screenshot the confirmation. A new card does not stop it: Visa can send your new number to the company.\n5. Still charged? For bank debits, tell your bank to stop the payment at least 3 business days before it is due. On a credit card, dispute in writing within 60 days of the statement.\n\nComment SUBS and we will DM you our free subscription guide: the Claude prompts to find every recurring charge, and how to cancel the right way.\n\nCalendar numbers are a sample. General info, not financial advice. Sources: Apple, iGeeksBlog, TechRadar, SlashGear, Visa, Quartz, CFPB, California AG, Experian.\n\n#subscriptions #moneytips #budgeting #claudeai #savemoney",
+    "tiktok": "Find the subscriptions you forgot you pay for\n\nCheck your app stores, let Claude scan 3 months of statements for every recurring charge, then cancel where you signed up. Save this. Free subscription guide: link in bio.\n\n#subscriptions #moneytips #savemoney #claudeai",
+    "tiktok_title": "Find the subscriptions you forgot you pay for",
+    "threads": "Find the subscriptions you forgot. Check your app stores (iPhone: Settings, your name, Subscriptions). Upload 3 months of statements to Claude, card numbers blacked out, and ask for every recurring charge with its yearly cost. Cancel where you signed up and screenshot it: a new card does not stop it, since Visa can send your new number to the company. Free guide: autopilotoi.app/g/subs",
+    "x": "Forgotten subscriptions: check your app stores, have Claude scan 3 months of statements for every recurring charge, then cancel where you signed up. A new card will not stop it. Free guide: autopilotoi.app/g/subs"
+  },
+  "media": "docs/media/car/2026-11-02-howto-subs/",
+  "built_at": "2026-11-02T02:49Z",
+  "reason": "sales recovery: Front Desk focus",
+  "staled_at": "2026-11-03"
 }

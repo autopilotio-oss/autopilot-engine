@@ -1,0 +1,76 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 03 2026",
+ "cover_bg": "bg-black",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 17,
+ "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">5 PROMPTS &middot; REVIEWS</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"18\" style=\"left:56px;top:150px;font-size:200px;white-space:nowrap;color:#f2f2ee\">Get more</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:340px;font-size:150px;white-space:nowrap;color:#D4FF3A\">5 star reviews</div><div class=\"fx\" data-after=\"h\" data-gap=\"44\" style=\"left:56px;top:520px;width:968px;height:150px\"><div style=\"position:absolute;left:0px;top:0\"><svg width=\"150\" height=\"150\" viewBox=\"0 0 24 24\"><path d=\"M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.9l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z\" fill=\"#D4FF3A\"/></svg></div><div style=\"position:absolute;left:204px;top:0\"><svg width=\"150\" height=\"150\" viewBox=\"0 0 24 24\"><path d=\"M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.9l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z\" fill=\"#D4FF3A\"/></svg></div><div style=\"position:absolute;left:408px;top:0\"><svg width=\"150\" height=\"150\" viewBox=\"0 0 24 24\"><path d=\"M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.9l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z\" fill=\"#D4FF3A\"/></svg></div><div style=\"position:absolute;left:612px;top:0\"><svg width=\"150\" height=\"150\" viewBox=\"0 0 24 24\"><path d=\"M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.9l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z\" fill=\"#D4FF3A\"/></svg></div><div style=\"position:absolute;left:816px;top:0\"><svg width=\"150\" height=\"150\" viewBox=\"0 0 24 24\"><path d=\"M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.9l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z\" fill=\"#D4FF3A\"/></svg></div></div><div class=\"fx Cc\" style=\"left:56px;top:740px;font-size:22px;color:#f2f2ee99\">SAMPLE &middot; MOBILE DETAILING &middot; TEXT THREAD</div><div class=\"fx Ii\" style=\"left:56px;top:790px;max-width:640px;padding:26px 32px;background:#1d1d1d;color:#f2f2ee;border-radius:30px 30px 30px 8px;font-size:36px;line-height:1.25\">Car looks brand new. Thank you!</div><div class=\"fx Ii\" style=\"left:300px;top:920px;width:724px;box-sizing:border-box;padding:26px 32px;background:#D4FF3A;color:#0a0a0a;border-radius:30px 30px 8px 30px;font-size:36px;line-height:1.25\">So glad! Would you leave us a quick Google review? Here is the link.</div><div class=\"fx Ii\" style=\"left:56px;top:1150px;width:780px;font-size:34px;line-height:1.25;color:#f2f2ee\">5 Claude prompts to ask every customer, the honest way. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "Ask *right after* the job",
+   "prompt": "Write a 2 sentence text asking [name] for a Google review of today's [job]. Mention one detail from the job, add my review link [link], keep it warm with no pressure. Do not offer anything in return.",
+   "why": "Google does not allow <b>discounts or freebies</b> in exchange for a review."
+  },
+  {
+   "title": "Ask *everyone*",
+   "prompt": "Here are this week's finished jobs: [name, service, day]. Draft one short review ask for each customer, with the same link for all, and one personal detail in each so none read like a copy.",
+   "why": "Google says do not ask <b>only the happy customers</b>. Ask everyone the same way."
+  },
+  {
+   "title": "Make a *thank you card*",
+   "prompt": "Write the text for a small card I hand over at the end of a job: one line of thanks, one line asking for a Google review, and a spot for my review QR code. Under 25 words, in my voice: [paste 2 texts I sent].",
+   "why": "Your Google Business Profile gives you a <b>review link and QR code</b> to share."
+  },
+  {
+   "title": "Reply to a *5 star*",
+   "prompt": "Reply to this review in 2 sentences: thank [name], mention the [job] they wrote about, and sound like me: [paste 2 old replies]. No sales pitch and no stock phrase I used before.",
+   "why": "Google advises short, <b>conversational</b> replies, not the same thank you on every review."
+  },
+  {
+   "title": "Answer a *1 star*",
+   "prompt": "Here is a bad review and what really happened: [notes]. Draft a calm public reply: thank them, own what we got wrong, and give my number to fix it. No customer details, no arguing.",
+   "why": "Your reply is <b>public</b>. US rules ban baseless threats to get a bad review taken down."
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "sources": [
+  [
+   "Google",
+   "https://support.google.com/business/answer/7035772"
+  ],
+  [
+   "Google Help",
+   "https://support.google.com/business/answer/3474050?hl=en"
+  ],
+  [
+   "BrightLocal",
+   "https://www.brightlocal.com/learn/review-management/dos-and-donts/review-platform-guidelines/"
+  ],
+  [
+   "ReviewTrackers",
+   "https://www.reviewtrackers.com/review-gating-google/"
+  ],
+  [
+   "FTC",
+   "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials"
+  ]
+ ],
+ "bg_words": [
+  "REVIEWS",
+  "STARS",
+  "REPLY",
+  "ASK"
+ ],
+ "bg_facts": [
+  "Share your review link or QR code.",
+  "Ask every customer the same way.",
+  "No freebies in exchange for reviews.",
+  "Keep replies short and personal."
+ ]
+}
