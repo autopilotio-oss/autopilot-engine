@@ -1,0 +1,46 @@
+{
+ "kind": "howto",
+ "dateline": "NOV 03 2026",
+ "cover_bg": "bg-black",
+ "grain": false,
+ "music": "dark",
+ "seed": 31,
+ "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">HOW TO &middot; AFTER HOURS</div><div class=\"fx Cc\" style=\"left:56px;top:168px;font-size:22px;color:#f2f2eeb0\">SAMPLE &middot; PLUMBER &middot; LOCK SCREEN</div><div class=\"fx Mm\" style=\"left:56px;top:206px;width:968px;font-size:240px;line-height:1;font-weight:700;color:#D4FF3A;white-space:nowrap\">9:47<span style=\"font-size:80px;color:#f2f2ee\"> PM</span></div><div class=\"fx Ii\" style=\"left:56px;top:530px;width:968px;box-sizing:border-box;padding:20px 28px;border:3px solid #f2f2ee;border-radius:26px;color:#f2f2ee;font-size:30px;line-height:1.25\"><span class=\"Mm\" style=\"font-size:22px;color:#D4FF3A\">TEXT &middot; 9:21 PM</span><br>Kitchen faucet is leaking. Can you come tomorrow?</div><div class=\"fx Ii\" style=\"left:56px;top:680px;width:968px;box-sizing:border-box;padding:20px 28px;border:3px solid #f2f2ee;border-radius:26px;color:#f2f2ee;font-size:30px;line-height:1.25\"><span class=\"Mm\" style=\"font-size:22px;color:#D4FF3A\">TEXT &middot; 9:38 PM</span><br>How much to swap a water heater?</div><div class=\"fx Ii\" style=\"left:56px;top:830px;width:968px;box-sizing:border-box;padding:20px 28px;border:3px solid #f2f2ee;border-radius:26px;color:#f2f2ee;font-size:30px;line-height:1.25\"><span class=\"Mm\" style=\"font-size:22px;color:#D4FF3A\">TEXT &middot; 9:47 PM</span><br>Toilet keeps running. Price?</div><div class=\"fx A\" style=\"left:56px;top:1000px;width:968px;text-align:right;font-size:96px;white-space:nowrap;color:#f2f2ee\">Texts at 9 PM.</div><div class=\"fx A\" style=\"left:56px;top:1100px;width:968px;text-align:right;font-size:96px;white-space:nowrap;color:#D4FF3A\">Answered by 8 AM.</div><div class=\"fx Ii\" style=\"left:56px;top:1226px;width:800px;font-size:30px;line-height:1.25;color:#f2f2ee\">5 steps, no late nights. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "1. Say *got it* and when",
+   "body": "One short auto reply: thanks, and <b>when they will hear from you</b>. Write it once. <b>SAMPLE:</b> “Thanks, got your message. I am off the clock and will text you back by 8 AM.”"
+  },
+  {
+   "title": "2. Ask for the *one detail*",
+   "body": "Whatever you always need to price it: the model, the address, or <b>one or two photos</b>. Ask in the same text so it is waiting for you. <b>SAMPLE:</b> “If you can, send a photo of the label on the heater.”"
+  },
+  {
+   "title": "3. Give urgent a *way in*",
+   "body": "A leak at 10 PM is not a price question. Add <b>one line</b> for real emergencies. <b>SAMPLE:</b> “Water leaking right now? Call 555 0142.” (made up number)"
+  },
+  {
+   "title": "4. Answer them *in one sitting*",
+   "body": "Do the real replies together, first thing in the morning. Only offer times you can <b>actually keep</b>. If you are not sure a slot is open, say you will confirm it."
+  },
+  {
+   "title": "5. *Claude* drafts the batch",
+   "body": "Paste into Claude (the free plan works): <b>Here are the customer messages that came in after hours: [paste all]. For each one, draft a short reply using my prices and rules: [paste]. Offer two times from tomorrow's open slots [times]. If a message is missing what I need to price it, ask for that one detail. Mark anything you are unsure of with [CHECK].</b>"
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "sources": [
+  ["Housecall Pro", "https://www.housecallpro.com/learn/auto-reply-message/"],
+  ["Heymarket", "https://www.heymarket.com/blog/manage-expectations-with-sms-customer-service/"],
+  ["Textline", "https://www.textline.com/blog/auto-reply-text-message-examples-for-businesses"],
+  ["Callingly", "https://callingly.com/blog/after-hours-home-services-leads"],
+  ["ShiftFlow", "https://www.shiftflow.app/playbook/should-i-ask-for-photos-before-estimate"]
+ ],
+ "bg_words": ["AFTER", "HOURS", "REPLY", "BOOK"],
+ "bg_facts": ["Say when you will reply.", "Ask for the one detail.", "Give urgent a way in.", "Answer in one sitting."]
+}
