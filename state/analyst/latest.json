@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-03T18:43:57Z",
+  "at": "2026-11-03T19:45:00Z",
   "posts_today": {
     "threads": {
       "published": 1,
@@ -25,7 +25,7 @@
   "top_posts": [
     {
       "network": "instagram",
-      "published_at": "2026-10-31T23:31:15Z",
+      "published_at": "2026-10-31T23:31:15-03:00",
       "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds.",
       "metrics": {
         "reach": 75,
@@ -35,11 +35,11 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-03T18:43:57Z"
+      "metrics_seen_at": "2026-11-03T19:45:00Z"
     },
     {
       "network": "instagram",
-      "published_at": "2026-10-31T17:47:12Z",
+      "published_at": "2026-10-31T17:47:12-03:00",
       "text": "$133 a month. $1,596 a year. On things you don't even use.",
       "metrics": {
         "reach": 73,
@@ -49,11 +49,11 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-03T18:43:57Z"
+      "metrics_seen_at": "2026-11-03T19:45:00Z"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-01T00:15:58Z",
+      "published_at": "2026-11-01T00:15:58-03:00",
       "text": "Stop guessing what to sell on TikTok Shop.",
       "metrics": {
         "reach": 61,
@@ -63,12 +63,12 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-03T18:43:57Z"
+      "metrics_seen_at": "2026-11-03T19:45:00Z"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "15:43 ART: 3 posts published today (banks story on threads, twitter, tiktok at 12:00), 18 provider slots pending (approved: instagram banks post 18:00 and new tiktok 'It drafts. You send.' (draft=false); rest draft=true), 0 ERROR. Instagram reels 6-72h (7): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok videos 6-72h (13): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1), one comment on Binance heist video. Threads, X and Instagram feed post analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). Workflows: latest runs success, post.yml in progress, ci.yml 1 fail in 24h (latest success). HQ feed written to status/hub (v31). Local git fetch stalls (repo tarball ~1.8GB); read via API tarball, pushed via GitHub API."
+  "notes": "16:45 ART: 3 posts published today (banks story on threads, twitter, tiktok at 12:00), 18 provider slots pending (approved, due 18:00: instagram banks post and tiktok 'It drafts. You send.'; rest draft=true), 0 ERROR. Instagram reels 6-72h (7): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner (published_at in ART as Metricool reports). TikTok videos 6-72h (13): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1), one comment on Binance heist video. Threads, X and Instagram feed post analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). Workflows: all latest runs success, revenue.yml in progress, 0 fails in 24h incl. ci.yml. HQ feed written to status/hub (v32). Local git fetch stalls (repo ~1.8GB); used sparse blobless clone."
 }
