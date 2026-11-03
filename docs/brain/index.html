@@ -120,6 +120,13 @@ pre{white-space:pre-wrap;word-wrap:break-word;font:500 13.5px/1.6 "Geist Mono",m
  </ul>
 </section>
 
+<section style="padding-top:8px"><div class="card mail" id="early-optin">
+  <b>On your phone between jobs? Do it later.</b>
+  <p class="mut small">Get the link to this page plus 5 short setup tips by email. Optional: the starter itself needs no sign up.</p>
+  <form class="kitform" data-source="brain" data-page="brain_top"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email"><button class="btn" type="submit">Email it to me</button></form>
+  <p class="mut small kitmsg" style="margin-top:8px">No spam. Unsubscribe anytime.</p>
+</div></section>
+
 <section><div class="tag">What it looks like</div>
  <h2 class="H">Before you<br><em>even reply.</em></h2>
  <div class="demo">
@@ -263,7 +270,18 @@ $('kitf').addEventListener('submit',function(e){e.preventDefault();const em=$('k
  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
  b.disabled=true;b.textContent='SENDING...';const fd=new FormData();fd.append('email_address',em);fd.append('fields[source]','frontdesk');
  fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){
-  $('kitf').style.display='none';m.innerHTML='<b>You\u2019re in.</b> Check your inbox, your first tip is on its way.';
+  $('kitf').style.display='none';m.innerHTML='<b>Check your inbox.</b> Kit sends a confirm link first; tap it to get the emails.';try{if(window.goatcounter)goatcounter.count({path:'optin/brain_bottom',event:true})}catch(x){}
  }).catch(function(){b.disabled=false;b.textContent='SEND ME FREE TIPS';m.textContent='Something went wrong. Try again in a moment.'})});
+</script>
+<script>
+document.querySelectorAll('form.kitform').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
+ var em=f.querySelector('input[type=email]').value.trim(),b=f.querySelector('button'),m=f.parentNode.querySelector('.kitmsg');
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
+ b.disabled=true;b.textContent='Sending...';var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',f.dataset.source);
+ try{var q=new URLSearchParams(location.search);['utm_source','utm_campaign','utm_content'].forEach(function(k){var v=q.get(k)||sessionStorage.getItem('ap_'+k);if(v)fd.append('fields['+k+']',v)})}catch(x){}
+ fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){
+  f.style.display='none';m.innerHTML='<b>Check your inbox.</b> Kit sends a confirm link first; tap it to get the emails.';
+  try{if(window.goatcounter)goatcounter.count({path:'optin/'+f.dataset.page,event:true})}catch(x){}
+ }).catch(function(){b.disabled=false;b.textContent='Try again';m.textContent='Something went wrong. Try again in a moment.'})});});
 </script>
 <script src="/assets/ap.js" defer></script></body></html>

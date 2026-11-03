@@ -94,7 +94,7 @@
   "support_agent": {
    "task": "trig_013NQzUu3McvLvX6SPjeo2HV",
    "cadence": "10:07 and 16:07 ART (Gmail drafts + inbox alerts)",
-   "max_gap_hours": 16,
+   "max_gap_hours": 20,
    "severity": "SEV-3",
    "since": "2026-10-31T18:54:38+00:00"
   }

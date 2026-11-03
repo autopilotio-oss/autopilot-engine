@@ -1,5 +1,5 @@
 {
- "_doc": "Canonical offer manifest (Nov 2, 2026). Every surface (Gumroad product.json, site pages, keyword replies, emails, queued posts) must match this. tests/test_manifest.py enforces it; scripts/growthos/health.py checks production against it hourly. Change prices here AND in products/<slug>/product.json, only with Seb's approval.",
+ "_doc": "Canonical offer manifest (Nov 2, 2026). Every surface (Gumroad product.json, site pages, keyword replies, emails, queued posts) must match this. tests/test_manifest.py enforces it; scripts/growthos/health.py checks production against it hourly. Change prices here AND in products/<slug>/product.json, only with Seb's approval. Also the Master Plan's config/products.json: one place for names, prices, Gumroad ids, truthful claims (what_it_is, includes, does_not, needs) and verification status.",
  "updated": "2026-11-02",
  "hero_offer": "front_desk_kit",
  "offers": [
@@ -25,7 +25,19 @@
    "verification": "not yet tested end to end by an outside buyer",
    "advertise": "hold until 3 owner usability tests pass",
    "landing": "/front-desk/",
-   "checkout": "https://autopilotoi.gumroad.com/l/autopilot"
+   "checkout": "https://autopilotoi.gumroad.com/l/autopilot",
+   "gumroad_id": "yPCMPi3vNDhf-CHlO_CsRA==",
+   "does_not": [
+    "send messages, texts or emails by itself",
+    "connect to your phone, text messages, Google Business or booking software",
+    "guarantee more bookings or revenue",
+    "work without you reviewing each draft"
+   ],
+   "needs": [
+    "a Claude account (free plan works)",
+    "about 30 minutes to answer the setup interview (estimate, being measured)",
+    "your real prices, hours and rules"
+   ]
   },
   {
    "id": "office_autopilot",
@@ -44,13 +56,14 @@
    "advertise": "hold until retested",
    "landing": "/office-autopilot/",
    "checkout": "https://autopilotoi.gumroad.com/l/workspace",
-   "formerly": "THE WORKSPACE kit ($49)"
+   "formerly": "THE WORKSPACE kit ($49)",
+   "gumroad_id": "TU4m2U6Yau-RyJWQbsN8mw=="
   },
   {
    "id": "workspace_founding",
    "permalink": "workspace-founding",
    "name": "Workspace Founding Spot",
-   "gumroad_name": "AUTOPILOT Workspace · Founding Spot (refundable)",
+   "gumroad_name": "AUTOPILOT Workspace \u00b7 Founding Spot (refundable)",
    "price_cents": 4900,
    "type": "refundable_deposit",
    "division": "workspace",
@@ -65,7 +78,8 @@
    ],
    "advertise": "no paid ads; validation only",
    "landing": "/workspace/",
-   "checkout": "https://autopilotoi.gumroad.com/l/workspace-founding"
+   "checkout": "https://autopilotoi.gumroad.com/l/workspace-founding",
+   "gumroad_id": "XmPB321EqCacOI4blTqTFw=="
   },
   {
    "id": "video_agent",
@@ -76,7 +90,8 @@
    "division": "marketplace",
    "placement": "marketplace",
    "advertise": "no",
-   "landing": "/store/video/"
+   "landing": "/store/video/",
+   "gumroad_id": "HO6TBwbYC3KpVc4VJFYLUg=="
   }
  ],
  "library": {
@@ -157,7 +172,7 @@
   "THE WORKSPACE",
   "The Workspace",
   "$19.99 once",
-  "Autopilot · $19.99",
+  "Autopilot \u00b7 $19.99",
   "Autopilot $19.99",
   "$49 one time",
   "See The Workspace",

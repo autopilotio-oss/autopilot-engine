@@ -27,17 +27,57 @@ SAMPLES = {
 }
 TYPES = [("price", "A price question"), ("late", "A late night request"), ("chase", "A quote that went quiet")]
 
-def page(head, nav, foot):
+# Message matched variants (Master Plan p6/p11). One variable changes per variant: the promise the ad makes.
+# Facts (price, refund, plan, limits) always come from config/offers.json. Variants are ad destinations only:
+# canonical points at /front-desk/ and they are noindex, so search sees one page.
+VARIANTS = {
+ "main": {"path": "/front-desk/", "tag": "Setup kit · for service businesses", "trade": "detailing", "type": "price",
+          "h1": "Answer customer inquiries faster, <em>without writing every reply from scratch.</em>",
+          "lead": "A setup for your own Claude account. It learns your prices, rules and voice, then drafts replies, quotes and follow ups. You check each one and send it yourself.",
+          "title": "Front Desk Kit · answer customer inquiries faster · AUTOPILOT.OI"},
+ "after-hours": {"path": "/front-desk/after-hours/", "tag": "For detailing shops and mobile detailers", "trade": "detailing", "type": "late",
+          "h1": "Still answering quotes after hours? <em>Get the reply drafted, then send it yourself.</em>",
+          "lead": "Paste the message that came in while you were on a job. The kit drafts the reply with your real prices and two open times, in your voice. You read it and send it.",
+          "title": "Front Desk Kit · draft after hours replies for your detailing shop · AUTOPILOT.OI"},
+ "demo": {"path": "/front-desk/demo/", "tag": "See exactly how it works", "trade": "detailing", "type": "price",
+          "h1": "See exactly how the Front Desk Kit works, <em>from a customer message to a draft you approve.</em>",
+          "lead": "Pick a trade and a message type. The draft on the right follows the kit's reply rules for an example business. Then see the 3 steps to set it up in your own Claude account.",
+          "title": "Front Desk Kit demo · how it drafts replies and quotes · AUTOPILOT.OI"},
+}
+FAQ_EXTRA = [
+ ("Does it send texts or emails automatically?", "No. It never sends anything. It writes a draft in your Claude chat; you copy it, edit it if you want and send it from your own phone or email."),
+ ("Can it draft quotes?", "Yes. Type quote with the job details and it writes the quote from your saved prices, with your deposit and cancellation rules. If a price is missing it writes [CHECK] instead of guessing."),
+]
+
+KITJS = """<script>document.querySelectorAll('form.kitform').forEach(function(f){f.addEventListener('submit',function(ev){ev.preventDefault();
+var em=f.querySelector('input[type=email]').value.trim(),b=f.querySelector('button'),m=f.parentNode.querySelector('.kitmsg');
+if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
+b.disabled=true;b.textContent='Sending...';var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',f.dataset.source);
+try{var q=new URLSearchParams(location.search);['utm_source','utm_campaign','utm_content'].forEach(function(k){var v=q.get(k)||sessionStorage.getItem('ap_'+k);if(v)fd.append('fields['+k+']',v)})}catch(x){}
+fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){f.style.display='none';m.innerHTML='<b>Check your inbox.</b> Kit sends a confirm link first; tap it to get the emails.';try{if(window.goatcounter)goatcounter.count({path:'optin/'+f.dataset.page,event:true})}catch(x){}}).catch(function(){b.disabled=false;b.textContent='Try again';m.textContent='Something went wrong. Try again in a moment.'})});});</script>"""
+
+def page(head, nav, foot, variant="main"):
+    V = VARIANTS[variant]
     inc = "".join(f"<li>{e(x)}</li>" for x in O["includes"])
     data = json.dumps(SAMPLES)
     trades = "".join(f'<option value="{k}">{e(v["label"])}</option>' for k, v in SAMPLES.items())
     types = "".join(f'<option value="{k}">{e(v)}</option>' for k, v in TYPES)
     buy = f'<a class="btn buy" href="{O["checkout"]}">Get the Front Desk Kit · {PRICE}</a>'
-    return head("Front Desk Kit · answer customer inquiries faster · AUTOPILOT.OI", "A setup kit for your own Claude account that drafts replies, quotes and follow ups from your real prices and rules. You check and send. One time price, 30 day refund.", "/front-desk/") + nav("m") + f"""
+    nots = "".join(f"<li>{e(x[0].upper() + x[1:])}</li>" for x in O["does_not"])
+    faqx = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in FAQ_EXTRA)
+    h = head(V["title"], "A setup kit for your own Claude account that drafts replies, quotes and follow ups from your real prices and rules. You check and send. One time price, 30 day refund.", "/front-desk/")
+    if variant != "main":
+        h = h.replace("</title>", '</title><meta name="robots" content="noindex,follow">', 1)
+    steps = "" if variant != "demo" else """<div class="sec"><div class="wrap"><h2 style="margin-bottom:16px">The setup, step by step</h2><div class="grid3">
+<div class="card"><div class="k">1 · Make a Claude Project</div><p>In claude.ai open Projects, then New project, and add the kit PDF to the project files. Free plan works.</p></div>
+<div class="card"><div class="k">2 · Answer the interview</div><p>Paste the starter prompt from page 2. The setup agent asks 15 questions about your services, prices, hours and rules, then writes your Business Brain.</p></div>
+<div class="card"><div class="k">3 · Paste a message, type reply</div><p>Paste any customer message and type reply, quote or chase. Read the draft, fix anything, send it yourself.</p></div>
+</div><p class="label" style="margin-top:14px">A recorded walkthrough of a real setup is coming after our owner tests. Until then the demo above uses example businesses.</p></div></div>"""
+    return h + nav("m") + f"""
 <div class="wrap hero grid2" style="align-items:start;gap:40px"><div>
-<span class="tagline live">Setup kit · for service businesses</span>
-<h1 style="margin:20px 0 22px;font-size:clamp(36px,5.6vw,58px)">Answer customer inquiries faster, <em>without writing every reply from scratch.</em></h1>
-<p class="lead">A setup for your own Claude account. It learns your prices, rules and voice, then drafts replies, quotes and follow ups. You check each one and send it yourself.</p>
+<span class="tagline live">{e(V["tag"])}</span>
+<h1 style="margin:20px 0 22px;font-size:clamp(34px,5.4vw,56px)">{V["h1"]}</h1>
+<p class="lead">{e(V["lead"])}</p>
 <div style="display:flex;align-items:baseline;gap:10px;margin-top:26px"><span style="font:800 40px Inter;letter-spacing:-.03em">{PRICE}</span><span class="label">ONE TIME · 30 DAY REFUND</span></div>
 <div style="margin-top:16px">{buy}</div>
 <p class="label" style="margin-top:12px;line-height:1.6">Runs in your Claude account ({e(O['claude_plan'][0].lower() + O['claude_plan'][1:]).replace('claude', 'Claude')}). It drafts; you send. Not an auto reply service.</p></div>
@@ -50,13 +90,18 @@ def page(head, nav, foot):
 <div class="sec"><div class="wrap grid3">
 <div class="card"><div class="k" style="margin-bottom:12px">What you get</div><ul style="list-style:none;display:flex;flex-direction:column;gap:10px;color:#c4c9bd;font-size:15px">{inc}</ul></div>
 <div class="card"><div class="k" style="margin-bottom:12px">Setup</div><p>Make a Claude Project, add the PDF, paste one starter prompt. The setup agent interviews you and builds your commands with you.</p><p class="label" style="margin-top:12px">{e(O['setup_time']).upper()}</p></div>
-<div class="card"><div class="k" style="margin-bottom:12px">What it won't do</div><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;color:#c4c9bd;font-size:15px"><li>Send, post or call anyone for you</li><li>Log into your email or accounts</li><li>Run on a schedule by itself</li><li>Guess a price it doesn't know: it writes [CHECK]</li></ul></div></div></div>
+<div class="card"><div class="k" style="margin-bottom:12px">What it won't do</div><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;color:#c4c9bd;font-size:15px">{nots}<li>Guess a price it doesn't know: it writes [CHECK]</li></ul></div></div></div>{steps}
 <div class="sec"><div class="wrap"><h2 style="margin-bottom:16px">Questions</h2>
 <details><summary>Is this an app?</summary><p>No. It's a setup kit: a PDF with a starter prompt, the setup agent and the instructions it installs in a Claude Project. Everything runs in your own Claude account.</p></details>
 <details><summary>Do I need a paid Claude plan?</summary><p>No. Claude's free plan works. A paid plan gives you more usage.</p></details>
 <details><summary>I've never used Claude. Can I do this?</summary><p>Yes. Make a free account at claude.ai, then follow the 3 step plan in the PDF: make a Project, paste one prompt, answer the questions.</p></details>
 <details><summary>Why not just use ChatGPT?</summary><p>A blank chat starts from zero every time and will guess your prices. The kit interviews you once, saves your Business Brain in a Claude Project and drafts from it every time. When something is missing it writes [CHECK] instead of guessing.</p></details>
 <details><summary>What if it doesn't work for me?</summary><p>{e(O['refund'])}. Not working for you within 30 days? You get your money back.</p></details>
+{faqx}
 <div style="margin-top:34px">{buy}</div></div></div>
+<div class="sec"><div class="wrap"><div class="card" style="max-width:640px"><div class="k" style="margin-bottom:8px">Not ready to buy?</div>
+<p>Get the free Front Desk Starter and 5 short setup tips by email. Try it on a few real messages first.</p>
+<form class="kitform" data-source="frontdesk" data-page="fd_{variant}" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email" style="flex:1;min-width:200px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--g2);color:var(--tx);padding:0 12px;font:500 15px Inter"><button class="btn" type="submit">Send it</button></form>
+<p class="label kitmsg" style="margin-top:10px">No spam. Unsubscribe anytime. Or <a href="/brain/?utm_source=site&utm_medium=fd_{variant}&utm_campaign=front_desk" style="text-decoration:underline">use it now without email</a>.</p></div></div></div>
 <style>.fdsel{{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}}@media (max-width:520px){{.fdsel{{grid-template-columns:1fr}}}}.sel{{width:100%;min-width:0;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--g2);color:var(--tx);padding:0 10px;font:600 14px Inter}}</style>
-<script>(function(){{var S={data},t=document.getElementById('fdt'),k=document.getElementById('fdk');function r(){{var b=S[t.value],x=b.items[k.value];document.getElementById('fdb').textContent=b.biz.toUpperCase();document.getElementById('fdm').textContent=x[0];document.getElementById('fdd').textContent=x[1];try{{if(window.goatcounter)goatcounter.count({{path:'fdc/'+t.value+'/'+k.value,event:true}})}}catch(e){{}}}}t.onchange=r;k.onchange=r;r();}})();</script>""" + foot
+<script>(function(){{var S={data},t=document.getElementById('fdt'),k=document.getElementById('fdk');function r(){{var b=S[t.value],x=b.items[k.value];document.getElementById('fdb').textContent=b.biz.toUpperCase();document.getElementById('fdm').textContent=x[0];document.getElementById('fdd').textContent=x[1];try{{if(window.goatcounter)goatcounter.count({{path:'fdc/'+t.value+'/'+k.value,event:true}})}}catch(e){{}}}}t.value='{V["trade"]}';k.value='{V["type"]}';t.onchange=r;k.onchange=r;r();}})();</script>""" + KITJS + foot

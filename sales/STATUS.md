@@ -31,3 +31,9 @@ Updated 2026-11-02 by Claude. Source of truth for offers: `config/offers.json`.
 - Share images per page fixed; meta added to Office Autopilot, brain, free.
 - Office Autopilot copy: old Workspace name gone, schedule claim accurate. Full redesign skipped while on hold.
 - Health: only meta_pixel_configured failing (needs Seb's pixel ID). CI green.
+
+## 2026-11-03 Master Plan session (verified)
+- Integration audit: audit/integration_inventory.md. G0 not passed: no Meta Pixel exists (0 pixels on ad account), Kit has no Gumroad integration (0 purchases), a $0 order is invisible to the ledger, GoatCounter data unreadable.
+- Ad spend corrected: $49.89 (Oct 30 to Nov 1 boost), contribution -$49.89.
+- Funnel: /front-desk/after-hours/ and /front-desk/demo/ live after deploy; email capture on /brain/ (top) and all Front Desk pages.
+- Daily report: growth/report_daily.md, refreshed every 3 h by revenue.yml.

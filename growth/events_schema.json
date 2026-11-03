@@ -1,0 +1,24 @@
+{
+  "_doc": "Canonical events for the AUTOPILOT.OI funnel (Master Plan WP04, data model p4). Financial truth is ONLY the Gumroad paid order in state/ledger/events.jsonl. Every other event is a marketing signal. Missing attribution is recorded as 'unknown', never guessed. No names, emails or phone numbers in any analytics or ad payload.",
+  "version": "2026-11-03",
+  "ids": {
+    "purchase_id": "sha256 of the Gumroad sale id (ledger field 'order'); the raw sale id never leaves Gumroad and the private ledger",
+    "product_id": "Gumroad permalink (config/offers.json 'permalink'), offer_id = config/offers.json 'id'",
+    "dedup_key": "event_id = '<type>:<purchase_id>' (ledger merge is idempotent: a sale seen twice is stored once)"
+  },
+  "events": [
+    {"name": "page_view", "where": "every content page (docs/assets/ap.js loads GoatCounter)", "system": "GoatCounter", "fields": ["path", "referrer", "utm_source", "utm_medium", "utm_campaign", "utm_content"], "counts_as_sale": false, "status": "firing, not readable until GOATCOUNTER_TOKEN is set"},
+    {"name": "landing_variant_view", "where": "/front-desk/ and message matched variants", "system": "GoatCounter path + Meta ViewContent", "fields": ["variant", "utm_*"], "counts_as_sale": false, "status": "GoatCounter firing; Meta waits for pixel"},
+    {"name": "demo_interaction", "where": "/front-desk/ demo pickers", "system": "GoatCounter event 'fdc/<trade>/<type>'", "counts_as_sale": false, "status": "firing"},
+    {"name": "checkout_intent", "where": "click on any gumroad.com/l/ link", "system": "GoatCounter event 'checkout-click/<product>/<page>/<source>' + Meta InitiateCheckout", "fields": ["product", "page", "utm_source"], "counts_as_sale": false, "status": "GoatCounter firing; Meta waits for pixel"},
+    {"name": "email_optin", "where": "Kit form 10118407 on /brain/ and landing pages", "system": "Kit (consent of record) + GoatCounter 'optin/<page>/<source>'", "fields": ["kit_subscriber_id (pseudonymised in growth OS)", "fields.source", "consent_source"], "counts_as_sale": false, "status": "form live; 0 confirmed subscribers so far"},
+    {"name": "order_paid", "where": "Gumroad sales API, polled every 3 h by revenue.yml", "system": "state/ledger/events.jsonl", "fields": ["order", "offer_id", "gross_cents", "fee_cents", "currency", "ts", "utm_source", "utm_medium", "utm_campaign", "utm_content", "referrer", "test", "free"], "counts_as_sale": "true only when test=false and free=false", "status": "working; 0 paid orders so far"},
+    {"name": "refund_processed", "where": "same Gumroad sale object (refunded, partially_refunded, chargedback)", "system": "ledger", "fields": ["order", "refund_cents", "reason"], "counts_as_sale": false, "status": "working (unit tested); never exercised on a real order"},
+    {"name": "purchase_pixel", "where": "Gumroad receipt page via Gumroad third party analytics", "system": "Meta Pixel Purchase", "fields": ["value", "currency", "content_ids"], "counts_as_sale": false, "status": "NOT SET UP: no pixel exists on the ad account"},
+    {"name": "buyer_onboarding_start", "where": "Kit purchase automation (Gumroad integration)", "system": "Kit sequence 2954468", "counts_as_sale": false, "status": "NOT SET UP: needs Kit UI"},
+    {"name": "activation", "where": "buyer reaches a first useful draft", "system": "sales/activations.csv (manual from tester or buyer reply)", "fields": ["order_ref", "minutes_to_first_draft", "stuck_at"], "counts_as_sale": false, "status": "file ready; 0 rows"},
+    {"name": "ad_spend", "where": "Meta ad account via Adspirer (read only)", "system": "sales/spend.csv", "fields": ["date", "campaign", "usd", "approved_by"], "status": "1 row: $49.89 Oct 30 to Nov 1"}
+  ],
+  "retention": {"ledger": "kept (financial record)", "analytics": "GoatCounter defaults, no personal data", "kit": "Kit is the system of record for email consent; unsubscribes suppress all marketing"},
+  "consent": {"email": "explicit opt in on the form, source stored in fields.source", "sms": "not used (plan: email only for 30 days)", "ads": "no personal data sent to Meta; Gumroad handles the Purchase event on its own receipt"}
+}

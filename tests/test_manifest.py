@@ -127,3 +127,18 @@ def test_sales_dashboard_excludes_test_and_free_orders(tmp_path, monkeypatch):
     row = [r for r in out if r["channel"] == "meta"][0]
     assert row["verified_orders"] == 1 and row["cac_usd"] == 20.0 and row["contribution_usd"] == round(39 - 4.4 - 20, 2)
     assert sum(r["verified_orders"] for r in out) == 1
+
+
+def test_front_desk_variants_match_offer_and_are_ad_only():
+    """Master plan p11 message match: every variant shows the manifest price, checkout, refund and limits,
+    points search to the main page and tags email signups with a source the Kit routing task understands."""
+    fd = [o for o in M["offers"] if o["id"] == "front_desk_kit"][0]
+    price = f"${fd['price_cents'] // 100}"
+    for v in ("after-hours", "demo"):
+        raw = open(os.path.join(ROOT, "docs", "front-desk", v, "index.html"), encoding="utf-8").read()
+        t = text(os.path.join(ROOT, "docs", "front-desk", v, "index.html"))
+        assert price in t and fd["checkout"] in raw and "30 day refund" in t.lower()
+        assert 'name="robots" content="noindex' in raw and 'rel="canonical" href="https://autopilotoi.app/front-desk/"' in raw
+        assert 'data-source="frontdesk"' in raw and "never sends anything" in t.lower()
+        for x in fd["does_not"]:
+            assert x[1:] in t, x
