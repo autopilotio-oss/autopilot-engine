@@ -45,7 +45,21 @@ def snapshot(store):
             "orders": m["orders"], "unattributed_orders": m["unattributed_orders"], "budget": costs.guard(store),
             "viral_waiting_owner": [c["content_id"] for c in waiting], "viral_concepts": len(concepts),
             "approvals_waiting": aq.count("AWAITING APPROVAL"),
-            "ungated_publishers": _j(os.path.join(ROOT, "config", "growthos", "cutover.json"), {}).get("ungated_publishers", [])}
+            "ungated_publishers": _j(os.path.join(ROOT, "config", "growthos", "cutover.json"), {}).get("ungated_publishers", []),
+            "focus": (_j(os.path.join(ROOT, "config", "growthos", "campaign.json"), {}) or {}).get("focus") or {}}
+
+
+DEFAULT_FUNNEL = ("Subscription Leak", "one gated Subscription video -> /g/subs/ -> opt in -> $10 kit; trace every step")
+
+
+def funnel(s):
+    """The funnel to prove: the owner's current campaign focus (config/growthos/campaign.json focus.offer),
+    so the proposal never points at a parked product. Falls back to the original Subscription Leak funnel."""
+    offer = (s.get("focus") or {}).get("offer")
+    if not offer:
+        return DEFAULT_FUNNEL
+    name = offer.split(" (")[0].split(" with ")[0].strip()
+    return name, f"one gated reel -> {offer}; trace every step to the first lead or order"
 
 
 def proposals(s):
@@ -70,8 +84,9 @@ def proposals(s):
         add("measure_funnel", "Turn on page view tracking reads", "0 email leads and website traffic is unknown (GoatCounter API not connected)",
             "owner adds GOATCOUNTER_TOKEN secret (read only)", 5, .8, 1, .5, 1, True, "delete the secret", "site.json shows visits")
     if s["orders"] == 0 and s["subscribers"] == 0:
-        add("first_funnel", "Prove one funnel: Subscription Leak", "0 orders, 0 leads: volume is not the bottleneck, proof is",
-            "one gated Subscription video -> /g/subs/ -> opt in -> $10 kit; trace every step", 6, .5, 1, 2, 1, True, "pause the concept", "first traced order or lead")
+        fname, faction = funnel(s)
+        add("first_funnel", f"Prove one funnel: {fname}", "0 orders, 0 leads: volume is not the bottleneck, proof is",
+            faction, 6, .5, 1, 2, 1, True, "pause the concept", "first traced order or lead")
     if s["budget"]["status"].startswith("UNCAPPED"):
         add("set_caps", "Set AI and service spend caps", "no owner approved caps; costs are recorded but unbounded", "owner picks daily soft/hard caps",
             4, .9, 1, .3, 1, True, "edit budget.json", "caps enforced")

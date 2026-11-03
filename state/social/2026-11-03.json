@@ -1,0 +1,50 @@
+{
+ "date": "2026-11-03",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts (brand 7761544) + Kit get_growth_stats, pulled 2026-11-03 11:20 UTC by Daily Pulse. 7d window Oct 27 to Nov 2 (Metricool daily rows; latest full day Nov 2).",
+ "kit": {
+  "subscribers": 0,
+  "new_7d": 0
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 83,
+   "posts_7d": 16,
+   "interactions_7d": 22,
+   "accounts_engaged_7d": 1,
+   "reel_views_7d": 391,
+   "note": "accounts_engaged_7d is the Nov 2 daily value (IGEV42, not additive); followers = IGEV01 on Nov 2"
+  },
+  "threads": {
+   "followers": 1,
+   "posts_7d": 17,
+   "views_7d": 265,
+   "interactions_7d": 8
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 13,
+  "queued": 5,
+  "failed": 0,
+  "window": "published/failed = last 24h (Nov 2 08:15 to Nov 3 08:15 ART, 13 posts, 15 network deliveries), queued = next 48h non-draft pending posts",
+  "unapproved_pending": 0,
+  "cadence_ok": "next 48h non-draft: Nov 3 IG 1 (18:00), TikTok 1, Threads 1, X 1 (12:00); Nov 4 X 1. Under every cap; 22 other posts sit in Metricool drafts after the Nov 2 refocus"
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-02",
+  "campaign": "120248645551300265 (stopped Nov 1 17:15 ART, 0 conversions); campaign ads.status off since Nov 2 (Seb: 'Fix it')",
+  "cap_usd": 60,
+  "source": "Adspirer via campaign operator Nov 3 scoreboard row (no spend after Nov 1)"
+ },
+ "decisions": [
+  "Viral Lab: pick a source for public view counts so references can be certified (YouTube Data API key, or you capture URL + views + creator's last 10 from your phone). Open since Oct 31.",
+  "Meta ads restart needs a live Meta Pixel and your explicit yes (withdrawn Nov 2)."
+ ]
+}

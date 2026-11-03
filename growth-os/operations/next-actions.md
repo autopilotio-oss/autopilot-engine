@@ -28,6 +28,12 @@
 - Nov 2 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 2 run (19:11 UTC): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-03 (08:20 ART)
+- Health: only meta_pixel_configured failing (SEV-3, known). All checkouts ok. 0 failed Actions runs in 24h (one pages build cancelled by a newer push). inc:page:front_desk 503 (08:20Z) closed by probe 09:57Z (issue #16). support_agent heartbeat 15.9h vs 16h limit (ok, close).
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok. Ads $49.89 lifetime, no spend after Nov 1, ads off.
+- Metricool: 0 unapproved pending posts (5 non-draft pending, all approved by uuid), 0 ERRORs. Only 5 non-draft posts in the next 48h after the Nov 2 refocus drafts; Nov 3 10:00 slot is empty on every network (airline posts are drafts). Operator: fill it only with a gated Front Desk post.
+- ONE CHANGE: commander's "Prove one funnel" proposal now follows campaign.json focus.offer (Front Desk Kit $39) instead of the parked Subscription Leak (tests/test_commander_focus.py, 3 tests). Rollback: git revert.
+
 ## Daily Pulse 2026-11-01 (08:20 ART)
 - Health: 0 failing checks, all 12 checkouts ok. Open incidents: the 3 Oct 30 email SEV-2s above (known). inc:page:home:2026-10-31 resolved by probe but its alert line stays sent:false (never messaged, resolved, no action).
 - Metricool: 0 unapproved pending posts (all post cutoff pending posts are in the approved set). 2 Threads ERRORs on the Binance news carousel (00:52, 00:59 ART), reposted fine at 07:40.
