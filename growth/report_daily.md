@@ -1,6 +1,6 @@
 # Daily report
 
-Generated 2026-11-03 19:50 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-03T19:50:00Z.
+Generated 2026-11-03 22:30 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-03T22:30:11Z.
 Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown attribution stays unknown.
 
 | Metric | Value | Source |
@@ -18,8 +18,8 @@ Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown 
 | System health | failing: meta_pixel_configured | state/health/status.json |
 
 ## Outbound pilot (V3, draft only)
-- Leads researched: 10 · qualified or later: 6 · drafts waiting for approval: 6
-- Approved: 0 · contacted or later: 0 · replied or later: 0 · calls: 0 · offers sent: 0
+- Leads researched: 10 · qualified or later: 6 · drafts waiting for approval: 1
+- Approved: 5 · contacted or later: 0 · replied or later: 0 · calls: 0 · offers sent: 0
 - Paid (verified in the Gumroad ledger): 0 · opted out: 0 · closed: 0
 - Follow ups due (Seb writes and sends, max 1 per lead): 0
 - Messages sent by software: 0 (the module has no send function)
