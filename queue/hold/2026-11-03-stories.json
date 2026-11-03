@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-03-tip",
+  "group": "stories-2026-11-03",
+  "at": "2026-11-03T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-03-tip.jpg"
+  ],
+  "text": "AI tip: Snap a photo of a receipt and ask: \"Turn this into an expense list.\""
+ },
+ {
+  "id": "story-2026-11-03-quiz",
+  "group": "stories-2026-11-03",
+  "at": "2026-11-03T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-03-quiz.jpg"
+  ],
+  "text": "Quiz: A credit repair company wants $199 upfront. That's..."
+ },
+ {
+  "id": "story-2026-11-03-answer",
+  "group": "stories-2026-11-03",
+  "at": "2026-11-03T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-03-answer.jpg"
+  ],
+  "text": "Quiz answer: Not allowed under federal law. They {can't charge you} before doing the work. Everything they do, you can do yourself with Claude."
+ },
+ {
+  "id": "story-2026-11-03-fact",
+  "group": "stories-2026-11-03",
+  "at": "2026-11-03T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-03-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can find the catch in a contract. Upload it before you sign. Ask what could cost you money or lock you in."
+ },
+ {
+  "id": "story-2026-11-03-poll",
+  "group": "stories-2026-11-03",
+  "at": "2026-11-03T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-03-poll.jpg"
+  ],
+  "text": "Poll: When do you do admin work? A) Early morning B) Late at night"
+ }
+]
