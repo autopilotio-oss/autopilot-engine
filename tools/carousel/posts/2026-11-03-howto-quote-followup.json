@@ -1,0 +1,63 @@
+{
+ "kind": "howto",
+ "dateline": "NOV 03 2026",
+ "cover_bg": "bg-lime",
+ "grain": false,
+ "music": "bright",
+ "seed": 23,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">HOW TO &middot; QUOTES</div><div class=\"fx Cc\" style=\"left:56px;top:170px;font-size:22px;color:#0c0c0cb0\">SAMPLE &middot; HOUSE PAINTER &middot; TEXT THREAD</div><div class=\"fx Ii\" style=\"left:396px;top:214px;width:628px;box-sizing:border-box;padding:26px 32px;background:#0c0c0c;color:#f2f2ee;border-radius:30px 30px 8px 30px;font-size:32px;line-height:1.25\">Here is your quote: 2 bedroom repaint, <span style=\"color:#D4FF3A\">$1,200</span>. Want me to book it?</div><div class=\"fx Mm\" style=\"left:700px;top:388px;width:324px;text-align:right;font-size:24px;color:#0c0c0c\">Read Tue 4:12 PM</div><div class=\"fx A\" style=\"left:56px;top:470px;font-size:140px;white-space:nowrap;color:#0c0c0c\">Quote sent.</div><div class=\"fx A\" style=\"left:56px;top:618px;font-size:140px;white-space:nowrap;color:#0c0c0c\">No reply.</div><div class=\"fx\" style=\"left:56px;top:790px;width:968px;height:330px\"><div style=\"position:absolute;left:14px;top:30px;width:6px;height:258px;background:#0c0c0c\"></div><div style=\"position:absolute;left:0;top:0px;width:34px;height:34px;border-radius:50%;border:5px solid #0c0c0c;box-sizing:border-box;background:transparent\"></div><div class=\"Mm\" style=\"position:absolute;left:62px;top:-2px;font-size:30px;font-weight:700;color:#0c0c0c\">DAY 0</div><div class=\"Cc\" style=\"position:absolute;left:220px;top:2px;font-size:24px;color:#0c0c0c\">QUOTE SENT</div><div style=\"position:absolute;left:0;top:96px;width:34px;height:34px;border-radius:50%;border:5px solid #0c0c0c;box-sizing:border-box;background:#0c0c0c\"></div><div class=\"Mm\" style=\"position:absolute;left:62px;top:94px;font-size:30px;font-weight:700;color:#0c0c0c\">DAY 2</div><div class=\"Cc\" style=\"position:absolute;left:220px;top:98px;font-size:24px;color:#0c0c0c\">MAKE YES EASY</div><div style=\"position:absolute;left:0;top:192px;width:34px;height:34px;border-radius:50%;border:5px solid #0c0c0c;box-sizing:border-box;background:#0c0c0c\"></div><div class=\"Mm\" style=\"position:absolute;left:62px;top:190px;font-size:30px;font-weight:700;color:#0c0c0c\">DAY 5</div><div class=\"Cc\" style=\"position:absolute;left:220px;top:194px;font-size:24px;color:#0c0c0c\">ASK WHAT IS IN THE WAY</div><div style=\"position:absolute;left:0;top:288px;width:34px;height:34px;border-radius:50%;border:5px solid #0c0c0c;box-sizing:border-box;background:#0c0c0c\"></div><div class=\"Mm\" style=\"position:absolute;left:62px;top:286px;font-size:30px;font-weight:700;color:#0c0c0c\">DAY 9</div><div class=\"Cc\" style=\"position:absolute;left:220px;top:290px;font-size:24px;color:#0c0c0c\">CLOSE THE LOOP</div></div><div class=\"fx Ii\" style=\"left:56px;top:1140px;width:860px;font-size:34px;line-height:1.25;color:#0c0c0c\">3 follow ups that win the job back, without being pushy. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "Day 2: make yes *easy*",
+   "body": "No reply is not always a no. People get busy. Resend the job and the price, and offer <b>one real time</b>. <b>SAMPLE:</b> “Hi Dana, still happy to repaint the 2 bedrooms for $1,200. I have Thursday at 8 AM open. Want me to hold it?”"
+  },
+  {
+   "title": "Day 5: ask what is *in the way*",
+   "body": "Price is not always the reason. Ask if anything on the quote is unclear, or offer a <b>smaller option</b>. <b>SAMPLE:</b> “Any questions on the quote? I could also do just the main bedroom for $650.”"
+  },
+  {
+   "title": "Last one: *close the loop*",
+   "body": "Low pressure, door open. No guilt, no fake deadline. <b>SAMPLE:</b> “I will close this out for now so I stop filling your phone. Just reply if you want to book later.”"
+  },
+  {
+   "title": "Then *stop*",
+   "body": "Two or three follow ups is plenty. After that, <b>move on</b>. Keep their details and check in next season instead of chasing every week."
+  },
+  {
+   "title": "*Claude* drafts it",
+   "body": "Paste into Claude (the free plan works): <b>I sent [name] a quote for [service] at [price] on [day], no reply in [days] days. Write one short, friendly follow up in my voice: [paste 2 texts I sent]. Say if it is the 1st, 2nd or last. Offer one next step. Do not invent discounts.</b>"
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "sources": [
+  [
+   "Housecall Pro",
+   "https://www.housecallpro.com/resources/how-to-follow-up-on-quote/"
+  ],
+  [
+   "Jobber",
+   "https://getjobber.com/academy/how-to-follow-up-on-quote/"
+  ],
+  [
+   "FieldMotion",
+   "https://fieldmotion.com/blog/how-to-follow-up-on-quotes/"
+  ]
+ ],
+ "bg_words": [
+  "QUOTE",
+  "FOLLOW",
+  "REPLY",
+  "BOOK"
+ ],
+ "bg_facts": [
+  "Follow up a couple of days after the quote.",
+  "Ask what is in the way.",
+  "Two or three follow ups is plenty.",
+  "Leave the door open."
+ ]
+}

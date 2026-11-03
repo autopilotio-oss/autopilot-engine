@@ -1,0 +1,36 @@
+{
+  "id": "2026-11-03-howto-quote-followup",
+  "kind": "howto",
+  "status": "bank",
+  "cover_idea": "Lime cover: SAMPLE house painter quote bubble marked Read Tue 4:12 PM, medium headline QUOTE SENT. NO REPLY. mid page, and a vertical day timeline (Day 0, 2, 5, 9) as the main visual.",
+  "theme": "small business how to tied to /guides/follow-up-on-a-quote/: 3 follow ups after a quote with no reply (Day 2 make yes easy, Day 5 ask what is in the way, last one close the loop, then stop) plus the guide's Claude prompt, leading to the free Front Desk Starter and the Front Desk Kit",
+  "guide": "https://autopilotoi.app/guides/follow-up-on-a-quote/",
+  "gate": {
+    "score": 88,
+    "notes": "Accuracy 26/30 (first follow up within days of the quote: Housecall Pro 24 to 48h + Jobber 2 to 3 days + FieldMotion; keep it short with one clear next step: Housecall Pro + Jobber; price is not always the reason, offer to adjust scope or ask what is unclear: Housecall Pro + FieldMotion; low pressure final message that leaves the door open: Housecall Pro + FieldMotion; stop after two or three: Housecall Pro + Jobber; 'free plan works' carried from our own guide, not separately sourced; all business data labeled SAMPLE). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5 covers: lime bg vs black on the last, headline mid page vs top, medium headline scale vs the largest, new main visual (read receipt bubble plus day timeline). CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 2 fixes (headline collision; escaped <br> in bodies). All 7 slides read on a phone. Guide and landing paths exist in docs/ (live site not reachable from this sandbox's proxy, so HTTP check skipped)."
+  },
+  "sources": [
+    [
+      "Housecall Pro",
+      "https://www.housecallpro.com/resources/how-to-follow-up-on-quote/"
+    ],
+    [
+      "Jobber",
+      "https://getjobber.com/academy/how-to-follow-up-on-quote/"
+    ],
+    [
+      "FieldMotion",
+      "https://fieldmotion.com/blog/how-to-follow-up-on-quotes/"
+    ]
+  ],
+  "captions": {
+    "ig": "Sent a quote and heard nothing? No reply is not always a no. People get busy.\n\nThe 3 follow ups, without being pushy:\nDay 2: resend the job and price, offer one real time.\nDay 5: ask if anything on the quote is unclear, or offer a smaller option.\nLast one: close the loop and leave the door open.\nThen stop. Two or three is plenty.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Housecall Pro, Jobber, FieldMotion.\n\n#smallbusiness #contractor #customerservice #claudeai #smallbusinessowner",
+    "tiktok": {
+      "title": "Quote sent, no reply? 3 follow ups that win the job back",
+      "caption": "Quote sent, no reply? 3 follow ups that win the job back\n\nDay 2: make yes easy. Day 5: ask what is in the way. Last one: close the loop. Then stop.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #contractor #claudeai"
+    },
+    "threads": "Sent a quote and heard nothing? It is not always a no.\n\nDay 2: resend the job and price, offer one real time.\nDay 5: ask what is in the way, or offer a smaller option.\nLast one: close the loop, door open.\nThen stop. Two or three is plenty.\n\nFull guide: https://autopilotoi.app/guides/follow-up-on-a-quote/?utm_source=threads&utm_content=howto_quote_followup",
+    "x": "Quote sent, no reply? Not always a no.\n\nDay 2: make yes easy. Day 5: ask what is in the way. Last one: close the loop. Then stop.\n\nGuide: https://autopilotoi.app/guides/follow-up-on-a-quote/?utm_source=x&utm_content=howto_quote_followup"
+  },
+  "built_at": "2026-11-03T12:47Z"
+}
