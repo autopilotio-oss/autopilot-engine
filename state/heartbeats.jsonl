@@ -73,3 +73,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-03T00:33:56+00:00", "note": "0 routed (forms empty)"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-03T00:42:57+00:00", "note": "bank full (6); rechecked oldest 2026-11-01-howto-dispute: still bank, backup source added"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-03T01:22:47+00:00", "note": "11 posts out today, top post saves+shares 0, feed written yes (v23)"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-03T01:49:28+00:00", "note": "Front Desk Kit page: demo pickers stack on phones so labels are not cut off (e36cd93)"}
