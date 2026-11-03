@@ -155,6 +155,18 @@
   "ok": true,
   "severity": "SEV-2"
  },
+ "page:brain_optin": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:fd_after_hours": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:fd_demo": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
  "page:free": {
   "ok": true,
   "severity": "SEV-2"
@@ -272,7 +284,7 @@
   "severity": "SEV-2"
  },
  "worker:support_agent": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-3"
  },
  "worker:tiktok_intel": {
