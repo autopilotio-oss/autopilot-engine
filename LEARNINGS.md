@@ -48,3 +48,4 @@
 
 ## Carousel learnings
 - 2026-11-02 (news desk, 24h IG): binance-heist (lime poster, giant number, posted 00:52 ART) reached 14 with 1 save; anthropic-ipo (10:00 ART slot) reached 3. Tiny sample, NOT confirmed; watch whether giant number covers keep beating others.
+- 2026-11-03 (news desk, 48h IG): binance-withdrawals follow up (white page cover, posted 18:04 ART) reached 2 with 2 comments vs the original binance-heist at 15 reach. One pair, NOT confirmed; follow ups to a story we already covered may not be worth a slot.
