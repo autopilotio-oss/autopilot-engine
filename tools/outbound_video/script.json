@@ -1,0 +1,16 @@
+{"title": ["THE SALES LINE", "OUTBOUND V3"], "show": [["Autopilot", "O.I.", "AUTOPILOT.OI"]], "beats": [
+{"cam": "all", "say": "This is the Autopilot O.I. sales line. Twelve steps that turn a detailing shop's website into a paying customer, and nothing leaves the line without your yes."},
+{"cam": "viral", "say": "It starts in the research lab. Agents read detailing shops' own websites, never LinkedIn, and save one real fact with the link where they found it."},
+{"cam": "gate", "say": "The evidence gate checks every fact and scores the shop out of one hundred. No source, no lead. Phone only shops are held for a warm intro."},
+{"cam": "dm", "say": "The draft writer opens with that real fact, adds the demo link, and offers two ways in: the thirty nine dollar kit, or the two ninety nine setup."},
+{"cam": "health", "say": "The claim check blocks anything untrue. No promise that it sends by itself, no guarantees, only real prices, and an opt out line in every email."},
+{"cam": "owner", "say": "Then it stops at your desk. Five drafts are waiting right now. No yes, no send."},
+{"cam": "email", "say": "You send each one yourself, one to one, from your own email. The system has no send button at all."},
+{"cam": "support", "say": "The reply desk logs every answer and lists one follow up after four days. No thanks means never again."},
+{"cam": "studio", "say": "When a shop is curious, the demo room shows the live demo and answers their questions."},
+{"cam": "store", "say": "They pay on Gumroad, and a private lead code rides along with the order."},
+{"cam": "ledger", "say": "The ledger only counts real payments. A reply is not a sale, and test orders and refunds are left out."},
+{"cam": "vault", "say": "The safety vault keeps opt outs forever, keeps every shop's name private, and never spends without asking you."},
+{"cam": "command", "say": "Last, the pipeline report counts every step, and on day fourteen tells you to grow it, hold it or fix the offer. The lesson goes back to research."},
+{"cam": "all", "say": "One line, honest from start to finish. Your move: add your business address and approve the first five drafts."}
+]}
