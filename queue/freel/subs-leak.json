@@ -14,7 +14,7 @@
   "other": "Most people have at least one subscription they forgot about. This agent reads your bank statement, finds every recurring charge, flags the ones you stopped using and writes the cancel messages for you. Sample statement shown. Subscription Leak Hunter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
  },
  "rendered_at": "2026-11-01T09:52:24+00:00",
- "status": "scheduled",
+ "status": "parked",
  "gate": {
   "score": 93,
   "result": "pass",
@@ -62,5 +62,34 @@
   "quote": "Yes, 10 days only (Recommended)",
   "basis": "campaign standing approval"
  },
- "x_text_link": "https://autopilotoi.app/g/subs/?utm_source=x&utm_medium=social&utm_campaign=first_sales&utm_content=subs-leak"
+ "x_text_link": "https://autopilotoi.app/g/subs/?utm_source=x&utm_medium=social&utm_campaign=first_sales&utm_content=subs-leak",
+ "results": [
+  {
+   "date": "2026-11-03",
+   "read_at": "2026-11-03T10:35-03:00",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE, TKPO), organic",
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (GoatCounter not readable from the operator)",
+   "checkout_clicks": "MISSING",
+   "attributed_orders": 0,
+   "age_h": "about 24",
+   "instagram": {
+    "views": 22,
+    "reach": 17,
+    "avg_watch_s": 2.268,
+    "view_rate_3s_pct": 0.0,
+    "shares": 0,
+    "saves": 0,
+    "comments": 0,
+    "keyword_comments": 0
+   },
+   "tiktok": {
+    "views": 77,
+    "likes": 0,
+    "shares": 0
+   }
+  }
+ ],
+ "reason": "sales recovery: Front Desk focus"
 }

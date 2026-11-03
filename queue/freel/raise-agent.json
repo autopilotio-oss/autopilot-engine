@@ -14,7 +14,7 @@
   "other": "Dump your messy work notes into this agent. It turns them into clear wins with numbers, checks real pay data, and helps you pick a number to ask for. Sample notes shown. Free guide at the link in bio.\n\n#ai #claude #career #raise #salary"
  },
  "rendered_at": "2026-10-31T20:57:26+00:00",
- "status": "scheduled",
+ "status": "parked",
  "gate": "owner_override",
  "posts": [
   {
@@ -47,5 +47,25 @@
   "by": "Seb",
   "at": "2026-10-31T18:14-03:00",
   "quote": "Post 2 tonight, rest 2 a day"
- }
+ },
+ "results": [
+  {
+   "date": "2026-11-03",
+   "read_at": "2026-11-03T10:35-03:00",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE, TKPO), organic",
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (GoatCounter not readable from the operator)",
+   "checkout_clicks": "MISSING",
+   "attributed_orders": 0,
+   "age_h": "about 13 (TikTok posted Nov 2 18:02 ART)",
+   "instagram": "MISSING (no IG reel row returned yet)",
+   "tiktok": {
+    "views": 75,
+    "likes": 0,
+    "shares": 0
+   }
+  }
+ ],
+ "reason": "sales recovery: Front Desk focus"
 }

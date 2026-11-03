@@ -14,7 +14,7 @@
   "other": "Charged twice for the same order? This agent finds duplicate charges on your statement and drafts a short refund request with the details, for you to send. Sample statement shown. All 5 Money Agents at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
  },
  "rendered_at": "2026-11-02T10:13:23+00:00",
- "status": "scheduled",
+ "status": "parked",
  "gate": {
   "score": 92,
   "result": "pass",
@@ -70,5 +70,7 @@
   "basis": "campaign standing approval"
  },
  "x_text_link": "https://autopilotoi.app/store/money/?utm_source=x&utm_medium=social&utm_campaign=first_sales&utm_content=charged-twice",
- "slot_basis": "Nov 2 to Nov 4 full on every network (getScheduledPosts 07:50 ART); Nov 5 10:00 open on IG, TikTok, Threads, X"
+ "slot_basis": "Nov 2 to Nov 4 full on every network (getScheduledPosts 07:50 ART); Nov 5 10:00 open on IG, TikTok, Threads, X",
+ "reason": "sales recovery: Front Desk focus",
+ "parked_note": "2026-11-03 operator: not in the Metricool pending list for Nov 3 to 11, so these posts were already pulled; stays unposted"
 }

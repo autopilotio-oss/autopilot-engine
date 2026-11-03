@@ -14,7 +14,7 @@
   "other": "Paying only the minimums? This agent takes your balances, rates and minimums and builds a payoff plan. On this sample, $200 extra a month pays it off 33 months sooner and saves about $2,300 in interest. Free guide at the link in bio.\n\nEducation only, not financial advice.\n\n#ai #claude #debtfree #personalfinance #moneytips"
  },
  "rendered_at": "2026-10-31T20:57:28+00:00",
- "status": "scheduled",
+ "status": "parked",
  "gate": "owner_override",
  "posts": [
   {
@@ -26,26 +26,34 @@
    "uuid": "-6326152326412220868"
   },
   {
-   "metricool_id": 412925468,
+   "metricool_id": 415061293,
    "networks": [
     "tiktok",
     "threads"
    ],
    "at": "2026-11-04T10:00-03:00",
-   "uuid": "7350251720531592222"
+   "uuid": "7350251720531592222",
+   "metricool_id_before_park": 412925468,
+   "status": "draft",
+   "parked_at": "2026-11-03T10:25:00-03:00"
   },
   {
-   "metricool_id": 412925505,
+   "metricool_id": 415061329,
    "networks": [
     "twitter"
    ],
    "at": "2026-11-04T10:00-03:00",
-   "uuid": "7516633314806614690"
+   "uuid": "7516633314806614690",
+   "metricool_id_before_park": 412925505,
+   "status": "draft",
+   "parked_at": "2026-11-03T10:25:00-03:00"
   }
  ],
  "approval": {
   "by": "Seb",
   "at": "2026-10-31T18:14-03:00",
   "quote": "Post 2 tonight, rest 2 a day"
- }
+ },
+ "reason": "sales recovery: Front Desk focus",
+ "parked_at": "2026-11-03T10:25:00-03:00"
 }

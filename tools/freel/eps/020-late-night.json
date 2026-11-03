@@ -1,0 +1,86 @@
+{
+ "id": "late-night-reply",
+ "kind": "product",
+ "offer": "front_desk_kit",
+ "room": "support",
+ "agent": "Front Desk",
+ "lane": "front desk",
+ "hook": [
+  "A customer texts at 11pm",
+  "don't lose them by morning"
+ ],
+ "hook_lines": [
+  "A customer",
+  "texts at *11pm*",
+  "don't lose them",
+  "by *morning*"
+ ],
+ "caption": {
+  "ig": "A customer messages late at night. Paste it into the Front Desk Kit and it drafts a kind reply that sets your hours and offers your next open time, in your voice. You send it when you're ready. Sample gutter cleaning business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+  "other": "A customer messages late at night. Paste it into the Front Desk Kit and it drafts a kind reply that sets your hours and offers your next open time, in your voice. You send it when you're ready. Sample gutter cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
+ },
+ "stat": {
+  "count": 1,
+  "suffix": " REPLY",
+  "label": "drafted, you send it",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "A customer texts at eleven at night. Paste the message into the Front Desk.",
+   "screen": {
+    "type": "ask",
+    "text": "reply: Can you come tomorrow? Gutters are overflowing",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It drafts a kind reply that sets your hours and offers your next open time.",
+   "screen": {
+    "type": "work",
+    "title": "Drafting a reply",
+    "lines": [
+     "read the message",
+     "note: sent after hours",
+     "find your next open time",
+     "keep your tone, keep it short"
+    ]
+   }
+  },
+  {
+   "chip": "draft",
+   "say": "You send it when you're ready. Sample gutter cleaning business shown.",
+   "screen": {
+    "type": "dm",
+    "title": "Draft, waiting for you",
+    "msgs": [
+     [
+      "them",
+      "Can you come tomorrow? Gutters are overflowing"
+     ],
+     [
+      "us",
+      "Thanks for reaching out! We're closed for the night, but I can be there tomorrow at 8 or 2. Which works?"
+     ]
+    ],
+    "sample": true
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment AGENTS, or tap the link in bio, for the free Front Desk Starter.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Front Desk Kit",
+    "sub": "Start free with the Front Desk Starter",
+    "cover": "frontdesk-reel",
+    "price": "$39",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/front-desk"
+   }
+  }
+ ]
+}

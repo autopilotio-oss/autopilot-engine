@@ -14,7 +14,12 @@
   "other": "Free trials that quietly turn into monthly charges are easy to miss. This agent reads your statement, finds every trial that turned paid and every price that went up, and writes the cancel message for you to send. Sample statement shown. Subscription Leak Hunter at the link in bio.\n\nEducation only, not financial advice.\n\n#money #personalfinance #ai #claude #moneytips"
  },
  "rendered_at": "2026-11-03T10:04:45+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "parked",
+ "gate": {
+  "score": null,
+  "notes": "not scored: parked (sales recovery: Front Desk focus); rendered by the scheduled freel run before the parked episodes were moved to eps_hold"
+ },
+ "posts": [],
+ "reason": "sales recovery: Front Desk focus",
+ "parked_at": "2026-11-03T10:25:00-03:00"
 }

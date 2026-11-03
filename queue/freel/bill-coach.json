@@ -14,7 +14,7 @@
   "other": "Medical bills often have errors. This agent compares your itemized bill with your insurance EOB line by line, flags what doesn't match and writes the questions to ask billing before you pay. Sample bill shown. Bill Lowering Coach at the link in bio.\n\nEducation only, not medical or financial advice.\n\n#ai #claude #medicalbills #moneytips #healthcare"
  },
  "rendered_at": "2026-11-02T10:27:38+00:00",
- "status": "scheduled",
+ "status": "parked",
  "gate": {
   "score": 92,
   "result": "pass",
@@ -71,12 +71,15 @@
    "uuid": "-8475552290484961275"
   },
   {
-   "metricool_id": 413787199,
+   "metricool_id": 415061484,
    "networks": [
     "twitter"
    ],
    "at": "2026-11-06T10:00-03:00",
-   "uuid": "3381350012871262929"
+   "uuid": "3381350012871262929",
+   "metricool_id_before_park": 413787199,
+   "status": "draft",
+   "parked_at": "2026-11-03T10:25:00-03:00"
   }
  ],
  "approval": {
@@ -85,5 +88,7 @@
   "basis": "campaign standing approval"
  },
  "x_text_link": "https://autopilotoi.app/g/bill/?utm_source=x&utm_medium=social&utm_campaign=first_sales&utm_content=bill-coach",
- "media_note": "Posts use bill-coach.mp4?v=2 so Metricool fetched the re-rendered file, not the CDN cached first render."
+ "media_note": "Posts use bill-coach.mp4?v=2 so Metricool fetched the re-rendered file, not the CDN cached first render.",
+ "reason": "sales recovery: Front Desk focus",
+ "parked_at": "2026-11-03T10:25:00-03:00"
 }

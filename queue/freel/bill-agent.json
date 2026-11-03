@@ -14,38 +14,49 @@
   "other": "Medical bills often have errors. Upload the itemized bill and your insurance EOB, and this agent compares them line by line and writes the questions to ask billing. Sample bill shown. Free guide at the link in bio.\n\n#ai #claude #medicalbills #moneytips #healthcare"
  },
  "rendered_at": "2026-10-31T20:57:27+00:00",
- "status": "scheduled",
+ "status": "parked",
  "gate": "owner_override",
  "posts": [
   {
-   "metricool_id": 412925729,
+   "metricool_id": 415061397,
    "networks": [
     "instagram"
    ],
    "at": "2026-11-04T10:00-03:00",
-   "uuid": "-2924470564486496076"
+   "uuid": "-2924470564486496076",
+   "metricool_id_before_park": 412925729,
+   "status": "draft",
+   "parked_at": "2026-11-03T10:25:00-03:00"
   },
   {
-   "metricool_id": 412925649,
+   "metricool_id": 415061157,
    "networks": [
     "tiktok",
     "threads"
    ],
    "at": "2026-11-03T18:00-03:00",
-   "uuid": "-7614297004931791946"
+   "uuid": "-7614297004931791946",
+   "metricool_id_before_park": 412925649,
+   "status": "draft",
+   "parked_at": "2026-11-03T10:25:00-03:00"
   },
   {
-   "metricool_id": 412925691,
+   "metricool_id": 415061215,
    "networks": [
     "twitter"
    ],
    "at": "2026-11-03T18:00-03:00",
-   "uuid": "1709797002666854747"
+   "uuid": "1709797002666854747",
+   "metricool_id_before_park": 412925691,
+   "status": "draft",
+   "parked_at": "2026-11-03T10:25:00-03:00"
   }
  ],
  "approval": {
   "by": "Seb",
   "at": "2026-10-31T18:14-03:00",
   "quote": "Post 2 tonight, rest 2 a day"
- }
+ },
+ "reason": "sales recovery: Front Desk focus",
+ "parked_at": "2026-11-03T10:25:00-03:00"
 }

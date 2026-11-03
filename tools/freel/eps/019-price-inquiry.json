@@ -1,0 +1,86 @@
+{
+ "id": "price-inquiry",
+ "kind": "product",
+ "offer": "front_desk_kit",
+ "room": "dm",
+ "agent": "Front Desk",
+ "lane": "front desk",
+ "hook": [
+  "Someone asks how much",
+  "while you're mid job"
+ ],
+ "hook_lines": [
+  "Someone asks",
+  "*how much*",
+  "while you're",
+  "mid *job*"
+ ],
+ "caption": {
+  "ig": "A customer asks for a price while you're in the middle of a job. Paste the message into the Front Desk Kit and it drafts a reply from your real price list and open times, in your voice. You read it and hit send. Sample detailing business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+  "other": "A customer asks for a price while you're in the middle of a job. Paste the message into the Front Desk Kit and it drafts a reply from your real price list and open times, in your voice. You read it and hit send. Sample detailing business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
+ },
+ "stat": {
+  "count": 1,
+  "suffix": " REPLY",
+  "label": "drafted from your prices",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Someone asks how much while you're in the middle of a job. Paste the message into the Front Desk.",
+   "screen": {
+    "type": "ask",
+    "text": "reply: How much for a full detail on an SUV? Free Saturday?",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It answers from your real price list and the times you gave it, in your voice.",
+   "screen": {
+    "type": "work",
+    "title": "Drafting a reply",
+    "lines": [
+     "read your price list",
+     "SUV full detail: $250, about 3 hours",
+     "check the times you gave it",
+     "draft a short reply in your tone"
+    ]
+   }
+  },
+  {
+   "chip": "draft",
+   "say": "The draft waits for you. You read it and hit send. Sample detailing business shown.",
+   "screen": {
+    "type": "dm",
+    "title": "Draft, waiting for you",
+    "msgs": [
+     [
+      "them",
+      "How much for a full detail on an SUV? Free Saturday?"
+     ],
+     [
+      "us",
+      "A full SUV detail is $250, about 3 hours. I have Saturday at 9 or 1. Want one?"
+     ]
+    ],
+    "sample": true
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment AGENTS, or tap the link in bio, for the free Front Desk Starter.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Front Desk Kit",
+    "sub": "Start free with the Front Desk Starter",
+    "cover": "frontdesk-reel",
+    "price": "$39",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/front-desk"
+   }
+  }
+ ]
+}

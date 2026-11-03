@@ -1,9 +1,10 @@
 {
  "id": "review-agent",
  "kind": "product",
+ "offer": "front_desk_kit",
  "room": "support",
- "agent": "Review Agent",
- "lane": "ai employees",
+ "agent": "Front Desk",
+ "lane": "front desk",
  "hook": [
   "More Google reviews",
   "without the awkward ask"
@@ -12,48 +13,48 @@
   "More *Google*",
   "*reviews* without",
   "the awkward",
-  "*ask*"
+  "ask"
  ],
  "caption": {
-  "ig": "Every evening this agent writes a short thank you to each customer you finished that day, with your review link, ready for you to send. No awkward asks, no fake reviews. Sample business shown. Comment AGENTS and I'll DM you the setup.\n\n#smallbusiness #ai #claude #aiagents #productivity",
-  "other": "Every evening this agent writes a short thank you to each customer you finished that day, with your review link, ready for you to send. No awkward asks, no fake reviews. Sample business shown. Part of The Workspace, link in bio.\n\n#smallbusiness #ai #claude #aiagents #productivity"
+  "ig": "Type review and list the jobs you finished today. The Front Desk Kit writes a short thank you to each customer with your review link, in your voice. No pushy asks, no fake reviews, and you send every message yourself. Sample detailing business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+  "other": "Type review and list the jobs you finished today. The Front Desk Kit writes a short thank you to each customer with your review link, in your voice. No pushy asks, no fake reviews, and you send every message yourself. Sample detailing business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
  },
  "stat": {
-  "count": 4,
-  "suffix": " READY",
-  "label": "thank yous with your review link",
+  "count": 2,
+  "suffix": " THANK YOUS",
+  "label": "drafted, you read and send",
   "note": "sample business"
  },
  "beats": [
   {
-   "chip": "wake",
-   "say": "Want more Google reviews without the awkward ask? Every evening this agent looks at who you finished today.",
+   "chip": "ask",
+   "say": "Want more Google reviews without the awkward ask? Type review and list the jobs you finished today.",
    "screen": {
     "type": "ask",
-    "text": "thank today's customers and ask for a review",
-    "by": "schedule"
+    "text": "review: Sam, full detail. Priya, interior clean.",
+    "by": "owner"
    }
   },
   {
    "chip": "work",
-   "say": "It writes each one a short, personal thank you with your review link.",
+   "say": "It writes a short thank you for each customer, with your review link, in your voice.",
    "screen": {
     "type": "work",
-    "title": "Today's customers",
+    "title": "Writing thank yous",
     "lines": [
-     "find jobs finished today",
-     "skip anyone with a complaint",
-     "write a personal thank you",
-     "add your review link"
+     "read today's finished jobs",
+     "thank each customer by name",
+     "add your review link",
+     "no pushy asks, no fake reviews"
     ]
    }
   },
   {
    "chip": "ready",
-   "say": "Four messages ready for you to send. Real reviews, no fake ones. Sample business shown.",
+   "say": "Two messages ready. You read them and send them yourself. Sample detailing business shown.",
    "screen": {
     "type": "dm",
-    "title": "Ready to send",
+    "title": "Ready for you to send",
     "msgs": [
      [
       "us",
@@ -63,20 +64,22 @@
       "us",
       "Hi Priya, loved working on your car. If you're happy with it, would you leave us a review? [your link]"
      ]
-    ]
+    ],
+    "sample": true
    }
   },
   {
    "chip": "get it",
-   "say": "It's one of seven agents in The Workspace. Link in bio.",
+   "say": "Comment AGENTS, or tap the link in bio, for the free Front Desk Starter.",
    "screen": {
     "type": "cta",
     "product": true,
-    "name": "The Workspace",
-    "sub": "7 agents for your business",
-    "cover": "workspace",
-    "price": "$49",
-    "url": "autopilotoi.app/workspace"
+    "name": "Front Desk Kit",
+    "sub": "Start free with the Front Desk Starter",
+    "cover": "frontdesk-reel",
+    "price": "$39",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/front-desk"
    }
   }
  ]
