@@ -1,12 +1,12 @@
 {
   "id": "2026-11-03-prompts-reviews",
   "kind": "prompts",
-  "status": "bank",
+  "status": "scheduled",
   "cover_idea": "Black cover, giant fitted headline at the top (GET MORE white, 5 STAR REVIEWS lime), a row of five big lime stars, then a SAMPLE mobile detailing text thread where the owner asks for a Google review.",
   "theme": "small business: 5 Claude prompts to ask every customer for a Google review and reply to good and bad reviews, leading to the free Front Desk Starter (/brain/) and the Front Desk Kit",
   "gate": {
     "score": 89,
-    "notes": "Accuracy 27/30 (review link or QR code from the Business Profile: Google 7035772 + Google 3474050; no incentives for reviews: Google 7035772 + BrightLocal, FTC rule bans incentives conditioned on sentiment; ask all customers, no review gating: ReviewTrackers quoting Google policy + BrightLocal; short conversational non promotional replies: Google 7035772 + 3474050 (helpful and positive); replies are public: Google 3474050; baseless threats to remove negative reviews banned: FTC Aug 2024 final rule press release). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5: black bg vs last lime, headline at top in the largest scale so far vs bottom on last, new main visual (star row plus text thread). CTA 10/10 (AGENTS confirmed in manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS, all 7 slides legible on a phone. No prompt repeats earlier posts."
+    "notes": "Accuracy 27/30 (review link or QR code from the Business Profile: Google 7035772 + Google 3474050; no incentives for reviews: Google 7035772 + BrightLocal, FTC rule bans incentives conditioned on sentiment; ask all customers, no review gating: ReviewTrackers quoting Google policy + BrightLocal; short conversational non promotional replies: Google 7035772 + 3474050 (helpful and positive); replies are public: Google 3474050; baseless threats to remove negative reviews banned: FTC Aug 2024 final rule press release). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5: black bg vs last lime, headline at top in the largest scale so far vs bottom on last, new main visual (star row plus text thread). CTA 10/10 (AGENTS confirmed in manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS, all 7 slides legible on a phone. No prompt repeats earlier posts. Re-checked 2026-11-03 15:20 ART from bank: rebuilt (QA PASS, adds cover_ig.mp4), all 7 slides legible, claims are standing Google/FTC policy. Slot: Nov 3 18:00 IG held by banks carousel, Nov 4 18:00 taken by Front Desk reel, Nov 5 18:00 by prompts-travel, so next free 18:00 is Nov 6. Captions add 'Run a business?' and utm_campaign=front_desk."
   },
   "sources": [
     [
@@ -39,5 +39,46 @@
     "threads": "Most happy customers never review you because nobody asked.\n\n5 Claude prompts: ask right after the job, ask everyone the same way, a QR thank you card, a personal reply to a 5 star, a calm public answer to a 1 star.\n\nNo freebies for reviews: Google does not allow it.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=threads&utm_content=prompts_reviews",
     "x": "Most happy customers never review you because nobody asked.\n\n5 Claude prompts to ask every customer the honest way (no freebies, Google bans that).\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_reviews"
   },
-  "built_at": "2026-11-03T02:36Z"
+  "built_at": "2026-11-03T02:36Z",
+  "approval": {
+    "by": "Seb",
+    "quote": "Yes, autopost to Nov 10 (Recommended)",
+    "basis": "campaign standing approval (news and prompt carousels)"
+  },
+  "posts": [
+    {
+      "metricool_id": 415645613,
+      "uuid": "-7632356486578746830",
+      "networks": [
+        "instagram"
+      ],
+      "at": "2026-11-06T18:00-03:00"
+    },
+    {
+      "metricool_id": 415645701,
+      "uuid": "-6061677011529805933",
+      "networks": [
+        "tiktok"
+      ],
+      "at": "2026-11-06T18:00-03:00"
+    },
+    {
+      "metricool_id": 415645753,
+      "uuid": "6119364604187265852",
+      "networks": [
+        "threads"
+      ],
+      "at": "2026-11-06T18:00-03:00"
+    },
+    {
+      "metricool_id": 415645784,
+      "uuid": "-8776959090114015842",
+      "networks": [
+        "twitter"
+      ],
+      "at": "2026-11-06T18:00-03:00"
+    }
+  ],
+  "story_key": "prompts-google-reviews",
+  "scheduled_at": "2026-11-03T18:40Z"
 }
