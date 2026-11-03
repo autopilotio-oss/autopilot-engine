@@ -160,7 +160,7 @@
   "severity": "SEV-2"
  },
  "page:front_desk": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-2"
  },
  "page:guide_after_hours": {
