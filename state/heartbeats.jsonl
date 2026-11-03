@@ -99,3 +99,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-03T17:43:01+00:00", "note": "posts out today 3, top post saves+shares 0, feed written yes (v30)"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-03T18:44:14+00:00", "note": "posts out today 3, top post saves+shares 0, feed written yes (v31)"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-03T18:49:01+00:00", "note": "built 2026-11-03-prompts-price-questions, score 88, QA PASS (bank now 5)"}
+{"worker": "kit_sync", "status": "ok", "at": "2026-11-03T18:49:39+00:00", "note": "0 routed (forms empty)"}
