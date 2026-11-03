@@ -1,0 +1,10 @@
+{
+ "_doc": "Sender identity for Outbound Intelligence V3 drafts (scripts/outbound/engine.py). CAN-SPAM needs a true sender, a valid physical postal address and a working opt out. Drafts fail the claim check until postal_address is set. Nothing here sends email.",
+ "sender_name": "Seb, AUTOPILOT.OI",
+ "postal_address": null,
+ "reply_to": null,
+ "channel": "owner sends 1:1 from his own business email after approval; no bulk tool, no LinkedIn or social DM automation",
+ "batch_limit": 5,
+ "follow_ups_max": 1,
+ "follow_up_after_days": 4
+}

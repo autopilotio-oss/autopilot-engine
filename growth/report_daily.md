@@ -1,6 +1,6 @@
 # Daily report
 
-Generated 2026-11-03 13:57 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-03T13:57:11Z.
+Generated 2026-11-03 14:33 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-03T13:57:11Z.
 Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown attribution stays unknown.
 
 | Metric | Value | Source |
@@ -16,6 +16,12 @@ Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown 
 | Activation | 0/0 buyers | sales/activations.csv |
 | Attribution quality | 0/0 orders with a source | ledger UTMs |
 | System health | failing: meta_pixel_configured | state/health/status.json |
+
+## Outbound pilot (V3, draft only)
+- Leads researched: 0 · qualified or later: 0 · drafts waiting for approval: 0
+- Approved: 0 · contacted or later: 0 · replied or later: 0 · calls: 0 · offers sent: 0
+- Paid (verified in the Gumroad ledger): 0 · opted out: 0 · closed: 0
+- Messages sent by software: 0 (the module has no send function)
 
 ## Gates (Master Plan p17)
 - G0 technically sellable: NOT PASSED (needs a paid test order through ledger, Kit and pixel; see tests/e2e_purchase.md)

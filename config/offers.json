@@ -189,5 +189,32 @@
   "30 day guarantee",
   "\"it works\" guarantee",
   "make money while"
+ ],
+ "pilots": [
+  {
+   "id": "front_desk_setup",
+   "name": "Front Desk Setup (done for you)",
+   "price_cents": 29900,
+   "status": "pilot: not on sale, no checkout yet. Offered only in approved 1:1 outreach after a delivery test",
+   "what_it_is": "We configure the Front Desk Kit for one business: intake of their real services, prices and rules, quote templates, a test of the reply workflow on their real messages, and a handoff call. Runs in the owner's own Claude account. The owner reviews and sends every message.",
+   "includes": [
+    "Intake form for services, prices, hours and rules",
+    "Business Brain written and checked with the owner",
+    "Quote and follow up templates for their services",
+    "Test on 5 of their real recent customer messages",
+    "30 minute handoff call",
+    "14 days of email support"
+   ],
+   "does_not": [
+    "send messages, texts or emails by itself",
+    "answer customers 24/7 or connect to their phone, booking or social inboxes",
+    "guarantee bookings or revenue"
+   ],
+   "includes_kit": "front_desk_kit",
+   "delivery_hours": "UNKNOWN: measure on the first 2 setups before selling more",
+   "delivery_cost": "UNKNOWN",
+   "payment": "Gumroad product to be created only after Seb approves (not created)",
+   "gate": "sell only after the $39 kit passes 1 outside owner test and 1 internal setup dry run is timed"
+  }
  ]
 }

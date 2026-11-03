@@ -1,1 +1,23 @@
-date,contact_ref,trade,channel,campaign,status,objection,approved_by,note
+date,contact_ref,trade,channel,campaign,status,score,offer,attribution_id,objection,approved_by,note
+2026-11-03,det-8cf8cfe001,detailing,,v3_pilot,RESEARCHED,80,,det-8cf8cfe001,,,
+2026-11-03,det-7ee539821c,detailing,,v3_pilot,RESEARCHED,90,,det-7ee539821c,,,
+2026-11-03,det-7ee539821c,detailing,,v3_pilot,QUALIFIED,90,front_desk_setup,det-7ee539821c,,,
+2026-11-03,det-7ee539821c,detailing,,v3_pilot,DRAFTED,90,front_desk_setup,det-7ee539821c,,,claim check: sender identity or postal address missing (CAN-SPAM)
+2026-11-03,det-24c2ef5027,detailing,,v3_pilot,RESEARCHED,90,,det-24c2ef5027,,,
+2026-11-03,det-24c2ef5027,detailing,,v3_pilot,QUALIFIED,90,front_desk_setup,det-24c2ef5027,,,
+2026-11-03,det-24c2ef5027,detailing,,v3_pilot,DRAFTED,90,front_desk_setup,det-24c2ef5027,,,claim check: sender identity or postal address missing (CAN-SPAM)
+2026-11-03,det-d66aed0350,detailing,,v3_pilot,RESEARCHED,80,,det-d66aed0350,,,
+2026-11-03,det-c9262c4d90,detailing,,v3_pilot,RESEARCHED,90,,det-c9262c4d90,,,
+2026-11-03,det-c9262c4d90,detailing,,v3_pilot,QUALIFIED,90,front_desk_kit,det-c9262c4d90,,,
+2026-11-03,det-c9262c4d90,detailing,,v3_pilot,DRAFTED,90,front_desk_kit,det-c9262c4d90,,,claim check: sender identity or postal address missing (CAN-SPAM)
+2026-11-03,det-da8056815f,detailing,,v3_pilot,RESEARCHED,75,,det-da8056815f,,,
+2026-11-03,det-da8056815f,detailing,,v3_pilot,QUALIFIED,75,front_desk_setup,det-da8056815f,,,
+2026-11-03,det-da8056815f,detailing,,v3_pilot,DRAFTED,75,front_desk_setup,det-da8056815f,,,claim check: sender identity or postal address missing (CAN-SPAM)
+2026-11-03,det-f5c1a211a1,detailing,,v3_pilot,RESEARCHED,75,,det-f5c1a211a1,,,
+2026-11-03,det-f5c1a211a1,detailing,,v3_pilot,QUALIFIED,75,front_desk_setup,det-f5c1a211a1,,,
+2026-11-03,det-f5c1a211a1,detailing,,v3_pilot,DRAFTED,75,front_desk_setup,det-f5c1a211a1,,,claim check: sender identity or postal address missing (CAN-SPAM)
+2026-11-03,det-97400f88c0,detailing,,v3_pilot,RESEARCHED,75,,det-97400f88c0,,,
+2026-11-03,det-97400f88c0,detailing,,v3_pilot,QUALIFIED,75,front_desk_setup,det-97400f88c0,,,
+2026-11-03,det-97400f88c0,detailing,,v3_pilot,DRAFTED,75,front_desk_setup,det-97400f88c0,,,claim check: sender identity or postal address missing (CAN-SPAM)
+2026-11-03,det-1464bd1dce,detailing,,v3_pilot,RESEARCHED,65,,det-1464bd1dce,,,
+2026-11-03,det-d5c5496bd5,detailing,,v3_pilot,RESEARCHED,65,,det-d5c5496bd5,,,

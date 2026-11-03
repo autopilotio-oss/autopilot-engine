@@ -26,6 +26,23 @@ def money(c):
     return f"${c / 100:,.2f}" if c is not None else "MISSING"
 
 
+def outbound_lines():
+    """Pipeline counts from sales/outreach.csv (pseudonymous). A reply is never counted as a sale."""
+    import sys
+    sys.path.insert(0, os.path.join(ROOT, "scripts", "outbound"))
+    try:
+        import engine
+        s = engine.summary()
+    except Exception as e:
+        return [f"- outbound summary unavailable: {e}"]
+    b = s["by_stage"]
+    return [f"- Leads researched: {s['leads']} · qualified or later: {s['qualified_or_later']} · drafts waiting for approval: {b['DRAFTED']}",
+            f"- Approved: {b['APPROVED']} · contacted or later: {s['contacted_or_later']} · replied or later: {s['replied_or_later']} · calls: {b['CALL_BOOKED']} · offers sent: {b['OFFER_SENT']}",
+            f"- Paid (verified in the Gumroad ledger): {s['paid']} · opted out: {s['opted_out']} · closed: {b['NO_RESPONSE'] + b['NOT_FIT'] + b['CLOSED_LOST']}",
+            f"- Follow ups due (Seb writes and sends, max 1 per lead): {len(engine.followups_due())}",
+            "- Messages sent by software: 0 (the module has no send function)"]
+
+
 def build(now=None):
     now = now or datetime.datetime.now(datetime.timezone.utc)
     led = _json("state/ledger/summary.json", {}) or {}
@@ -69,6 +86,8 @@ def build(now=None):
         f"| Activation | {activated}/{len(paid)} buyers | sales/activations.csv |",
         f"| Attribution quality | {len(attributed)}/{len(paid)} orders with a source | ledger UTMs |",
         f"| System health | {'all checks passing' if not failing else 'failing: ' + ', '.join(failing)} | state/health/status.json |",
+        "", "## Outbound pilot (V3, draft only)",
+        *outbound_lines(),
         "", "## Gates (Master Plan p17)",
         f"- G0 technically sellable: {'NOT PASSED' if 'meta_pixel_configured' in failing or not paid else 'check'} (needs a paid test order through ledger, Kit and pixel; see tests/e2e_purchase.md)",
         f"- G1 product activated: {activated}/3 outside users reached a useful draft",
