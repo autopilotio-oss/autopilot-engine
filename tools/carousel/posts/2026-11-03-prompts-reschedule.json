@@ -1,0 +1,72 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 03 2026",
+ "cover_bg": "bg-white",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 19,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">5 PROMPTS &middot; RESCHEDULING</div><div class=\"fx Cc\" style=\"left:56px;top:168px;font-size:22px;color:#0c0c0caa\">SAMPLE &middot; LAWN CARE &middot; THIS WEEK</div><div class=\"fx\" style=\"left:56px;top:220px;width:968px;height:600px;background:#ffffff;border:4px solid #0c0c0c;border-radius:18px;box-sizing:border-box;overflow:hidden\"><div class=\"Cc\" style=\"position:absolute;left:0px;top:22px;width:193px;text-align:center;font-size:26px;color:#0c0c0c\">MON</div><div style=\"position:absolute;left:193px;top:0;width:2px;height:600px;background:#0c0c0c22\"></div><div class=\"Cc\" style=\"position:absolute;left:193px;top:22px;width:193px;text-align:center;font-size:26px;color:#0c0c0c\">TUE</div><div style=\"position:absolute;left:387px;top:0;width:2px;height:600px;background:#0c0c0c22\"></div><div class=\"Cc\" style=\"position:absolute;left:387px;top:22px;width:193px;text-align:center;font-size:26px;color:#0c0c0c\">WED</div><div style=\"position:absolute;left:580px;top:0;width:2px;height:600px;background:#0c0c0c22\"></div><div class=\"Cc\" style=\"position:absolute;left:580px;top:22px;width:193px;text-align:center;font-size:26px;color:#0c0c0c\">THU</div><div style=\"position:absolute;left:774px;top:0;width:2px;height:600px;background:#0c0c0c22\"></div><div class=\"Cc\" style=\"position:absolute;left:774px;top:22px;width:193px;text-align:center;font-size:26px;color:#0c0c0c\">FRI</div><div style=\"position:absolute;left:0;top:76px;width:100%;height:3px;background:#0c0c0c\"></div><div style=\"position:absolute;left:12px;top:100px;width:169px;height:140px;box-sizing:border-box;border-radius:12px;padding:14px 14px;background:#e4e4de;color:#0c0c0c\"><div class=\"Mm\" style=\"font-size:24px\">8 AM</div><div class=\"Ii\" style=\"font-size:28px;margin-top:6px\">Mow</div></div><div style=\"position:absolute;left:12px;top:260px;width:169px;height:140px;box-sizing:border-box;border-radius:12px;padding:14px 14px;background:#e4e4de;color:#0c0c0c\"><div class=\"Mm\" style=\"font-size:24px\">1 PM</div><div class=\"Ii\" style=\"font-size:28px;margin-top:6px\">Leaves</div></div><div style=\"position:absolute;left:205px;top:180px;width:169px;height:170px;box-sizing:border-box;border-radius:12px;padding:14px 14px;border:4px dashed #0c0c0c88;color:#0c0c0c88;text-decoration:line-through\"><div class=\"Mm\" style=\"font-size:24px\">10 AM</div><div class=\"Ii\" style=\"font-size:28px;margin-top:6px\">Hedges</div></div><div style=\"position:absolute;left:399px;top:380px;width:169px;height:120px;box-sizing:border-box;border-radius:12px;padding:14px 14px;background:#e4e4de;color:#0c0c0c\"><div class=\"Mm\" style=\"font-size:24px\">2 PM</div><div class=\"Ii\" style=\"font-size:28px;margin-top:6px\">Mow</div></div><div style=\"position:absolute;left:592px;top:180px;width:169px;height:170px;box-sizing:border-box;border-radius:12px;padding:14px 14px;background:#D4FF3A;border:4px solid #0c0c0c;color:#0c0c0c\"><div class=\"Mm\" style=\"font-size:24px\">10 AM</div><div class=\"Ii\" style=\"font-size:28px;margin-top:6px\">Hedges</div></div><div style=\"position:absolute;left:786px;top:260px;width:169px;height:140px;box-sizing:border-box;border-radius:12px;padding:14px 14px;background:#e4e4de;color:#0c0c0c\"><div class=\"Mm\" style=\"font-size:24px\">8 AM</div><div class=\"Ii\" style=\"font-size:28px;margin-top:6px\">Mow</div></div><div class=\"Cc\" style=\"position:absolute;left:205px;top:366px;font-size:24px;color:#0c0c0c\">RAIN</div><div class=\"Cc\" style=\"position:absolute;left:592px;top:366px;font-size:24px;color:#0c0c0c;background:#0c0c0c;color:#D4FF3A;padding:4px 10px\">MOVED</div><svg style=\"position:absolute;left:0;top:0\" width=\"968\" height=\"600\"><path d=\"M290 175 C 330 90, 637 90, 671 168\" fill=\"none\" stroke=\"#0c0c0c\" stroke-width=\"6\"/><path d=\"M653 150 L673 174 L689 146\" fill=\"none\" stroke=\"#0c0c0c\" stroke-width=\"6\" stroke-linejoin=\"round\"/></svg><div class=\"Ii\" style=\"position:absolute;left:24px;top:526px;font-size:26px;color:#0c0c0c;background:#f2f2ee;padding:8px 14px;border-radius:10px\">Reply 1 for Thu 10 AM or 2 for Fri 1 PM</div></div><div class=\"fx A\" data-stack=\"h\" data-gap=\"14\" style=\"left:56px;top:876px;font-size:124px;white-space:nowrap;color:#0c0c0c\">Move the job.</div><div class=\"fx A\" data-stack=\"h\" style=\"left:56px;top:1000px;font-size:124px;white-space:nowrap;color:#0c0c0c;background:#D4FF3A;padding:0 14px\">Keep the client.</div><div class=\"fx Ii\" data-after=\"h\" data-gap=\"30\" style=\"left:56px;top:1150px;width:780px;font-size:32px;line-height:1.25;color:#0c0c0c\">5 Claude prompts for moves, reminders and no shows. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "title": "When *you* need to move it",
+   "prompt": "Write a short text to [name]: I need to move their [job] on [day] because [reason]. Say sorry once, offer two new times, [time 1] or [time 2], and ask them to reply 1 or 2. Sound like me: [paste 2 texts I sent].",
+   "why": "Tell them <b>as soon as you know</b>, apologize once, and make rebooking one reply."
+  },
+  {
+   "title": "When *they* ask to move",
+   "prompt": "A customer wrote: [paste message]. My open times this week: [times]. Reply warmly, offer the two closest times, and confirm the address and the job. Under 40 words. If a time is not on my list, write [CHECK].",
+   "why": "Two real times beat <b>when works for you?</b> They can pick in one tap."
+  },
+  {
+   "title": "A reminder with *an exit*",
+   "prompt": "Write a reminder text for [name]'s [job] on [day, time] at [address]. One line on what to have ready, one line saying they can reply to move it, and my notice rule: [hours] hours.",
+   "why": "Send it <b>1 to 3 days before</b>, with a clear way to reschedule or ask a question."
+  },
+  {
+   "title": "Your policy in *plain words*",
+   "prompt": "Turn my cancellation rules into 3 short lines a customer reads when they book: [notice needed, fee if any, how to cancel]. Friendly, no legal words, no threats. Then a 1 line version for my reminder text.",
+   "why": "Show it <b>before they book</b> and again in the reminder, so a fee is never a surprise."
+  },
+  {
+   "title": "When they *do not show*",
+   "prompt": "[Name] missed today's [job] at [time]. Write a warm same day text: hope all is okay, offer my next 2 openings, [times], no guilt trip. Then a firmer version that quotes my policy, for a second miss.",
+   "why": "Reach out <b>the same day</b> with your next openings. Save the policy line for repeats."
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "sources": [
+  [
+   "Shopify",
+   "https://shopify.com/blog/appointment-reminder-template"
+  ],
+  [
+   "Quo",
+   "https://www.quo.com/blog/reduce-no-shows/"
+  ],
+  [
+   "Acuity Scheduling",
+   "https://acuityscheduling.com/learn/reschedule-an-appointment"
+  ],
+  [
+   "Apptoto",
+   "https://www.apptoto.com/best-practices/appointment-reschedule-requests-text-messages"
+  ]
+ ],
+ "bg_words": [
+  "MOVE",
+  "REMIND",
+  "POLICY",
+  "RESCHEDULE"
+ ],
+ "bg_facts": [
+  "Tell them as soon as you know.",
+  "Offer two real times.",
+  "Remind 1 to 3 days before.",
+  "Share your policy before booking."
+ ]
+}
