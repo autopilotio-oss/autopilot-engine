@@ -1,0 +1,293 @@
+{
+ "id": "tl-main",
+ "template": "ad3.html",
+ "agents": [
+  "NIGHT",
+  "NIGHT",
+  "NIGHT",
+  "HOME",
+  "THE TURN",
+  "THE TURN",
+  "THE TURN",
+  "THE TURN",
+  "HOME",
+  "HOME",
+  "HOME",
+  "AUTOPILOT"
+ ],
+ "cold_open": 0.3,
+ "cap_fix": {},
+ "voice_speed": 1.0,
+ "sfx_only": [
+  "tick",
+  "cta"
+ ],
+ "foley": 0.8,
+ "music_prompt": "Cinematic emotional score for a {dur} second film. Opens with soft solo felt piano, lonely late night mood, slow, about 70 bpm, lots of space. Around the middle, warm strings and a gentle heartbeat pulse enter as hope arrives. Final third is warm, uplifting and resolved, with a soft swell in the last five seconds that lands and rings out. No vocals, no drums, no EDM, no risers.",
+ "streaks": false,
+ "meta": {
+  "landing": "https://autopilotoi.app/#tools",
+  "primary_text": "Send this to a business owner who still does paperwork at midnight. Simple AI tools, no tech skills: bookkeeping, invoices, reviews. $10 each. Example story.",
+  "headline": "Done before dinner",
+  "description": "$10 a tool \u00b7 free Claude app \u00b7 you hit send",
+  "cta": "LEARN_MORE"
+ },
+ "soft": [
+  "NIGHT",
+  "HOME"
+ ],
+ "dip": [
+  "HOME",
+  "AUTOPILOT"
+ ],
+ "beats": [
+  {
+   "say": "Eleven forty eight PM. Still doing the books.",
+   "head": [
+    "11:48 PM.",
+    "*STILL DOING THE BOOKS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh03"
+    ],
+    "clip_ins": {
+     "sh03": 1.4
+    }
+   },
+   "agent": 0
+  },
+  {
+   "say": "Then she asks. Are you done yet?",
+   "head": [
+    "\u201cARE YOU",
+    "*DONE YET?\u201d*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh02",
+     "sh01"
+    ],
+    "clip_ins": {
+     "sh02": 0.4,
+     "sh01": 1.0
+    }
+   },
+   "agent": 1
+  },
+  {
+   "say": "Five more minutes. Then an hour. Receipts. Invoices. Reviews.",
+   "head": [
+    "*THEN AN HOUR.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh04"
+    ],
+    "clip_ins": {
+     "sh04": 0.0
+    }
+   },
+   "agent": 2
+  },
+  {
+   "say": "You didn't start a business for this.",
+   "head": [
+    "YOU DIDN'T START",
+    "*A BUSINESS FOR THIS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh05",
+     "sh06"
+    ],
+    "clip_ins": {
+     "sh05": 2.0,
+     "sh06": 2.2
+    }
+   },
+   "agent": 3
+  },
+  {
+   "say": "You don't need to learn AI. You paste one message.",
+   "head": [
+    "NO AI SKILLS.",
+    "*ONE MESSAGE.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh07"
+    ],
+    "clip_ins": {
+     "sh07": 1.6
+    }
+   },
+   "agent": 4
+  },
+  {
+   "say": "Type sort. Your receipts, sorted.",
+   "head": [
+    "TYPE SORT.",
+    "*RECEIPTS SORTED.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh09"
+    ],
+    "clip_ins": {
+     "sh09": 0.0
+    },
+    "kind": "BOOKKEEPING",
+    "msg": "sort",
+    "draft": "Supplies $612 \u00b7 Gas $388 \u00b7 Software $74 \u00b7 2 questions for you"
+   },
+   "agent": 5
+  },
+  {
+   "say": "Type chase. The awkward text, written for you.",
+   "head": [
+    "TYPE CHASE.",
+    "*GET PAID.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh18"
+    ],
+    "clip_ins": {
+     "sh18": 1.2
+    },
+    "kind": "INVOICES",
+    "msg": "chase Dave",
+    "draft": "Hi Dave, following up on invoice 1042 for $520. Here's the link to pay. Thanks! Mike"
+   },
+   "agent": 6
+  },
+  {
+   "say": "Type reply. Every review, answered.",
+   "head": [
+    "TYPE REPLY.",
+    "*REVIEWS ANSWERED.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh19"
+    ],
+    "clip_ins": {
+     "sh19": 3.2
+    },
+    "kind": "REVIEWS",
+    "msg": "\u2605\u2605\u2605\u2605\u2605 Made my SUV look brand new!",
+    "draft": "Thanks so much! Glad the SUV feels new again. See you next time. Mike"
+   },
+   "agent": 7
+  },
+  {
+   "say": "You read it. You hit send.",
+   "head": [
+    "YOU READ IT.",
+    "*YOU HIT SEND.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh11"
+    ],
+    "clip_ins": {
+     "sh11": 0.8
+    }
+   },
+   "agent": 8
+  },
+  {
+   "say": "Are you done yet? Yeah. I'm done.",
+   "head": [
+    "\u201cYEAH.",
+    "*I'M DONE.\u201d*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh13"
+    ],
+    "clip_ins": {
+     "sh13": 0.6
+    }
+   },
+   "agent": 9
+  },
+  {
+   "say": "Ten dollars a tool. Works in the free Claude app.",
+   "head": [
+    "$10 A TOOL.",
+    "*FREE CLAUDE APP.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh14"
+    ],
+    "clip_ins": {
+     "sh14": 0.8
+    }
+   },
+   "agent": 10
+  },
+  {
+   "say": "Comment tools, and I'll send you the link.",
+   "head": [],
+   "scene": {
+    "type": "commentcard",
+    "plates": [
+     "sh14b",
+     "sh15"
+    ],
+    "clip_ins": {
+     "sh14b": 1.67,
+     "sh15": 2.3
+    },
+    "card_at": 2.7,
+    "track": [
+     [
+      3.0,
+      186,
+      1215,
+      654,
+      405
+     ],
+     [
+      4.0,
+      141,
+      990,
+      774,
+      570
+     ],
+     [
+      4.9,
+      69,
+      999,
+      921,
+      681
+     ]
+    ],
+    "splits": [
+     0.38,
+     0.62
+    ],
+    "card": {
+     "n": "COMMENT",
+     "p": "TOOLS",
+     "s": "AND I'LL SEND YOU THE LINK"
+    }
+   },
+   "agent": 11
+  }
+ ]
+}
