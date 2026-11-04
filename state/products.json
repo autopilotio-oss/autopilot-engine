@@ -168,7 +168,8 @@
   "adopted": true,
   "live": true,
   "live_price_cents": 1000,
-  "live_name": "AUTOPILOT.OI Invoice Chaser"
+  "live_name": "AUTOPILOT.OI Invoice Chaser",
+  "cover_v": 1
  },
  "content-week": {
   "id": "dAuVDcprc3u71rTFvjjFjg==",
@@ -178,7 +179,8 @@
   "adopted": true,
   "live": true,
   "live_price_cents": 1000,
-  "live_name": "AUTOPILOT.OI Content Week"
+  "live_name": "AUTOPILOT.OI Content Week",
+  "cover_v": 1
  },
  "bookkeeping-sorter": {
   "id": "LmWLcmr3ePc3fxTga7rh5g==",
@@ -188,7 +190,8 @@
   "adopted": true,
   "live": true,
   "live_price_cents": 1000,
-  "live_name": "AUTOPILOT.OI Bookkeeping Sorter"
+  "live_name": "AUTOPILOT.OI Bookkeeping Sorter",
+  "cover_v": 1
  },
  "review-desk": {
   "id": "YnivsIraJ-BmM-mHyMSkLQ==",
@@ -197,16 +200,18 @@
   "version": 1,
   "live": true,
   "live_price_cents": 1000,
-  "live_name": "AUTOPILOT.OI Review Desk"
+  "live_name": "AUTOPILOT.OI Review Desk",
+  "cover_v": 1
  },
  "owner-toolkit": {
   "id": "lU3jLXK_-M7J9VmeFzGbCQ==",
   "url": "https://autopilotoi.gumroad.com/l/owner-toolkit",
   "published": true,
-  "version": 0,
+  "version": 1,
   "adopted": true,
   "live": true,
   "live_price_cents": 2400,
-  "live_name": "AUTOPILOT.OI Owner Toolkit (4 tools)"
+  "live_name": "AUTOPILOT.OI Owner Toolkit (4 tools)",
+  "cover_v": 1
  }
 }

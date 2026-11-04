@@ -8,59 +8,34 @@
   "ok"
  ],
  [
-  "adopted",
-  "invoice-chaser",
-  true
- ],
- [
-  "adopted",
-  "content-week",
-  true
- ],
- [
-  "adopted",
-  "bookkeeping-sorter",
-  true
- ],
- [
   "cover",
   "bookkeeping-sorter",
-  "{'success': False, 'message': 'Could not process your cover, please try again.'}"
- ],
- [
-  "update",
-  "bookkeeping-sorter",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Bookkeeping Sorter', 'description': \"<p><strong>Your receipts, sorted. No spreadsheets, no AI skills.</strong></p><p>Upload your bank or card statement into the free Claude app, type <strong>sort</strong>, and every transaction lands in a clear bus"
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/ul6eqc4fdl344xj6lst5dccsugir', 'original_url': 'https://public-files.gumroad.com/ul6eqc4fdl344xj6lst5dccsugir', 'thumbnail': None"
  ],
  [
   "cover",
   "content-week",
-  "{'success': False, 'message': 'Could not process your cover, please try again.'}"
- ],
- [
-  "update",
-  "content-week",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Content Week', 'description': '<p><strong>A week of posts. One chat.</strong></p><p>Every Sunday, answer 5 quick questions about your week. Get 7 posts back: what to photograph, the caption and local hashtags, in your voice, about your real work. N"
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/sprmzkhys2fkj5nmegtwrv8cb49y', 'original_url': 'https://public-files.gumroad.com/sprmzkhys2fkj5nmegtwrv8cb49y', 'thumbnail': None"
  ],
  [
   "cover",
   "invoice-chaser",
-  "{'success': False, 'message': 'Could not process your cover, please try again.'}"
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/16jjdjgg90aufh548b44pb6evz2j', 'original_url': 'https://public-files.gumroad.com/16jjdjgg90aufh548b44pb6evz2j', 'thumbnail': None"
  ],
  [
-  "update",
-  "invoice-chaser",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Invoice Chaser', 'description': '<p><strong>Get paid. No awkward texts.</strong></p><p>Tell it about a job and get a clean invoice. Tell it who owes you and it keeps the list, then writes the right reminder for how late they are: friendly first, fi"
- ],
- [
-  "create_no_product",
+  "cover",
   "owner-toolkit",
-  "{'success': False, 'message': 'Custom permalink is already used by another one of your products'}"
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/qz75ugkzw4s4tv7jn2i3q04uf4mw', 'original_url': 'https://public-files.gumroad.com/qz75ugkzw4s4tv7jn2i3q04uf4mw', 'thumbnail': None"
  ],
  [
-  "adopted",
+  "update",
   "owner-toolkit",
-  true
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Owner Toolkit (4 tools)', 'description': '<p><strong>The Owner Toolkit: 4 simple AI helpers for the paperwork that eats your week. $40 separately, $24 here.</strong></p><ul>\\n<li>\\n<strong>Bookkeeping Sorter:</strong> upload a statement, type sort,"
+ ],
+ [
+  "cover",
+  "review-desk",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/ykb87cpd4217wg81m5botvgtenav', 'original_url': 'https://public-files.gumroad.com/ykb87cpd4217wg81m5botvgtenav', 'thumbnail': None"
  ],
  [
   "covers",
