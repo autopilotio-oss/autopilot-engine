@@ -32,5 +32,10 @@
     "threads": "Sent a quote and heard nothing? It is not always a no.\n\nDay 2: resend the job and price, offer one real time.\nDay 5: ask what is in the way, or offer a smaller option.\nLast one: close the loop, door open.\nThen stop. Two or three is plenty.\n\nFull guide: https://autopilotoi.app/guides/follow-up-on-a-quote/?utm_source=threads&utm_content=howto_quote_followup",
     "x": "Quote sent, no reply? Not always a no.\n\nDay 2: make yes easy. Day 5: ask what is in the way. Last one: close the loop. Then stop.\n\nGuide: https://autopilotoi.app/guides/follow-up-on-a-quote/?utm_source=x&utm_content=howto_quote_followup"
   },
-  "built_at": "2026-11-03T12:47Z"
+  "built_at": "2026-11-03T12:47Z",
+  "recheck": {
+    "at": "2026-11-04",
+    "result": "still valid",
+    "notes": "Bank full (6). Oldest bank item re-checked: CTA is AGENTS + Free Front Desk Starter gift per Front Desk focus override, no LAUNCH30, no parked agents; guide, /brain/, /front-desk/ ($39) and /free/ (leads with Front Desk Starter) pages present in docs/ and only the nav changed in b46da9e; 'free plan works' still stated in the guide and /brain/. Sourced facts are evergreen. Live HTTP check not possible (autopilotoi.app blocked by this sandbox proxy)."
+  }
 }
