@@ -207,7 +207,11 @@ def grid_cover(g):
 
 
 def cover(p, n):
-    if p.get("grid5"):
+    if p.get("grid6"):
+        import grid6
+        h, cls = grid6.render(p["grid6"])
+        p = dict(p, cover_html=h, cover_bg=cls, chrome=False, grain=True, lava=False)
+    elif p.get("grid5"):
         import grid5
         h, cls, lo = grid5.render(p["grid5"])
         p = dict(p, cover_html=h, cover_bg=cls, chrome=False, grain=False,
@@ -388,7 +392,7 @@ def build(cid):
     page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}<script>{QAJS}</script><script>{ANIMJS}</script>{FIT}</body></html>"
     hp = os.path.join(ROOT, "tools", "carousel", f"_{cid}.html"); open(hp, "w").write(page)
     out = os.path.join(ROOT, "docs", "media", "car", cid); os.makedirs(out, exist_ok=True)
-    lava = bool(p.get("cover_html") or p.get("grid") or p.get("grid2") or p.get("grid3") or p.get("grid4") or p.get("grid5")) and p.get("lava", True) and (not p.get("cover_only") or p.get("animate"))
+    lava = bool(p.get("cover_html") or p.get("grid") or p.get("grid2") or p.get("grid3") or p.get("grid4") or p.get("grid5") or p.get("grid6")) and (p.get("lava", True) or p.get("grid6")) and (not p.get("cover_only") or p.get("animate"))
     FRAMES = 24 * int(p.get("anim_dur", 16)) if (lava and os.environ.get("CAR_STILL") != "1") else 0
     fdir = f"/tmp/carframes/{cid}"
     if FRAMES:
@@ -398,7 +402,7 @@ await p.goto('http://localhost:8779/tools/carousel/_{cid}.html');await p.waitFor
 require('fs').writeFileSync('{out}/qa.json',JSON.stringify(await p.evaluate(()=>window.QA||[]),null,1));
 const lf=p.frames().find(f=>f.url().includes('lava.html'));if(lf){{await lf.waitForFunction(()=>window.READY===1,null,{{timeout:60000}});await lf.evaluate(()=>window.render(0))}}
 for(let i=1;i<={n};i++){{await (await p.$('#s'+i)).screenshot({{path:'{out}/'+String(i).padStart(2,'0')+'.jpg',type:'jpeg',quality:88}})}}
-if(lf&&{FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await p.evaluate(t=>window.ANIM(t),k===0?999:k/24);await lf.evaluate(t=>window.render(t),(k/24)%8);await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
+if({FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await p.evaluate(t=>window.ANIM(t),k===0?999:k/24);if(lf)await lf.evaluate(t=>window.render(t),(k/24)%8);await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
 await b.close()}})();"""
     srv = subprocess.Popen([sys.executable, "-m", "http.server", "8779"], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:

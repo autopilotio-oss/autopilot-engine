@@ -8,6 +8,7 @@ with rembg, save to docs/media/car/photos/<slug>/:
   credits.json photographer, page url, Pexels id (Pexels asks for credit when possible; we keep it with the image)
 Rules: never request a named real person; generic people, hands, objects and places only. Status becomes "done" or "failed".
 
+Unsplash by id (free Unsplash License, no key): {"unsplash": ["6TdCjWc16bQ"], "status": "pending"}.
 Seb's own photos (sent in chat): queue/photos/<slug>.json {"files": ["queue/photos/in/<slug>/1.jpg", ...], "source": "...",
   "status": "pending"}. No Pexels call, just resize + cutout, same outputs. "source" records where the photo came from
   (his own shot, an official press kit, licensed). Posts using a real person's photo always go to Seb for approval.
@@ -45,6 +46,23 @@ def run():
                         cut = cut.crop(bbox)
                     cut.save(os.path.join(out, f"{i:02d}_cut.png"))
                     credits.append({"n": i, "file": fp, "source": r.get("source", "sent by Seb")})
+                json.dump({"credits": credits}, open(os.path.join(out, "credits.json"), "w"), indent=1)
+                r["status"] = "done"; r["count"] = len(credits)
+            except Exception as e:
+                r["status"] = "failed"; r["error"] = repr(e)[:300]
+            json.dump(r, open(f, "w"), indent=1); done += 1; print(slug, r["status"]); continue
+        if r.get("unsplash"):          # free Unsplash License photos picked by id (no API key needed)
+            try:
+                credits = []
+                for i, pid in enumerate(r["unsplash"], 1):
+                    img = Image.open(io.BytesIO(get(f"https://unsplash.com/photos/{pid}/download?force=true&w=1600"))).convert("RGB")
+                    img.thumbnail((1600, 1600))
+                    img.save(os.path.join(out, f"{i:02d}.jpg"), quality=90)
+                    cut = remove(img, session=session); bbox = cut.getbbox()
+                    if bbox:
+                        cut = cut.crop(bbox)
+                    cut.save(os.path.join(out, f"{i:02d}_cut.png"))
+                    credits.append({"n": i, "unsplash_id": pid, "url": f"https://unsplash.com/photos/{pid}", "license": "Unsplash License"})
                 json.dump({"credits": credits}, open(os.path.join(out, "credits.json"), "w"), indent=1)
                 r["status"] = "done"; r["count"] = len(credits)
             except Exception as e:

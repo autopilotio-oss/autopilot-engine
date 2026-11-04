@@ -34,8 +34,9 @@
   let movers = null;
   window.ANIM = function (t) {
     if (!els) els = init();
-    if (!movers) { const S = document.getElementById('s1'); movers = S ? [...S.querySelectorAll('[data-spin],[data-scroll],[data-float],[data-dash]')] : []; movers.forEach(m => m.dataset.tf0 = m.style.transform || ''); }
+    if (!movers) { const S = document.getElementById('s1'); movers = S ? [...S.querySelectorAll('[data-spin],[data-scroll],[data-float],[data-dash],[data-push]')] : []; movers.forEach(m => m.dataset.tf0 = m.style.transform || ''); }
     for (const m of movers) {                           // spinning badges and scrolling tickers (grid v2)
+      if (m.dataset.push) { m.style.transform = `scale(${1.02 + Math.min(t, 16) * 0.004})`; continue; }
       if (m.dataset.dash) { m.style.strokeDashoffset = -(t * 260) % +m.dataset.dash; continue; }
       if (m.dataset.float) { m.style.transform = `translateY(${Math.sin(t * 1.3) * 12}px) rotate(${Math.sin(t * .9) * 1.2}deg) ` + m.dataset.tf0; continue; }
       if (m.dataset.spin) m.style.transform = `rotate(${(t * +m.dataset.spin) % 360}deg)`;
