@@ -1,7 +1,6 @@
 {
  "kind": "prompts",
  "dateline": "NOV 04 2026",
- "cover_bg": "bg-white",
  "theme": "dark",
  "music": "bright",
  "seed": 23,
@@ -13,7 +12,6 @@
   "Reviews",
   "Operations"
  ],
- "cover_html": "<div class=\"fx Cc\" style=\"left:540px;transform:translateX(-50%);white-space:nowrap;top:74px;font-size:22px;color:#5d5d56;letter-spacing:6px\">24 PROMPTS FOR BUSINESS OWNERS</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"20\" style=\"left:56px;top:150px;font-size:160px;white-space:nowrap;color:#0b0b0b\">Claude prompts</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:320px;font-size:160px;white-space:nowrap;color:#0b0b0b\">that should be</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:480px;font-size:160px;white-space:nowrap;color:#0b0b0b;background:#D4FF3A;padding:14px 22px 0;box-sizing:border-box\">illegal</div><div class=\"fx\" data-after=\"h\" data-gap=\"64\" data-stagger=\"1\" style=\"left:56px;top:900px;width:968px;height:110px\"><div style=\"position:absolute;left:0px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#D4FF3A;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">01 to 04</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Get paid</div></div><div style=\"position:absolute;left:163px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">05 to 08</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Customers</div></div><div style=\"position:absolute;left:326px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">09 to 12</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Sales</div></div><div style=\"position:absolute;left:489px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">13 to 16</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Marketing</div></div><div style=\"position:absolute;left:652px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">17 to 20</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Reviews</div></div><div style=\"position:absolute;left:815px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">21 to 24</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Operations</div></div></div><div class=\"fx Ii\" style=\"left:540px;transform:translateX(-50%);white-space:nowrap;top:1050px;font-size:40px;color:#0b0b0b\">Copy. Paste. Swap the <span style=\"background:#D4FF3A;padding:0 6px\">[brackets]</span>.</div><div class=\"fx Cc\" style=\"left:540px;transform:translateX(-50%);white-space:nowrap;top:1150px;font-size:24px;color:#f8f8f4;background:#0b0b0b;padding:16px 26px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div><div class=\"fx stampL\" style=\"left:735px;top:742px;font-size:42px;border:5px solid #0b0b0b;color:#0b0b0b;background:#f8f8f4;box-shadow:none;padding:8px 16px 2px;transform:rotate(-7deg)\">NO DM NEEDED</div>",
  "slides": [
   {
    "cat": "Get paid",
@@ -165,5 +163,17 @@
   "Swap the brackets for your details.",
   "Read every draft before you send it.",
   "Save it for later."
- ]
+ ],
+ "grid4": {
+  "type": "lesson",
+  "no": 38,
+  "lines": [
+   "Claude prompts",
+   "that should",
+   "be illegal."
+  ],
+  "mark": "illegal",
+  "sub": "24 prompts for business owners. All inside, no DM needed.",
+  "kicker": "PROMPTS · 24 INSIDE"
+ }
 }

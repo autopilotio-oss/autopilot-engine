@@ -1,0 +1,22 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid4": {
+  "type": "lesson",
+  "no": 32,
+  "lines": [
+   "11:48 PM.",
+   "Still doing",
+   "the books."
+  ],
+  "mark": "books",
+  "sub": "You did not start a business for this.",
+  "kicker": "OWNER STORIES",
+  "action": "WATCH →"
+ }
+}

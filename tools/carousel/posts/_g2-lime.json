@@ -1,0 +1,185 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 04 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 23,
+ "folders": [
+  "Get paid",
+  "Customers",
+  "Sales",
+  "Marketing",
+  "Reviews",
+  "Operations"
+ ],
+ "slides": [
+  {
+   "cat": "Get paid",
+   "cards": [
+    {
+     "t": "Reminder",
+     "p": "Write a friendly 2 sentence reminder for invoice [number], due [date]. Assume they forgot. Add my pay link [link]."
+    },
+    {
+     "t": "Late invoice",
+     "p": "Invoice [number] is [X] days late with no reply. Write a firm, kind follow up with a pay by date."
+    },
+    {
+     "t": "Invoice lines",
+     "p": "Turn these job notes into invoice lines with prices: [paste]. Flag anything I forgot to charge for.",
+     "star": true
+    },
+    {
+     "t": "New prices",
+     "p": "Write a short note raising [service] to [new price] on [date]. One honest reason, a thank you, no apologizing."
+    }
+   ]
+  },
+  {
+   "cat": "Customers",
+   "cards": [
+    {
+     "t": "FAQ",
+     "p": "Answer these customer questions in my voice, under 40 words each, with one next step: [paste]."
+    },
+    {
+     "t": "Complaint",
+     "p": "Reply to this complaint: [paste]. Own the mistake in one line. Say how and when I fix it. No excuses.",
+     "star": true
+    },
+    {
+     "t": "Reschedule",
+     "p": "Text [customer] to move from [day] to [option 1] or [option 2]. Apologize once. Let them reply 1 or 2."
+    },
+    {
+     "t": "After hours",
+     "p": "Write an after hours auto reply: when I will answer, my booking link [link], one line for urgent issues."
+    }
+   ]
+  },
+  {
+   "cat": "Sales",
+   "cards": [
+    {
+     "t": "Lead check",
+     "p": "Here is a lead's message: [paste]. Is it worth a call? Give me the first question to ask."
+    },
+    {
+     "t": "Quote follow up",
+     "p": "Write 3 short texts following up my quote for [job]. Friendly, useful, never desperate."
+    },
+    {
+     "t": "Too expensive",
+     "p": "A customer says [service] costs too much. Give me 3 replies that hold my price.",
+     "star": true
+    },
+    {
+     "t": "Proposal",
+     "p": "Turn these notes into a one page proposal with 3 price tiers and one clear pick: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Marketing",
+   "cards": [
+    {
+     "t": "Post ideas",
+     "p": "Give me 30 post ideas for my [business]. Each one answers a real question customers ask me.",
+     "star": true
+    },
+    {
+     "t": "Review to posts",
+     "p": "Turn this 5 star review into 3 posts: a story, a lesson, a before and after: [paste]."
+    },
+    {
+     "t": "Google profile",
+     "p": "Write my Google Business Profile description for [business] in [area]. Plain words, under 750 characters."
+    },
+    {
+     "t": "Slow season",
+     "p": "Give me 3 slow season offers that fill [month] for my [business] without cheapening the brand."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Ask",
+     "p": "Write a 2 sentence text asking [name] for a Google review of today's [job]. Add my link [link]."
+    },
+    {
+     "t": "5 star reply",
+     "p": "Reply to this 5 star review in 2 personal sentences. Mention the detail they mentioned: [paste]."
+    },
+    {
+     "t": "1 star reply",
+     "p": "Reply in public to this 1 star review: [paste]. Calm, fair, offer to fix it. Under 80 words."
+    },
+    {
+     "t": "What to fix",
+     "p": "Read my last [X] reviews: [paste]. What do people love, what do they hate, what do I fix first?",
+     "star": true
+    }
+   ]
+  },
+  {
+   "cat": "Operations",
+   "cards": [
+    {
+     "t": "Checklist",
+     "p": "I will explain how I do [task]. Turn it into a checklist a new hire can follow on day one.",
+     "star": true
+    },
+    {
+     "t": "Hiring post",
+     "p": "Write a job post for a [role]: the daily work, must haves, pay [range], and 3 screening questions."
+    },
+    {
+     "t": "My week",
+     "p": "Sort my to do list into today, this week, delegate, and drop: [paste]. Be honest."
+    },
+    {
+     "t": "Meeting notes",
+     "p": "Turn these meeting notes into a table: who does what, by when: [paste]."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "OWNER",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ],
+ "grid2": {
+  "layout": "stack",
+  "tag": "PROMPTS",
+  "no": 24,
+  "lines": [
+   "Claude prompts",
+   "that should be",
+   "illegal"
+  ],
+  "key": 2,
+  "ring": "NO DM NEEDED * ALL 24 INSIDE *",
+  "ring_center": "24",
+  "sub": "24 prompts for business owners. Copy, paste, swap the *[brackets]*.",
+  "ticker": "PROMPTS THAT SHOULD BE ILLEGAL * SAVE THIS",
+  "button": "SAVE IT · SWIPE ▸",
+  "theme": "lime"
+ },
+ "cover_only": true
+}

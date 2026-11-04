@@ -1,0 +1,23 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid4": {
+  "type": "store",
+  "no": 37,
+  "lines": [
+   "A quiet quote",
+   "is a maybe."
+  ],
+  "mark": "maybe",
+  "sub": "Type chase. One friendly nudge for each open quote.",
+  "product": "Front Desk Kit",
+  "product_sub": "Follow ups in your voice",
+  "price": "$39",
+  "kicker": "THE STORE · FRONT DESK KIT"
+ }
+}

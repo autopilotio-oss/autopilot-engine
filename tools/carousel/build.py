@@ -164,7 +164,60 @@ def cover_photo(p, n):
             f'<div class="ph-swipe">SWIPE FOR MORE <b>&#9656;</b></div>{GRAIN}<div class="pg">1/{n}</div></div>')
 
 
+INK = "#0b0b0b"
+
+
+def grid_cover(g):
+    """THE GRID SYSTEM (Seb, Nov 4: "the profile grid need to look like one ... like something built with a crazy design
+    team"). Every Instagram cover (carousels AND reel thumbnails) is made from this one template in the website design
+    language: paper #ecece7 with light lava, small letterspaced label, full width Anton lines in ink with ONE line in a
+    lime block, optional row of cards, one plain sub line, a black button, optional stamp. Spec p["grid"]:
+      {"label": "24 PROMPTS FOR BUSINESS OWNERS", "lines": ["Claude prompts", "that should be", "illegal"], "block": 2,
+       "chips": [["01 to 04", "Get paid"], ...] (optional, max 6), "sub": "Copy. Paste. Swap the [brackets].",
+       "button": "SAVE IT \u00b7 SWIPE \u25b8", "stamp": "NO DM NEEDED" (optional)}
+    *word* in sub = lime marker."""
+    C = "left:540px;transform:translateX(-50%);white-space:nowrap;"
+    out = f'<div class="fx Cc" style="{C}top:74px;font-size:22px;color:#5d5d56;letter-spacing:6px">{E(g["label"])}</div>'
+    top = 150
+    for k, ln in enumerate(g["lines"]):
+        blk = k == g.get("block", len(g["lines"]) - 1)
+        st = f"background:#D4FF3A;padding:14px 22px 0;box-sizing:border-box;" if blk else ""
+        gap = ' data-gap="20"' if k == 0 else ""
+        out += (f'<div class="fx A" data-fit="968" data-stack="h"{gap} style="left:56px;top:{top}px;font-size:160px;'
+                f'white-space:nowrap;color:{INK};{st}">{E(ln)}</div>')
+        top += 170
+    if g.get("stamp"):
+        out += (f'<div class="fx stampL" data-after="h" data-gap="-46" style="left:735px;top:700px;font-size:42px;border:5px solid {INK};'
+                f'color:{INK};background:#f8f8f4;box-shadow:none;padding:8px 16px 2px;transform:rotate(-7deg)">{E(g["stamp"])}</div>')
+    chips = ""
+    if g.get("chips"):
+        cs = "".join(f'<div style="flex:1;height:110px;border-radius:10px;border:3px solid {INK};box-sizing:border-box;'
+                     f'background:{"#D4FF3A" if k == 0 else "#f8f8f4"};color:{INK};display:flex;flex-direction:column;'
+                     f'justify-content:space-between;align-items:center;padding:14px 4px 14px">'
+                     f'<div style="font:700 17px C;letter-spacing:2px;color:#5d5d56">{E(a)}</div>'
+                     f'<div style="font:400 25px/1 A;text-transform:uppercase">{E(b)}</div></div>' for k, (a, b) in enumerate(g["chips"]))
+        chips = f'<div data-stagger="1" style="display:flex;gap:12px;width:968px">{cs}</div>'
+    sub = re.sub(r"\*(.+?)\*", r'<span style="background:#D4FF3A;padding:0 6px">\1</span>', E(g.get("sub", "")))
+    sub = f'<div style="font:800 40px/1.2 I;letter-spacing:-.5px;color:{INK};text-align:center">{sub}</div>' if sub else ""
+    btn = (f'<div style="font:700 24px C;letter-spacing:3px;text-transform:uppercase;color:#f8f8f4;background:{INK};'
+           f'padding:16px 26px 14px;border-radius:6px">{E(g.get("button", "SWIPE \u25b8"))}</div>')
+    out += (f'<div class="fx" data-after="h" data-gap="{80 if g.get("stamp") else 60}" style="left:56px;top:800px;width:968px;display:flex;'
+            f'flex-direction:column;align-items:center;gap:52px">{chips}{sub}{btn}</div>')
+    return out
+
+
 def cover(p, n):
+    if p.get("grid3") or p.get("grid4"):
+        import grid3, grid4
+        h, cls = grid4.render(p["grid4"]) if p.get("grid4") else grid3.render(p["grid3"])
+        p = dict(p, cover_html=h, cover_bg=cls, chrome=False, grain=False,
+                 lava_opacity=p.get("lava_opacity", {"bg-white": .3, "bg-black": .3, "bg-lime": .35}[cls]))
+    elif p.get("grid2"):
+        import grid2
+        h, cls = grid2.render(p["grid2"])
+        p = dict(p, cover_html=h, cover_bg=cls)
+    elif p.get("grid"):
+        p = dict(p, cover_html=grid_cover(p["grid"]), cover_bg="bg-white")
     if p.get("photo"):
         return cover_photo(p, n)
     if p.get("cover_html"):
@@ -175,7 +228,7 @@ def cover(p, n):
             lava = f'<iframe class="lava" style="opacity:{p.get('lava_opacity', {'dark': .6, 'lime': .75, 'white': .8}[pal])}" src="/tools/carousel/lava.html?pal={pal}&seed={p.get("seed", 2)}"></iframe>'
         body = f'<div class="lavafg">{p["cover_html"]}</div>' if lava else p["cover_html"]
         return (f'<div class="s {cls}" id="s1">{lava}{body}{GRAIN if p.get("grain", True) else ""}'
-                f'<img class="aplogo" src="/docs/logo.png"><div class="pg">1/{n}</div></div>')
+                + ('<img class="aplogo" src="/docs/logo.png"><div class="pg">1/' + str(n) + '</div>' if p.get("chrome", True) else "") + '</div>')
     lay = p.get("layout", "stack")
     if lay == "stack":
         return cover_stack(p, n)
@@ -320,12 +373,16 @@ go();</script>"""
 
 def build(cid):
     p = json.load(open(os.path.join(ROOT, "tools", "carousel", "posts", cid + ".json")))
-    n = len(p["slides"]) + 2
-    slides = [cover(p, n)] + [inner(p, i + 2, n, s) for i, s in enumerate(p["slides"])] + [last(p, n, n)]
+    if p.get("cover_only"):          # reel thumbnails: one still cover in the grid system
+        n = 1
+        slides = [cover(p, 1).replace('<div class="pg">1/1</div>', "")]
+    else:
+        n = len(p["slides"]) + 2
+        slides = [cover(p, n)] + [inner(p, i + 2, n, s) for i, s in enumerate(p["slides"])] + [last(p, n, n)]
     page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}<script>{QAJS}</script><script>{ANIMJS}</script>{FIT}</body></html>"
     hp = os.path.join(ROOT, "tools", "carousel", f"_{cid}.html"); open(hp, "w").write(page)
     out = os.path.join(ROOT, "docs", "media", "car", cid); os.makedirs(out, exist_ok=True)
-    lava = bool(p.get("cover_html")) and p.get("lava", True)
+    lava = bool(p.get("cover_html") or p.get("grid") or p.get("grid2") or p.get("grid3") or p.get("grid4")) and p.get("lava", True) and (not p.get("cover_only") or p.get("animate"))
     FRAMES = 24 * int(p.get("anim_dur", 16)) if (lava and os.environ.get("CAR_STILL") != "1") else 0
     fdir = f"/tmp/carframes/{cid}"
     if FRAMES:
