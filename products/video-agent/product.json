@@ -1,10 +1,10 @@
 {
- "name": "AUTOPILOT.OI Video Agent",
+ "name": "AUTOPILOT.OI TikTok Agent",
  "price_cents": 1000,
  "permalink": "video-agent",
- "filename": "AUTOPILOT.OI Video Agent Setup.pdf",
- "description_html": "<p><strong>Your TikTok video agent: one idea in, a week of videos planned.</strong></p><p>A Claude agent that finds the patterns in your niche from videos you paste, plans 7 videos a week, writes scripts in your voice, turns each one into a cut by cut CapCut edit plan, writes the caption and hashtags, turns comments into new ideas and reviews your numbers every Friday.</p><p><strong>What you get (14 page agent pack, PDF):</strong> a setup builder that installs the agent with you in about 30 minutes, 12 setup questions, full agent instructions with 9 commands, the worked example from our reel, a hook bank, an edit plan template and a 30 day video tracker.</p><p><strong>How it works:</strong> it runs inside a Claude Project. It plans and writes. You film and edit in CapCut and decide what posts. It does not edit video files, post without your OK, or promise views.</p><p><strong>You need:</strong> a Claude account (the free plan works), your phone and CapCut (free).</p><p><em>Education only. AUTOPILOT.OI is independent and not affiliated with Anthropic, TikTok or CapCut.</em></p>",
- "cover_url": "https://autopilotoi.app/store/video-cover.png?v=3",
+ "filename": "AUTOPILOT.OI TikTok Agent Setup.pdf",
+ "description_html": "<p><strong>Your TikTok agent: one idea in, a week of videos planned, and a clear path to getting paid.</strong></p><p>A Claude agent that finds the patterns in your niche from videos you paste, plans 7 videos a week, writes scripts in your voice, turns each one into a cut by cut CapCut edit plan, writes the caption and hashtags, turns comments into new ideas and reviews your numbers every Friday. The new money command shows which ways TikTok can pay you right now (Creator Rewards, TikTok Shop affiliate, your own product) and a 30 day plan to reach the next one.</p><p><strong>What you get (16 page agent pack, PDF):</strong> a setup builder that installs the agent with you in about 30 minutes, 12 setup questions, full agent instructions with 10 commands, a How TikTok Pays page, the worked example from our reel, a hook bank, an edit plan template and a 30 day video tracker.</p><p><strong>How it works:</strong> it runs inside a Claude Project. It plans and writes. You film and edit in CapCut and decide what posts. With Metricool connected it can fill in and schedule a post after you upload the video and say so.</p><p><strong>You need:</strong> a Claude account (the free plan works), your phone and CapCut (free).</p><p>It does not edit video files, post without your OK, or promise views or income. TikTok changes its rules often, so confirm your status in TikTok Studio.</p><p><em>Education only. AUTOPILOT.OI is independent and not affiliated with Anthropic, TikTok or CapCut.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/video-cover.png?v=4",
  "tags": [
   "ai",
   "claude",
@@ -12,6 +12,6 @@
   "tiktok shop",
   "ai agent"
  ],
- "version": 4,
- "cover_v": 3
+ "version": "5",
+ "cover_v": "4"
 }

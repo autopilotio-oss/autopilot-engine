@@ -63,7 +63,7 @@
    "id": "workspace_founding",
    "permalink": "workspace-founding",
    "name": "Workspace Founding Spot",
-   "gumroad_name": "AUTOPILOT Workspace \u00b7 Founding Spot (refundable)",
+   "gumroad_name": "AUTOPILOT Workspace · Founding Spot (refundable)",
    "price_cents": 4900,
    "type": "refundable_deposit",
    "division": "workspace",
@@ -84,14 +84,15 @@
   {
    "id": "video_agent",
    "permalink": "video-agent",
-   "name": "Video Agent",
+   "name": "TikTok Agent",
    "price_cents": 1000,
    "type": "setup_kit",
    "division": "marketplace",
    "placement": "marketplace",
-   "advertise": "no",
+   "advertise": "tiktok",
    "landing": "/store/video/",
-   "gumroad_id": "HO6TBwbYC3KpVc4VJFYLUg=="
+   "gumroad_id": "HO6TBwbYC3KpVc4VJFYLUg==",
+   "gumroad_name": "AUTOPILOT.OI TikTok Agent"
   },
   {
    "id": "bookkeeping_sorter",
@@ -257,7 +258,7 @@
   "THE WORKSPACE",
   "The Workspace",
   "$19.99 once",
-  "Autopilot \u00b7 $19.99",
+  "Autopilot · $19.99",
   "Autopilot $19.99",
   "$49 one time",
   "See The Workspace",

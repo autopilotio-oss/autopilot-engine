@@ -26,7 +26,7 @@ P = {
    doc="Refund request", body=letter(["Subject: Refund for canceled flight UA 1482, Oct 12", "Hello,", "My flight was canceled and I did not accept the rebooking. Under the DOT refund rule I'm requesting a cash refund of $318 to my original card.", "Please confirm within 7 days.", "Thank you,"]), price="$10"),
  "raise": dict(cat="MONEY", no="05", t1="RAISE", t2="AGENT", sub="Real pay data, your number and a practice run before you ask.",
    doc="Raise prep", body=table(["", ""], [["Market range", "$68k to $76k"], ["Your ask", "$74,000"], ["Walk away", "$70,000"], ["Wins logged", "9"]], "Practice: manager pushes back x3") , price="$10"),
- "video": dict(cat="TIKTOK", no="06", t1="VIDEO", t2="AGENT", sub="Scripts, CapCut edit plans and a posting schedule.",
+ "video": dict(cat="TIKTOK", no="06", t1="TIKTOK", t2="AGENT", sub="Scripts, CapCut edit plans, posting plan and how TikTok pays.",
    doc="This week", body=table(["Day", "Hook"], [["Mon", "\"I almost threw this out\""], ["Tue", "\"Stop doing this\""], ["Thu", "\"What $40 gets you\""], ["Sat", "\"3 things I wish I knew\""]], "Edit plans ready for CapCut"), price="$10"),
  "shop": dict(cat="TIKTOK", no="07", t1="SHOP", t2="AGENT", sub="Check your profit before you list on TikTok Shop.",
    doc="Profit check", body=table(["", ""], [["Price", "$24.99"], ["Product + shipping", "$9.40"], ["Fees (check Seller Center)", "$2.40"], ["Creator commission 15%", "$3.75"], ["Profit per sale", "$9.44"]], "Listing draft ready"), price="$10"),

@@ -88,30 +88,15 @@
    "why": "Sales recovery plan: no paid ads while tracking is broken (no Meta Pixel). Needs Seb's explicit yes and a live pixel to restart."
   }
  },
- "approvals": [
-  {
-   "what": "Standing autopost: factory reels that pass the 85/100 gate post 2 a day without per post approval, Nov 1 to Nov 10 only, then back to approval based",
-   "quote": "Yes, 10 days only (Recommended)"
-  },
-  {
-   "what": "Push fixes and content to autopilotoi.app, landing pages and Gumroad product descriptions without asking each time, Nov 1 to Nov 10, no price changes",
-   "quote": "Yes, 10 days only (Recommended)"
-  },
-  {
-   "what": "Meta ads, $10 a day, $60 total cap, behind the best performing reel from day 5",
-   "quote": "$10/day, $60 cap",
-   "withdrawn": "2026-11-02, Seb: \"Fix it\" (no ads until the pixel is live and Seb approves again)"
-  },
-  {
-   "what": "Launch discount code up to 30% off until Nov 10, list prices unchanged",
-   "quote": "Yes, up to 30% (Recommended)"
-  },
-  {
-   "what": "News and prompt carousels autopost on Instagram, TikTok, Threads and X without per post approval when they pass the gate (every claim confirmed by 2 trusted sources, 85/100 quality score, no real people's photos, no logos as the main image), Nov 1 to Nov 10 only",
-   "quote": "Yes, autopost to Nov 10 (Recommended)",
-   "at": "2026-10-31T22:55-03:00"
+ "approvals": {
+  "autopost_after_nov10": {
+   "by": "Seb",
+   "at": "2026-11-04T01:39-03:00",
+   "quote": "yes",
+   "question": "After Nov 10: keep autopost on for posts that pass the gate?",
+   "scope": "posts that pass the 85/100 gate, within the cadence caps, no spend"
   }
- ],
+ },
  "approved_by": "Seb",
  "approved_at": "2026-10-31T20:36-03:00",
  "channel": "chat",
@@ -141,11 +126,11 @@
   "renderer": "python3 tools/carousel/build.py <id>"
  },
  "cadence": {
-  "set_by": "Seb 2026-11-04: 'treads should be mass posting waiting for viral so everything we post needs to be tailored to the platform ig we dont spam and then TikTok we post videos about a TikTok specific content agent ... X same thing find what sells' (previous: Seb 2026-11-01 thin out)",
+  "set_by": "Seb 2026-11-04: 'treads should be mass posting waiting for viral so everything we post needs to be tailored to the platform ig we dont spam and then TikTok we post videos about a TikTok specific content agent ... X same thing find what sells' (previous: Seb 2026-11-01 thin out) | Seb 2026-11-04 01:39: Threads 12 a day (\"12\")",
   "max_per_day": {
    "instagram": 2,
    "tiktok": 3,
-   "threads": 8,
+   "threads": 12,
    "twitter": 5
   },
   "slots_art": {
@@ -159,12 +144,16 @@
     "18:00"
    ],
    "threads": [
-    "08:30",
+    "08:00",
+    "09:00",
     "10:00",
+    "11:00",
     "12:00",
+    "13:00",
     "14:00",
     "16:00",
     "18:00",
+    "19:00",
     "20:00",
     "22:00"
    ],
