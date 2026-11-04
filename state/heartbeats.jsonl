@@ -127,3 +127,4 @@
 {"worker": "support_agent", "status": "ok", "at": "2026-11-04T13:17:55+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-04T13:40:39+00:00", "note": "bank full (6); oldest 2026-11-03-howto-quote-followup re-pointed to free starter gift, QA PASS"}
 {"worker": "tiktok_intel", "status": "ok", "at": "2026-11-04T14:24:48+00:00", "note": "1 playbook correction (seller shipping), 7 updates, 3 guide fixes awaiting approval, 0 kit fixes"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-04T14:56:11+00:00", "note": "subs flagship guide card now says you run it monthly and send the cancel message yourself (was implied automatic); deploy 38f9e4d ok, live fetch blocked by sandbox proxy"}
