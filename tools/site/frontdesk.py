@@ -73,7 +73,7 @@ def page(head, nav, foot, variant="main"):
 <div class="card"><div class="k">2 · Answer the interview</div><p>Paste the starter prompt from page 2. The setup agent asks 15 questions about your services, prices, hours and rules, then writes your Business Brain.</p></div>
 <div class="card"><div class="k">3 · Paste a message, type reply</div><p>Paste any customer message and type reply, quote or chase. Read the draft, fix anything, send it yourself.</p></div>
 </div><p class="label" style="margin-top:14px">A recorded walkthrough of a real setup is coming after our owner tests. Until then the demo above uses example businesses.</p></div></div>"""
-    return h + nav("m") + f"""
+    return h + nav("m", (O["checkout"], f"Get it · {PRICE}")) + f"""
 <div class="wrap hero grid2" style="align-items:center;gap:44px"><div>
 <span class="tagline live">{e(V["tag"])}</span>
 <h1 class="{"" if variant == "main" else "s"}" style="margin:22px 0 24px">{V["h1"]}</h1>

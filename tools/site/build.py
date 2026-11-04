@@ -10,9 +10,9 @@ def head(title, desc, path, img="autopilot-cover.png"):  # share image: the prod
 <meta name="theme-color" content="#0a0a0a"><link rel="icon" href="/logo-128.png">
 <link rel="preload" href="/assets/fonts/APWide-Black.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v=4"></head><body>"""
-def nav(on):
+def nav(on, cta=None):  # cta=(href, label): a product page sells its own product in the header
     a = lambda href, t, k, c="": f'<a href="{href}" class="{c}{" on" if k == on else ""}">{t}</a>'
-    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/front-desk/", "Front Desk", "f", "hm")}{a("/brain/", "Free starter", "c")}{a("/#agents", "Agents", "m", "hm")}{a(GR + "owner-toolkit", "All 4 · $24", "x", "cta buy")}</div></div></div>'
+    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/front-desk/", "Front Desk", "f", "hm")}{a("/brain/", "Free starter", "c")}{a("/#agents", "Agents", "m", "hm")}{a(*(cta or (GR + "owner-toolkit", "All 4 · $24")), "x", "cta buy")}</div></div></div>'
 FOOT = """<div class="foot"><div class="wrap"><div class="big">AUTOPILOT<span>.</span>OI</div>
 <div><div>Simple AI helpers for business owners.<br>Independent. Not affiliated with Anthropic. Claude is a product of Anthropic.</div>
 <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/marketplace/">Marketplace</a><a href="/front-desk/">Front Desk</a><a href="/workspace/">Workspace</a><a href="/brain/">Free starter</a><a href="/library/">Library</a><a href="https://www.instagram.com/autopilot.oi/">Instagram</a></div></div></div></div>
