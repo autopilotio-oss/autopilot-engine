@@ -1,188 +1,201 @@
 {
-  "name": "FIRST SALES MODE",
-  "goal": "First 10 verified customers (Gumroad orders, not refunded) by Nov 10 2026",
-  "start": "2026-11-01",
-  "end": "2026-11-10",
-  "final_report": "2026-11-11T09:13-03:00",
-  "baseline": {
-    "verified_orders": 0,
-    "revenue_usd": 0,
-    "at": "2026-10-31T20:34-03:00"
+ "name": "FIRST SALES MODE",
+ "goal": "First 10 verified customers (Gumroad orders, not refunded) by Nov 10 2026",
+ "start": "2026-11-01",
+ "end": "2026-11-10",
+ "final_report": "2026-11-11T09:13-03:00",
+ "baseline": {
+  "verified_orders": 0,
+  "revenue_usd": 0,
+  "at": "2026-10-31T20:34-03:00"
+ },
+ "phases": [
+  {
+   "days": "Nov 1 to Nov 2",
+   "name": "build and test",
+   "work": "Audit site, products, checkout, delivery, tracking and every scheduled agent. Fix what is broken."
   },
-  "phases": [
-    {
-      "days": "Nov 1 to Nov 2",
-      "name": "build and test",
-      "work": "Audit site, products, checkout, delivery, tracking and every scheduled agent. Fix what is broken."
-    },
-    {
-      "days": "Nov 3 to Nov 4",
-      "name": "flagship funnels",
-      "work": "Subscription Leak Hunter (subs-agent), Refund Fighter (refund-agent), Bill Lowering Coach (bill-agent): landing pages, demos, the All 5 Money Agents bundle, launch code in every CTA."
-    },
-    {
-      "days": "Nov 5 to Nov 7",
-      "name": "viral distribution",
-      "work": "Evidence backed formats, original factory reels (2 a day, autopost after the 85/100 gate), lead capture, Meta ad test behind the verified winner."
-    },
-    {
-      "days": "Nov 8 to Nov 10",
-      "name": "optimize",
-      "work": "Real traffic and sales only: fix the weakest funnel step, double down on verified winners, cut losers."
-    }
-  ],
-  "flagships": {
-    "subs-agent": {
-      "display": "Subscription Leak Hunter",
-      "keyword": "SUBS",
-      "guide": "https://autopilotoi.app/g/subs/"
-    },
-    "refund-agent": {
-      "display": "Refund Fighter",
-      "keyword": "REFUND",
-      "guide": "https://autopilotoi.app/g/refund/"
-    },
-    "bill-agent": {
-      "display": "Bill Lowering Coach",
-      "keyword": "BILL",
-      "guide": "https://autopilotoi.app/g/bill/"
-    },
-    "bundle": "all-money-agents"
+  {
+   "days": "Nov 3 to Nov 4",
+   "name": "flagship funnels",
+   "work": "Subscription Leak Hunter (subs-agent), Refund Fighter (refund-agent), Bill Lowering Coach (bill-agent): landing pages, demos, the All 5 Money Agents bundle, launch code in every CTA."
   },
-  "offer_code": {
-    "name": "LAUNCH30",
-    "percent_off": 30,
-    "products": [
-      "subs-agent",
-      "refund-agent",
-      "bill-agent",
-      "all-money-agents",
-      "raise-agent",
-      "debt-agent",
-      "shop-agent",
-      "video-agent",
-      "sell-agent",
-      "deposit-agent",
-      "tiktok-agents"
-    ],
-    "max_purchase_count": 100,
-    "until": "2026-11-11T03:00:00Z",
-    "link_format": "https://autopilotoi.gumroad.com/l/<permalink>/LAUNCH30",
-    "note": "List prices stay the same. The Gumroad sync creates the code on each product and deletes it after 'until'.",
-    "withdrawn": [
-      "workspace"
-    ],
-    "withdrawn_note": "2026-11-02: Office Autopilot is on hold (not retested), so no promo on it. Seb approved."
+  {
+   "days": "Nov 5 to Nov 7",
+   "name": "viral distribution",
+   "work": "Evidence backed formats, original factory reels (2 a day, autopost after the 85/100 gate), lead capture, Meta ad test behind the verified winner."
   },
-  "ads": {
-    "platform": "Meta (Adspirer, account 1615960133613424)",
-    "daily_usd": 10,
-    "cap_usd": 60,
-    "from": "2026-11-05",
-    "rule": "Boost only the verified winning reel (best purchases, then guide clicks, then retention). Traffic or sales objective to the guide page, never engagement. Pause at the cap, on Nov 10 23:59 ART, or if 3 days spend gives zero guide clicks.",
-    "status": "off",
-    "withdrawn": {
-      "at": "2026-11-02",
-      "by": "Seb",
-      "quote": "Fix it",
-      "why": "Sales recovery plan: no paid ads while tracking is broken (no Meta Pixel). Needs Seb's explicit yes and a live pixel to restart."
-    }
-  },
-  "approvals": [
-    {
-      "what": "Standing autopost: factory reels that pass the 85/100 gate post 2 a day without per post approval, Nov 1 to Nov 10 only, then back to approval based",
-      "quote": "Yes, 10 days only (Recommended)"
-    },
-    {
-      "what": "Push fixes and content to autopilotoi.app, landing pages and Gumroad product descriptions without asking each time, Nov 1 to Nov 10, no price changes",
-      "quote": "Yes, 10 days only (Recommended)"
-    },
-    {
-      "what": "Meta ads, $10 a day, $60 total cap, behind the best performing reel from day 5",
-      "quote": "$10/day, $60 cap",
-      "withdrawn": "2026-11-02, Seb: \"Fix it\" (no ads until the pixel is live and Seb approves again)"
-    },
-    {
-      "what": "Launch discount code up to 30% off until Nov 10, list prices unchanged",
-      "quote": "Yes, up to 30% (Recommended)"
-    },
-    {
-      "what": "News and prompt carousels autopost on Instagram, TikTok, Threads and X without per post approval when they pass the gate (every claim confirmed by 2 trusted sources, 85/100 quality score, no real people's photos, no logos as the main image), Nov 1 to Nov 10 only",
-      "quote": "Yes, autopost to Nov 10 (Recommended)",
-      "at": "2026-10-31T22:55-03:00"
-    }
-  ],
-  "approved_by": "Seb",
-  "approved_at": "2026-10-31T20:36-03:00",
-  "channel": "chat",
-  "still_needs_seb": [
-    "Any list price change",
-    "Any new paid tool or subscription",
-    "Ad spend above $60",
-    "Email broadcasts to the Kit list",
-    "Refunds and customer disputes",
-    "Autopost after Nov 10"
-  ],
-  "rules": [
-    "Purchases and profit over views. Every reel sells a live product or a flagship.",
-    "Keep the factory reel format: black and neon green factory top half, agent working live bottom half, strong hook, real demonstration, sample data labeled, product or free guide CTA.",
-    "85/100 quality gate before any post. Never fabricate metrics; missing data is MISSING.",
-    "No new agents or infrastructure unless a check proves something is broken.",
-    "Instagram 'Comment X' only for keywords in config/manychat.json; TikTok, Threads and X use link in bio or a direct link.",
-    "Respect cadence.max_per_day and cadence.slots_art on every network; check Metricool scheduled posts for the day before adding anything."
-  ],
-  "carousels": {
-    "news_desk": "hourly, all day (Seb: 'Every hour, all day')",
-    "daily_mix": "2 factory reels + 1 prompts carousel + breaking news when a big verified story drops (Seb: '2 reels + 1 prompts post + news (Recommended)')",
-    "news_cap_per_day": 3,
-    "prompts_slot_art": "17:30",
-    "quiet_hours_art": "00:30 to 07:30 (news found then posts at 07:30)",
-    "queue": "queue/car/<id>.json",
-    "renderer": "python3 tools/carousel/build.py <id>"
-  },
-  "cadence": {
-    "set_by": "Seb 2026-11-01: 'Thin everything out so that we don't over post, make sure everything you do is backed by real information and pick the best time'",
-    "max_per_day": {
-      "instagram": 2,
-      "tiktok": 3,
-      "threads": 3,
-      "twitter": 3
-    },
-    "slots_art": {
-      "instagram": [
-        "10:00",
-        "18:00"
-      ],
-      "tiktok": [
-        "10:00",
-        "12:00",
-        "18:00"
-      ],
-      "threads": [
-        "10:00",
-        "12:00",
-        "18:00"
-      ],
-      "twitter": [
-        "10:00",
-        "12:00",
-        "18:00"
-      ]
-    },
-    "instagram_mix": "10:00 conversion reel (flagships first during LAUNCH30), 18:00 news or prompts carousel",
-    "breaking_news": "never adds a post over the cap; it takes the next open slot or replaces the lowest priority post in it (that post goes to draft)",
-    "evidence": {
-      "best_times": "Metricool getBestTimeToPostByNetwork for brand 7761544, Nov 1 to 7: Instagram peaks 10:00 every day (weekday values 4900 to 6700) with a second peak 17:00 to 18:00; TikTok peaks 10:00, 12:00 and 18:00. X best times not available (Metricool 403); Threads not supported by the endpoint, so they use the same slots.",
-      "frequency": "Kontentino 2026: feed posts 3 to 5 per week, Reels 4 to 7 per week. socialcal.app: effective feed ceiling about 1 per day. TikTok creator resources: 1 to 4 per day."
-    },
-    "draft_bank": "Posts over the cap were moved to Metricool drafts (not deleted). The operator may promote one into an open slot when its topic or format is a proven winner."
-  },
-  "focus": {
-    "since": "2026-11-02",
-    "by": "Seb",
-    "quote": "Fix it",
-    "offer": "Front Desk Kit $39 (/front-desk/) with the free Front Desk Starter (/brain/) as entry",
-    "parked": "$10 money agents and Office Autopilot: no new posts or CTAs; LAUNCH30 not mentioned in new content",
-    "instagram_keyword": "AGENTS (ManyChat confirmed; DMs autopilotoi.app/free/, which leads with the Front Desk Kit)"
+  {
+   "days": "Nov 8 to Nov 10",
+   "name": "optimize",
+   "work": "Real traffic and sales only: fix the weakest funnel step, double down on verified winners, cut losers."
   }
+ ],
+ "flagships": {
+  "subs-agent": {
+   "display": "Subscription Leak Hunter",
+   "keyword": "SUBS",
+   "guide": "https://autopilotoi.app/g/subs/"
+  },
+  "refund-agent": {
+   "display": "Refund Fighter",
+   "keyword": "REFUND",
+   "guide": "https://autopilotoi.app/g/refund/"
+  },
+  "bill-agent": {
+   "display": "Bill Lowering Coach",
+   "keyword": "BILL",
+   "guide": "https://autopilotoi.app/g/bill/"
+  },
+  "bundle": "all-money-agents"
+ },
+ "offer_code": {
+  "name": "LAUNCH30",
+  "percent_off": 30,
+  "products": [
+   "subs-agent",
+   "refund-agent",
+   "bill-agent",
+   "all-money-agents",
+   "raise-agent",
+   "debt-agent",
+   "shop-agent",
+   "video-agent",
+   "sell-agent",
+   "deposit-agent",
+   "tiktok-agents"
+  ],
+  "max_purchase_count": 100,
+  "until": "2026-11-11T03:00:00Z",
+  "link_format": "https://autopilotoi.gumroad.com/l/<permalink>/LAUNCH30",
+  "note": "List prices stay the same. The Gumroad sync creates the code on each product and deletes it after 'until'.",
+  "withdrawn": [
+   "workspace"
+  ],
+  "withdrawn_note": "2026-11-02: Office Autopilot is on hold (not retested), so no promo on it. Seb approved."
+ },
+ "ads": {
+  "platform": "Meta (Adspirer, account 1615960133613424)",
+  "daily_usd": 10,
+  "cap_usd": 60,
+  "from": "2026-11-05",
+  "rule": "Boost only the verified winning reel (best purchases, then guide clicks, then retention). Traffic or sales objective to the guide page, never engagement. Pause at the cap, on Nov 10 23:59 ART, or if 3 days spend gives zero guide clicks.",
+  "status": "off",
+  "withdrawn": {
+   "at": "2026-11-02",
+   "by": "Seb",
+   "quote": "Fix it",
+   "why": "Sales recovery plan: no paid ads while tracking is broken (no Meta Pixel). Needs Seb's explicit yes and a live pixel to restart."
+  }
+ },
+ "approvals": [
+  {
+   "what": "Standing autopost: factory reels that pass the 85/100 gate post 2 a day without per post approval, Nov 1 to Nov 10 only, then back to approval based",
+   "quote": "Yes, 10 days only (Recommended)"
+  },
+  {
+   "what": "Push fixes and content to autopilotoi.app, landing pages and Gumroad product descriptions without asking each time, Nov 1 to Nov 10, no price changes",
+   "quote": "Yes, 10 days only (Recommended)"
+  },
+  {
+   "what": "Meta ads, $10 a day, $60 total cap, behind the best performing reel from day 5",
+   "quote": "$10/day, $60 cap",
+   "withdrawn": "2026-11-02, Seb: \"Fix it\" (no ads until the pixel is live and Seb approves again)"
+  },
+  {
+   "what": "Launch discount code up to 30% off until Nov 10, list prices unchanged",
+   "quote": "Yes, up to 30% (Recommended)"
+  },
+  {
+   "what": "News and prompt carousels autopost on Instagram, TikTok, Threads and X without per post approval when they pass the gate (every claim confirmed by 2 trusted sources, 85/100 quality score, no real people's photos, no logos as the main image), Nov 1 to Nov 10 only",
+   "quote": "Yes, autopost to Nov 10 (Recommended)",
+   "at": "2026-10-31T22:55-03:00"
+  }
+ ],
+ "approved_by": "Seb",
+ "approved_at": "2026-10-31T20:36-03:00",
+ "channel": "chat",
+ "still_needs_seb": [
+  "Any list price change",
+  "Any new paid tool or subscription",
+  "Ad spend above $60",
+  "Email broadcasts to the Kit list",
+  "Refunds and customer disputes",
+  "Autopost after Nov 10"
+ ],
+ "rules": [
+  "Purchases and profit over views. Every reel sells a live product or a flagship.",
+  "Keep the factory reel format: black and neon green factory top half, agent working live bottom half, strong hook, real demonstration, sample data labeled, product or free guide CTA.",
+  "85/100 quality gate before any post. Never fabricate metrics; missing data is MISSING.",
+  "No new agents or infrastructure unless a check proves something is broken.",
+  "Instagram 'Comment X' only for keywords in config/manychat.json; TikTok, Threads and X use link in bio or a direct link.",
+  "Respect cadence.max_per_day and cadence.slots_art on every network; check Metricool scheduled posts for the day before adding anything."
+ ],
+ "carousels": {
+  "news_desk": "hourly, all day (Seb: 'Every hour, all day')",
+  "daily_mix": "2 factory reels + 1 prompts carousel + breaking news when a big verified story drops (Seb: '2 reels + 1 prompts post + news (Recommended)')",
+  "news_cap_per_day": 3,
+  "prompts_slot_art": "17:30",
+  "quiet_hours_art": "00:30 to 07:30 (news found then posts at 07:30)",
+  "queue": "queue/car/<id>.json",
+  "renderer": "python3 tools/carousel/build.py <id>"
+ },
+ "cadence": {
+  "set_by": "Seb 2026-11-04: 'treads should be mass posting waiting for viral so everything we post needs to be tailored to the platform ig we dont spam and then TikTok we post videos about a TikTok specific content agent ... X same thing find what sells' (previous: Seb 2026-11-01 thin out)",
+  "max_per_day": {
+   "instagram": 2,
+   "tiktok": 3,
+   "threads": 8,
+   "twitter": 5
+  },
+  "slots_art": {
+   "instagram": [
+    "10:00",
+    "18:00"
+   ],
+   "tiktok": [
+    "10:00",
+    "12:00",
+    "18:00"
+   ],
+   "threads": [
+    "08:30",
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00",
+    "20:00",
+    "22:00"
+   ],
+   "twitter": [
+    "09:00",
+    "12:00",
+    "15:00",
+    "18:00",
+    "21:00"
+   ]
+  },
+  "instagram_mix": "10:00 reel, 18:00 carousel. Only the best work, never filler.",
+  "breaking_news": "never adds a post over the cap; it takes the next open slot or replaces the lowest priority post in it (that post goes to draft)",
+  "evidence": {
+   "best_times": "Metricool getBestTimeToPostByNetwork for brand 7761544, Nov 1 to 7: Instagram peaks 10:00 every day (weekday values 4900 to 6700) with a second peak 17:00 to 18:00; TikTok peaks 10:00, 12:00 and 18:00. X best times not available (Metricool 403); Threads not supported by the endpoint, so they use the same slots.",
+   "frequency": "Kontentino 2026: feed posts 3 to 5 per week, Reels 4 to 7 per week. socialcal.app: effective feed ceiling about 1 per day. TikTok creator resources: 1 to 4 per day."
+  },
+  "draft_bank": "Posts over the cap were moved to Metricool drafts (not deleted). The operator may promote one into an open slot when its topic or format is a proven winner.",
+  "platform_rules": "growth-os/MANAGER.md section 3 (Threads text native high volume, IG no spam, TikTok videos only for TikTok creators and sellers, X test hooks and pump winners)"
+ },
+ "focus": {
+  "since": "2026-11-04",
+  "by": "Seb",
+  "quote": "pretend it was your business and you had to make it make money ... find what works and double down",
+  "playbook": "growth-os/MANAGER.md",
+  "offers": {
+   "instagram_threads_x": "4 owner tools $10 each, Owner Toolkit $24 (https://autopilotoi.app/#tools), Front Desk Kit $39 (/front-desk/), free starter (/#free)",
+   "tiktok": "Video Agent, the TikTok content agent, $10 and TikTok Agents bundle $24 (https://autopilotoi.app/store/video/)"
+  },
+  "parked": "$10 money agents, Office Autopilot, Workspace: no new posts or CTAs; LAUNCH30 not mentioned",
+  "instagram_keyword": "TOOLS once Seb adds it to config/manychat.json confirmed; until then AGENTS or link in bio",
+  "previous": "2026-11-02 Front Desk only focus (Seb: 'Fix it')"
+ }
 }
