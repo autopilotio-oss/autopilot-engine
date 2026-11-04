@@ -218,7 +218,34 @@ def cover_stack(p, n):
             f'<div class="foot1">SWIPE FOR THE FULL STORY &#9656;</div></div>')
 
 
+def brk(s):
+    """Prompt text: escape, then mark every [bracket] as a fill in chip."""
+    return re.sub(r"\[([^\]]+)\]", r'<b class="fill">[\1]</b>', E(s))
+
+
+def grid(p, i, n, sl):
+    """Prompt pack page (Seb, Nov 4: '36 prompts' packs): folder kicker, big category title, 6 prompt cards in a 2x3
+    grid (lime and white, checkerboard), a progress bar of all folders, swipe cue. Spec slide:
+    {"cat": "Get paid", "cards": [{"t": "Late invoice", "p": "Write ... [name] ..."}, ...6]}; post level "folders": [...]."""
+    folders = p.get("folders") or []
+    k = sl.get("no") or (folders.index(sl["cat"]) + 1 if sl["cat"] in folders else i - 1)
+    start = sl.get("start", (k - 1) * len(sl["cards"]) + 1)
+    cards = "".join(
+        f'<div class="gc{" lm" if (j // 2 + j) % 2 == 0 else ""}"><div class="t gc-t"><span class="gc-n">{start + j:02d}</span>{E(c["t"])}</div>'
+        f'<div class="b gc-p">{brk(c["p"])}</div></div>' for j, c in enumerate(sl["cards"]))
+    segs = "".join(f'<div class="gs{" on" if m + 1 == k else (" done" if m + 1 < k else "")}"><i></i><span>{E(f)}</span></div>'
+                   for m, f in enumerate(folders))
+    return (f'<div class="s gr" id="s{i}">{GRAIN}<div class="pg">{i}/{n}</div>'
+            f'<div class="fx Cc gr-k">FOLDER {k:02d} / {len(folders):02d} &middot; COPY. PASTE. SWAP THE [BRACKETS].</div>'
+            f'<div class="fx A gr-h"><span class="l">{k:02d}</span> {E(sl["cat"])}</div>'
+            f'<div class="gr-grid">{cards}</div><div class="gr-bar">{segs}</div>'
+            f'<div class="handle"><img class="hlogo" src="/docs/logo.png">SAVE THIS &middot; @AUTOPILOT.OI</div>'
+            f'<div class="fx Cc gr-sw">SWIPE &#9656;</div></div>')
+
+
 def inner(p, i, n, sl):
+    if "cards" in sl:
+        return grid(p, i, n, sl)
     if "prompt" in sl:
         body = (f'<div class="num">PROMPT {i - 1}</div><div class="t">{lime(sl["title"])}</div>'
                 f'<div class="pr"><small>COPY THIS</small>{E(sl["prompt"])}</div>' + (f'<div class="why">{lime(sl["why"])}</div>' if sl.get("why") else ""))
@@ -278,6 +305,8 @@ async function go(){await document.fonts.ready;
    const P=box.parentElement;
    if(box.dataset.w){while(P.getBoundingClientRect().bottom>1240&&k>.4){k-=.03;apply()}}
    else{while(P.getBoundingClientRect().top<560&&k>.4){k-=.03;apply()}}}
+ for(const g of document.querySelectorAll('.gr-grid')){let f=26;const cs=[...g.querySelectorAll('.gc')],ps=[...g.querySelectorAll('.gc-p')];
+   while(cs.some(c=>c.scrollHeight>c.clientHeight+1)&&f>17){f-=.5;ps.forEach(e=>e.style.fontSize=f+'px')}}
  for(const el of document.querySelectorAll('.fit2')){const b=el.parentElement;let k=1;while(el.scrollHeight>b.clientHeight&&k>.5){k-=.04;el.style.zoom=k}}
  try{TYPESET()}catch(e){window.QA=[{slide:0,level:'error',msg:'typeset crashed: '+e.message}]}
  document.body.dataset.ready=1}
