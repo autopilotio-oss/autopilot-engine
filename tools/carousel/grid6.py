@@ -79,10 +79,11 @@ def size_for(g, width, cap):
 def render(g):
     lay = g.get("layout") or LAYOUTS[int(g.get("k", 0)) % 3]
     src = f'/docs/media/car/photos/{g["photo"]}'
+    bg = g.get("bg", "center 30%/cover")
     seed = int(g.get("no", 3))
     sub = E(g.get("sub", ""))
     if lay == "poster":
-        out = (f'<div data-push="1" style="position:absolute;inset:0;background:url(\'{src}.jpg\') center 30%/cover;{BW}"></div>'
+        out = (f'<div data-push="1" style="position:absolute;inset:0;background:url(\'{src}.jpg\') {bg};{BW}"></div>'
                f'<div style="position:absolute;inset:0;background:linear-gradient(#0b0b0b88,#0b0b0b00 30%)"></div>')
         out += torn_panel(760, LIME, seed, 620)
         out += chrome(g, WHITE, INK)
@@ -94,7 +95,8 @@ def render(g):
         return out, "bg-black"
     if lay == "frame":
         out = (f'<div style="position:absolute;left:430px;top:150px;width:580px;height:1050px;overflow:hidden;z-index:1">'
-               f'<div data-push="1" style="position:absolute;inset:0;background:url(\'{src}.jpg\') center/cover;{BW}"></div></div>'
+               f'<div data-push="1" style="position:absolute;inset:0;background:url(\'{src}.jpg\') {bg};{BW} brightness(.72)"></div>'
+               f'<div style="position:absolute;inset:0;background:linear-gradient(90deg,#0b0b0bcc,#0b0b0b00 55%)"></div></div>'
                f'<div style="position:absolute;left:410px;top:130px;width:580px;height:1050px;border:3px solid {LIME};z-index:2"></div>')
         out += chrome(g, WHITE, LIME)
         size = size_for(g, 900, 132)
