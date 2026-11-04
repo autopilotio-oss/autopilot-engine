@@ -91,7 +91,7 @@
   var BIG = 'h1,h2,h3,.b5,[data-lava-avoid],.ag-pr,.lab,.st5 b,.ag-n';
   var els = [], big = [], rects = [], rectsBig = [];
   function collect() {
-    els = Array.prototype.filter.call(document.querySelectorAll(SEL), function (el) { return !el.closest('.bd,.ph,.tb,.sm,.rc,.tg>div,.tk>div,.cp5'); });
+    els = Array.prototype.filter.call(document.querySelectorAll(SEL), function (el) { return !el.closest('.bd,.ph,.tb,.sm,.rc,.tg>div,.tk>div,.cp5,.dk'); });
     big = els.map(function (el) { return el.matches(BIG) || !!el.closest('[data-lava-avoid]'); });
   }
   function readRects() {

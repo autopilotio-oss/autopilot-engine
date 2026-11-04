@@ -80,6 +80,48 @@ html{background:#ecece7}body.v5{background:transparent!important}
 .rc .ft{margin-top:12px;font-size:12px;color:var(--mt)}
 .tk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.tk>div{border:1.5px solid var(--ik);border-radius:4px;padding:30px;background:var(--wh)}.tk h3{font:400 clamp(22px,2.2vw,30px)/1.02 var(--W);text-transform:uppercase;letter-spacing:-.02em;margin:12px 0 14px}.tk p{color:#33332e;margin:0 0 14px;font-size:15.5px}.tk ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}.tk li{padding-left:22px;position:relative;font-size:15.5px;line-height:1.45;color:#22221e}.tk li:before{content:"";position:absolute;left:0;top:.45em;width:10px;height:10px;background:var(--l);border:1.5px solid var(--ik);border-radius:2px}.tk li b{font-weight:700;color:var(--ik)}
 @media(max-width:1000px){.tk{grid-template-columns:1fr}.tk>div{padding:24px}}
+/* How we work: dark band that pops */
+.dk{position:relative;background:#0b0b0b;color:#f2f2ee;overflow:hidden;isolation:isolate;border-bottom:1.5px solid var(--ik)}
+.dk .w5{position:relative;z-index:1}
+.dk-glow{position:absolute;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(520px 420px at var(--mx,70%) var(--my,30%),rgba(212,255,58,.16),transparent 70%),radial-gradient(700px 500px at 10% 110%,rgba(212,255,58,.07),transparent 70%);transition:background .2s}
+@media(pointer:fine){html.fx .dk-glow{animation:dkdrift 14s ease-in-out infinite alternate}}
+@keyframes dkdrift{0%{transform:translate3d(-3%,0,0)}100%{transform:translate3d(3%,4%,0)}}
+.dk .lab{color:#9a9b92}.dk h2{color:#fff}.dk .sh5 p{color:#c9c9c2}
+.dk h2 em{color:#0b0b0b}
+html.fx .dk .sh5 h2 em{background:linear-gradient(var(--l),var(--l)) no-repeat 0 0/0% 100%;transition:background-size .9s cubic-bezier(.7,0,.2,1) .35s}
+html.fx .dk .sh5.in h2 em{background-size:100% 100%}
+.dk .tk{perspective:1200px}
+.dk .tk>div{position:relative;background:linear-gradient(180deg,#151515,#0f0f0f);border:1px solid #2a2a27;border-radius:10px;padding:32px 30px 30px;overflow:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .4s,box-shadow .5s}
+.dk .tk>div:before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--l);transform:scaleX(0);transform-origin:0 50%;transition:transform 1s cubic-bezier(.7,0,.2,1) .25s}
+.dk .tk>div.in:before,html:not(.fx) .dk .tk>div:before{transform:scaleX(1)}
+.dk .tk>div:hover{transform:translateY(-8px);border-color:rgba(212,255,58,.55);box-shadow:0 30px 70px -30px rgba(212,255,58,.35)}
+.dk .tk h3{color:#fff}.dk .tk p{color:#bdbdb5}.dk .tk li{color:#dcdcd5}.dk .tk li b{color:var(--l)}
+.dk .tk li:before{background:transparent;border:1.5px solid var(--l);transition:background .35s}
+.dk .tk li:after{content:"";position:absolute;left:3.5px;top:.45em;margin-top:1.5px;width:3.5px;height:6px;border:solid #0b0b0b;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.dk .tk>div.in li:before,html:not(.fx) .dk .tk li:before{background:var(--l)}
+.dk .tk>div.in li:after,html:not(.fx) .dk .tk li:after{transform:rotate(45deg) scale(1)}
+html.fx .dk [data-r].tk>div,html.fx .dk .tk>[data-r]{transform:translateY(60px) rotateX(14deg);transform-origin:50% 100%}
+html.fx .dk .tk>[data-r].in{transform:none}
+html.fx .dk .tk li{opacity:0;transform:translateX(-14px);transition:opacity .5s,transform .6s cubic-bezier(.2,.8,.2,1)}
+html.fx .dk .tk>div.in li{opacity:1;transform:none}
+html.fx .dk .tk>div.in li:nth-child(1),html.fx .dk .tk>div.in li:nth-child(1):before,html.fx .dk .tk>div.in li:nth-child(1):after{transition-delay:0.45s}
+html.fx .dk .tk>div.in li:nth-child(2),html.fx .dk .tk>div.in li:nth-child(2):before,html.fx .dk .tk>div.in li:nth-child(2):after{transition-delay:0.61s}
+html.fx .dk .tk>div.in li:nth-child(3),html.fx .dk .tk>div.in li:nth-child(3):before,html.fx .dk .tk>div.in li:nth-child(3):after{transition-delay:0.77s}
+html.fx .dk .tk>div.in li:nth-child(4),html.fx .dk .tk>div.in li:nth-child(4):before,html.fx .dk .tk>div.in li:nth-child(4):after{transition-delay:0.93s}
+html.fx .dk .tk>div.in li:nth-child(5),html.fx .dk .tk>div.in li:nth-child(5):before,html.fx .dk .tk>div.in li:nth-child(5):after{transition-delay:1.09s}
+/* the "no" card: each reason gets crossed out like a decision made */
+.dk .tk>.no li:before{border-color:#6d6d66}.dk .tk>.no.in li:before,html:not(.fx) .dk .tk>.no li:before{background:#2a2a27}
+.dk .tk>.no li:after{left:2px;top:.45em;margin-top:5px;width:9px;height:0;border:0;border-top:2px solid var(--l);transform:rotate(-45deg) scale(0)}
+.dk .tk>.no.in li:after,html:not(.fx) .dk .tk>.no li:after{transform:rotate(-45deg) scale(1)}
+/* the first week card: a timeline that draws itself */
+.dk .tl ul{position:relative;gap:16px}
+.dk .tl ul:before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--l),rgba(212,255,58,.15));transform:scaleY(0);transform-origin:50% 0;transition:transform 1.4s cubic-bezier(.7,0,.2,1) .45s}
+.dk .tl.in ul:before,html:not(.fx) .dk .tl ul:before{transform:scaleY(1)}
+.dk .tl li:before{border-radius:50%;box-shadow:0 0 0 4px #121212}
+.dk .tl.in li:before{animation:dkpulse 2.4s ease-out infinite}
+.dk .tl li:nth-child(2):before{animation-delay:.6s!important}.dk .tl li:nth-child(3):before{animation-delay:1.2s!important}.dk .tl li:nth-child(4):before{animation-delay:1.8s!important}
+@keyframes dkpulse{0%{box-shadow:0 0 0 4px #121212,0 0 0 4px rgba(212,255,58,.5)}70%{box-shadow:0 0 0 4px #121212,0 0 0 14px rgba(212,255,58,0)}100%{box-shadow:0 0 0 4px #121212,0 0 0 14px rgba(212,255,58,0)}}
+@media(prefers-reduced-motion:reduce){.dk-glow,.dk .tl li:before{animation:none!important}}
 /* section heads */
 .s5{padding:88px 0;border-bottom:1.5px solid var(--ik)}
 .sh5{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:44px}
@@ -256,6 +298,10 @@ if('IntersectionObserver' in window&&!R){var io=new IntersectionObserver(functio
   if(e.target.classList.contains('tw'))setTimeout(function(){play(e.target,true)},400);
   if(e.target.classList.contains('bd')){var sv=$('.sv b',e.target);if(sv)setTimeout(function(){count(sv,15.96,900)},1400)}}})},{threshold:.18,rootMargin:'0px 0px -6% 0px'});els.forEach(function(el){io.observe(el)})}
 else els.forEach(function(el){el.classList.add('in')});
+/* How we work: lime spotlight follows the pointer, cards tilt toward it */
+var dk=$('#why');
+if(dk&&!R&&matchMedia('(pointer:fine)').matches){dk.addEventListener('pointermove',function(e){var b=dk.getBoundingClientRect();dk.style.setProperty('--mx',((e.clientX-b.left)/b.width*100+20/1.4).toFixed(1)+'%');dk.style.setProperty('--my',((e.clientY-b.top)/b.height*100+20/1.4).toFixed(1)+'%')});
+ $$('.tk>div',dk).forEach(function(c){c.addEventListener('mousemove',function(e){var b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;c.style.transform='translateY(-8px) perspective(900px) rotateY('+(x*8).toFixed(2)+'deg) rotateX('+(-y*8).toFixed(2)+'deg)'});c.addEventListener('mouseleave',function(){c.style.transform=''})})}
 /* the wide screen lifts flat as it scrolls into view */
 var tw=$('.tw'),tb=tw&&$('.tb',tw);
 if(tb&&!R){var tick=false;function upd(){tick=false;var r=tw.getBoundingClientRect(),vh=innerHeight,p=Math.max(0,Math.min(1,(vh-r.top)/(vh*0.8)));tb.style.setProperty('--rx',(24*(1-p)).toFixed(2)+'deg');tb.style.setProperty('--sc',(0.9+0.1*p).toFixed(3))}
@@ -283,7 +329,7 @@ def home():
 <div class="bot q" data-m="bot">Home Depot, $64 on Oct 12: work or home?</div>
 <div class="me" data-m="me">work</div><div class="bot" data-m="bot">Got it. Supplies is now <span data-count="676">$676</span>. Want me to always count Home Depot as work?</div></div>
 <div class="inp"><span>Type a word</span><i></i></div><div class="hb"></div></div></div>
-<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=20" defer></script>
+<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=21" defer></script>
 <div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
 <div class="ags">{rows}</div>
 <div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>
@@ -306,10 +352,10 @@ def home():
 <div class="inp"><span>Type a word</span><i></i></div></div></div><div class="hb"></div></div></div>
 <div class="pcap">Sample business and numbers. Every message waits for you to send it.</div></div>
 <div class="sp" style="margin-top:56px">{samples}</div></div></div>
-<div class="s5" id="why"><div class="w5"><div class="sh5"><div><div class="lab">Before you buy</div><h2>How we <em>work.</em></h2></div><p>Most AI tools sell you features. Here is what we believe, when we would tell you to skip us, and what your first week looks like.</p></div>
+<div class="s5 dk" id="why"><i class="dk-glow" aria-hidden="true"></i><div class="w5"><div class="sh5"><div><div class="lab">Before you buy</div><h2>How we <em>work.</em></h2></div><p>Most AI tools sell you features. Here is what we believe, when we would tell you to skip us, and what your first week looks like.</p></div>
 <div class="tk"><div><div class="lab">What we believe</div><h3>Save hours, not add homework.</h3><ul><li>One agent, one boring job. Nothing new to learn.</li><li>You stay in charge. Nothing sends, posts or pays without you.</li><li>Cheap enough to try. If it does not save you time, you get your money back.</li></ul></div>
-<div><div class="lab">When we would tell you no</div><h3>Don't buy what you won't use.</h3><p>We would rather you buy one agent you use every week than four you forget.</p><ul><li>Send two invoices a month? Skip the Invoice Chaser. A phone reminder is enough.</li><li>Get a review once a season? Use the free prompt below instead of the Review Desk.</li><li>Your accountant already sorts your receipts? You don't need the Bookkeeping Sorter.</li><li>Only need one job done? Buy that one for $9.99, not the bundle.</li></ul></div>
-<div><div class="lab">Your first week</div><h3>What it's like after you buy.</h3><ul><li><b>Minute 1.</b> You get the PDF right away.</li><li><b>Minute 15.</b> You paste one message and answer a few questions about your business. Your agent is set up.</li><li><b>Day 1.</b> You type one word, like "chase Dave", and read your first draft.</li><li><b>Every week after.</b> Same word, same result, in your voice. Stuck? Reply to your receipt and we help.</li></ul></div></div></div></div>
+<div class="no"><div class="lab">When we would tell you no</div><h3>Don't buy what you won't use.</h3><p>We would rather you buy one agent you use every week than four you forget.</p><ul><li>Send two invoices a month? Skip the Invoice Chaser. A phone reminder is enough.</li><li>Get a review once a season? Use the free prompt below instead of the Review Desk.</li><li>Your accountant already sorts your receipts? You don't need the Bookkeeping Sorter.</li><li>Only need one job done? Buy that one for $9.99, not the bundle.</li></ul></div>
+<div class="tl"><div class="lab">Your first week</div><h3>What it's like after you buy.</h3><ul><li><b>Minute 1.</b> You get the PDF right away.</li><li><b>Minute 15.</b> You paste one message and answer a few questions about your business. Your agent is set up.</li><li><b>Day 1.</b> You type one word, like "chase Dave", and read your first draft.</li><li><b>Every week after.</b> Same word, same result, in your voice. Stuck? Reply to your receipt and we help.</li></ul></div></div></div></div>
 <div class="s5" id="how"><div class="w5"><div class="sh5"><div><div class="lab">Setup</div><h2>Ready in about <em>15 minutes.</em></h2></div><p>No code, no apps to learn. If you can send a text, you can do this.</p></div>
 <div class="st5"><div><b>01</b><h3>Open Claude</h3><p>The free app or claude.ai. The free plan works.</p></div><div><b>02</b><h3>Paste one message</h3><p>It asks a few easy questions about your business.</p></div><div><b>03</b><h3>Type one word</h3><p>chase, reply, sort or week. Read the draft. Send it.</p></div></div></div></div>
 <div class="s5" id="free"><div class="w5"><div class="tg"><div><div class="lab">Free · 60 seconds</div><h3>Try it before you buy</h3><p>Paste this into Claude with a real review of your business. It writes the reply.</p>
