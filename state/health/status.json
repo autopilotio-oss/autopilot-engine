@@ -352,7 +352,7 @@
   "severity": "SEV-4"
  },
  "worker:trend_scout": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-3"
  },
  "worker:viral_lab": {
