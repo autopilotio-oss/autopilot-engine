@@ -132,3 +132,10 @@ Paused Nov 4 (reversible, re-enable in scheduled tasks): Viral Content Lab and t
 ## 9. Usage rule (Seb, Nov 4 2026: "optimize the usage ... i want more updates but ... the same")
 
 Same output and more updates, less usage. Every worker: partial clone, smallest data range, no re-reading, skip steps when nothing changed, no narration. Runs were cut from about 70 a day to about 30 (News Desk hourly to every 3h, analyst hourly to 4x, site improver 5x to 2x, draft factory 8x to 2x, Kit sync 8x to 3x), while Seb's updates went from 2 a day to 3. Apply the same rule to any new task for any of Seb's businesses.
+
+## 10. Instagram design system: THE ORGANISM (Seb, Nov 4 2026: "Better we are getting there")
+- Every IG drop is a ROW of 3 posts cut from one 21:9 render: LEARN (left), the organism chapter (middle), THE STORE (right). Full rules, chapters, title bank and the render prompt live in `tools/carousel/rows/ROADMAP.md`.
+- Build rows only with `tools/carousel/rows/row.py`. No other cover styles go on the IG grid.
+- Every title comes from the title bank formula in ROADMAP.md: short lines, payoff last line in lime, no dashes, no fake numbers.
+- Publish order R, M, L. Grid post count must be a multiple of 3 before a row drops.
+- Draft factory and News Desk: IG news and single posts stay off the grid unless Seb approves a row for them. Threads and X are unaffected.

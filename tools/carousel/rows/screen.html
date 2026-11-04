@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset=utf-8><link rel=stylesheet href="/tools/carousel/style.css"><style>
+body{margin:0;width:500px;height:600px;background:linear-gradient(160deg,#141613,#070807);color:#f2f2ee;position:relative;overflow:hidden}
+.a{position:absolute;left:34px;top:30px;font:700 13px C;letter-spacing:4px}.b{position:absolute;right:34px;top:30px;font:400 13px M;color:#D4FF3A;letter-spacing:2px}
+.k{position:absolute;left:34px;top:120px;font:400 14px M;letter-spacing:4px;color:#8d8d86}
+.h{position:absolute;left:30px;top:146px;font:400 96px/.9 A;text-transform:uppercase;white-space:nowrap}
+.p{position:absolute;left:34px;top:376px;font:400 64px/1 A;color:#D4FF3A}
+.btn{position:absolute;left:34px;right:34px;bottom:40px;height:64px;border-radius:14px;background:#D4FF3A;color:#0b0b0b;font:700 18px C;letter-spacing:4px;display:flex;align-items:center;justify-content:center}
+.ln{position:absolute;left:34px;right:34px;top:460px;height:1px;background:#2a2c28}
+</style></head><body><div id=x></div><script>
+const S=JSON.parse(decodeURIComponent(location.hash.slice(1)));const E=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+document.getElementById('x').innerHTML=`<div class=a>AUTOPILOT.OI</div><div class=b>STORE</div><div class=k>${E(S.kicker||'NEW KIT')}</div>
+<div class=h id=h>${S.product.map(E).join('<br>')}</div><div class=p>${E(S.price||'')}</div><div class=ln></div><div class=btn>${E(S.cta||'LINK IN BIO')}</div>`;
+document.fonts.ready.then(()=>{const h=document.getElementById('h');let s=96;while(h.scrollWidth>440&&s>40){s-=2;h.style.fontSize=s+'px'}window.READY=1});
+</script></body></html>
