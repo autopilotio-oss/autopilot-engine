@@ -32,8 +32,8 @@ TYPES = [("price", "A price question"), ("late", "A late night request"), ("chas
 # canonical points at /front-desk/ and they are noindex, so search sees one page.
 VARIANTS = {
  "main": {"path": "/front-desk/", "tag": "Setup kit · for service businesses", "trade": "detailing", "type": "price",
-          "h1": "Answer customer inquiries faster, <em>without writing every reply from scratch.</em>",
-          "lead": "A setup for your own Claude account. It learns your prices, rules and voice, then drafts replies, quotes and follow ups. You check each one and send it yourself.",
+          "h1": "Customer replies, <em>drafted for you.</em>",
+          "lead": "A setup for your own Claude account. It learns your prices and voice, then drafts replies, quotes and follow ups. You check each one and send it yourself.",
           "title": "Front Desk Kit · answer customer inquiries faster · AUTOPILOT.OI"},
  "after-hours": {"path": "/front-desk/after-hours/", "tag": "For detailing shops and mobile detailers", "trade": "detailing", "type": "late",
           "h1": "Still answering quotes after hours? <em>Get the reply drafted, then send it yourself.</em>",
@@ -68,17 +68,17 @@ def page(head, nav, foot, variant="main"):
     h = head(V["title"], "A setup kit for your own Claude account that drafts replies, quotes and follow ups from your real prices and rules. You check and send. One time price, 30 day refund.", "/front-desk/")
     if variant != "main":
         h = h.replace("</title>", '</title><meta name="robots" content="noindex,follow">', 1)
-    steps = "" if variant != "demo" else """<div class="sec"><div class="wrap"><h2 style="margin-bottom:16px">The setup, step by step</h2><div class="grid3">
+    steps = "" if variant != "demo" else """<div class="sec"><div class="wrap"><h2 style="margin-bottom:36px">The setup, step by step</h2><div class="grid3">
 <div class="card"><div class="k">1 · Make a Claude Project</div><p>In claude.ai open Projects, then New project, and add the kit PDF to the project files. Free plan works.</p></div>
 <div class="card"><div class="k">2 · Answer the interview</div><p>Paste the starter prompt from page 2. The setup agent asks 15 questions about your services, prices, hours and rules, then writes your Business Brain.</p></div>
 <div class="card"><div class="k">3 · Paste a message, type reply</div><p>Paste any customer message and type reply, quote or chase. Read the draft, fix anything, send it yourself.</p></div>
 </div><p class="label" style="margin-top:14px">A recorded walkthrough of a real setup is coming after our owner tests. Until then the demo above uses example businesses.</p></div></div>"""
     return h + nav("m") + f"""
-<div class="wrap hero grid2" style="align-items:start;gap:40px"><div>
+<div class="wrap hero grid2" style="align-items:center;gap:44px"><div>
 <span class="tagline live">{e(V["tag"])}</span>
-<h1 style="margin:20px 0 22px;font-size:clamp(34px,5.4vw,56px)">{V["h1"]}</h1>
+<h1 class="{"" if variant == "main" else "s"}" style="margin:22px 0 24px">{V["h1"]}</h1>
 <p class="lead">{e(V["lead"])}</p>
-<div style="display:flex;align-items:baseline;gap:10px;margin-top:26px"><span style="font:800 40px Inter;letter-spacing:-.03em">{PRICE}</span><span class="label">ONE TIME · 30 DAY REFUND</span></div>
+<div style="display:flex;align-items:baseline;gap:12px;margin-top:28px;flex-wrap:wrap"><span class="W" style="font-size:44px;line-height:1">{PRICE}</span><span class="label">ONE TIME · 30 DAY REFUND</span></div>
 <div style="margin-top:16px">{buy}</div>
 <p class="label" style="margin-top:12px;line-height:1.6">Runs in your Claude account ({e(O['claude_plan'][0].lower() + O['claude_plan'][1:]).replace('claude', 'Claude')}). It drafts; you send. Not an auto reply service.</p></div>
 <div class="ui" id="fdc"><div class="bar"><span>Front Desk Check</span><span>Sample output</span></div>
@@ -87,21 +87,20 @@ def page(head, nav, foot, variant="main"):
 <div class="msg" id="fdm"></div>
 <div class="draft"><div class="label" style="margin-bottom:8px">KIT DRAFT · YOU REVIEW AND SEND</div><div class="dr" id="fdd"></div></div>
 <div class="label" style="margin-top:12px;text-align:center;line-height:1.5">Written with the kit's reply rules for an example business.<br>Yours uses your own prices, rules and voice.</div></div></div>
-<div class="sec"><div class="wrap grid3">
-<div class="card"><div class="k" style="margin-bottom:12px">What you get</div><ul style="list-style:none;display:flex;flex-direction:column;gap:10px;color:#c4c9bd;font-size:15px">{inc}</ul></div>
+<div class="sec paper"><div class="wrap"><h2 style="margin-bottom:36px">What's <em>inside.</em></h2><div class="grid3">
+<div class="card prod"><div class="k" style="margin-bottom:4px">What you get</div><ul>{inc}</ul></div>
 <div class="card"><div class="k" style="margin-bottom:12px">Setup</div><p>Make a Claude Project, add the PDF, paste one starter prompt. The setup agent interviews you and builds your commands with you.</p><p class="label" style="margin-top:12px">{e(O['setup_time']).upper()}</p></div>
-<div class="card"><div class="k" style="margin-bottom:12px">What it won't do</div><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;color:#c4c9bd;font-size:15px">{nots}<li>Guess a price it doesn't know: it writes [CHECK]</li></ul></div></div></div>{steps}
-<div class="sec"><div class="wrap"><h2 style="margin-bottom:16px">Questions</h2>
+<div class="card"><div class="k" style="margin-bottom:12px">What it won't do</div><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;color:#3b3b36;font-size:15px">{nots}<li>Guess a price it doesn't know: it writes [CHECK]</li></ul></div></div></div></div>{steps}
+<div class="sec"><div class="wrap grid2" style="gap:44px"><div><h2>Questions</h2><div style="margin-top:28px">{buy}</div></div><div>
 <details><summary>Is this an app?</summary><p>No. It's a setup kit: a PDF with a starter prompt, the setup agent and the instructions it installs in a Claude Project. Everything runs in your own Claude account.</p></details>
 <details><summary>Do I need a paid Claude plan?</summary><p>No. Claude's free plan works. A paid plan gives you more usage.</p></details>
 <details><summary>I've never used Claude. Can I do this?</summary><p>Yes. Make a free account at claude.ai, then follow the 3 step plan in the PDF: make a Project, paste one prompt, answer the questions.</p></details>
 <details><summary>Why not just use ChatGPT?</summary><p>A blank chat starts from zero every time and will guess your prices. The kit interviews you once, saves your Business Brain in a Claude Project and drafts from it every time. When something is missing it writes [CHECK] instead of guessing.</p></details>
 <details><summary>What if it doesn't work for me?</summary><p>{e(O['refund'])}. Not working for you within 30 days? You get your money back.</p></details>
-{faqx}
-<div style="margin-top:34px">{buy}</div></div></div>
+{faqx}</div></div></div>
 <div class="sec"><div class="wrap"><div class="card" style="max-width:640px"><div class="k" style="margin-bottom:8px">Not ready to buy?</div>
 <p>Get the free Front Desk Starter and 5 short setup tips by email. Try it on a few real messages first.</p>
-<form class="kitform" data-source="frontdesk" data-page="fd_{variant}" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email" style="flex:1;min-width:200px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--g2);color:var(--tx);padding:0 12px;font:500 15px Inter"><button class="btn" type="submit">Send it</button></form>
+<form class="kitform" data-source="frontdesk" data-page="fd_{variant}" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email" style="flex:1;min-width:200px;height:54px;border-radius:999px;border:1px solid var(--line);background:var(--g1);color:var(--tx);padding:0 20px;font:500 16px var(--T)"><button class="btn" type="submit">Send it</button></form>
 <p class="label kitmsg" style="margin-top:10px">No spam. Unsubscribe anytime. Or <a href="/brain/?utm_source=site&utm_medium=fd_{variant}&utm_campaign=front_desk" style="text-decoration:underline">use it now without email</a>.</p></div></div></div>
-<style>.fdsel{{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}}@media (max-width:520px){{.fdsel{{grid-template-columns:1fr}}}}.sel{{width:100%;min-width:0;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--g2);color:var(--tx);padding:0 10px;font:600 14px Inter}}</style>
+<style>.fdsel{{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}}@media (max-width:520px){{.fdsel{{grid-template-columns:1fr}}}}.sel{{width:100%;min-width:0;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--g2);color:var(--tx);padding:0 10px;font:600 14px var(--T)}}</style>
 <script>(function(){{var S={data},t=document.getElementById('fdt'),k=document.getElementById('fdk');function r(){{var b=S[t.value],x=b.items[k.value];document.getElementById('fdb').textContent=b.biz.toUpperCase();document.getElementById('fdm').textContent=x[0];document.getElementById('fdd').textContent=x[1];try{{if(window.goatcounter)goatcounter.count({{path:'fdc/'+t.value+'/'+k.value,event:true}})}}catch(e){{}}}}t.value='{V["trade"]}';k.value='{V["type"]}';t.onchange=r;k.onchange=r;r();}})();</script>""" + KITJS + foot
