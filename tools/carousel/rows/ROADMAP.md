@@ -65,12 +65,26 @@ STORE (right)
 - A week of posts. / By Monday.   (Content Week)
 - The whole office. / One kit.   (Office Autopilot)
 
-## Runway / Nano Banana prompt template
+## Runway / Nano Banana prompt template (v2, Seb Nov 4: "needs to have a natural flow")
+v1 problems: the nerves stopped dead in the left panel, the model drew hard divider lines, cables pierced the subject like puppet strings, curves were stiff.
+v2 fixes: one seamless current of light that enters at the left edge and leaves at the right edge, a vertical spine of cables through the middle that continues into the rows above and below, nerves that grow out of the subject instead of stabbing into it.
 Swap CENTER and nothing else.
 
 ```
-Generate 1 image with Nano Banana. Ultra wide aspect ratio 21:9. This image will be cut into 3 vertical Instagram posts side by side, so think of it as 3 equal panels. Use the attached reference image as the exact style reference: same graphite void, haze, porcelain material, lime light, camera and lighting.
+Generate 1 image with Nano Banana. Ultra wide aspect ratio 21:9. Use the attached image only as a style reference for material, lighting, haze and color. It will be cut into 3 vertical posts later, but render ONE seamless continuous image: no panels, no borders, no dividing lines, no frames.
 
-One continuous cinematic scene, Octane realism, restrained and elegant. A dark graphite void with soft haze and faint volumetric light from above. In the CENTER panel: CENTER, white porcelain with fine panel seams, soft acid lime (#D4FF3A) light glowing from inside, suspended by thin glowing lime fiber optic cables coming from the top of the frame. Delicate white nerve fibers with lime light traveling through them flow outward horizontally from the subject, branching like a real nervous system. In the LEFT panel the nerves fade into mostly empty dark space, leaving the left two thirds of that panel clean and dark. In the RIGHT panel the nerves flow into and wrap around a floating matte black glass tablet, portrait orientation, tilted slightly, glowing faint lime from its edges, screen dark and blank. Fine film grain, shallow depth of field, deep shadows. Lots of negative space. No text, no letters, no logos, no watermark, no people, no full bodies.
+Restrained, elegant, cinematic 3D render, Octane realism, dark graphite void with soft haze and faint volumetric light from above, fine film grain.
+
+THE FLOW: one continuous current of delicate nerve fibers flows across the whole image like a slow river of light. It enters at the left edge at mid height as a thin loose stream, widens as it travels, curves gently in a soft S shape, passes through the subject, then narrows and leaves the right edge at mid height. The fibers are organic like real nerves and mycelium: soft curves, different thicknesses, a few fine branches, some fibers close to camera and out of focus, some far behind and hazy. They are white porcelain colored, and acid lime (#D4FF3A) light pulses travel along some of them. Nothing is straight, nothing is stiff.
+
+THE SPINE: a thin bundle of glowing lime fiber optic cables hangs from the top center of the image and continues below the subject out of the bottom center of the image, so the scene connects to whatever is above and below it.
+
+CENTER (middle third): CENTER. White porcelain with fine panel seams, soft lime light glowing from inside. The nerve fibers grow out of the subject naturally and become part of it. No cables stabbing into it, no puppet strings.
+
+RIGHT third: the current wraps loosely around a floating matte black glass tablet, portrait orientation, tilted slightly, edges glowing faint lime, screen dark and blank, centered in the right third.
+
+LEFT third: only the thin incoming stream at mid height and the soft haze. The upper half and lower half of the left third stay clean and dark.
+
+Lots of negative space. No text, no letters, no logos, no watermark, no people, no full bodies.
 ```
-Attach `ch01-render.png` as the reference every time so the world never drifts.
+Attach `ch01-render.png` as the style reference every time so the world never drifts.
