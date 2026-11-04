@@ -38,8 +38,7 @@ TOOLS = [
 ]
 def agent_rows():
     return "".join(f'''<div class="ag"><div class="ag-n">0{i}</div><div class="ag-p"><span class="ag-l">Problem</span><h3>{e(pb)}</h3></div><div class="ag-d"><span class="ag-l">The agent</span><b>{e(n)}</b><p>{e(d)}</p><span class="ag-t">You type <code>{e(cmd)}</code></span></div><div class="ag-b"><div class="ag-pr">${p}</div><a class="b5 buy" href="{GR}{perm}">Get it</a></div></div>''' for i, (n, p, perm, pb, d, cmd) in enumerate(TOOLS, 1))
-SAMPLES = [("Invoice Chaser", "chase Dave", "Hi Dave! Quick reminder that the $520 for Saturday's detail was due on the 14th. You can pay here: [your link]. Thanks! Mike"),
-           ("Review Desk", "reply", "Thanks so much, Jen! Glad the SUV came out spotless. See you next time. Mike, Northside Detail"),
+SAMPLES = [("Review Desk", "reply", "Thanks so much, Jen! Glad the SUV came out spotless. See you next time. Mike, Northside Detail"),
            ("Content Week", "week", "Mon: before and after of the Tacoma\nTue: 15 second tip, pet hair\nWed: behind the scenes, 6 AM setup\nThu: customer story\nFri: open slots this weekend")]
 FAQ = [("Is it a subscription?", "No. You pay once and keep it. No monthly fee from us."),
        ("Do I need tech skills?", "No. You copy one message into Claude and answer a few questions. The guide shows every tap."),
@@ -91,7 +90,7 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
 .fd{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:18px;padding:22px 0;border-top:1px solid var(--rl);border-bottom:1px solid var(--rl);font-size:16px}
 .fd b{font-weight:700}.fd a{font-weight:700;text-decoration:underline;text-underline-offset:4px}
 /* samples */
-.sp{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.sp>*{min-width:0}
+.sp{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.sp>*{min-width:0}
 .sm{background:var(--wh);border:1.5px solid var(--ik);border-radius:4px;display:flex;flex-direction:column}
 .sm .sh{display:flex;justify-content:space-between;gap:10px;padding:14px 18px;border-bottom:1.5px solid var(--ik);font:700 12px var(--T);letter-spacing:.12em;text-transform:uppercase}
 .sm .sh code{font:700 12.5px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0;text-transform:none;background:var(--ik);color:var(--l);padding:2px 6px;border-radius:3px}
@@ -145,6 +144,30 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
 @media(prefers-reduced-motion:reduce){.ph .a1,.ph .a2,.ph .a3,.ph .a4,.ph .a5{animation:none}}
 @media(max-width:1000px){.pw{justify-self:start}}@media(max-width:720px){.pw{justify-self:center;margin-top:8px}.ph{width:296px}}
 
+/* wide device mockup: original frame drawn in CSS */
+.tw{display:flex;flex-direction:column;align-items:center;gap:16px;margin:8px 0 0}
+.tb{position:relative;width:min(100%,860px);aspect-ratio:1.42/1;border-radius:44px;padding:12px;background:linear-gradient(150deg,#d9d6cf 0%,#8f8b84 22%,#cfccc5 45%,#77736d 78%,#bdb9b2 100%);box-shadow:0 0 0 1.5px #0b0b0b,inset 0 0 0 2px rgba(255,255,255,.35),0 50px 90px -30px rgba(11,11,11,.45),0 20px 30px -20px rgba(11,11,11,.4)}
+.tb .tk{position:absolute;height:4px;border-radius:2px;background:#8a867f}.tb .k1{top:-3px;right:14%;width:46px}.tb .k2{top:-3px;right:22%;width:46px}.tb .k3{right:-3px;top:22%;width:4px;height:60px}
+.tb .tsc{height:100%;border-radius:34px;background:#0e0e0e;overflow:hidden;color:#f3f3ef;font:500 13.5px/1.4 var(--T);display:flex;flex-direction:column}
+.tb .tsb{display:flex;justify-content:space-between;align-items:center;padding:12px 26px 6px;font:700 13px var(--T)}
+.tb .sig{display:flex;align-items:flex-end;gap:2px}.tb .sig i{width:3px;background:#f3f3ef;border-radius:1px}.tb .sig i:nth-child(1){height:4px}.tb .sig i:nth-child(2){height:6px}.tb .sig i:nth-child(3){height:8px}.tb .sig i:nth-child(4){height:10px}.tb .sig b{width:22px;height:11px;border:1.5px solid #f3f3ef;border-radius:3px;margin-left:5px;position:relative}.tb .sig b:after{content:"";position:absolute;inset:1.5px;right:5px;background:#f3f3ef;border-radius:1px}
+.tb .tgr{flex:1;display:grid;grid-template-columns:34% 1fr;min-height:0}
+.tb .tsd{border-right:1px solid #222;padding:10px 12px;display:flex;flex-direction:column;gap:4px}.tb .tsh{font:700 10.5px var(--T);letter-spacing:.14em;text-transform:uppercase;color:#8d8d86;padding:6px 8px 8px}
+.tb .ti{display:flex;align-items:center;gap:10px;padding:9px 8px;border-radius:12px}.tb .ti.on{background:#1f1f1f}.tb .ti b{display:block;font:700 13px var(--T)}.tb .ti span{font-size:11.5px;color:#8d8d86}
+.tb .tav{flex:none;width:28px;height:28px;border-radius:50%;background:#2a2a2a;color:#f3f3ef;display:flex;align-items:center;justify-content:center;font:400 12px var(--W)}.tb .ti.on .tav{background:var(--l);color:#0b0b0b}
+.tb .tmn{display:flex;flex-direction:column;min-width:0;min-height:0}.tb .tth{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;border-bottom:1px solid #222}.tb .tth b{font:700 14px var(--T)}.tb .tth span{font-size:11.5px;color:#8d8d86}
+.tb .tch{flex:1;display:flex;flex-direction:column;gap:8px;padding:12px 16px;overflow:hidden;min-height:0}
+.tb .me{align-self:flex-end;background:#2a2a2a;border-radius:16px 16px 4px 16px;padding:7px 12px;font-weight:600}
+.tb .bot{align-self:flex-start;background:#181818;border:1px solid #2a2a2a;border-radius:16px 16px 16px 4px;padding:9px 12px;width:92%}
+.tb .bh{font:700 10px var(--T);letter-spacing:.14em;text-transform:uppercase;color:#8d8d86;margin-bottom:5px}
+.tb .r{display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-bottom:1px solid #242424;font-variant-numeric:tabular-nums}.tb .r.tt{border:0;font-weight:700}
+.tb .dr{border-color:rgba(212,255,58,.55)}.tb .tac{display:flex;justify-content:flex-end;gap:8px;margin-top:9px}.tb .tac span{font:700 12px var(--T);padding:6px 12px;border-radius:9px;border:1px solid #333;color:#a2a39a}.tb .tac .ok{background:var(--l);border-color:var(--l);color:#0b0b0b}
+.tb .inp{margin:0 16px 10px;height:36px;border-radius:18px;background:#1d1d1d;display:flex;align-items:center;justify-content:space-between;padding:0 6px 0 14px;color:#77776f;font-size:12.5px}.tb .inp i{width:24px;height:24px;border-radius:50%;background:var(--l)}
+.tb .hb{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:140px;height:4px;border-radius:2px;background:#f3f3ef;opacity:.8}
+.tb .c1,.tb .c2,.tb .c3,.tb .c4{opacity:0}.tw.go .c1,.tw.go .c2,.tw.go .c3,.tw.go .c4{animation:up .5s both}.tw.go .c2{animation-delay:.5s}.tw.go .c3{animation-delay:1.2s}.tw.go .c4{animation-delay:1.8s}
+@media(prefers-reduced-motion:reduce){.tb .c1,.tb .c2,.tb .c3,.tb .c4{opacity:1;animation:none!important}}
+@media(max-width:860px){.tb .tsd{display:none}.tb .tgr{grid-template-columns:1fr}.tb{border-radius:32px;padding:9px}.tb .tsc{border-radius:24px;font-size:11.5px}.tb .tch{padding:8px 10px;gap:6px}.tb .tth{padding:8px 12px}.tb .tsb{padding:9px 18px 4px}.tb .hb{bottom:14px;width:90px}.tb .bot{width:100%}.tb .inp{display:none}}
+@media(max-width:520px){.tb{aspect-ratio:auto}.tb .tsc{min-height:420px}}
 </style>"""
 def home():
     rows = agent_rows()
@@ -173,7 +196,22 @@ def home():
 <div><div class="px"><s>$39.96</s><b>$24</b></div><div class="sv">You save $15.96</div><a class="b5 l buy" href="{GR}owner-toolkit">Get all 4 for $24</a></div></div>
 <div class="fd"><span><b>Run a service business that texts all day?</b> The Front Desk Kit drafts replies, quotes and follow ups from your real prices. $39.</span><a href="/front-desk/">See the Front Desk Kit</a></div></div></div>
 <div class="s5"><div class="w5"><div class="sh5"><div><div class="lab">What it writes</div><h2>One word in. <em>A draft out.</em></h2></div><p>The kind of thing you get back after one word. You read it, then send it.</p></div>
-<div class="sp">{samples}</div></div></div>
+<div class="tw"><div class="tb" role="img" aria-label="Example on a wide screen: the Invoice Chaser keeps a list of who owes you and drafts the reminder for Dave">
+<i class="tk k1"></i><i class="tk k2"></i><i class="tk k3"></i>
+<div class="tsc"><div class="tsb"><span>Wed 9:41</span><span class="sig"><i></i><i></i><i></i><i></i><b></b></span></div>
+<div class="tgr"><div class="tsd"><div class="tsh">Your agents</div>
+<div class="ti on"><span class="tav">I</span><div><b>Invoice Chaser</b><span>3 people owe you</span></div></div>
+<div class="ti"><span class="tav">R</span><div><b>Review Desk</b><span>2 new reviews</span></div></div>
+<div class="ti"><span class="tav">B</span><div><b>Bookkeeping Sorter</b><span>October sorted</span></div></div>
+<div class="ti"><span class="tav">C</span><div><b>Content Week</b><span>7 posts planned</span></div></div></div>
+<div class="tmn"><div class="tth"><b>Invoice Chaser</b><span>Example business</span></div>
+<div class="tch"><div class="me c1">owed</div>
+<div class="bot c2"><div class="bh">Who owes you</div><div class="r"><span>Dave · SUV detail</span><span>$520 · 7 days late</span></div><div class="r"><span>Laura · Interior</span><span>$150 · due Fri</span></div><div class="r"><span>Tom · Ceramic</span><span>$490 · due Mon</span></div><div class="r tt"><span>Still owed</span><span>$1,160</span></div></div>
+<div class="me c3">chase Dave</div>
+<div class="bot dr c4"><div class="bh">Draft · 1 week late · friendly but clear</div>Hi Dave, following up on invoice 1042 for $520, due Oct 14. Here's the link to pay: [your link]. Let me know if you have any questions. Mike<div class="tac"><span>Edit</span><span class="ok">Copy and send</span></div></div></div>
+<div class="inp"><span>Type a word</span><i></i></div></div></div><div class="hb"></div></div></div>
+<div class="pcap">Sample business and numbers. Every message waits for you to send it.</div></div>
+<div class="sp" style="margin-top:56px">{samples}</div></div></div>
 <div class="s5" id="how"><div class="w5"><div class="sh5"><div><div class="lab">Setup</div><h2>Ready in about <em>15 minutes.</em></h2></div><p>No code, no apps to learn. If you can send a text, you can do this.</p></div>
 <div class="st5"><div><b>01</b><h3>Open Claude</h3><p>The free app or claude.ai. The free plan works.</p></div><div><b>02</b><h3>Paste one message</h3><p>It asks a few easy questions about your business.</p></div><div><b>03</b><h3>Type one word</h3><p>chase, reply, sort or week. Read the draft. Send it.</p></div></div></div></div>
 <div class="s5" id="free"><div class="w5"><div class="tg"><div><div class="lab">Free · 60 seconds</div><h3>Try it before you buy</h3><p>Paste this into Claude with a real review of your business. It writes the reply.</p>
@@ -187,6 +225,7 @@ Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div>
 <div class="s5"><div class="w5"><div class="sh5"><div><div class="lab">Questions</div><h2>Before <em>you buy.</em></h2></div><p>Still stuck after you buy? Reply to your receipt and we help.</p></div><div class="fq">{faq}</div>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:40px"><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">Pick one · $9.99</a></div></div></div>
 <div class="sb" id="sb"><div><b>All 4 agents · $24</b><span>One payment · 30 day refund</span></div><a class="b5 l buy" href="{GR}owner-toolkit">Get them</a></div>
+<script>(function(){{var t=document.querySelector('.tw');if(t){{if('IntersectionObserver' in window){{var o=new IntersectionObserver(function(x){{if(x[0].isIntersecting){{t.classList.add('go');o.disconnect()}}}},{{threshold:.3}});o.observe(t)}}else t.classList.add('go')}}}})();</script>
 <script>(function(){{var s=document.getElementById('sb'),h=document.querySelector('.h5 .row');if(!('IntersectionObserver' in window)||!s||!h)return;new IntersectionObserver(function(x){{s.classList.toggle('on',!x[0].isIntersecting&&x[0].boundingClientRect.top<0)}}).observe(h)}})();</script>""" + FOOT
     return page.replace("<body>", '<body class="v5">', 1)
 
