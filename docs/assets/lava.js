@@ -123,7 +123,7 @@
       var r = G.cv.getBoundingClientRect();
       var s = Math.min(window.devicePixelRatio || 1, 2) * (r.width > 900 ? .5 : .6);
       var w = Math.max(2, Math.round(r.width * s)), h = Math.max(2, Math.round(r.height * s));
-      G.cv.width = w; G.cv.height = h; G.gl.viewport(0, 0, w, h); G.gl.uniform2f(G.uR, w, h);
+      if (G.cv.width !== w || G.cv.height !== h) { G.cv.width = w; G.cv.height = h; G.gl.viewport(0, 0, w, h); G.gl.uniform2f(G.uR, w, h); }
       return w / h;
     }
     function resize() { aspect = size(B); if (F) size(F); measure(); }
@@ -141,13 +141,13 @@
         }
       }
     }
-    function step(t) {
-      var dt = Math.min(.05, Math.max(.001, t - prevT || .016)); prevT = t;
-      var k = 1 + stir * 2.2; stir *= .95;
+    var ph = 4, relS = 0;
+    function step(t, dt) {
+      ph += dt * (1 + stir * .8); stir *= Math.pow(.05, dt);
       var rs = aspect < 1 ? Math.max(.42, aspect * 1.5) : (hero ? 1 : 1.55);
-      var sc = root.getBoundingClientRect(), rel = sc.height ? -sc.top / sc.height : 0; // scroll parallax: globs sit at different depths
+      var rel = relS; // scroll parallax: globs sit at different depths (eased, read once a frame)
       for (var i = 0; i < orb.length; i++) {
-        var o = orb[i], tt = t * k;
+        var o = orb[i], tt = ph;
         if (o.tail) continue;
         var side = !hero && aspect - freeX > .5; // wide strip: globs live in the open space right of the words
         var fx = freeX + .08, fw = aspect - fx;
@@ -206,16 +206,14 @@
       ptr.act = 1;
     }
     window.addEventListener('pointermove', function (e) { if (e.pointerType === 'mouse') setPtr(e.clientX, e.clientY); }, { passive: true });
-    window.addEventListener('touchmove', function (e) { var t = e.touches[0]; if (t) setPtr(t.clientX, t.clientY); }, { passive: true });
-    window.addEventListener('touchend', function () { ptr.act = 0; }, { passive: true });
     var lastY = window.scrollY;
-    window.addEventListener('scroll', function () { var y = window.scrollY; stir = Math.min(1, stir + Math.abs(y - lastY) / 300); lastY = y; }, { passive: true });
+    window.addEventListener('scroll', function () { var y = window.scrollY; stir = Math.min(1, stir + Math.abs(y - lastY) / 900); lastY = y; }, { passive: true });
 
-    var clock = 4, visible = true, last = 0, raf = 0, mt = 0;
-    window.addEventListener('resize', function () { resize(); step(clock); draw(clock); });
+    var clock = 4, visible = true, last = 0, raf = 0, mt = 0, acc = 0, H = 1 / 120;
+    window.addEventListener('resize', function () { resize(); draw(clock); });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
     resize();
-    for (var wi = 0; wi < 240; wi++) { clock += 1 / 60; step(clock); } // settle: nothing starts on top of words or the other metal
+    for (var wi = 0; wi < 480; wi++) { clock += H; step(clock, H); } // settle: nothing starts on top of words or the other metal
     draw(clock);
     back.classList.add('lava-on');
     if (reduce) return;
@@ -224,7 +222,10 @@
       if (!visible || document.hidden) return;
       var dt = last ? Math.min(.05, (now - last) / 1000) : .016; last = now; clock += dt;
       if ((mt += dt) > 1) { mt = 0; measure(); }
-      step(clock); draw(clock); raf = requestAnimationFrame(loop);
+      var sc = root.getBoundingClientRect(), target = sc.height ? -sc.top / sc.height : 0; relS += (target - relS) * Math.min(1, dt * 8);
+      acc += dt; var n = 0;
+      while (acc >= H && n < 8) { acc -= H; n++; step(clock - acc, H); }
+      draw(clock); raf = requestAnimationFrame(loop);
     }
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) { visible = es[0].isIntersecting; if (visible && !raf) { last = 0; raf = requestAnimationFrame(loop); } }, { rootMargin: '80px' }).observe(root);
