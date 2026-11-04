@@ -78,3 +78,7 @@
 
 ## 2026-11-04 18:40 ART: chapter 01 row paused
 - Seb: "I don't like any design". All 3 ch01 posts set to draft. IG has nothing scheduled until a direction is approved.
+
+## 2026-11-04 19:10 ART: first SIGNAL row scheduled on IG
+- Seb: "Make it let's post first 3 today 5 min between each post". Overrides the 2 per day IG rule for this row.
+- R 19:20, M 19:25, L 19:30 ART. Record: queue/rows/signal-r1.json. Grid goes 18 to 21.
