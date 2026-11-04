@@ -1,0 +1,20 @@
+{
+ "id": "review-agent",
+ "ep": "015-review-agent",
+ "kind": "product",
+ "hook": [
+  "More Google reviews",
+  "without the awkward ask"
+ ],
+ "keyword": "AGENTS",
+ "video": "https://autopilotoi.app/media/freel/review-agent.mp4",
+ "poster": "https://autopilotoi.app/media/freel/review-agent-poster.jpg",
+ "caption": {
+  "ig": "Type review and list the jobs you finished today. The Front Desk Kit writes a short thank you to each customer with your review link, in your voice. No pushy asks, no fake reviews, and you send every message yourself. Sample detailing business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+  "other": "Type review and list the jobs you finished today. The Front Desk Kit writes a short thank you to each customer with your review link, in your voice. No pushy asks, no fake reviews, and you send every message yourself. Sample detailing business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
+ },
+ "rendered_at": "2026-11-04T10:15:10+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
