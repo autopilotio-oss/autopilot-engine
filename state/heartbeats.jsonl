@@ -131,3 +131,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-04T16:28:04+00:00", "note": "9 posts out today, 0 error; top post saves+shares 1 (IG subs reel); feed written yes"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-04T16:34:56+00:00", "note": "0 routed (forms empty)"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-04T17:01:01+00:00", "note": "midday: 10 posts out, today's post metrics not ingested yet, no failures, no move"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-04T19:21:01+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
