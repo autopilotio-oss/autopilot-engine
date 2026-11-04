@@ -48,7 +48,7 @@ FAQ = [("Is it a subscription?", "No. You pay once and keep it. No monthly fee f
        ("What if it doesn't help?", "Reply to your receipt within 30 days for a full refund.")]
 V5 = """<style>
 body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5d56;background:var(--pp);color:var(--ik)}
-.v5 .nav{background:rgba(236,236,231,.9);border-bottom:1.5px solid var(--ik)}.v5 .brand{color:var(--ik)}.v5 .brand .eyes{background:var(--ik)}.v5 .brand .eyes i{box-shadow:none}
+.v5 .nav{background:#ecece7;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:1.5px solid var(--ik)}.v5 .brand{color:var(--ik)}.v5 .brand .eyes{background:var(--ik)}.v5 .brand .eyes i{box-shadow:none}
 .v5 .nav .links{color:var(--mt)}.v5 .nav .links a:hover{color:var(--ik)}.v5 .nav .links .cta,.v5 .nav .links .cta:hover{background:var(--ik);color:#fff;border-radius:6px}
 .v5 .w5,.v5 .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
 .v5 .lab{font:600 12px/1 var(--T);letter-spacing:.16em;text-transform:uppercase;color:var(--mt)}
@@ -284,7 +284,7 @@ def home():
 <div class="bot q" data-m="bot">Home Depot, $64 on Oct 12: work or home?</div>
 <div class="me" data-m="me">work</div><div class="bot" data-m="bot">Got it. Supplies is now <span data-count="676">$676</span>. Want me to always count Home Depot as work?</div></div>
 <div class="inp"><span>Type a word</span><i></i></div><div class="hb"></div></div></div>
-<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=12" defer></script>
+<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=13" defer></script>
 <div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
 <div class="ags">{rows}</div>
 <div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>

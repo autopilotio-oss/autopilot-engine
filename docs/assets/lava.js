@@ -121,7 +121,8 @@
     }
     function size(G) {
       var r = G.cv.getBoundingClientRect();
-      var s = Math.min(window.devicePixelRatio || 1, 2) * (r.width > 900 ? .5 : .6);
+      var s = Math.min(window.devicePixelRatio || 1, 2) * (r.width > 900 ? .5 : .45);
+      var px = r.width * r.height * s * s; if (px > 420000) s *= Math.sqrt(420000 / px); // keep the GPU light so scrolling stays smooth
       var w = Math.max(2, Math.round(r.width * s)), h = Math.max(2, Math.round(r.height * s));
       if (G.cv.width !== w || G.cv.height !== h) { G.cv.width = w; G.cv.height = h; G.gl.viewport(0, 0, w, h); G.gl.uniform2f(G.uR, w, h); }
       return w / h;
