@@ -8,6 +8,16 @@
   "ok"
  ],
  [
+  "cover",
+  "video-agent",
+  "{'success': True, 'covers': [{'url': 'https://public-files.gumroad.com/0ll8ftu1hd1cez9d4k0bmc33t89q', 'original_url': 'https://public-files.gumroad.com/rx3ptg9nzb4ne1udsseymb0n2nrt', 'thumbnail': None"
+ ],
+ [
+  "update",
+  "video-agent",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI TikTok Agent', 'description': '<p><strong>Your TikTok agent: one idea in, a week of videos planned, and a clear path to getting paid.</strong></p><p>A Claude agent that finds the patterns in your niche from videos you paste, plans 7 videos a week, "
+ ],
+ [
   "covers",
   "autopilot",
   [
