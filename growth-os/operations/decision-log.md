@@ -66,3 +66,5 @@
 - Restored: IG 20:30 Nov 4 "11:48 PM" reel; IG Nov 5 10:00 "6 texts" carousel (moved from 18:00, which the News Desk filled); Threads and X Nov 5 18:00 "6 texts". "Comment TOOLS" changed to "Tap the link in our bio" (TOOLS not in ManyChat yet). Record: queue/x/2026-11-04-restored.json.
 - Left in draft on purpose: parked money agent posts (debt, bill, subs, refund, charged twice, LAUNCH30), owner tool videos on TikTok (TikTok is the creator niche now).
 - Rollback: set those uuids back to draft in Metricool.
+
+- 2026-11-04 15:40 ART: PROMPT PACK PUSH. What: daily IG 18:00 prompt pack, 3 Threads + 2 X prompt teasers a day, Draft factory builds only packs, 6 old bank carousels parked. Why: Seb "I wanna spam these until they hit". Evidence: none yet (first pack posts Nov 7). Rollback: delete the PROMPT PACK PUSH section in MANAGER.md and set parked bank items back to bank.

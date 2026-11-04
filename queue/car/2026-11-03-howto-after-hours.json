@@ -1,44 +1,45 @@
 {
-  "id": "2026-11-03-howto-after-hours",
-  "kind": "howto",
-  "status": "bank",
-  "cover_idea": "Black lock screen cover: giant lime 9:47 PM clock in JetBrains Mono, three outlined SAMPLE plumber text notifications, small right aligned headline TEXTS AT 9 PM. ANSWERED BY 8 AM. low on the page.",
-  "theme": "small business how to tied to /guides/after-hours-customer-messages/: 5 steps for messages that arrive after hours (say got it and when, ask for the one detail, give urgent a way in, answer in one sitting, Claude drafts the batch with the guide prompt), leading to the free Front Desk Starter and the Front Desk Kit",
-  "guide": "https://autopilotoi.app/guides/after-hours-customer-messages/",
-  "gate": {
-    "score": 88,
-    "notes": "Accuracy 26/30 (short auto reply that thanks them and says when they will hear from you: Housecall Pro + Heymarket + Textline; keep it to a few lines: Housecall Pro + Textline; give an urgent contact line: Housecall Pro + Textline + Callingly (flag urgent jobs); ask for the job detail or specific photos you need to price it: ShiftFlow + Callingly (captures job type and address), weaker sources; only promise times you can keep: Heymarket + Housecall Pro; batching in the morning and the Claude prompt carried from our own guide; business, messages and phone number labeled SAMPLE / made up). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5 covers: black bg vs white on the last, headline right aligned low vs bottom left (reschedule), mid (quote), top (reviews); smallest headline scale yet (96px) with a giant clock as the main visual instead of a calendar, timeline or stars. CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (clock div extended past the safe area). All 7 slides read on a phone. Guide path exists in docs/guides/ (live site HTTP check not run from this sandbox)."
-  },
-  "sources": [
-    [
-      "Housecall Pro",
-      "https://www.housecallpro.com/learn/auto-reply-message/"
-    ],
-    [
-      "Heymarket",
-      "https://www.heymarket.com/blog/manage-expectations-with-sms-customer-service/"
-    ],
-    [
-      "Textline",
-      "https://www.textline.com/blog/auto-reply-text-message-examples-for-businesses"
-    ],
-    [
-      "Callingly",
-      "https://callingly.com/blog/after-hours-home-services-leads"
-    ],
-    [
-      "ShiftFlow",
-      "https://www.shiftflow.app/playbook/should-i-ask-for-photos-before-estimate"
-    ]
+ "id": "2026-11-03-howto-after-hours",
+ "kind": "howto",
+ "status": "parked",
+ "cover_idea": "Black lock screen cover: giant lime 9:47 PM clock in JetBrains Mono, three outlined SAMPLE plumber text notifications, small right aligned headline TEXTS AT 9 PM. ANSWERED BY 8 AM. low on the page.",
+ "theme": "small business how to tied to /guides/after-hours-customer-messages/: 5 steps for messages that arrive after hours (say got it and when, ask for the one detail, give urgent a way in, answer in one sitting, Claude drafts the batch with the guide prompt), leading to the free Front Desk Starter and the Front Desk Kit",
+ "guide": "https://autopilotoi.app/guides/after-hours-customer-messages/",
+ "gate": {
+  "score": 88,
+  "notes": "Accuracy 26/30 (short auto reply that thanks them and says when they will hear from you: Housecall Pro + Heymarket + Textline; keep it to a few lines: Housecall Pro + Textline; give an urgent contact line: Housecall Pro + Textline + Callingly (flag urgent jobs); ask for the job detail or specific photos you need to price it: ShiftFlow + Callingly (captures job type and address), weaker sources; only promise times you can keep: Heymarket + Housecall Pro; batching in the morning and the Claude prompt carried from our own guide; business, messages and phone number labeled SAMPLE / made up). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5 covers: black bg vs white on the last, headline right aligned low vs bottom left (reschedule), mid (quote), top (reviews); smallest headline scale yet (96px) with a giant clock as the main visual instead of a calendar, timeline or stars. CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (clock div extended past the safe area). All 7 slides read on a phone. Guide path exists in docs/guides/ (live site HTTP check not run from this sandbox)."
+ },
+ "sources": [
+  [
+   "Housecall Pro",
+   "https://www.housecallpro.com/learn/auto-reply-message/"
   ],
-  "captions": {
-    "ig": "Customers text at 9 PM. You do not have to answer at 9 PM.\n\n1. One short auto reply: thanks, and when they will hear from you.\n2. Ask for the one detail you need to price it, like a photo or the model.\n3. Add one line for real emergencies.\n4. Answer them all in one sitting in the morning. Only offer times you can keep.\n5. Let Claude draft the batch. Prompt is on slide 6.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Housecall Pro, Heymarket, Textline, Callingly, ShiftFlow.\n\n#smallbusiness #plumber #contractor #customerservice #claudeai",
-    "tiktok": {
-      "title": "Customers text at 9 PM. Answer them by 8 AM, no late nights",
-      "caption": "Customers text at 9 PM. Answer them by 8 AM, no late nights\n\nSay got it and when. Ask for the one detail. Give urgent a way in. Answer in one sitting. Claude drafts the batch.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #contractor #claudeai"
-    },
-    "threads": "Customers text at 9 PM. You do not have to answer at 9 PM.\n\n1. Auto reply: thanks, and when they will hear from you.\n2. Ask for the one detail you need to price it.\n3. One line for real emergencies.\n4. Answer them all in one sitting. Only offer times you can keep.\n\nFull guide with the Claude prompt: https://autopilotoi.app/guides/after-hours-customer-messages/?utm_source=threads&utm_content=howto_after_hours",
-    "x": "Customers text at 9 PM. Answer by 8 AM instead.\n\nAuto reply that says when. Ask for the one detail. A line for emergencies. Answer them all in one sitting.\n\nGuide: https://autopilotoi.app/guides/after-hours-customer-messages/?utm_source=x&utm_content=howto_after_hours"
+  [
+   "Heymarket",
+   "https://www.heymarket.com/blog/manage-expectations-with-sms-customer-service/"
+  ],
+  [
+   "Textline",
+   "https://www.textline.com/blog/auto-reply-text-message-examples-for-businesses"
+  ],
+  [
+   "Callingly",
+   "https://callingly.com/blog/after-hours-home-services-leads"
+  ],
+  [
+   "ShiftFlow",
+   "https://www.shiftflow.app/playbook/should-i-ask-for-photos-before-estimate"
+  ]
+ ],
+ "captions": {
+  "ig": "Customers text at 9 PM. You do not have to answer at 9 PM.\n\n1. One short auto reply: thanks, and when they will hear from you.\n2. Ask for the one detail you need to price it, like a photo or the model.\n3. Add one line for real emergencies.\n4. Answer them all in one sitting in the morning. Only offer times you can keep.\n5. Let Claude draft the batch. Prompt is on slide 6.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Housecall Pro, Heymarket, Textline, Callingly, ShiftFlow.\n\n#smallbusiness #plumber #contractor #customerservice #claudeai",
+  "tiktok": {
+   "title": "Customers text at 9 PM. Answer them by 8 AM, no late nights",
+   "caption": "Customers text at 9 PM. Answer them by 8 AM, no late nights\n\nSay got it and when. Ask for the one detail. Give urgent a way in. Answer in one sitting. Claude drafts the batch.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #contractor #claudeai"
   },
-  "built_at": "2026-11-03T16:40Z"
+  "threads": "Customers text at 9 PM. You do not have to answer at 9 PM.\n\n1. Auto reply: thanks, and when they will hear from you.\n2. Ask for the one detail you need to price it.\n3. One line for real emergencies.\n4. Answer them all in one sitting. Only offer times you can keep.\n\nFull guide with the Claude prompt: https://autopilotoi.app/guides/after-hours-customer-messages/?utm_source=threads&utm_content=howto_after_hours",
+  "x": "Customers text at 9 PM. Answer by 8 AM instead.\n\nAuto reply that says when. Ask for the one detail. A line for emergencies. Answer them all in one sitting.\n\nGuide: https://autopilotoi.app/guides/after-hours-customer-messages/?utm_source=x&utm_content=howto_after_hours"
+ },
+ "built_at": "2026-11-03T16:40Z",
+ "parked_reason": "Prompt pack push (Seb Nov 4: \"I wanna spam these until they hit\"): bank makes room for prompt packs. Restore by setting status bank."
 }

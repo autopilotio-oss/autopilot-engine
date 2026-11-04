@@ -1,40 +1,41 @@
 {
-  "id": "2026-11-03-howto-price-reply",
-  "kind": "howto",
-  "status": "bank",
-  "cover_idea": "Vertical split cover: black left column with a tall narrow stacked Anton headline ONE TEXT. FOUR PARTS. (white then lime), off white right side with a SAMPLE dog groomer price text and the reply broken into 4 numbered black cards (price, what + how long, two real times, one question).",
-  "theme": "small business how to tied to /guides/reply-to-price-inquiry/: reply to a price text in 4 parts (lead with the real or starting price, say what is included and how long, offer two real times, end on one booking question) plus the guide's Claude prompt, leading to the free Front Desk Starter and the Front Desk Kit",
-  "guide": "https://autopilotoi.app/guides/reply-to-price-inquiry/",
-  "gate": {
-    "score": 89,
-    "notes": "Accuracy 26/30 (give a price or starting price instead of dodging: WeddingPro + Greenlit Content; say what is included: WeddingPro + Greenlit; end with a question that keeps the conversation going: Greenlit + WeddingPro; offer two or three specific times instead of 'when works for you': Readymode + Bloom; only offer slots you have open: Bloom; NASP argues for asking questions before pricing, which is why the slide says give the starting price and name what changes it when it truly depends; business, price and times labeled SAMPLE; Claude prompt carried from our own guide, not used in an earlier carousel). Hook 21/25. Clarity 19/20. Design 13/15 vs last 5 covers: first vertical split (black column + off white) vs black, lime, white/black horizontal split, white, black; headline in a narrow left column vs top, center, bottom left, mid left, bottom right; main visual is an annotated reply broken into 4 labeled parts (vs stars, calendar, bubble, timeline, clock); tall narrow stacked scale. CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (reply cards read as black text on black). All 7 slides read on a phone. Guide path exists in docs/guides/ (live site HTTP check not run from this sandbox)."
-  },
-  "sources": [
-    [
-      "WeddingPro",
-      "https://pros.weddingpro.com/?p=3527"
-    ],
-    [
-      "Greenlit Content",
-      "https://greenlitcontent.com/sales/5-highly-effective-ways-to-respond-to-how-much-does-it-cost"
-    ],
-    [
-      "Readymode",
-      "https://readymode.com/appointment-setting-tips/"
-    ],
-    [
-      "Bloom",
-      "https://blog.bloom.io/getting-your-clients-to-pick-a-time-instead-of-asking-what-time-works-best-for-you/"
-    ]
+ "id": "2026-11-03-howto-price-reply",
+ "kind": "howto",
+ "status": "parked",
+ "cover_idea": "Vertical split cover: black left column with a tall narrow stacked Anton headline ONE TEXT. FOUR PARTS. (white then lime), off white right side with a SAMPLE dog groomer price text and the reply broken into 4 numbered black cards (price, what + how long, two real times, one question).",
+ "theme": "small business how to tied to /guides/reply-to-price-inquiry/: reply to a price text in 4 parts (lead with the real or starting price, say what is included and how long, offer two real times, end on one booking question) plus the guide's Claude prompt, leading to the free Front Desk Starter and the Front Desk Kit",
+ "guide": "https://autopilotoi.app/guides/reply-to-price-inquiry/",
+ "gate": {
+  "score": 89,
+  "notes": "Accuracy 26/30 (give a price or starting price instead of dodging: WeddingPro + Greenlit Content; say what is included: WeddingPro + Greenlit; end with a question that keeps the conversation going: Greenlit + WeddingPro; offer two or three specific times instead of 'when works for you': Readymode + Bloom; only offer slots you have open: Bloom; NASP argues for asking questions before pricing, which is why the slide says give the starting price and name what changes it when it truly depends; business, price and times labeled SAMPLE; Claude prompt carried from our own guide, not used in an earlier carousel). Hook 21/25. Clarity 19/20. Design 13/15 vs last 5 covers: first vertical split (black column + off white) vs black, lime, white/black horizontal split, white, black; headline in a narrow left column vs top, center, bottom left, mid left, bottom right; main visual is an annotated reply broken into 4 labeled parts (vs stars, calendar, bubble, timeline, clock); tall narrow stacked scale. CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (reply cards read as black text on black). All 7 slides read on a phone. Guide path exists in docs/guides/ (live site HTTP check not run from this sandbox)."
+ },
+ "sources": [
+  [
+   "WeddingPro",
+   "https://pros.weddingpro.com/?p=3527"
   ],
-  "captions": {
-    "ig": "Someone texts \"how much?\" Answer in one text, in 4 parts.\n\n1. Lead with the real price. If it truly depends, give your starting price and what changes it.\n2. Say what is included and how long it takes.\n3. Offer two real times you have open.\n4. End on one question that books it.\n\nThe Claude prompt is on slide 6. Sample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: WeddingPro, Greenlit Content, Readymode, Bloom.\n\n#smallbusiness #doggroomer #customerservice #pricing #claudeai",
-    "tiktok": {
-      "title": "Someone texts how much? Reply in one text, 4 parts, and book it",
-      "caption": "Someone texts how much? Reply in one text, 4 parts, and book it\n\nReal price first. What is included and how long. Two real times. One question.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #pricing #claudeai"
-    },
-    "threads": "Someone texts \"how much?\" Reply in one text:\n\n1. The real price first (or your starting price and what changes it).\n2. What is included and how long it takes.\n3. Two real times you have open.\n4. One question that books it.\n\nFull guide with the Claude prompt: https://autopilotoi.app/guides/reply-to-price-inquiry/?utm_source=threads&utm_content=howto_price_reply",
-    "x": "Someone texts \"how much?\"\n\nReal price first. What is included and how long. Two real times. One question that books it.\n\nGuide: https://autopilotoi.app/guides/reply-to-price-inquiry/?utm_source=x&utm_content=howto_price_reply"
+  [
+   "Greenlit Content",
+   "https://greenlitcontent.com/sales/5-highly-effective-ways-to-respond-to-how-much-does-it-cost"
+  ],
+  [
+   "Readymode",
+   "https://readymode.com/appointment-setting-tips/"
+  ],
+  [
+   "Bloom",
+   "https://blog.bloom.io/getting-your-clients-to-pick-a-time-instead-of-asking-what-time-works-best-for-you/"
+  ]
+ ],
+ "captions": {
+  "ig": "Someone texts \"how much?\" Answer in one text, in 4 parts.\n\n1. Lead with the real price. If it truly depends, give your starting price and what changes it.\n2. Say what is included and how long it takes.\n3. Offer two real times you have open.\n4. End on one question that books it.\n\nThe Claude prompt is on slide 6. Sample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: WeddingPro, Greenlit Content, Readymode, Bloom.\n\n#smallbusiness #doggroomer #customerservice #pricing #claudeai",
+  "tiktok": {
+   "title": "Someone texts how much? Reply in one text, 4 parts, and book it",
+   "caption": "Someone texts how much? Reply in one text, 4 parts, and book it\n\nReal price first. What is included and how long. Two real times. One question.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #pricing #claudeai"
   },
-  "built_at": "2026-11-03T21:13Z"
+  "threads": "Someone texts \"how much?\" Reply in one text:\n\n1. The real price first (or your starting price and what changes it).\n2. What is included and how long it takes.\n3. Two real times you have open.\n4. One question that books it.\n\nFull guide with the Claude prompt: https://autopilotoi.app/guides/reply-to-price-inquiry/?utm_source=threads&utm_content=howto_price_reply",
+  "x": "Someone texts \"how much?\"\n\nReal price first. What is included and how long. Two real times. One question that books it.\n\nGuide: https://autopilotoi.app/guides/reply-to-price-inquiry/?utm_source=x&utm_content=howto_price_reply"
+ },
+ "built_at": "2026-11-03T21:13Z",
+ "parked_reason": "Prompt pack push (Seb Nov 4: \"I wanna spam these until they hit\"): bank makes room for prompt packs. Restore by setting status bank."
 }

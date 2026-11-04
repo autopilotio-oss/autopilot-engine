@@ -1,27 +1,37 @@
 {
-  "id": "2026-11-03-prompts-quotes",
-  "kind": "prompts",
-  "status": "bank",
-  "cover_idea": "Black cover with a giant full width headline at the very top (WRITE THE QUOTE white / THEY SAY YES TO lime), under it an off white SAMPLE fence repair quote sheet with itemized lines, a total, and three lime highlighted terms: not included, good for 30 days, deposit to book.",
-  "theme": "small business: 5 Claude prompts to write quotes that get accepted (itemized lines, a not included list, an end date, payment terms with a deposit, a read as the customer check), leading to the free Front Desk Starter (/brain/) and the Front Desk Kit",
-  "guide": "https://autopilotoi.app/guides/follow-up-on-a-quote/",
-  "gate": {
-    "score": 89,
-    "notes": "Accuracy 27/30 (itemized lines instead of one lump sum: Joblogic + Zigaflow + Arrivy; list exclusions, unclear scope a common cause of disputes: Zigaflow (calls it the most common) + Arrivy + Joblogic, slide says 'a common cause'; quote end date protects from old prices, 14 to 30 days typical: Joblogic + Zigaflow (14 to 30) + Arrivy (15 to 30), slide says 'many shops use 14 to 30 days'; written payment terms and deposit: Zigaflow + Arrivy + Joblogic; prompt 5 why is reasoning, no stat; fence repair business and numbers labeled SAMPLE). Hook 21/25. Clarity 19/20. Design 12/15 vs last 5 covers: first headline at the very top of the cover (vs left column, middle, bottom right, bottom left, mid left), main visual is an itemized quote sheet with highlighted terms (vs reply cards, price bubble, lock screen, calendar, text thread with timeline), giant full width 2 line scale; background black repeats after-hours. CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (light inner theme made the why lines unreadable, switched to dark). All 7 slides read on a phone. No prompt repeats earlier posts (price-questions covered options, cheaper and raises; quote-followup covered chasing after sending)."
-  },
-  "sources": [
-    ["Joblogic", "https://www.joblogic.com/blog/how-to-quote-a-job"],
-    ["Zigaflow", "https://zigaflow.com/resources/guides/what-to-include-in-a-quote"],
-    ["Arrivy", "https://www.arrivy.com/blog/how-to-write-a-quote-for-a-job/"]
+ "id": "2026-11-03-prompts-quotes",
+ "kind": "prompts",
+ "status": "parked",
+ "cover_idea": "Black cover with a giant full width headline at the very top (WRITE THE QUOTE white / THEY SAY YES TO lime), under it an off white SAMPLE fence repair quote sheet with itemized lines, a total, and three lime highlighted terms: not included, good for 30 days, deposit to book.",
+ "theme": "small business: 5 Claude prompts to write quotes that get accepted (itemized lines, a not included list, an end date, payment terms with a deposit, a read as the customer check), leading to the free Front Desk Starter (/brain/) and the Front Desk Kit",
+ "guide": "https://autopilotoi.app/guides/follow-up-on-a-quote/",
+ "gate": {
+  "score": 89,
+  "notes": "Accuracy 27/30 (itemized lines instead of one lump sum: Joblogic + Zigaflow + Arrivy; list exclusions, unclear scope a common cause of disputes: Zigaflow (calls it the most common) + Arrivy + Joblogic, slide says 'a common cause'; quote end date protects from old prices, 14 to 30 days typical: Joblogic + Zigaflow (14 to 30) + Arrivy (15 to 30), slide says 'many shops use 14 to 30 days'; written payment terms and deposit: Zigaflow + Arrivy + Joblogic; prompt 5 why is reasoning, no stat; fence repair business and numbers labeled SAMPLE). Hook 21/25. Clarity 19/20. Design 12/15 vs last 5 covers: first headline at the very top of the cover (vs left column, middle, bottom right, bottom left, mid left), main visual is an itemized quote sheet with highlighted terms (vs reply cards, price bubble, lock screen, calendar, text thread with timeline), giant full width 2 line scale; background black repeats after-hours. CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (light inner theme made the why lines unreadable, switched to dark). All 7 slides read on a phone. No prompt repeats earlier posts (price-questions covered options, cheaper and raises; quote-followup covered chasing after sending)."
+ },
+ "sources": [
+  [
+   "Joblogic",
+   "https://www.joblogic.com/blog/how-to-quote-a-job"
   ],
-  "captions": {
-    "ig": "A quote with no surprises is easier to say yes to. 5 Claude prompts to write one.\n\n1. Turn your job notes into one line per item, then the total.\n2. Add a short Not included list.\n3. Give the price an end date. Many shops use 14 to 30 days.\n4. Spell out the deposit, when the rest is due and how to pay.\n5. Have Claude read it as the customer and fix every line they would ask about.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Joblogic, Zigaflow, Arrivy.\n\n#smallbusiness #quotes #estimates #claudeai #smallbusinessowner",
-    "tiktok": {
-      "title": "5 Claude prompts to write a quote customers say yes to",
-      "caption": "5 Claude prompts to write a quote customers say yes to\n\nOne line per item. A Not included list. An end date. Clear payment terms. Then read it like the customer.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #quotes #claudeai"
-    },
-    "threads": "A quote with no surprises is easier to say yes to.\n\n5 Claude prompts: one line per item, a Not included list, an end date (many shops use 14 to 30 days), clear deposit and payment terms, and a read through as the customer.\n\nFree Front Desk Starter, replies in your voice: https://autopilotoi.app/brain/?utm_source=threads&utm_content=prompts_quotes",
-    "x": "A quote with no surprises is easier to say yes to.\n\n5 Claude prompts: itemize it, list what is not included, add an end date, spell out payment, read it as the customer.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_quotes"
+  [
+   "Zigaflow",
+   "https://zigaflow.com/resources/guides/what-to-include-in-a-quote"
+  ],
+  [
+   "Arrivy",
+   "https://www.arrivy.com/blog/how-to-write-a-quote-for-a-job/"
+  ]
+ ],
+ "captions": {
+  "ig": "A quote with no surprises is easier to say yes to. 5 Claude prompts to write one.\n\n1. Turn your job notes into one line per item, then the total.\n2. Add a short Not included list.\n3. Give the price an end date. Many shops use 14 to 30 days.\n4. Spell out the deposit, when the rest is due and how to pay.\n5. Have Claude read it as the customer and fix every line they would ask about.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Joblogic, Zigaflow, Arrivy.\n\n#smallbusiness #quotes #estimates #claudeai #smallbusinessowner",
+  "tiktok": {
+   "title": "5 Claude prompts to write a quote customers say yes to",
+   "caption": "5 Claude prompts to write a quote customers say yes to\n\nOne line per item. A Not included list. An end date. Clear payment terms. Then read it like the customer.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #quotes #claudeai"
   },
-  "built_at": "2026-11-03T22:43Z"
+  "threads": "A quote with no surprises is easier to say yes to.\n\n5 Claude prompts: one line per item, a Not included list, an end date (many shops use 14 to 30 days), clear deposit and payment terms, and a read through as the customer.\n\nFree Front Desk Starter, replies in your voice: https://autopilotoi.app/brain/?utm_source=threads&utm_content=prompts_quotes",
+  "x": "A quote with no surprises is easier to say yes to.\n\n5 Claude prompts: itemize it, list what is not included, add an end date, spell out payment, read it as the customer.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_quotes"
+ },
+ "built_at": "2026-11-03T22:43Z",
+ "parked_reason": "Prompt pack push (Seb Nov 4: \"I wanna spam these until they hit\"): bank makes room for prompt packs. Restore by setting status bank."
 }

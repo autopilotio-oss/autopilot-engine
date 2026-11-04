@@ -1,44 +1,45 @@
 {
-  "id": "2026-11-03-prompts-reschedule",
-  "kind": "prompts",
-  "status": "bank",
-  "cover_idea": "White cover: SAMPLE lawn care week calendar grid, Tue hedges job struck out for rain with an arrow to a lime Thu block marked MOVED, medium headline MOVE THE JOB. KEEP THE CLIENT. at the bottom (second line on a lime bar).",
-  "theme": "small business: 5 Claude prompts for rescheduling (you move it, they ask to move, reminder with a way to reschedule, cancellation policy in plain words, same day no show text), leading to the free Front Desk Starter (/brain/) and the Front Desk Kit",
-  "gate": {
-    "score": 89,
-    "notes": "Accuracy 27/30 (tell them as soon as you know, apologize once: Acuity Scheduling + Apptoto; offer specific times or two slots to pick: Acuity + Apptoto; reminder 24 to 72h before with a clear way to reschedule or ask: Shopify (24 to 72h) + Quo (48h and 24h, reschedule links); show the cancellation policy before booking and in reminders: Quo + Shopify; same day no show text with next openings, firmer policy line for repeats: Quo + Apptoto; business data labeled SAMPLE). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5 covers: white bg vs black/lime on the last 3, headline at the bottom vs top (reviews) and mid (quote, card debt), medium 124px scale vs giant fitted headlines, new main visual (week calendar with a moved job). CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (arrow crossed a calendar block, reply chip overlapped a block). All 7 slides read on a phone. No prompt repeats earlier posts."
-  },
-  "sources": [
-    [
-      "Shopify",
-      "https://shopify.com/blog/appointment-reminder-template"
-    ],
-    [
-      "Quo",
-      "https://www.quo.com/blog/reduce-no-shows/"
-    ],
-    [
-      "Acuity Scheduling",
-      "https://acuityscheduling.com/learn/reschedule-an-appointment"
-    ],
-    [
-      "Apptoto",
-      "https://www.apptoto.com/best-practices/appointment-reschedule-requests-text-messages"
-    ]
+ "id": "2026-11-03-prompts-reschedule",
+ "kind": "prompts",
+ "status": "parked",
+ "cover_idea": "White cover: SAMPLE lawn care week calendar grid, Tue hedges job struck out for rain with an arrow to a lime Thu block marked MOVED, medium headline MOVE THE JOB. KEEP THE CLIENT. at the bottom (second line on a lime bar).",
+ "theme": "small business: 5 Claude prompts for rescheduling (you move it, they ask to move, reminder with a way to reschedule, cancellation policy in plain words, same day no show text), leading to the free Front Desk Starter (/brain/) and the Front Desk Kit",
+ "gate": {
+  "score": 89,
+  "notes": "Accuracy 27/30 (tell them as soon as you know, apologize once: Acuity Scheduling + Apptoto; offer specific times or two slots to pick: Acuity + Apptoto; reminder 24 to 72h before with a clear way to reschedule or ask: Shopify (24 to 72h) + Quo (48h and 24h, reschedule links); show the cancellation policy before booking and in reminders: Quo + Shopify; same day no show text with next openings, firmer policy line for repeats: Quo + Apptoto; business data labeled SAMPLE). Hook 21/25. Clarity 18/20. Design 13/15 vs last 5 covers: white bg vs black/lime on the last 3, headline at the bottom vs top (reviews) and mid (quote, card debt), medium 124px scale vs giant fitted headlines, new main visual (week calendar with a moved job). CTA 10/10 (AGENTS confirmed in config/manychat.json, gift per Front Desk focus override, no LAUNCH30, no parked agents). QA PASS after 1 fix (arrow crossed a calendar block, reply chip overlapped a block). All 7 slides read on a phone. No prompt repeats earlier posts."
+ },
+ "sources": [
+  [
+   "Shopify",
+   "https://shopify.com/blog/appointment-reminder-template"
   ],
-  "captions": {
-    "ig": "Rain, a sick crew, a customer who cannot make it. Moving a job is normal. Losing the customer over it is not.\n\n5 Claude prompts for rescheduling:\n1. When you need to move it: say sorry once, offer two real times.\n2. When they ask to move: reply with the two closest openings.\n3. A reminder 1 to 3 days before, with a clear way to reschedule.\n4. Your cancellation policy in 3 plain lines, shown before they book.\n5. A warm same day text after a no show, with your next openings.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Shopify, Quo, Acuity Scheduling, Apptoto.\n\n#smallbusiness #lawncare #customerservice #claudeai #smallbusinessowner",
-    "tiktok": {
-      "title": "5 Claude prompts to reschedule a job without losing the customer",
-      "caption": "5 Claude prompts to reschedule a job without losing the customer\n\nSay sorry once and offer two times. Remind 1 to 3 days before with a way to move it. Share your policy before they book. Text the same day after a no show.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #lawncare #claudeai"
-    },
-    "threads": "Moving a job is normal. Losing the customer over it is not.\n\n5 Claude prompts: move it yourself (sorry once, two real times), answer a move request, a reminder 1 to 3 days before with a way to reschedule, your cancellation policy in plain words, a warm same day no show text.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=threads&utm_content=prompts_reschedule",
-    "x": "Need to move a job? Say sorry once and offer two real times. Remind 1 to 3 days before. Text the same day after a no show.\n\n5 Claude prompts, free Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_reschedule"
+  [
+   "Quo",
+   "https://www.quo.com/blog/reduce-no-shows/"
+  ],
+  [
+   "Acuity Scheduling",
+   "https://acuityscheduling.com/learn/reschedule-an-appointment"
+  ],
+  [
+   "Apptoto",
+   "https://www.apptoto.com/best-practices/appointment-reschedule-requests-text-messages"
+  ]
+ ],
+ "captions": {
+  "ig": "Rain, a sick crew, a customer who cannot make it. Moving a job is normal. Losing the customer over it is not.\n\n5 Claude prompts for rescheduling:\n1. When you need to move it: say sorry once, offer two real times.\n2. When they ask to move: reply with the two closest openings.\n3. A reminder 1 to 3 days before, with a clear way to reschedule.\n4. Your cancellation policy in 3 plain lines, shown before they book.\n5. A warm same day text after a no show, with your next openings.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Shopify, Quo, Acuity Scheduling, Apptoto.\n\n#smallbusiness #lawncare #customerservice #claudeai #smallbusinessowner",
+  "tiktok": {
+   "title": "5 Claude prompts to reschedule a job without losing the customer",
+   "caption": "5 Claude prompts to reschedule a job without losing the customer\n\nSay sorry once and offer two times. Remind 1 to 3 days before with a way to move it. Share your policy before they book. Text the same day after a no show.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #lawncare #claudeai"
   },
-  "built_at": "2026-11-03T14:37Z",
-  "recheck": {
-    "at": "2026-11-04",
-    "result": "still valid",
-    "notes": "Bank full (6). Oldest bank item already re-checked today (quote-followup), so re-checked the next oldest. CTA is AGENTS (in config/manychat.json confirmed list) + Free Front Desk Starter gift per Front Desk focus override; no LAUNCH30, no parked agents. /brain/ (free Front Desk Starter), /front-desk/ ($39 Front Desk Kit) and /free/ (leads with Front Desk Starter) present in docs/ after b46da9e and 0bdc669. Sourced rescheduling practices are evergreen. Live HTTP check not possible from this sandbox proxy."
-  }
+  "threads": "Moving a job is normal. Losing the customer over it is not.\n\n5 Claude prompts: move it yourself (sorry once, two real times), answer a move request, a reminder 1 to 3 days before with a way to reschedule, your cancellation policy in plain words, a warm same day no show text.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=threads&utm_content=prompts_reschedule",
+  "x": "Need to move a job? Say sorry once and offer two real times. Remind 1 to 3 days before. Text the same day after a no show.\n\n5 Claude prompts, free Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_reschedule"
+ },
+ "built_at": "2026-11-03T14:37Z",
+ "recheck": {
+  "at": "2026-11-04",
+  "result": "still valid",
+  "notes": "Bank full (6). Oldest bank item already re-checked today (quote-followup), so re-checked the next oldest. CTA is AGENTS (in config/manychat.json confirmed list) + Free Front Desk Starter gift per Front Desk focus override; no LAUNCH30, no parked agents. /brain/ (free Front Desk Starter), /front-desk/ ($39 Front Desk Kit) and /free/ (leads with Front Desk Starter) present in docs/ after b46da9e and 0bdc669. Sourced rescheduling practices are evergreen. Live HTTP check not possible from this sandbox proxy."
+ },
+ "parked_reason": "Prompt pack push (Seb Nov 4: \"I wanna spam these until they hit\"): bank makes room for prompt packs. Restore by setting status bank."
 }
