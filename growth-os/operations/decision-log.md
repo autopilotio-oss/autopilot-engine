@@ -82,3 +82,9 @@
 ## 2026-11-04 19:10 ART: first SIGNAL row scheduled on IG
 - Seb: "Make it let's post first 3 today 5 min between each post". Overrides the 2 per day IG rule for this row.
 - R 19:20, M 19:25, L 19:30 ART. Record: queue/rows/signal-r1.json. Grid goes 18 to 21.
+
+## 2026-11-04 19:55 ART: funnel audit
+- Seb: "Make sure the post all match the store and the funnels make sure all funnels are working and improving".
+- Fixed: $10 to $9.99 in 3 scheduled Threads/X posts; added missing #tools anchor on the homepage (posts linked to it); store-prices.md as source of truth; MANAGER rule.
+- Found: Kit has 0 active subscribers ever; only test signup is unconfirmed (double opt in) and no rule feeds the Welcome sequence. 0 purchases tracked in Kit (Gumroad not connected). Needs Seb in Kit UI.
+- Found: IG bio still sells THE WORKSPACE / 7 agents; posts now sell Front Desk Starter + Kit. Needs Seb to edit bio.

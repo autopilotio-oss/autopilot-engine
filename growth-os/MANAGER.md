@@ -133,7 +133,11 @@ Paused Nov 4 (reversible, re-enable in scheduled tasks): Viral Content Lab and t
 
 Same output and more updates, less usage. Every worker: partial clone, smallest data range, no re-reading, skip steps when nothing changed, no narration. Runs were cut from about 70 a day to about 30 (News Desk hourly to every 3h, analyst hourly to 4x, site improver 5x to 2x, draft factory 8x to 2x, Kit sync 8x to 3x), while Seb's updates went from 2 a day to 3. Apply the same rule to any new task for any of Seb's businesses.
 
-## 10. Instagram design system: THE ORGANISM (Seb, Nov 4 2026: "Better we are getting there")
+## 10. Instagram design system: SIGNAL GRID (Seb, Nov 4 2026, replaced THE ORGANISM; first row live Nov 4 19:40)
+- Source: tools/carousel/wow/signal3.html, playbook PDF in Seb's chat. Rows of 3, R then M then L, 5 min apart. Every carousel ends on the link in bio slide (docs/media/rows/signal-r1/L8.jpg style).
+- Prices and names: growth-os/operations/store-prices.md is the source of truth. Check every post against it before scheduling.
+
+### (superseded) THE ORGANISM notes
 - Every IG drop is a ROW of 3 posts cut from one 21:9 render: LEARN (left), the organism chapter (middle), THE STORE (right). Full rules, chapters, title bank and the render prompt live in `tools/carousel/rows/ROADMAP.md`.
 - Build rows only with `tools/carousel/rows/row.py`. No other cover styles go on the IG grid.
 - Every title comes from the title bank formula in ROADMAP.md: short lines, payoff last line in lime, no dashes, no fake numbers.
