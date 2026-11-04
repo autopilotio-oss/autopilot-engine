@@ -69,3 +69,9 @@
 
 - 2026-11-04 15:40 ART: PROMPT PACK PUSH. What: daily IG 18:00 prompt pack, 3 Threads + 2 X prompt teasers a day, Draft factory builds only packs, 6 old bank carousels parked. Why: Seb "I wanna spam these until they hit". Evidence: none yet (first pack posts Nov 7). Rollback: delete the PROMPT PACK PUSH section in MANAGER.md and set parked bank items back to bank.
 - 2026-11-04 17:45 ART: builder made the header button on /front-desk/ (and its /after-hours/ and /demo/ variants) sell the Front Desk Kit: "Get it · $39" to the same Gumroad checkout as the main button, instead of "All 4 · $24" to the Owner Toolkit (tools/site/build.py nav() takes an optional cta, tools/site/frontdesk.py passes it; rebuilt with tools/site/build.py, every other page unchanged). Why: the Front Desk Kit is the focus offer, and on its own paid page at 390px the top right button pushed a different, cheaper bundle that does not include Front Desk, so the first two prices a phone visitor saw were $24 and $39 for different products. Evidence: Playwright 390px and 1280px before/after, no overflow, header and main buy buttons both go to gumroad.com/l/autopilot; 107 tests pass. Rollback: git revert this commit (or drop the cta argument in frontdesk.py and rebuild).
+
+## 2026-11-04 18:05 ART: IG switches to THE ORGANISM rows
+- Seb: "Yes we will be replacing all post scheduled ... Only on ig".
+- All 9 pending IG posts (Nov 4 to Nov 9) set to draft in Metricool, nothing deleted. Threads, X and TikTok untouched.
+- Chapter 01 row scheduled: R Nov 5 18:00, M Nov 5 20:30, L Nov 6 10:00 (L reuses the owner 24 prompts slides). Grid goes 18 to 21.
+- Record: queue/rows/ch01-it-wakes.json. System: tools/carousel/rows/ROADMAP.md.
