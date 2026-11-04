@@ -35,5 +35,10 @@
     "threads": "Moving a job is normal. Losing the customer over it is not.\n\n5 Claude prompts: move it yourself (sorry once, two real times), answer a move request, a reminder 1 to 3 days before with a way to reschedule, your cancellation policy in plain words, a warm same day no show text.\n\nFree Front Desk Starter: https://autopilotoi.app/brain/?utm_source=threads&utm_content=prompts_reschedule",
     "x": "Need to move a job? Say sorry once and offer two real times. Remind 1 to 3 days before. Text the same day after a no show.\n\n5 Claude prompts, free Front Desk Starter: https://autopilotoi.app/brain/?utm_source=x&utm_content=prompts_reschedule"
   },
-  "built_at": "2026-11-03T14:37Z"
+  "built_at": "2026-11-03T14:37Z",
+  "recheck": {
+    "at": "2026-11-04",
+    "result": "still valid",
+    "notes": "Bank full (6). Oldest bank item already re-checked today (quote-followup), so re-checked the next oldest. CTA is AGENTS (in config/manychat.json confirmed list) + Free Front Desk Starter gift per Front Desk focus override; no LAUNCH30, no parked agents. /brain/ (free Front Desk Starter), /front-desk/ ($39 Front Desk Kit) and /free/ (leads with Front Desk Starter) present in docs/ after b46da9e and 0bdc669. Sourced rescheduling practices are evergreen. Live HTTP check not possible from this sandbox proxy."
+  }
 }
