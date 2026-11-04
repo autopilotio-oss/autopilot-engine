@@ -57,7 +57,7 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
 .b5{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:6px;font:700 16px var(--T);background:var(--ik);color:#fff;border:1.5px solid var(--ik);white-space:nowrap;transition:background .15s,color .15s}
 .b5:hover{background:var(--l);color:var(--ik)}.b5.o{background:transparent;color:var(--ik)}.b5.o:hover{background:var(--ik);color:#fff}.b5.l{background:var(--l);color:var(--ik);border-color:var(--l)}.b5.l:hover{background:#fff;border-color:#fff}
 /* hero */
-.h5{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.8fr);gap:56px;align-items:end;padding:64px 0 56px;border-bottom:1.5px solid var(--ik)}
+.h5{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.8fr);gap:56px;align-items:center;padding:64px 0 56px;border-bottom:1.5px solid var(--ik)}
 .h5 h1{font-size:clamp(38px,5.6vw,82px);line-height:.93;margin:20px 0 26px}
 .h5 .lead{color:#33332e;max-width:600px}
 .h5 .row{margin-top:32px;gap:10px}
@@ -120,6 +120,31 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
  .ag{grid-template-columns:1fr;gap:14px;padding:26px 0}.ag-n{padding:0;font-size:16px;color:var(--mt)}.ag-p,.ag-d,.ag-b{grid-column:auto;grid-row:auto}.ag-b{flex-direction:row;align-items:center;justify-content:space-between;padding:0}.ag-b .b5{flex:0 0 160px}.ag-pr{text-align:left}
  .st5{grid-template-columns:1fr}.st5>div,.st5>div+div{padding:24px 0;border-left:0;border-bottom:1px solid var(--rl)}.st5 b{font-size:40px;margin-bottom:12px}
  .tg{grid-template-columns:1fr}.tg>div{padding:24px}.fq{grid-template-columns:1fr}.sb{display:flex}.v5 .foot{padding-bottom:110px}.h5 .row .b5{flex:1 1 100%}.bd{padding:26px}.rc{box-shadow:5px 5px 0 var(--ik)}}
+/* phone mockup: original frame drawn in CSS */
+.pw{display:flex;flex-direction:column;align-items:center;gap:14px;justify-self:center}
+.ph{position:relative;width:318px;aspect-ratio:9/19.4;border-radius:56px;padding:11px;background:linear-gradient(145deg,#4a3a3e 0%,#1d1517 38%,#2e2326 62%,#120c0e 100%);box-shadow:0 0 0 1.5px #0b0b0b,inset 0 0 0 2px rgba(255,255,255,.08),0 40px 80px -20px rgba(11,11,11,.45),0 18px 30px -18px rgba(11,11,11,.5)}
+.ph .bt{position:absolute;width:4px;border-radius:2px;background:#2a1f22}.ph .b1{left:-3px;top:118px;height:26px}.ph .b2{left:-3px;top:166px;height:52px}.ph .b3{left:-3px;top:228px;height:52px}.ph .b4{right:-3px;top:190px;height:84px}
+.ph .scr{position:relative;height:100%;border-radius:46px;background:#0e0e0e;overflow:hidden;color:#f3f3ef;font:500 13px/1.4 var(--T);display:flex;flex-direction:column}
+.ph .isl{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:96px;height:28px;border-radius:20px;background:#000}
+.ph .sbar{display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0 30px;height:44px;font:700 14px var(--T)}
+.ph .sig{display:flex;align-items:flex-end;gap:2px}.ph .sig i{width:3px;background:#f3f3ef;border-radius:1px}.ph .sig i:nth-child(1){height:4px}.ph .sig i:nth-child(2){height:6px}.ph .sig i:nth-child(3){height:8px}.ph .sig i:nth-child(4){height:10px}.ph .sig b{width:22px;height:11px;border:1.5px solid #f3f3ef;border-radius:3px;margin-left:5px;position:relative}.ph .sig b:after{content:"";position:absolute;inset:1.5px;right:5px;background:#f3f3ef;border-radius:1px}
+.ph .ah{display:flex;align-items:center;gap:10px;padding:14px 16px 12px;border-bottom:1px solid #222}.ph .av{width:30px;height:30px;border-radius:50%;background:var(--l);color:#0b0b0b;display:flex;align-items:center;justify-content:center;font:400 14px var(--W)}
+.ph .ah b{display:block;font:700 13.5px var(--T)}.ph .ah span{font-size:11px;color:#8d8d86}
+.ph .chat{flex:1;display:flex;flex-direction:column;gap:8px;padding:14px 12px;overflow:hidden}
+.ph .me{align-self:flex-end;background:#2a2a2a;border-radius:16px 16px 4px 16px;padding:8px 12px;max-width:80%;display:flex;flex-direction:column;gap:6px;font-weight:600}
+.ph .fc{font:600 11px var(--T);background:#3a3a3a;border-radius:8px;padding:6px 8px;color:#d8d8d2}.ph .fc:before{content:"PDF  ";color:var(--l);font-weight:700}
+.ph .bot{align-self:flex-start;background:#181818;border:1px solid #2a2a2a;border-radius:16px 16px 16px 4px;padding:10px 12px;width:88%}
+.ph .bh{font:700 10.5px var(--T);letter-spacing:.14em;text-transform:uppercase;color:#8d8d86;margin-bottom:4px}
+.ph .r{display:flex;justify-content:space-between;padding:3.5px 0;border-bottom:1px solid #242424;font-variant-numeric:tabular-nums}.ph .r.tt{border:0;font-weight:700;padding-top:6px}
+.ph .q{background:var(--l);color:#0b0b0b;border:0;font-weight:600;width:auto;max-width:88%}
+.ph .inp{margin:0 12px 10px;height:38px;border-radius:19px;background:#1d1d1d;display:flex;align-items:center;justify-content:space-between;padding:0 6px 0 14px;color:#77776f;font-size:12.5px}.ph .inp i{width:26px;height:26px;border-radius:50%;background:var(--l)}
+.ph .hb{width:110px;height:4px;border-radius:2px;background:#f3f3ef;opacity:.85;margin:0 auto 9px}
+.pcap{font-size:12.5px;color:var(--mt);text-align:center;max-width:300px}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ph .a1,.ph .a2,.ph .a3,.ph .a4,.ph .a5{animation:up .5s both}.ph .a2{animation-delay:.6s}.ph .a3{animation-delay:1.3s}.ph .a4{animation-delay:2s}.ph .a5{animation-delay:2.6s}
+@media(prefers-reduced-motion:reduce){.ph .a1,.ph .a2,.ph .a3,.ph .a4,.ph .a5{animation:none}}
+@media(max-width:1000px){.pw{justify-self:start}}@media(max-width:720px){.pw{justify-self:center;margin-top:8px}.ph{width:296px}}
+
 </style>"""
 def home():
     rows = agent_rows()
@@ -132,9 +157,16 @@ def home():
 <p class="lead">Four agents for the jobs you keep putting off: chasing invoices, answering reviews, sorting receipts and planning posts. $9.99 each. Set up in about 15 minutes, right on your phone.</p>
 <div class="row"><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">See each agent · $9.99</a></div>
 <div class="trust"><span>One payment, no subscription</span><span>Free Claude plan works</span><span>Instant download</span><span>30 day refund</span></div></div>
-<div class="rc" aria-label="Example: Bookkeeping Sorter output"><div class="rh"><span>Bookkeeping Sorter</span><span>Example</span></div><div class="me">&gt; sort october.pdf</div>
-<div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Personal</span><span>$219</span></div>
-<div class="tt"><span>Business total</span><span>$1,224</span></div><div class="q">1 question: Home Depot $64 on Oct 12, work or home?</div><div class="ft">Sample business. Your numbers come from your own statement.</div></div></div></div>
+<div class="pw"><div class="ph" role="img" aria-label="Example on a phone: you type sort with your October statement and get every charge sorted with totals and one question">
+<i class="bt b1"></i><i class="bt b2"></i><i class="bt b3"></i><i class="bt b4"></i>
+<div class="scr"><div class="isl"></div><div class="sbar"><span>9:41</span><span class="sig"><i></i><i></i><i></i><i></i><b></b></span></div>
+<div class="ah"><span class="av">B</span><div><b>Bookkeeping Sorter</b><span>Your agent · example</span></div></div>
+<div class="chat"><div class="me a1"><span class="fc">october.pdf</span>sort</div>
+<div class="bot a2"><div class="bh">October, sorted</div><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Personal</span><span>$219</span></div><div class="r tt"><span>Business total</span><span>$1,224</span></div></div>
+<div class="bot q a3">Home Depot, $64 on Oct 12: work or home?</div>
+<div class="me a4">work</div><div class="bot a5">Got it. Supplies is now $676. Want me to always count Home Depot as work?</div></div>
+<div class="inp"><span>Type a word</span><i></i></div><div class="hb"></div></div></div>
+<div class="pcap">Sample business. Your numbers come from your own statement.</div></div</div></div></div></div>
 <div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
 <div class="ags">{rows}</div>
 <div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>
