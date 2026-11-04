@@ -1,9 +1,9 @@
 {
  "name": "AUTOPILOT.OI Invoice Chaser",
- "price_cents": 1000,
+ "price_cents": 999,
  "permalink": "invoice-chaser",
  "filename": "AUTOPILOT.OI Invoice Chaser.pdf",
- "description_html": "<p><strong>Get paid. No awkward texts.</strong></p><p>Tell it about a job and get a clean invoice. Tell it who owes you and it keeps the list, then writes the right reminder for how late they are: friendly first, firm only when it has to be. You read it and send it yourself.</p><p><strong>How it works:</strong> you add the guide to a free Claude Project, paste one message, answer 7 easy questions, then type one word whenever you need it. It drafts; you decide.</p><p><strong>What you type:</strong> invoice \u00b7 owed \u00b7 chase \u00b7 paid \u00b7 week</p><p><strong>What you get (13 page guide, PDF):</strong> a setup helper that asks 7 easy questions and sets it up with you in about 15 minutes, tap by tap on your phone, a reminder schedule, a worked example and a cheat sheet.</p><p><strong>You need:</strong> the Claude app (the free plan works) and your payment details.</p><p>Drafts only: it never sends messages or takes payments. Not legal advice. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
+ "description_html": "<p><strong>Get paid. No awkward texts.</strong></p><p>Tell it about a job and get a clean invoice. Tell it who owes you and it keeps the list, then writes the right reminder for how late they are: friendly first, firm only when it has to be. You read it and send it yourself.</p><p><strong>How it works:</strong> you add the guide to a free Claude Project, paste one message, answer 7 easy questions, then type one word whenever you need it. It drafts; you decide.</p><p><strong>What you type:</strong> invoice · owed · chase · paid · week</p><p><strong>What you get (13 page guide, PDF):</strong> a setup helper that asks 7 easy questions and sets it up with you in about 15 minutes, tap by tap on your phone, a reminder schedule, a worked example and a cheat sheet.</p><p><strong>You need:</strong> the Claude app (the free plan works) and your payment details.</p><p>Drafts only: it never sends messages or takes payments. Not legal advice. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
  "cover_url": "https://autopilotoi.app/store/invoice-cover.png?v=1",
  "tags": [
   "small business",
@@ -12,7 +12,7 @@
   "claude",
   "get paid"
  ],
- "version": 2,
+ "version": 3,
  "cover_v": 1,
  "landing": "/#tools"
 }
