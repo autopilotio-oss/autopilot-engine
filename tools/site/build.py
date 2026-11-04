@@ -12,7 +12,7 @@ def head(title, desc, path, img="autopilot-cover.png"):  # share image: the prod
 <link rel="stylesheet" href="/assets/site.css?v=4"></head><body>"""
 def nav(on):
     a = lambda href, t, k, c="": f'<a href="{href}" class="{c}{" on" if k == on else ""}">{t}</a>'
-    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/front-desk/", "Front Desk", "f", "hm")}{a("/brain/", "Free starter", "c")}{a("/#tools", "Tools", "m", "cta")}</div></div></div>'
+    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/front-desk/", "Front Desk", "f", "hm")}{a("/brain/", "Free starter", "c")}{a("/#agents", "Agents", "m", "hm")}{a(GR + "owner-toolkit", "All 4 · $24", "x", "cta buy")}</div></div></div>'
 FOOT = """<div class="foot"><div class="wrap"><div class="big">AUTOPILOT<span>.</span>OI</div>
 <div><div>Simple AI helpers for business owners.<br>Independent. Not affiliated with Anthropic. Claude is a product of Anthropic.</div>
 <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/marketplace/">Marketplace</a><a href="/front-desk/">Front Desk</a><a href="/workspace/">Workspace</a><a href="/brain/">Free starter</a><a href="/library/">Library</a><a href="https://www.instagram.com/autopilot.oi/">Instagram</a></div></div></div></div>
@@ -31,72 +31,132 @@ INBOX = """<div class="ui"><div class="bar"><span>Leads · today</span><span>Pro
 <div class="label" style="margin-top:12px;text-align:center">Example business. Workspace is in development.</div></div>"""
 
 TOOLS = [
- ("Bookkeeping Sorter", "9.99", "bookkeeping-sorter", "Upload your bank statement. Every charge sorted into a category with monthly totals, ready for your accountant. It asks when it isn't sure.", "sort", "Messy receipts"),
- ("Invoice Chaser", "9.99", "invoice-chaser", "Writes the invoice from your job notes and a polite reminder for anyone who hasn't paid. No more awkward texts.", "chase Dave", "Unpaid invoices"),
- ("Review Desk", "9.99", "review-desk", "A reply to every review in your voice, in seconds. Calm answers to the angry ones too.", "reply", "Ignored reviews"),
- ("Content Week", "9.99", "content-week", "Answer 5 questions on Sunday. Get 7 posts for the week: what to shoot, the caption and hashtags.", "week", "Nothing to post"),
+ ("Invoice Chaser", "9.99", "invoice-chaser", "Unpaid invoices", "Turns your job notes into a clean invoice, keeps a list of who owes you, and writes the right reminder for how late they are.", "chase Dave"),
+ ("Review Desk", "9.99", "review-desk", "Ignored reviews", "Writes a reply to every review in your voice, good or angry, plus the text that asks happy customers for a new one.", "reply"),
+ ("Bookkeeping Sorter", "9.99", "bookkeeping-sorter", "Messy receipts", "Upload a bank statement and every charge lands in a category with monthly totals for your accountant. It asks when it isn't sure.", "sort"),
+ ("Content Week", "9.99", "content-week", "Nothing to post", "Answer 5 questions on Sunday. Get 7 posts for the week: what to shoot, the caption and the hashtags.", "week"),
 ]
-def tool_cards():
-    return "".join(f'<div class="tc"><div class="tc-top"><span>0{i}</span><span>${p}</span></div><h3 class="tc-pb">{e(pb)}</h3><div class="tc-nm">{e(n)}</div><p class="tc-d">{e(d)}</p><div class="cmd">You type <b>{e(cmd)}</b></div><a class="btn dark buy" href="{GR}{perm}">Get it · ${p}</a></div>' for i, (n, p, perm, d, cmd, pb) in enumerate(TOOLS, 1))
-FACTS = [("$9.99", "one payment per tool"), ("$0", "monthly fees"), ("Free", "Claude plan works"), ("30 days", "money back")]
-HSTYLE = """<style>.phn{max-width:360px;margin-left:auto;width:100%;background:#111;border:1px solid var(--line);border-radius:28px;padding:22px 18px}
-.phn .t{font:600 11px/1 var(--T);letter-spacing:.16em;color:var(--mut);display:flex;justify-content:space-between;gap:12px;margin-bottom:16px;text-transform:uppercase}
-.phn .me{margin-left:auto;max-width:80%;background:#242424;border-radius:16px 16px 4px 16px;padding:9px 14px;font-size:15px;margin-bottom:12px;width:max-content}
-.phn .ai{background:#171717;border:1px solid #2c2c2c;border-radius:16px 16px 16px 4px;padding:14px;font-size:14.5px;line-height:1.5}
-.phn .ai b{display:block;font:600 11px/1 var(--T);letter-spacing:.16em;color:var(--mut);margin-bottom:10px}
-.phn .r{display:flex;justify-content:space-between;border-bottom:1px solid #262626;padding:6px 0;font-variant-numeric:tabular-nums}
-.phn .q{margin-top:12px;padding:10px 12px;border-radius:10px;background:rgba(212,255,58,.1);color:#e9ffc2;font-size:14px}
-.hgrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.75fr);gap:64px;align-items:center}.hgrid h1{font-size:clamp(36px,5.2vw,70px)}
-@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:44px}.hgrid h1{font-size:clamp(36px,10vw,76px)}.phn{margin:0 auto}}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts div{padding:30px 20px;border-left:1px solid var(--line)}.facts div:first-child{border-left:0;padding-left:0}
-.facts b{display:block;font:400 clamp(26px,3.2vw,40px)/1 var(--W);letter-spacing:-.02em;color:var(--tx)}.facts span{display:block;margin-top:10px;font:500 14px var(--T);color:var(--mut)}
-@media(max-width:820px){.facts{grid-template-columns:1fr 1fr}.facts div{padding:22px 0 22px 18px}.facts div:nth-child(odd){border-left:0;padding-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--line)}}
-.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.tc{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0;background:#fff;border:1px solid #dcdcd5;border-radius:20px;padding:24px}
-.tc-top{display:flex;justify-content:space-between;font:600 13px var(--T);color:#77776f;padding-bottom:18px;margin-bottom:22px;border-bottom:1px solid #e6e6e0;font-variant-numeric:tabular-nums}
-.tc-pb{font:400 clamp(20px,1.9vw,26px)/1.02 var(--W);text-transform:uppercase;letter-spacing:-.02em}
-.tc-nm{font:600 13px var(--T);letter-spacing:.1em;text-transform:uppercase;color:#77776f;margin:12px 0 14px}
-.tc-d{font-size:15px;color:#3b3b36;line-height:1.5}
-.tc .cmd{margin:18px 0 22px;color:#77776f}.tc .btn{width:100%;align-self:end}
-@media(max-width:1000px){.tools{grid-template-columns:1fr 1fr}}@media(max-width:560px){.tools{grid-template-columns:1fr}}
-.kit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.kit>*{min-width:0}@media(max-width:820px){.kit{grid-template-columns:1fr}}
-.kc{display:flex;flex-direction:column;border-radius:20px;padding:28px;border:1px solid #dcdcd5;background:#fff}.kc.dk{background:var(--ink);border-color:var(--ink);color:var(--tx)}
-.kc .k{margin-bottom:14px}.kc h3{font:400 clamp(24px,2.6vw,32px)/1 var(--W);text-transform:uppercase;letter-spacing:-.02em}
-.kc p{margin:14px 0 24px;font-size:15px;color:#3b3b36;max-width:460px}.kc.dk p{color:#b9b9b2}.kc .row{margin-top:auto}.kc .row .btn{flex:1}.kc .row .btn.ghost{flex:none}</style>"""
+def agent_rows():
+    return "".join(f'''<div class="ag"><div class="ag-n">0{i}</div><div class="ag-p"><span class="ag-l">Problem</span><h3>{e(pb)}</h3></div><div class="ag-d"><span class="ag-l">The agent</span><b>{e(n)}</b><p>{e(d)}</p><span class="ag-t">You type <code>{e(cmd)}</code></span></div><div class="ag-b"><div class="ag-pr">${p}</div><a class="b5 buy" href="{GR}{perm}">Get it</a></div></div>''' for i, (n, p, perm, pb, d, cmd) in enumerate(TOOLS, 1))
+SAMPLES = [("Invoice Chaser", "chase Dave", "Hi Dave! Quick reminder that the $520 for Saturday's detail was due on the 14th. You can pay here: [your link]. Thanks! Mike"),
+           ("Review Desk", "reply", "Thanks so much, Jen! Glad the SUV came out spotless. See you next time. Mike, Northside Detail"),
+           ("Content Week", "week", "Mon: before and after of the Tacoma\nTue: 15 second tip, pet hair\nWed: behind the scenes, 6 AM setup\nThu: customer story\nFri: open slots this weekend")]
+FAQ = [("Is it a subscription?", "No. You pay once and keep it. No monthly fee from us."),
+       ("Do I need tech skills?", "No. You copy one message into Claude and answer a few questions. The guide shows every tap."),
+       ("Do I have to pay for Claude?", "No. Every agent works on Claude's free plan."),
+       ("What do I get?", "A PDF guide with the setup message, a worked example and a cheat sheet. Instant download after checkout."),
+       ("Does it send anything for me?", "No. Everything is a draft. You read it and send it yourself."),
+       ("What if it doesn't help?", "Reply to your receipt within 30 days for a full refund.")]
+V5 = """<style>
+body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5d56;background:var(--pp);color:var(--ik)}
+.v5 .nav{background:rgba(236,236,231,.9);border-bottom:1.5px solid var(--ik)}.v5 .brand{color:var(--ik)}.v5 .brand .eyes{background:var(--ik)}.v5 .brand .eyes i{box-shadow:none}
+.v5 .nav .links{color:var(--mt)}.v5 .nav .links a:hover{color:var(--ik)}.v5 .nav .links .cta,.v5 .nav .links .cta:hover{background:var(--ik);color:#fff;border-radius:6px}
+.v5 .w5,.v5 .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.v5 .lab{font:600 12px/1 var(--T);letter-spacing:.16em;text-transform:uppercase;color:var(--mt)}
+.v5 h1,.v5 h2{color:var(--ik)}.v5 h1 em,.v5 h2 em{color:var(--ik);font-style:normal;background:var(--l);padding:0 .08em;margin:0 -.08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.b5{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:6px;font:700 16px var(--T);background:var(--ik);color:#fff;border:1.5px solid var(--ik);white-space:nowrap;transition:background .15s,color .15s}
+.b5:hover{background:var(--l);color:var(--ik)}.b5.o{background:transparent;color:var(--ik)}.b5.o:hover{background:var(--ik);color:#fff}.b5.l{background:var(--l);color:var(--ik);border-color:var(--l)}.b5.l:hover{background:#fff;border-color:#fff}
+/* hero */
+.h5{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.8fr);gap:56px;align-items:end;padding:64px 0 56px;border-bottom:1.5px solid var(--ik)}
+.h5 h1{font-size:clamp(38px,5.6vw,82px);line-height:.93;margin:20px 0 26px}
+.h5 .lead{color:#33332e;max-width:600px}
+.h5 .row{margin-top:32px;gap:10px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font:600 14px var(--T);color:var(--ik)}.trust span:before{content:"✓";margin-right:7px;font-weight:700}
+.rc{background:var(--wh);border:1.5px solid var(--ik);border-radius:4px;padding:22px 22px 18px;font:500 14.5px/1.45 var(--T);box-shadow:8px 8px 0 var(--ik)}
+.rc .rh{display:flex;justify-content:space-between;font:700 12px var(--T);letter-spacing:.14em;text-transform:uppercase;padding-bottom:12px;border-bottom:1.5px dashed var(--ik)}
+.rc .me{margin:14px 0 10px;font:600 14px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--mt)}
+.rc .r{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dotted rgba(11,11,11,.35);font-variant-numeric:tabular-nums}
+.rc .tt{display:flex;justify-content:space-between;padding:10px 0 2px;font-weight:700;border-top:1.5px solid var(--ik);margin-top:6px}
+.rc .q{margin-top:12px;background:var(--l);padding:9px 11px;border-radius:3px;font-weight:600;font-size:14px}
+.rc .ft{margin-top:12px;font-size:12px;color:var(--mt)}
+/* section heads */
+.s5{padding:88px 0;border-bottom:1.5px solid var(--ik)}
+.sh5{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:44px}
+.sh5 h2{font-size:clamp(30px,4.6vw,62px);line-height:.95;margin-top:16px}.sh5 p{font-size:18px;color:#33332e;max-width:460px;justify-self:end}
+/* agents price list */
+.ags{border-top:1.5px solid var(--ik)}
+.ag{display:grid;grid-template-columns:56px minmax(0,1.05fr) minmax(0,1.5fr) 190px;gap:28px;align-items:start;padding:30px 0;border-bottom:1px solid var(--rl)}
+.ag-n{font:400 22px/1 var(--W);padding-top:22px}
+.ag-l{display:block;font:600 11.5px var(--T);letter-spacing:.16em;text-transform:uppercase;color:var(--mt);margin-bottom:10px}
+.ag-p h3{font:400 clamp(24px,2.6vw,36px)/1 var(--W);text-transform:uppercase;letter-spacing:-.02em}
+.ag-d b{font:700 18px var(--T)}.ag-d p{margin:6px 0 10px;color:#33332e;font-size:15.5px;max-width:520px}
+.ag-t{font:500 14px var(--T);color:var(--mt)}.ag-t code{font:700 13.5px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--ik);color:var(--l);padding:3px 7px;border-radius:3px;margin-left:4px}
+.ag-b{display:flex;flex-direction:column;align-items:stretch;gap:12px;padding-top:16px}.ag-pr{font:400 34px/1 var(--W);letter-spacing:-.02em;text-align:right}
+/* bundle */
+.bd{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:center;background:var(--ik);color:#f3f3ef;border-radius:4px;padding:48px;margin-top:40px}
+.bd .lab{color:#a2a39a}.bd h3{font:400 clamp(30px,4vw,56px)/.95 var(--W);text-transform:uppercase;letter-spacing:-.025em;margin:14px 0 16px}.bd p{color:#c9c9c2;max-width:480px}
+.bd .px{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}.bd .px s{font:400 28px var(--W);color:#7b7b74}.bd .px b{font:400 clamp(56px,7vw,96px)/1 var(--W);color:var(--l);letter-spacing:-.03em}
+.bd .sv{display:inline-block;margin:10px 0 22px;font:700 14px var(--T);background:var(--l);color:var(--ik);padding:6px 10px;border-radius:3px}
+.bd .b5{width:100%}
+.fd{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:18px;padding:22px 0;border-top:1px solid var(--rl);border-bottom:1px solid var(--rl);font-size:16px}
+.fd b{font-weight:700}.fd a{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+/* samples */
+.sp{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.sp>*{min-width:0}
+.sm{background:var(--wh);border:1.5px solid var(--ik);border-radius:4px;display:flex;flex-direction:column}
+.sm .sh{display:flex;justify-content:space-between;gap:10px;padding:14px 18px;border-bottom:1.5px solid var(--ik);font:700 12px var(--T);letter-spacing:.12em;text-transform:uppercase}
+.sm .sh code{font:700 12.5px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0;text-transform:none;background:var(--ik);color:var(--l);padding:2px 6px;border-radius:3px}
+.sm pre{white-space:pre-wrap;font:500 15.5px/1.55 var(--T);padding:20px 18px;margin:0;flex:1}.sm .ex{padding:0 18px 14px;font-size:12px;color:var(--mt)}
+/* steps */
+.st5{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ik)}
+.st5>div{padding:28px 28px 8px 0}.st5>div+div{padding-left:28px;border-left:1px solid var(--rl)}
+.st5 b{display:block;font:400 56px/1 var(--W);margin-bottom:22px}.st5 h3{font:700 20px var(--T)}.st5 p{color:#33332e;margin-top:6px}
+/* try + guarantee */
+.tg{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px}
+.tg>div{border:1.5px solid var(--ik);border-radius:4px;padding:34px;background:var(--wh)}
+.tg h3{font:400 clamp(26px,2.8vw,38px)/1 var(--W);text-transform:uppercase;letter-spacing:-.02em;margin:14px 0 14px}
+.tg .cp5{margin-top:18px;background:var(--pp);border:1.5px dashed var(--ik);border-radius:4px;padding:16px;white-space:pre-wrap;font:500 14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace}
+.tg .gu{background:var(--l);display:flex;flex-direction:column}.tg .gu p{font-size:18px;max-width:400px}.tg .gu ul{list-style:none;margin:22px 0 28px;display:flex;flex-direction:column;gap:10px;font:600 16px var(--T)}.tg .gu li:before{content:"✓";margin-right:9px}.tg .gu .b5{margin-top:auto;align-self:flex-start}
+/* faq */
+.fq{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px;border-top:1.5px solid var(--ik)}
+.fq>div{padding:24px 0;border-bottom:1px solid var(--rl)}.fq h3{font:700 17.5px var(--T)}.fq p{color:#33332e;margin-top:8px;font-size:15.5px}
+/* footer on paper */
+.v5 .foot{border-top:0;color:var(--mt);background:var(--ik);color:#9c9c95}.v5 .foot .big{color:#f3f3ef}
+/* sticky buy bar (phones) */
+.sb{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:var(--ik);color:#fff;transform:translateY(110%);transition:transform .25s}
+.sb.on{transform:none}.sb b{font:400 18px var(--W)}.sb span{display:block;font-size:12.5px;color:#a2a39a}.sb .b5{height:46px;padding:0 18px}
+@media(max-width:1000px){.h5{grid-template-columns:1fr;align-items:start}.rc{max-width:440px}.ag{grid-template-columns:44px minmax(0,1fr) 150px;}.ag-d{grid-column:2/4}.ag-b{grid-column:3;grid-row:1}.ag-p{grid-column:2}
+ .sp{grid-template-columns:1fr}.fq{grid-template-columns:1fr 1fr}.bd{grid-template-columns:1fr;padding:34px}}
+@media(max-width:720px){.sh5{grid-template-columns:1fr;gap:16px}.sh5 p{justify-self:start}.s5{padding:64px 0}.h5{padding:40px 0 44px}
+ .ag{grid-template-columns:1fr;gap:14px;padding:26px 0}.ag-n{padding:0;font-size:16px;color:var(--mt)}.ag-p,.ag-d,.ag-b{grid-column:auto;grid-row:auto}.ag-b{flex-direction:row;align-items:center;justify-content:space-between;padding:0}.ag-b .b5{flex:0 0 160px}.ag-pr{text-align:left}
+ .st5{grid-template-columns:1fr}.st5>div,.st5>div+div{padding:24px 0;border-left:0;border-bottom:1px solid var(--rl)}.st5 b{font-size:40px;margin-bottom:12px}
+ .tg{grid-template-columns:1fr}.tg>div{padding:24px}.fq{grid-template-columns:1fr}.sb{display:flex}.v5 .foot{padding-bottom:110px}.h5 .row .b5{flex:1 1 100%}.bd{padding:26px}.rc{box-shadow:5px 5px 0 var(--ik)}}
+</style>"""
 def home():
-    facts = "".join(f"<div><b>{e(v)}</b><span>{e(t)}</span></div>" for v, t in FACTS)
-    return head("AUTOPILOT.OI · $9.99 AI tools for the paperwork you put off", "Four simple tools for small business owners: bookkeeping, invoices, reviews and posts. They run in the free Claude app and draft the work; you check and send. $9.99 each, one payment, 30 day refund.", "/", "toolkit-cover.png") + nav("") + f"""
-{HSTYLE}
-<div class="wrap hero hgrid"><div><div class="k">For small business owners</div>
-<h1 style="margin:22px 0 26px">Easy set up AI agents <em>that make your life easier.</em></h1>
-<p class="lead">$9.99 each. Unpaid invoices, ignored reviews, messy receipts, nothing to post: each agent takes one of these off your plate in the free Claude app. You check every draft and send it yourself.</p>
-<div class="row" style="margin-top:34px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#free">Try one free</a></div></div>
-<div class="phn"><div class="t"><span>Bookkeeping Sorter</span><span>Example</span></div><div class="me">sort · october.pdf</div>
-<div class="ai"><b>October, sorted</b><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Personal</span><span>$219</span></div>
-<div class="q">Home Depot, $64 on Oct 12: work or home?</div></div></div></div>
-<div class="wrap"><div class="facts">{facts}</div></div>
-<div class="sec paper" id="tools" style="margin-top:96px"><div class="wrap"><div class="shead"><div class="k">The tools</div><h2>Four problems.<br><em>Four $9.99 fixes.</em></h2><p class="lead">Pay once and keep it. No subscription, no setup fee. Not helpful? Full refund within 30 days.</p></div>
-<div class="tools">{tool_cards()}</div>
-<div class="kit"><div class="kc dk"><div class="k">Best value</div><h3>All four for <em style="font-style:normal;color:var(--l)">$24</em></h3><p>Every problem above, solved for $24. That's $6 a tool instead of $39.96.</p><div class="row"><a class="btn buy" href="{GR}owner-toolkit">Get all four · $24</a></div></div>
-<div class="kc"><div class="k">For businesses that text all day</div><h3>Front Desk Kit · $39</h3><p>Drafts replies, quotes and follow ups to customer texts from your real prices.</p><div class="row"><a class="btn dark buy" href="{GR}autopilot">Get it · $39</a><a class="btn ghost" href="/front-desk/">Details</a></div></div></div></div></div>
-<div class="sec" id="how"><div class="wrap"><div class="shead"><div class="k">Setup</div><h2>Ready in about<br><em>15 minutes.</em></h2></div>
-<div class="steps"><div><h3>Open Claude</h3><p style="color:var(--mut)">Free app or claude.ai. The free plan works.</p></div>
-<div><h3>Paste one message</h3><p style="color:var(--mut)">It asks a few questions about your business.</p></div>
-<div><h3>Type one word</h3><p style="color:var(--mut)">Read the draft. Send it yourself.</p></div></div></div></div>
-<div class="sec" id="free"><div class="wrap grid2" style="align-items:center;gap:64px"><div><div class="shead" style="margin-bottom:0"><div class="k">Free · 60 seconds</div><h2>See it work<br><em>for free.</em></h2><p class="lead">Paste this into Claude with a real review of your business. It writes the reply.</p></div>
-<button class="btn" style="margin-top:28px" onclick="navigator.clipboard.writeText(document.getElementById('fp').innerText);this.textContent='Copied'">Copy the message</button></div>
-<div class="cp" id="fp">Here is a review of my business. Write a short reply I can post.
+    rows = agent_rows()
+    samples = "".join(f'<div class="sm"><div class="sh"><span>{e(n)}</span><code>{e(c)}</code></div><pre>{e(t)}</pre><div class="ex">Example output for a sample business.</div></div>' for n, c, t in SAMPLES)
+    faq = "".join(f"<div><h3>{e(q)}</h3><p>{e(a)}</p></div>" for q, a in FAQ)
+    page = head("AUTOPILOT.OI · Easy set up AI agents for small business owners, $9.99", "Four AI agents for the jobs you put off: unpaid invoices, ignored reviews, messy receipts and nothing to post. $9.99 each or all 4 for $24. One payment, free Claude plan works, 30 day refund.", "/", "toolkit-cover.png") + nav("") + f"""
+{V5}
+<div class="w5"><div class="h5"><div><div class="lab">AI agents for small business owners</div>
+<h1>Easy set up AI agents that make your life <em>easier.</em></h1>
+<p class="lead">Four agents for the jobs you keep putting off: chasing invoices, answering reviews, sorting receipts and planning posts. $9.99 each. Set up in about 15 minutes, right on your phone.</p>
+<div class="row"><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">See each agent · $9.99</a></div>
+<div class="trust"><span>One payment, no subscription</span><span>Free Claude plan works</span><span>Instant download</span><span>30 day refund</span></div></div>
+<div class="rc" aria-label="Example: Bookkeeping Sorter output"><div class="rh"><span>Bookkeeping Sorter</span><span>Example</span></div><div class="me">&gt; sort october.pdf</div>
+<div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Personal</span><span>$219</span></div>
+<div class="tt"><span>Business total</span><span>$1,224</span></div><div class="q">1 question: Home Depot $64 on Oct 12, work or home?</div><div class="ft">Sample business. Your numbers come from your own statement.</div></div></div></div>
+<div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
+<div class="ags">{rows}</div>
+<div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>
+<div><div class="px"><s>$39.96</s><b>$24</b></div><div class="sv">You save $15.96</div><a class="b5 l buy" href="{GR}owner-toolkit">Get all 4 for $24</a></div></div>
+<div class="fd"><span><b>Run a service business that texts all day?</b> The Front Desk Kit drafts replies, quotes and follow ups from your real prices. $39.</span><a href="/front-desk/">See the Front Desk Kit</a></div></div></div>
+<div class="s5"><div class="w5"><div class="sh5"><div><div class="lab">What it writes</div><h2>One word in. <em>A draft out.</em></h2></div><p>The kind of thing you get back after one word. You read it, then send it.</p></div>
+<div class="sp">{samples}</div></div></div>
+<div class="s5" id="how"><div class="w5"><div class="sh5"><div><div class="lab">Setup</div><h2>Ready in about <em>15 minutes.</em></h2></div><p>No code, no apps to learn. If you can send a text, you can do this.</p></div>
+<div class="st5"><div><b>01</b><h3>Open Claude</h3><p>The free app or claude.ai. The free plan works.</p></div><div><b>02</b><h3>Paste one message</h3><p>It asks a few easy questions about your business.</p></div><div><b>03</b><h3>Type one word</h3><p>chase, reply, sort or week. Read the draft. Send it.</p></div></div></div></div>
+<div class="s5" id="free"><div class="w5"><div class="tg"><div><div class="lab">Free · 60 seconds</div><h3>Try it before you buy</h3><p>Paste this into Claude with a real review of your business. It writes the reply.</p>
+<div class="cp5" id="fp">Here is a review of my business. Write a short reply I can post.
 My business: [name and what you do]
 My name: [your first name]
 The review: [paste it]
-Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div></div></div>
-<div class="sec"><div class="wrap grid2" style="gap:64px"><div class="shead" style="margin-bottom:0"><div class="k">Questions</div><h2>Before<br><em>you buy.</em></h2><p class="lead">Stuck after you buy? Reply to your receipt and we help.</p></div><div>
-<details><summary>What is Claude?</summary><p>An AI assistant made by Anthropic. You text it and it writes back. Our tools set it up to do one job for your business.</p></details>
-<details><summary>Do I have to pay for Claude?</summary><p>No. Every tool works on the free plan.</p></details>
-<details><summary>Does it send or post for me?</summary><p>No. Everything is a draft. You send it yourself.</p></details>
-<details><summary>Is my information safe?</summary><p>Never paste card numbers, account numbers or passwords into any AI. Your chats stay in your own Claude account.</p></details>
-<details><summary>What if it doesn't work for me?</summary><p>30 day refund. Reply to your Gumroad receipt.</p></details></div></div></div>""" + FOOT
+Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div>
+<button class="b5" style="margin-top:18px" onclick="navigator.clipboard.writeText(document.getElementById('fp').innerText);this.textContent='Copied'">Copy the message</button></div>
+<div class="gu"><div class="lab" style="color:#3c3c36">Our promise</div><h3>30 day refund</h3><p>If an agent doesn't help your business, reply to your receipt within 30 days and get your money back.</p><ul><li>No forms, no calls</li><li>One payment, nothing recurring</li><li>Works on the free Claude plan</li></ul><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a></div></div></div></div>
+<div class="s5"><div class="w5"><div class="sh5"><div><div class="lab">Questions</div><h2>Before <em>you buy.</em></h2></div><p>Still stuck after you buy? Reply to your receipt and we help.</p></div><div class="fq">{faq}</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:40px"><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">Pick one · $9.99</a></div></div></div>
+<div class="sb" id="sb"><div><b>All 4 agents · $24</b><span>One payment · 30 day refund</span></div><a class="b5 l buy" href="{GR}owner-toolkit">Get them</a></div>
+<script>(function(){{var s=document.getElementById('sb'),h=document.querySelector('.h5 .row');if(!('IntersectionObserver' in window)||!s||!h)return;new IntersectionObserver(function(x){{s.classList.toggle('on',!x[0].isIntersecting&&x[0].boundingClientRect.top<0)}}).observe(h)}})();</script>""" + FOOT
+    return page.replace("<body>", '<body class="v5">', 1)
 
 PRODUCTS = [
  ("Front Desk Kit", "39", "/front-desk/", GR + "autopilot", "Customer replies, quotes and follow ups, drafted in your voice from your real prices.", ["15 question business interview", "Reply, quote, chase, review, FAQ, plan week", "3 extra systems built for your business", "Free Claude plan works"]),
