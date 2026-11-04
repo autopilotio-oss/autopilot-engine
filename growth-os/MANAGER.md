@@ -87,3 +87,22 @@ Answers go here with his quote and date.
 1. TikTok agent: keep the Video Agent at $10 and rename it "TikTok Agent" with a new "make money on TikTok" chapter? (pending)
 2. Threads volume: 8 a day OK, or push to 12? (pending)
 3. After Nov 10: keep autopost on for posts that pass the gate? (pending)
+
+## 8. The team (scheduled tasks, Nov 4 2026)
+
+| Task | When (ART) | Lane |
+|---|---|---|
+| Daily Manager | 08:51 and 19:51 | Numbers, moves, Threads and X batches, 1 TikTok video, AM report and questions |
+| News Desk | hourly :49 | Verified AI news carousels to IG 18:00, Threads, X (no TikTok) |
+| Draft factory | every 4h from 09:29 | Carousel bank for the owner tools, never posts |
+| Campaign operator | 07:13 | Factory reels QA, IG 10:00 reel slot |
+| Site improver | every 3h from 10:39 | One tested site fix per run |
+| Hourly analyst | hourly :19 | Read only numbers and HQ feed |
+| Daily Pulse | 08:13 | Health, orders, guardrails (silent unless critical) |
+| Social report | 21:41 | PM report to Seb |
+| Support + inbox | 10:07, 16:07 | Gmail drafts only |
+| Kit welcome sync | every 3h | Routes new subscribers to sequences |
+| TikTok Shop intel | Wed 11:13 | TikTok facts for the TikTok pillar |
+| Weekly sprint, newsletter draft, monthly review, Nov 11 final report | weekly / monthly / once | Reports and drafts |
+
+Paused Nov 4 (reversible, re-enable in scheduled tasks): Viral Content Lab and trend scout (research for parked money agents, overlapped with News Desk), Publisher (only posted Viral Lab concepts), one shot Morning content check (replaced by the Daily Manager).
