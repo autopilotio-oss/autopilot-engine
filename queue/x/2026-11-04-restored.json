@@ -1,0 +1,9 @@
+{
+ "approval": {"by": "Seb", "quote": "We need to make sure content is firing off today", "at": "2026-11-04T13:45-03:00", "basis": "Posts Seb approved Nov 3 that the 08:13 Daily Pulse pulled to draft because they had no queue record; restored with the TOOLS line changed to link in bio (TOOLS not yet in ManyChat)"},
+ "posts": [
+  {"uuid": "-2095563235766222617", "network": "instagram", "at": "2026-11-04T20:30-03:00", "what": "11:48 PM owner reel"},
+  {"uuid": "-6665078232573916952", "network": "instagram", "at": "2026-11-05T10:00-03:00", "what": "6 texts that get you paid carousel"},
+  {"uuid": "6412444444069610367", "network": "threads", "at": "2026-11-05T18:00-03:00", "what": "6 texts"},
+  {"uuid": "3892596243979125150", "network": "twitter", "at": "2026-11-05T18:00-03:00", "what": "6 texts"}
+ ]
+}
