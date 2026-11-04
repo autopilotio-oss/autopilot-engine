@@ -44,7 +44,7 @@ What the TikTok agent truly does (say only this): plans a week of videos from re
 Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00, 19:00, 20:00, 22:00. X slots: 09:00, 12:00, 15:00, 18:00, 21:00. IG: 10:00, 18:00. TikTok: 10:00, 12:00, 18:00.
 
 ### Prompt pack carousels (Seb, Nov 4: "make content like this ... crazy hook and value don't post unless it's 100% good")
-- Format: big number hook cover ("36 Claude prompts every business owner needs"), a how to use slide (swap the [brackets]), one folder per slide with 6 prompt cards in a 2x3 grid (builder slide {"cat", "cards"}), then the AGENTS card. Reference: tools/carousel/posts/2026-11-04-owner-36-prompts.json.
+- Format: big number hook cover ("36 Claude prompts every business owner needs"), one folder per slide with 4 prompt cards a slide in a 2x2 grid, 22 words max each, website design language (builder slide {"cat", "cards"}), then the AGENTS card. Reference: tools/carousel/posts/2026-11-04-owner-24-prompts.json (Seb: "simple and to the point ... dynamic and easy to read use same design language from website").
 - Give all the prompts in the slides. Never gate a "full pack" behind a comment unless that pack exists and its keyword is in config/manychat.json.
 - Every prompt is tested logic for an owner: a real task, [brackets] for their details, a clear output (length, format, tone). No filler prompts. No legal, tax or money advice claims.
 - Gate is stricter for this format: post only at 90+/100 and QA PASS. Max 1 prompt pack a week on IG (18:00 carousel slot), Threads and X get one prompt from it as a teaser.

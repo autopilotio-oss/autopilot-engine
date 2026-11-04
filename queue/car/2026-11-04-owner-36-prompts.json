@@ -1,7 +1,7 @@
 {
  "id": "2026-11-04-owner-36-prompts",
  "kind": "prompts",
- "status": "scheduled",
+ "status": "superseded",
  "approval": {
   "by": "Seb",
   "date": "2026-11-04",
@@ -28,5 +28,7 @@
   "threads": "2026-11-07 18:30 ART",
   "x": "2026-11-07 18:30 ART"
  },
- "metricool_uuids": []
+ "metricool_uuids": [],
+ "superseded_by": "2026-11-04-owner-24-prompts",
+ "why": "Seb, Nov 4 14:31: \"Make sure the post are simple and to the point as well as dynamic and easy to read use same design language from website\". 6 cards a slide was too dense."
 }

@@ -240,27 +240,27 @@
 .cv-flow{display:flex;flex-direction:column;gap:26px}.cv-flow .cv-arrow{align-self:center;padding-top:18px}
 .cv-flow{gap:16px}.cv-card{padding:20px 28px}.cv-cmt .tx{font-size:46px}.cv-dm .bub{font-size:31px;padding:14px 20px}.cv-dm .lnk{margin-top:12px}.cv-small{font-size:29px}.cv-flow .cv-arrow{padding-top:14px}
 
-/* prompt pack grid (grid slides) */
-.s.gr{background:#0a0a0a}
-.gr-k{left:56px;top:58px;font-size:22px;color:#D4FF3A;letter-spacing:3px}
-.gr-h{left:56px;top:104px;font-size:112px;white-space:nowrap;color:#f2f2ee}
-.gr-grid{position:absolute;left:56px;top:244px;width:968px;height:946px;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px;z-index:5}
-.gc{background:#f2f2ee;color:#0a0a0a;border-radius:22px;padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px}
-.gc.lm{background:#D4FF3A}
-.s.gr .gc-t{font:800 27px/1.1 I;letter-spacing:-.5px;text-transform:none;color:#0a0a0a;display:flex;align-items:center;gap:12px}
-.gc-n{font:400 18px M;background:#0a0a0a;color:#D4FF3A;border-radius:10px;padding:5px 9px 4px}
-.s.gr .gc-p{font:500 26px/1.34 I;letter-spacing:-.2px;color:#0a0a0a}
-.gc-p .fill{font-weight:800;white-space:nowrap;background:#0a0a0a;color:#f2f2ee;border-radius:6px;padding:0 5px}
-.gc.lm .gc-p .fill{color:#D4FF3A}
-.gr-bar{position:absolute;left:56px;top:1218px;width:968px;display:flex;gap:10px;z-index:5}
-.gs{flex:1}.gs i{display:block;height:6px;border-radius:3px;background:#f2f2ee33}
-.gs.done i{background:#f2f2ee99}.gs.on i{background:#D4FF3A}
-.gs span{display:block;margin-top:8px;font:700 15px C;letter-spacing:2px;text-transform:uppercase;color:#f2f2ee88}
-.gs.on span{color:#D4FF3A}
-.s.gr .handle{font-size:20px;bottom:40px}
-.gr-sw{right:56px;bottom:46px;font-size:20px;color:#0a0a0a;background:#D4FF3A;padding:8px 14px 6px;border-radius:18px}
-.gc{position:relative;box-shadow:0 18px 40px #0008}
-.gc-cp{position:absolute;right:20px;top:22px;opacity:.55}
-.gc-try{position:absolute;right:-12px;top:-18px;z-index:3;background:#0a0a0a;color:#D4FF3A;border:3px solid #D4FF3A;font:400 26px/1 A;letter-spacing:1px;padding:8px 14px 5px;transform:rotate(6deg);box-shadow:0 0 22px #D4FF3A66}
-.gc.star{outline:4px solid #D4FF3A;outline-offset:5px}
-.s.gr .gc-t{padding-right:40px}
+/* prompt pack grid (grid slides): website design language (paper, ink, white cards with ink border, lime marker) */
+.s.gr{background:#ecece7;color:#0b0b0b}
+.gr-k{left:56px;top:62px;font-size:22px;color:#5d5d56;letter-spacing:4px}
+.gr-h{left:56px;top:122px;font-size:112px;white-space:nowrap;color:#0b0b0b}
+.gr-h .l{color:#0b0b0b;background:#D4FF3A;padding:0 14px;text-shadow:none}
+.gr-grid{position:absolute;left:56px;top:270px;width:968px;height:922px;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:20px;z-index:5}
+.gc{position:relative;background:#f8f8f4;color:#0b0b0b;border:3px solid #0b0b0b;border-radius:8px;padding:30px 30px 28px;display:flex;flex-direction:column;gap:18px}
+.s.gr .gc-t{font:400 40px/1 A;text-transform:uppercase;color:#0b0b0b;display:flex;align-items:center;gap:14px;padding-right:44px}
+.gc-n{font:700 20px/1 C;letter-spacing:1px;background:#D4FF3A;color:#0b0b0b;border:3px solid #0b0b0b;border-radius:4px;padding:6px 8px 4px}
+.s.gr .gc-p{font:500 37px/1.28 I;letter-spacing:-.4px;color:#22221e}
+.gc-p .fill{font-weight:800;color:#0b0b0b;background:#D4FF3A;padding:0 4px;border-radius:3px;white-space:nowrap}
+.gc-cp{position:absolute;right:26px;top:30px;opacity:.5}
+.gc.star{background:#D4FF3A}
+.gc.star .gc-p .fill{background:#0b0b0b;color:#D4FF3A}
+.gc.star .gc-n{background:#f8f8f4}
+.gc-try{position:absolute;right:-14px;top:-20px;z-index:3;background:#0b0b0b;color:#D4FF3A;font:400 28px/1 A;letter-spacing:1px;padding:9px 14px 6px;border-radius:6px;transform:rotate(5deg)}
+.gr-bar{position:absolute;left:56px;top:1222px;width:968px;display:flex;gap:10px;z-index:5}
+.gs{flex:1}.gs i{display:block;height:6px;border-radius:3px;background:#0b0b0b22}
+.gs.done i{background:#0b0b0b88}.gs.on i{background:#0b0b0b}
+.gs span{display:block;margin-top:8px;font:700 15px C;letter-spacing:2px;text-transform:uppercase;color:#5d5d56}
+.gs.on span{color:#0b0b0b}
+.s.gr .handle{font-size:20px;bottom:40px;color:#5d5d56}
+.s.gr .pg{background:#0b0b0b;color:#f8f8f4}
+.gr-sw{right:56px;bottom:44px;font-size:20px;color:#0b0b0b;background:#D4FF3A;border:3px solid #0b0b0b;padding:8px 14px 6px;border-radius:6px}

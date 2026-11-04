@@ -51,7 +51,7 @@
       e.style.transform = (tr + ' ' + x.tf).trim();
       if (x.count) {
         const q = clamp((t - x.delay) / 1.3);
-        if (q < 1) { const v = (x.count.n * out3(q)).toFixed(x.count.dec); e.innerHTML = x.count.orig.replace(/\d+(?:\.\d+)?/, v); }
+        if (q < 1) { const v = (x.count.n * out3(q)).toFixed(x.count.dec); e.innerHTML = x.count.orig.replace(/(^|>)([^<\d]*)\d+(?:\.\d+)?/, `$1$2${v}`); }
         else e.innerHTML = x.count.orig;
       }
       if (x.lines) x.lines.forEach((l, k) => { l.style.visibility = t > x.delay + 0.35 + k * 0.38 ? 'visible' : 'hidden'; });

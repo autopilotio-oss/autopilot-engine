@@ -1,0 +1,33 @@
+{
+ "id": "2026-11-04-owner-24-prompts",
+ "kind": "prompts",
+ "status": "scheduled",
+ "approval": {
+  "by": "Seb",
+  "date": "2026-11-04",
+  "quote": "Let's make content like this and add it in the mix ... each thing we post needs to be a crazy hook and value don't post unless it's 100% good and has great value",
+  "design_quote": "Make the post more dynamic ... Make sure the post are simple and to the point as well as dynamic and easy to read use same design language from website"
+ },
+ "cover_idea": "Website design language: paper #ecece7 with light lava, ink Anton headline 24 CLAUDE PROMPTS / EVERY BUSINESS / OWNER NEEDS with 24 in a lime marker that counts up, six folder cards with ink borders that pop in one by one, black SAVE IT button, lime NO DM NEEDED stamp slams in.",
+ "theme": "small business prompt pack: 24 short prompts (22 words max) in 6 folders, 4 cards a slide at 37px, all visible, AGENTS for the free Front Desk Starter",
+ "gate": {
+  "score": 95,
+  "notes": "Accuracy 29/30 (only claim: Google Business Profile description limit 750 characters, BrightLocal and Vendasta, checked Nov 4). Hook 23/25 (number pack hook from Seb's 3 references, all prompts inside, NO DM NEEDED). Clarity 20/20 (4 cards a slide, 37px text, 22 words max, brackets in lime). Design 14/15 (site language: paper, ink borders, lime marker; kinetic cover; QA PASS on all 8). CTA 9/10 (AGENTS confirmed)."
+ },
+ "sources": [
+  [
+   "BrightLocal",
+   "https://www.brightlocal.com/learn/google-business-profile/optimization/description/"
+  ],
+  [
+   "Vendasta",
+   "https://vendasta.com/blog/google-business-description-examples"
+  ]
+ ],
+ "slots": {
+  "instagram": "2026-11-07 18:00 ART (next open IG slot; Nov 4 to 6 already have 2 each)",
+  "threads": "2026-11-07 18:30 ART",
+  "x": "2026-11-07 18:30 ART"
+ },
+ "metricool_uuids": []
+}

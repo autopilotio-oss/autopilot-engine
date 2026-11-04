@@ -1,0 +1,169 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 04 2026",
+ "cover_bg": "bg-white",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 23,
+ "folders": [
+  "Get paid",
+  "Customers",
+  "Sales",
+  "Marketing",
+  "Reviews",
+  "Operations"
+ ],
+ "cover_html": "<div class=\"fx Cc\" style=\"left:56px;top:76px;font-size:22px;color:#5d5d56;letter-spacing:4px\">THE OWNER PLAYBOOK &middot; ALL 24 INSIDE</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"22\" style=\"left:56px;top:160px;font-size:160px;white-space:nowrap;color:#0b0b0b\"><span style=\"background:#D4FF3A;padding:0 14px\">24</span> Claude prompts</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:330px;font-size:160px;white-space:nowrap;color:#0b0b0b\">every business</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:500px;font-size:160px;white-space:nowrap;color:#0b0b0b\">owner needs</div><div class=\"fx\" data-after=\"h\" data-gap=\"64\" data-stagger=\"1\" style=\"left:56px;top:760px;width:968px;height:118px\"><div style=\"position:absolute;left:0px;top:0;width:151px;height:118px;border-radius:8px;border:3px solid #0b0b0b;box-sizing:border-box;background:#D4FF3A;color:#0b0b0b\"><div style=\"position:absolute;left:12px;top:12px;font:700 18px C;letter-spacing:1px\">01 to 04</div><div style=\"position:absolute;left:12px;bottom:12px;font:400 24px/1 A;text-transform:uppercase\">Get paid</div></div><div style=\"position:absolute;left:163px;top:0;width:151px;height:118px;border-radius:8px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b\"><div style=\"position:absolute;left:12px;top:12px;font:700 18px C;letter-spacing:1px\">05 to 08</div><div style=\"position:absolute;left:12px;bottom:12px;font:400 24px/1 A;text-transform:uppercase\">Customers</div></div><div style=\"position:absolute;left:326px;top:0;width:151px;height:118px;border-radius:8px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b\"><div style=\"position:absolute;left:12px;top:12px;font:700 18px C;letter-spacing:1px\">09 to 12</div><div style=\"position:absolute;left:12px;bottom:12px;font:400 24px/1 A;text-transform:uppercase\">Sales</div></div><div style=\"position:absolute;left:489px;top:0;width:151px;height:118px;border-radius:8px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b\"><div style=\"position:absolute;left:12px;top:12px;font:700 18px C;letter-spacing:1px\">13 to 16</div><div style=\"position:absolute;left:12px;bottom:12px;font:400 24px/1 A;text-transform:uppercase\">Marketing</div></div><div style=\"position:absolute;left:652px;top:0;width:151px;height:118px;border-radius:8px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b\"><div style=\"position:absolute;left:12px;top:12px;font:700 18px C;letter-spacing:1px\">17 to 20</div><div style=\"position:absolute;left:12px;bottom:12px;font:400 24px/1 A;text-transform:uppercase\">Reviews</div></div><div style=\"position:absolute;left:815px;top:0;width:151px;height:118px;border-radius:8px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b\"><div style=\"position:absolute;left:12px;top:12px;font:700 18px C;letter-spacing:1px\">21 to 24</div><div style=\"position:absolute;left:12px;bottom:12px;font:400 24px/1 A;text-transform:uppercase\">Operations</div></div></div><div class=\"fx Ii\" style=\"left:56px;top:950px;width:900px;font-size:42px;line-height:1.2;color:#0b0b0b\">Copy. Paste. Swap the <span style=\"background:#D4FF3A;padding:0 6px\">[brackets]</span>.</div><div class=\"fx Cc\" style=\"left:56px;top:1100px;font-size:24px;color:#f8f8f4;background:#0b0b0b;padding:16px 24px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div><div class=\"fx stampL\" style=\"left:640px;top:1080px;font-size:54px;border:5px solid #0b0b0b;color:#0b0b0b;background:#D4FF3A;box-shadow:none;padding:8px 20px 2px;transform:rotate(-6deg)\">NO DM NEEDED</div>",
+ "slides": [
+  {
+   "cat": "Get paid",
+   "cards": [
+    {
+     "t": "Reminder",
+     "p": "Write a friendly 2 sentence reminder for invoice [number], due [date]. Assume they forgot. Add my pay link [link]."
+    },
+    {
+     "t": "Late invoice",
+     "p": "Invoice [number] is [X] days late with no reply. Write a firm, kind follow up with a pay by date."
+    },
+    {
+     "t": "Invoice lines",
+     "p": "Turn these job notes into invoice lines with prices: [paste]. Flag anything I forgot to charge for.",
+     "star": true
+    },
+    {
+     "t": "New prices",
+     "p": "Write a short note raising [service] to [new price] on [date]. One honest reason, a thank you, no apologizing."
+    }
+   ]
+  },
+  {
+   "cat": "Customers",
+   "cards": [
+    {
+     "t": "FAQ",
+     "p": "Answer these customer questions in my voice, under 40 words each, with one next step: [paste]."
+    },
+    {
+     "t": "Complaint",
+     "p": "Reply to this complaint: [paste]. Own the mistake in one line. Say how and when I fix it. No excuses.",
+     "star": true
+    },
+    {
+     "t": "Reschedule",
+     "p": "Text [customer] to move from [day] to [option 1] or [option 2]. Apologize once. Let them reply 1 or 2."
+    },
+    {
+     "t": "After hours",
+     "p": "Write an after hours auto reply: when I will answer, my booking link [link], one line for urgent issues."
+    }
+   ]
+  },
+  {
+   "cat": "Sales",
+   "cards": [
+    {
+     "t": "Lead check",
+     "p": "Here is a lead's message: [paste]. Is it worth a call? Give me the first question to ask."
+    },
+    {
+     "t": "Quote follow up",
+     "p": "Write 3 short texts following up my quote for [job]. Friendly, useful, never desperate."
+    },
+    {
+     "t": "Too expensive",
+     "p": "A customer says [service] costs too much. Give me 3 replies that hold my price.",
+     "star": true
+    },
+    {
+     "t": "Proposal",
+     "p": "Turn these notes into a one page proposal with 3 price tiers and one clear pick: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Marketing",
+   "cards": [
+    {
+     "t": "Post ideas",
+     "p": "Give me 30 post ideas for my [business]. Each one answers a real question customers ask me.",
+     "star": true
+    },
+    {
+     "t": "Review to posts",
+     "p": "Turn this 5 star review into 3 posts: a story, a lesson, a before and after: [paste]."
+    },
+    {
+     "t": "Google profile",
+     "p": "Write my Google Business Profile description for [business] in [area]. Plain words, under 750 characters."
+    },
+    {
+     "t": "Slow season",
+     "p": "Give me 3 slow season offers that fill [month] for my [business] without cheapening the brand."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Ask",
+     "p": "Write a 2 sentence text asking [name] for a Google review of today's [job]. Add my link [link]."
+    },
+    {
+     "t": "5 star reply",
+     "p": "Reply to this 5 star review in 2 personal sentences. Mention the detail they mentioned: [paste]."
+    },
+    {
+     "t": "1 star reply",
+     "p": "Reply in public to this 1 star review: [paste]. Calm, fair, offer to fix it. Under 80 words."
+    },
+    {
+     "t": "What to fix",
+     "p": "Read my last [X] reviews: [paste]. What do people love, what do they hate, what do I fix first?",
+     "star": true
+    }
+   ]
+  },
+  {
+   "cat": "Operations",
+   "cards": [
+    {
+     "t": "Checklist",
+     "p": "I will explain how I do [task]. Turn it into a checklist a new hire can follow on day one.",
+     "star": true
+    },
+    {
+     "t": "Hiring post",
+     "p": "Write a job post for a [role]: the daily work, must haves, pay [range], and 3 screening questions."
+    },
+    {
+     "t": "My week",
+     "p": "Sort my to do list into today, this week, delegate, and drop: [paste]. Be honest."
+    },
+    {
+     "t": "Meeting notes",
+     "p": "Turn these meeting notes into a table: who does what, by when: [paste]."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "OWNER",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

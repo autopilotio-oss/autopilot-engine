@@ -223,7 +223,7 @@ def brk(s):
     return re.sub(r"\[([^\]]+)\]", r'<b class="fill">[\1]</b>', E(s))
 
 
-COPY = ('<svg class="gc-cp" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.4">'
+COPY = ('<svg class="gc-cp" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.4">'
         '<rect x="8" y="8" width="13" height="13" rx="3"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>')
 
 
@@ -235,13 +235,13 @@ def grid(p, i, n, sl):
     k = sl.get("no") or (folders.index(sl["cat"]) + 1 if sl["cat"] in folders else i - 1)
     start = sl.get("start", (k - 1) * len(sl["cards"]) + 1)
     cards = "".join(
-        f'<div class="gc{" lm" if (j // 2 + j) % 2 == 0 else ""}{" star" if c.get("star") else ""}" style="transform:rotate({(-.6, .5, .4, -.5, -.4, .6)[j % 6]}deg)">'
+        f'<div class="gc{" star" if c.get("star") else ""}">'
         f'{'<div class="gc-try">TRY FIRST</div>' if c.get("star") else COPY}<div class="t gc-t"><span class="gc-n">{start + j:02d}</span>{E(c["t"])}</div>'
         f'<div class="b gc-p">{brk(c["p"])}</div></div>' for j, c in enumerate(sl["cards"]))
     segs = "".join(f'<div class="gs{" on" if m + 1 == k else (" done" if m + 1 < k else "")}"><i></i><span>{E(f)}</span></div>'
                    for m, f in enumerate(folders))
     return (f'<div class="s gr" id="s{i}">{GRAIN}<div class="pg">{i}/{n}</div>'
-            f'<div class="fx Cc gr-k">FOLDER {k:02d} / {len(folders):02d} &middot; COPY. PASTE. SWAP THE [BRACKETS].</div>'
+            f'<div class="fx Cc gr-k">FOLDER {k:02d} / {len(folders):02d}</div>'
             f'<div class="fx A gr-h"><span class="l">{k:02d}</span> {E(sl["cat"])}</div>'
             f'<div class="gr-grid">{cards}</div><div class="gr-bar">{segs}</div>'
             f'<div class="handle"><img class="hlogo" src="/docs/logo.png">SAVE THIS &middot; @AUTOPILOT.OI</div>'
@@ -310,7 +310,7 @@ async function go(){await document.fonts.ready;
    const P=box.parentElement;
    if(box.dataset.w){while(P.getBoundingClientRect().bottom>1240&&k>.4){k-=.03;apply()}}
    else{while(P.getBoundingClientRect().top<560&&k>.4){k-=.03;apply()}}}
- for(const g of document.querySelectorAll('.gr-grid')){let f=26;const cs=[...g.querySelectorAll('.gc')],ps=[...g.querySelectorAll('.gc-p')];
+ for(const g of document.querySelectorAll('.gr-grid')){let f=37;const cs=[...g.querySelectorAll('.gc')],ps=[...g.querySelectorAll('.gc-p')];
    while(cs.some(c=>c.scrollHeight>c.clientHeight+1)&&f>17){f-=.5;ps.forEach(e=>e.style.fontSize=f+'px')}}
  for(const el of document.querySelectorAll('.fit2')){const b=el.parentElement;let k=1;while(el.scrollHeight>b.clientHeight&&k>.5){k-=.04;el.style.zoom=k}}
  try{TYPESET()}catch(e){window.QA=[{slide:0,level:'error',msg:'typeset crashed: '+e.message}]}
