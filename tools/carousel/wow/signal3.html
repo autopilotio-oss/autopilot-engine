@@ -33,9 +33,11 @@ h+=`<div class=row style="top:0">
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,0) 25%,rgba(0,0,0,.8) 78%)"></div>
   ${brand(0,1)}${hl(0,'24 prompts for owners',['Prompts that','should be','illegal.'],1)}${foot(0,'swipe →',PAPER)}</div>
  <div class=t style="left:1080px;background:${PAPER}">${corner(0,'no dm needed',INK)}
-  <div class=O style="left:40px;top:150px;font-size:236px">Illegal<br>illegal<br>illegal<br>illegal</div></div>
+  <div class=O style="left:40px;top:150px;font-size:236px">Illegal<br>illegal<br>illegal</div>
+  <div style="position:absolute;left:520px;top:790px;width:490px">${['01 get paid','02 customers','03 sales','04 marketing','05 reviews','06 operations'].map((t,i)=>`<div style="display:flex;justify-content:space-between;border-top:2px solid ${INK};padding:12px 0 10px;font:400 21px M;letter-spacing:4px;text-transform:uppercase;color:${INK}"><span>${t}</span><span>4</span></div>`).join('')}</div></div>
  <div class=t style="left:2160px;background:${INK}">${corner(0,'the store',LIME)}
   ${ap(70,200,520,'lime')}
+  <div style="position:absolute;left:640px;top:210px;width:370px">${['price replies','quotes + deposits','follow ups','you hit send'].map((t,i)=>`<div style="border-top:2px solid ${i==3?LIME:'#3a3a3a'};padding:14px 0 12px;font:400 20px M;letter-spacing:4px;text-transform:uppercase;color:${i==3?LIME:PAPER}">${i<3?'\u2713 ':'\u2192 '}${t}</div>`).join('')}</div>
   ${hl(0,'new kit',['Front','desk kit','$39'],1,150)}${foot(0,'link in bio',PAPER,1)}</div>
  <svg style="position:absolute;left:0;top:0" width=3240 height=1350><polygon points="760,1350 1080,640 1400,1350" fill="${LIME}"/></svg>
  ${line([LIME,INK,LIME])}${code(1880,520,11,[LIME,INK,LIME],'AP.OI / KIT 001')}
@@ -55,6 +57,9 @@ h+=`<div class=row style="top:1350px">
    <div style="font:400 50px/1.32 A;letter-spacing:.5px;color:${PAPER};text-transform:none;white-space:normal">Turn this quote into 3 options, good, better, best, with what changes in each: <span style="color:${LIME}">[paste]</span></div>
    <div style="margin-top:44px;display:flex;align-items:center;gap:16px">${ap(0,0,54,'lime','position:static')}<div class=M style="position:static;color:${PAPER};font-size:17px">copy. paste. send.</div></div>
   </div>
+  <div style="position:absolute;left:70px;top:790px;width:940px;border:4px solid ${INK};padding:40px 48px;box-sizing:border-box">
+   <div class=M style="position:static;color:${INK};margin-bottom:22px">prompt 02 / money</div>
+   <div style="font:400 40px/1.3 A;text-transform:none;color:${INK}">Here are my costs for <span class=box style="margin-left:0;padding:0 8px">[job]</span>. Did I make money? Show the margin in a simple table.</div></div>
   ${foot(0,'all 24 inside',INK,1)}</div>
  <svg style="position:absolute;left:0;top:0" width=3240 height=1350><polygon points="2160,0 1720,0 2160,420" fill="${LIME}"/></svg>
  ${line([INK,LIME,INK])}${code(760,560,23,[INK,LIME,INK],'AP.OI / PACK 024')}
@@ -67,6 +72,10 @@ h+=`<div class=row style="top:2700px">
  <div class=t style="left:1080px;background:${PAPER}">
   <div class=M style="left:70px;top:150px;color:${INK}">for the next</div>
   <div class="A" style="left:66px;top:192px;font-size:180px;color:${INK}">Late<br>invoice.</div>
+  <div style="position:absolute;left:70px;top:640px;width:690px">
+   <div class=M style="position:static;color:${INK};font-size:17px;margin-bottom:14px">sample / you send it</div>
+   <div style="background:${INK};color:${PAPER};border-radius:34px 34px 34px 6px;padding:30px 36px;font:400 30px/1.4 C;text-transform:none;letter-spacing:0">Hi Dana, quick reminder that invoice #1042 for $480 was due Friday. Here's the link to pay. Thanks for your business!</div>
+   <div style="margin-top:14px;display:flex;gap:10px;align-items:center">${ap(0,0,40,'ink','position:static')}<div class=M style="position:static;color:${INK};font-size:16px">drafted in your voice</div></div></div>
   ${foot(0,'written nicely',INK)}</div>
  <div class=t style="left:2160px;background:${INK}"><div class=ph style="background-image:url(${P('s2')});background-position:50% 18%"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.85) 82%)"></div>
