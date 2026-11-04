@@ -16,6 +16,7 @@ import random
 E = html.escape
 INK, PAPER, LIME, WHITE = "#0b0b0b", "#ecece7", "#D4FF3A", "#f2f2ee"
 BW = "filter:grayscale(1) contrast(1.18)"
+CINE = "filter:saturate(.7) contrast(1.15) brightness(.92)"
 M = 70
 
 
@@ -52,6 +53,8 @@ def photo(g):
 
 
 def magazine(g):
+    global BW
+    BW = CINE if g.get("grade") == "color" else "filter:grayscale(1) contrast(1.18)"
     src = photo(g)
     size = fit(g, 940, 150)
     n = len(g["lines"])
@@ -79,6 +82,8 @@ def torn_edge(seed, y, color, h):
 
 
 def torn(g):
+    global BW
+    BW = CINE if g.get("grade") == "color" else "filter:grayscale(1) contrast(1.18)"
     k = int(g.get("k", 0))
     block, fg, mbg, mfg = [(LIME, INK, INK, LIME), (INK, WHITE, LIME, INK), (PAPER, INK, LIME, INK)][k % 3]
     src = photo(g)
