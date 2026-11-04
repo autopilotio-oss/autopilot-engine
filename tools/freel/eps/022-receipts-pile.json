@@ -1,0 +1,116 @@
+{
+ "id": "receipts-pile",
+ "kind": "product",
+ "offer": "bookkeeping_sorter",
+ "room": "ledger",
+ "agent": "Bookkeeping Sorter",
+ "lane": "owner tools",
+ "hook": [
+  "A month of receipts",
+  "and your accountant wants totals"
+ ],
+ "hook_lines": [
+  "A month of",
+  "*receipts* and",
+  "your accountant",
+  "wants *totals*"
+ ],
+ "caption": {
+  "ig": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping",
+  "other": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping"
+ },
+ "stat": {
+  "count": 2,
+  "suffix": " QUESTIONS",
+  "label": "it asks instead of guessing",
+  "note": "sample month"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "A month of receipts, and your accountant wants totals. Upload your bank statement and type sort.",
+   "screen": {
+    "type": "ask",
+    "text": "sort: october.pdf",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "sort",
+   "say": "Every charge lands in a category, with totals for the month.",
+   "screen": {
+    "type": "table",
+    "title": "October, sorted",
+    "sample": true,
+    "cols": [
+     "Category",
+     "Total"
+    ],
+    "rows": [
+     [
+      "Supplies",
+      "$612"
+     ],
+     [
+      "Gas and car",
+      "$388"
+     ],
+     [
+      "Advertising",
+      "$150"
+     ],
+     [
+      "Software",
+      "$74"
+     ],
+     [
+      "Personal",
+      "$219"
+     ]
+    ],
+    "foot": "Business total $1,224  ·  sample month"
+   }
+  },
+  {
+   "chip": "asks",
+   "say": "When it isn't sure, it asks you instead of guessing. Sample month shown.",
+   "screen": {
+    "type": "dm",
+    "title": "2 questions for you",
+    "msgs": [
+     [
+      "them",
+      "Home Depot, $64 on Oct 12: work or personal?"
+     ],
+     [
+      "us",
+      "Work. Deck job."
+     ],
+     [
+      "them",
+      "Amazon, $38 on Oct 20: supplies or personal?"
+     ],
+     [
+      "us",
+      "Supplies."
+     ]
+    ],
+    "sample": true
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Ten dollars, or all four owner tools for twenty four. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Bookkeeping Sorter",
+    "sub": "Or all 4 owner tools for $24",
+    "cover": "bookkeeping-sorter-reel",
+    "price": "$10",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/#tools"
+   }
+  }
+ ]
+}

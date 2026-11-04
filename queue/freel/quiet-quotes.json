@@ -14,7 +14,51 @@
   "other": "A quote that goes quiet is a customer still deciding. Type chase, paste your open quotes, and the Front Desk Kit drafts one friendly nudge for each in your voice. You read it and send it yourself. Sample cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
  },
  "rendered_at": "2026-11-04T10:15:04+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": {
+  "score": 88,
+  "breakdown": {
+   "hook": 24,
+   "demo": 20,
+   "legibility": 12,
+   "honesty": 15,
+   "cta": 10,
+   "brand_sound": 7
+  },
+  "notes": "20.9s, -14.9 LUFS, 1080x1920. Hook names a real owner problem (quotes that go quiet). Demo shows the chase ask, steps and the 3 quotes to nudge (labeled sample cleaning business) but never shows a drafted nudge itself; 3 NUDGES stat overlaps the table for about 1s at 13s. Claims match offers.json (chase command, owner sends). CTA Comment AGENTS (confirmed). Passes; a next version should show one drafted nudge on screen.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-04T07:40-03:00"
+ },
+ "posts": [
+  {
+   "metricool_id": 416313221,
+   "uuid": "-472277598550080530",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-07T10:00-03:00"
+  },
+  {
+   "metricool_id": 416313250,
+   "uuid": "-4866966194141577139",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-07T10:00-03:00"
+  },
+  {
+   "metricool_id": 416313304,
+   "uuid": "6588547376569271409",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-07T09:00-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ }
 }

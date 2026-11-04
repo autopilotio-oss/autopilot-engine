@@ -1,0 +1,100 @@
+{
+ "id": "late-payer",
+ "kind": "product",
+ "offer": "invoice_chaser",
+ "room": "ledger",
+ "agent": "Invoice Chaser",
+ "lane": "owner tools",
+ "hook": [
+  "Dave still hasn't paid",
+  "and you hate asking"
+ ],
+ "hook_lines": [
+  "*Dave* still",
+  "hasn't *paid*",
+  "and you hate",
+  "asking"
+ ],
+ "caption": {
+  "ig": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
+  "other": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
+ },
+ "stat": {
+  "prefix": "$",
+  "count": 1160,
+  "label": "still owed, on one list",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Dave still hasn't paid, and you hate asking. Type chase Dave.",
+   "screen": {
+    "type": "ask",
+    "text": "chase Dave",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "list",
+   "say": "It keeps the list of who owes you, and how late each one is.",
+   "screen": {
+    "type": "table",
+    "title": "Who owes you",
+    "sample": true,
+    "cols": [
+     "Customer",
+     "Invoice",
+     "Status"
+    ],
+    "rows": [
+     [
+      "Dave",
+      "$520 SUV detail",
+      "7 days late"
+     ],
+     [
+      "Laura",
+      "$150 interior",
+      "due Fri"
+     ],
+     [
+      "Tom",
+      "$490 ceramic",
+      "due Mon"
+     ]
+    ],
+    "foot": "$1,160 still owed  ·  sample business"
+   }
+  },
+  {
+   "chip": "draft",
+   "say": "Then it drafts the right reminder for a week late. Friendly, but clear. You read it and send it yourself.",
+   "screen": {
+    "type": "dm",
+    "title": "Day 7 reminder, waiting for you",
+    "msgs": [
+     [
+      "us",
+      "Hi Dave, following up on invoice 1042 for $520, due Oct 14. Here's the link to pay. Thanks! Mike"
+     ]
+    ],
+    "sample": true
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Ten dollars, or all four owner tools for twenty four. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Invoice Chaser",
+    "sub": "Or all 4 owner tools for $24",
+    "cover": "invoice-chaser-reel",
+    "price": "$10",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/#tools"
+   }
+  }
+ ]
+}
