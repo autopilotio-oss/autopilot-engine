@@ -37,7 +37,7 @@ def page(g, head, nav, foot):
     steps = "".join(f'<div class="card"><h3>{e(a)}</h3><p style="margin-top:8px">{e(b)}</p></div>' for a, b in g["steps"])
     ex = "".join(f'<div class="ui"><div class="bar"><span>Example</span><span>Example business</span></div><div class="msg">{e(q)}</div><div class="draft"><div class="label" style="margin-bottom:8px">REPLY</div><div class="dr">{e(a)}</div></div></div>' for q, a in g["ex"])
     return head(g["title"] + " · AUTOPILOT.OI", g["desc"], f"/guides/{g['slug']}/") + nav("") + f"""
-<div class="wrap hero" style="max-width:900px"><div class="k"><b>●</b> Guide · {e(g['k'])}</div><h1 class="s" style="margin:22px 0 24px">{e(g['title'])}</h1><p class="lead">{e(g['lead'])}</p></div>
+<div class="wrap hero" style="max-width:900px"><div class="k">Guide · {e(g['k'])}</div><h1 class="s" style="margin:22px 0 24px">{e(g['title'])}</h1><p class="lead">{e(g['lead'])}</p></div>
 <div class="wrap" style="max-width:900px;padding-bottom:80px"><div class="steps s2">{steps}</div>
 <h2 style="margin:64px 0 22px;font-size:clamp(24px,3.4vw,36px)">An example</h2>{ex}
 <h2 style="margin:64px 0 14px;font-size:clamp(24px,3.4vw,36px)">Do it free with Claude</h2><p class="lead" style="font-size:17px">Paste this into Claude (the free plan works) and fill the brackets.</p>
