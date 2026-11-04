@@ -22,6 +22,7 @@
 - Support agent run Nov 2 19:11 UTC: no new incidents (2d mail already recorded or informational: second Meta ads receipt, Kit/Adspirer marketing).
 - Support agent run Nov 3 13:10 UTC: no new incidents. New since last run: Gumroad Front Desk Kit $39 receipt + sale notice (Nov 2 20:30Z), marked by Gumroad as a creator test purchase, not real revenue. Rest already recorded or informational.
 - Support agent run Nov 3 19:24 UTC: no new incidents (new mail since last run: Metricool marketing x2, informational).
+- Support agent run Nov 4 13:12 UTC: no new alerts.
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -31,6 +32,7 @@
 - Nov 2 run (19:11 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 3 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated (Gumroad test purchase skipped, not a buyer).
 - Nov 3 run (19:24 UTC): 0 cases, 0 drafted, 0 escalated.
+- Nov 4 run (13:12 UTC): 0 cases, 0 drafted, 0 escalated (only 2d mail: own Gumroad test sale, Kit/Metricool marketing).
 
 ## Daily Pulse 2026-11-04 (08:20 ART)
 - INCIDENT inc:metricool_unapproved:2026-11-04 (SEV-1, OPEN, Seb messaged 11:27 UTC): 12 pending Metricool posts had uuid and id missing from health.approved_post_uuids() (no queue/ entry with an approval quote; queue/threads and queue/x do not exist). Daily Pulse set all 12 to draft 11:22 to 11:24 UTC, content/media/times kept. New ids after the update (uuid stays): Threads -1020713170351273161 (now 416374299, Nov 4 09:30 "$10 task"), X 4257996428490524596 (416374334, Nov 4 12:00), Threads -7008374453965405958 (416374414, Nov 4 19:00 "no need to learn AI"), X 368462266527205864 (416374458, Nov 4 19:00), IG reel -2095563235766222617 (416374680, Nov 4 20:30 "11:48 PM books"), TikTok 6544067348222394942 (416374730, Nov 4 20:30), Threads thread -8825056360655139566 (416375329, Nov 5 12:00 "3 things I'd never paste"), IG 4237959548459106822 (416374812, Nov 5 12:30), IG -6665078232573916952 (416374935), TikTok -8033721766718387715 (416374983), Threads 6412444444069610367 (416375078), X 3892596243979125150 (416375131) (last four Nov 5 18:00 "6 texts that get you paid"). Created by session_01LKQNuEnmvMjGabLVVX6Xfj (Nov 3 21:46 to 23:20 ART) except the Nov 1 thread. To restore: Seb says "approve Nov 3 tools batch" -> write queue/threads|x|car entries with his quote and the uuids above, then set draft false. Daily Manager: record an approval quote in queue/ for every batch you schedule, or the guard will draft it again.
