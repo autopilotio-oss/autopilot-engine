@@ -23,6 +23,7 @@
       if (pre) { pre.innerHTML = pre.innerHTML.split('\n').map(l => `<span class="tl">${l}</span>`).join('\n'); x.lines = [...pre.querySelectorAll('.tl')]; }
       if (x.e.classList.contains('stampL')) { x.stamp = 1; x.delay += 0.5; }
       if (/swipe/i.test(txt)) x.swipe = 1;
+      if (x.e.dataset.stagger !== undefined) { x.kids = [...x.e.children]; x.stag = 1; }
     });
     return o;
   }
@@ -31,7 +32,11 @@
     for (const x of els) {
       const e = x.e, p = clamp((t - x.delay) / 0.6);
       let tr = '';
-      if (x.stamp) {
+      if (x.stag) {                                     // children pop in one by one (folder tabs, chips)
+        e.style.opacity = 1;
+        x.kids.forEach((c, k) => { const q = clamp((t - x.delay - k * 0.13) / 0.5);
+          c.style.opacity = clamp(q * 2.5); c.style.transform = `translateY(${(1 - back(q)) * 70}px) rotate(${(1 - q) * (k % 2 ? 9 : -9)}deg)`; });
+      } else if (x.stamp) {
         const s = 1 + 1.6 * (1 - out3(p));
         e.style.opacity = p > 0 ? Math.min(1, p * 3) : 0;
         tr = `scale(${s})`;
@@ -46,7 +51,7 @@
       e.style.transform = (tr + ' ' + x.tf).trim();
       if (x.count) {
         const q = clamp((t - x.delay) / 1.3);
-        if (q < 1) e.textContent = x.count.pre + (x.count.n * out3(q)).toFixed(x.count.dec) + x.count.suf + x.count.rest;
+        if (q < 1) { const v = (x.count.n * out3(q)).toFixed(x.count.dec); e.innerHTML = x.count.orig.replace(/\d+(?:\.\d+)?/, v); }
         else e.innerHTML = x.count.orig;
       }
       if (x.lines) x.lines.forEach((l, k) => { l.style.visibility = t > x.delay + 0.35 + k * 0.38 ? 'visible' : 'hidden'; });

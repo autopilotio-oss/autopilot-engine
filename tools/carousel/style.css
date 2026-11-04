@@ -245,7 +245,7 @@
 .gr-k{left:56px;top:58px;font-size:22px;color:#D4FF3A;letter-spacing:3px}
 .gr-h{left:56px;top:104px;font-size:112px;white-space:nowrap;color:#f2f2ee}
 .gr-grid{position:absolute;left:56px;top:244px;width:968px;height:946px;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px;z-index:5}
-.gc{background:#f2f2ee;color:#0a0a0a;border-radius:22px;padding:26px 26px 24px;overflow:hidden;display:flex;flex-direction:column;gap:12px}
+.gc{background:#f2f2ee;color:#0a0a0a;border-radius:22px;padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px}
 .gc.lm{background:#D4FF3A}
 .s.gr .gc-t{font:800 27px/1.1 I;letter-spacing:-.5px;text-transform:none;color:#0a0a0a;display:flex;align-items:center;gap:12px}
 .gc-n{font:400 18px M;background:#0a0a0a;color:#D4FF3A;border-radius:10px;padding:5px 9px 4px}
@@ -259,3 +259,8 @@
 .gs.on span{color:#D4FF3A}
 .s.gr .handle{font-size:20px;bottom:40px}
 .gr-sw{right:56px;bottom:46px;font-size:20px;color:#0a0a0a;background:#D4FF3A;padding:8px 14px 6px;border-radius:18px}
+.gc{position:relative;box-shadow:0 18px 40px #0008}
+.gc-cp{position:absolute;right:20px;top:22px;opacity:.55}
+.gc-try{position:absolute;right:-12px;top:-18px;z-index:3;background:#0a0a0a;color:#D4FF3A;border:3px solid #D4FF3A;font:400 26px/1 A;letter-spacing:1px;padding:8px 14px 5px;transform:rotate(6deg);box-shadow:0 0 22px #D4FF3A66}
+.gc.star{outline:4px solid #D4FF3A;outline-offset:5px}
+.s.gr .gc-t{padding-right:40px}
