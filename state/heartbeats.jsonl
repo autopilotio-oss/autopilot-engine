@@ -119,3 +119,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-04T02:25:19+00:00", "note": "5 posts out today (0 error), top post saves+shares 1, feed written yes"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-04T02:34:21+00:00", "note": "bank full (6); re-checked 2026-11-03-prompts-reschedule: still valid"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-04T03:34:10+00:00", "note": "0 routed (forms empty)"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-04T07:12:20+00:00", "note": "Redesign v5 and $9.99 tools shipped (Seb); Gumroad live 999 on 4 tools"}
