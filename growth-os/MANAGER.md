@@ -72,6 +72,7 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 - Never claim results, sales or reviews we do not have.
 - Autopost: approved past Nov 10 (Seb, Nov 4: "yes") for posts that pass the 85/100 gate within the caps. Spend, prices, products and customer messages still need his yes.
 - Never print secrets. No personal data in the repo.
+- Every post scheduled anywhere (a worker or a chat with Seb) gets a queue record with its uuid and Seb's approval quote (queue/threads, queue/x, queue/tiktok, queue/car or queue/freel). The 08:13 Daily Pulse pulls any unrecorded post to draft; on Nov 4 that pulled 12 approved posts.
 
 ## 6. What works (evidence log, newest first)
 
