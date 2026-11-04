@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-04T04:41:11Z",
+ "checked": "2026-11-04T08:05:09Z",
  "products": [
   {
    "permalink": "autopilot",
@@ -14,7 +14,7 @@
    "permalink": "bookkeeping-sorter",
    "name": "AUTOPILOT.OI Bookkeeping Sorter",
    "published": true,
-   "price_cents": 1000,
+   "price_cents": 999,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
@@ -23,7 +23,7 @@
    "permalink": "content-week",
    "name": "AUTOPILOT.OI Content Week",
    "published": true,
-   "price_cents": 1000,
+   "price_cents": 999,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
@@ -41,7 +41,7 @@
    "permalink": "invoice-chaser",
    "name": "AUTOPILOT.OI Invoice Chaser",
    "published": true,
-   "price_cents": 1000,
+   "price_cents": 999,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
@@ -59,7 +59,7 @@
    "permalink": "review-desk",
    "name": "AUTOPILOT.OI Review Desk",
    "published": true,
-   "price_cents": 1000,
+   "price_cents": 999,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
@@ -75,7 +75,7 @@
   },
   {
    "permalink": "video-agent",
-   "name": "AUTOPILOT.OI Video Agent",
+   "name": "AUTOPILOT.OI TikTok Agent",
    "published": true,
    "price_cents": 1000,
    "currency": "usd",
