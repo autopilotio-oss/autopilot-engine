@@ -1,0 +1,115 @@
+{
+ "approval": {
+  "by": "Seb",
+  "date": "2026-11-04",
+  "quote": "I wanna spam these until they hit",
+  "basis": "prompt pack push: single prompts from the 24 packs as Threads and X teasers"
+ },
+ "posts": [
+  {
+   "uuid": "-7601940063928824948",
+   "metricool_id": 416854553,
+   "at": "2026-11-05 11:00",
+   "pillar": "prompt pack teaser",
+   "hook": "invoice_lines"
+  },
+  {
+   "uuid": "-7951017553238799707",
+   "metricool_id": 416854609,
+   "at": "2026-11-05 14:00",
+   "pillar": "prompt pack teaser",
+   "hook": "quote_followup"
+  },
+  {
+   "uuid": "4352490824193033767",
+   "metricool_id": 416854662,
+   "at": "2026-11-05 20:00",
+   "pillar": "prompt pack teaser",
+   "hook": "too_expensive"
+  },
+  {
+   "uuid": "-1244562186088857380",
+   "metricool_id": 416854710,
+   "at": "2026-11-06 11:00",
+   "pillar": "prompt pack teaser",
+   "hook": "checklist"
+  },
+  {
+   "uuid": "-5769066184494987890",
+   "metricool_id": 416854758,
+   "at": "2026-11-06 14:00",
+   "pillar": "prompt pack teaser",
+   "hook": "change_order"
+  },
+  {
+   "uuid": "-2461079444379055827",
+   "metricool_id": 416854822,
+   "at": "2026-11-06 20:00",
+   "pillar": "prompt pack teaser",
+   "hook": "what_to_fix"
+  },
+  {
+   "uuid": "-6178585171927216155",
+   "metricool_id": 416854868,
+   "at": "2026-11-07 11:00",
+   "pillar": "prompt pack teaser",
+   "hook": "post_ideas"
+  },
+  {
+   "uuid": "5923668541551759079",
+   "metricool_id": 416854911,
+   "at": "2026-11-07 14:00",
+   "pillar": "prompt pack teaser",
+   "hook": "one_star"
+  },
+  {
+   "uuid": "9146052026719685724",
+   "metricool_id": 416854961,
+   "at": "2026-11-07 20:00",
+   "pillar": "prompt pack teaser",
+   "hook": "late_invoice"
+  },
+  {
+   "uuid": "2543523584432950553",
+   "metricool_id": 416855008,
+   "at": "2026-11-08 11:00",
+   "pillar": "prompt pack teaser",
+   "hook": "did_i_profit"
+  },
+  {
+   "uuid": "-2636800416264074363",
+   "metricool_id": 416855060,
+   "at": "2026-11-08 14:00",
+   "pillar": "prompt pack teaser",
+   "hook": "day_before"
+  },
+  {
+   "uuid": "7280763680175640212",
+   "metricool_id": 416855100,
+   "at": "2026-11-08 20:00",
+   "pillar": "prompt pack teaser",
+   "hook": "three_options"
+  },
+  {
+   "uuid": "-5364230112476183251",
+   "metricool_id": 416855149,
+   "at": "2026-11-09 11:00",
+   "pillar": "prompt pack teaser",
+   "hook": "faq"
+  },
+  {
+   "uuid": "258967890730372566",
+   "metricool_id": 416855239,
+   "at": "2026-11-09 14:00",
+   "pillar": "prompt pack teaser",
+   "hook": "new_prices"
+  },
+  {
+   "uuid": "1223319453119759595",
+   "metricool_id": 416855282,
+   "at": "2026-11-09 20:00",
+   "pillar": "prompt pack teaser",
+   "hook": "before_after"
+  }
+ ]
+}
