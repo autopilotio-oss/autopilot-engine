@@ -26,9 +26,13 @@
   ]
  ],
  "slots": {
-  "instagram": "2026-11-07 18:00 ART (next open IG slot; Nov 4 to 6 already have 2 each)",
+  "instagram": "2026-11-07 18:00 ART (carousel, cover_ig.mp4 first)",
   "threads": "2026-11-07 18:30 ART",
   "x": "2026-11-07 18:30 ART"
  },
- "metricool_uuids": []
+ "metricool_uuids": [
+  "1677070771747900320",
+  "5431603720913898413",
+  "4151879212138712021"
+ ]
 }
