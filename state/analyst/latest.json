@@ -1,74 +1,37 @@
 {
-  "at": "2026-11-04T00:30:00Z",
+  "at": "2026-11-04T01:35:00Z",
   "posts_today": {
-    "threads": {
-      "published": 1,
-      "pending": 6,
-      "error": 0
-    },
-    "twitter": {
-      "published": 1,
-      "pending": 4,
-      "error": 0
-    },
-    "instagram": {
-      "published": 1,
-      "pending": 3,
-      "error": 0
-    },
-    "tiktok": {
-      "published": 2,
-      "pending": 3,
-      "error": 0
-    }
+    "threads": {"published": 1, "pending": 6, "error": 0},
+    "twitter": {"published": 1, "pending": 4, "error": 0},
+    "instagram": {"published": 1, "pending": 3, "error": 0},
+    "tiktok": {"published": 2, "pending": 3, "error": 0}
   },
   "top_posts": [
     {
       "network": "instagram",
+      "published_at": "2026-11-01T03:53:57-03:00",
+      "text": "BREAKING: Hackers took just over $6.3 billion from Binance, the world's largest crypto exchange, in about 20 minutes.",
+      "metrics": {"reach": 15, "views": 30, "saves": 1, "shares": 0, "comments": 0},
+      "url": "https://www.instagram.com/p/DfLz879gsjO/",
+      "metrics_seen_at": "2026-11-04T01:35:00Z"
+    },
+    {
+      "network": "instagram",
       "published_at": "2026-10-31T23:31:15-03:00",
       "text": "I gave this AI agent a bank statement and one line. It found every subscription in seconds.",
-      "metrics": {
-        "reach": 75,
-        "views": 78,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
+      "metrics": {"reach": 75, "views": 78, "saves": 0, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-04T00:30:00Z"
+      "metrics_seen_at": "2026-11-04T01:35:00Z"
     },
     {
       "network": "instagram",
       "published_at": "2026-11-01T00:15:58-03:00",
       "text": "Stop guessing what to sell on TikTok Shop.",
-      "metrics": {
-        "reach": 61,
-        "views": 74,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
+      "metrics": {"reach": 61, "views": 74, "saves": 0, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-04T00:30:00Z"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-11-01T02:02:36-03:00",
-      "text": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged.",
-      "metrics": {
-        "reach": 56,
-        "views": 67,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
-      "url": "https://www.instagram.com/reel/DfLnMxhjLES/",
-      "metrics_seen_at": "2026-11-04T00:30:00Z"
+      "metrics_seen_at": "2026-11-04T01:35:00Z"
     }
   ],
-  "kit": {
-    "subscribers": 0,
-    "new_today": 0
-  },
-  "notes": "21:30 ART: 5 provider posts published today (banks story on threads, twitter, tiktok at 12:00; instagram banks post and tiktok 'It drafts. You send.' at 18:00), 16 provider slots pending (all draft=true), 0 ERROR. Instagram reels 6-72h (6, IGRE): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok videos 6-72h (11, TKPO): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1), one comment on Binance heist video. Threads, X and Instagram feed post analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). Workflows: all latest completed runs success, 0 fails in 24h incl. ci.yml. HQ feed written to status/hub (v37)."
+  "kit": {"subscribers": 0, "new_today": 0},
+  "notes": "22:35 ART Nov 3: 5 provider posts published today, 16 provider slots pending (all draft=true), 0 ERROR. Instagram feed posts 6-72h (IGPO, 5): Binance hack post has 1 save, the only save or share in the window, so it ranks first despite reach 15. Instagram reels 6-72h (IGRE, 5): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok videos 6-72h (TKPO, 9): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1). Threads and X analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). Workflows: all latest runs success; ci.yml latest success (1 fail in 24h, not current). HQ feed written to status/hub (v38)."
 }
