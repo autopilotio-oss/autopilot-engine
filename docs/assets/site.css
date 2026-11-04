@@ -33,8 +33,8 @@ h3{font:700 20px/1.25 var(--T);letter-spacing:-.01em}
 .label{font:500 13px/1.55 var(--T);color:var(--dim);letter-spacing:.01em}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:999px;font:700 16px var(--T);background:var(--l);color:var(--ink);border:0;cursor:pointer;transition:transform .15s,filter .15s;white-space:nowrap}
-.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.btn:after{content:"→";font-weight:700}
-.btn.ghost{background:transparent;color:var(--tx);border:1.5px solid rgba(255,255,255,.22)}.btn.ghost:after,.btn.plain:after{content:none}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--tx);border:1.5px solid rgba(255,255,255,.22)}
 .btn.dark{background:var(--ink);color:#fff}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 /* sections */
