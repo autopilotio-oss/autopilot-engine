@@ -1,21 +1,21 @@
 {
-  "at": "2026-11-04T16:30:00Z",
+  "at": "2026-11-04T20:28:00Z",
   "posts_today": {
-    "threads": {"published": 6, "pending": 10, "error": 0},
-    "twitter": {"published": 2, "pending": 7, "error": 0},
+    "threads": {"published": 8, "pending": 8, "error": 0},
+    "twitter": {"published": 3, "pending": 6, "error": 0},
     "instagram": {"published": 0, "pending": 5, "error": 0},
-    "tiktok": {"published": 1, "pending": 4, "error": 0}
+    "tiktok": {"published": 1, "pending": 3, "error": 0}
   },
   "top_posts": [
     {
       "network": "instagram",
-      "published_at": "2026-11-02T10:04:56-03:00",
+      "published_at": "2026-11-02T13:04:56Z",
       "text": "Most people have at least one subscription they forgot about.",
       "metrics": {"reach": 35, "views": 41, "saves": 1, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfPXyS2krB0/",
-      "metrics_seen_at": "2026-11-04T16:30:00Z"
+      "metrics_seen_at": "2026-11-04T20:28:00Z"
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "13:30 ART Nov 4: 9 provider posts published so far today (Threads 6, X 2, TikTok 1, IG 0), 26 provider slots pending, 0 ERROR. Several pending slots whose time has passed are still Metricool drafts (draft true), so not approved, not errors. Window 6-72h = Nov 1 16:27Z to Nov 4 10:27Z (Metricool analytics timestamps read as UTC). Only post in window with any save or share: IG subscription reel (1 save, reach 35). IG feed posts in window (reach 2 to 4) had 0 saves and 0 shares; the Binance hack IG post with 1 save (Nov 1 03:53Z) is outside the window. TikTok videos in window: views 2 to 112, shares 0, reach MISSING. Threads and X analytics not pulled this run. Profile visits not provided by the connectors used. Revenue from hq_feed: 0 verified orders all time, 0 in 7d. All 8 GitHub workflows latest conclusion success."
+  "notes": "17:28 ART Nov 4: 12 provider posts published today (Threads 8, X 3, TikTok 1, IG 0), 22 provider slots pending, 0 ERROR. Pending slots whose time has passed (incl. IG 13:30 and 10:00, TikTok/Threads 10:00 and 12:00, X 10:00 and 12:00) are still Metricool drafts (draft true), so not approved, not errors. Pending non-draft: Threads 18:00/19:00/20:00/22:00, X 18:00/21:00, IG reels 18:00 and 20:30. Window 6-72h = Nov 1 20:28Z to Nov 4 14:28Z (analytics timestamps read as UTC). Only post in window with any save or share: IG subscription reel (1 save, reach 35, views 41). IG feed posts in window (reach 2 to 4) had 0 saves and 0 shares. TikTok videos in window: views 2 to 112, shares 0, comments 0, reach MISSING. Threads and X analytics not pulled. Profile visits not provided by the connectors used. Revenue from hq_feed: 0 verified orders all time, 0 in 7d. All 8 GitHub workflows latest conclusion success (ci.yml 1 fail in 24h, latest success). HQ feed written (status/hub v42)."
 }
