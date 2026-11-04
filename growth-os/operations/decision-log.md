@@ -75,3 +75,6 @@
 - All 9 pending IG posts (Nov 4 to Nov 9) set to draft in Metricool, nothing deleted. Threads, X and TikTok untouched.
 - Chapter 01 row scheduled: R Nov 5 18:00, M Nov 5 20:30, L Nov 6 10:00 (L reuses the owner 24 prompts slides). Grid goes 18 to 21.
 - Record: queue/rows/ch01-it-wakes.json. System: tools/carousel/rows/ROADMAP.md.
+
+## 2026-11-04 18:40 ART: chapter 01 row paused
+- Seb: "I don't like any design". All 3 ch01 posts set to draft. IG has nothing scheduled until a direction is approved.

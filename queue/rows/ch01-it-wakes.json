@@ -1,7 +1,7 @@
 {
  "id": "ch01-it-wakes",
  "kind": "organism_row",
- "status": "scheduled",
+ "status": "paused",
  "approval": {"by": "Seb", "date": "2026-11-04", "quote": "Yes we will be replacing all post scheduled ... Only on ig", "design_quote": "Better we are getting there"},
  "render": "tools/carousel/rows/ch01-render.png (Seb's Nano Banana render)",
  "slots": {
