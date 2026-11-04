@@ -110,4 +110,4 @@ Paused Nov 4 (reversible, re-enable in scheduled tasks): Viral Content Lab and t
 
 ## 9. Usage rule (Seb, Nov 4 2026: "optimize the usage ... i want more updates but ... the same")
 
-Same output and more updates, less usage. Every worker: partial clone, smallest data range, no re-reading, skip steps when nothing changed, no narration. Runs were cut from about 70 a day to about 30 (News Desk hourly to every 3h, analyst hourly to 4x, site improver 6x to 2x, draft factory 4x to 2x, Kit sync 8x to 3x), while Seb's updates went from 2 a day to 3. Apply the same rule to any new task for any of Seb's businesses.
+Same output and more updates, less usage. Every worker: partial clone, smallest data range, no re-reading, skip steps when nothing changed, no narration. Runs were cut from about 70 a day to about 30 (News Desk hourly to every 3h, analyst hourly to 4x, site improver 5x to 2x, draft factory 8x to 2x, Kit sync 8x to 3x), while Seb's updates went from 2 a day to 3. Apply the same rule to any new task for any of Seb's businesses.
