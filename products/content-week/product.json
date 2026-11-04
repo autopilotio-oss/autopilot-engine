@@ -1,9 +1,9 @@
 {
  "name": "AUTOPILOT.OI Content Week",
- "price_cents": 1000,
+ "price_cents": 999,
  "permalink": "content-week",
  "filename": "AUTOPILOT.OI Content Week.pdf",
- "description_html": "<p><strong>A week of posts. One chat.</strong></p><p>Every Sunday, answer 5 quick questions about your week. Get 7 posts back: what to photograph, the caption and local hashtags, in your voice, about your real work. No marketing degree, no AI skills.</p><p><strong>How it works:</strong> you add the guide to a free Claude Project, paste one message, answer 7 easy questions, then type one word whenever you need it. It drafts; you decide.</p><p><strong>What you type:</strong> week \u00b7 caption \u00b7 ideas \u00b7 reply \u00b7 month</p><p><strong>What you get (13 page guide, PDF):</strong> a setup helper that asks 7 easy questions and sets it up with you in about 15 minutes, tap by tap on your phone, what to shoot with your phone, a worked example and a cheat sheet.</p><p><strong>You need:</strong> the Claude app (the free plan works) and your phone camera.</p><p>Drafts only: you post. It never invents reviews or results, and results depend on your business. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic or Meta. Claude is a product of Anthropic.</em></p>",
+ "description_html": "<p><strong>A week of posts. One chat.</strong></p><p>Every Sunday, answer 5 quick questions about your week. Get 7 posts back: what to photograph, the caption and local hashtags, in your voice, about your real work. No marketing degree, no AI skills.</p><p><strong>How it works:</strong> you add the guide to a free Claude Project, paste one message, answer 7 easy questions, then type one word whenever you need it. It drafts; you decide.</p><p><strong>What you type:</strong> week · caption · ideas · reply · month</p><p><strong>What you get (13 page guide, PDF):</strong> a setup helper that asks 7 easy questions and sets it up with you in about 15 minutes, tap by tap on your phone, what to shoot with your phone, a worked example and a cheat sheet.</p><p><strong>You need:</strong> the Claude app (the free plan works) and your phone camera.</p><p>Drafts only: you post. It never invents reviews or results, and results depend on your business. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic or Meta. Claude is a product of Anthropic.</em></p>",
  "cover_url": "https://autopilotoi.app/store/content-cover.png?v=1",
  "tags": [
   "small business",
@@ -12,7 +12,7 @@
   "claude",
   "instagram"
  ],
- "version": 2,
+ "version": 3,
  "cover_v": 1,
  "landing": "/#tools"
 }

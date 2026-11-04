@@ -31,14 +31,14 @@ INBOX = """<div class="ui"><div class="bar"><span>Leads · today</span><span>Pro
 <div class="label" style="margin-top:12px;text-align:center">Example business. Workspace is in development.</div></div>"""
 
 TOOLS = [
- ("Bookkeeping Sorter", "10", "bookkeeping-sorter", "Upload your bank statement. Every charge goes into a category, with monthly totals. It asks when it isn't sure.", "sort", "Messy receipts"),
- ("Invoice Chaser", "10", "invoice-chaser", "Writes the invoice from your job notes, and a polite reminder for anyone who hasn't paid.", "chase Dave", "Unpaid invoices"),
- ("Review Desk", "10", "review-desk", "Writes a reply to every review in your voice, including the angry ones.", "reply", "Ignored reviews"),
- ("Content Week", "10", "content-week", "Answer 5 questions on Sunday. Get 7 posts for the week, captions included.", "week", "Nothing to post"),
+ ("Bookkeeping Sorter", "9.99", "bookkeeping-sorter", "Upload your bank statement. Every charge sorted into a category with monthly totals, ready for your accountant. It asks when it isn't sure.", "sort", "Messy receipts"),
+ ("Invoice Chaser", "9.99", "invoice-chaser", "Writes the invoice from your job notes and a polite reminder for anyone who hasn't paid. No more awkward texts.", "chase Dave", "Unpaid invoices"),
+ ("Review Desk", "9.99", "review-desk", "A reply to every review in your voice, in seconds. Calm answers to the angry ones too.", "reply", "Ignored reviews"),
+ ("Content Week", "9.99", "content-week", "Answer 5 questions on Sunday. Get 7 posts for the week: what to shoot, the caption and hashtags.", "week", "Nothing to post"),
 ]
 def tool_cards():
     return "".join(f'<div class="tc"><div class="tc-top"><span>0{i}</span><span>${p}</span></div><h3 class="tc-pb">{e(pb)}</h3><div class="tc-nm">{e(n)}</div><p class="tc-d">{e(d)}</p><div class="cmd">You type <b>{e(cmd)}</b></div><a class="btn dark buy" href="{GR}{perm}">Get it · ${p}</a></div>' for i, (n, p, perm, d, cmd, pb) in enumerate(TOOLS, 1))
-FACTS = [("$10", "one payment per tool"), ("$0", "monthly fees"), ("Free", "Claude plan works"), ("30 days", "money back")]
+FACTS = [("$9.99", "one payment per tool"), ("$0", "monthly fees"), ("Free", "Claude plan works"), ("30 days", "money back")]
 HSTYLE = """<style>.phn{max-width:360px;margin-left:auto;width:100%;background:#111;border:1px solid var(--line);border-radius:28px;padding:22px 18px}
 .phn .t{font:600 11px/1 var(--T);letter-spacing:.16em;color:var(--mut);display:flex;justify-content:space-between;gap:12px;margin-bottom:16px;text-transform:uppercase}
 .phn .me{margin-left:auto;max-width:80%;background:#242424;border-radius:16px 16px 4px 16px;padding:9px 14px;font-size:15px;margin-bottom:12px;width:max-content}
@@ -66,32 +66,32 @@ HSTYLE = """<style>.phn{max-width:360px;margin-left:auto;width:100%;background:#
 .kc p{margin:14px 0 24px;font-size:15px;color:#3b3b36;max-width:460px}.kc.dk p{color:#b9b9b2}.kc .row{margin-top:auto}.kc .row .btn{flex:1}.kc .row .btn.ghost{flex:none}</style>"""
 def home():
     facts = "".join(f"<div><b>{e(v)}</b><span>{e(t)}</span></div>" for v, t in FACTS)
-    return head("AUTOPILOT.OI · $10 AI tools for the paperwork you put off", "Four simple tools for small business owners: bookkeeping, invoices, reviews and posts. They run in the free Claude app and draft the work; you check and send. $10 each, one payment, 30 day refund.", "/", "toolkit-cover.png") + nav("") + f"""
+    return head("AUTOPILOT.OI · $9.99 AI tools for the paperwork you put off", "Four simple tools for small business owners: bookkeeping, invoices, reviews and posts. They run in the free Claude app and draft the work; you check and send. $9.99 each, one payment, 30 day refund.", "/", "toolkit-cover.png") + nav("") + f"""
 {HSTYLE}
 <div class="wrap hero hgrid"><div><div class="k">For small business owners</div>
-<h1 style="margin:22px 0 26px">Hate paperwork? <em>$10 fixes it.</em></h1>
-<p class="lead">Four simple tools for the jobs you put off: receipts, invoices, reviews and posts. They run in the free Claude app. You check every draft and send it yourself.</p>
+<h1 style="margin:22px 0 26px">Hate paperwork?<br><em>$9.99 fixes it.</em></h1>
+<p class="lead">Unpaid invoices, ignored reviews, messy receipts, nothing to post. Each tool fixes one of these in the free Claude app. You check every draft and send it yourself.</p>
 <div class="row" style="margin-top:34px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#free">Try one free</a></div></div>
 <div class="phn"><div class="t"><span>Bookkeeping Sorter</span><span>Example</span></div><div class="me">sort · october.pdf</div>
 <div class="ai"><b>October, sorted</b><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Personal</span><span>$219</span></div>
 <div class="q">Home Depot, $64 on Oct 12: work or home?</div></div></div></div>
 <div class="wrap"><div class="facts">{facts}</div></div>
-<div class="sec paper" id="tools" style="margin-top:96px"><div class="wrap"><div class="head"><div><div class="k" style="margin-bottom:16px">The tools</div><h2>Four problems. <em>Four $10 fixes.</em></h2></div><p class="lead" style="max-width:340px">Pay once and keep it. No subscription, no setup fee.</p></div>
+<div class="sec paper" id="tools" style="margin-top:96px"><div class="wrap"><div class="shead"><div class="k">The tools</div><h2>Four problems.<br><em>Four $9.99 fixes.</em></h2><p class="lead">Pay once and keep it. No subscription, no setup fee. Not helpful? Full refund within 30 days.</p></div>
 <div class="tools">{tool_cards()}</div>
-<div class="kit"><div class="kc dk"><div class="k">Best value</div><h3>All four for <em style="font-style:normal;color:var(--l)">$24</em></h3><p>Bookkeeping, invoices, reviews and posts. That's $6 a tool instead of $40.</p><div class="row"><a class="btn buy" href="{GR}owner-toolkit">Get all four · $24</a></div></div>
+<div class="kit"><div class="kc dk"><div class="k">Best value</div><h3>All four for <em style="font-style:normal;color:var(--l)">$24</em></h3><p>Every problem above, solved for $24. That's $6 a tool instead of $39.96.</p><div class="row"><a class="btn buy" href="{GR}owner-toolkit">Get all four · $24</a></div></div>
 <div class="kc"><div class="k">For businesses that text all day</div><h3>Front Desk Kit · $39</h3><p>Drafts replies, quotes and follow ups to customer texts from your real prices.</p><div class="row"><a class="btn dark buy" href="{GR}autopilot">Get it · $39</a><a class="btn ghost" href="/front-desk/">Details</a></div></div></div></div></div>
-<div class="sec" id="how"><div class="wrap"><div class="k" style="margin-bottom:16px">Setup</div><h2 style="margin-bottom:48px">Ready in about <em>15 minutes.</em></h2>
+<div class="sec" id="how"><div class="wrap"><div class="shead"><div class="k">Setup</div><h2>Ready in about<br><em>15 minutes.</em></h2></div>
 <div class="steps"><div><h3>Open Claude</h3><p style="color:var(--mut)">Free app or claude.ai. The free plan works.</p></div>
 <div><h3>Paste one message</h3><p style="color:var(--mut)">It asks a few questions about your business.</p></div>
 <div><h3>Type one word</h3><p style="color:var(--mut)">Read the draft. Send it yourself.</p></div></div></div></div>
-<div class="sec" id="free"><div class="wrap grid2" style="align-items:center;gap:64px"><div><div class="k" style="margin-bottom:16px">Free · 60 seconds</div><h2>Try one <em>free.</em></h2><p class="lead" style="margin-top:20px">Paste this into Claude with a real review of your business. It writes the reply.</p>
+<div class="sec" id="free"><div class="wrap grid2" style="align-items:center;gap:64px"><div><div class="shead" style="margin-bottom:0"><div class="k">Free · 60 seconds</div><h2>See it work<br><em>for free.</em></h2><p class="lead">Paste this into Claude with a real review of your business. It writes the reply.</p></div>
 <button class="btn" style="margin-top:28px" onclick="navigator.clipboard.writeText(document.getElementById('fp').innerText);this.textContent='Copied'">Copy the message</button></div>
 <div class="cp" id="fp">Here is a review of my business. Write a short reply I can post.
 My business: [name and what you do]
 My name: [your first name]
 The review: [paste it]
 Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div></div></div>
-<div class="sec"><div class="wrap grid2" style="gap:64px"><div><h2>Before you <em>buy.</em></h2><p class="lead" style="margin-top:20px">Stuck after you buy? Reply to your receipt and we help.</p></div><div>
+<div class="sec"><div class="wrap grid2" style="gap:64px"><div class="shead" style="margin-bottom:0"><div class="k">Questions</div><h2>Before<br><em>you buy.</em></h2><p class="lead">Stuck after you buy? Reply to your receipt and we help.</p></div><div>
 <details><summary>What is Claude?</summary><p>An AI assistant made by Anthropic. You text it and it writes back. Our tools set it up to do one job for your business.</p></details>
 <details><summary>Do I have to pay for Claude?</summary><p>No. Every tool works on the free plan.</p></details>
 <details><summary>Does it send or post for me?</summary><p>No. Everything is a draft. You send it yourself.</p></details>
@@ -100,18 +100,18 @@ Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div></div><
 
 PRODUCTS = [
  ("Front Desk Kit", "39", "/front-desk/", GR + "autopilot", "Customer replies, quotes and follow ups, drafted in your voice from your real prices.", ["15 question business interview", "Reply, quote, chase, review, FAQ, plan week", "3 extra systems built for your business", "Free Claude plan works"]),
- ("Bookkeeping Sorter", "10", "/#tools", GR + "bookkeeping-sorter", "Upload a statement, type sort. Each expense sorted into a category, with totals.", ["Setup helper, tap by tap", "Monthly and yearly totals", "Asks when it isn't sure", "Free Claude plan works"]),
- ("Invoice Chaser", "10", "/#tools", GR + "invoice-chaser", "Invoices from job notes and the right reminder for every late customer.", ["Setup helper, tap by tap", "Owed list", "Friendly to firm reminders", "Free Claude plan works"]),
- ("Review Desk", "10", "/#tools", GR + "review-desk", "Replies to every review in your voice, and the text that asks for new ones.", ["Setup helper, tap by tap", "Calm replies to bad reviews", "Never fake reviews", "Free Claude plan works"]),
- ("Content Week", "10", "/#tools", GR + "content-week", "5 questions on Sunday, 7 posts for the week.", ["Setup helper, tap by tap", "What to shoot, captions, hashtags", "Replies to comments", "Free Claude plan works"]),
- ("Owner Toolkit", "24", "/#tools", GR + "owner-toolkit", "All 4 tools: bookkeeping, invoices, reviews and posts. $40 separately.", ["4 setup helpers", "Works in the free Claude app", "You send everything", "30 day refund"]),
+ ("Bookkeeping Sorter", "9.99", "/#tools", GR + "bookkeeping-sorter", "Upload a statement, type sort. Each expense sorted into a category, with totals.", ["Setup helper, tap by tap", "Monthly and yearly totals", "Asks when it isn't sure", "Free Claude plan works"]),
+ ("Invoice Chaser", "9.99", "/#tools", GR + "invoice-chaser", "Invoices from job notes and the right reminder for every late customer.", ["Setup helper, tap by tap", "Owed list", "Friendly to firm reminders", "Free Claude plan works"]),
+ ("Review Desk", "9.99", "/#tools", GR + "review-desk", "Replies to every review in your voice, and the text that asks for new ones.", ["Setup helper, tap by tap", "Calm replies to bad reviews", "Never fake reviews", "Free Claude plan works"]),
+ ("Content Week", "9.99", "/#tools", GR + "content-week", "5 questions on Sunday, 7 posts for the week.", ["Setup helper, tap by tap", "What to shoot, captions, hashtags", "Replies to comments", "Free Claude plan works"]),
+ ("Owner Toolkit", "24", "/#tools", GR + "owner-toolkit", "All 4 tools: bookkeeping, invoices, reviews and posts. $39.96 separately.", ["4 setup helpers", "Works in the free Claude app", "You send everything", "30 day refund"]),
 ]
 SOON = [("Done for you setup", "We set up your tools with your real prices and test them on your real messages."), ("Workspace", "Software that answers new leads while you are on a job. In development."), ("More tools", "Tell us the job you hate most. Reply to any receipt.")]
 def marketplace():
     cards = "".join(f'<div class="card prod"><div class="nm">{e(n)}</div><div class="price">${p}<small>one time</small></div><p>{e(d)}</p><ul>{"".join(f"<li>{e(x)}</li>" for x in li[:3])}</ul><div class="go row"><a class="btn dark buy" style="flex:1" href="{g}">Get it · ${p}</a><a class="btn ghost" href="{u}">Details</a></div></div>' for n, p, u, g, d, li in PRODUCTS)
     soon = "".join(f'<div class="card"><span class="tagline dev">Coming soon</span><h3 style="margin:16px 0 8px">{e(n)}</h3><p>{e(d)}</p></div>' for n, d in SOON)
     return head("Marketplace · AI setup kits for small businesses · AUTOPILOT.OI", "Guided setup kits that install AI into your own Claude account. They draft; you decide and send. One time price, 30 day refund.", "/marketplace/") + nav("m") + f"""
-<div class="wrap hero"><div class="k">Marketplace</div><h1 style="margin:22px 0 24px">Every tool. <em>From $10.</em></h1>
+<div class="wrap hero"><div class="k">Marketplace</div><h1 style="margin:22px 0 24px">Every tool.<br><em>From $9.99.</em></h1>
 <p class="lead">Setup kits for your own Claude account. It drafts; you send. 30 day refund.</p></div>
 <div class="sec paper"><div class="wrap"><div class="grid3">{cards}</div></div></div>
 <div class="sec"><div class="wrap"><div class="k" style="margin-bottom:16px">Next</div><h2 style="margin-bottom:36px">Coming <em>soon.</em></h2><div class="grid3">{soon}</div></div></div>
