@@ -70,10 +70,10 @@
     "comments": 0,
     "follows": 0,
     "network": "instagram",
-    "pulled_at": "2026-11-03T09:58-03:00",
+    "pulled_at": "2026-11-04T12:05-03:00",
     "source": "Metricool IGPO posts",
     "profile_visits": null,
-    "keyword_comments": 0,
+    "keyword_comments": null,
     "note": "TikTok/Threads/X per-post stats not pulled this run"
   }
 }

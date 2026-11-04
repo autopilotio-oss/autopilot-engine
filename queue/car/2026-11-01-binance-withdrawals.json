@@ -59,7 +59,7 @@
   ],
   "keyword": "AGENTS",
   "results": {
-    "pulled_at": "2026-11-03T09:58-03:00",
+    "pulled_at": "2026-11-04T12:05-03:00",
     "instagram": {
       "published_at_utc": "2026-11-01T21:04",
       "reach": 2,
@@ -70,6 +70,16 @@
       "profile_visits": null,
       "keyword_comments": null
     },
-    "note": "Metricool IG feed posts; profile visits and keyword comments not available per post"
+    "note": "Metricool IG feed posts; profile visits and keyword comments not available per post",
+    "reach": 3,
+    "views": 5,
+    "saves": 0,
+    "shares": 0,
+    "comments": 2,
+    "follows": 0,
+    "network": "instagram",
+    "source": "Metricool IGPO posts",
+    "profile_visits": null,
+    "keyword_comments": null
   }
 }

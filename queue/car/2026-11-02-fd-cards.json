@@ -59,6 +59,17 @@
     },
     "threads": "not yet in analytics",
     "twitter": "not yet in analytics",
-    "read": "weak after about 17h; photo cards underperform video on TikTok"
+    "read": "weak after about 17h; photo cards underperform video on TikTok",
+    "reach": 2,
+    "views": 3,
+    "saves": 0,
+    "shares": 0,
+    "comments": 0,
+    "follows": 0,
+    "network": "instagram",
+    "pulled_at": "2026-11-04T12:05-03:00",
+    "source": "Metricool IGPO posts",
+    "profile_visits": null,
+    "keyword_comments": null
   }
 }
