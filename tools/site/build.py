@@ -140,8 +140,7 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
 .ph .hb{width:110px;height:4px;border-radius:2px;background:#f3f3ef;opacity:.85;margin:0 auto 9px}
 .pcap{font-size:12.5px;color:var(--mt);text-align:center;max-width:300px}
 @keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.ph .a1,.ph .a2,.ph .a3,.ph .a4,.ph .a5{animation:up .5s both}.ph .a2{animation-delay:.6s}.ph .a3{animation-delay:1.3s}.ph .a4{animation-delay:2s}.ph .a5{animation-delay:2.6s}
-@media(prefers-reduced-motion:reduce){.ph .a1,.ph .a2,.ph .a3,.ph .a4,.ph .a5{animation:none}}
+
 @media(max-width:1000px){.pw{justify-self:start}}@media(max-width:720px){.pw{justify-self:center;margin-top:8px}.ph{width:296px}}
 
 /* wide device mockup: original frame drawn in CSS */
@@ -164,11 +163,94 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
 .tb .dr{border-color:rgba(212,255,58,.55)}.tb .tac{display:flex;justify-content:flex-end;gap:8px;margin-top:9px}.tb .tac span{font:700 12px var(--T);padding:6px 12px;border-radius:9px;border:1px solid #333;color:#a2a39a}.tb .tac .ok{background:var(--l);border-color:var(--l);color:#0b0b0b}
 .tb .inp{margin:0 16px 10px;height:36px;border-radius:18px;background:#1d1d1d;display:flex;align-items:center;justify-content:space-between;padding:0 6px 0 14px;color:#77776f;font-size:12.5px}.tb .inp i{width:24px;height:24px;border-radius:50%;background:var(--l)}
 .tb .hb{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:140px;height:4px;border-radius:2px;background:#f3f3ef;opacity:.8}
-.tb .c1,.tb .c2,.tb .c3,.tb .c4{opacity:0}.tw.go .c1,.tw.go .c2,.tw.go .c3,.tw.go .c4{animation:up .5s both}.tw.go .c2{animation-delay:.5s}.tw.go .c3{animation-delay:1.2s}.tw.go .c4{animation-delay:1.8s}
-@media(prefers-reduced-motion:reduce){.tb .c1,.tb .c2,.tb .c3,.tb .c4{opacity:1;animation:none!important}}
+
 @media(max-width:860px){.tb .tsd{display:none}.tb .tgr{grid-template-columns:1fr}.tb{border-radius:32px;padding:9px}.tb .tsc{border-radius:24px;font-size:11.5px}.tb .tch{padding:8px 10px;gap:6px}.tb .tth{padding:8px 12px}.tb .tsb{padding:9px 18px 4px}.tb .hb{bottom:14px;width:90px}.tb .bot{width:100%}.tb .inp{display:none}}
 @media(max-width:520px){.tb{aspect-ratio:auto}.tb .tsc{min-height:420px}}
 </style>"""
+FX = r"""<style>
+/* motion layer: only when JS runs and the visitor allows motion */
+@media (prefers-reduced-motion:no-preference){
+html.fx .h5 h1 .wd{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.04em}
+html.fx .h5 h1 .wd>span{display:inline-block;transform:translateY(105%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+html.fx .h5 h1.in .wd>span{transform:none}
+html.fx .h5 h1 em{background-size:0% 100%;background-image:linear-gradient(var(--l),var(--l));background-repeat:no-repeat;background-color:transparent;transition:background-size .8s cubic-bezier(.7,0,.2,1) .9s}
+html.fx .h5 h1.in em{background-size:100% 100%}
+html.fx .h5 .lab,html.fx .h5 .lead,html.fx .h5 .row,html.fx .h5 .trust{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
+html.fx .h5.in .lab{opacity:1;transform:none}html.fx .h5.in .lead{opacity:1;transform:none;transition-delay:.55s}html.fx .h5.in .row{opacity:1;transform:none;transition-delay:.7s}html.fx .h5.in .trust{opacity:1;transform:none;transition-delay:.85s}
+html.fx .pw{opacity:0;transform:translateY(60px) rotate(4deg);transition:opacity 1s,transform 1.2s cubic-bezier(.2,.8,.2,1) .2s}
+html.fx .h5.in .pw{opacity:1;transform:none}
+html.fx .ph{transition:transform .35s cubic-bezier(.2,.8,.2,1);will-change:transform}
+html.fx .pw.idle .ph{animation:flo 6s ease-in-out infinite}
+@keyframes flo{50%{translate:0 -10px}}
+html.fx [data-r]{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .9s cubic-bezier(.2,.8,.2,1)}
+html.fx [data-r].in{opacity:1;transform:none}
+html.fx .tw .tb{transform:perspective(1400px) rotateX(var(--rx,24deg)) scale(var(--sc,.9));transform-origin:50% 100%;will-change:transform}
+html.fx .bd .px s{position:relative;color:#7b7b74}html.fx .bd .px s{text-decoration:none}
+html.fx .bd .px s:after{content:"";position:absolute;left:-4%;top:52%;height:4px;width:0;background:#ff5a36;transform:rotate(-8deg);transition:width .5s cubic-bezier(.7,0,.2,1) .5s}
+html.fx .bd.in .px s:after{width:108%}
+html.fx .bd .px b{display:inline-block;transform:scale(.4);opacity:0;transition:transform .7s cubic-bezier(.2,1.6,.4,1) 1s,opacity .3s 1s}
+html.fx .bd.in .px b{transform:none;opacity:1}
+html.fx .bd .sv{transform:translateX(-12px);opacity:0;transition:all .5s 1.4s}html.fx .bd.in .sv{transform:none;opacity:1}
+html.fx .st5 b{background:linear-gradient(90deg,var(--ik) 50%,transparent 50%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1.5px var(--ik);transition:background-position 1s cubic-bezier(.7,0,.2,1) .2s}
+html.fx .st5>div.in b{background-position:0 0}
+html.fx .m-h{display:none}
+}
+.ag{transition:background .25s,padding .25s}.ag:hover{background:var(--wh)}.ag .ag-n{transition:color .25s}.ag:hover .ag-n{color:#6f9800}
+.ag:hover .ag-pr{animation:pop .5s}@keyframes pop{40%{transform:scale(1.08)}}
+.b5{position:relative;overflow:hidden}.b5:after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .6s}
+.b5:hover:after{left:130%}
+.typ{align-self:flex-start;background:#181818;border:1px solid #2a2a2a;border-radius:16px 16px 16px 4px;padding:10px 12px;display:flex;gap:4px}
+.typ i{width:6px;height:6px;border-radius:50%;background:#8d8d86;animation:dot 1s infinite}.typ i:nth-child(2){animation-delay:.15s}.typ i:nth-child(3){animation-delay:.3s}
+@keyframes dot{30%{transform:translateY(-4px);background:var(--l)}}
+.mi{animation:mi .45s cubic-bezier(.2,.8,.2,1) both}@keyframes mi{from{opacity:0;transform:translateY(10px) scale(.97)}}
+.inp .tx{color:#f3f3ef}.inp .tx:after{content:"";display:inline-block;width:1.5px;height:1em;background:var(--l);margin-left:2px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.inp i.go{animation:sendp .4s}@keyframes sendp{50%{transform:scale(.8)}}
+.ok.pl{animation:okp 1.2s 2}@keyframes okp{50%{box-shadow:0 0 0 6px rgba(212,255,58,.25)}}
+</style>
+<script>
+(function(){
+var R=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var D=document,H=D.documentElement;if(!R)H.classList.add('fx');
+if(!R)Array.prototype.forEach.call(D.querySelectorAll('[data-m]'),function(m){m.classList.add('m-h')});
+function $(s,r){return (r||D).querySelector(s)}function $$(s,r){return Array.prototype.slice.call((r||D).querySelectorAll(s))}
+var wait=function(ms){return new Promise(function(r){setTimeout(r,ms)})};
+function money(n,dec){return '$'+(dec?n.toFixed(2):Math.round(n).toLocaleString('en-US'))}
+function count(el,to,ms,from){var t0=null,f=from||0,dec=String(to).indexOf('.')>-1;function st(t){t0=t0||t;var k=Math.min(1,(t-t0)/ms),e=1-Math.pow(1-k,3);el.textContent=money(f+(to-f)*e,dec);if(k<1)requestAnimationFrame(st)}requestAnimationFrame(st)}
+/* headline words */
+var h1=$('.h5 h1');
+if(h1&&!R){var n=0;(function wrap(node){$$('*',node);Array.prototype.slice.call(node.childNodes).forEach(function(c){if(c.nodeType===3){var f=D.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;if(/^\s+$/.test(w)){f.appendChild(D.createTextNode(w));return}var o=D.createElement('span');o.className='wd';var i=D.createElement('span');i.textContent=w;i.style.transitionDelay=(n++*0.07)+'s';o.appendChild(i);f.appendChild(o)});c.parentNode.replaceChild(f,c)}else if(c.nodeType===1)wrap(c)})})(h1)}
+requestAnimationFrame(function(){requestAnimationFrame(function(){if(h1)h1.classList.add('in');var h5=$('.h5');if(h5)h5.classList.add('in');setTimeout(function(){var p=$('.pw');if(p)p.classList.add('idle')},2200)})});
+/* tilt the hero phone toward the pointer */
+var ph=$('.ph'),hz=$('.h5');
+if(ph&&hz&&!R&&matchMedia('(pointer:fine)').matches){hz.addEventListener('mousemove',function(e){var b=ph.getBoundingClientRect(),x=(e.clientX-(b.left+b.width/2))/b.width,y=(e.clientY-(b.top+b.height/2))/b.height;ph.style.transform='perspective(1200px) rotateY('+(x*14).toFixed(2)+'deg) rotateX('+(-y*10).toFixed(2)+'deg)'});hz.addEventListener('mouseleave',function(){ph.style.transform=''})}
+/* chat playback: type into the input, send, show typing dots, reply */
+function play(box,loop){var chat=$(box.dataset.chat,box),inp=$('.inp span',box),btn=$('.inp i',box),steps=$$('[data-m]',chat);if(!chat||R)return;
+ var ph0=inp?inp.textContent:'';
+ function reset(){steps.forEach(function(s){s.classList.add('m-h');s.classList.remove('mi')});$$('.typ',chat).forEach(function(t){t.remove()})}
+ async function run(){reset();await wait(500);
+  for(var i=0;i<steps.length;i++){var s=steps[i];
+   if(s.dataset.m==='me'){var w=s.dataset.w||s.textContent.trim();if(inp){inp.className='tx';inp.textContent='';for(var k=0;k<w.length;k++){inp.textContent+=w[k];await wait(70)}await wait(250);if(btn){btn.classList.remove('go');void btn.offsetWidth;btn.classList.add('go')}inp.className='';inp.textContent=ph0}
+    s.classList.remove('m-h');s.classList.add('mi');await wait(450)}
+   else{var t=D.createElement('div');t.className='typ mi';t.innerHTML='<i></i><i></i><i></i>';chat.insertBefore(t,s);await wait(900);t.remove();s.classList.remove('m-h');s.classList.add('mi');
+    $$('[data-count]',s).forEach(function(c){count(c,parseFloat(c.dataset.count),900)});$$('.ok',s).forEach(function(o){o.classList.remove('pl');void o.offsetWidth;o.classList.add('pl')});await wait(700)}}
+  if(loop){await wait(5000);run()}}
+ run()}
+if(!R){var hp=$('.pw');if(hp)setTimeout(function(){play(hp,true)},900)}
+/* scroll reveals with a stagger inside each group */
+var groups=['.sh5','.ag','.bd','.fd','.tw','.sm','.st5>div','.tg>div','.fq>div'];
+var els=[];groups.forEach(function(g){$$(g).forEach(function(el,i){el.setAttribute('data-r','');el.style.transitionDelay=Math.min(i,6)*0.08+'s';els.push(el)})});
+if('IntersectionObserver' in window&&!R){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+  if(e.target.classList.contains('tw'))setTimeout(function(){play(e.target,true)},400);
+  if(e.target.classList.contains('bd')){var sv=$('.sv b',e.target);if(sv)setTimeout(function(){count(sv,15.96,900)},1400)}}})},{threshold:.18,rootMargin:'0px 0px -6% 0px'});els.forEach(function(el){io.observe(el)})}
+else els.forEach(function(el){el.classList.add('in')});
+/* the wide screen lifts flat as it scrolls into view */
+var tw=$('.tw'),tb=tw&&$('.tb',tw);
+if(tb&&!R){var tick=false;function upd(){tick=false;var r=tw.getBoundingClientRect(),vh=innerHeight,p=Math.max(0,Math.min(1,(vh-r.top)/(vh*0.8)));tb.style.setProperty('--rx',(24*(1-p)).toFixed(2)+'deg');tb.style.setProperty('--sc',(0.9+0.1*p).toFixed(3))}
+ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd()}
+})();
+</script>"""
+
 def home():
     rows = agent_rows()
     samples = "".join(f'<div class="sm"><div class="sh"><span>{e(n)}</span><code>{e(c)}</code></div><pre>{e(t)}</pre><div class="ex">Example output for a sample business.</div></div>' for n, c, t in SAMPLES)
@@ -180,23 +262,23 @@ def home():
 <p class="lead">Four agents for the jobs you keep putting off: chasing invoices, answering reviews, sorting receipts and planning posts. $9.99 each. Set up in about 15 minutes, right on your phone.</p>
 <div class="row"><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">See each agent · $9.99</a></div>
 <div class="trust"><span>One payment, no subscription</span><span>Free Claude plan works</span><span>Instant download</span><span>30 day refund</span></div></div>
-<div class="pw"><div class="ph" role="img" aria-label="Example on a phone: you type sort with your October statement and get every charge sorted with totals and one question">
+<div class="pw" data-chat=".chat"><div class="ph" role="img" aria-label="Example on a phone: you type sort with your October statement and get every charge sorted with totals and one question">
 <i class="bt b1"></i><i class="bt b2"></i><i class="bt b3"></i><i class="bt b4"></i>
 <div class="scr"><div class="isl"></div><div class="sbar"><span>9:41</span><span class="sig"><i></i><i></i><i></i><i></i><b></b></span></div>
 <div class="ah"><span class="av">B</span><div><b>Bookkeeping Sorter</b><span>Your agent · example</span></div></div>
-<div class="chat"><div class="me a1"><span class="fc">october.pdf</span>sort</div>
-<div class="bot a2"><div class="bh">October, sorted</div><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Personal</span><span>$219</span></div><div class="r tt"><span>Business total</span><span>$1,224</span></div></div>
-<div class="bot q a3">Home Depot, $64 on Oct 12: work or home?</div>
-<div class="me a4">work</div><div class="bot a5">Got it. Supplies is now $676. Want me to always count Home Depot as work?</div></div>
+<div class="chat"><div class="me" data-m="me" data-w="sort"><span class="fc">october.pdf</span>sort</div>
+<div class="bot" data-m="bot"><div class="bh">October, sorted</div><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Personal</span><span>$219</span></div><div class="r tt"><span>Business total</span><span data-count="1224">$1,224</span></div></div>
+<div class="bot q" data-m="bot">Home Depot, $64 on Oct 12: work or home?</div>
+<div class="me" data-m="me">work</div><div class="bot" data-m="bot">Got it. Supplies is now <span data-count="676">$676</span>. Want me to always count Home Depot as work?</div></div>
 <div class="inp"><span>Type a word</span><i></i></div><div class="hb"></div></div></div>
 <div class="pcap">Sample business. Your numbers come from your own statement.</div></div</div></div></div></div>
 <div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
 <div class="ags">{rows}</div>
 <div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>
-<div><div class="px"><s>$39.96</s><b>$24</b></div><div class="sv">You save $15.96</div><a class="b5 l buy" href="{GR}owner-toolkit">Get all 4 for $24</a></div></div>
+<div><div class="px"><s>$39.96</s><b>$24</b></div><div class="sv">You save <b>$15.96</b></div><a class="b5 l buy" href="{GR}owner-toolkit">Get all 4 for $24</a></div></div>
 <div class="fd"><span><b>Run a service business that texts all day?</b> The Front Desk Kit drafts replies, quotes and follow ups from your real prices. $39.</span><a href="/front-desk/">See the Front Desk Kit</a></div></div></div>
 <div class="s5"><div class="w5"><div class="sh5"><div><div class="lab">What it writes</div><h2>One word in. <em>A draft out.</em></h2></div><p>The kind of thing you get back after one word. You read it, then send it.</p></div>
-<div class="tw"><div class="tb" role="img" aria-label="Example on a wide screen: the Invoice Chaser keeps a list of who owes you and drafts the reminder for Dave">
+<div class="tw" data-chat=".tch"><div class="tb" role="img" aria-label="Example on a wide screen: the Invoice Chaser keeps a list of who owes you and drafts the reminder for Dave">
 <i class="tk k1"></i><i class="tk k2"></i><i class="tk k3"></i>
 <div class="tsc"><div class="tsb"><span>Wed 9:41</span><span class="sig"><i></i><i></i><i></i><i></i><b></b></span></div>
 <div class="tgr"><div class="tsd"><div class="tsh">Your agents</div>
@@ -205,10 +287,10 @@ def home():
 <div class="ti"><span class="tav">B</span><div><b>Bookkeeping Sorter</b><span>October sorted</span></div></div>
 <div class="ti"><span class="tav">C</span><div><b>Content Week</b><span>7 posts planned</span></div></div></div>
 <div class="tmn"><div class="tth"><b>Invoice Chaser</b><span>Example business</span></div>
-<div class="tch"><div class="me c1">owed</div>
-<div class="bot c2"><div class="bh">Who owes you</div><div class="r"><span>Dave · SUV detail</span><span>$520 · 7 days late</span></div><div class="r"><span>Laura · Interior</span><span>$150 · due Fri</span></div><div class="r"><span>Tom · Ceramic</span><span>$490 · due Mon</span></div><div class="r tt"><span>Still owed</span><span>$1,160</span></div></div>
-<div class="me c3">chase Dave</div>
-<div class="bot dr c4"><div class="bh">Draft · 1 week late · friendly but clear</div>Hi Dave, following up on invoice 1042 for $520, due Oct 14. Here's the link to pay: [your link]. Let me know if you have any questions. Mike<div class="tac"><span>Edit</span><span class="ok">Copy and send</span></div></div></div>
+<div class="tch"><div class="me" data-m="me">owed</div>
+<div class="bot" data-m="bot"><div class="bh">Who owes you</div><div class="r"><span>Dave · SUV detail</span><span>$520 · 7 days late</span></div><div class="r"><span>Laura · Interior</span><span>$150 · due Fri</span></div><div class="r"><span>Tom · Ceramic</span><span>$490 · due Mon</span></div><div class="r tt"><span>Still owed</span><span data-count="1160">$1,160</span></div></div>
+<div class="me" data-m="me">chase Dave</div>
+<div class="bot dr" data-m="bot"><div class="bh">Draft · 1 week late · friendly but clear</div>Hi Dave, following up on invoice 1042 for $520, due Oct 14. Here's the link to pay: [your link]. Let me know if you have any questions. Mike<div class="tac"><span>Edit</span><span class="ok">Copy and send</span></div></div></div>
 <div class="inp"><span>Type a word</span><i></i></div></div></div><div class="hb"></div></div></div>
 <div class="pcap">Sample business and numbers. Every message waits for you to send it.</div></div>
 <div class="sp" style="margin-top:56px">{samples}</div></div></div>
@@ -225,8 +307,7 @@ Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div>
 <div class="s5"><div class="w5"><div class="sh5"><div><div class="lab">Questions</div><h2>Before <em>you buy.</em></h2></div><p>Still stuck after you buy? Reply to your receipt and we help.</p></div><div class="fq">{faq}</div>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:40px"><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">Pick one · $9.99</a></div></div></div>
 <div class="sb" id="sb"><div><b>All 4 agents · $24</b><span>One payment · 30 day refund</span></div><a class="b5 l buy" href="{GR}owner-toolkit">Get them</a></div>
-<script>(function(){{var t=document.querySelector('.tw');if(t){{if('IntersectionObserver' in window){{var o=new IntersectionObserver(function(x){{if(x[0].isIntersecting){{t.classList.add('go');o.disconnect()}}}},{{threshold:.3}});o.observe(t)}}else t.classList.add('go')}}}})();</script>
-<script>(function(){{var s=document.getElementById('sb'),h=document.querySelector('.h5 .row');if(!('IntersectionObserver' in window)||!s||!h)return;new IntersectionObserver(function(x){{s.classList.toggle('on',!x[0].isIntersecting&&x[0].boundingClientRect.top<0)}}).observe(h)}})();</script>""" + FOOT
+<script>(function(){{var s=document.getElementById('sb'),h=document.querySelector('.h5 .row');if(!('IntersectionObserver' in window)||!s||!h)return;new IntersectionObserver(function(x){{s.classList.toggle('on',!x[0].isIntersecting&&x[0].boundingClientRect.top<0)}}).observe(h)}})();</script>""" + FX + FOOT
     return page.replace("<body>", '<body class="v5">', 1)
 
 PRODUCTS = [
