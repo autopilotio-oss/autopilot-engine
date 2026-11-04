@@ -51,30 +51,30 @@ def home():
     band = "".join(f"<span>{w}</span>" for w in WORDS * 2)
     return head("AUTOPILOT.OI · AI helpers for busy business owners. No tech skills.", "Simple AI helpers for owners who have never used AI: bookkeeping, invoices, reviews, posts and customer replies. Copy one message, answer a few questions. From $10.", "/", "toolkit-cover.png") + nav("") + f"""
 {HSTYLE}
-<div class="wrap hero hgrid"><div><div class="k"><b>●</b> AI helpers for business owners</div>
-<h1 style="margin:22px 0 24px">No more paperwork <em>at midnight.</em></h1>
-<p class="lead">Copy one message into the free Claude app. Type one word. It drafts the busywork; you check it and send it. From $10.</p>
-<div class="row" style="margin-top:32px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#free">Try one free</a></div></div>
+<div class="wrap hero hgrid"><div><div class="k"><b>●</b> AI tools for business owners</div>
+<h1 style="margin:22px 0 24px">Busywork, <em>drafted.</em></h1>
+<p class="lead">Simple AI tools for business owners. You stay in charge. From $10.</p>
+<div class="row" style="margin-top:32px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#free">Try free</a></div></div>
 <div class="phn"><div class="t"><span>BOOKKEEPING</span><span>EXAMPLE</span></div><div class="me">sort 📎 october.pdf</div>
 <div class="ai"><b>OCTOBER · SORTED</b><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Personal</span><span>$219</span></div>
 <div style="margin-top:10px">1 question: Home Depot $64 on Oct 12, work or home?</div></div></div></div>
 <div class="band" aria-hidden="true"><div class="tr">{band}</div></div>
-<div class="sec paper" id="tools"><div class="wrap"><div class="head"><div><div class="k" style="margin-bottom:16px">The tools</div><h2>One job. <em>$10.</em></h2></div><p class="lead" style="max-width:380px">Pick the paperwork you hate most. One time price, 30 day refund.</p></div>
+<div class="sec paper" id="tools"><div class="wrap"><div class="head"><div><div class="k" style="margin-bottom:16px">Tools</div><h2>The <em>toolkit.</em></h2></div><p class="lead" style="max-width:380px">One time price. 30 day refund.</p></div>
 <div class="grid4">{tool_cards()}</div>
 <div class="kit"><div class="card prod" style="background:var(--ink);color:var(--tx);border-color:var(--ink)"><span class="tagline live" style="border-color:#333;color:#cfcfc8">Best value</span><div class="nm" style="font-size:clamp(24px,3vw,34px)">Owner Toolkit</div><div class="price" style="color:var(--l)">$24<small style="color:#a2a39a">all 4 · $40 separately</small></div><p style="color:#bdbdb6">Bookkeeping, invoices, reviews and posts.</p><div class="go"><a class="btn buy" href="{GR}owner-toolkit">Get all 4 · $24</a></div></div>
 <div class="card prod"><span class="tagline live">For businesses that text all day</span><div class="nm" style="font-size:clamp(24px,3vw,34px)">Front Desk Kit</div><div class="price">$39<small>one time</small></div><p>Customer replies, quotes and follow ups, drafted from your real prices.</p><div class="go row"><a class="btn dark buy" style="flex:1" href="{GR}autopilot">Get it · $39</a><a class="btn ghost" href="/front-desk/">Details</a></div></div></div></div></div>
-<div class="sec" id="how"><div class="wrap"><div class="k" style="margin-bottom:16px">Never used AI? Good.</div><h2 style="margin-bottom:44px">Three steps. <em>On your phone.</em></h2>
-<div class="steps"><div><h3>Get the free Claude app</h3><p style="color:var(--mut)">The free plan works.</p></div>
-<div><h3>Paste one message</h3><p style="color:var(--mut)">It asks you a few easy questions about your business.</p></div>
-<div><h3>Type one word</h3><p style="color:var(--mut)">sort, chase, reply, week. Read the draft. Send it yourself.</p></div></div></div></div>
-<div class="sec" id="free"><div class="wrap grid2" style="align-items:center;gap:44px"><div><div class="k" style="margin-bottom:16px">Free · 60 seconds</div><h2>Try it <em>right now.</em></h2><p class="lead" style="margin-top:18px">Paste this into Claude with a real review of your business.</p>
+<div class="sec" id="how"><div class="wrap"><div class="k" style="margin-bottom:16px">Setup</div><h2 style="margin-bottom:44px">How it <em>works.</em></h2>
+<div class="steps"><div><h3>Open Claude</h3><p style="color:var(--mut)">The free plan works.</p></div>
+<div><h3>Paste one message</h3><p style="color:var(--mut)">Answer a few questions.</p></div>
+<div><h3>Type one word</h3><p style="color:var(--mut)">Read the draft. Send it.</p></div></div></div></div>
+<div class="sec" id="free"><div class="wrap grid2" style="align-items:center;gap:44px"><div><div class="k" style="margin-bottom:16px">Free · 60 seconds</div><h2>Free <em>sample.</em></h2><p class="lead" style="margin-top:18px">Paste into Claude with a real review.</p>
 <button class="btn" style="margin-top:26px" onclick="navigator.clipboard.writeText(document.getElementById('fp').innerText);this.textContent='Copied'">Copy the message</button></div>
 <div class="cp" id="fp">Here is a review of my business. Write a short reply I can post.
 My business: [name and what you do]
 My name: [your first name]
 The review: [paste it]
 Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div></div></div>
-<div class="sec"><div class="wrap grid2" style="gap:44px"><div><h2>Questions</h2><p class="lead" style="margin-top:18px">Stuck? Reply to your receipt email and we help.</p><a class="btn ghost" style="margin-top:24px" href="/brain/">Get the free starter</a></div><div>
+<div class="sec"><div class="wrap grid2" style="gap:44px"><div><h2>FAQ<em>.</em></h2><p class="lead" style="margin-top:18px">Stuck? Reply to your receipt.</p><a class="btn ghost" style="margin-top:24px" href="/brain/">Get the free starter</a></div><div>
 <details><summary>What is Claude?</summary><p>An AI assistant made by Anthropic. You text it and it writes back. Our tools set it up to do one job for your business.</p></details>
 <details><summary>Do I have to pay for Claude?</summary><p>No. Every tool works on the free plan.</p></details>
 <details><summary>Does it send or post for me?</summary><p>No. Everything is a draft. You send it yourself.</p></details>
@@ -94,36 +94,36 @@ def marketplace():
     cards = "".join(f'<div class="card prod"><div class="nm">{e(n)}</div><div class="price">${p}<small>one time</small></div><p>{e(d)}</p><ul>{"".join(f"<li>{e(x)}</li>" for x in li[:3])}</ul><div class="go row"><a class="btn dark buy" style="flex:1" href="{g}">Get it · ${p}</a><a class="btn ghost" href="{u}">Details</a></div></div>' for n, p, u, g, d, li in PRODUCTS)
     soon = "".join(f'<div class="card"><span class="tagline dev">Coming soon</span><h3 style="margin:16px 0 8px">{e(n)}</h3><p>{e(d)}</p></div>' for n, d in SOON)
     return head("Marketplace · AI setup kits for small businesses · AUTOPILOT.OI", "Guided setup kits that install AI into your own Claude account. They draft; you decide and send. One time price, 30 day refund.", "/marketplace/") + nav("m") + f"""
-<div class="wrap hero"><div class="k"><b>●</b> Marketplace</div><h1 style="margin:22px 0 24px">Simple AI tools. <em>No tech skills.</em></h1>
-<p class="lead">Each kit sets up your own Claude account for one job. It drafts; you send. One time price, 30 day refund.</p></div>
+<div class="wrap hero"><div class="k"><b>●</b> Marketplace</div><h1 style="margin:22px 0 24px">Every <em>tool.</em></h1>
+<p class="lead">Setup kits for your own Claude account. It drafts; you send. 30 day refund.</p></div>
 <div class="sec paper"><div class="wrap"><div class="grid3">{cards}</div></div></div>
 <div class="sec"><div class="wrap"><div class="k" style="margin-bottom:16px">Next</div><h2 style="margin-bottom:36px">Coming <em>soon.</em></h2><div class="grid3">{soon}</div></div></div>
-<div class="sec"><div class="wrap grid2" style="align-items:center;gap:44px"><div><span class="tagline dev">In development</span><h2 style="margin:20px 0 18px">Runs <em>without opening Claude.</em></h2><p class="lead">Workspace, our software, will catch the lead while you're on a job and have the reply waiting for your tap.</p><a class="btn" style="margin-top:28px" href="/workspace/">See Workspace</a></div>{INBOX}</div></div>""" + FOOT
+<div class="sec"><div class="wrap grid2" style="align-items:center;gap:44px"><div><span class="tagline dev">In development</span><h2 style="margin:20px 0 18px;font-size:clamp(28px,3.9vw,50px)">Workspace<em>.</em></h2><p class="lead">Our software, in development. Leads caught while you work, replies waiting for your tap.</p><a class="btn" style="margin-top:28px" href="/workspace/">See Workspace</a></div>{INBOX}</div></div>""" + FOOT
 
 def workspace():
     return head("Workspace · every lead answered · AUTOPILOT.OI", "Software for owner operated service businesses: every new lead answered within a minute, replies and quotes drafted, quiet quotes followed up. In development; founding spots open.", "/workspace/", "workspace-founding-cover.png") + nav("w") + f"""
 <div class="wrap hero grid2" style="align-items:center;gap:44px"><div><span class="tagline dev">In development · founding spots open</span>
-<h1 class="s" style="margin:22px 0 24px">Every lead answered. <em>Every quote followed up.</em></h1>
+<h1 style="margin:22px 0 24px;font-size:clamp(36px,4.4vw,58px)">Work<em>space.</em></h1>
 <p class="lead">Software we're building for service businesses. New leads get your acknowledgment within a minute; the reply and quote are drafted from your prices. You approve from your phone.</p>
 <div class="row" style="margin-top:30px"><a class="btn buy" href="{GR}workspace-founding">Hold a founding spot · $49</a><a class="btn ghost" href="#list">Join the free list</a></div>
 <p class="label" style="margin-top:14px">Deposit fully refundable · credited to your first month · $99 a month planned</p></div>{INBOX}</div>
-<div class="sec"><div class="wrap"><div class="k" style="margin-bottom:16px">How it will work</div><h2 style="margin-bottom:44px">Set up <em>on your phone.</em></h2>
+<div class="sec"><div class="wrap"><div class="k" style="margin-bottom:16px">How it will work</div><h2 style="margin-bottom:44px">How it <em>works.</em></h2>
 <div class="steps"><div><h3>Connect your line</h3><p style="color:var(--mut)">Phone line and form email. Quo (formerly OpenPhone) first.</p></div>
 <div><h3>Teach it your business</h3><p style="color:var(--mut)">A 15 question interview. You write the one acknowledgment it may send.</p></div>
 <div><h3>Approve with a tap</h3><p style="color:var(--mut)">Reply and quote drafted. Approve, edit or skip.</p></div></div></div></div>
-<div class="sec"><div class="wrap"><div class="k" style="margin-bottom:16px">Permissions</div><h2 style="margin-bottom:36px">You decide what it can <em>touch.</em></h2>
+<div class="sec"><div class="wrap"><div class="k" style="margin-bottom:16px">Permissions</div><h2 style="margin-bottom:36px">Your <em>rules.</em></h2>
 <div class="perm"><div class="card"><h3>It reads</h3><ul><li>New calls and texts on the line you connect</li><li>Lead emails you forward</li><li>Your calendar's free times (read only)</li></ul></div>
 <div class="card"><h3>It sends on its own</h3><ul><li>Only your acknowledgment, written and approved by you</li><li>Nothing else</li></ul></div>
 <div class="card"><h3>It always waits for you</h3><ul><li>Replies, quotes and follow ups</li><li>Anything with a price or a promise</li><li>Every message is logged where you can see it</li></ul></div></div></div></div>
-<div class="sec paper"><div class="wrap grid2" style="gap:44px"><div><div class="k" style="margin-bottom:16px">Founding members</div><h2>Hold your spot for <em>$49.</em></h2><p class="lead" style="margin-top:14px">Fully refundable, and credited to your first month.</p></div>
+<div class="sec paper"><div class="wrap grid2" style="gap:44px"><div><div class="k" style="margin-bottom:16px">Founding members</div><h2>Founding <em>spots.</em></h2><p class="lead" style="margin-top:14px">Fully refundable, and credited to your first month.</p></div>
 <div class="card"><div class="prod"><ul><li>$49 credited to your first paid month</li><li>First access to the beta, in the order you joined</li><li>$99 a month locked for your first 12 months</li><li>A say in what gets built first</li><li>Refund anytime before your first paid month; full refund if it's not open to founding members by Feb 28, 2027</li></ul><a class="btn dark buy" style="margin-top:18px" href="{GR}workspace-founding">Hold a founding spot · $49</a></div></div></div></div>
-<div class="sec" id="list"><div class="wrap grid2" style="gap:44px"><div><div class="k" style="margin-bottom:16px">Free list</div><h2>Not ready to put money down?</h2><p class="lead" style="margin-top:14px">Join the list. Three quick questions tell us what to build first.</p></div>
+<div class="sec" id="list"><div class="wrap grid2" style="gap:44px"><div><div class="k" style="margin-bottom:16px">Free list</div><h2>The <em>list.</em></h2><p class="lead" style="margin-top:14px">Free. Three questions tell us what to build first.</p></div>
 <form class="form" id="wl"><input type="email" name="email_address" required placeholder="Your email" autocomplete="email">
 <select name="fields[trade]" required><option value="">What kind of business?</option><option>Auto detailing</option><option>Cleaning</option><option>Landscaping or lawn</option><option>Handyman or home repair</option><option>HVAC, plumbing or electrical</option><option>Pressure washing</option><option>Other service business</option></select>
 <select name="fields[leads_per_week]" required><option value="">New leads per week?</option><option>Under 5</option><option>5 to 15</option><option>16 to 40</option><option>More than 40</option></select>
 <select name="fields[phone_system]" required><option value="">Business phone?</option><option>My cell phone</option><option>Quo (OpenPhone)</option><option>Google Voice</option><option>RingCentral or other VoIP</option><option>Other</option></select>
 <button class="btn" type="submit">Join the list</button><p class="label" id="wlm">No spam. Unsubscribe anytime.</p></form></div></div>
-<div class="sec"><div class="wrap grid2" style="gap:44px"><div><h2>Questions</h2></div><div>
+<div class="sec"><div class="wrap grid2" style="gap:44px"><div><h2>FAQ<em>.</em></h2></div><div>
 <details><summary>Can I use Workspace today?</summary><p>Not yet. It's in development. Founding members get the beta first. Until then, the Front Desk Kit in our Marketplace drafts replies and quotes inside your own Claude account.</p></details>
 <details><summary>What will it cost?</summary><p>$99 a month is the planned price. Founding members lock $99 for 12 months and get their $49 deposit credited to the first month.</p></details>
 <details><summary>Will it text my customers on its own?</summary><p>Only the acknowledgment you write and approve during setup. Replies, quotes and follow ups always wait for your tap.</p></details>
