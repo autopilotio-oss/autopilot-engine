@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 04 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 41,
+ "folders": [
+  "Bookings",
+  "Quotes",
+  "Customers",
+  "Reviews",
+  "Posts",
+  "Money"
+ ],
+ "cover_html": "<div class=\"fx Cc\" style=\"left:540px;transform:translateX(-50%);white-space:nowrap;top:74px;font-size:22px;color:#f2f2eeaa;letter-spacing:6px\">24 PROMPTS FOR AUTO DETAILERS</div><div class=\"fx\" style=\"left:56px;top:150px;width:968px\"><div data-stagger=\"1\" style=\"display:flex;gap:12px;width:968px\"><div style=\"flex:1;height:104px;border-radius:10px;border:3px solid #D4FF3A;box-sizing:border-box;background:#D4FF3A;color:#0a0a0a;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 4px 14px\"><div style=\"font:700 17px C;letter-spacing:2px;opacity:.75\">01 to 04</div><div style=\"font:400 24px/1 A;text-transform:uppercase\">Bookings</div></div><div style=\"flex:1;height:104px;border-radius:10px;border:3px solid #f2f2ee55;box-sizing:border-box;background:#0a0a0a;color:#f2f2ee;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 4px 14px\"><div style=\"font:700 17px C;letter-spacing:2px;opacity:.75\">05 to 08</div><div style=\"font:400 24px/1 A;text-transform:uppercase\">Quotes</div></div><div style=\"flex:1;height:104px;border-radius:10px;border:3px solid #f2f2ee55;box-sizing:border-box;background:#0a0a0a;color:#f2f2ee;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 4px 14px\"><div style=\"font:700 17px C;letter-spacing:2px;opacity:.75\">09 to 12</div><div style=\"font:400 24px/1 A;text-transform:uppercase\">Customers</div></div><div style=\"flex:1;height:104px;border-radius:10px;border:3px solid #f2f2ee55;box-sizing:border-box;background:#0a0a0a;color:#f2f2ee;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 4px 14px\"><div style=\"font:700 17px C;letter-spacing:2px;opacity:.75\">13 to 16</div><div style=\"font:400 24px/1 A;text-transform:uppercase\">Reviews</div></div><div style=\"flex:1;height:104px;border-radius:10px;border:3px solid #f2f2ee55;box-sizing:border-box;background:#0a0a0a;color:#f2f2ee;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 4px 14px\"><div style=\"font:700 17px C;letter-spacing:2px;opacity:.75\">17 to 20</div><div style=\"font:400 24px/1 A;text-transform:uppercase\">Posts</div></div><div style=\"flex:1;height:104px;border-radius:10px;border:3px solid #f2f2ee55;box-sizing:border-box;background:#0a0a0a;color:#f2f2ee;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 4px 14px\"><div style=\"font:700 17px C;letter-spacing:2px;opacity:.75\">21 to 24</div><div style=\"font:400 24px/1 A;text-transform:uppercase\">Money</div></div></div></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"22\" style=\"left:56px;top:400px;font-size:170px;white-space:nowrap;color:#f2f2ee\">Stop typing</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:570px;font-size:170px;white-space:nowrap;color:#f2f2ee\">these texts.</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:740px;font-size:170px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A;padding:14px 22px 0;box-sizing:border-box\">Paste them.</div><div class=\"fx\" data-after=\"h\" data-gap=\"60\" style=\"left:56px;top:1000px;width:968px;display:flex;flex-direction:column;align-items:flex-start;gap:40px\"><div style=\"font:800 40px/1.2 I;letter-spacing:-.5px;color:#f2f2ee\">Copy. Paste. Swap the <span style=\"background:#D4FF3A;color:#0a0a0a;padding:0 6px\">[brackets]</span>.</div><div style=\"font:700 24px C;letter-spacing:3px;text-transform:uppercase;color:#0a0a0a;background:#D4FF3A;padding:16px 26px 14px;border-radius:6px\">SAVE IT · SWIPE ▸</div></div>",
+ "cover_bg": "bg-black",
+ "lava_opacity": 0.35,
+ "slides": [
+  {
+   "cat": "Bookings",
+   "cards": [
+    {
+     "t": "Booking reply",
+     "p": "A customer texted asking about a detail. Reply with my packages [list], open times [times], and one question about their car.",
+     "star": true
+    },
+    {
+     "t": "Mobile setup",
+     "p": "I am a mobile detailer. Write a text asking [customer] about water, power and parking at [address] before tomorrow."
+    },
+    {
+     "t": "No show policy",
+     "p": "Write a short no show and late cancel policy for my detailing bookings: [hours] notice, [fee], said kindly."
+    },
+    {
+     "t": "Rebook nudge",
+     "p": "Write a text for customers whose last detail was [X] weeks ago. Friendly, one open slot [day], easy yes."
+    }
+   ]
+  },
+  {
+   "cat": "Quotes",
+   "cards": [
+    {
+     "t": "Size menu",
+     "p": "Turn my prices [paste] into a simple menu by size: sedan, SUV, truck. Show what each package includes.",
+     "star": true
+    },
+    {
+     "t": "Photo quote",
+     "p": "A customer sent photos of [problem]. Write a reply with a price range and why the final price needs a look."
+    },
+    {
+     "t": "Honest add ons",
+     "p": "Suggest 2 add ons for a [car] getting [package], only if they truly help. One plain line each, no pressure."
+    },
+    {
+     "t": "Fleet pitch",
+     "p": "Write a short email to [local business] offering fleet washes for their [vans]: schedule, price per vehicle [price], next step."
+    }
+   ]
+  },
+  {
+   "cat": "Customers",
+   "cards": [
+    {
+     "t": "Set expectations",
+     "p": "Explain to [customer] in plain words what a [service] can and cannot fix on their [car], before I start.",
+     "star": true
+    },
+    {
+     "t": "Aftercare",
+     "p": "Turn my care steps [paste] into a short aftercare text for [service]: what to do, what to avoid, how long."
+    },
+    {
+     "t": "Damage claim",
+     "p": "A customer says I caused [issue]: [paste]. Reply calmly, ask for photos, and offer a time to look together."
+    },
+    {
+     "t": "Pet hair fee",
+     "p": "Write a kind text telling [customer] heavy pet hair adds [price]. Explain why, and let them reply yes or skip."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Dash card",
+     "p": "Write the words for a small card I leave on the dash asking for a Google review, with a QR code spot.",
+     "star": true
+    },
+    {
+     "t": "Photo review",
+     "p": "Write a text asking [customer] for a Google review with a photo of their clean car. Short, link [link]."
+    },
+    {
+     "t": "Never copied",
+     "p": "Write 5 different replies to 5 star reviews for my detailing business so they never sound copied. Under 25 words each."
+    },
+    {
+     "t": "Fix it reply",
+     "p": "Reply to this review saying my work left [issue]: [paste]. Calm, take it offline, offer to make it right."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "Reel script",
+     "p": "Write a 15 second reel script for my [service] video: hook in 2 seconds, 3 shots, end with how to book.",
+     "star": true
+    },
+    {
+     "t": "Week of posts",
+     "p": "Plan 7 posts for my detailing page this week from these photos: [describe]. One idea and caption each."
+    },
+    {
+     "t": "Season tips",
+     "p": "Write a post on getting a car ready for [season] in [city]: 3 simple tips, then my [package]."
+    },
+    {
+     "t": "Myth post",
+     "p": "Write a short post explaining one car care myth customers ask me about: [myth]. Plain words, end with one tip."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Gift cards",
+     "p": "Write a holiday gift card offer for my detailing: [amounts], how to buy [link], and when it expires [date].",
+     "star": true
+    },
+    {
+     "t": "Balance due",
+     "p": "[Customer] paid [amount] of [total] for their detail. Write a polite text with the balance and payment link [link]."
+    },
+    {
+     "t": "Membership",
+     "p": "Design a monthly wash membership from my prices [paste]: 2 tiers, what each includes, price, how to cancel."
+    },
+    {
+     "t": "Product cost",
+     "p": "Here are my monthly supply costs [paste] and jobs done [number]. What do products cost me per detail? Simple table."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "DETAIL",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for auto detailers in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

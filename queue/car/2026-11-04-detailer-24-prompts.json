@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-04-detailer-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Front Desk Kit ($39, https://autopilotoi.app/front-desk/) and Owner Toolkit tools (Review Desk, Content Week, Invoice Chaser, https://autopilotoi.app/#tools); free starter (/#free) as entry",
+ "cover_idea": "Black page, folder chips row moved to the top, huge white STOP TYPING THESE TEXTS. with PASTE THEM. in a lime block, left aligned sub and lime button (changes vs the paper packs: background, headline position, chips placement, headline scale).",
+ "theme": "auto detailers: 24 new prompts in 6 folders (Bookings, Quotes, Customers, Reviews, Posts, Money), all visible, hook test 'Stop typing these. Paste them.'",
+ "gate": {
+  "score": 93,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, every prompt 22 words max, none repeated from earlier packs). Hook 22/25 (new hook test, niche specific: mobile setup, pet hair fee, dash card, fleet pitch). Clarity 19/20 (4 cards a slide, bracket chips). Design 13/15 (dark cover breaks from the paper packs while inner slides keep the site system). CTA 9/10 (AGENTS confirmed in config/manychat.json; gift is the free starter per Seb's Nov 4 override). QA PASS all 8; read every slide, legible on a phone."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You run a detailing business and still type every booking reply by hand?\n\nHere are 24 Claude prompts in 6 folders: bookings, quotes, customers, reviews, posts and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next slow morning.\n\n#autodetailing #detailingbusiness #mobiledetailing #smallbusiness #claudeai",
+  "threads": "Stop typing the same texts to every detailing customer.\n\n24 Claude prompts for auto detailers: booking replies, photo quotes, pet hair fees, review cards, reel scripts, gift cards. All in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Detailers: stop typing the same texts.\n\n24 Claude prompts for bookings, quotes, reviews, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-04-detailer-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-04T19:46Z"
+}
