@@ -241,7 +241,7 @@ def grid(p, i, n, sl):
     segs = "".join(f'<div class="gs{" on" if m + 1 == k else (" done" if m + 1 < k else "")}"><i></i><span>{E(f)}</span></div>'
                    for m, f in enumerate(folders))
     return (f'<div class="s gr" id="s{i}">{GRAIN}<div class="pg">{i}/{n}</div>'
-            f'<div class="fx Cc gr-k">FOLDER {k:02d} / {len(folders):02d}</div>'
+            f'<div class="fx Cc gr-k">FOLDER {k:02d} OF {len(folders):02d}</div>'
             f'<div class="fx A gr-h"><span class="l">{k:02d}</span> {E(sl["cat"])}</div>'
             f'<div class="gr-grid">{cards}</div><div class="gr-bar">{segs}</div>'
             f'<div class="handle"><img class="hlogo" src="/docs/logo.png">SAVE THIS &middot; @AUTOPILOT.OI</div>'
@@ -310,7 +310,7 @@ async function go(){await document.fonts.ready;
    const P=box.parentElement;
    if(box.dataset.w){while(P.getBoundingClientRect().bottom>1240&&k>.4){k-=.03;apply()}}
    else{while(P.getBoundingClientRect().top<560&&k>.4){k-=.03;apply()}}}
- for(const g of document.querySelectorAll('.gr-grid')){let f=37;const cs=[...g.querySelectorAll('.gc')],ps=[...g.querySelectorAll('.gc-p')];
+ for(const g of document.querySelectorAll('.gr-grid')){let f=35;const cs=[...g.querySelectorAll('.gc')],ps=[...g.querySelectorAll('.gc-p')];
    while(cs.some(c=>c.scrollHeight>c.clientHeight+1)&&f>17){f-=.5;ps.forEach(e=>e.style.fontSize=f+'px')}}
  for(const el of document.querySelectorAll('.fit2')){const b=el.parentElement;let k=1;while(el.scrollHeight>b.clientHeight&&k>.5){k-=.04;el.style.zoom=k}}
  try{TYPESET()}catch(e){window.QA=[{slide:0,level:'error',msg:'typeset crashed: '+e.message}]}
