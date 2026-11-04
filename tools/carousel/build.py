@@ -24,6 +24,7 @@ BUILD PRINTS "QA PASS"; fix the spec and rebuild instead.
   data-stack="h" + data-gap (stack lines with equal ink gaps), data-after="h" (place under the stack).
   Photo covers: "photo": {src, cut, badge?, kicker?, lines, sub?} (see cover_photo).
   Animated covers: cover_html covers get the lava lamp loop (cover.mp4, cover_ig.mp4 24s; CAR_STILL=1 skips video).
+  Frame 0 is the finished cover (Seb, Nov 4: grid thumbnails showed empty lava), then the intro animation plays.
   Kinetic covers (tools/carousel/anim.js): lines slide in, big numbers count up, terminals type, stamps slam, the swipe
   line nudges. 16s video (anim_dur), lava keeps moving under the held layout.
   Music: tools/carousel/beat.py makes an original 8s loop ("music": dark, bright, tense) -> cover_beat.mp4.
@@ -300,7 +301,7 @@ await p.goto('http://localhost:8779/tools/carousel/_{cid}.html');await p.waitFor
 require('fs').writeFileSync('{out}/qa.json',JSON.stringify(await p.evaluate(()=>window.QA||[]),null,1));
 const lf=p.frames().find(f=>f.url().includes('lava.html'));if(lf){{await lf.waitForFunction(()=>window.READY===1,null,{{timeout:60000}});await lf.evaluate(()=>window.render(0))}}
 for(let i=1;i<={n};i++){{await (await p.$('#s'+i)).screenshot({{path:'{out}/'+String(i).padStart(2,'0')+'.jpg',type:'jpeg',quality:88}})}}
-if(lf&&{FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await p.evaluate(t=>window.ANIM(t),k/24);await lf.evaluate(t=>window.render(t),(k/24)%8);await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
+if(lf&&{FRAMES}){{const s1=await p.$('#s1');for(let k=0;k<{FRAMES};k++){{await p.evaluate(t=>window.ANIM(t),k===0?999:k/24);await lf.evaluate(t=>window.render(t),(k/24)%8);await s1.screenshot({{path:'{fdir}/'+String(k).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}})}}}}
 await b.close()}})();"""
     srv = subprocess.Popen([sys.executable, "-m", "http.server", "8779"], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:

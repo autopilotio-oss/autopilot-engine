@@ -56,6 +56,9 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
 .b5{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:6px;font:700 16px var(--T);background:var(--ik);color:#fff;border:1.5px solid var(--ik);white-space:nowrap;transition:background .15s,color .15s}
 .b5:hover{background:var(--l);color:var(--ik)}.b5.o{background:transparent;color:var(--ik)}.b5.o:hover{background:var(--ik);color:#fff}.b5.l{background:var(--l);color:var(--ik);border-color:var(--l)}.b5.l:hover{background:#fff;border-color:#fff}
 /* hero */
+.hx{position:relative;isolation:isolate;overflow:hidden;border-bottom:1.5px solid var(--ik)}.hx .h5{border-bottom:0}
+.lava{position:absolute;inset:0;width:100%;height:100%;z-index:-1;display:block;background:radial-gradient(38% 46% at 82% 40%,#d4ff3a 0 58%,transparent 60%),radial-gradient(22% 26% at 64% 82%,#c4ef22 0 56%,transparent 58%),var(--pp)}
+.lava.lava-on{background:var(--pp)}
 .h5{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.8fr);gap:56px;align-items:center;padding:64px 0 56px;border-bottom:1.5px solid var(--ik)}
 .h5 h1{font-size:clamp(38px,5.6vw,82px);line-height:.93;margin:20px 0 26px}
 .h5 .lead{color:#33332e;max-width:600px}
@@ -257,7 +260,7 @@ def home():
     faq = "".join(f"<div><h3>{e(q)}</h3><p>{e(a)}</p></div>" for q, a in FAQ)
     page = head("AUTOPILOT.OI · Easy set up AI agents for small business owners, $9.99", "Four AI agents for the jobs you put off: unpaid invoices, ignored reviews, messy receipts and nothing to post. $9.99 each or all 4 for $24. One payment, free Claude plan works, 30 day refund.", "/", "toolkit-cover.png") + nav("") + f"""
 {V5}
-<div class="w5"><div class="h5"><div><div class="lab">AI agents for small business owners</div>
+<div class="hx"><canvas class="lava" data-lava aria-hidden="true"></canvas><div class="w5"><div class="h5"><div><div class="lab">AI agents for small business owners</div>
 <h1>Easy set up AI agents that make your life <em>easier.</em></h1>
 <p class="lead">Four agents for the jobs you keep putting off: chasing invoices, answering reviews, sorting receipts and planning posts. $9.99 each. Set up in about 15 minutes, right on your phone.</p>
 <div class="row"><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">See each agent · $9.99</a></div>
@@ -271,7 +274,7 @@ def home():
 <div class="bot q" data-m="bot">Home Depot, $64 on Oct 12: work or home?</div>
 <div class="me" data-m="me">work</div><div class="bot" data-m="bot">Got it. Supplies is now <span data-count="676">$676</span>. Want me to always count Home Depot as work?</div></div>
 <div class="inp"><span>Type a word</span><i></i></div><div class="hb"></div></div></div>
-<div class="pcap">Sample business. Your numbers come from your own statement.</div></div</div></div></div></div>
+<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=1" defer></script>
 <div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
 <div class="ags">{rows}</div>
 <div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>
