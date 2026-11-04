@@ -356,7 +356,7 @@
   "severity": "SEV-3"
  },
  "worker:viral_lab": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-3"
  },
  "worker:weekly_sprint": {
