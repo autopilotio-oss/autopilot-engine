@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset=utf-8><link rel=stylesheet href="/tools/carousel/style.css"><style>
+body{margin:0;width:3240px;height:4050px;position:relative;overflow:hidden;background:#f2f2ee}
+.row{position:absolute;left:0;width:3240px;height:1350px;overflow:hidden}
+.t{position:absolute;top:0;width:1080px;height:1350px;overflow:hidden}
+.ph{position:absolute;inset:0;background-size:cover;background-position:center;filter:grayscale(1) contrast(1.22) brightness(.98)}
+.A{position:absolute;font-family:A;text-transform:uppercase;line-height:.88;white-space:nowrap}
+.M{position:absolute;font:400 22px M;letter-spacing:5px;text-transform:uppercase}
+.O{position:absolute;font-family:A;text-transform:uppercase;line-height:.86;font-style:italic;transform:skewX(-8deg);color:transparent;-webkit-text-stroke:3px #0b0b0b;white-space:nowrap}
+.L{color:#D4FF3A}.I{color:#0b0b0b}.W{color:#f2f2ee}
+.bc{display:flex}.bc i{display:block;height:100%}
+</style></head><body><script>
+const INK='#0b0b0b',LIME='#D4FF3A',PAPER='#f2f2ee';
+const FB={s3:'e2',s1:'e10',s6:'e9',s4:'e5'};
+const P=n=>`/docs/media/car/photos/${n}/01.jpg), url(/docs/media/car/photos/${FB[n]||n}/01.jpg`;
+// ap. mark: one shape, used at wildly different scales
+const ap=(x,y,w,c='ink',extra='')=>`<img src=ap_${c}.png style="position:absolute;left:${x}px;top:${y}px;width:${w}px;${extra}">`;
+const seal=(cx,cy,d)=>`<div style="position:absolute;left:${cx-d/2}px;top:${cy-d/2}px;width:${d}px;height:${d}px;border-radius:50%;background:${LIME};box-shadow:0 0 0 6px ${INK}">${ap(d*.2,d*.32,d*.6)}</div>`;
+function bars(w,h,seed,col=INK){let s=seed,o='',x=0;while(x<w){s=(s*9301+49297)%233280;const bw=2+Math.floor(s/233280*12);s=(s*9301+49297)%233280;const g=3+Math.floor(s/233280*9);o+=`<i style="width:${bw}px;margin-right:${g}px;background:${col}"></i>`;x+=bw+g}return `<div class=bc style="width:${w}px;height:${h}px;overflow:hidden">${o}</div>`}
+const pix=(cells,size,col,ox=0,oy=0)=>cells.map(([c,r])=>`<div style="position:absolute;left:${ox+c*size}px;top:${oy+r*size}px;width:${size}px;height:${size}px;background:${col}"></div>`).join('');
+const brand=(x,c=INK)=>ap(x+70,58,64,c==INK?'ink':'paper')+`<div class=M style="left:${x+150}px;top:64px;color:${c};font-family:C;font-weight:700;letter-spacing:6px">AUTOPILOT.OI</div>`;
+// THE SIGNAL LINE: same height in every row, one stroke through all three posts, colour flips per background
+const line=(cols)=>cols.map((c,i)=>`<div style="position:absolute;left:${i*1080}px;top:1196px;width:1080px;height:8px;background:${c}"></div>`).join('');
+// ticket tag with barcode, always straddling a seam on the signal line
+const tagAt=(x,code,seed)=>`<div style="position:absolute;left:${x-190}px;top:1150px;width:380px;height:104px;background:${PAPER};padding:14px 20px;box-sizing:border-box;box-shadow:0 0 0 3px ${INK}">${bars(340,50,seed)}<div style="display:flex;align-items:center;gap:12px;margin-top:8px"><img src=ap_ink.png style="width:44px"><div class=M style="position:static;font-size:16px;letter-spacing:4px;color:${INK}">${code}</div></div></div>`;
+let h='';
+// ROW 1  ILLEGAL
+h+=`<div class=row style="top:0">
+ <div class=t style="left:0;background:${INK}"><div class=ph style="background-image:url(${P('s8')});background-position:45% 30%"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,0) 30%,rgba(0,0,0,.75) 75%)"></div>${brand(0,PAPER)}
+  <div class="A W" style="left:70px;top:770px;font-size:128px">Prompts that<br>should be<br><span class=L>illegal.</span></div>
+  <div class=M style="left:70px;top:1236px;color:${PAPER}">24 PROMPTS →</div></div>
+ <div class=t style="left:1080px;background:${PAPER}">
+  <div class=M style="right:70px;top:64px;color:${INK}">NO DM NEEDED</div>
+  <div class=O style="left:40px;top:150px;font-size:236px">Illegal<br>illegal<br>illegal<br>illegal</div></div>
+ <div class=t style="left:2160px;background:${INK}">
+  <div class=M style="right:70px;top:64px;color:${LIME}">THE STORE</div>
+  <div style="position:absolute;left:70px;top:150px">${bars(940,110,7,PAPER)}</div>
+  <div class="A W" style="left:66px;top:330px;font-size:150px">Front<br>desk kit</div>
+  <div class="A" style="left:70px;top:620px;font-size:110px;background:${LIME};color:${INK};padding:16px 26px 6px">$39</div>${ap(340,640,170,'lime')}
+  <div class=M style="right:70px;top:1236px;color:${PAPER}">LINK IN BIO</div></div>
+ <svg style="position:absolute;left:0;top:0" width=3240 height=1350><polygon points="700,1350 1080,560 1460,1350" fill="${LIME}"/></svg>
+ ${line([LIME,INK,LIME])}${tagAt(2160,'AP.OI / KIT 001',11)}
+</div>`;
+// ROW 2  CHEATING
+h+=`<div class=row style="top:1350px">
+ <div class=t style="left:0;background:${PAPER}">${brand(0)}
+  <svg style="position:absolute;left:0;top:0" width=200 height=1350><defs><pattern id=st width=50 height=50 patternUnits=userSpaceOnUse patternTransform="rotate(45)"><rect width=25 height=50 fill="${INK}"/></pattern></defs><rect width=200 height=1350 fill="url(#st)"/></svg>
+  <div class="A I" style="left:270px;top:150px;font-size:560px;line-height:.8">24</div>
+  <div class="A I" style="left:270px;top:740px;font-size:104px">Prompts that<br>feel like<br>cheating.</div>
+  <div class=M style="left:270px;top:1236px;color:${INK}">FOR CONTRACTORS</div></div>
+ <div class=t style="left:1080px;background:${INK}"><div class=ph style="background-image:url(${P('s1')})"></div></div>
+ <div class=t style="left:2160px;background:${LIME}">${ap(620,520,900,'ink','opacity:.12')}<div class=M style="right:70px;top:64px;color:${INK}">SAVE THIS</div></div>
+ <div class="A W" style="left:1560px;top:1150px;font-size:330px;transform-origin:0 0;transform:rotate(-90deg)">Prompts</div>
+ <div class="A I" style="left:2600px;top:1150px;font-size:330px;transform-origin:0 0;transform:rotate(-90deg)">Prompts</div>
+ ${line([INK,LIME,INK])}${tagAt(1080,'AP.OI / PACK 024',23)}
+</div>`;
+// ROW 3  MONEY
+h+=`<div class=row style="top:2700px">
+ <div class=t style="left:0;background:${LIME}">${brand(0)}
+  <div style="position:absolute;left:150px;top:170px;width:780px;height:640px;background:url(${P('s6')}) center 30%/cover;filter:grayscale(1) contrast(1.15) brightness(1.25)"></div>
+  <div class="A I" style="left:70px;top:880px;font-size:122px">6 texts that<br>get you paid.</div>
+  <div class=M style="left:70px;top:1236px;color:${INK}">SAVE THIS</div></div>
+ <div class=t style="left:1080px;background:${PAPER}">
+  <div class=M style="left:70px;top:200px;color:${INK}">FOR THE NEXT</div>
+  <div class="A I" style="left:66px;top:242px;font-size:176px">Late<br>invoice.</div>
+  <div class=M style="right:70px;top:1236px;color:${INK}">WRITTEN NICELY</div></div>
+ <div class=t style="left:2160px;background:${INK}"><div class=ph style="background-image:url(${P('s2')});background-position:50% 20%"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.8) 85%)"></div>
+  <div class=M style="right:70px;top:64px;color:${PAPER}">AI NEWS</div>
+  <div class="A W" style="left:70px;top:790px;font-size:122px"><span class=L>$6.3B</span> gone<br>after one fake<br>interview.</div>
+  <div class=M style="left:70px;top:1236px;color:${PAPER}">SWIPE →</div></div>
+ ${pix([[4, 8], [5, 8], [7, 8], [3, 9], [4, 9], [6, 9], [7, 9], [8, 9], [2, 10], [4, 10], [5, 10], [8, 10], [9, 10], [10, 10], [3, 11], [5, 11], [6, 11], [7, 11], [9, 11], [10, 11], [11, 11], [4, 12], [7, 12], [8, 12], [11, 12], [12, 12], [6, 13], [9, 13], [10, 13], [13, 13]],70,INK,1080,0)}
+ ${seal(1080,1010,220)}${line([INK,INK,LIME])}${tagAt(1080,'AP.OI / CHASE 006',5)}
+</div>`;
+document.body.innerHTML=h;
+</script></body></html>
