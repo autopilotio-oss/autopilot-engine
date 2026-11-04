@@ -1,0 +1,77 @@
+{
+ "kind": "news",
+ "dateline": "NOV 04 2026",
+ "story_key": "binance-fake-interview-report-2026-11-03",
+ "lines": [
+  "One fake job interview",
+  "[$6.3 billion gone]"
+ ],
+ "subline": "how hackers got into binance",
+ "bg_words": [
+  "INTERVIEW",
+  "BINANCE",
+  "$6.3B",
+  "AI TOOL"
+ ],
+ "bg_facts": [
+  "Binance says the break in began with fake job interviews.",
+  "An internal AI tool helped the attackers reach more engineers.",
+  "The FBI blames North Korea.",
+  "About $3 billion is frozen."
+ ],
+ "slides": [
+  {
+   "title": "What *happened*",
+   "body": "On <b>November 3</b>, Binance shared its first report on the <b>October 29</b> theft of about <b>$6.3 billion</b> in crypto. It says the break in started with a <b>fake job interview</b>.",
+   "num": "$6.3B"
+  },
+  {
+   "title": "How they *got in*",
+   "body": "Binance says attackers used <b>fake recruitment interviews</b> and <b>malicious downloads</b> to take over an engineer's <b>company computer</b>. It calls this a long, multi step attack, not one simple phishing email."
+  },
+  {
+   "title": "The *AI tool* part",
+   "body": "On <b>October 20</b>, using that computer as a springboard, the attackers used <b>Binance's own internal AI tool</b> to take over two more engineers. With their logins they reached the system that <b>signs wallet transfers</b>."
+  },
+  {
+   "title": "Who and *the money*",
+   "body": "The <b>FBI</b> says North Korean hackers it calls <b>TraderTraitor</b> did it. About <b>$3 billion</b> has been frozen. Binance says it will <b>cover all losses</b> for customers.",
+   "num": "$3B"
+  },
+  {
+   "title": "What Binance *did*",
+   "body": "It <b>replaced the affected devices</b>, cancelled the engineers' logins and tokens, <b>rebuilt the wallet system</b> in a new environment and tightened access to its internal AI tools. The investigation is still going."
+  },
+  {
+   "title": "What it means *for you*",
+   "body": "Run a business? Never open a <b>test file or download</b> from a recruiter or stranger on a work computer. Give staff and AI tools <b>only the access they need</b>. Use app based two factor login everywhere."
+  }
+ ],
+ "cta": {
+  "big": "Run a business? Put AI *on your side*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes",
+  "small": "Free, right in your DMs. *It drafts, you decide.*"
+ },
+ "note": "News, not financial advice.",
+ "sources": [
+  [
+   "Help Net Security",
+   "https://www.helpnetsecurity.com/2026/11/04/binance-hack-north-korea-fake-job-interview/"
+  ],
+  [
+   "Fox Business",
+   "https://www.foxbusiness.com/fox-news-tech/binance-details-how-fake-job-interview-led-6-3b-crypto-heist"
+  ],
+  [
+   "The National",
+   "https://www.thenationalnews.com/business/money/2026/11/03/binance-says-fake-job-interviews-and-internal-ai-tool-used-in-63bn-heist/"
+  ]
+ ],
+ "cover_bg": "bg-white",
+ "theme": "light",
+ "grain": false,
+ "music": "tense",
+ "seed": 47,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">NEWS &middot; SECURITY</div>\n<div class=\"fx\" style=\"left:56px;top:150px;width:968px;height:560px;background:#0a0a0a;border-radius:26px\"></div>\n<div class=\"fx Cc\" style=\"left:100px;top:196px;font-size:22px;color:#D4FF3A;background:#0a0a0a\">SAMPLE &middot; JOB SITE MESSAGE</div>\n<div class=\"fx Ii\" style=\"left:100px;top:262px;width:860px;font-size:44px;line-height:1.22;color:#f2f2ee;background:#0a0a0a\">Hi! Loved your profile. Before round 2, please download and run this short coding test.</div>\n<div class=\"fx\" style=\"left:100px;top:500px;width:520px;height:110px;background:#D4FF3A;border-radius:16px\"></div>\n<div class=\"fx Mm\" style=\"left:136px;top:518px;font-size:34px;font-weight:700;color:#0c0c0c;background:#D4FF3A\">coding_test.zip</div>\n<div class=\"fx Cc\" style=\"left:136px;top:566px;font-size:20px;color:#0c0c0c;background:#D4FF3A\">TAP TO DOWNLOAD</div>\n<div class=\"fx stampL\" style=\"left:690px;top:470px;font-size:110px;transform:rotate(-8deg)\">TRAP</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"20\" style=\"left:56px;top:790px;white-space:nowrap;font-size:110px;color:#0c0c0c;background:#f2f2ee\">One fake job interview</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:910px;white-space:nowrap;font-size:130px;color:#0c0c0c;background:#D4FF3A;padding:8px 0 0\">$6.3 billion gone</div>\n<div class=\"fx Ii\" data-after=\"h\" data-gap=\"40\" style=\"left:56px;top:1100px;width:900px;font-size:34px;line-height:1.25;color:#0c0c0c;background:#f2f2ee\">Binance just explained how hackers got in, and the AI tool they used. Swipe &#9656;</div>"
+}
