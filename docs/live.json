@@ -3,10 +3,15 @@
   "all-money-agents",
   "autopilot",
   "bill-agent",
+  "bookkeeping-sorter",
+  "content-week",
   "debt-agent",
   "deposit-agent",
+  "invoice-chaser",
+  "owner-toolkit",
   "raise-agent",
   "refund-agent",
+  "review-desk",
   "sell-agent",
   "shop-agent",
   "subs-agent",
@@ -15,5 +20,5 @@
   "workspace",
   "workspace-founding"
  ],
- "checked": "2026-11-03T19:22:07Z"
+ "checked": "2026-11-04T00:33:21Z"
 }

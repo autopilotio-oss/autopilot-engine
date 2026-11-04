@@ -8,6 +8,61 @@
   "ok"
  ],
  [
+  "adopted",
+  "invoice-chaser",
+  true
+ ],
+ [
+  "adopted",
+  "content-week",
+  true
+ ],
+ [
+  "adopted",
+  "bookkeeping-sorter",
+  true
+ ],
+ [
+  "cover",
+  "bookkeeping-sorter",
+  "{'success': False, 'message': 'Could not process your cover, please try again.'}"
+ ],
+ [
+  "update",
+  "bookkeeping-sorter",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Bookkeeping Sorter', 'description': \"<p><strong>Your receipts, sorted. No spreadsheets, no AI skills.</strong></p><p>Upload your bank or card statement into the free Claude app, type <strong>sort</strong>, and every transaction lands in a clear bus"
+ ],
+ [
+  "cover",
+  "content-week",
+  "{'success': False, 'message': 'Could not process your cover, please try again.'}"
+ ],
+ [
+  "update",
+  "content-week",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Content Week', 'description': '<p><strong>A week of posts. One chat.</strong></p><p>Every Sunday, answer 5 quick questions about your week. Get 7 posts back: what to photograph, the caption and local hashtags, in your voice, about your real work. N"
+ ],
+ [
+  "cover",
+  "invoice-chaser",
+  "{'success': False, 'message': 'Could not process your cover, please try again.'}"
+ ],
+ [
+  "update",
+  "invoice-chaser",
+  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Invoice Chaser', 'description': '<p><strong>Get paid. No awkward texts.</strong></p><p>Tell it about a job and get a clean invoice. Tell it who owes you and it keeps the list, then writes the right reminder for how late they are: friendly first, fi"
+ ],
+ [
+  "create_no_product",
+  "owner-toolkit",
+  "{'success': False, 'message': 'Custom permalink is already used by another one of your products'}"
+ ],
+ [
+  "adopted",
+  "owner-toolkit",
+  true
+ ],
+ [
   "covers",
   "autopilot",
   [
