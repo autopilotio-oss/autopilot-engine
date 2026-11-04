@@ -75,6 +75,9 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 
 ## 6. What works (evidence log, newest first)
 
+- 2026-11-04 CONFIRMED: Nov 1 to 3, 0 shares and 0 link clicks on all 29 posts across Threads, TikTok and IG. Crypto and finance news is the weakest on Threads (7, 14) and TikTok (2, 54). Owner tool and useful warning posts lead.
+- 2026-11-04 EARLY: TikTok photo vs video gap is small now (photos 2 to 91, videos 44 to 119). Keep videos only, judge on watch rate next.
+- 2026-11-04 EARLY: IG feed reach is tiny (3 to 30 views a post). Only comments came on the Binance reopen carousel (2).
 - 2026-11-03 EARLY: TikTok videos beat TikTok photo posts (44 to 113 views vs 0 to 78). Best: small business 7 agents video, 113.
 - 2026-11-03 EARLY: IG best were carousels: credit carousel 35, Business Brain 33, Binance news 30.
 - 2026-11-03 EARLY: Threads best was PHP news, 64 views.
@@ -87,6 +90,9 @@ Answers go here with his quote and date.
 1. ANSWERED 2026-11-04 01:39, Seb: "yeah that's fine". Video Agent renamed TikTok Agent, $10, new money command and How TikTok Pays page (v5).
 2. ANSWERED 2026-11-04 01:39, Seb: "12". Threads cap is 12 a day.
 3. ANSWERED 2026-11-04 01:39, Seb: "yes". Autopost stays on after Nov 10 for posts that pass the 85/100 gate, within caps, no spend (config/growthos/campaign.json approvals.autopost_after_nov10).
+
+4. PENDING 2026-11-04: Is the ManyChat keyword TOOLS live? Posts that say "Comment TOOLS" get switched to "link in bio" until it is in config/manychat.json confirmed.
+5. PENDING 2026-11-04: Can you add the GoatCounter API token? Without it site visits and UTM clicks are MISSING, so we cannot see which hook sends people to the site.
 
 ## 8. The team (scheduled tasks, Nov 4 2026)
 
