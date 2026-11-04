@@ -1,0 +1,86 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "-4386220018268221524",
+   "metricool_id": 416405400,
+   "at": "2026-11-04T09:05:00-03:00",
+   "pillar": "e",
+   "hook": "What task would you pay $10 to never do again?"
+  },
+  {
+   "uuid": "6400483898072254680",
+   "metricool_id": 416405519,
+   "at": "2026-11-04T10:00:00-03:00",
+   "pillar": "c",
+   "hook": "The worst part of owning a business nobody mentions: texting."
+  },
+  {
+   "uuid": "-4237204386114352237",
+   "metricool_id": 416405560,
+   "at": "2026-11-04T11:00:00-03:00",
+   "pillar": "d",
+   "hook": "Free prompt for the invoice nobody paid."
+  },
+  {
+   "uuid": "-6238010741848784182",
+   "metricool_id": 416405601,
+   "at": "2026-11-04T12:00:00-03:00",
+   "pillar": "b",
+   "hook": "Still giving up a weekend to sort receipts for taxes?"
+  },
+  {
+   "uuid": "-1093747650046375834",
+   "metricool_id": 416405651,
+   "at": "2026-11-04T13:00:00-03:00",
+   "pillar": "a",
+   "hook": "You don't need to learn AI."
+  },
+  {
+   "uuid": "-5321202400208075836",
+   "metricool_id": 416405682,
+   "at": "2026-11-04T14:00:00-03:00",
+   "pillar": "e",
+   "hook": "Be honest: how many Google reviews have you left unanswered?"
+  },
+  {
+   "uuid": "-2480899453160110109",
+   "metricool_id": 416405721,
+   "at": "2026-11-04T16:00:00-03:00",
+   "pillar": "c",
+   "hook": "A customer asked for a quote on Tuesday."
+  },
+  {
+   "uuid": "7801200804158982794",
+   "metricool_id": 416405763,
+   "at": "2026-11-04T18:00:00-03:00",
+   "pillar": "d",
+   "hook": "Free prompt for answering a 1 star review calmly:"
+  },
+  {
+   "uuid": "6285009909686356420",
+   "metricool_id": 416405811,
+   "at": "2026-11-04T19:00:00-03:00",
+   "pillar": "a",
+   "hook": "AI for people who hate tech, in one sentence:"
+  },
+  {
+   "uuid": "4028480488849687859",
+   "metricool_id": 416405856,
+   "at": "2026-11-04T20:00:00-03:00",
+   "pillar": "b",
+   "hook": "3 jobs an owner can hand to AI tonight:"
+  },
+  {
+   "uuid": "6378377994750675091",
+   "metricool_id": 416405899,
+   "at": "2026-11-04T22:00:00-03:00",
+   "pillar": "e",
+   "hook": "11 PM and you're still answering \"are you free tomorrow?\""
+  }
+ ]
+}

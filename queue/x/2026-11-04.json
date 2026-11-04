@@ -1,0 +1,44 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "-8696518331229713705",
+   "metricool_id": 416406077,
+   "at": "2026-11-04T09:10:00-03:00",
+   "pillar": "front_desk",
+   "hook": "x_fd_onjob_1104: A customer asks \"how much?\" while you're on a job."
+  },
+  {
+   "uuid": "3003116429908001880",
+   "metricool_id": 416406566,
+   "at": "2026-11-04T12:00:00-03:00",
+   "pillar": "invoice_chaser",
+   "hook": "x_chaser_reminder_1104: Still typing \"just a reminder\" texts to customers who owe you?"
+  },
+  {
+   "uuid": "8818090504197066179",
+   "metricool_id": 416406160,
+   "at": "2026-11-04T15:00:00-03:00",
+   "pillar": "bookkeeping_sorter",
+   "hook": "x_sorter_shoebox_1104: Tax time and a shoebox of receipts?"
+  },
+  {
+   "uuid": "7044619872263227502",
+   "metricool_id": 416406209,
+   "at": "2026-11-04T18:00:00-03:00",
+   "pillar": "review_desk",
+   "hook": "x_review_nobody_1104: Unanswered Google reviews look like nobody's home."
+  },
+  {
+   "uuid": "7999452279908814671",
+   "metricool_id": 416406258,
+   "at": "2026-11-04T21:00:00-03:00",
+   "pillar": "content_week",
+   "hook": "x_content_whattosay_1104: Know you should post for your business but never know what to say?"
+  }
+ ]
+}
