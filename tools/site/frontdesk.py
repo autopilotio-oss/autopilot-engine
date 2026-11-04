@@ -32,8 +32,8 @@ TYPES = [("price", "A price question"), ("late", "A late night request"), ("chas
 # canonical points at /front-desk/ and they are noindex, so search sees one page.
 VARIANTS = {
  "main": {"path": "/front-desk/", "tag": "Setup kit · for service businesses", "trade": "detailing", "type": "price",
-          "h1": "Drafts replies to your <em>customer texts.</em>",
-          "lead": "Replies, quotes and follow ups from your real prices, in your voice. You check each one and send it yourself.",
+          "h1": "Stop typing the same <em>customer reply.</em>",
+          "lead": "Price questions, quotes and quiet leads: it drafts the reply from your real prices, in your voice. You check each one and send it yourself.",
           "title": "Front Desk Kit · answer customer inquiries faster · AUTOPILOT.OI"},
  "after-hours": {"path": "/front-desk/after-hours/", "tag": "For detailing shops and mobile detailers", "trade": "detailing", "type": "late",
           "h1": "Still answering quotes after hours? <em>Get the reply drafted, then send it yourself.</em>",
