@@ -11,6 +11,14 @@
   "ok": true,
   "severity": "SEV-1"
  },
+ "checkout:bookkeeping-sorter": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:content-week": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "checkout:debt-agent": {
   "ok": true,
   "severity": "SEV-1"
@@ -19,11 +27,23 @@
   "ok": true,
   "severity": "SEV-1"
  },
+ "checkout:invoice-chaser": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:owner-toolkit": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "checkout:raise-agent": {
   "ok": true,
   "severity": "SEV-1"
  },
  "checkout:refund-agent": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "checkout:review-desk": {
   "ok": true,
   "severity": "SEV-1"
  },
@@ -67,11 +87,31 @@
   "ok": true,
   "severity": "SEV-3"
  },
+ "gumroad_offer:bookkeeping_sorter": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "gumroad_offer:content_week": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "gumroad_offer:front_desk_kit": {
   "ok": true,
   "severity": "SEV-1"
  },
+ "gumroad_offer:invoice_chaser": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "gumroad_offer:office_autopilot": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "gumroad_offer:owner_toolkit": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
+ "gumroad_offer:review_desk": {
   "ok": true,
   "severity": "SEV-1"
  },
@@ -87,11 +127,31 @@
   "ok": true,
   "severity": "SEV-2"
  },
+ "landing_price:bookkeeping_sorter": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "landing_price:content_week": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
  "landing_price:front_desk_kit": {
   "ok": true,
   "severity": "SEV-2"
  },
+ "landing_price:invoice_chaser": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
  "landing_price:office_autopilot": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "landing_price:owner_toolkit": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "landing_price:review_desk": {
   "ok": true,
   "severity": "SEV-2"
  },
