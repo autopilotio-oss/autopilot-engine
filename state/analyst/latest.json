@@ -1,46 +1,21 @@
 {
-  "at": "2026-11-04T12:35:00Z",
+  "at": "2026-11-04T16:30:00Z",
   "posts_today": {
-    "threads": {
-      "published": 1,
-      "pending": 15,
-      "error": 0
-    },
-    "twitter": {
-      "published": 1,
-      "pending": 8,
-      "error": 0
-    },
-    "instagram": {
-      "published": 0,
-      "pending": 5,
-      "error": 0
-    },
-    "tiktok": {
-      "published": 0,
-      "pending": 5,
-      "error": 0
-    }
+    "threads": {"published": 6, "pending": 10, "error": 0},
+    "twitter": {"published": 2, "pending": 7, "error": 0},
+    "instagram": {"published": 0, "pending": 5, "error": 0},
+    "tiktok": {"published": 1, "pending": 4, "error": 0}
   },
   "top_posts": [
     {
       "network": "instagram",
       "published_at": "2026-11-02T10:04:56-03:00",
       "text": "Most people have at least one subscription they forgot about.",
-      "metrics": {
-        "reach": 35,
-        "views": 41,
-        "saves": 1,
-        "shares": 0,
-        "comments": 0
-      },
+      "metrics": {"reach": 35, "views": 41, "saves": 1, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfPXyS2krB0/",
-      "metrics_seen_at": "2026-11-04T12:35:00Z"
+      "metrics_seen_at": "2026-11-04T16:30:00Z"
     }
   ],
-  "kit": {
-    "subscribers": 0,
-    "new_today": 0
-  },
-  "notes": "09:35 ART Nov 4: 2 provider posts published so far today (Threads 09:05, X 09:10), 33 provider slots pending, 0 ERROR. Window 6-72h = Nov 1 12:31Z to Nov 4 06:31Z (Metricool analytics timestamps read as UTC). Only post in window with any save or share: IG subscription reel (1 save, reach 35). All other IG feed posts, TikTok videos (views 2 to 119, shares 0) and Threads posts (views up to 64, replies/reposts/shares MISSING) had 0 saves+shares or no save/share data, so no second or third winner. X analytics not pulled this run. Profile visits not provided by the connectors used. Revenue from hq_feed: 0 verified orders all time."
+  "kit": {"subscribers": 0, "new_today": 0},
+  "notes": "13:30 ART Nov 4: 9 provider posts published so far today (Threads 6, X 2, TikTok 1, IG 0), 26 provider slots pending, 0 ERROR. Several pending slots whose time has passed are still Metricool drafts (draft true), so not approved, not errors. Window 6-72h = Nov 1 16:27Z to Nov 4 10:27Z (Metricool analytics timestamps read as UTC). Only post in window with any save or share: IG subscription reel (1 save, reach 35). IG feed posts in window (reach 2 to 4) had 0 saves and 0 shares; the Binance hack IG post with 1 save (Nov 1 03:53Z) is outside the window. TikTok videos in window: views 2 to 112, shares 0, reach MISSING. Threads and X analytics not pulled this run. Profile visits not provided by the connectors used. Revenue from hq_feed: 0 verified orders all time, 0 in 7d. All 8 GitHub workflows latest conclusion success."
 }
