@@ -7,7 +7,8 @@
            [<canvas class="lava lava-front" data-lava="front"></canvas>] ...content... </div>
    Each scene pauses off screen; reduced motion gets one still frame; no WebGL keeps the CSS fallback. */
 (function () {
-  var N = 12, NC = 3;
+  // 0..2 chrome globs, 3 a chrome drip trailing glob 0, 4..11 lime globs, 12..16 lime drips, 17 the pointer glob
+  var N = 18, NC = 4;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var VS = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   var FS = [
@@ -44,7 +45,7 @@
     ' float dropL=smoothstep(.05,-.01,-dL(uv+vec2(.012,.02),e))*.10;',
     ' float dropC=smoothstep(.05,-.01,-dC(uv+vec2(.012,.024),e))*.16;',
     ' vec3 bg=PAPER-vec3(.10,.08,.12)*max(dropL,dropC)+LIME*sh*.10;',
-    ' vec3 col=mix(bg,lime(nL(uv,e*1.5,.05)),iL);',
+    ' vec3 col=mix(bg,lime(nL(uv,e*1.5,.085)),iL);',
     ' col=mix(col,chrome(nC(uv,e*1.5,.06),T),iC);',
     ' gl_FragColor=vec4(col,1.);',
     '}'].join('\n');
@@ -78,20 +79,28 @@
     var F = frontCv && !reduce ? makeGL(frontCv, true) : null;
     var seed = hero ? 0 : 7 + (++count) * 13;
     var orb = [];
-    for (var i = 0; i < N - 1; i++) {
-      var c = i < NC, s = i + seed;
-      orb.push({
-        c: c, front: !!F && i === 2,
-        cx: hero && c ? [.56, .56, .93][i] : (hero ? .28 + .62 * rnd(s, 1) : .04 + .92 * rnd(s, 1)),
-        cy: hero && c ? [.24, .24, .70][i] : (hero ? .2 + .6 * rnd(s, 2) : .15 + .7 * rnd(s, 2)), cyM: hero ? (c ? [.16, .16, .30][i] : .04 + .30 * rnd(s, 2)) : (c ? .10 : .05 + .14 * rnd(s, 2)),
-        ax: hero && c ? [.10, .10, .05][i] : .16 + .26 * rnd(s, 3), ay: hero && c ? [.14, .14, .16][i] : .14 + .26 * rnd(s, 4),
-        sx: (c ? .22 : .24 + .30 * rnd(s, 5)) * (rnd(s, 6) > .5 ? 1 : -1), sy: (c ? .18 : .20 + .28 * rnd(s, 7)),
-        ph: 6.28 * rnd(s, 8) + (i === 1 ? 3.14 : 0),
-        r: (!hero && (i === 2 || i > NC + 4)) ? 0 : (c ? .075 + .02 * rnd(s, 9) : (hero ? .075 + .05 * rnd(s, 9) : .06 + .05 * rnd(s, 9))),
+    function main(i, idx) { // i: slot, idx: 0..2 chrome, 3.. lime
+      var c = idx < 3, s = idx + seed;
+      return {
+        c: c, front: !!F && idx === 2, depth: (rnd(s, 13) - .5) * .5,
+        cx: hero && c ? [.575, .575, .93][idx] : (hero ? .28 + .62 * rnd(s, 1) : .04 + .92 * rnd(s, 1)),
+        cy: hero && c ? [.46, .46, .70][idx] : (hero ? .2 + .6 * rnd(s, 2) : .15 + .7 * rnd(s, 2)), cyM: hero ? (c ? [.16, .16, .30][idx] : .04 + .30 * rnd(s, 2)) : (c ? .10 : .05 + .14 * rnd(s, 2)),
+        ax: hero && c ? [.04, .04, .05][idx] : .16 + .26 * rnd(s, 3), ay: hero && c ? [.14, .14, .16][idx] : .14 + .26 * rnd(s, 4),
+        sx: (c ? .28 : .30 + .36 * rnd(s, 5)) * (rnd(s, 6) > .5 ? 1 : -1), sy: (c ? .24 : .26 + .34 * rnd(s, 7)),
+        ph: 6.28 * rnd(s, 8) + (idx === 1 ? 3.14 : 0), pair: c && idx < 2,
+        r: (!hero && (idx === 2 || idx > 7)) ? 0 : (c ? .07 + .015 * rnd(s, 9) : (hero ? .06 + .045 * rnd(s, 9) : .06 + .05 * rnd(s, 9))),
         pr: .5 + .7 * rnd(s, 10), pa: c ? .28 : .30 + .30 * rnd(s, 11),
         x: 0, y: 0, vx: 0, vy: 0, cr: 0, init: 0, ax2: 0, ay2: 0
-      });
+      };
     }
+    var mains = [main(0, 0), main(1, 1), main(2, 2)];
+    for (var m = 0; m < 8; m++) mains.push(main(0, 3 + m));
+    // drips: smaller globs of the same metal that trail their parent on a looser spring, so moving globs stretch,
+    // pull a tail, pinch off and melt back in
+    function drip(parent, k) { return { c: parent.c, front: parent.front, tail: 1, parent: parent, k: k, depth: parent.depth, x: 0, y: 0, vx: 0, vy: 0, cr: 0, init: 0, ax2: 0, ay2: 0, ph: 6.28 * rnd(k, 21) }; }
+    orb = [mains[0], mains[1], mains[2], drip(mains[0], 1)];
+    for (var m2 = 3; m2 < 11; m2++) orb.push(mains[m2]);
+    for (var d2 = 0; d2 < 5; d2++) orb.push(drip(mains[3 + d2], 2 + d2));
     var data = new Float32Array(N * 3), fdata = new Float32Array(N * 3);
     var aspect = 1, ptr = { x: 9, y: .5, tx: .8, ty: .5, on: 0, vx: 0, vy: 0, act: 0 }, stir = 0, prevT = 0;
     var avoid = [], avoidFront = [];
@@ -136,18 +145,30 @@
       var dt = Math.min(.05, Math.max(.001, t - prevT || .016)); prevT = t;
       var k = 1 + stir * 2.2; stir *= .95;
       var rs = aspect < 1 ? Math.max(.42, aspect * 1.5) : (hero ? 1 : 1.55);
+      var sc = root.getBoundingClientRect(), rel = sc.height ? -sc.top / sc.height : 0; // scroll parallax: globs sit at different depths
       for (var i = 0; i < orb.length; i++) {
         var o = orb[i], tt = t * k;
+        if (o.tail) continue;
         var side = !hero && aspect - freeX > .5; // wide strip: globs live in the open space right of the words
         var fx = freeX + .08, fw = aspect - fx;
         var tx = side ? fx + fw * (.15 + .7 * (o.cx - .04) / .92) + Math.min(o.ax * aspect * .6, fw * .3) * Math.sin(tt * o.sx + o.ph)
                       : o.cx * aspect + o.ax * aspect * .6 * Math.sin(tt * o.sx + o.ph) + .06 * Math.sin(tt * o.sx * 2.7 + i * 1.3);
         var narrow = hero ? aspect < .8 : aspect < 1.2;
         var ty = (narrow ? o.cyM : o.cy) + (narrow ? (hero ? .10 : .05) : o.ay) * Math.cos(tt * o.sy + o.ph * 1.7) + .05 * Math.sin(tt * 1.3 + i * 2.1);
-        if (o.c && i < 2) { tx += .10 * Math.cos(tt * .9 + o.ph) * (aspect < 1 ? 1 : .6); ty += .08 * Math.sin(tt * .9 + o.ph); }
+        ty += o.depth * rel;
+        if (o.pair) { tx += .10 * Math.cos(tt * .9 + o.ph) * (aspect < 1 ? 1 : .6); ty += .08 * Math.sin(tt * .9 + o.ph); }
         o.cr = rs * o.r * (1 + o.pa * Math.sin(tt * o.pr * 1.4 + o.ph));
         if (!o.init) { o.x = tx; o.y = ty; o.init = 1; }
         o.ax2 = (tx - o.x) * 7 - o.vx * 3.4; o.ay2 = (ty - o.y) * 7 - o.vy * 3.4;
+      }
+      for (var i3 = 0; i3 < orb.length; i3++) {
+        var q2 = orb[i3]; if (!q2.tail) continue;
+        var P = q2.parent;
+        // aim behind the parent along its motion, a little below it so it reads as a drip
+        var gx = P.x - P.vx * .22 + .02 * Math.sin(t * 1.1 + q2.ph), gy = P.y - P.vy * .22 - P.cr * .35;
+        q2.cr = P.cr * (.36 + .10 * Math.sin(t * 1.7 + q2.ph));
+        if (!q2.init) { q2.x = gx; q2.y = gy; q2.init = 1; }
+        q2.ax2 = (gx - q2.x) * 3.2 - q2.vx * 1.6; q2.ay2 = (gy - q2.y) * 3.2 - q2.vy * 1.6;
       }
       ptr.vx += ((ptr.tx * aspect - ptr.x) * 10 - ptr.vx * 4.2) * dt; ptr.vy += ((ptr.ty - ptr.y) * 10 - ptr.vy * 4.2) * dt;
       ptr.x += ptr.vx * dt; ptr.y += ptr.vy * dt;
