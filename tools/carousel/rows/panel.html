@@ -7,16 +7,20 @@ body{margin:0;width:1080px;height:1350px;position:relative;overflow:hidden;color
 const S=JSON.parse(decodeURIComponent(location.hash.slice(1)));const X=document.getElementById('x');
 const E=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const lines=(a,accent)=>a.map((t,i)=>i==a.length-1&&accent?`<span class=lime>${E(t)}</span>`:E(t)).join('<br>');
-const hd=k=>`<div class=l style="left:90px;top:84px">AUTOPILOT.OI</div><div class="m lime" style="right:90px;top:84px">${E(k)}</div>`;
-if(S.slot=='L')X.innerHTML=`<div class=bg style="background-image:url(${S.bg})"></div>${hd(S.kicker||'LEARN')}
- <div class=fit id=f data-w="${S.maxw||560}" data-s="160" style="left:84px;top:${S.top||330}px">${lines(S.title,true)}</div>
- <div class=m style="left:90px;top:1150px;color:#9a9a92">${E(S.foot||'')}</div><div class=m style="left:90px;top:1190px">SWIPE →</div>`;
+// One row reads as one poster: a single label line across the top, one shared type baseline across the bottom.
+const BASE=1190;
+const bottomFit=(html,maxw,size)=>`<div class=fit id=f data-w="${maxw}" data-s="${size}" data-bottom="${BASE}" style="left:90px;top:0">${html}</div>`;
+if(S.slot=='L')X.innerHTML=`<div class=bg style="background-image:url(${S.bg})"></div>
+ <div class=l style="left:90px;top:84px">AUTOPILOT.OI</div>
+ ${bottomFit(lines(S.title,true),S.maxw||620,104)}
+ <div class=m style="left:90px;top:1236px;color:#9a9a92">${E(S.foot||'')} &nbsp;→</div>`;
 if(S.slot=='M')X.innerHTML=`<div class=bg style="background-image:url(${S.bg})"></div>
- <div class="m lime" style="left:0;right:0;text-align:center;top:1110px">CHAPTER ${E(S.n)}</div>
- <div class=fit id=f data-w="900" data-s="84" style="left:540px;transform:translateX(-50%);text-align:center;top:1150px">${E(S.name)}</div>`;
-if(S.slot=='R')X.innerHTML=`<div class=bg style="background-image:url(${S.bg})"></div>${hd(S.kicker||'THE STORE')}
- <div class=fit id=f data-w="900" data-s="96" style="left:90px;top:${S.top||1010}px">${lines(S.title,true)}</div>
- <div class=m style="left:90px;top:1220px;color:#9a9a92">${E(S.foot||'LINK IN BIO →')}</div>`;
-document.fonts.ready.then(()=>{const f=document.getElementById('f');let s=+f.dataset.s;f.style.fontSize=s+'px';
- while(f.scrollWidth>+f.dataset.w&&s>40){s-=2;f.style.fontSize=s+'px'}window.FIT=s;window.READY=1});
+ <div class="m" style="left:0;right:0;text-align:center;top:1236px"><span class=lime>CHAPTER ${E(S.n)}</span> &nbsp; ${E(S.name).toUpperCase()}</div>`;
+if(S.slot=='R')X.innerHTML=`<div class=bg style="background-image:url(${S.bg})"></div>
+ <div class="m lime" style="right:90px;top:84px">${E(S.kicker||'THE STORE')}</div>
+ ${bottomFit(lines(S.title,true),900,104)}
+ <div class=m style="left:90px;top:1236px;color:#9a9a92">${E(S.foot||'LINK IN BIO →')}</div>`;
+document.fonts.ready.then(()=>{const f=document.getElementById('f');if(!f){window.READY=1;return}let s=+f.dataset.s;f.style.fontSize=s+'px';
+ while(f.scrollWidth>+f.dataset.w&&s>40){s-=2;f.style.fontSize=s+'px'}
+ if(f.dataset.bottom)f.style.top=(+f.dataset.bottom-f.offsetHeight)+'px';window.FIT=s;window.READY=1});
 </script></body></html>

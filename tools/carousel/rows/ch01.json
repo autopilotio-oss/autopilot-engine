@@ -2,8 +2,8 @@
   "id": "ch01-it-wakes",
   "render": "ch01-render.png",
   "chapter": {"n": "01", "name": "It wakes."},
-  "learn": {"kicker": "LEARN", "title": ["Prompts", "that", "should", "be illegal."], "foot": "24 PROMPTS FOR OWNERS"},
+  "learn": {"kicker": "LEARN", "title": ["Prompts that", "should be", "illegal."], "foot": "24 PROMPTS FOR OWNERS. SWIPE"},
   "store": {"kicker": "THE STORE", "title": ["Your front desk.", "On autopilot."], "foot": "LINK IN BIO →",
     "screen": {"kicker": "NEW KIT", "product": ["Front", "desk kit"], "price": "$39", "cta": "LINK IN BIO",
-      "corners": [[506, 508], [752, 564], [627, 848], [371, 784]]}}
+      "corners": [[505, 509], [754, 568], [633, 854], [373, 782]]}}
 }

@@ -65,26 +65,24 @@ STORE (right)
 - A week of posts. / By Monday.   (Content Week)
 - The whole office. / One kit.   (Office Autopilot)
 
-## Runway / Nano Banana prompt template (v2, Seb Nov 4: "needs to have a natural flow")
-v1 problems: the nerves stopped dead in the left panel, the model drew hard divider lines, cables pierced the subject like puppet strings, curves were stiff.
-v2 fixes: one seamless current of light that enters at the left edge and leaves at the right edge, a vertical spine of cables through the middle that continues into the rows above and below, nerves that grow out of the subject instead of stabbing into it.
-Swap CENTER and nothing else.
+## One row = one poster (Seb Nov 4: "the 3 posts feel separate")
+- row.py paints out any divider lines the model draws and evens the lighting at the cuts, so the nerves run straight across.
+- Type is one system across the row: AUTOPILOT.OI top left of L, THE STORE top right of R, nothing on top of M.
+  Both headlines sit on the same baseline, same size. One footer line across all three: L hint, M "CHAPTER nn  NAME", R "LINK IN BIO".
+
+## Runway / Nano Banana prompt template (v3)
+v1 (ch01) look is the keeper: smooth clean glowing strands, serene porcelain. v2 (roots, tentacles, a cable cross) was rejected Nov 4.
+v3 keeps the ch01 look and only asks for one seamless frame. Swap CENTER and nothing else.
 
 ```
-Generate 1 image with Nano Banana. Ultra wide aspect ratio 21:9. Use the attached image only as a style reference for material, lighting, haze and color. It will be cut into 3 vertical posts later, but render ONE seamless continuous image: no panels, no borders, no dividing lines, no frames.
+Generate 1 image with Nano Banana. Ultra wide aspect ratio 21:9. Match the attached reference image exactly in material, lighting, haze, color and the style of the glowing strands. Render ONE seamless continuous photograph: no panels, no borders, no dividing lines, no frames, even lighting and haze across the whole width.
 
-Restrained, elegant, cinematic 3D render, Octane realism, dark graphite void with soft haze and faint volumetric light from above, fine film grain.
+Restrained, elegant, cinematic 3D render, Octane realism, dark graphite void with soft haze and faint volumetric light from above, fine film grain, shallow depth of field.
 
-THE FLOW: one continuous current of delicate nerve fibers flows across the whole image like a slow river of light. It enters at the left edge at mid height as a thin loose stream, widens as it travels, curves gently in a soft S shape, passes through the subject, then narrows and leaves the right edge at mid height. The fibers are organic like real nerves and mycelium: soft curves, different thicknesses, a few fine branches, some fibers close to camera and out of focus, some far behind and hazy. They are white porcelain colored, and acid lime (#D4FF3A) light pulses travel along some of them. Nothing is straight, nothing is stiff.
+CENTER of the image: CENTER. White porcelain with fine panel seams, soft acid lime (#D4FF3A) light glowing from inside. It is suspended by a few thin glowing lime fiber optic strands coming down from the top of the frame.
 
-THE SPINE: a thin bundle of glowing lime fiber optic cables hangs from the top center of the image and continues below the subject out of the bottom center of the image, so the scene connects to whatever is above and below it.
+THE FLOW: smooth, clean strands like in the reference, some white, some glowing lime, flowing out of both sides of the subject in long gentle curves. On the left they drift out of the frame through the left edge at mid height. On the right they sweep across and wrap loosely around a floating matte black glass tablet (portrait, tilted slightly, edges glowing faint lime, screen dark and blank) at about 80 percent of the width, then continue out of the right edge. Strands are smooth and graceful, not roots, not tentacles, no branching, nothing straight or stiff.
 
-CENTER (middle third): CENTER. White porcelain with fine panel seams, soft lime light glowing from inside. The nerve fibers grow out of the subject naturally and become part of it. No cables stabbing into it, no puppet strings.
-
-RIGHT third: the current wraps loosely around a floating matte black glass tablet, portrait orientation, tilted slightly, edges glowing faint lime, screen dark and blank, centered in the right third.
-
-LEFT third: only the thin incoming stream at mid height and the soft haze. The upper half and lower half of the left third stay clean and dark.
-
-Lots of negative space. No text, no letters, no logos, no watermark, no people, no full bodies.
+Keep the left 30 percent mostly dark and empty except the strands at mid height. Lots of negative space. No text, no letters, no logos, no watermark, no people, no full bodies.
 ```
-Attach `ch01-render.png` as the style reference every time so the world never drifts.
+Attach `ch01-render.png` as the reference every time so the world never drifts.

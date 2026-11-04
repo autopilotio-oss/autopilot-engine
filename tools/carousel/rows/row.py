@@ -16,30 +16,58 @@ URL = 'http://localhost:8790/'
 W, H = 1080, 1350
 
 
-def split(img):
-    """Cut the render into three 4:5 panels. Drops any dark divider lines the model drew."""
-    a = np.asarray(img).astype(int)
-    col = a.mean(axis=(0, 2))
+def seamless(img):
+    """Make the render read as ONE uncut image (Seb Nov 4: "the 3 posts feel separate").
+    1. Paint out any divider lines the model drew, so lines keep running across the cut.
+    2. Even out the lighting jump between the model's panels with a soft gain ramp at each seam."""
+    import cv2
+    a = np.asarray(img).astype(np.uint8)
+    col = a.astype(int).mean(axis=(0, 2))
     w = img.width
     dark = [x for x in range(int(w * .2), int(w * .8)) if col[x] < 14]
-    cuts = []
+    seams = []
     for x in dark:
-        if not cuts or x - cuts[-1][1] > 3:
-            cuts.append([x, x])
+        if not seams or x - seams[-1][1] > 3:
+            seams.append([x, x])
         else:
-            cuts[-1][1] = x
-    if len(cuts) == 2:
-        spans = [(0, cuts[0][0]), (cuts[0][1] + 1, cuts[1][0]), (cuts[1][1] + 1, w)]
-    else:
-        t = w // 3
-        spans = [(0, t), (t, 2 * t), (2 * t, w)]
-    pw = min(b - a_ for a_, b in spans)
+            seams[-1][1] = x
+    if seams:
+        m = np.zeros(a.shape[:2], np.uint8)
+        for x0, x1 in seams:
+            m[:, max(0, x0 - 3):x1 + 4] = 255
+        a = cv2.inpaint(a, m, 9, cv2.INPAINT_TELEA)
+    f = a.astype(float)
+    centers = [(x0 + x1) // 2 for x0, x1 in seams] or [w // 3, 2 * w // 3]
+    for c in centers:
+        lft = f[:, max(0, c - 70):c - 12].mean(axis=1, keepdims=True)
+        rgt = f[:, c + 12:c + 70].mean(axis=1, keepdims=True)
+        lft = cv2.GaussianBlur(lft, (1, 0), 40).reshape(-1, 1, 3) if False else lft
+        target = (lft + rgt) / 2
+        gl = np.clip(target / np.maximum(lft, 1), .7, 1.4)
+        gr = np.clip(target / np.maximum(rgt, 1), .7, 1.4)
+        gl = cv2.GaussianBlur(gl.astype(np.float32), (1, 0), sigmaX=0, sigmaY=60).reshape(-1, 1, 3) if gl.ndim == 3 else gl
+        R = 260
+        for i in range(R):
+            t = 1 - i / R
+            xl, xr = c - 1 - i, c + i
+            if xl >= 0:
+                f[:, xl] *= 1 + (gl[:, 0] - 1) * t
+            if xr < w:
+                f[:, xr] *= 1 + (gr[:, 0] - 1) * t
+    return Image.fromarray(np.clip(f, 0, 255).astype(np.uint8))
+
+
+def split(img):
+    """Seamless render, then three exact thirds, each cropped to 4:5."""
+    img = seamless(img)
+    w = img.width
+    pw = w // 3
     ph = min(img.height, int(pw * 1.25))
     pw = int(ph / 1.25)
     y0 = (img.height - ph) // 2
     out = []
-    for a_, b in spans:
-        x0 = a_ + ((b - a_) - pw) // 2
+    for i in range(3):
+        x0 = i * (w // 3) + ((w // 3) - pw) // 2
         out.append(img.crop((x0, y0, x0 + pw, y0 + ph)).resize((W, H), Image.LANCZOS))
     return out
 
@@ -72,7 +100,17 @@ def warp(panel, screen_png, corners):
     return Image.composite(Image.new('RGB', panel.size, (255, 255, 255)), out, g.filter(ImageFilter.GaussianBlur(30)))
 
 
+def serve():
+    import urllib.request, time
+    try:
+        urllib.request.urlopen(URL, timeout=2); return
+    except Exception:
+        subprocess.Popen(['python3', '-m', 'http.server', '8790'], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+        time.sleep(1.5)
+
+
 def main():
+    serve()
     spec = json.load(open(sys.argv[1]))
     rid = spec['id']
     out = os.path.join(ROOT, 'docs', 'media', 'rows', rid)
