@@ -56,19 +56,16 @@ body.v5{--pp:#ecece7;--wh:#f8f8f4;--ik:#0b0b0b;--rl:rgba(11,11,11,.14);--mt:#5d5
 .b5{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:6px;font:700 16px var(--T);background:var(--ik);color:#fff;border:1.5px solid var(--ik);white-space:nowrap;transition:background .15s,color .15s}
 .b5:hover{background:var(--l);color:var(--ik)}.b5.o{background:transparent;color:var(--ik)}.b5.o:hover{background:var(--ik);color:#fff}.b5.l{background:var(--l);color:var(--ik);border-color:var(--l)}.b5.l:hover{background:#fff;border-color:#fff}
 /* hero */
-.hx{position:relative;isolation:isolate;overflow:hidden;border-bottom:1.5px solid var(--ik)}.hx .h5{border-bottom:0}
-.lava{position:absolute;inset:0;width:100%;height:100%;z-index:-1;display:block;background:radial-gradient(38% 46% at 82% 40%,#d4ff3a 0 58%,transparent 60%),radial-gradient(22% 26% at 64% 82%,#c4ef22 0 56%,transparent 58%),var(--pp)}
-.lava.lava-on{background:var(--pp)}
-.lava-front{z-index:3;pointer-events:none;background:none!important}
-.hx .w5{position:relative;z-index:1}
-.hx:after,.lx:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hx{position:relative;border-bottom:1.5px solid var(--ik)}.hx .h5{border-bottom:0}
+.lava-page{position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:-1;pointer-events:none;display:block;background:var(--pp)}
+html{background:#ecece7}body.v5{background:transparent!important}
 .hx .b5.o{background:#fff}.hx .b5.o:hover{background:var(--ik);color:#fff}
-.lx{position:relative;isolation:isolate;overflow:hidden;border-radius:6px;border:1.5px solid var(--ik);padding:46px;margin-top:40px}
-.lx .lava{border-radius:5px}.lx .bd{position:relative;z-index:1;margin-top:0}
+.lx{position:relative;border-radius:6px;border:1.5px solid var(--ik);padding:46px;margin-top:40px}
+
 .lc{margin-top:44px;padding:64px 46px}.lci{position:relative;z-index:1;display:inline-block;max-width:640px}
 .lc h3{font:400 clamp(30px,4.4vw,58px)/.95 var(--W);text-transform:uppercase;letter-spacing:-.025em}.lc p{margin:14px 0 24px;font:600 17px var(--T)}
 .lcb{display:flex;gap:10px;flex-wrap:wrap}.lc .b5.o{background:#fff}
-@media(max-width:720px){.h5 h1{font-size:clamp(32px,9.4vw,40px);margin:14px 0 16px}.h5 .lead{font-size:16px}.hx .h5{padding:26px 0 36px}.trust{margin-top:18px}.lx{padding:22px}.lc{padding:40px 22px 170px}}
+@media(max-width:720px){.h5 h1{font-size:clamp(32px,9.4vw,40px);margin:14px 0 16px}.h5 .lead{font-size:16px}.hx .h5{padding:26px 0 36px}.trust{margin-top:18px}.lx{padding:22px}.lc{padding:40px 22px}}
 .h5{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.8fr);gap:56px;align-items:center;padding:64px 0 56px;border-bottom:1.5px solid var(--ik)}
 .h5 h1{font-size:clamp(38px,5.6vw,82px);line-height:.93;margin:20px 0 26px}
 .h5 .lead{color:#33332e;max-width:600px}
@@ -270,7 +267,7 @@ def home():
     faq = "".join(f"<div><h3>{e(q)}</h3><p>{e(a)}</p></div>" for q, a in FAQ)
     page = head("AUTOPILOT.OI · Easy set up AI agents for small business owners, $9.99", "Four AI agents for the jobs you put off: unpaid invoices, ignored reviews, messy receipts and nothing to post. $9.99 each or all 4 for $24. One payment, free Claude plan works, 30 day refund.", "/", "toolkit-cover.png") + nav("") + f"""
 {V5}
-<div class="hx" data-lava-scene="hero"><canvas class="lava" data-lava="back" aria-hidden="true"></canvas><canvas class="lava lava-front" data-lava="front" aria-hidden="true"></canvas><div class="w5"><div class="h5"><div><div class="lab" data-lava-avoid>AI agents for small business owners</div>
+<canvas class="lava-page" data-lava-page aria-hidden="true"></canvas><div class="hx"><div class="w5"><div class="h5"><div><div class="lab" data-lava-avoid>AI agents for small business owners</div>
 <h1 data-lava-avoid>Easy set up AI agents that make your life <em>easier.</em></h1>
 <p class="lead" data-lava-avoid>Four agents for the jobs you keep putting off: chasing invoices, answering reviews, sorting receipts and planning posts. $9.99 each. Set up in about 15 minutes, right on your phone.</p>
 <div class="row" data-lava-avoid><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">See each agent · $9.99</a></div>
@@ -284,7 +281,7 @@ def home():
 <div class="bot q" data-m="bot">Home Depot, $64 on Oct 12: work or home?</div>
 <div class="me" data-m="me">work</div><div class="bot" data-m="bot">Got it. Supplies is now <span data-count="676">$676</span>. Want me to always count Home Depot as work?</div></div>
 <div class="inp"><span>Type a word</span><i></i></div><div class="hb"></div></div></div>
-<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=13" defer></script>
+<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=18" defer></script>
 <div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
 <div class="ags">{rows}</div>
 <div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>
@@ -318,7 +315,7 @@ Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div>
 <button class="b5" style="margin-top:18px" onclick="navigator.clipboard.writeText(document.getElementById('fp').innerText);this.textContent='Copied'">Copy the message</button></div>
 <div class="gu"><div class="lab" style="color:#3c3c36">Our promise</div><h3>30 day refund</h3><p>If an agent doesn't help your business, reply to your receipt within 30 days and get your money back.</p><ul><li>No forms, no calls</li><li>One payment, nothing recurring</li><li>Works on the free Claude plan</li></ul><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a></div></div></div></div>
 <div class="s5"><div class="w5"><div class="sh5"><div><div class="lab">Questions</div><h2>Before <em>you buy.</em></h2></div><p>Still stuck after you buy? Reply to your receipt and we help.</p></div><div class="fq">{faq}</div>
-<div class="lx lc" data-lava-scene="strip"><canvas class="lava" data-lava="back" aria-hidden="true"></canvas><div class="lci"><h3 data-lava-avoid>Pick the job you hate.</h3><p data-lava-avoid>$9.99 each, or all 4 for $24. One payment, 30 day refund.</p><div class="lcb" data-lava-avoid><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">Pick one · $9.99</a></div></div></div></div></div>
+<div class="lx lc"><div class="lci"><h3 data-lava-avoid>Pick the job you hate.</h3><p data-lava-avoid>$9.99 each, or all 4 for $24. One payment, 30 day refund.</p><div class="lcb" data-lava-avoid><a class="b5 buy" href="{GR}owner-toolkit">Get all 4 for $24</a><a class="b5 o" href="#agents">Pick one · $9.99</a></div></div></div></div></div>
 <div class="sb" id="sb"><div><b>All 4 agents · $24</b><span>One payment · 30 day refund</span></div><a class="b5 l buy" href="{GR}owner-toolkit">Get them</a></div>
 <script>(function(){{var s=document.getElementById('sb'),h=document.querySelector('.h5 .row');if(!('IntersectionObserver' in window)||!s||!h)return;new IntersectionObserver(function(x){{s.classList.toggle('on',!x[0].isIntersecting&&x[0].boundingClientRect.top<0)}}).observe(h)}})();</script>""" + FX + FOOT
     return page.replace("<body>", '<body class="v5">', 1)
