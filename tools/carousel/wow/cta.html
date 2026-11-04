@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset=utf-8><link rel=stylesheet href="/tools/carousel/style.css"><style>
+body{margin:0;width:1080px;height:1350px;position:relative;overflow:hidden;background:#0b0b0b;color:#f2f2ee}
+.M{position:absolute;font:400 21px M;letter-spacing:5px;text-transform:uppercase;white-space:nowrap}
+.A{font-family:A;text-transform:uppercase;line-height:.9;white-space:nowrap}
+.row{display:flex;justify-content:space-between;align-items:center;border-top:2px solid #333;padding:26px 0}
+</style></head><body><script>
+const INK='#0b0b0b',LIME='#D4FF3A',PAPER='#f2f2ee';
+let bars='';let s=17,x=70;while(x<560){s=(s*9301+49297)%233280;const w=3+Math.floor(s/233280*13);s=(s*9301+49297)%233280;const g=4+Math.floor(s/233280*9);s=(s*9301+49297)%233280;const hh=60+Math.floor(s/233280*3)*14;bars+=`<div style="position:absolute;left:${x}px;top:${1196-hh}px;width:${w}px;height:${hh}px;background:${LIME}"></div>`;x+=w+g}
+document.body.innerHTML=`
+<img src=ap_paper.png style="position:absolute;left:70px;top:60px;width:58px"><div class=M style="left:144px;top:64px;font-family:C;font-weight:700;letter-spacing:6px">AUTOPILOT.OI</div>
+<div class=M style="right:70px;top:64px;color:${LIME}">8 / 8</div>
+<div class=M style="left:70px;top:190px;color:${LIME}">want it done for you?</div>
+<div class=A style="position:absolute;left:66px;top:236px;font-size:132px">Your front desk.<br><span style="color:${LIME}">On autopilot.</span></div>
+<div style="position:absolute;left:70px;top:540px;width:940px">
+ <div class=row><div><div class=A style="font-size:56px">Front Desk Starter</div><div class=M style="position:static;margin-top:12px;color:#9a9a92">replies to customers in your voice</div></div><div class=A style="font-size:56px;color:${LIME}">Free</div></div>
+ <div class=row style="border-bottom:2px solid #333"><div><div class=A style="font-size:56px">Front Desk Kit</div><div class=M style="position:static;margin-top:12px;color:#9a9a92">price replies, quotes, follow ups</div></div><div class=A style="font-size:56px;color:${LIME}">$39</div></div>
+ <div class=M style="position:static;margin-top:22px;color:#9a9a92;font-size:18px">it drafts. you read it. you hit send.</div>
+</div>
+<div style="position:absolute;left:70px;top:930px;width:940px;height:120px;background:${LIME};display:flex;align-items:center;justify-content:center;gap:24px">
+ <div class=A style="font-size:72px;color:${INK}">Link in bio</div><div class=A style="font-size:72px;color:${INK}">↑</div></div>
+${bars}<div class=M style="left:576px;top:1162px;font-size:16px;color:${LIME}">AP.OI / AUTOPILOTOI.APP</div>
+<div style="position:absolute;left:0;top:1196px;width:1080px;height:6px;background:${LIME}"></div>
+<div class=M style="left:70px;top:1236px;color:${PAPER}">save this</div><div class=M style="right:70px;top:1236px;color:${PAPER}">@autopilot.oi</div>`;
+</script></body></html>
