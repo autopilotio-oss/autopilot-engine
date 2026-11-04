@@ -18,5 +18,17 @@
  "slots": {
   "instagram": "2026-11-08 18:00 ART"
  },
- "metricool_uuids": []
+ "metricool_uuids": [
+  "-6987540128293893667"
+ ],
+ "posts": [
+  {
+   "uuid": "-6987540128293893667",
+   "metricool_id": 416861477,
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-08 18:00"
+  }
+ ]
 }
