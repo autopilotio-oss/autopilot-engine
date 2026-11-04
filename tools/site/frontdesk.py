@@ -32,8 +32,8 @@ TYPES = [("price", "A price question"), ("late", "A late night request"), ("chas
 # canonical points at /front-desk/ and they are noindex, so search sees one page.
 VARIANTS = {
  "main": {"path": "/front-desk/", "tag": "Setup kit · for service businesses", "trade": "detailing", "type": "price",
-          "h1": "Customer replies, <em>drafted for you.</em>",
-          "lead": "A setup for your own Claude account. It learns your prices and voice, then drafts replies, quotes and follow ups. You check each one and send it yourself.",
+          "h1": "Front desk, <em>drafted.</em>",
+          "lead": "Replies, quotes and follow ups from your real prices, in your voice. You check each one and send it yourself.",
           "title": "Front Desk Kit · answer customer inquiries faster · AUTOPILOT.OI"},
  "after-hours": {"path": "/front-desk/after-hours/", "tag": "For detailing shops and mobile detailers", "trade": "detailing", "type": "late",
           "h1": "Still answering quotes after hours? <em>Get the reply drafted, then send it yourself.</em>",
@@ -87,11 +87,11 @@ def page(head, nav, foot, variant="main"):
 <div class="msg" id="fdm"></div>
 <div class="draft"><div class="label" style="margin-bottom:8px">KIT DRAFT · YOU REVIEW AND SEND</div><div class="dr" id="fdd"></div></div>
 <div class="label" style="margin-top:12px;text-align:center;line-height:1.5">Written with the kit's reply rules for an example business.<br>Yours uses your own prices, rules and voice.</div></div></div>
-<div class="sec paper"><div class="wrap"><h2 style="margin-bottom:36px">What's <em>inside.</em></h2><div class="grid3">
+<div class="sec paper"><div class="wrap"><h2 style="margin-bottom:36px">The <em>kit.</em></h2><div class="grid3">
 <div class="card prod"><div class="k" style="margin-bottom:4px">What you get</div><ul>{inc}</ul></div>
 <div class="card"><div class="k" style="margin-bottom:12px">Setup</div><p>Make a Claude Project, add the PDF, paste one starter prompt. The setup agent interviews you and builds your commands with you.</p><p class="label" style="margin-top:12px">{e(O['setup_time']).upper()}</p></div>
 <div class="card"><div class="k" style="margin-bottom:12px">What it won't do</div><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;color:#3b3b36;font-size:15px">{nots}<li>Guess a price it doesn't know: it writes [CHECK]</li></ul></div></div></div></div>{steps}
-<div class="sec"><div class="wrap grid2" style="gap:44px"><div><h2>Questions</h2><div style="margin-top:28px">{buy}</div></div><div>
+<div class="sec"><div class="wrap grid2" style="gap:44px"><div><h2>FAQ<em>.</em></h2><div style="margin-top:28px">{buy}</div></div><div>
 <details><summary>Is this an app?</summary><p>No. It's a setup kit: a PDF with a starter prompt, the setup agent and the instructions it installs in a Claude Project. Everything runs in your own Claude account.</p></details>
 <details><summary>Do I need a paid Claude plan?</summary><p>No. Claude's free plan works. A paid plan gives you more usage.</p></details>
 <details><summary>I've never used Claude. Can I do this?</summary><p>Yes. Make a free account at claude.ai, then follow the 3 step plan in the PDF: make a Project, paste one prompt, answer the questions.</p></details>
