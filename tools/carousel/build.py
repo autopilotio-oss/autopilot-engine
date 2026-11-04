@@ -207,7 +207,13 @@ def grid_cover(g):
 
 
 def cover(p, n):
-    if p.get("grid3") or p.get("grid4"):
+    if p.get("grid5"):
+        import grid5
+        h, cls, lo = grid5.render(p["grid5"])
+        p = dict(p, cover_html=h, cover_bg=cls, chrome=False, grain=False,
+                 lava_opacity=lo if lo is not None else {"bg-white": .3, "bg-black": .3, "bg-lime": .35}[cls],
+                 seed=int(p["grid5"].get("no", 2)))
+    elif p.get("grid3") or p.get("grid4"):
         import grid3, grid4
         h, cls = grid4.render(p["grid4"]) if p.get("grid4") else grid3.render(p["grid3"])
         p = dict(p, cover_html=h, cover_bg=cls, chrome=False, grain=False,
@@ -382,7 +388,7 @@ def build(cid):
     page = f"<!doctype html><html><head><meta charset=utf-8><style>{CSS}</style></head><body class=\"th-{p.get('theme', 'dark')}\">{''.join(slides)}<script>{QAJS}</script><script>{ANIMJS}</script>{FIT}</body></html>"
     hp = os.path.join(ROOT, "tools", "carousel", f"_{cid}.html"); open(hp, "w").write(page)
     out = os.path.join(ROOT, "docs", "media", "car", cid); os.makedirs(out, exist_ok=True)
-    lava = bool(p.get("cover_html") or p.get("grid") or p.get("grid2") or p.get("grid3") or p.get("grid4")) and p.get("lava", True) and (not p.get("cover_only") or p.get("animate"))
+    lava = bool(p.get("cover_html") or p.get("grid") or p.get("grid2") or p.get("grid3") or p.get("grid4") or p.get("grid5")) and p.get("lava", True) and (not p.get("cover_only") or p.get("animate"))
     FRAMES = 24 * int(p.get("anim_dur", 16)) if (lava and os.environ.get("CAR_STILL") != "1") else 0
     fdir = f"/tmp/carframes/{cid}"
     if FRAMES:
