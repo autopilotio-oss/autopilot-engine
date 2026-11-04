@@ -55,7 +55,8 @@ def run():
             try:
                 credits = []
                 for i, pid in enumerate(r["unsplash"], 1):
-                    img = Image.open(io.BytesIO(get(f"https://unsplash.com/photos/{pid}/download?force=true&w=1600"))).convert("RGB")
+                    src = (r.get("urls") or [None] * 99)[i - 1] or f"https://unsplash.com/photos/{pid}/download?force=true&w=1600"
+                    img = Image.open(io.BytesIO(get(src))).convert("RGB")
                     img.thumbnail((1600, 1600))
                     img.save(os.path.join(out, f"{i:02d}.jpg"), quality=90)
                     cut = remove(img, session=session); bbox = cut.getbbox()
