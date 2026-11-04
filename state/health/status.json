@@ -340,7 +340,7 @@
   "severity": "SEV-3"
  },
  "worker:publisher": {
-  "ok": true,
+  "ok": false,
   "severity": "SEV-2"
  },
  "worker:support_agent": {
