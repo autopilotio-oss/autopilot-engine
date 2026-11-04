@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-03T23:35:00Z",
+  "at": "2026-11-04T00:30:00Z",
   "posts_today": {
     "threads": {
       "published": 1,
@@ -35,21 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLV4ZwE7GV/",
-      "metrics_seen_at": "2026-11-03T23:35:00Z"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-10-31T17:47:12-03:00",
-      "text": "$133 a month. $1,596 a year. On things you don't even use.",
-      "metrics": {
-        "reach": 73,
-        "views": 73,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
-      "url": "https://www.instagram.com/reel/DfKufU-D6S_/",
-      "metrics_seen_at": "2026-11-03T23:35:00Z"
+      "metrics_seen_at": "2026-11-04T00:30:00Z"
     },
     {
       "network": "instagram",
@@ -63,12 +49,26 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfLbAPnCFj2/",
-      "metrics_seen_at": "2026-11-03T23:35:00Z"
+      "metrics_seen_at": "2026-11-04T00:30:00Z"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-01T02:02:36-03:00",
+      "text": "Seven AI agents that handle a small business owner's busywork: inbox sorted and replies drafted, quotes chased, the day planned, late invoices flagged.",
+      "metrics": {
+        "reach": 56,
+        "views": 67,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0
+      },
+      "url": "https://www.instagram.com/reel/DfLnMxhjLES/",
+      "metrics_seen_at": "2026-11-04T00:30:00Z"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "20:35 ART: 5 provider posts published today (banks story on threads, twitter, tiktok at 12:00; instagram banks post and tiktok 'It drafts. You send.' at 18:00), 16 provider slots pending (all draft=true), 0 ERROR. Instagram reels 6-72h (7, IGRE): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok videos 6-72h (13, TKPO): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1), one comment on Binance heist video. Threads, X and Instagram feed post analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). Workflows: all latest completed runs success, 0 fails in 24h incl. ci.yml (post.yml in progress). HQ feed written to status/hub (v36)."
+  "notes": "21:30 ART: 5 provider posts published today (banks story on threads, twitter, tiktok at 12:00; instagram banks post and tiktok 'It drafts. You send.' at 18:00), 16 provider slots pending (all draft=true), 0 ERROR. Instagram reels 6-72h (6, IGRE): all 0 saves, 0 shares, 0 comments; ranked by reach only, no winner. TikTok videos 6-72h (11, TKPO): shares 0 on all, saves not provided, reach MISSING (null); top views 113 (seven agents, Nov 1), one comment on Binance heist video. Threads, X and Instagram feed post analytics MISSING (not pulled). Kit subscribers 0, new today 0 (as reported by Kit). Revenue: 0 verified orders all time (unchanged). Workflows: all latest completed runs success, 0 fails in 24h incl. ci.yml. HQ feed written to status/hub (v37)."
 }
