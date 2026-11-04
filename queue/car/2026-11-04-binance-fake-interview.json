@@ -1,0 +1,69 @@
+{
+ "id": "2026-11-04-binance-fake-interview",
+ "kind": "news",
+ "story_key": "binance-fake-interview-report-2026-11-03",
+ "cover_idea": "white page, SAMPLE job site message card with coding_test.zip and lime TRAP stamp on top, bottom stacked headline with lime box $6.3 billion gone",
+ "theme": "light",
+ "cover_bg": "bg-white",
+ "status": "scheduled",
+ "gate": {
+  "score": 90,
+  "accuracy": 27,
+  "hook": 23,
+  "clarity": 18,
+  "design": 13,
+  "cta": 9,
+  "notes": "Every claim confirmed by 2+ of Help Net Security, Fox Business, The National. Left out conflicting replenish figure (90% vs 98%) and single source details (June Homebrew, Project Director recruiter). QA PASS, 8 slides read, legible on phone."
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels)"
+ },
+ "posts": [
+  {
+   "network": "instagram",
+   "metricool_id": 416424413,
+   "uuid": "6298593482673570846",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-05T18:00:00-03:00",
+   "type": "POST carousel, cover_ig.mp4 + 02 to 08"
+  },
+  {
+   "network": "threads",
+   "metricool_id": 416424462,
+   "uuid": "-6610937525833412632",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-05T09:00:00-03:00"
+  },
+  {
+   "network": "twitter",
+   "metricool_id": 416424564,
+   "uuid": "-2259853592067291669",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-05T09:00:00-03:00"
+  }
+ ],
+ "slot_note": "Nov 4 IG 18:00, Threads (12) and X (5) were full, so the next open slots on Nov 5 were used. Nov 5 prompts carousel should take the next free IG 18:00 (Nov 6).",
+ "sources": [
+  [
+   "Help Net Security",
+   "https://www.helpnetsecurity.com/2026/11/04/binance-hack-north-korea-fake-job-interview/"
+  ],
+  [
+   "Fox Business",
+   "https://www.foxbusiness.com/fox-news-tech/binance-details-how-fake-job-interview-led-6-3b-crypto-heist"
+  ],
+  [
+   "The National",
+   "https://www.thenationalnews.com/business/money/2026/11/03/binance-says-fake-job-interviews-and-internal-ai-tool-used-in-63bn-heist/"
+  ]
+ ],
+ "results": {}
+}
