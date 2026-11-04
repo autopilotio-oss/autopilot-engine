@@ -14,7 +14,7 @@ def head(title, desc, path, img="autopilot-cover.png"):  # share image: the prod
 def nav(on):
     a = lambda href, t, k: f'<a href="{href}"{" class=\"on\"" if k == on else ""}>{t}</a>'
     return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/#tools", "Tools", "m")}{a("/front-desk/", "Front Desk", "f")}{a("/brain/", "Free starter", "c")}</div></div></div>'
-FOOT = """<div class="foot"><div class="wrap"><div>AUTOPILOT.OI · AI for the front office<br>Independent. Not affiliated with Anthropic. Claude is a product of Anthropic.</div>
+FOOT = """<div class="foot"><div class="wrap"><div>AUTOPILOT.OI · simple AI helpers for business owners<br>Independent. Not affiliated with Anthropic. Claude is a product of Anthropic.</div>
 <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/marketplace/">Marketplace</a><a href="/workspace/">Workspace</a><a href="/brain/">Free starter</a><a href="/library/">Library</a><a href="https://www.instagram.com/autopilot.oi/">Instagram</a></div></div></div>
 <script src="/assets/ap.js" defer></script></body></html>"""
 def redirect(path, to):
@@ -31,24 +31,44 @@ INBOX = """<div class="ui"><div class="bar"><span>Leads · today</span><span>Pro
 <div class="label" style="margin-top:12px;text-align:center">Example business. Workspace is in development.</div></div>"""
 
 TOOLS = [
- ("Bookkeeping Sorter", "10", "bookkeeping-sorter", "books", "Upload your bank statement, type sort. Every expense in the right category, with totals for tax time.", "sort"),
- ("Invoice Chaser", "10", "invoice-chaser", "invoice", "Invoices from your job notes, and the right reminder for every customer who hasn't paid.", "chase Dave"),
- ("Review Desk", "10", "review-desk", "reviews", "Paste a review, type reply. Warm thank yous, calm answers to angry ones, in your voice.", "reply"),
- ("Content Week", "10", "content-week", "content", "Answer 5 questions on Sunday. Get 7 posts: what to shoot, the caption, the hashtags.", "week"),
+ ("Bookkeeping Sorter", "10", "bookkeeping-sorter", "books", "Upload your bank statement, type sort. Every expense in the right category, with totals for tax time.", "sort", "A shoebox of receipts in April", "Totals every month, one table for your accountant"),
+ ("Invoice Chaser", "10", "invoice-chaser", "invoice", "Invoices from your job notes, and the right reminder for every customer who hasn't paid.", "chase Dave", "Staring at a text you don't want to send", "A kind reminder, ready to send"),
+ ("Review Desk", "10", "review-desk", "reviews", "Paste a review, type reply. Warm thank yous, calm answers to angry ones, in your voice.", "reply", "Reviews sitting unanswered for months", "Every review answered in your voice"),
+ ("Content Week", "10", "content-week", "content", "Answer 5 questions on Sunday. Get 7 posts: what to shoot, the caption, the hashtags.", "week", "\"What do I even post?\"", "7 posts planned from your real week"),
 ]
 def tool_cards():
-    c = "".join(f'<div class="card prod"><img src="/store/{im}-cover.png" alt="{e(n)}" style="width:100%;border-radius:12px;margin-bottom:14px"><h3 style="font-size:23px">{e(n)}</h3><div class="price">${p}<small>one time</small></div><p>{e(d)}</p><p class="label" style="margin-top:6px">YOU TYPE: {e(cmd)}</p><div style="display:flex;gap:10px;margin-top:auto;padding-top:12px"><a class="btn buy" style="flex:1;height:48px" href="{GR}{perm}">Get it · ${p}</a></div></div>' for n, p, perm, im, d, cmd in TOOLS)
+    c = "".join(f'<div class="card prod"><img src="/store/{im}-cover.png" alt="{e(n)}" style="width:100%;border-radius:12px;margin-bottom:14px"><h3 style="font-size:23px">{e(n)}</h3><div class="price">${p}<small>one time</small></div><p>{e(d)}</p><p class="label" style="margin-top:6px">YOU TYPE: {e(cmd)}</p><div class="ba"><div class="b"><span>BEFORE</span>{e(bf)}</div><div class="a"><span>AFTER</span>{e(af)}</div></div><div style="display:flex;gap:10px;margin-top:auto;padding-top:12px"><a class="btn buy" style="flex:1;height:48px" href="{GR}{perm}">Get it · ${p}</a></div></div>' for n, p, perm, im, d, cmd, bf, af in TOOLS)
     return c
+HSTYLE = """<style>.phn{max-width:360px;margin:0 auto;background:#0b0d0b;border:1px solid var(--line);border-radius:36px;padding:22px 18px;box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 90px rgba(198,255,61,.07)}
+.phn .t{font:600 12px/1 ui-monospace,monospace;letter-spacing:.14em;color:#8b918a;display:flex;justify-content:space-between;margin-bottom:16px}
+.phn .me{margin-left:auto;max-width:80%;background:#262a24;border-radius:18px 18px 4px 18px;padding:10px 14px;font-size:15px;margin-bottom:12px;width:max-content}
+.phn .ai{background:rgba(198,255,61,.09);border:1px solid rgba(198,255,61,.45);border-radius:18px 18px 18px 4px;padding:12px 14px;font-size:14.5px;line-height:1.5}
+.phn .ai b{display:block;font:600 11px/1 ui-monospace,monospace;letter-spacing:.14em;color:#C6FF3D;margin-bottom:8px}
+.phn .r{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07);padding:5px 0}
+.cp{background:#0d0f0c;border:2px dashed rgba(198,255,61,.5);border-radius:18px;padding:18px;white-space:pre-wrap;font:14px/1.6 ui-monospace,monospace;color:#e9ffd0}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.ba div{border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.4}.ba .b{background:#1a1514;border:1px solid #3a2a26;color:#d8b8ae}.ba .a{background:rgba(198,255,61,.07);border:1px solid rgba(198,255,61,.35)}
+.ba span{display:block;font:600 10px/1 ui-monospace,monospace;letter-spacing:.14em;margin-bottom:6px;opacity:.8}</style>"""
 def home():
     return head("AUTOPILOT.OI · AI helpers for busy business owners. No tech skills.", "Simple AI helpers for owners who have never used AI: bookkeeping, invoices, reviews, posts and customer replies. Copy one message, answer a few questions. From $10.", "/", "toolkit-cover.png") + nav("") + f"""
-<div class="wrap hero"><div class="k"><b>AUTOPILOT.OI</b> · for owners who have never used AI</div>
+{HSTYLE}
+<div class="wrap hero grid2" style="align-items:center;gap:40px"><div><div class="k"><b>AUTOPILOT.OI</b> · for owners who have never used AI</div>
 <h1 style="margin:18px 0 22px">You didn't start a business<br>to do <em>paperwork at midnight.</em></h1>
-<p class="lead">Simple AI helpers for the busywork that eats your week: bookkeeping, invoices, reviews, posts and customer replies. Copy one message, answer a few easy questions, and type one word. It drafts. You stay in charge. From $10.</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#how">How it works</a></div></div>
+<p class="lead">Simple AI helpers for the busywork that eats your week: bookkeeping, invoices, reviews, posts and customer replies. Copy one message, answer a few easy questions, then type one word. It writes. You stay in charge. From $10.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#free">Try one free</a></div></div>
+<div class="phn"><div class="t"><span>BOOKKEEPING</span><span>EXAMPLE</span></div><div class="me">sort 📎 october.pdf</div>
+<div class="ai"><b>OCTOBER · SORTED</b><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Personal</span><span>$219</span></div>
+<div style="margin-top:10px">1 question: Home Depot $64 on Oct 12, work or home?</div></div></div></div>
 <div class="sec" id="how"><div class="wrap"><div class="k" style="margin-bottom:14px">Never used AI? Perfect.</div><h2 style="margin-bottom:30px">Three steps. <em>On your phone.</em></h2>
 <div class="grid3"><div class="card"><h3>1. Get the free Claude app</h3><p style="margin-top:10px">Claude is an AI assistant, like a smart helper you text. The free plan works. Make a free account at claude.ai.</p></div>
 <div class="card"><h3>2. Paste one message</h3><p style="margin-top:10px">Your tool comes with a guide. You copy one message into Claude and it asks you 7 easy questions about your business. About 15 minutes, tap by tap.</p></div>
 <div class="card"><h3>3. Type one word</h3><p style="margin-top:10px">sort, chase, reply, week. It does the busywork from your real prices and rules. You read it and send it yourself.</p></div></div></div></div>
+<div class="sec" id="free"><div class="wrap grid2" style="align-items:center;gap:40px"><div><div class="k" style="margin-bottom:14px">Free · 60 seconds</div><h2>Try one <em>right now.</em></h2><p class="lead" style="margin-top:14px">Open the free Claude app, tap New chat, paste this and fill in the brackets with a real review of your business. That's what using AI feels like. Our tools do this for every job, already set up with your business.</p>
+<button class="btn" style="margin-top:22px" onclick="navigator.clipboard.writeText(document.getElementById('fp').innerText);this.textContent='Copied'">Copy the message</button></div>
+<div class="cp" id="fp">Here is a review of my business. Write a short reply I can post.
+My business: [name and what you do]
+My name: [your first name]
+The review: [paste it]
+Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div></div></div>
 <div class="sec" id="tools"><div class="wrap"><div class="k" style="margin-bottom:14px">The tools</div><h2 style="margin-bottom:30px">Pick the job you hate most. <em>$10.</em></h2>
 <div class="grid2">{tool_cards()}</div>
 <div class="card prod" style="margin-top:22px;border-color:rgba(198,255,61,.45)"><span class="tagline live">Best value</span><h3 style="font-size:28px;margin-top:10px">The Owner Toolkit: all 4 tools</h3><div class="price">$24<small>one time · $40 separately</small></div><p>Bookkeeping Sorter, Invoice Chaser, Review Desk and Content Week. Each has its own setup helper.</p><a class="btn buy" style="margin-top:14px;height:52px" href="{GR}owner-toolkit">Get all 4 · $24</a></div>
