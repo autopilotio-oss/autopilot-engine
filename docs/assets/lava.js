@@ -66,7 +66,9 @@
   function mk(i, c) {
     return { c: c, x: .1 + .8 * rnd(i, 1), y: .1 + .8 * rnd(i, 2), vx: 0, vy: 0, ax: 0, ay: 0, cr: 0,
       r: c ? .068 + .016 * rnd(i, 3) : .07 + .05 * rnd(i, 3), ph: 6.28 * rnd(i, 4), pr: .5 + .6 * rnd(i, 5), pa: c ? .22 : .28 + .25 * rnd(i, 6),
-      heat: 6.28 * rnd(i, 7), hs: .10 + .10 * rnd(i, 8) };
+      heat: 6.28 * rnd(i, 7), hs: .10 + .10 * rnd(i, 8),
+      // each glob tours the whole screen on its own slow loop (20 to 45 s per lap), corner to corner
+      wx: .14 + .16 * rnd(i, 14), wy: .11 + .15 * rnd(i, 15), wpx: 6.28 * rnd(i, 16), wpy: 6.28 * rnd(i, 17) };
   }
   var mains = [];
   for (var i = 0; i < 3; i++) mains.push(mk(i, true));
@@ -139,7 +141,9 @@
       if (o.tail) continue;
       o.cr = rs * o.r * (1 + o.pa * Math.sin(ph * o.pr + o.ph));
       var fl = flow(o.x / Math.max(aspect, .6), o.y, ph, o.ph);
-      o.ax += fl[0] * .055; o.ay += fl[1] * .045;
+      var gxT = aspect * (.5 + .46 * Math.sin(ph * o.wx + o.wpx)), gyT = .5 + .46 * Math.sin(ph * o.wy + o.wpy);
+      o.ax += (gxT - o.x) * .55; o.ay += (gyT - o.y) * .55;
+      o.ax += fl[0] * .045; o.ay += fl[1] * .035;
       o.ay += Math.sin(ph * o.hs + o.heat) * .05;                  // lava lamp: warm globs rise, cool ones sink
       o.ay += dsc * 60 * (o.c ? .5 : .8);                        // scroll drag
       // soft walls: globs may peek past the edges but drift back in

@@ -281,7 +281,7 @@ def home():
 <div class="bot q" data-m="bot">Home Depot, $64 on Oct 12: work or home?</div>
 <div class="me" data-m="me">work</div><div class="bot" data-m="bot">Got it. Supplies is now <span data-count="676">$676</span>. Want me to always count Home Depot as work?</div></div>
 <div class="inp"><span>Type a word</span><i></i></div><div class="hb"></div></div></div>
-<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=18" defer></script>
+<div class="pcap">Sample business. Your numbers come from your own statement.</div></div></div></div></div></div><script src="/assets/lava.js?v=19" defer></script>
 <div class="s5" id="agents"><div class="w5"><div class="sh5"><div><div class="lab">The agents</div><h2>Pick the job <em>you hate.</em></h2></div><p>Each agent fixes one problem for $9.99. Pay once, keep it, use it every week.</p></div>
 <div class="ags">{rows}</div>
 <div class="bd"><div><div class="lab">Best value</div><h3>All 4 agents</h3><p>Invoices, reviews, receipts and posts. Every agent above in one download.</p></div>
