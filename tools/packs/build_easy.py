@@ -10,14 +10,15 @@ BASE = eval(re.search(r'CSS = (f""".*?""")', open(f"{ROOT}/tools/workspace/build
 CSS = BASE + """
 body{font-size:14px}
 .lead{font-size:17px;line-height:1.5}
-.step{display:flex;gap:14px;align-items:center;margin:7px 0;padding:8px 12px;background:linear-gradient(165deg,#161914,#0b0c0a);border:1px solid rgba(255,255,255,.1);border-radius:16px}
+.step{display:flex;gap:14px;align-items:center;margin:5px 0;padding:6px 12px;background:linear-gradient(165deg,#161914,#0b0c0a);border:1px solid rgba(255,255,255,.1);border-radius:16px}
 .num{flex:none;width:44px;height:44px;border-radius:50%;background:#D4FF3A;color:#0a0a0a;font:24px/46px SA;text-align:center}
 .st h3{font-size:20px}.st p{color:#c8cbc4;font-size:13.5px;line-height:1.45}
-.phone{flex:none;width:1.45in;height:1.62in;border-radius:20px;border:2px solid #2c3029;background:#101210;padding:9px 8px;position:relative;overflow:hidden}
+.phone{flex:none;width:1.45in;height:1.52in;border-radius:20px;border:2px solid #2c3029;background:#101210;padding:9px 8px;position:relative;overflow:hidden}
 .phone .bar{font:7px M;letter-spacing:1px;color:#8f928b;display:flex;justify-content:space-between;margin-bottom:7px}
 .phone .ttl{font:12px SA;color:#fff;letter-spacing:.3px;margin-bottom:6px;text-transform:uppercase}
 .phone .it{font-size:8.5px;color:#d9dcd4;background:#1c1f1a;border-radius:7px;padding:5px 6px;margin:4px 0}
 .phone .hi{background:#D4FF3A;color:#0a0a0a;font-weight:700}
+.phone[style] .me,.phone[style] .ai{font-size:10px}
 .phone .me{margin-left:auto;width:85%;background:#2a2e27;border-radius:9px 9px 2px 9px;padding:5px 6px;font-size:7.5px;color:#fff;margin:5px 0}
 .phone .ai{width:88%;background:rgba(212,255,58,.12);border:1px solid rgba(212,255,58,.5);border-radius:9px 9px 9px 2px;padding:5px 6px;font-size:7.5px;color:#e9ffd0;margin:5px 0}
 .phone .tap{position:absolute;width:20px;height:20px;border-radius:50%;border:2px solid #D4FF3A;box-shadow:0 0 12px #D4FF3A}
@@ -49,33 +50,33 @@ def build():
     P.append(page(f'''<div style="margin-top:.9in"><span class="chip">No tech skills needed</span>
 <h1>{C["title_html"]}</h1><p class="lead">{e(C["lead"])}</p>
 <h2>What it does <em>for you</em></h2><div class="g2">{does}</div>
-<div class="card" style="margin-top:14px"><div class="mono">How this guide works</div>Page 2: try it right now in 60 seconds. Page 3: set it up once so it remembers your business. Page 4: the words you type. The pages at the back are for Claude to read, not you.</div></div>''', "START"))
+<div class="card" style="margin-top:14px"><div class="mono">How this guide works</div>Page 2: try it right now in 60 seconds. Page 3: set it up once. Page 4: the words you type. The pages at the back are for Claude to read, not you.</div></div>''', "START"))
     # 2 quick win
     QR = C["quick_result"]
-    P.append(page(f'''<h2>Try it <em>right now</em></h2><p class="lead">No setup yet. Open the Claude app (free at claude.ai), tap New chat, and paste this. {e(C.get("quick_note", ""))}</p>
+    P.append(page(f'''<h2>Try it <em>right now</em></h2><p class="lead">No setup yet. Get the free Claude app from the App Store or Google Play (or go to claude.ai on a computer) and sign up with your email. Tap New chat and paste the gray box. {e(C.get("quick_note", ""))}</p><p class="mut">To copy it on your phone: press and hold the text, tap Select All, then Copy. Replace each [ ] with your own info.</p>
 <div class="copy"><div class="mono">Copy this · paste into Claude</div>{pre(C["quick"], 12.5)}</div>
-<div style="display:flex;gap:18px;align-items:flex-start;margin-top:8px">{phone("New chat", [me(QR["you"]), ai(QR["claude"])])}
+<div style="display:flex;gap:18px;align-items:flex-start;margin-top:8px">{phone("New chat", [me(QR["you"]), ai(QR["claude"])]).replace('class="phone"', 'class="phone" style="width:2.1in;height:2.6in;font-size:1.2em"')}
 <div><h3>What you'll see</h3><p class="mut" style="margin-top:6px">{e(QR["explain"])}</p>
-<div class="card" style="margin-top:12px"><div class="mono">Liked it?</div>Turn to page 3. Fifteen minutes of setup and it knows your business every time, so you only type one word.</div></div></div>''', "60 SECONDS"))
+<div class="card" style="margin-top:12px"><div class="mono">Liked it?</div>Turn to page 3. Set it up once and Claude reads your business info every time, so you only type one word.</div></div></div>''', "60 SECONDS"))
     # 3 setup with phone screens
     steps = [
-        ("Make a Project", f'In the Claude app tap the menu, then Projects, then New project. Name it "{proj}". A Project is a folder that remembers your business.',
-         phone("Projects", [it("+ New project", True), it("My first chat"), '<div class="tap" style="left:58px;top:46px"></div>'])),
-        ("Add this guide", "Inside the Project tap Add files (the + or paperclip) and pick this PDF from your downloads.",
-         phone(proj, [it("Files"), it(f"{name}.pdf", True), it("Instructions"), '<div class="tap" style="left:60px;top:66px"></div>'])),
-        ("Paste one message", "Start a chat inside the Project and paste the starter message below. Claude asks you 7 easy questions, one at a time.",
-         phone(proj, [me("Read the PDF in this project. You are my setup helper..."), ai("Hi! Question 1 of 7: what's your business called?")])),
-        ("Save your box", "At the end Claude gives you one box of text. Tap Copy, open the Project's Instructions, paste it, tap Save. Then start a new chat. Done.",
-         phone("Instructions", [it("Paste here", True), it("MY RULES ..."), it("Save"), '<div class="tap" style="left:56px;top:96px"></div>'])),
+        ("Make a Project", f'In the Claude app open the menu (top left), then Projects, then New project. Name it "{proj}". A Project is a folder. Claude reads its Instructions every time you chat inside it.',
+         phone("Projects", [it("+ New project", True), it("Recent chats"), '<div class="tap" style="left:58px;top:46px"></div>'])),
+        ("Add this guide", "Inside the Project tap Add files (the + or paperclip). On an iPhone tap Files, then Downloads, and pick this PDF.",
+         phone(proj, [it("Files"), it(C.get("file_short", name + ".pdf"), True), it("Instructions"), '<div class="tap" style="left:60px;top:66px"></div>'])),
+        ("Paste one message", f"Start a chat inside the Project and paste the starter message below. Claude asks you {len(C['quiz'])} easy questions, one at a time.",
+         phone(proj, [me("Read the PDF in this project. You are my setup helper..."), ai(f"Hi! Question 1 of {len(C['quiz'])}: tell me about your business.")])),
+        ("Save your box", "At the end Claude gives you one box of text. Tap Copy. Go back to the Project screen, tap Instructions, paste it, tap Save. Then start a new chat inside the Project. Done.",
+         phone("Instructions", [it("Paste here", True), it(C.get("rules_heading", "MY RULES") + " ..."), it("Save"), '<div class="tap" style="left:56px;top:96px"></div>'])),
     ]
-    P.append(page('<h2>Set it up <em>once</em></h2><p class="mut">About 15 minutes. Works on your phone. Screens are simplified, your app may look a little different.</p>'
+    P.append(page(f'<h2>Set it up <em>once</em></h2><p class="mut">{e(C.get("setup_time", "About 15 minutes"))}. Works on your phone. When something changes later, Claude gives you an updated box to paste in the same place. Screens are simplified, your app may look a little different.</p>'
                   + "".join(f'<div class="step"><div class="num">{i+1}</div><div class="st" style="flex:1"><h3>{e(a)}</h3><p>{e(b)}</p></div>{ph}</div>' for i, (a, b, ph) in enumerate(steps))
                   + f'<div class="copy" style="margin-top:6px;padding:10px 14px"><div class="mono">Starter message · step 3</div>{pre(C["starter"], 11)}</div>', "SETUP"))
     # 4 words
     W = C["words"]
     P.append(page('<h2>The words <em>you type</em></h2><p class="lead">After setup, open a new chat in your Project and type one of these. That\'s the whole job.</p>'
                   + "".join(f'<div class="word"><div class="pill">{e(w)}</div><div><b>{e(g)}</b><span>{e(x)}</span></div></div>' for w, g, x in W)
-                  + '<div class="card" style="margin-top:14px"><div class="mono">Stuck?</div>Type: I\'m stuck, and describe what you see on your screen. Claude walks you through it.</div>', "YOUR WORDS"))
+                  + '<div class="card" style="margin-top:14px"><div class="mono">Good to know</div>If you see [CHECK: something], Claude needs that info from you. Stuck? Type: I\'m stuck, and describe what you see on your screen.</div>', "YOUR WORDS"))
     # 5 example
     X = C["example"]
     P.append(page(f'''<h2>See it <em>work</em></h2><p class="lead">{e(X["intro"])}</p>
@@ -107,7 +108,7 @@ def build():
     # appendix: for Claude
     P.append(page(f'''<div class="divider"><span class="chip">For Claude, not for you</span><h1>The pages<br><em>Claude reads.</em></h1>
 <p class="lead">You don't need to read anything after this page. Claude reads these when you paste the starter message. They tell it how to set up {e(name)} with you and how to do each job.</p>
-<div class="card" style="margin-top:20px"><span class="tick">✓</span>The 7 questions it will ask you<br><span class="tick">✓</span>The setup steps it follows<br><span class="tick">✓</span>The instructions it saves into your Project</div></div>''', "APPENDIX"))
+<div class="card" style="margin-top:20px"><span class="tick">✓</span>The {len(C["quiz"])} questions it will ask you<br><span class="tick">✓</span>The setup steps it follows<br><span class="tick">✓</span>The instructions it saves into your Project</div></div>''', "APPENDIX"))
     P.append(page(f'<h2>The <em>{len(C["quiz"])} questions</em></h2><p class="mut">Claude asks these one at a time. Real answers make better results.</p>'
                   + "".join(f'<div class="row"><div class="n">{i+1:02d}</div><div><b>{e(a)}.</b> <span class="mut">{e(b)}</span></div></div>' for i, (a, b) in enumerate(C["quiz"])), "QUESTIONS"))
     P.append(page(f'<h2>The <em>Builder</em> prompt</h2><p class="mut">For Claude: setup steps.</p><div class="card"><div class="mono">Builder prompt</div>{pre(C["builder"], C.get("builder_size", 10))}</div>', "BUILDER"))
