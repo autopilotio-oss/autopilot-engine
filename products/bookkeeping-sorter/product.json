@@ -1,0 +1,17 @@
+{
+ "name": "AUTOPILOT.OI Bookkeeping Sorter",
+ "price_cents": 1000,
+ "permalink": "bookkeeping-sorter",
+ "filename": "AUTOPILOT.OI Bookkeeping Sorter.pdf",
+ "description_html": "<p><strong>Your receipts, sorted. No spreadsheets, no AI skills.</strong></p><p>Upload your bank or card statement into the free Claude app, type <strong>sort</strong>, and every transaction lands in a clear business category with totals: supplies, gas, software, ads, personal and more. When it isn't sure, it asks you instead of guessing.</p><p><strong>How it works:</strong> you add the guide to a free Claude Project, paste one message, answer 7 easy questions, then type one word whenever you need it. It drafts; you decide.</p><p><strong>What you type:</strong> sort \u00b7 receipts \u00b7 month \u00b7 year \u00b7 rule</p><p><strong>What you get (13 page guide, PDF):</strong> a setup helper that asks 7 easy questions and sets it up with you in about 15 minutes, tap by tap on your phone, a worked example, a cheat sheet, how to download a statement from your bank, and a monthly checklist.</p><p><strong>You need:</strong> the Claude app (the free plan works), one bank or card statement.</p><p>Not tax, legal or accounting advice: your accountant has the final say. Never upload full card numbers or passwords. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/books-cover.png?v=1",
+ "tags": [
+  "small business",
+  "bookkeeping",
+  "ai",
+  "claude",
+  "taxes"
+ ],
+ "version": 1,
+ "cover_v": 1
+}

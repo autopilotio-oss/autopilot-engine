@@ -1,0 +1,23 @@
+{
+ "name": "AUTOPILOT.OI Owner Toolkit (4 tools)",
+ "price_cents": 2400,
+ "permalink": "owner-toolkit",
+ "filename": "(bundle)",
+ "bundle_of": [
+  "bookkeeping-sorter",
+  "invoice-chaser",
+  "review-desk",
+  "content-week"
+ ],
+ "description_html": "<p><strong>The Owner Toolkit: 4 simple AI helpers for the paperwork that eats your week. $40 separately, $24 here.</strong></p><ul><li><strong>Bookkeeping Sorter:</strong> upload a statement, type sort, every expense in the right category.</li><li><strong>Invoice Chaser:</strong> invoices from job notes and the right reminder for every late customer.</li><li><strong>Review Desk:</strong> replies to every review in your voice, and the text that asks for new ones.</li><li><strong>Content Week:</strong> 5 questions on Sunday, 7 posts for the week.</li></ul><p><strong>What you get:</strong> 4 PDF guides, each with a setup helper, a worked example and a cheat sheet.</p><p><strong>How it works:</strong> add a guide to a free Claude Project, paste one message, answer 7 easy questions, then type one word. Each setup takes about 15 minutes, tap by tap.</p><p><strong>You need:</strong> the Claude app (the free plan works), a bank statement, your payment details and your Google review link.</p><p>It does not send messages, post, file taxes or take payments.</p><p>Drafts only: you send and post everything. Not tax, legal or accounting advice. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/toolkit-cover.png?v=1",
+ "tags": [
+  "small business",
+  "ai",
+  "claude",
+  "bookkeeping",
+  "invoices"
+ ],
+ "version": 1,
+ "cover_v": 1
+}

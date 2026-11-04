@@ -13,7 +13,7 @@ def head(title, desc, path, img="autopilot-cover.png"):  # share image: the prod
 <link rel="stylesheet" href="/assets/site.css?v=3"></head><body>"""
 def nav(on):
     a = lambda href, t, k: f'<a href="{href}"{" class=\"on\"" if k == on else ""}>{t}</a>'
-    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/marketplace/", "Marketplace", "m")}{a("/workspace/", "Workspace", "w")}{a("/brain/", "Free starter", "c")}</div></div></div>'
+    return f'<div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links">{a("/#tools", "Tools", "m")}{a("/front-desk/", "Front Desk", "f")}{a("/brain/", "Free starter", "c")}</div></div></div>'
 FOOT = """<div class="foot"><div class="wrap"><div>AUTOPILOT.OI · AI for the front office<br>Independent. Not affiliated with Anthropic. Claude is a product of Anthropic.</div>
 <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/marketplace/">Marketplace</a><a href="/workspace/">Workspace</a><a href="/brain/">Free starter</a><a href="/library/">Library</a><a href="https://www.instagram.com/autopilot.oi/">Instagram</a></div></div></div>
 <script src="/assets/ap.js" defer></script></body></html>"""
@@ -30,32 +30,53 @@ INBOX = """<div class="ui"><div class="bar"><span>Leads · today</span><span>Pro
 <div class="dr">A full SUV detail is $250, about 3 hours, and we come to you. I have Saturday at 9 or 1. Want me to hold one?</div><div class="acts"><span>Edit</span><span class="ok">Approve & send</span></div></div>
 <div class="label" style="margin-top:12px;text-align:center">Example business. Workspace is in development.</div></div>"""
 
+TOOLS = [
+ ("Bookkeeping Sorter", "10", "bookkeeping-sorter", "books", "Upload your bank statement, type sort. Every expense in the right category, with totals for tax time.", "sort"),
+ ("Invoice Chaser", "10", "invoice-chaser", "invoice", "Invoices from your job notes, and the right reminder for every customer who hasn't paid.", "chase Dave"),
+ ("Review Desk", "10", "review-desk", "reviews", "Paste a review, type reply. Warm thank yous, calm answers to angry ones, in your voice.", "reply"),
+ ("Content Week", "10", "content-week", "content", "Answer 5 questions on Sunday. Get 7 posts: what to shoot, the caption, the hashtags.", "week"),
+]
+def tool_cards():
+    c = "".join(f'<div class="card prod"><img src="/store/{im}-cover.png" alt="{e(n)}" style="width:100%;border-radius:12px;margin-bottom:14px"><h3 style="font-size:23px">{e(n)}</h3><div class="price">${p}<small>one time</small></div><p>{e(d)}</p><p class="label" style="margin-top:6px">YOU TYPE: {e(cmd)}</p><div style="display:flex;gap:10px;margin-top:auto;padding-top:12px"><a class="btn buy" style="flex:1;height:48px" href="{GR}{perm}">Get it · ${p}</a></div></div>' for n, p, perm, im, d, cmd in TOOLS)
+    return c
 def home():
-    return head("AUTOPILOT.OI · AI for the front office", "Setup kits you install in your own Claude account, and Workspace, the software we're building to answer every lead for you.", "/") + nav("") + f"""
-<div class="wrap hero"><div class="k"><b>AUTOPILOT.OI</b> · AI for the front office</div>
-<h1 style="margin:18px 0 22px">Your front office,<br><em>handled.</em> You stay in control.</h1>
-<p class="lead">Setup kits that install AI into your business today, and Workspace, the software we're building to answer every lead while you work.</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn" href="/marketplace/">Browse the Marketplace</a><a class="btn ghost" href="/workspace/">See Workspace</a></div></div>
-<div class="wrap" style="padding-bottom:84px"><div class="grid2">
-<a class="card door" href="/marketplace/"><span class="tagline live">Available now</span><h2 style="font-size:34px">Marketplace</h2><p>Guided setup kits for your own Claude account: a front desk that drafts replies and quotes, an office of scheduled agents, a week of content. One time price, 30 day refund.</p><span class="label">SETUP KITS · FROM $10</span><span class="go">Browse kits →</span></a>
-<a class="card door" href="/workspace/"><span class="tagline dev">In development · founding spots open</span><h2 style="font-size:34px">Workspace</h2><p>Software that catches every new lead, answers within a minute, drafts the reply and quote, and chases quiet quotes. One inbox you approve from your phone.</p><span class="label">SOFTWARE · $99 A MONTH PLANNED</span><span class="go">See Workspace →</span></a></div></div>
-<div class="sec"><div class="wrap"><div class="k" style="margin-bottom:14px">How we work</div><h2 style="margin-bottom:30px">Built to be <em>trusted</em> with real customers.</h2>
-<div class="grid3"><div class="card"><h3>You approve what goes out</h3><p style="margin-top:10px">Our kits draft. Workspace drafts too, and only sends the one acknowledgment you write yourself.</p></div>
-<div class="card"><h3>Clear labels</h3><p style="margin-top:10px">Every product says what it is: a setup kit that runs in your Claude account, or software we run. Nothing pretends to be more.</p></div>
-<div class="card"><h3>Your prices, your rules</h3><p style="margin-top:10px">Everything starts from a short interview about your business. When information is missing it asks, instead of guessing.</p></div></div></div></div>
-<div class="sec"><div class="wrap grid2" style="align-items:center"><div><div class="k" style="margin-bottom:14px">Free · 2 minutes</div><h2>Where are your leads <em>leaking?</em></h2><p class="lead" style="margin-top:14px">Answer 10 questions and get your free Front Desk Starter prompt.</p><a class="btn" style="margin-top:24px" href="/brain/">Start the free check</a></div>{INBOX}</div></div>""" + FOOT
+    return head("AUTOPILOT.OI · AI helpers for busy business owners. No tech skills.", "Simple AI helpers for owners who have never used AI: bookkeeping, invoices, reviews, posts and customer replies. Copy one message, answer a few questions. From $10.", "/", "toolkit-cover.png") + nav("") + f"""
+<div class="wrap hero"><div class="k"><b>AUTOPILOT.OI</b> · for owners who have never used AI</div>
+<h1 style="margin:18px 0 22px">You didn't start a business<br>to do <em>paperwork at midnight.</em></h1>
+<p class="lead">Simple AI helpers for the busywork that eats your week: bookkeeping, invoices, reviews, posts and customer replies. Copy one message, answer a few easy questions, and type one word. It drafts. You stay in charge. From $10.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#how">How it works</a></div></div>
+<div class="sec" id="how"><div class="wrap"><div class="k" style="margin-bottom:14px">Never used AI? Perfect.</div><h2 style="margin-bottom:30px">Three steps. <em>On your phone.</em></h2>
+<div class="grid3"><div class="card"><h3>1. Get the free Claude app</h3><p style="margin-top:10px">Claude is an AI assistant, like a smart helper you text. The free plan works. Make a free account at claude.ai.</p></div>
+<div class="card"><h3>2. Paste one message</h3><p style="margin-top:10px">Your tool comes with a guide. You copy one message into Claude and it asks you 7 easy questions about your business. About 15 minutes, tap by tap.</p></div>
+<div class="card"><h3>3. Type one word</h3><p style="margin-top:10px">sort, chase, reply, week. It does the busywork from your real prices and rules. You read it and send it yourself.</p></div></div></div></div>
+<div class="sec" id="tools"><div class="wrap"><div class="k" style="margin-bottom:14px">The tools</div><h2 style="margin-bottom:30px">Pick the job you hate most. <em>$10.</em></h2>
+<div class="grid2">{tool_cards()}</div>
+<div class="card prod" style="margin-top:22px;border-color:rgba(198,255,61,.45)"><span class="tagline live">Best value</span><h3 style="font-size:28px;margin-top:10px">The Owner Toolkit: all 4 tools</h3><div class="price">$24<small>one time · $40 separately</small></div><p>Bookkeeping Sorter, Invoice Chaser, Review Desk and Content Week. Each has its own setup helper.</p><a class="btn buy" style="margin-top:14px;height:52px" href="{GR}owner-toolkit">Get all 4 · $24</a></div>
+<div class="card prod" style="margin-top:22px"><span class="tagline live">Most popular for service businesses</span><h3 style="font-size:28px;margin-top:10px">Front Desk Kit</h3><div class="price">$39<small>one time</small></div><p>Customer replies, quotes and follow ups, drafted in your voice from your real prices. Built for detailers, cleaners, landscapers and every business that answers texts all day.</p><div style="display:flex;gap:10px;margin-top:14px"><a class="btn buy" style="flex:1;height:52px" href="{GR}autopilot">Get it · $39</a><a class="btn ghost" style="height:52px" href="/front-desk/">Details</a></div></div></div></div>
+<div class="sec"><div class="wrap"><h2 style="margin-bottom:16px">Questions</h2>
+<details><summary>What is Claude?</summary><p>Claude is an AI assistant made by Anthropic. You type to it like a text conversation and it writes back. Our tools are guides that set Claude up to do one job for your business. We're independent and not affiliated with Anthropic.</p></details>
+<details><summary>Do I have to pay for Claude?</summary><p>No. Every tool works on the free Claude plan. A paid plan gives you more room if you use it a lot.</p></details>
+<details><summary>I'm not good with tech. Can I really do this?</summary><p>That's who we built these for. The guide walks you through every tap, and if you get stuck you type "I'm stuck" and describe your screen. Still stuck? Reply to your receipt email and we'll help.</p></details>
+<details><summary>Does it send messages or post for me?</summary><p>No. Everything is a draft. You read it, then you send or post it yourself. Nothing goes out without you.</p></details>
+<details><summary>Is my information safe?</summary><p>Never paste card numbers, bank account numbers or passwords into any AI. Black out full account numbers on statements before you upload. Your chats live in your own Claude account.</p></details>
+<details><summary>What if it doesn't work for me?</summary><p>30 day refund. Reply to your Gumroad receipt and you get your money back.</p></details></div></div>
+<div class="sec"><div class="wrap grid2" style="align-items:center"><div><span class="tagline dev">Coming soon</span><h2 style="margin:16px 0 14px">Want it done <em>for you?</em></h2><p class="lead">We're building a done for you setup and Workspace, software that answers new leads while you're on a job. Not on sale yet. Join the list and you hear first.</p><a class="btn ghost" style="margin-top:24px" href="/workspace/#list">Join the waitlist</a></div>
+<div class="card"><div class="k" style="margin-bottom:10px">Free · 2 minutes</div><h3>Not ready to buy?</h3><p style="margin-top:10px">Get the free Front Desk Starter: one message that turns Claude into a front desk for your business.</p><a class="btn" style="margin-top:16px" href="/brain/">Get the free starter</a></div></div></div>""" + FOOT
 
 PRODUCTS = [
  ("Front Desk Kit", "39", "/front-desk/", GR + "autopilot", "Customer replies, quotes and follow ups, drafted in your voice from your real prices.", ["15 question business interview", "Reply, quote, chase, review, FAQ, plan week", "3 extra systems built for your business", "Free Claude plan works"]),
- ("Office Autopilot", "79", "/office-autopilot/", GR + "workspace", "Seven scheduled Claude agents on your Gmail and Calendar: inbox, brief, bookings, follow ups.", ["Morning brief and inbox drafts", "Booking, follow up, invoice, review agents", "50 phone commands", "Needs a paid Claude plan"]),
- ("Video Agent", "10", "/store/video/", GR + "video-agent", "One idea into a week of short videos: hooks, scripts and a cut by cut edit plan.", ["5 hooks per idea", "Scripts in your voice", "CapCut edit plans", "Weekly numbers review"]),
+ ("Bookkeeping Sorter", "10", "/#tools", GR + "bookkeeping-sorter", "Upload a statement, type sort. Every expense in the right category.", ["Setup helper, tap by tap", "Monthly and yearly totals", "Asks when it isn't sure", "Free Claude plan works"]),
+ ("Invoice Chaser", "10", "/#tools", GR + "invoice-chaser", "Invoices from job notes and the right reminder for every late customer.", ["Setup helper, tap by tap", "Owed list", "Friendly to firm reminders", "Free Claude plan works"]),
+ ("Review Desk", "10", "/#tools", GR + "review-desk", "Replies to every review in your voice, and the text that asks for new ones.", ["Setup helper, tap by tap", "Calm replies to bad reviews", "Never fake reviews", "Free Claude plan works"]),
+ ("Content Week", "10", "/#tools", GR + "content-week", "5 questions on Sunday, 7 posts for the week.", ["Setup helper, tap by tap", "What to shoot, captions, hashtags", "Replies to comments", "Free Claude plan works"]),
+ ("Owner Toolkit", "24", "/#tools", GR + "owner-toolkit", "All 4 tools: bookkeeping, invoices, reviews and posts. $40 separately.", ["4 setup helpers", "Works in the free Claude app", "You send everything", "30 day refund"]),
 ]
-SOON = [("Review Engine", "Review requests, replies to every review and Google Business Profile posts."), ("Local Content Week", "A week of videos and posts made for a local service business."), ("Owner's Bundle", "The core kits in one Project with one setup.")]
+SOON = [("Done for you setup", "We set up your tools with your real prices and test them on your real messages."), ("Workspace", "Software that answers new leads while you are on a job. In development."), ("More tools", "Tell us the job you hate most. Reply to any receipt.")]
 def marketplace():
     cards = "".join(f'<div class="card prod"><span class="tagline live">Setup kit</span><h3 style="font-size:23px">{e(n)}</h3><div class="price">${p}<small>one time</small></div><p>{e(d)}</p><ul>{"".join(f"<li>{e(x)}</li>" for x in li)}</ul><div style="display:flex;gap:10px;margin-top:auto;padding-top:10px"><a class="btn buy" style="flex:1;height:48px" href="{g}">Get it · ${p}</a><a class="btn ghost" style="height:48px" href="{u}">Details</a></div></div>' for n, p, u, g, d, li in PRODUCTS)
     soon = "".join(f'<div class="card"><span class="tagline dev">Coming soon</span><h3 style="margin:14px 0 8px">{e(n)}</h3><p>{e(d)}</p></div>' for n, d in SOON)
     return head("Marketplace · AI setup kits for small businesses · AUTOPILOT.OI", "Guided setup kits that install AI into your own Claude account. They draft; you decide and send. One time price, 30 day refund.", "/marketplace/") + nav("m") + f"""
-<div class="wrap hero"><div class="k"><b>Marketplace</b> · setup kits</div><h1 style="margin:18px 0 22px">Install AI into your business,<br><em>in one evening.</em></h1>
+<div class="wrap hero"><div class="k"><b>Marketplace</b> · setup kits</div><h1 style="margin:18px 0 22px">Simple AI tools.<br><em>No tech skills.</em></h1>
 <p class="lead">Each kit is a guided setup for your own Claude account, built around a short interview about your business. It drafts; you decide and send. One time price. Not working for you within 30 days? Reply to your receipt for a full refund.</p></div>
 <div class="wrap" style="padding-bottom:70px"><div class="grid3">{cards}</div></div>
 <div class="sec"><div class="wrap"><div class="k" style="margin-bottom:14px">Next in the Marketplace</div><div class="grid3">{soon}</div></div></div>

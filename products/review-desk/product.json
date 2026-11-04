@@ -1,0 +1,17 @@
+{
+ "name": "AUTOPILOT.OI Review Desk",
+ "price_cents": 1000,
+ "permalink": "review-desk",
+ "filename": "AUTOPILOT.OI Review Desk.pdf",
+ "description_html": "<p><strong>Every review, answered. In your voice.</strong></p><p>Paste a review, type <strong>reply</strong>. Good reviews get a warm thank you. Bad ones get a calm, professional answer that won't make things worse, plus a private note of what to check first. It also writes the short text that asks your customers for a review.</p><p><strong>How it works:</strong> you add the guide to a free Claude Project, paste one message, answer 7 easy questions, then type one word whenever you need it. It drafts; you decide.</p><p><strong>What you type:</strong> reply \u00b7 bad \u00b7 ask \u00b7 batch \u00b7 week</p><p><strong>What you get (13 page guide, PDF):</strong> a setup helper that asks 7 easy questions and sets it up with you in about 15 minutes, tap by tap on your phone, how to find your Google review link, a worked example and a cheat sheet.</p><p><strong>You need:</strong> the Claude app (the free plan works) and your Google review link.</p><p>Drafts only: you post every reply. It never writes fake reviews or offers rewards for reviews. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic or Google. Claude is a product of Anthropic.</em></p>",
+ "cover_url": "https://autopilotoi.app/store/reviews-cover.png?v=1",
+ "tags": [
+  "small business",
+  "google reviews",
+  "ai",
+  "claude",
+  "reputation"
+ ],
+ "version": 1,
+ "cover_v": 1
+}
