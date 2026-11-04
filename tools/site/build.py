@@ -69,8 +69,8 @@ def home():
     return head("AUTOPILOT.OI · $9.99 AI tools for the paperwork you put off", "Four simple tools for small business owners: bookkeeping, invoices, reviews and posts. They run in the free Claude app and draft the work; you check and send. $9.99 each, one payment, 30 day refund.", "/", "toolkit-cover.png") + nav("") + f"""
 {HSTYLE}
 <div class="wrap hero hgrid"><div><div class="k">For small business owners</div>
-<h1 style="margin:22px 0 26px">Hate paperwork?<br><em>$9.99 fixes it.</em></h1>
-<p class="lead">Unpaid invoices, ignored reviews, messy receipts, nothing to post. Each tool fixes one of these in the free Claude app. You check every draft and send it yourself.</p>
+<h1 style="margin:22px 0 26px">Easy set up AI agents <em>that make your life easier.</em></h1>
+<p class="lead">$9.99 each. Unpaid invoices, ignored reviews, messy receipts, nothing to post: each agent takes one of these off your plate in the free Claude app. You check every draft and send it yourself.</p>
 <div class="row" style="margin-top:34px"><a class="btn buy" href="#tools">See the tools</a><a class="btn ghost" href="#free">Try one free</a></div></div>
 <div class="phn"><div class="t"><span>Bookkeeping Sorter</span><span>Example</span></div><div class="me">sort · october.pdf</div>
 <div class="ai"><b>October, sorted</b><div class="r"><span>Supplies</span><span>$612</span></div><div class="r"><span>Gas and car</span><span>$388</span></div><div class="r"><span>Software</span><span>$74</span></div><div class="r"><span>Advertising</span><span>$150</span></div><div class="r"><span>Personal</span><span>$219</span></div>
