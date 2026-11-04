@@ -1,9 +1,9 @@
 {
- "checked": "2026-11-03T22:30:12Z",
+ "checked": "2026-11-04T01:47:09Z",
  "products": [
   {
-   "permalink": "all-money-agents",
-   "name": "AUTOPILOT.OI All 5 Money Agents",
+   "permalink": "autopilot",
+   "name": "Front Desk Kit by AUTOPILOT.OI",
    "published": true,
    "price_cents": 3900,
    "currency": "usd",
@@ -11,10 +11,19 @@
    "deleted": false
   },
   {
-   "permalink": "autopilot",
-   "name": "Front Desk Kit by AUTOPILOT.OI",
+   "permalink": "bookkeeping-sorter",
+   "name": "AUTOPILOT.OI Bookkeeping Sorter",
    "published": true,
-   "price_cents": 3900,
+   "price_cents": 1000,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
+  {
+   "permalink": "content-week",
+   "name": "AUTOPILOT.OI Content Week",
+   "published": true,
+   "price_cents": 1000,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
@@ -29,8 +38,8 @@
    "deleted": false
   },
   {
-   "permalink": "sell-agent",
-   "name": "AUTOPILOT.OI Sales Agent",
+   "permalink": "invoice-chaser",
+   "name": "AUTOPILOT.OI Invoice Chaser",
    "published": true,
    "price_cents": 1000,
    "currency": "usd",
@@ -38,17 +47,17 @@
    "deleted": false
   },
   {
-   "permalink": "shop-agent",
-   "name": "AUTOPILOT.OI Shop Agent",
+   "permalink": "owner-toolkit",
+   "name": "AUTOPILOT.OI Owner Toolkit (4 tools)",
    "published": true,
-   "price_cents": 1000,
+   "price_cents": 2400,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
   },
   {
-   "permalink": "subs-agent",
-   "name": "AUTOPILOT.OI Subscription Agent",
+   "permalink": "review-desk",
+   "name": "AUTOPILOT.OI Review Desk",
    "published": true,
    "price_cents": 1000,
    "currency": "usd",
@@ -69,15 +78,6 @@
    "name": "AUTOPILOT.OI Video Agent",
    "published": true,
    "price_cents": 1000,
-   "currency": "usd",
-   "sales_count": 0,
-   "deleted": false
-  },
-  {
-   "permalink": "workspace",
-   "name": "Office Autopilot by AUTOPILOT.OI",
-   "published": true,
-   "price_cents": 7900,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false

@@ -60,6 +60,46 @@
    "managed_by": "products/"
   },
   {
+   "offer_id": "bookkeeping_sorter",
+   "permalink": "bookkeeping-sorter",
+   "name": "Bookkeeping Sorter",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/bookkeeping-sorter",
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "/#tools",
+     "keyword": null,
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "content_week",
+   "permalink": "content-week",
+   "name": "Content Week",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/content-week",
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "/#tools",
+     "keyword": null,
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
    "offer_id": "credit_agent",
    "permalink": "credit-agent",
    "name": "Credit Agent",
@@ -120,6 +160,26 @@
    "managed_by": "products/"
   },
   {
+   "offer_id": "invoice_chaser",
+   "permalink": "invoice-chaser",
+   "name": "Invoice Chaser",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/invoice-chaser",
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "/#tools",
+     "keyword": null,
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
    "offer_id": "lower_agent",
    "permalink": "lower-agent",
    "name": "Lower Bills Agent",
@@ -143,6 +203,31 @@
    "status": "retired",
    "checkout_url": "https://autopilotoi.gumroad.com/l/money-agents",
    "guides": [],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "owner_toolkit",
+   "permalink": "owner-toolkit",
+   "name": "Owner Toolkit (4 tools)",
+   "price_cents": 2400,
+   "currency": "USD",
+   "kind": "bundle",
+   "components": [
+    "bookkeeping_sorter",
+    "invoice_chaser",
+    "review_desk",
+    "content_week"
+   ],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/owner-toolkit",
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "/#tools",
+     "keyword": null,
+     "paid": true
+    }
+   ],
    "managed_by": "products/"
   },
   {
@@ -180,6 +265,26 @@
      "guide": "refund",
      "path": "g/refund/",
      "keyword": "REFUND",
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
+   "offer_id": "review_desk",
+   "permalink": "review-desk",
+   "name": "Review Desk",
+   "price_cents": 1000,
+   "currency": "USD",
+   "kind": "kit",
+   "components": [],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/review-desk",
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "/#tools",
+     "keyword": null,
      "paid": true
     }
    ],
@@ -414,16 +519,27 @@
    "links": [
     "front-desk/"
    ]
+  },
+  {
+   "keyword": "TOOLS",
+   "links": [
+    ""
+   ]
   }
  ],
  "live": [
   "all-money-agents",
   "autopilot",
   "bill-agent",
+  "bookkeeping-sorter",
+  "content-week",
   "debt-agent",
   "deposit-agent",
+  "invoice-chaser",
+  "owner-toolkit",
   "raise-agent",
   "refund-agent",
+  "review-desk",
   "sell-agent",
   "shop-agent",
   "subs-agent",
