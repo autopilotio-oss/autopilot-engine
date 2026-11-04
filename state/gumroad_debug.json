@@ -13,31 +13,6 @@
   "{'success': True, 'product': {'name': 'Front Desk Kit by AUTOPILOT.OI', 'description': \"<p><strong>Every customer, answered in your voice.</strong></p><p>A setup kit you install in your own Claude account. Its agent interviews you for about 15 minutes, learns your prices, your rules and how you talk"
  ],
  [
-  "update",
-  "bookkeeping-sorter",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Bookkeeping Sorter', 'description': \"<p><strong>Your receipts, sorted. No spreadsheets, no AI skills.</strong></p><p>Upload your bank or card statement into the free Claude app, type <strong>sort</strong>, and every transaction lands in a clear bus"
- ],
- [
-  "update",
-  "content-week",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Content Week', 'description': '<p><strong>A week of posts. One chat.</strong></p><p>Every Sunday, answer 5 quick questions about your week. Get 7 posts back: what to photograph, the caption and local hashtags, in your voice, about your real work. N"
- ],
- [
-  "update",
-  "invoice-chaser",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Invoice Chaser', 'description': '<p><strong>Get paid. No awkward texts.</strong></p><p>Tell it about a job and get a clean invoice. Tell it who owes you and it keeps the list, then writes the right reminder for how late they are: friendly first, fi"
- ],
- [
-  "update",
-  "owner-toolkit",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Owner Toolkit (4 tools)', 'description': '<p><strong>The Owner Toolkit: 4 simple AI helpers for the paperwork that eats your week. $40 separately, $24 here.</strong></p><ul>\\n<li>\\n<strong>Bookkeeping Sorter:</strong> upload a statement, type sort,"
- ],
- [
-  "update",
-  "review-desk",
-  "{'success': True, 'product': {'name': 'AUTOPILOT.OI Review Desk', 'description': \"<p><strong>Every review, answered. In your voice.</strong></p><p>Paste a review, type <strong>reply</strong>. Good reviews get a warm thank you. Bad ones get a calm, professional answer that won't make things worse, pl"
- ],
- [
   "covers",
   "autopilot",
   [
