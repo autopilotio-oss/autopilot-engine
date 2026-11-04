@@ -24,18 +24,15 @@
     ]
   ],
   "captions": {
-    "ig": "Sent a quote and heard nothing? No reply is not always a no. People get busy.\n\nThe 3 follow ups, without being pushy:\nDay 2: resend the job and price, offer one real time.\nDay 5: ask if anything on the quote is unclear, or offer a smaller option.\nLast one: close the loop and leave the door open.\nThen stop. Two or three is plenty.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free Front Desk Starter: replies to customers in your voice. It drafts, you send.\n\nSources: Housecall Pro, Jobber, FieldMotion.\n\n#smallbusiness #contractor #customerservice #claudeai #smallbusinessowner",
-    "tiktok": {
-      "title": "Quote sent, no reply? 3 follow ups that win the job back",
-      "caption": "Quote sent, no reply? 3 follow ups that win the job back\n\nDay 2: make yes easy. Day 5: ask what is in the way. Last one: close the loop. Then stop.\n\nFree Front Desk Starter: link in bio. It drafts replies in your voice, you send.\n\n#smallbusiness #contractor #claudeai"
-    },
+    "ig": "Sent a quote and heard nothing? No reply is not always a no. People get busy.\n\nThe 3 follow ups, without being pushy:\nDay 2: resend the job and price, offer one real time.\nDay 5: ask if anything on the quote is unclear, or offer a smaller option.\nLast one: close the loop and leave the door open.\nThen stop. Two or three is plenty.\n\nSample business shown is made up.\n\nComment AGENTS and we will DM you the free starter: your first AI helper in 10 minutes. Works on the free Claude plan.\n\nSources: Housecall Pro, Jobber, FieldMotion.\n\n#smallbusiness #contractor #customerservice #claudeai #smallbusinessowner",
     "threads": "Sent a quote and heard nothing? It is not always a no.\n\nDay 2: resend the job and price, offer one real time.\nDay 5: ask what is in the way, or offer a smaller option.\nLast one: close the loop, door open.\nThen stop. Two or three is plenty.\n\nFull guide: https://autopilotoi.app/guides/follow-up-on-a-quote/?utm_source=threads&utm_content=howto_quote_followup",
     "x": "Quote sent, no reply? Not always a no.\n\nDay 2: make yes easy. Day 5: ask what is in the way. Last one: close the loop. Then stop.\n\nGuide: https://autopilotoi.app/guides/follow-up-on-a-quote/?utm_source=x&utm_content=howto_quote_followup"
   },
   "built_at": "2026-11-03T12:47Z",
   "recheck": {
-    "at": "2026-11-04",
-    "result": "still valid",
-    "notes": "Bank full (6). Oldest bank item re-checked: CTA is AGENTS + Free Front Desk Starter gift per Front Desk focus override, no LAUNCH30, no parked agents; guide, /brain/, /front-desk/ ($39) and /free/ (leads with Front Desk Starter) pages present in docs/ and only the nav changed in b46da9e; 'free plan works' still stated in the guide and /brain/. Sourced facts are evergreen. Live HTTP check not possible (autopilotoi.app blocked by this sandbox proxy)."
-  }
+    "at": "2026-11-04T13:40Z",
+    "result": "re-pointed",
+    "notes": "Bank full (6). Oldest bank item re-checked under the Nov 4 owner tools override: sourced follow up facts still evergreen; CTA sold only the old Front Desk Starter funnel, so the conversion card gift and IG caption were re-pointed to 'Free starter: your first AI helper in 10 minutes' (keyword AGENTS, TOOLS not yet in config/manychat.json confirmed); tool set to Front Desk Kit; TikTok caption removed (carousels go to IG, Threads, X only). Rebuilt with CAR_STILL=1: QA PASS, card read on phone size. Guide and /front-desk/ present in docs/; live HTTP check not possible from this sandbox."
+  },
+  "tool": "Front Desk Kit ($39, https://autopilotoi.app/front-desk/), free starter (/#free) as entry"
 }
