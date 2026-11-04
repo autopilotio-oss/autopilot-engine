@@ -37,10 +37,10 @@ def page(g, head, nav, foot):
     steps = "".join(f'<div class="card"><h3>{e(a)}</h3><p style="margin-top:8px">{e(b)}</p></div>' for a, b in g["steps"])
     ex = "".join(f'<div class="ui"><div class="bar"><span>Example</span><span>Example business</span></div><div class="msg">{e(q)}</div><div class="draft"><div class="label" style="margin-bottom:8px">REPLY</div><div class="dr">{e(a)}</div></div></div>' for q, a in g["ex"])
     return head(g["title"] + " · AUTOPILOT.OI", g["desc"], f"/guides/{g['slug']}/") + nav("") + f"""
-<div class="wrap hero" style="max-width:820px"><div class="k"><b>Guide</b> · {e(g['k'])}</div><h1 style="margin:18px 0 20px;font-size:clamp(34px,5.4vw,54px)">{e(g['title'])}</h1><p class="lead">{e(g['lead'])}</p></div>
-<div class="wrap" style="max-width:820px;padding-bottom:60px"><div class="steps" style="grid-template-columns:1fr 1fr">{steps}</div>
-<h2 style="margin:50px 0 18px;font-size:30px">An example</h2>{ex}
-<h2 style="margin:50px 0 12px;font-size:30px">Do it free with Claude</h2><p class="lead" style="font-size:17px">Paste this into Claude (the free plan works) and fill the brackets.</p>
+<div class="wrap hero" style="max-width:900px"><div class="k"><b>●</b> Guide · {e(g['k'])}</div><h1 class="s" style="margin:22px 0 24px">{e(g['title'])}</h1><p class="lead">{e(g['lead'])}</p></div>
+<div class="wrap" style="max-width:900px;padding-bottom:80px"><div class="steps s2">{steps}</div>
+<h2 style="margin:64px 0 22px;font-size:clamp(24px,3.4vw,36px)">An example</h2>{ex}
+<h2 style="margin:64px 0 14px;font-size:clamp(24px,3.4vw,36px)">Do it free with Claude</h2><p class="lead" style="font-size:17px">Paste this into Claude (the free plan works) and fill the brackets.</p>
 <div class="card" style="margin-top:14px"><p style="font:500 15px/1.6 ui-monospace,Menlo,monospace;color:#e3e6dc;white-space:pre-wrap">{e(g['prompt'])}</p></div>
 <div class="card" style="margin-top:40px;border-color:rgba(212,255,58,.4)"><div class="k" style="margin-bottom:10px">Set it up once</div><h3 style="font-size:22px">Don't want to paste your prices every time?</h3>
 <p style="margin:10px 0 18px">The Front Desk Kit saves your prices, rules and voice in your own Claude account and drafts replies, quotes and follow ups from them. It drafts; you send. $39 one time, 30 day refund.</p>
