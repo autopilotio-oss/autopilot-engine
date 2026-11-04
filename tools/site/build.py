@@ -31,7 +31,7 @@ INBOX = """<div class="ui"><div class="bar"><span>Leads · today</span><span>Pro
 <div class="label" style="margin-top:12px;text-align:center">Example business. Workspace is in development.</div></div>"""
 
 TOOLS = [
- ("Bookkeeping Sorter", "10", "bookkeeping-sorter", "books", "Upload your bank statement, type sort. Every expense in the right category, with totals for tax time.", "sort", "A shoebox of receipts in April", "Totals every month, one table for your accountant"),
+ ("Bookkeeping Sorter", "10", "bookkeeping-sorter", "books", "Upload your bank statement, type sort. Each expense sorted into a category with totals, and a quick question when it isn't sure.", "sort", "A shoebox of receipts in April", "Totals every month, one table for your accountant"),
  ("Invoice Chaser", "10", "invoice-chaser", "invoice", "Invoices from your job notes, and the right reminder for every customer who hasn't paid.", "chase Dave", "Staring at a text you don't want to send", "A kind reminder, ready to send"),
  ("Review Desk", "10", "review-desk", "reviews", "Paste a review, type reply. Warm thank yous, calm answers to angry ones, in your voice.", "reply", "Reviews sitting unanswered for months", "Every review answered in your voice"),
  ("Content Week", "10", "content-week", "content", "Answer 5 questions on Sunday. Get 7 posts: what to shoot, the caption, the hashtags.", "week", "\"What do I even post?\"", "7 posts planned from your real week"),
@@ -85,7 +85,7 @@ Keep it warm and real, 2 to 3 sentences. Don't make up any details.</div></div><
 
 PRODUCTS = [
  ("Front Desk Kit", "39", "/front-desk/", GR + "autopilot", "Customer replies, quotes and follow ups, drafted in your voice from your real prices.", ["15 question business interview", "Reply, quote, chase, review, FAQ, plan week", "3 extra systems built for your business", "Free Claude plan works"]),
- ("Bookkeeping Sorter", "10", "/#tools", GR + "bookkeeping-sorter", "Upload a statement, type sort. Every expense in the right category.", ["Setup helper, tap by tap", "Monthly and yearly totals", "Asks when it isn't sure", "Free Claude plan works"]),
+ ("Bookkeeping Sorter", "10", "/#tools", GR + "bookkeeping-sorter", "Upload a statement, type sort. Each expense sorted into a category, with totals.", ["Setup helper, tap by tap", "Monthly and yearly totals", "Asks when it isn't sure", "Free Claude plan works"]),
  ("Invoice Chaser", "10", "/#tools", GR + "invoice-chaser", "Invoices from job notes and the right reminder for every late customer.", ["Setup helper, tap by tap", "Owed list", "Friendly to firm reminders", "Free Claude plan works"]),
  ("Review Desk", "10", "/#tools", GR + "review-desk", "Replies to every review in your voice, and the text that asks for new ones.", ["Setup helper, tap by tap", "Calm replies to bad reviews", "Never fake reviews", "Free Claude plan works"]),
  ("Content Week", "10", "/#tools", GR + "content-week", "5 questions on Sunday, 7 posts for the week.", ["Setup helper, tap by tap", "What to shoot, captions, hashtags", "Replies to comments", "Free Claude plan works"]),
