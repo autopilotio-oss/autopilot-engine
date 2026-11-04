@@ -108,15 +108,30 @@ def check_manifest(fetch=http_get, root=ROOT):
 
 
 def approved_post_uuids(root=ROOT):
-    """Metricool uuids and ids of posts Seb approved (factory reel queue, incl. the campaign standing approval)."""
+    """Metricool uuids and ids of posts Seb approved: factory reels, carousels, and the Daily Manager's
+    Threads and X batches (queue/threads, queue/x; Seb Nov 4 2026 "treads should be mass posting").
+    A file may hold {approval, posts:[...]}, or a list of posts each with its own approval."""
     import glob
     ids = set()
-    for f in glob.glob(os.path.join(root, "queue", "freel", "*.json")) + glob.glob(os.path.join(root, "queue", "car", "*.json")):
-        q = json.load(open(f))
-        if not (q.get("approval") or {}).get("quote"): continue
-        for p in q.get("posts", []):
-            for k in ("uuid", "metricool_id"):
-                if p.get(k) is not None: ids.add(str(p[k]))
+    files = []
+    for d in ("freel", "car", "threads", "x", "tiktok"):
+        files += glob.glob(os.path.join(root, "queue", d, "*.json"))
+    def add(p):
+        for k in ("uuid", "metricool_id", "id_metricool"):
+            if isinstance(p, dict) and p.get(k) is not None: ids.add(str(p[k]))
+    for f in files:
+        try: q = json.load(open(f))
+        except Exception: continue
+        items = q if isinstance(q, list) else [q]
+        for it in items:
+            if not isinstance(it, dict): continue
+            ok = bool((it.get("approval") or {}).get("quote"))
+            posts = it.get("posts")
+            if isinstance(posts, list):
+                for p in posts:
+                    if ok or (isinstance(p, dict) and (p.get("approval") or {}).get("quote")): add(p)
+            elif ok:
+                add(it)
     try:
         for v in json.load(open(os.path.join(root, "viral", "staged.json"))).values(): ids.add(str(v.get("metricool_uuid")))
     except Exception: pass
