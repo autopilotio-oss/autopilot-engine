@@ -1,5 +1,24 @@
 # Next actions (handoff between runs)
 
+## Awaiting approval: guide fixes
+From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the live text is accurate, just incomplete), so tools/guides/guides.py was not edited. On Seb's APPROVED, apply in tools/guides/guides.py, then run python3 tools/guides/build.py and python3 tools/guides/og.py. Sources are in TIKTOK_SHOP_PLAYBOOK.md section 1b/1c.
+
+1. G["shop"], step "Pick your path" (Extended Pilot, Academy Creator Eligibility Policy 09/25/2026)
+```diff
+-... no campaigns, and only products from shops in good standing. Requirements change, so check the current rules in the app.
++... no campaigns, and only products from shops in good standing. If TikTok flags your account, limits can drop to 3 shoppable videos and 1 shoppable LIVE a week. Requirements change, so check the current rules in the app.
+```
+2. G["shop"], step "Write a listing that sells and follows the rules" (AI listing images, Policy Pulse Sept 2026)
+```diff
+-"Paste your product details and let Claude write a clear listing with no claims you can't back up:"
++"Paste your product details and let Claude write a clear listing with no claims you can't back up. Use real photos of the real product: TikTok Shop restricts AI generated listing images, so check the current rule in Seller Center before using any:"
+```
+3. G["shop"], step "Survive your first 30 days" (AHR thresholds, AHR Requirements June 25 2026)
+```diff
+-shops start at 200 points, at 150 you can't add new listings for 7 days, and at 0 the shop can be closed.
++shops start at 200 points, at 150 you can't add new listings or join big campaigns for 7 days (14 days at 100, 28 days at 50), and at 0 the shop can be closed.
+```
+
 ## Weekly Sprint 2026-11-02 (handoff)
 - Experiment optin_top_001 drafted: /g/subs-v2/ (noindex, unlinked) built from G["subs-v2"] in tools/guides/guides.py with optin_top=True. Do NOT link it or route traffic until Seb approves; then split /free/ subs row 50/50 or alternate weeks. Decision rule in experiments/experiments.jsonl.
 - Tests green again: /g/bill rebuilt with bill-coach (commit 214ef55). Next guide reel swap: rebuild and commit the page in the same commit.
