@@ -53,12 +53,18 @@ DEFAULT_FUNNEL = ("Subscription Leak", "one gated Subscription video -> /g/subs/
 
 
 def funnel(s):
-    """The funnel to prove: the owner's current campaign focus (config/growthos/campaign.json focus.offer),
+    """The funnel to prove: the owner's current campaign focus (config/growthos/campaign.json focus.offer,
+    or focus.offers.instagram_threads_x when the focus lists offers per platform),
     so the proposal never points at a parked product. Falls back to the original Subscription Leak funnel."""
-    offer = (s.get("focus") or {}).get("offer")
+    focus = s.get("focus") or {}
+    offer = focus.get("offer")
+    offers = focus.get("offers")
+    if not offer and isinstance(offers, dict) and offers:
+        # Nov 4 2026 focus lists offers per platform; prove the main feed offer (IG/Threads/X) first.
+        offer = offers.get("instagram_threads_x") or next(iter(offers.values()))
     if not offer:
         return DEFAULT_FUNNEL
-    name = offer.split(" (")[0].split(" with ")[0].strip()
+    name = offer.split(",")[0].split(" (")[0].split(" with ")[0].strip()
     return name, f"one gated reel -> {offer}; trace every step to the first lead or order"
 
 

@@ -26,3 +26,10 @@ def test_funnel_falls_back_without_focus():
 def test_repo_campaign_focus_is_read():
     s = commander.snapshot(commander.Store())
     assert isinstance(s["focus"], dict)
+
+
+def test_funnel_follows_per_platform_offers():
+    p = _first({"offers": {"instagram_threads_x": "4 owner tools $10 each, Owner Toolkit $24 (https://autopilotoi.app/#tools)",
+                           "tiktok": "Video Agent $10"}})
+    assert p["title"] == "Prove one funnel: 4 owner tools $10 each"
+    assert "#tools" in p["action"] and "Subscription" not in p["action"]

@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-04",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts (brand 7761544) + Kit get_growth_stats, pulled 2026-11-04 11:20 UTC by Daily Pulse. 7d window Oct 28 to Nov 3 (Metricool daily rows; IG reel views for Nov 3 not yet reported).",
+ "kit": {
+  "subscribers": 0,
+  "new_7d": 0
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 83,
+   "posts_7d": 18,
+   "interactions_7d": 25,
+   "accounts_engaged_7d": 2,
+   "reel_views_7d": 411,
+   "note": "accounts_engaged_7d is the Nov 3 daily value (IGEV42, not additive); followers = IGEV01 on Nov 3; Nov 3 reel views (IGEV23) missing from Metricool, so reel_views_7d covers Oct 28 to Nov 2"
+  },
+  "threads": {
+   "followers": 1,
+   "posts_7d": 19,
+   "views_7d": 319,
+   "interactions_7d": 7
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 5,
+  "queued": 2,
+  "failed": 0,
+  "window": "published/failed = network deliveries last 24h (Nov 3 08:30 ART onward: TikTok 2, Threads 1, X 1, IG 1), queued = next 48h non-draft pending posts after the guard",
+  "unapproved_pending": 12,
+  "unapproved_action": "12 pending posts (created Nov 1 10:52 and Nov 3 21:46 to 23:20 ART) had uuid and id missing from health.approved_post_uuids(); Daily Pulse set all 12 to draft 11:22 to 11:24 UTC (content, media and times kept). Incident inc:metricool_unapproved:2026-11-04 (SEV-1), Seb messaged.",
+  "cadence_ok": "after the guard: Nov 4 Threads 1 (12:30 Front Desk demo), IG 1 (18:00 Front Desk reel); nothing else non-draft in the next 48h. 0 ERRORs."
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-03",
+  "campaign": "120248645551300265 PAUSED Nov 3 (Seb: 'Approve pause'); campaign ads.status off since Nov 2",
+  "cap_usd": 60,
+  "source": "costs ledger + Nov 3 decision log (no spend after Nov 1)"
+ },
+ "decisions": [
+  "Nov 3 tools batch (12 posts) is in Metricool drafts because no approval was recorded. Reply 'approve Nov 3 tools batch' to restore, or leave as drafts.",
+  "Viral Lab: pick a source for public view counts so references can be certified (YouTube Data API key, or you capture URL + views + creator's last 10 from your phone). Open since Oct 31.",
+  "Meta ads restart needs a live Meta Pixel and your explicit yes (withdrawn Nov 2)."
+ ]
+}
