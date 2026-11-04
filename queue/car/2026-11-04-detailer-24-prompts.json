@@ -1,7 +1,7 @@
 {
  "id": "2026-11-04-detailer-24-prompts",
  "kind": "promptpack",
- "status": "bank",
+ "status": "scheduled",
  "tool": "Front Desk Kit ($39, https://autopilotoi.app/front-desk/) and Owner Toolkit tools (Review Desk, Content Week, Invoice Chaser, https://autopilotoi.app/#tools); free starter (/#free) as entry",
  "cover_idea": "Black page, folder chips row moved to the top, huge white STOP TYPING THESE TEXTS. with PASTE THEM. in a lime block, left aligned sub and lime button (changes vs the paper packs: background, headline position, chips placement, headline scale).",
  "theme": "auto detailers: 24 new prompts in 6 folders (Bookings, Quotes, Customers, Reviews, Posts, Money), all visible, hook test 'Stop typing these. Paste them.'",
@@ -16,5 +16,38 @@
   "x": "Detailers: stop typing the same texts.\n\n24 Claude prompts for bookings, quotes, reviews, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
  },
  "media": "docs/media/car/2026-11-04-detailer-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_beat.mp4)",
- "built_at": "2026-11-04T19:46Z"
+ "built_at": "2026-11-04T19:46Z",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels); autopost past Nov 10 confirmed in MANAGER.md section 7 (Seb, Nov 4: \"yes\")"
+ },
+ "story_key": "promptpack-detailers-2026-11-09",
+ "posts": [
+  {
+   "metricool_id": 417016439,
+   "uuid": "6851267324026503937",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-09T18:00:00-03:00"
+  },
+  {
+   "metricool_id": 417016452,
+   "uuid": "-7419793270105419944",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-09T18:00:00-03:00"
+  },
+  {
+   "metricool_id": 417016471,
+   "uuid": "-2266296710289864421",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-09T18:00:00-03:00"
+  }
+ ],
+ "scheduled_by": "News Desk 2026-11-04 17:56 ART: step 6 daily pack from bank; IG 18:00 Nov 4 to 8 occupied, next free 18:00 is Nov 9. Re-checked: QA PASS, slides 01/03/08 read, AGENTS confirmed, gift matches override."
 }
