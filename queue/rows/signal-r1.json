@@ -8,25 +8,25 @@
   "quote": "Make it let's post first 3 today 5 min between each post",
   "design_quote": "Better now let's fill those post that have lots of un used space"
  },
- "note": "Seb asked for 3 IG posts today, overriding the 2 per day IG rule for this row. Publish order R, M, L so the row lands L M R.",
+ "note": "Seb asked for 3 IG posts today, overriding the 2 per day IG rule for this row. Publish order R, M, L so the row lands L M R. Seb Nov 4 19:10: \"make sure all slides are full of value and lead to link in bio\": CTA slide and captions switched to link in bio, times moved 20 min to ship it.",
  "design": "tools/carousel/wow/signal3.html row 1",
  "photos": {
   "L": "docs/media/car/photos/p9 (Unsplash PYdsrJwVdGQ, Unsplash License)"
  },
  "slots": {
   "R": {
-   "when": "2026-11-04 19:20 ART",
+   "when": "2026-11-04 19:40 ART",
    "media": "media/rows/signal-r1/R.jpg",
    "metricool_uuid": "881126544942318944"
   },
   "M": {
-   "when": "2026-11-04 19:25 ART",
+   "when": "2026-11-04 19:45 ART",
    "media": "media/rows/signal-r1/M.jpg",
    "metricool_uuid": "-6115559727449030570"
   },
   "L": {
-   "when": "2026-11-04 19:30 ART",
-   "media": "media/rows/signal-r1/L.jpg + the 7 owner prompt pack slides",
+   "when": "2026-11-04 19:50 ART",
+   "media": "media/rows/signal-r1/L.jpg + owner pack slides 2 to 7 + media/rows/signal-r1/L8.jpg (link in bio CTA)",
    "metricool_uuid": "-2250782017043542683"
   }
  }
