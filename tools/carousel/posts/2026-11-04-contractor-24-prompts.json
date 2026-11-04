@@ -1,0 +1,169 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 04 2026",
+ "cover_bg": "bg-white",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 31,
+ "folders": [
+  "Quotes",
+  "Jobs",
+  "Customers",
+  "Crew",
+  "Marketing",
+  "Money"
+ ],
+ "cover_html": "<div class=\"fx Cc\" style=\"left:540px;transform:translateX(-50%);white-space:nowrap;top:74px;font-size:22px;color:#5d5d56;letter-spacing:6px\">24 PROMPTS FOR CONTRACTORS</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"20\" style=\"left:56px;top:150px;font-size:160px;white-space:nowrap;color:#0b0b0b\">Claude prompts</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:320px;font-size:160px;white-space:nowrap;color:#0b0b0b\">that feel like</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:480px;font-size:160px;white-space:nowrap;color:#0b0b0b;background:#D4FF3A;padding:14px 22px 0;box-sizing:border-box\">cheating</div><div class=\"fx\" data-after=\"h\" data-gap=\"64\" data-stagger=\"1\" style=\"left:56px;top:900px;width:968px;height:110px\"><div style=\"position:absolute;left:0px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#D4FF3A;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">01 to 04</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Quotes</div></div><div style=\"position:absolute;left:163px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">05 to 08</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Jobs</div></div><div style=\"position:absolute;left:326px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">09 to 12</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Customers</div></div><div style=\"position:absolute;left:489px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">13 to 16</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Crew</div></div><div style=\"position:absolute;left:652px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">17 to 20</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Marketing</div></div><div style=\"position:absolute;left:815px;top:0;width:151px;height:110px;border-radius:10px;border:3px solid #0b0b0b;box-sizing:border-box;background:#f8f8f4;color:#0b0b0b;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:14px;font:700 17px C;letter-spacing:2px;color:#5d5d56\">21 to 24</div><div style=\"position:absolute;left:0;right:0;bottom:16px;font:400 25px/1 A;text-transform:uppercase\">Money</div></div></div><div class=\"fx Ii\" style=\"left:540px;transform:translateX(-50%);white-space:nowrap;top:1050px;font-size:40px;color:#0b0b0b\">Copy. Paste. Swap the <span style=\"background:#D4FF3A;padding:0 6px\">[brackets]</span>.</div><div class=\"fx Cc\" style=\"left:540px;transform:translateX(-50%);white-space:nowrap;top:1150px;font-size:24px;color:#f8f8f4;background:#0b0b0b;padding:16px 26px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div><div class=\"fx stampL\" style=\"left:735px;top:680px;font-size:42px;border:5px solid #0b0b0b;color:#0b0b0b;background:#f8f8f4;box-shadow:none;padding:8px 16px 2px;transform:rotate(-7deg)\">NO DM NEEDED</div>",
+ "slides": [
+  {
+   "cat": "Quotes",
+   "cards": [
+    {
+     "t": "Fast quote",
+     "p": "Turn my site visit notes into a clear quote: line items, timeline, and what is not included: [paste].",
+     "star": true
+    },
+    {
+     "t": "3 options",
+     "p": "Turn this quote into 3 options, good, better, best, with what changes in each: [paste]."
+    },
+    {
+     "t": "Follow up",
+     "p": "Write a friendly text following up my quote for [job], sent [X] days ago. One question, no pressure."
+    },
+    {
+     "t": "Change order",
+     "p": "Write a change order for [extra work]: what changes, new price [price], new date. Ask for a yes in writing."
+    }
+   ]
+  },
+  {
+   "cat": "Jobs",
+   "cards": [
+    {
+     "t": "Day before",
+     "p": "Write a day before text for [customer]: arrival window [time], what to prep, and how to reach me."
+    },
+    {
+     "t": "Running late",
+     "p": "Text [customer] that I am running [X] minutes late. Apologize once and give the new time."
+    },
+    {
+     "t": "Job done",
+     "p": "Write a job done text for [job]: what we finished, care tips, invoice link [link], thank you.",
+     "star": true
+    },
+    {
+     "t": "Progress update",
+     "p": "Turn these job notes into a short progress update for the customer, plain words, what is next: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Customers",
+   "cards": [
+    {
+     "t": "Cheaper quote",
+     "p": "A customer got a cheaper quote. Reply in 3 lines that show my value without trashing anyone.",
+     "star": true
+    },
+    {
+     "t": "Warranty",
+     "p": "Explain my warranty on [service] in plain words: what it covers, how long, how to claim: [my terms]."
+    },
+    {
+     "t": "Weather delay",
+     "p": "Text [customer] that weather moves their [job]. Offer [option 1] or [option 2]. Let them reply 1 or 2."
+    },
+    {
+     "t": "Upset customer",
+     "p": "Reply to this upset customer: [paste]. Calm, own what is fair, offer a visit to fix it."
+    }
+   ]
+  },
+  {
+   "cat": "Crew",
+   "cards": [
+    {
+     "t": "Crew sheet",
+     "p": "Turn this job into a one page crew sheet: address, scope, materials, safety notes, photos to take: [paste].",
+     "star": true
+    },
+    {
+     "t": "Day one checklist",
+     "p": "Turn how I do [task] into a checklist a new helper can follow on day one."
+    },
+    {
+     "t": "Hiring post",
+     "p": "Write a job post for a [role]: the work, hours, pay [range], must haves, 3 screening questions."
+    },
+    {
+     "t": "Team text",
+     "p": "Turn these notes into tomorrow's team text: who goes where, what time, what to bring: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Marketing",
+   "cards": [
+    {
+     "t": "Before and after",
+     "p": "Write 3 captions for this before and after of a [job] in [city]. Short, real, end with how to book.",
+     "star": true
+    },
+    {
+     "t": "Google update",
+     "p": "Write a Google Business Profile update about a recent [job] in [area]: what we did, plus one tip."
+    },
+    {
+     "t": "Door hanger",
+     "p": "Write a door hanger for neighbors of a job on [street]: we were nearby, one offer, how to book."
+    },
+    {
+     "t": "Referral ask",
+     "p": "Write a text asking a happy customer for a referral, with one easy way to share my number [number]."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Late payment",
+     "p": "Invoice [number] for [job] is [X] days late. Write a firm, polite text with a pay by date and [link]."
+    },
+    {
+     "t": "Deposit policy",
+     "p": "Write a deposit policy for my [trade]: [percent] up front, when it is due, what if they cancel."
+    },
+    {
+     "t": "Did I profit",
+     "p": "Here are my costs for [job]: [paste]. Did I make money? Show the margin in a simple table.",
+     "star": true
+    },
+    {
+     "t": "New prices",
+     "p": "Write a short note: my [service] goes to [new price] on [date]. One honest reason, no apologizing."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Answer customers *faster*",
+  "keyword": "AGENTS",
+  "gift": "Free Front Desk Starter: replies to customers in your voice.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "OWNER",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for contractors in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "id": "2026-11-04-contractor-24-prompts",
+ "kind": "prompts",
+ "status": "scheduled",
+ "approval": {
+  "by": "Seb",
+  "date": "2026-11-04",
+  "quote": "I wanna spam these until they hit",
+  "basis": "prompt pack push (also: 'add it in the mix ... don't post unless it's 100% good')"
+ },
+ "cover_idea": "Same centered site design as the owner pack, new hook test: 24 PROMPTS FOR CONTRACTORS / CLAUDE PROMPTS THAT FEEL LIKE CHEATING (CHEATING in a lime block), folders Quotes, Jobs, Customers, Crew, Marketing, Money.",
+ "theme": "contractors and home service owners: 24 short prompts in 6 folders, all visible, AGENTS for the free Front Desk Starter",
+ "gate": {
+  "score": 93,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only). Hook 22/25 (hook test vs 'should be illegal'). Clarity 20/20 (4 cards a slide, 22 words max). Design 13/15 (same system as the owner pack on purpose so the hook is the variable). CTA 8/10 (AGENTS confirmed; Front Desk fits contractors' customer texts). QA PASS all 8."
+ },
+ "sources": [],
+ "slots": {
+  "instagram": "2026-11-08 18:00 ART"
+ },
+ "metricool_uuids": []
+}
