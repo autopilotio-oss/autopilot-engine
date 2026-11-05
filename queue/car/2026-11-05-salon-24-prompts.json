@@ -1,7 +1,7 @@
 {
  "id": "2026-11-05-salon-24-prompts",
  "kind": "promptpack",
- "status": "bank",
+ "status": "scheduled",
  "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
  "cover_idea": "Full lime page, a giant black 24 as the main visual with the 6 folder chips stacked beside it, headline moved to the bottom at a smaller scale (CLAUDE PROMPTS EVERY / SALON AND BARBER NEEDS in a black block), sub and black button on one row.",
  "theme": "salons and barbers: 24 new prompts in 6 folders (Bookings, Clients, Reviews, Posts, Money, Team), all visible, hook test '24 Claude prompts every <niche> needs'",
@@ -16,5 +16,42 @@
   "x": "Salon and barbershop owners: 24 Claude prompts for bookings, clients, reviews, posts, money and team. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
  },
  "media": "docs/media/car/2026-11-05-salon-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
- "built_at": "2026-11-05T13:40Z"
+ "built_at": "2026-11-05T13:40Z",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels); MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
+ },
+ "scheduled_by": "News Desk 2026-11-05 14:52 ART run (step 6 daily prompt pack, bank item re-checked: gate 94, QA PASS, CTA AGENTS confirmed, cover and end card reviewed)",
+ "story_key": "promptpack-salon-barber-24",
+ "posts": [
+  {
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-05T18:00:00-03:00",
+   "metricool_id": 418046951,
+   "uuid": "7955882541478660218",
+   "type": "POST carousel, cover_ig.mp4 + 02 to 08"
+  },
+  {
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-06T13:00:00-03:00",
+   "metricool_id": 418047441,
+   "uuid": "719597793980137620",
+   "note": "Nov 5 Threads slots full (11 of 12 used, only past 08:00 open)"
+  },
+  {
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-06T15:00:00-03:00",
+   "metricool_id": 418047464,
+   "uuid": "-8410028999968144139",
+   "note": "Nov 5 X full (5 of 5)"
+  }
+ ],
+ "results": {}
 }
