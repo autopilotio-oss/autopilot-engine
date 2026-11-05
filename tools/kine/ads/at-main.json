@@ -1,0 +1,376 @@
+{
+ "id": "at-main",
+ "product": "ai-team",
+ "agents": [
+  "11:48 PM",
+  "COLLECTOR",
+  "BOOKKEEPER",
+  "REVIEWS",
+  "AI TEAM",
+  "NO TECH",
+  "YOU SEND",
+  "$39"
+ ],
+ "cold_open": 0.6,
+ "beats": [
+  {
+   "say": "Still texting customers at midnight? Paste their text in. Your AI front desk drafts the reply, with your real prices.",
+   "head": [
+    "11:48 PM?",
+    "*REPLY DRAFTED.*"
+   ],
+   "scene": {
+    "type": "screenchat",
+    "plate": "s01",
+    "status": [
+     "reading your prices",
+     "drafting the reply",
+     "ready, you press send"
+    ],
+    "from": "New lead \u00b7 11:48 PM",
+    "q": "Hey how much for a full detail on an SUV? Free Saturday?",
+    "a": "Hi! A full SUV detail is $250 and takes about 3 hours. We come to you. I have Saturday at 9 AM or 1 PM. Want me to lock one in? Mike, Northside Detail",
+    "pill": "YOUR PRICE \u00b7 YOUR HOURS \u00b7 SAMPLE",
+    "track": [
+     [
+      0.1,
+      384,
+      564,
+      306,
+      660
+     ],
+     [
+      1.5,
+      372,
+      546,
+      324,
+      699
+     ],
+     [
+      3.0,
+      360,
+      510,
+      348,
+      765
+     ],
+     [
+      4.9,
+      339,
+      471,
+      387,
+      837
+     ]
+    ]
+   },
+   "agent": 0
+  },
+  {
+   "say": "Someone owes you money? Type chase Dave. It writes the reminder. Kind first, firm when needed.",
+   "head": [
+    "CHASE",
+    "*LATE PAYMENTS.*"
+   ],
+   "scene": {
+    "type": "draft",
+    "plate": "s02",
+    "status": [
+     "invoice 5 days late",
+     "drafting a kind reminder",
+     "ready, you press send"
+    ],
+    "from": "Reminder \u00b7 Dave R. \u00b7 invoice #1042",
+    "q": "",
+    "a": "Hi Dave, quick reminder: invoice #1042 for $480 was due Friday. Pay here: [your pay link]. Thanks! Mike",
+    "pill": "DRAFT \u00b7 NOT SENT \u00b7 SAMPLE",
+    "clip_in": 2.0
+   },
+   "agent": 1
+  },
+  {
+   "say": "Receipts piling up? Paste them in. It sorts every expense for tax time.",
+   "head": [
+    "RECEIPTS",
+    "*SORTED.*"
+   ],
+   "scene": {
+    "type": "quote",
+    "plate": "s03",
+    "status": [
+     "reading your receipts",
+     "sorting by category",
+     "ready for tax time"
+    ],
+    "title": "SORTED \u00b7 OCTOBER",
+    "lines": [
+     [
+      "Gas and fuel",
+      "$184"
+     ],
+     [
+      "Supplies",
+      "$212"
+     ],
+     [
+      "Tools",
+      "$139"
+     ]
+    ],
+    "total": "$535",
+    "foot": "SAMPLE \u00b7 every receipt in the right bucket for your accountant",
+    "headpos": "low",
+    "statuspos": "topright"
+   },
+   "agent": 2
+  },
+  {
+   "say": "A one star review? It drafts a calm, honest reply.",
+   "head": [
+    "BAD REVIEW?",
+    "*CALM REPLY.*"
+   ],
+   "scene": {
+    "type": "draft",
+    "plate": "s02",
+    "status": [
+     "reading the review",
+     "drafting a calm reply",
+     "ready, you press send"
+    ],
+    "from": "Google review \u00b7 \u2605\u2606\u2606\u2606\u2606",
+    "q": "Showed up 30 minutes late.",
+    "a": "You're right, we ran late and that's on us. Thanks for telling us. We'll be on time next visit. Mike",
+    "pill": "DRAFT \u00b7 NOT SENT \u00b7 SAMPLE",
+    "clip_in": 2.0
+   },
+   "agent": 3
+  },
+  {
+   "say": "Plus a week of posts. Five helpers. One AI team.",
+   "head": [
+    "*YOUR AI TEAM.*"
+   ],
+   "scene": {
+    "type": "tiles",
+    "plate": "s05",
+    "tiles": {
+     "t": [
+      [
+       3.0,
+       [
+        [
+         105,
+         375
+        ],
+        [
+         405,
+         666
+        ],
+        [
+         696,
+         966
+        ]
+       ],
+       [
+        [
+         645,
+         921
+        ],
+        [
+         954,
+         1230
+        ]
+       ]
+      ],
+      [
+       4.9,
+       [
+        [
+         54,
+         360
+        ],
+        [
+         384,
+         690
+        ],
+        [
+         714,
+         1020
+        ]
+       ],
+       [
+        [
+         630,
+         939
+        ],
+        [
+         975,
+         1251
+        ]
+       ]
+      ]
+     ],
+     "labels": [
+      [
+       0,
+       0,
+       "FRONT DESK"
+      ],
+      [
+       0,
+       1,
+       "COLLECTOR"
+      ],
+      [
+       0,
+       2,
+       "BOOKKEEPER"
+      ],
+      [
+       1,
+       0,
+       "REVIEWS"
+      ],
+      [
+       1,
+       2,
+       "MARKETER"
+      ]
+     ]
+    }
+   },
+   "agent": 4
+  },
+  {
+   "say": "No tech skills. Open the kit, copy, paste into the free Claude app, answer a few questions.",
+   "head": [
+    "NO TECH",
+    "*SKILLS.*"
+   ],
+   "scene": {
+    "type": "quizrow",
+    "plate": "s02",
+    "qs": [
+     [
+      "Step 1",
+      "Open the PDF kit on your phone"
+     ],
+     [
+      "Step 2",
+      "Copy the setup, one tap"
+     ],
+     [
+      "Step 3",
+      "Paste into Claude, free account"
+     ],
+     [
+      "Step 4",
+      "Answer a few questions. Done."
+     ]
+    ],
+    "steps": true
+   },
+   "agent": 5
+  },
+  {
+   "say": "Every draft waits for your OK. You press send.",
+   "head": [
+    "YOU STILL",
+    "*PRESS SEND.*"
+   ],
+   "scene": {
+    "type": "approve",
+    "plate": "s06",
+    "track": [
+     [
+      0.1,
+      219,
+      1080,
+      645,
+      384
+     ],
+     [
+      1.5,
+      195,
+      1095,
+      696,
+      405
+     ],
+     [
+      3.0,
+      165,
+      1104,
+      765,
+      450
+     ],
+     [
+      4.9,
+      165,
+      1104,
+      765,
+      450
+     ]
+    ],
+    "headpos": "none"
+   },
+   "agent": 6
+  },
+  {
+   "say": "Your AI team. Five setup kits, thirty nine dollars. Tap shop now.",
+   "head": [
+    "$39",
+    "*5 SETUP KITS.*"
+   ],
+   "scene": {
+    "type": "cardprice",
+    "plate": "s07",
+    "name": "YOUR AI TEAM",
+    "price": "$39",
+    "sub": "5 PDF setup kits \u00b7 runs in your free Claude \u00b7 30 day refund",
+    "url": "30 day refund \u00b7 no tech skills",
+    "kw": "",
+    "track": [
+     [
+      2.2,
+      270,
+      880,
+      530,
+      350
+     ],
+     [
+      3.0,
+      240,
+      855,
+      591,
+      390
+     ],
+     [
+      4.9,
+      120,
+      825,
+      831,
+      549
+     ]
+    ],
+    "clip_in": 1.8,
+    "headpos": "none",
+    "tag": "5 SETUP KITS",
+    "kwline": "TAP SHOP NOW \u2193"
+   },
+   "agent": 7
+  }
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.gumroad.com/l/ai-team?utm_source=meta&utm_medium=paid&utm_campaign=first_sales_nov5&utm_content=at_main",
+  "primary_text": "Still texting customers at midnight? Your AI team drafts the replies, chases late payments, sorts receipts, answers reviews and plans your posts. 5 PDF setup kits for the free Claude app. No tech skills. You review, you send. $39, 30 day refund. Sample business shown.",
+  "headline": "Your AI team for $39",
+  "description": "5 setup kits \u00b7 free Claude \u00b7 you press send",
+  "cta": "SHOP_NOW"
+ },
+ "template": "ad2.html",
+ "cap_fix": {
+  "eleven forty eight": "11:48",
+  "thirty nine dollars": "$39",
+  "one star": "1 star",
+  "five": "5"
+ }
+}
