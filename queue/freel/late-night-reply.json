@@ -1,0 +1,20 @@
+{
+ "id": "late-night-reply",
+ "ep": "020-late-night",
+ "kind": "product",
+ "hook": [
+  "A customer texts at 11pm",
+  "don't lose them by morning"
+ ],
+ "keyword": "AGENTS",
+ "video": "https://autopilotoi.app/media/freel/late-night-reply.mp4",
+ "poster": "https://autopilotoi.app/media/freel/late-night-reply-poster.jpg",
+ "caption": {
+  "ig": "A customer messages late at night. Paste it into the Front Desk Kit and it drafts a kind reply that sets your hours and offers your next open time, in your voice. You send it when you're ready. Sample gutter cleaning business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+  "other": "A customer messages late at night. Paste it into the Front Desk Kit and it drafts a kind reply that sets your hours and offers your next open time, in your voice. You send it when you're ready. Sample gutter cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
+ },
+ "rendered_at": "2026-11-05T10:11:23+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
