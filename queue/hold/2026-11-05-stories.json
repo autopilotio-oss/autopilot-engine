@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-05-tip",
+  "group": "stories-2026-11-05",
+  "at": "2026-11-05T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-05-tip.jpg"
+  ],
+  "text": "AI tip: After any plan, ask: \"What am I missing?\""
+ },
+ {
+  "id": "story-2026-11-05-quiz",
+  "group": "stories-2026-11-05",
+  "at": "2026-11-05T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-05-quiz.jpg"
+  ],
+  "text": "Quiz: Your card is at 29.99% APR. Best first move?"
+ },
+ {
+  "id": "story-2026-11-05-answer",
+  "group": "stories-2026-11-05",
+  "at": "2026-11-05T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-05-answer.jpg"
+  ],
+  "text": "Quiz answer: Call and ask for a lower rate. It doesn't always work, but asking {costs nothing.} Claude writes the call script in seconds."
+ },
+ {
+  "id": "story-2026-11-05-fact",
+  "group": "stories-2026-11-05",
+  "at": "2026-11-05T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-05-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can turn a week of meals into one list. Tell it your budget and how many people. It plans the meals and sorts the list by store aisle."
+ },
+ {
+  "id": "story-2026-11-05-poll",
+  "group": "stories-2026-11-05",
+  "at": "2026-11-05T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-05-poll.jpg"
+  ],
+  "text": "Poll: Do you reply to new leads within 1 hour? A) Always B) Not really"
+ }
+]
