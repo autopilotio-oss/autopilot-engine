@@ -1,4 +1,8 @@
 {
+ "checkout:ai-team": {
+  "ok": true,
+  "severity": "SEV-1"
+ },
  "checkout:all-money-agents": {
   "ok": true,
   "severity": "SEV-1"
