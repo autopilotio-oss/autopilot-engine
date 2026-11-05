@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 05 2026",
+ "theme": "dark",
+ "music": "dark",
+ "seed": 53,
+ "folders": [
+  "Quotes",
+  "Bookings",
+  "Clients",
+  "Reviews",
+  "Posts",
+  "Money"
+ ],
+ "cover_bg": "bg-black",
+ "lava_opacity": 0.25,
+ "cover_html": "<div class=\"fx\" style=\"left:0;top:600px;width:1080px;height:750px;background:#D4FF3A\"></div><div class=\"fx chip l\" style=\"left:56px;top:70px\">FOR CLEANING BUSINESSES &middot; ALL 24 INSIDE</div><div class=\"fx\" style=\"left:76px;top:170px;width:340px;height:370px;background:#f2f2ee;border-radius:18px;transform:rotate(-6deg);overflow:hidden;color:#0a0a0a;box-shadow:0 24px 60px rgba(0,0,0,.5)\"><div style=\"height:92px;background:#D4FF3A;display:flex;align-items:center;justify-content:center;font:700 34px M;letter-spacing:8px;color:#0a0a0a\">DAY</div><div class=\"A\" style=\"text-align:center;font-size:250px;line-height:1;color:#0a0a0a;padding-top:14px\">1</div></div><div class=\"fx\" style=\"left:500px;top:170px;width:524px;display:flex;flex-direction:column;gap:16px\"><div style=\"display:flex;align-items:center;gap:20px\"><span style=\"width:40px;height:40px;border-radius:8px;background:#D4FF3A;color:#0a0a0a;font:800 28px/40px I;text-align:center\">&#10003;</span><span style=\"font:400 46px/1 A;text-transform:uppercase;color:#f2f2ee\">Quotes</span><span style=\"margin-left:auto;font:700 18px M;color:#f2f2ee99\">01 to 04</span></div><div style=\"display:flex;align-items:center;gap:20px\"><span style=\"width:40px;height:40px;border-radius:8px;background:#D4FF3A;color:#0a0a0a;font:800 28px/40px I;text-align:center\">&#10003;</span><span style=\"font:400 46px/1 A;text-transform:uppercase;color:#f2f2ee\">Bookings</span><span style=\"margin-left:auto;font:700 18px M;color:#f2f2ee99\">05 to 08</span></div><div style=\"display:flex;align-items:center;gap:20px\"><span style=\"width:40px;height:40px;border-radius:8px;background:#D4FF3A;color:#0a0a0a;font:800 28px/40px I;text-align:center\">&#10003;</span><span style=\"font:400 46px/1 A;text-transform:uppercase;color:#f2f2ee\">Clients</span><span style=\"margin-left:auto;font:700 18px M;color:#f2f2ee99\">09 to 12</span></div><div style=\"display:flex;align-items:center;gap:20px\"><span style=\"width:40px;height:40px;border-radius:8px;background:#D4FF3A;color:#0a0a0a;font:800 28px/40px I;text-align:center\">&#10003;</span><span style=\"font:400 46px/1 A;text-transform:uppercase;color:#f2f2ee\">Reviews</span><span style=\"margin-left:auto;font:700 18px M;color:#f2f2ee99\">13 to 16</span></div><div style=\"display:flex;align-items:center;gap:20px\"><span style=\"width:40px;height:40px;border-radius:8px;background:#D4FF3A;color:#0a0a0a;font:800 28px/40px I;text-align:center\">&#10003;</span><span style=\"font:400 46px/1 A;text-transform:uppercase;color:#f2f2ee\">Posts</span><span style=\"margin-left:auto;font:700 18px M;color:#f2f2ee99\">17 to 20</span></div><div style=\"display:flex;align-items:center;gap:20px\"><span style=\"width:40px;height:40px;border-radius:8px;background:#D4FF3A;color:#0a0a0a;font:800 28px/40px I;text-align:center\">&#10003;</span><span style=\"font:400 46px/1 A;text-transform:uppercase;color:#f2f2ee\">Money</span><span style=\"margin-left:auto;font:700 18px M;color:#f2f2ee99\">21 to 24</span></div></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"14\" style=\"left:56px;top:650px;font-size:130px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A\">Claude prompts</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:800px;font-size:130px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A\">I wish I had</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:950px;font-size:130px;white-space:nowrap;color:#D4FF3A;background:#0a0a0a;padding:12px 22px 0;box-sizing:border-box\">on day one</div><div class=\"fx\" data-after=\"h\" data-gap=\"44\" style=\"left:56px;top:1180px;width:820px;background:#D4FF3A;color:#0a0a0a;display:flex;justify-content:space-between;align-items:center\"><div style=\"font:800 34px/1.2 I;letter-spacing:-.5px;color:#0a0a0a;background:#D4FF3A\">24 for cleaners. Swap the [brackets].</div><div style=\"font:700 20px C;letter-spacing:3px;color:#f2f2ee;background:#0a0a0a;padding:14px 20px 12px;border-radius:6px\">SWIPE &#9656;</div></div>",
+ "slides": [
+  {
+   "cat": "Quotes",
+   "cards": [
+    {
+     "t": "Quote by text",
+     "p": "Write a quote text for a [beds] bed, [baths] bath home: price [price], what is included, how long it takes.",
+     "star": true
+    },
+    {
+     "t": "Deep or regular",
+     "p": "Explain a regular clean versus a deep clean in 4 short lines so a new client picks the right one."
+    },
+    {
+     "t": "Move out quote",
+     "p": "Write a move out clean quote: price [price], what we clean inside cabinets and appliances, and what we skip."
+    },
+    {
+     "t": "Office walkthrough",
+     "p": "Write 8 questions for an office walkthrough before I quote: size, foot traffic, restrooms, hours, supplies, access."
+    }
+   ]
+  },
+  {
+   "cat": "Bookings",
+   "cards": [
+    {
+     "t": "Make it regular",
+     "p": "A one time client loved the clean. Write a short text offering a [weekly or biweekly] slot at [price].",
+     "star": true
+    },
+    {
+     "t": "How we get in",
+     "p": "Write a text asking a new client how we get in: key, code or someone home. Ask about pets and parking."
+    },
+    {
+     "t": "Running late",
+     "p": "Write a calm text telling [client] my team is [minutes] late, the new arrival time, and a short sorry."
+    },
+    {
+     "t": "Could not get in",
+     "p": "We arrived and could not get in. Write a polite text with my lockout fee [fee] and two rebooking times."
+    }
+   ]
+  },
+  {
+   "cat": "Clients",
+   "cards": [
+    {
+     "t": "Missed a spot",
+     "p": "A client says we missed [area]. Write a text that thanks them and offers a free reclean within [days].",
+     "star": true
+    },
+    {
+     "t": "Day before",
+     "p": "Write the day before text for clients: clear counters, secure pets, tell us about any problem areas."
+    },
+    {
+     "t": "Team card",
+     "p": "Turn these client notes into a short card my team reads before each visit: [paste notes]. Bullet points only."
+    },
+    {
+     "t": "Something broke",
+     "p": "We broke [item] at a client's home. Write an honest text: what happened, sorry, and how we make it right."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "After the clean",
+     "p": "Write a text for two hours after a clean: thank them, ask for honest feedback, share my review link [link].",
+     "star": true
+    },
+    {
+     "t": "Read to the team",
+     "p": "Turn this 5 star review into a short note I can read to my cleaners at our next meeting: [paste]."
+    },
+    {
+     "t": "Not clean enough",
+     "p": "Reply calmly to this review saying the house was not clean: [paste]. Offer a reclean. Under 60 words."
+    },
+    {
+     "t": "Photo review",
+     "p": "A review has photos of our work: [paste]. Write a thank you reply and ask to repost them."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "Week from one photo",
+     "p": "I have one photo of a sparkling [room]. Plan Monday to Friday posts around it, each a different angle.",
+     "star": true
+    },
+    {
+     "t": "Between visits",
+     "p": "Write 5 quick tips a client can do in [room] between our visits. One line each, for a carousel."
+    },
+    {
+     "t": "Myth buster",
+     "p": "Write a post busting 3 common cleaning myths, one line each, plain words, ending with how to book us."
+    },
+    {
+     "t": "Season offer",
+     "p": "Write a post for a [season] deep clean: what is included, open dates [dates], and how to grab a spot."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Sort receipts",
+     "p": "Sort these receipts into supplies, gas, equipment, wages, other: [paste]. Total each. Flag any I cannot place.",
+     "star": true
+    },
+    {
+     "t": "Unpaid clean",
+     "p": "Write a polite text to [client] that the [date] clean for [amount] is still unpaid. Add my pay link [link]."
+    },
+    {
+     "t": "Set up autopay",
+     "p": "Ask regular clients by text to set up autopay with [app] so each clean gets paid on time."
+    },
+    {
+     "t": "Cost per clean",
+     "p": "Using [supplies, gas, hours, pay], show my cost per clean and what is left at [price]."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "CLEAN",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for cleaning businesses in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}
