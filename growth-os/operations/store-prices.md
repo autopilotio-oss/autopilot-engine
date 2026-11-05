@@ -4,6 +4,7 @@ Every post, caption, slide and email must use these exact names and prices. If a
 
 | Product | Price | Page | Checkout |
 |---|---|---|---|
+| **Your AI Team (hero offer)** | $39 one time | gumroad page | autopilotoi.gumroad.com/l/ai-team (Front Desk Kit + the 4 agents) |
 | Front Desk Starter | Free | autopilotoi.app/brain/ (entry: autopilotoi.app/free/) | none, email optional |
 | Front Desk Kit | $39 one time | autopilotoi.app/front-desk/ | autopilotoi.gumroad.com/l/autopilot |
 | Invoice Chaser | $9.99 | autopilotoi.app/#agents | autopilotoi.gumroad.com/l/invoice-chaser |

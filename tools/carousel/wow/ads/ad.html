@@ -49,5 +49,20 @@ if(V=='C'){ // All 4 $24
  <div style="margin-top:auto;padding-bottom:${st?250:0}px"><div class=btn style="background:${INK};color:${LIME}">Get all 4 · $24</div>
  <div style="display:flex;align-items:flex-end;gap:16px;margin-top:22px">${bars(420,31,INK)}<span class=M style="font-size:16px;padding-bottom:6px">AP.OI / TOOLKIT 004</span></div>
  <div style="height:6px;background:${INK};margin:0 -80px ${st?0:40}px"></div></div></div>`;}
+if(V=='D'){ // AI Team $39, hero
+ const roles=[['Front desk','replies, quotes, follow ups'],['Collector','invoices + late reminders'],['Reviews','every review answered'],['Bookkeeper','statement sorted by category'],['Marketer','7 posts a week']];
+ h=`<div class=pg style="height:${H}px;background:${INK};color:${PAPER}">${head(1,'5 setups / 1 price')}
+ <div class=M style="color:${LIME};margin-top:${st?110:56}px">hire them tonight, on your phone</div>
+ <div class=A style="font-size:${st?190:160}px;margin-top:14px">Your<br>AI team. <span class=L>$39</span></div>
+ <div style="margin-top:${st?60:32}px">${roles.map(([n,d],i)=>`<div class=row style="border-color:#333;padding:${st?22:15}px 0"><div><div class=A style="font-size:${st?50:42}px">${n}</div><div class=M style="font-size:15px;color:#9a9a92;margin-top:6px">${d}</div></div><div class=M style="color:${LIME}">0${i+1}</div></div>`).join('')}</div>
+ <div class=M style="margin-top:16px;font-size:16px;color:#9a9a92">$78.96 separately \u00b7 it drafts, you send</div>
+ ${foot(1,'TEAM 005','$39')}</div>`;}
+if(V=='E'){ // AI Team $39, pain hook
+ h=`<div class=pg style="height:${H}px;background:${PAPER};color:${INK}">${head(0,'your ai team')}
+ <div class=M style="margin-top:${st?120:66}px">11:48 pm. still doing:</div>
+ <div style="margin-top:20px">${['the replies','the quotes','the late invoices','the reviews','the books','the posts'].map(t=>`<div class=A style="font-size:${st?92:74}px;line-height:1.08"><span style="background:linear-gradient(transparent 50%,${LIME} 50%,${LIME} 62%,transparent 62%)">${t}</span></div>`).join('')}</div>
+ <div class=A style="font-size:${st?130:108}px;margin-top:${st?50:26}px">Hand them to<br><span class=box>your AI team.</span></div>
+ <div class=M style="margin-top:18px;font-size:16px">5 setups · $39 · claude free plan works · it drafts, you send</div>
+ ${foot(0,'TEAM 005','$39')}</div>`;}
 document.getElementById('x').innerHTML=h;document.fonts.ready.then(()=>setTimeout(()=>window.READY=1,300));
 </script></body></html>
