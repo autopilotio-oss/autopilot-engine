@@ -1,0 +1,54 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "770458706589142147",
+   "metricool_id": 417637458,
+   "at": "2026-11-05T12:00:00-03:00",
+   "pillar": "question",
+   "hook": "Be honest: when did you last reply to a customer review?",
+   "hook_id": "th_reviewq2_1105",
+   "gate": "88/100: stands alone, hook under 12 words, no dashes, no claims"
+  },
+  {
+   "uuid": "3567125538643134986",
+   "metricool_id": 417637475,
+   "at": "2026-11-05T13:00:00-03:00",
+   "pillar": "owner_pain",
+   "hook": "Late payers cost more than the money.",
+   "hook_id": "th_latepay_1105",
+   "gate": "88/100: stands alone, hook under 12 words, no dashes, no claims"
+  },
+  {
+   "uuid": "5859965097102428023",
+   "metricool_id": 417637493,
+   "at": "2026-11-05T16:00:00-03:00",
+   "pillar": "hate_tech",
+   "hook": "If you can send a text, you can use AI.",
+   "hook_id": "th_sendtext_1105",
+   "gate": "88/100: stands alone, hook under 12 words, no dashes, no claims"
+  },
+  {
+   "uuid": "-2837764398369324815",
+   "metricool_id": 417637514,
+   "at": "2026-11-05T19:00:00-03:00",
+   "pillar": "question",
+   "hook": "Owners: what's the one text you get 20 times a week?",
+   "hook_id": "th_sametext_1105",
+   "gate": "88/100: stands alone, hook under 12 words, no dashes, no claims"
+  },
+  {
+   "uuid": "6691313932833932101",
+   "metricool_id": 417637535,
+   "at": "2026-11-05T22:00:00-03:00",
+   "pillar": "hours_saved",
+   "hook": "Things AI is great at for a small business:",
+   "hook_id": "th_goodbad_1105",
+   "gate": "88/100: stands alone, hook under 12 words, no dashes, no claims"
+  }
+ ]
+}

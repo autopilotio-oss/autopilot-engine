@@ -88,3 +88,8 @@
 - Fixed: $10 to $9.99 in 3 scheduled Threads/X posts; added missing #tools anchor on the homepage (posts linked to it); store-prices.md as source of truth; MANAGER rule.
 - Found: Kit has 0 active subscribers ever; only test signup is unconfirmed (double opt in) and no rule feeds the Welcome sequence. 0 purchases tracked in Kit (Gumroad not connected). Needs Seb in Kit UI.
 - Found: IG bio still sells THE WORKSPACE / 7 agents; posts now sell Front Desk Starter + Kit. Needs Seb to edit bio.
+
+## 2026-11-05 08:51 ART: Daily Manager AM
+- Threads: 5 new text posts at 12:00, 13:00, 16:00, 19:00, 22:00 (queue/threads/2026-11-05.json). 12:00 and 19:00 are new versions of yesterday's best Threads line, the Google reviews question (11 views, top Nov 4 Threads post). Why: double down on the only Nov 4 Threads post that stood out. Evidence: THPO08 Nov 4. Rollback: set the 5 uuids to draft.
+- TikTok: new spec tools/kine/ads/tk-hooks.json (opener in, 5 hooks out, CapCut cut plan, a week of hook tests, SAMPLE labeled, no view or money claims) for the 12:00 slot. Why: tk-week was the lowest TikTok video of the last 3 days (86 vs median 92), so the second test changes the angle from planning to hooks, which creators feel more. Rollback: draft the TikTok post.
+- Not done: X already at cap 5. IG 18:00 open but no bank item with status bank; the News Desk owns the daily pack slot.
