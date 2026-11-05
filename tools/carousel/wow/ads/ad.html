@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset=utf-8><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:C;src:url(/docs/assets/fonts/ChakraPetch-SemiBold.ttf)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;overflow:hidden}
+.pg{width:1080px;position:relative;display:flex;flex-direction:column;padding:0 80px;overflow:hidden}
+.M{font:400 21px M;letter-spacing:5px;text-transform:uppercase}
+.A{font-family:A;text-transform:uppercase;line-height:.9}
+.box{background:#D4FF3A;color:#0b0b0b;padding:4px 14px 0;display:inline-block;margin-top:8px}
+.L{color:#D4FF3A}
+.btn{height:118px;display:flex;align-items:center;justify-content:center;gap:20px;font:400 64px A;text-transform:uppercase}
+.row{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-top:2px solid}
+</style></head><body><div id=x></div><script>
+const [V,S]=location.hash.slice(1).split('-');const H=S=='story'?1920:1350;const st=S=='story';
+const INK='#0b0b0b',LIME='#D4FF3A',PAPER='#f2f2ee';
+function bars(w,seed,col){let s=seed,o='',x=0;while(x<w){s=(s*9301+49297)%233280;const bw=3+Math.floor(s/233280*13);s=(s*9301+49297)%233280;const g=4+Math.floor(s/233280*9);s=(s*9301+49297)%233280;const hh=50+Math.floor(s/233280*3)*14;o+=`<div style="position:absolute;left:${x}px;bottom:0;width:${bw}px;height:${hh}px;background:${col}"></div>`;x+=bw+g}return `<div style="position:relative;width:${w}px;height:88px">${o}</div>`}
+const head=(dark,tag)=>`<div style="display:flex;justify-content:space-between;align-items:center;padding-top:${st?180:66}px"><div style="display:flex;align-items:center;gap:14px"><img src="../ap_${dark?'paper':'ink'}.png" style="width:58px"><span class=M style="font-family:C;letter-spacing:6px;color:${dark?PAPER:INK}">AUTOPILOT.OI</span></div><span class=M style="color:${dark?LIME:INK}">${tag}</span></div>`;
+const foot=(dark,code,price)=>`<div style="margin-top:auto;padding-bottom:${st?250:0}px">
+ <div class=btn style="background:${LIME};color:${INK}">Get it · ${price}</div>
+ <div style="display:flex;align-items:flex-end;gap:16px;margin-top:22px">${bars(420,code.length*7+3,dark?LIME:INK)}<span class=M style="font-size:16px;color:${dark?LIME:INK};padding-bottom:6px">AP.OI / ${code}</span></div>
+ <div style="height:6px;background:${dark?LIME:INK};margin:0 -80px ${st?0:40}px"></div></div>`;
+let h='';
+if(V=='A'){ // Invoice Chaser $9.99
+ h=`<div class=pg style="height:${H}px;background:${PAPER};color:${INK}">${head(0,'invoice chaser')}
+ <div class=M style="margin-top:${st?120:70}px">for the customer who "forgot" to pay</div>
+ <div class=A style="font-size:${st?150:128}px;margin-top:16px">6 texts that<br><span class=box>get you paid.</span></div>
+ <div style="margin-top:${st?70:44}px;width:760px">
+  <div class=M style="font-size:16px;margin-bottom:12px">sample · you send it</div>
+  <div style="background:${INK};color:${PAPER};border-radius:36px 36px 36px 8px;padding:30px 38px;font:400 32px/1.4 C">Hi Dana, quick reminder that invoice #1042 for $480 was due Friday. Here's the link to pay. Thanks!</div></div>
+ <div class=M style="margin-top:28px">day 1 · 1 week · 2 weeks · final notice</div>
+ <div class=row style="border-color:${INK};margin-top:${st?60:30}px"><div><div class=A style="font-size:52px">Type chase</div><div class=M style="font-size:17px;margin-top:8px">it writes the right reminder. you hit send.</div></div><div class=A style="font-size:72px">$9.99</div></div>
+ ${foot(0,'CHASE 006','$9.99')}</div>`;}
+if(V=='B'){ // Front Desk Kit $39
+ h=`<div class=pg style="height:${H}px;background:${INK};color:${PAPER}">${head(1,'the store')}
+ <div style="display:flex;gap:46px;align-items:center;margin-top:${st?110:60}px"><img src="../ap_lime.png" style="width:${st?470:430}px">
+  <div style="flex:1">${['price replies','quotes + deposits','follow ups','you hit send'].map((t,i)=>`<div class=M style="border-top:2px solid ${i==3?LIME:'#3a3a3a'};padding:14px 0 12px;font-size:19px;color:${i==3?LIME:PAPER}">${i<3?'✓ ':'→ '}${t}</div>`).join('')}</div></div>
+ <div class=M style="color:${LIME};margin-top:${st?120:60}px">stop typing the same customer reply</div>
+ <div class=A style="font-size:${st?170:150}px;margin-top:14px">Front<br>desk kit <span class=L>$39</span></div>
+ <div class=M style="margin-top:22px;font-size:18px;color:#9a9a92">drafts from your real prices, in your voice · claude free plan works</div>
+ ${foot(1,'KIT 001','$39')}</div>`;}
+if(V=='C'){ // All 4 $24
+ const items=[['Invoice Chaser','chase late payments','chase'],['Review Desk','reply to every review','reply'],['Bookkeeping Sorter','bank statement sorted into categories','sort'],['Content Week','7 posts from 5 answers','week']];
+ h=`<div class=pg style="height:${H}px;background:${LIME};color:${INK}">${head(0,'all 4 agents')}
+ <div class=M style="margin-top:${st?120:66}px">the jobs you keep putting off</div>
+ <div class=A style="font-size:${st?170:150}px;margin-top:14px">4 AI agents.<br><span style="background:${INK};color:${LIME};padding:4px 16px 0;display:inline-block;margin-top:8px">$24.</span></div>
+ <div style="margin-top:${st?70:40}px">${items.map(([n,d,c])=>`<div class=row style="border-color:${INK}"><div><div class=A style="font-size:46px">${n}</div><div class=M style="font-size:16px;margin-top:6px">${d}</div></div><div class=M style="font-size:20px">type ${c}</div></div>`).join('')}</div>
+ <div class=M style="margin-top:20px;font-size:17px">$9.99 each or all 4 for $24 · set up in about 15 min</div>
+ <div style="margin-top:auto;padding-bottom:${st?250:0}px"><div class=btn style="background:${INK};color:${LIME}">Get all 4 · $24</div>
+ <div style="display:flex;align-items:flex-end;gap:16px;margin-top:22px">${bars(420,31,INK)}<span class=M style="font-size:16px;padding-bottom:6px">AP.OI / TOOLKIT 004</span></div>
+ <div style="height:6px;background:${INK};margin:0 -80px ${st?0:40}px"></div></div></div>`;}
+document.getElementById('x').innerHTML=h;document.fonts.ready.then(()=>setTimeout(()=>window.READY=1,300));
+</script></body></html>
