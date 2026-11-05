@@ -1,0 +1,111 @@
+{
+ "id": "content-week",
+ "kind": "product",
+ "offer": "content_week",
+ "room": "studio",
+ "agent": "Content Week",
+ "lane": "owner tools",
+ "hook": [
+  "You should post more",
+  "but post what?"
+ ],
+ "hook_lines": [
+  "You should",
+  "*post* more.",
+  "But post",
+  "*what*?"
+ ],
+ "caption": {
+  "ig": "You know you should post, you just never know what. Type week, answer 5 quick questions about your real jobs, and Content Week gives you 7 posts: what to shoot on your phone, the caption and the hashtags, in your voice. You post them yourself. Sample deck builder shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #socialmediatips",
+  "other": "You know you should post, you just never know what. Type week, answer 5 quick questions about your real jobs, and Content Week gives you 7 posts: what to shoot on your phone, the caption and the hashtags, in your voice. You post them yourself. Sample deck builder shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #socialmediatips"
+ },
+ "stat": {
+  "count": 7,
+  "suffix": " POSTS",
+  "label": "planned from your real week",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "You know you should post, but never know what. Type week and answer five quick questions.",
+   "screen": {
+    "type": "ask",
+    "text": "week: 2 decks done, new stain color, Saturday open",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It plans seven posts from your real jobs: what to shoot, the caption and the hashtags.",
+   "screen": {
+    "type": "work",
+    "title": "Planning your week",
+    "lines": [
+     "read your 5 answers",
+     "pick 7 ideas from real jobs",
+     "what to shoot on your phone",
+     "captions and local hashtags"
+    ]
+   }
+  },
+  {
+   "chip": "week",
+   "say": "Your whole week, in your voice. You post them yourself. Sample business shown.",
+   "screen": {
+    "type": "table",
+    "title": "Your week, 7 posts",
+    "sample": true,
+    "cols": [
+     "Day",
+     "What to shoot"
+    ],
+    "rows": [
+     [
+      "Mon",
+      "Before and after, Oak St deck"
+     ],
+     [
+      "Tue",
+      "Quick tip: when to reseal"
+     ],
+     [
+      "Wed",
+      "Behind the scenes"
+     ],
+     [
+      "Thu",
+      "New stain color, up close"
+     ],
+     [
+      "Fri",
+      "Saturday slot open"
+     ],
+     [
+      "Sat",
+      "Time lapse of a build"
+     ],
+     [
+      "Sun",
+      "Day off"
+     ]
+    ],
+    "foot": "Caption and hashtags for each  ·  sample business"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Ten dollars, or all four owner tools for twenty four. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Content Week",
+    "sub": "Or all 4 owner tools for $24",
+    "cover": "content-week-reel",
+    "price": "$10",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/#tools"
+   }
+  }
+ ]
+}

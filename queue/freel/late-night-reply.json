@@ -14,7 +14,51 @@
   "other": "A customer messages late at night. Paste it into the Front Desk Kit and it drafts a kind reply that sets your hours and offers your next open time, in your voice. You send it when you're ready. Sample gutter cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
  },
  "rendered_at": "2026-11-05T10:11:23+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": {
+  "score": 93,
+  "breakdown": {
+   "hook": 23,
+   "demo": 22,
+   "legibility": 14,
+   "honesty": 15,
+   "cta": 10,
+   "brand_sound": 9
+  },
+  "notes": "17.3s, -15.0 LUFS, 1080x1920. Hook names a real owner problem (after hours message, lost lead) in under 2s; 'don't lose them by morning' is a bit loose. Ask, work and the drafted reply (closed for the night, tomorrow 8 or 2) on a labeled sample gutter cleaning business. Work panel shows only 2 of 4 lines before the cut. Claims match offers.json (drafts, owner sends). CTA Comment AGENTS (confirmed), Front Desk Kit $39 /front-desk/.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-05T07:40-03:00"
+ },
+ "posts": [
+  {
+   "metricool_id": 417549272,
+   "uuid": "3364388109701631335",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-08T10:00-03:00"
+  },
+  {
+   "metricool_id": 417549295,
+   "uuid": "-8463901160491561141",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-08T10:00-03:00"
+  },
+  {
+   "metricool_id": 417549340,
+   "uuid": "5257294504584694852",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-08T15:00-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ }
 }

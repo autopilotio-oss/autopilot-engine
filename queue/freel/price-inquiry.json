@@ -14,7 +14,51 @@
   "other": "A customer asks for a price while you're in the middle of a job. Paste the message into the Front Desk Kit and it drafts a reply from your real price list and open times, in your voice. You read it and hit send. Sample detailing business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
  },
  "rendered_at": "2026-11-05T10:11:19+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": {
+  "score": 95,
+  "breakdown": {
+   "hook": 24,
+   "demo": 23,
+   "legibility": 14,
+   "honesty": 15,
+   "cta": 10,
+   "brand_sound": 9
+  },
+  "notes": "19.3s, -15.1 LUFS, 1080x1920. Hook names a real owner problem (price question mid job) in under 2s. Ask, work and the drafted reply ($250 SUV detail, Saturday 9 or 1) on a labeled sample detailing business; 1 REPLY stat matches the screen. Claims match config/offers.json front_desk_kit (drafts, owner sends, uses your prices and hours). CTA Comment AGENTS (confirmed), Front Desk Kit $39 /front-desk/. Stat overlay crossfades over the draft for under 1s; draft fully readable before it.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-05T07:40-03:00"
+ },
+ "posts": [
+  {
+   "metricool_id": 417549000,
+   "uuid": "-2680070364495525736",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-05T10:00-03:00"
+  },
+  {
+   "metricool_id": 417549014,
+   "uuid": "-3514421750940220077",
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-05T10:00-03:00"
+  },
+  {
+   "metricool_id": 417549030,
+   "uuid": "1583014103090348818",
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-05T15:00-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ }
 }

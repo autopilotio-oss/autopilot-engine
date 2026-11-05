@@ -89,6 +89,27 @@
     "likes": 0,
     "shares": 0
    }
+  },
+  {
+   "date": "2026-11-05",
+   "read_at": "2026-11-05T07:55-03:00",
+   "age_h": "about 67",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE), organic",
+   "instagram": {
+    "views": 41,
+    "reach": 36,
+    "avg_watch_s": 3.019,
+    "view_rate_3s_pct": 26.3,
+    "shares": 0,
+    "saves": 1,
+    "comments": 0,
+    "keyword_comments": 0
+   },
+   "tiktok": "not re-read (TikTok is outside this lane now)",
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (no GoatCounter token)",
+   "attributed_orders": 0
   }
  ],
  "reason": "sales recovery: Front Desk focus"
