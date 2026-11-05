@@ -144,3 +144,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-05T12:28:20+00:00", "note": "2 posts out today (Threads 1, X 1), 0 errors; top post saves+shares 1 (IG subs reel); feed written yes (v44)"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-05T13:18:33+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-05T13:43:03+00:00", "note": "built 2026-11-05-salon-24-prompts score 94 QA PASS (bank 1)"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-05T14:54:03+00:00", "note": "/free/ title and meta description now name the free Front Desk Starter the page leads with"}
