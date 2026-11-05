@@ -111,6 +111,8 @@ Answers go here with his quote and date.
 4. PENDING 2026-11-04: Is the ManyChat keyword TOOLS live? Posts that say "Comment TOOLS" get switched to "link in bio" until it is in config/manychat.json confirmed.
 5. PENDING 2026-11-04: Can you add the GoatCounter API token? Without it site visits and UTM clicks are MISSING, so we cannot see which hook sends people to the site.
 
+6. PENDING 2026-11-05: The IG 24 prompts post got 10 comments on 8 views. Were they real people (what did they ask), or our own replies?
+
 ## 8. The team (scheduled tasks, Nov 4 2026)
 
 | Task | When (ART) | Lane |
