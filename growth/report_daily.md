@@ -1,6 +1,6 @@
 # Daily report
 
-Generated 2026-11-05 10:48 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-05T10:48:16Z.
+Generated 2026-11-05 14:03 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-05T14:03:54Z.
 Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown attribution stays unknown.
 
 | Metric | Value | Source |
