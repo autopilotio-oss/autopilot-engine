@@ -1,27 +1,19 @@
 {
-  "at": "2026-11-05T12:30:00Z",
+  "at": "2026-11-05T16:30:00Z",
   "posts_today": {
-    "threads": {"published": 1, "pending": 13, "error": 0},
-    "twitter": {"published": 1, "pending": 6, "error": 0},
-    "instagram": {"published": 0, "pending": 9, "error": 0},
-    "tiktok": {"published": 0, "pending": 4, "error": 0}
+    "threads": {"published": 5, "pending": 9, "error": 0},
+    "twitter": {"published": 2, "pending": 5, "error": 0},
+    "instagram": {"published": 1, "pending": 8, "error": 0},
+    "tiktok": {"published": 1, "pending": 3, "error": 0}
   },
   "top_posts": [
-    {
-      "network": "instagram",
-      "published_at": "2026-11-02T13:04:56Z",
-      "text": "Most people have at least one subscription they forgot about.",
-      "metrics": {"reach": 36, "views": 41, "saves": 1, "shares": 0, "comments": 0},
-      "url": "https://www.instagram.com/reel/DfPXyS2krB0/",
-      "metrics_seen_at": "2026-11-05T12:30:00Z"
-    },
     {
       "network": "instagram",
       "published_at": "2026-11-03T21:04:47Z",
       "text": "Banks are locking out AI agents.",
       "metrics": {"reach": 9, "views": 16, "saves": 0, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/p/DfSzf-8Dx01/",
-      "metrics_seen_at": "2026-11-05T12:30:00Z"
+      "metrics_seen_at": "2026-11-05T16:30:00Z"
     },
     {
       "network": "instagram",
@@ -29,9 +21,17 @@
       "text": "24 Claude prompts that should be illegal. All 24 are in the slides, no DM needed.",
       "metrics": {"reach": 3, "views": 8, "saves": 0, "shares": 0, "comments": 10},
       "url": "https://www.instagram.com/p/DfVkkbQCLwT/",
-      "metrics_seen_at": "2026-11-05T12:30:00Z"
+      "metrics_seen_at": "2026-11-05T16:30:00Z"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-02T21:05:03Z",
+      "text": "SECURITY ALERT: AI helped find two critical holes in PHP, the code behind about 70% of websites.",
+      "metrics": {"reach": 3, "views": 5, "saves": 0, "shares": 0, "comments": 0},
+      "url": null,
+      "metrics_seen_at": "2026-11-05T16:30:00Z"
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "09:30 ART Nov 5: 2 provider posts published so far (Threads 1, X 1, the 09:00 Binance news post), 32 provider slots pending, 0 ERROR. No pending slot is past its time yet (next at 10:00 ART). Many IG/TikTok/some Threads/X slots are still Metricool drafts (draft true). Window 6-72h = Nov 2 12:27Z to Nov 5 06:27Z. Only post in window with any save or share: IG subscription reel (1 save, reach 36, views 41). IG 24 prompts carousel has 10 comments but reach 3, 0 saves, 0 shares. Other IG posts reach 0 to 9, 0 saves, 0 shares. TikTok videos in window: views 83 to 118, shares 0, comments 0, reach MISSING. Threads and X analytics not pulled. Profile visits not provided. Revenue from hq_feed: 0 verified orders all time, 0 in 7d. All 8 GitHub workflows latest conclusion success, 0 fails in 24h. HQ feed written (status/hub v44)."
+  "notes": "13:30 ART Nov 5: 9 provider posts published today (Threads 5, X 2, IG 1 Front Desk price reel, TikTok 1 hooks video), 25 pending, 0 ERROR. Past-time pending slots (IG 10:00 x2, TikTok/Threads/X 10:00 charged-twice, Threads 12:00 thread, IG 12:30) are all Metricool drafts (draft true), not approved, so not errors. Window 6-72h = Nov 2 16:28Z to Nov 5 10:28Z. No post in window has any save or share, so no winner; listed by reach only. IG feed posts in window: reach 0 to 9. IG reels not pulled (no reel connector code on file); the subs reel from the last run is now outside the window. TikTok in window: views 83 to 118, comments 0, shares 0, reach MISSING. Threads in window: views up to 64 (PHP alert), 22 (banks), 23 (raise agent); replies, reposts, shares MISSING (null). X analytics not available per post. Profile visits not provided. Kit: 0 subscribers, 0 new today. Revenue from hq_feed: 0 verified orders all time, 0 in 7d. All 8 GitHub workflows latest conclusion success, 0 fails in 24h. HQ feed written (status/hub v45)."
 }
