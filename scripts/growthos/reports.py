@@ -14,6 +14,14 @@ import orders, costs, commander, heartbeat  # noqa: E402
 OPS = os.path.join(ROOT, "growth-os", "operations")
 
 
+def worker_label(r):
+    """One heartbeat check row -> ok / waiting first run / LATE/FAILED. 'waiting first run' only when no heartbeat exists
+    yet (heartbeat.check says 'no heartbeat yet'), not when a worker's own detail mentions 'awaiting approval'."""
+    if not r["ok"]:
+        return "LATE/FAILED"
+    return "waiting first run" if str(r.get("detail", "")).startswith("no heartbeat yet") else "ok"
+
+
 def _j(p, d=None):
     try:
         return json.load(open(p))
@@ -60,7 +68,7 @@ def facts(store, date, days):
         "visits": ("MISSING DATA", "website analytics not connected (GoatCounter API token missing)") if (not site or "not connected" in str(site.get("status", ""))) else ("OBSERVED", json.dumps(site)[:120]),
         "content": ("OBSERVED", f"{len(vc)} concepts in the evidence register: " + (", ".join(f"{c['content_id']} {c['state']}" for c in vc) or "none")),
         "reliability": ("OBSERVED", f"{sum(1 for v in hs.values() if not v['ok'])} failing checks now; {len(inc_open)} open incidents; {len(incidents_window)} opened in window" if hs else "MISSING DATA: no health status"),
-        "workers": ("OBSERVED", ", ".join(f"{r['check'][7:]}={('waiting first run' if 'waiting' in r['detail'] else 'ok') if r['ok'] else 'LATE/FAILED'}" for r in heartbeat.check())),
+        "workers": ("OBSERVED", ", ".join(f"{r['check'][7:]}={worker_label(r)}" for r in heartbeat.check())),
         "budget": ("CALCULATED", costs.guard(store)["status"]),
     }
 

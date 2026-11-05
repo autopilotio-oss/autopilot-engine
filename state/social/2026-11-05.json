@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-05",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts (brand 7761544) + Kit get_growth_stats, pulled 2026-11-05 11:25 UTC by Daily Pulse. 7d window Oct 29 to Nov 4 (Metricool daily rows; IG reel views for Nov 3 and Nov 4 not yet reported).",
+ "kit": {
+  "subscribers": 0,
+  "new_7d": 0
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 83,
+   "posts_7d": 21,
+   "interactions_7d": 40,
+   "accounts_engaged_7d": 2,
+   "reel_views_7d": 411,
+   "note": "accounts_engaged_7d is the Nov 4 daily value (IGEV42, not additive); followers = IGEV01 on Nov 4; Nov 3 and Nov 4 reel views (IGEV23) missing from Metricool, so reel_views_7d covers Oct 30 to Nov 2"
+  },
+  "threads": {
+   "followers": 1,
+   "posts_7d": 30,
+   "views_7d": 349,
+   "interactions_7d": 7
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 21,
+  "queued": 21,
+  "failed": 0,
+  "window": "published/failed = network deliveries last 24h (Nov 4 08:20 ART onward: Threads 12, X 5, IG 3, TikTok 1), queued = next 48h non-draft pending posts (Threads 10, X 9, IG 1, TikTok 1)",
+  "unapproved_pending": 0,
+  "unapproved_action": "none: all 21 pending non-draft posts have uuid or id in health.approved_post_uuids() (292 approved)",
+  "cadence_ok": "Nov 5: IG 1 (10:00), Threads 6, X 5 non-draft, within caps. 0 ERRORs."
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-04",
+  "campaign": "120248645551300265 PAUSED Nov 3; campaign ads.status off since Nov 2",
+  "cap_usd": 60,
+  "source": "costs ledger + decision log (no spend after Nov 1)"
+ },
+ "decisions": [
+  "Viral Lab: pick a source for public view counts so references can be certified (YouTube Data API key, or you capture URL + views + creator's last 10 from your phone). Open since Oct 31.",
+  "Meta ads restart needs a live Meta Pixel and your explicit yes (withdrawn Nov 2).",
+  "Kit: 0 subscribers ever; the only test signup is unconfirmed and no rule feeds the Welcome sequence (needs you in the Kit UI). IG bio still sells THE WORKSPACE."
+ ]
+}
