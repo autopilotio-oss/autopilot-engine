@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 05 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 47,
+ "folders": [
+  "Bookings",
+  "Clients",
+  "Reviews",
+  "Posts",
+  "Money",
+  "Team"
+ ],
+ "cover_bg": "bg-lime",
+ "lava_opacity": 0.3,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px;background:#0a0a0a;color:#D4FF3A\">FOR SALONS AND BARBERS &middot; ALL 24 INSIDE</div><div class=\"fx A\" style=\"left:40px;top:150px;font-size:600px;line-height:1;color:#0a0a0a;letter-spacing:-10px\">24</div><div class=\"fx\" style=\"left:636px;top:250px;width:388px;display:flex;flex-direction:column;gap:14px\"><div style=\"border:3px solid #0a0a0a;border-radius:10px;padding:12px 16px 10px;background:#0a0a0a;color:#D4FF3A;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 17px M\">01 to 04</span><span style=\"font:400 30px/1 A;text-transform:uppercase\">Bookings</span></div><div style=\"border:3px solid #0a0a0a;border-radius:10px;padding:12px 16px 10px;background:#f2f2ee;color:#0a0a0a;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 17px M\">05 to 08</span><span style=\"font:400 30px/1 A;text-transform:uppercase\">Clients</span></div><div style=\"border:3px solid #0a0a0a;border-radius:10px;padding:12px 16px 10px;background:#f2f2ee;color:#0a0a0a;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 17px M\">09 to 12</span><span style=\"font:400 30px/1 A;text-transform:uppercase\">Reviews</span></div><div style=\"border:3px solid #0a0a0a;border-radius:10px;padding:12px 16px 10px;background:#f2f2ee;color:#0a0a0a;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 17px M\">13 to 16</span><span style=\"font:400 30px/1 A;text-transform:uppercase\">Posts</span></div><div style=\"border:3px solid #0a0a0a;border-radius:10px;padding:12px 16px 10px;background:#f2f2ee;color:#0a0a0a;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 17px M\">17 to 20</span><span style=\"font:400 30px/1 A;text-transform:uppercase\">Money</span></div><div style=\"border:3px solid #0a0a0a;border-radius:10px;padding:12px 16px 10px;background:#f2f2ee;color:#0a0a0a;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 17px M\">21 to 24</span><span style=\"font:400 30px/1 A;text-transform:uppercase\">Team</span></div></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"16\" style=\"left:56px;top:880px;font-size:120px;white-space:nowrap;color:#0a0a0a\">Claude prompts every</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:1010px;font-size:120px;white-space:nowrap;color:#D4FF3A;background:#0a0a0a;padding:12px 22px 0;box-sizing:border-box\">salon and barber needs</div><div class=\"fx\" data-after=\"h\" data-gap=\"50\" style=\"left:56px;top:1220px;width:968px;display:flex;justify-content:space-between;align-items:center\"><div style=\"font:800 36px/1.2 I;letter-spacing:-.5px;color:#0a0a0a\">Copy. Paste. Swap the [brackets].</div><div style=\"font:700 22px C;letter-spacing:3px;color:#f2f2ee;background:#0a0a0a;padding:14px 22px 12px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div></div>",
+ "slides": [
+  {
+   "cat": "Bookings",
+   "cards": [
+    {
+     "t": "Price question",
+     "p": "A client asks what [service] costs. Reply with my range [range], what changes the price, and two open times.",
+     "star": true
+    },
+    {
+     "t": "Waitlist text",
+     "p": "A spot opened at [time] today. Write a short text for my waitlist. First to reply gets it."
+    },
+    {
+     "t": "Color consult",
+     "p": "Write 5 questions to text a new color client before the visit: hair history, photos, budget, time."
+    },
+    {
+     "t": "Holiday hours",
+     "p": "Write a text and a post with my holiday hours [dates], the last booking day, and how to book early."
+    }
+   ]
+  },
+  {
+   "cat": "Clients",
+   "cards": [
+    {
+     "t": "Honest timeline",
+     "p": "Explain kindly why going from [current color] to [goal] takes [X] visits. Plain words, no salon jargon.",
+     "star": true
+    },
+    {
+     "t": "Free touch up",
+     "p": "A client says their cut feels uneven. Write a calm text inviting them back for a free fix within [days]."
+    },
+    {
+     "t": "Home care",
+     "p": "Write a short text after a [service]: what to avoid for 48 hours and what to use at home."
+    },
+    {
+     "t": "Birthday text",
+     "p": "Write a warm birthday text for [client] with a small treat: [offer]. Two sentences, no pressure to book."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Chair ask",
+     "p": "Give me one natural line to say at the chair, when a client loves the result, asking for a Google review.",
+     "star": true
+    },
+    {
+     "t": "Stylist shoutout",
+     "p": "This review praises [stylist] by name: [paste]. Write a reply that thanks the client and credits the stylist."
+    },
+    {
+     "t": "Long wait",
+     "p": "Reply to this review about a long wait: [paste]. Own it, say what changed, under 60 words."
+    },
+    {
+     "t": "Too pricey",
+     "p": "Reply to a review that says we cost too much: [paste]. Thank them, explain what the price covers, stay warm."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "One photo",
+     "p": "Here is a before and after of a [service]. Write 5 captions: story, tip, question, price, booking push.",
+     "star": true
+    },
+    {
+     "t": "Style guide",
+     "p": "Write a carousel: 5 cuts for [hair type], one line each on who it suits and how to ask for it."
+    },
+    {
+     "t": "Meet the team",
+     "p": "Write a short intro post for [stylist]: what they love doing, one fun fact, how to book them."
+    },
+    {
+     "t": "Slow day story",
+     "p": "It is a slow [day]. Write a story post with two open times and a reason to book today. No discount."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Sort receipts",
+     "p": "Sort these salon expenses into products, rent, tools, marketing, other: [paste]. Total each. Flag anything odd.",
+     "star": true
+    },
+    {
+     "t": "Booth rent",
+     "p": "Write a friendly reminder to [renter] that booth rent of [amount] was due [date]. Add how to pay."
+    },
+    {
+     "t": "Service menu",
+     "p": "Lay out my service menu with prices: [paste]. Group cuts, color and treatments. Short names, one line each."
+    },
+    {
+     "t": "Retail line",
+     "p": "Write one honest line to suggest [product] at checkout, tied to the service they just had. Never pushy."
+    }
+   ]
+  },
+  {
+   "cat": "Team",
+   "cards": [
+    {
+     "t": "Station reset",
+     "p": "Write a 10 step reset checklist for my station between clients: tools, towels, chair, floor, mirror."
+    },
+    {
+     "t": "Shift swaps",
+     "p": "Write a team rule for swapping shifts: how much notice, who approves, how clients get told. Plain words.",
+     "star": true
+    },
+    {
+     "t": "Interview",
+     "p": "Give me 6 interview questions for a [stylist or barber] that show skill, attitude and how they treat clients."
+    },
+    {
+     "t": "Team huddle",
+     "p": "Turn these notes into a 10 minute team huddle: one win, one fix, one goal for the week: [paste]."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "SALON",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for salons and barbers in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

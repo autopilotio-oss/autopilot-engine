@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-05-salon-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Full lime page, a giant black 24 as the main visual with the 6 folder chips stacked beside it, headline moved to the bottom at a smaller scale (CLAUDE PROMPTS EVERY / SALON AND BARBER NEEDS in a black block), sub and black button on one row.",
+ "theme": "salons and barbers: 24 new prompts in 6 folders (Bookings, Clients, Reviews, Posts, Money, Team), all visible, hook test '24 Claude prompts every <niche> needs'",
+ "gate": {
+  "score": 94,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, every prompt 22 words max, none repeated from earlier packs, script checked; no review incentives, no legal or tax advice). Hook 22/25 (untested hook in the rotation, new niche). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder). Design 14/15 vs last 5 covers: lime background vs black/paper, headline at the bottom vs top, giant number with stacked chips vs headline plus chip row, headline scale 120px vs 160 to 170px. CTA 9/10 (AGENTS is confirmed in config/manychat.json, TOOLS not yet; gift is the free starter per override; prompts map to Review Desk, Content Week, Invoice Chaser, Bookkeeping Sorter and Front Desk). QA PASS all 8; read every slide, legible on a phone."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You run a salon or a barbershop and still type every booking reply between clients?\n\nHere are 24 Claude prompts in 6 folders: bookings, clients, reviews, posts, money and team. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next quiet hour.\n\n#salonowner #barbershop #hairstylist #smallbusiness #claudeai",
+  "threads": "24 Claude prompts every salon and barber needs.\n\nPrice question replies, waitlist texts, color timelines, review replies, a week of captions from one before and after, booth rent reminders, receipts sorted. All in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Salon and barbershop owners: 24 Claude prompts for bookings, clients, reviews, posts, money and team. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-05-salon-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-05T13:40Z"
+}
