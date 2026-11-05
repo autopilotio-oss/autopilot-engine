@@ -42,5 +42,10 @@
    "status": "draft (thinned Nov 1)"
   }
  ],
- "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)"
+ "ig_cover": "cover_ig.mp4 (silent, Seb adds music in app)",
+ "results": {
+  "pulled_at": "2026-11-05T12:00-03:00",
+  "source": "Metricool IGPO posts Oct 31 to Nov 5",
+  "note": "No matching Instagram feed post found; the IG post appears never to have published. No metrics."
+ }
 }
