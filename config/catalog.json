@@ -1,6 +1,32 @@
 {
  "offers": [
   {
+   "offer_id": "ai_team",
+   "permalink": "ai-team",
+   "name": "Your AI Team by (5 setups)",
+   "price_cents": 3900,
+   "currency": "USD",
+   "kind": "bundle",
+   "components": [
+    "autopilot",
+    "invoice_chaser",
+    "review_desk",
+    "bookkeeping_sorter",
+    "content_week"
+   ],
+   "status": "live",
+   "checkout_url": "https://autopilotoi.gumroad.com/l/ai-team",
+   "guides": [
+    {
+     "guide": "landing",
+     "path": "/front-desk/",
+     "keyword": null,
+     "paid": true
+    }
+   ],
+   "managed_by": "products/"
+  },
+  {
    "offer_id": "all_money_agents",
    "permalink": "all-money-agents",
    "name": "All 5 Money Agents",
@@ -528,6 +554,7 @@
   }
  ],
  "live": [
+  "ai-team",
   "all-money-agents",
   "autopilot",
   "bill-agent",

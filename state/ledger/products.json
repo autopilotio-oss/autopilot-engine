@@ -1,6 +1,15 @@
 {
- "checked": "2026-11-05T01:55:17Z",
+ "checked": "2026-11-05T04:45:39Z",
  "products": [
+  {
+   "permalink": "ai-team",
+   "name": "Your AI Team by AUTOPILOT.OI (5 setups)",
+   "published": true,
+   "price_cents": 3900,
+   "currency": "usd",
+   "sales_count": 0,
+   "deleted": false
+  },
   {
    "permalink": "autopilot",
    "name": "Front Desk Kit by AUTOPILOT.OI",
@@ -24,15 +33,6 @@
    "name": "AUTOPILOT.OI Content Week",
    "published": true,
    "price_cents": 999,
-   "currency": "usd",
-   "sales_count": 0,
-   "deleted": false
-  },
-  {
-   "permalink": "deposit-agent",
-   "name": "AUTOPILOT.OI Deposit Agent",
-   "published": true,
-   "price_cents": 1000,
    "currency": "usd",
    "sales_count": 0,
    "deleted": false
