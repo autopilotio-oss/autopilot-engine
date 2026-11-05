@@ -1,0 +1,102 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-SemiBold.woff)}
+@font-face{font-family:TB;src:url(/docs/assets/fonts/APText-Bold.woff)}
+@font-face{font-family:TM;src:url(/docs/assets/fonts/APText-Medium.woff)}
+@font-face{font-family:W;src:url(/docs/assets/fonts/APWide-Black.woff)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#C8FF2E;--K:#050505}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;background:var(--K);overflow:hidden;font-family:T;color:#fff;position:relative}
+.bg{position:absolute;inset:0;background:radial-gradient(900px 700px at 50% 62%,rgba(200,255,46,.16),transparent 70%),radial-gradient(600px 500px at 85% 10%,rgba(200,255,46,.07),transparent 70%),#050505}
+.grain{position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+.top{position:absolute;top:150px;left:0;right:0;text-align:center;z-index:5}
+.kick{font:22px M;letter-spacing:6px;color:var(--L);margin-bottom:22px}
+h1{font:150px/0.9 A;text-transform:uppercase;letter-spacing:1px}
+h1 em{font-style:normal;color:var(--L);text-shadow:0 0 40px rgba(200,255,46,.45)}
+.stage{position:absolute;left:0;right:0;top:560px;height:1250px;perspective:2200px}
+.phone{position:absolute;left:50%;top:0;width:620px;height:1260px;margin-left:-310px;border-radius:92px;background:#0b0b0b;
+ box-shadow:0 0 0 3px #2a2a2a,0 0 0 14px #111,0 0 0 16px #333,0 60px 120px rgba(0,0,0,.8),0 0 160px rgba(200,255,46,.22);transform:rotateX(12deg) rotateY(-14deg) rotateZ(2deg);transform-origin:50% 30%;overflow:hidden}
+.island{position:absolute;top:22px;left:50%;width:170px;height:48px;margin-left:-85px;background:#000;border-radius:30px;z-index:9}
+.sb{position:absolute;top:30px;left:60px;right:56px;display:flex;justify-content:space-between;font:30px TB;z-index:8}
+.scr{position:absolute;inset:0;padding:110px 30px 30px}
+/* lock screen */
+.lock .t{font:170px/1 TB;text-align:center;letter-spacing:-4px;margin-top:40px;color:#fff}
+.lock .d{font:30px TM;text-align:center;color:#cfcfcf;margin-top:6px}
+.wall{position:absolute;inset:0;background:radial-gradient(500px 600px at 50% 20%,#1d2a05,#050505 70%)}
+.n{background:rgba(40,40,40,.82);backdrop-filter:blur(20px);border-radius:34px;padding:22px 26px;margin-top:16px;display:flex;gap:18px;align-items:flex-start}
+.n .i{width:62px;height:62px;border-radius:16px;flex:none;display:grid;place-items:center;font:30px TB;color:#000}
+.n .b{flex:1;min-width:0}.n .h{display:flex;justify-content:space-between;font:24px TB;color:#fff}.n .h span{font:22px TM;color:#9a9a9a}
+.n .m{font:26px/1.3 TM;color:#e6e6e6;margin-top:4px}
+.stack{position:absolute;left:24px;right:24px;top:560px}
+.badge{position:absolute;left:770px;top:520px;background:#ff3b30;color:#fff;font:34px TB;border-radius:40px;padding:10px 24px;box-shadow:0 10px 30px rgba(255,59,48,.5);transform:rotate(8deg);z-index:9}
+/* chat */
+.chat .hd{text-align:center;font:24px TM;color:#9a9a9a;margin:10px 0 24px}
+.chat .hd b{display:block;font:30px TB;color:#fff}
+.bub{max-width:80%;padding:20px 26px;border-radius:34px;font:28px/1.32 TM;margin-bottom:16px}
+.in{background:#262626;color:#fff;border-bottom-left-radius:10px}
+.out{background:var(--L);color:#000;margin-left:auto;border-bottom-right-radius:10px;font-family:T;box-shadow:0 0 50px rgba(200,255,46,.35)}
+.ai{border:2px solid rgba(200,255,46,.6);border-radius:30px;padding:22px 24px;margin:26px 0 18px;background:rgba(200,255,46,.06)}
+.ai .l{font:20px M;letter-spacing:3px;color:var(--L);margin-bottom:12px}
+.ai .x{font:27px/1.35 TM;color:#fff}.ai .x u{text-decoration:none;color:var(--L);font-family:TB}
+.row{display:flex;gap:14px;margin-top:18px}.btn{flex:1;text-align:center;font:26px TB;padding:18px;border-radius:24px;background:#1b1b1b;color:#fff}.btn.go{background:var(--L);color:#000}
+.tap{position:absolute;width:110px;height:110px;border-radius:50%;border:4px solid rgba(255,255,255,.9);background:rgba(255,255,255,.18);box-shadow:0 0 0 18px rgba(255,255,255,.08)}
+.sent{font:22px TM;color:#9a9a9a;text-align:right;margin-top:-6px}
+/* offer */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px}
+.tile{background:#151515;border:2px solid #232323;border-radius:30px;padding:24px;height:200px;position:relative}
+.tile .ic{width:64px;height:64px;border-radius:18px;background:var(--L);display:grid;place-items:center;font:30px TB;color:#000}
+.tile .nm{font:28px TB;margin-top:22px}.tile .sm{font:21px TM;color:#a9a9a9;margin-top:4px}
+.tile.w{grid-column:1/3;height:150px;display:flex;gap:22px;align-items:center}.tile.w .nm{margin:0}
+.price{position:absolute;left:0;right:0;bottom:120px;text-align:center;z-index:6}
+.pill{display:inline-block;background:var(--L);color:#000;font:64px A;padding:14px 44px;border-radius:80px;box-shadow:0 0 80px rgba(200,255,46,.55)}
+.sub{font:26px M;letter-spacing:2px;color:#d9d9d9;margin-top:24px}
+.cta{font:30px TB;margin-top:20px;color:var(--L)}
+.sample{position:absolute;top:70px;right:60px;font:18px M;letter-spacing:4px;color:#777;z-index:9}
+.brand{position:absolute;top:66px;left:60px;font:24px W;letter-spacing:3px;z-index:9}.brand b{color:var(--L)}
+.f{display:none}
+</style></head><body><div class="bg"></div>
+<div class="brand">AUTOPILOT<b>.OI</b></div><div class="sample">SAMPLE BUSINESS</div>
+
+<!-- FRAME 1: hook -->
+<div class="f" id="f1">
+ <div class="top"><div class="kick">DETAILERS · CLEANERS · CONTRACTORS</div><h1>11:48 PM.<br><em>STILL WORKING?</em></h1></div>
+ <div class="stage"><div class="phone"><div class="wall"></div><div class="island"></div><div class="sb"><span>11:48</span><span>●●● 5G ▮</span></div>
+  <div class="scr lock"><div class="t">11:48</div><div class="d">Tuesday, November 4</div>
+   <div class="stack">
+    <div class="n"><div class="i" style="background:#34c759">💬</div><div class="b"><div class="h">Jess (new lead)<span>now</span></div><div class="m">how much for a full detail? free saturday?</div></div></div>
+    <div class="n"><div class="i" style="background:#ff9f0a">$</div><div class="b"><div class="h">Invoice #1042<span>2m</span></div><div class="m">Dave R. · $480 · 5 days late</div></div></div>
+    <div class="n"><div class="i" style="background:#ff453a">★</div><div class="b"><div class="h">New review · 1 star<span>8m</span></div><div class="m">"Showed up 30 minutes late."</div></div></div>
+    <div class="n" style="opacity:.6"><div class="i" style="background:#0a84ff">🧾</div><div class="b"><div class="h">Receipts<span>1h</span></div><div class="m">38 receipts not sorted</div></div></div>
+   </div></div></div><div class="badge">+12</div></div>
+</div>
+
+<!-- FRAME 2: demo -->
+<div class="f" id="f2">
+ <div class="top"><div class="kick">YOUR AI FRONT DESK</div><h1>PASTE IT.<br><em>REPLY'S DONE.</em></h1></div>
+ <div class="stage"><div class="phone"><div class="island"></div><div class="sb"><span>11:49</span><span>●●● 5G ▮</span></div>
+  <div class="scr chat"><div class="hd"><b>Jess</b>new lead · text</div>
+   <div class="bub in">how much for a full detail? free saturday?</div>
+   <div class="ai"><div class="l">● YOUR AI · DRAFTED IN YOUR VOICE</div><div class="x">Hi Jess! A full detail is <u>$250</u>, about 3 hours, and we come to you. I have <u>Saturday 9 AM or 1 PM</u>. Want one? Mike</div>
+    <div class="row"><div class="btn">Edit</div><div class="btn go">Copy & send</div></div></div>
+   <div class="bub out">Hi Jess! A full detail is $250, about 3 hours, and we come to you. I have Saturday 9 AM or 1 PM. Want one? Mike</div>
+   <div class="sent">Delivered</div>
+   <div class="bub in">9 AM works!! 🙌</div>
+  </div><div class="tap" style="left:405px;top:520px"></div></div></div>
+</div>
+
+<!-- FRAME 3: offer -->
+<div class="f" id="f3">
+ <div class="top" style="top:140px"><div class="kick">5 HELPERS · 1 PRICE</div><h1>YOUR AI<br><em>TEAM.</em></h1></div>
+ <div class="stage" style="top:520px"><div class="phone" style="transform:rotateX(8deg) rotateY(10deg) rotateZ(-2deg);height:1000px"><div class="island"></div><div class="sb"><span>9:41</span><span>●●● 5G ▮</span></div>
+  <div class="scr"><div class="grid">
+   <div class="tile"><div class="ic">💬</div><div class="nm">Front Desk</div><div class="sm">replies with your prices</div></div>
+   <div class="tile"><div class="ic">$</div><div class="nm">Collector</div><div class="sm">chases late pay</div></div>
+   <div class="tile"><div class="ic">🧾</div><div class="nm">Bookkeeper</div><div class="sm">sorts receipts</div></div>
+   <div class="tile"><div class="ic">★</div><div class="nm">Reviews</div><div class="sm">calm replies</div></div>
+   <div class="tile w"><div class="ic">📅</div><div><div class="nm">Marketer</div><div class="sm">a week of posts</div></div></div>
+  </div></div></div></div>
+ <div class="price"><div class="pill">$39 · ALL 5</div><div class="sub">WORKS IN FREE CLAUDE · NO TECH SKILLS · 30 DAY REFUND</div><div class="cta">TAP SHOP NOW ↓</div></div>
+</div>
+<script>const id=(new URLSearchParams(location.search).get('f')||'f1');document.getElementById(id).style.display='block'</script>
+</body></html>
