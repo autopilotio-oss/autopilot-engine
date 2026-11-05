@@ -1,0 +1,18 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "1475714390305754106",
+   "metricool_id": 417652181,
+   "at": "2026-11-05T12:00:00-03:00",
+   "pillar": "tiktok_agent_hooks",
+   "hook": "Good video. Weak first line?",
+   "media": "docs/media/ads/tk-hooks.mp4",
+   "gate": "86/100: hook in 2s, 23.5s 1080x1920, SAMPLE labeled, no view or money claims, audio mean -17.3 dB, run 42022918822"
+  }
+ ]
+}

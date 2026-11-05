@@ -140,3 +140,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-05T00:36:10+00:00", "note": "0 routed (forms empty)"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-05T08:34:01+00:00", "note": "0 routed (forms empty)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-05T11:22:39+00:00", "note": "0 orders; 20 checkouts ok; 0 unapproved posts; 21 queued approved; report worker label fix"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-05T12:10:47+00:00", "note": "AM Nov 5: 5 Threads, tk-hooks TikTok 12:00, 0 orders"}
