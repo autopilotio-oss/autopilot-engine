@@ -1,0 +1,93 @@
+<!doctype html><html><head><meta charset=utf-8><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}@font-face{font-family:C;src:url(/docs/assets/fonts/ChakraPetch-SemiBold.ttf)}@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;background:#0b0b0b}
+.sc{position:absolute;inset:0;overflow:hidden;display:none}
+.M{font:400 26px M;letter-spacing:6px;text-transform:uppercase}.A{font-family:A;text-transform:uppercase;line-height:.9}
+.ab{position:absolute}
+.note{position:absolute;left:80px;width:920px;background:#1c1d1b;border-radius:34px;padding:28px 34px;color:#f2f2ee}
+.note .h{display:flex;justify-content:space-between;font:400 22px M;letter-spacing:3px;color:#9a9a92;margin-bottom:10px}
+.note .b{font:400 40px/1.3 C}
+.task{font-family:A;text-transform:uppercase;font-size:112px;line-height:1.12;color:#0b0b0b;position:relative;display:inline-block;isolation:isolate}
+.strike{position:absolute;left:-8px;top:46%;height:34px;background:#D4FF3A;transform-origin:left;z-index:-1}
+.role{position:absolute;left:80px;width:920px;border:3px solid #333;padding:24px 30px;display:flex;justify-content:space-between;align-items:center;color:#f2f2ee}
+.bub{position:absolute;padding:30px 36px;font:400 40px/1.35 C;max-width:860px}
+</style></head><body>
+<!-- persistent brand bar -->
+<div id=brand class=ab style="left:80px;top:290px;z-index:9;display:flex;align-items:center;gap:16px"><img id=bm src="../ap_paper.png" style="width:66px"><span id=bt class=M style="font-family:C;letter-spacing:7px;color:#f2f2ee">AUTOPILOT.OI</span></div>
+
+<div class=sc id=s1>
+ <div class="A ab" id=clock style="left:74px;top:400px;font-size:250px;color:#D4FF3A">11:48 PM</div>
+ <div class=note id=n1 style="top:720px"><div class=h><span>CUSTOMER</span><span>NOW</span></div><div class=b>How much for Saturday? Need an answer tonight</div></div>
+ <div class=note id=n2 style="top:930px"><div class=h><span>CUSTOMER</span><span>2M AGO</span></div><div class=b>Did you get my message about the quote?</div></div>
+ <div class=note id=n3 style="top:1140px"><div class=h><span>YOU</span><span>1H AGO</span></div><div class=b>Invoice #1042 for $480 is still unpaid...</div></div>
+ <div class="A ab" id=q1 style="left:80px;top:1360px;font-size:104px;color:#f2f2ee">Still doing it<br>all yourself?</div>
+</div>
+
+<div class=sc id=s2 style="background:#f2f2ee">
+ <div class="M ab" style="left:80px;top:420px;color:#0b0b0b">every night it's:</div>
+ <div class=ab style="left:80px;top:480px" id=tasks></div>
+ <div class="A ab" id=q2 style="left:80px;top:1300px;font-size:84px;line-height:1.05;color:#0b0b0b">Slow replies lose jobs.<br><span style="background:#D4FF3A;padding:4px 14px 0;display:inline-block;margin-top:10px">Late invoices lose money.</span></div>
+</div>
+
+<div class=sc id=s3>
+ <div class="M ab" style="left:80px;top:420px;color:#D4FF3A">meet your</div>
+ <div class="A ab" id=team style="left:76px;top:470px;font-size:200px;color:#f2f2ee">AI team.</div>
+ <div id=roles></div>
+</div>
+
+<div class=sc id=s4 style="background:#f2f2ee">
+ <div class="M ab" style="left:80px;top:420px;color:#0b0b0b">a customer texts at 11:48 pm</div>
+ <div class=bub id=c1 style="left:80px;top:500px;background:#ddddd6;color:#0b0b0b;border-radius:36px 36px 36px 8px">How much for a full detail on an SUV? Free Saturday?</div>
+ <div class="M ab" id=lab style="left:80px;top:830px;color:#0b0b0b;font-size:22px">your front desk drafts:</div>
+ <div class=bub id=c2 style="right:80px;top:880px;background:#0b0b0b;color:#f2f2ee;border-radius:36px 36px 8px 36px;min-height:120px"><span id=typed></span><span id=cur style="color:#D4FF3A">|</span></div>
+ <div class=ab id=sendrow style="left:80px;top:1290px;display:flex;gap:18px;align-items:center"><div class=A style="font-size:64px;background:#D4FF3A;padding:10px 28px 2px;color:#0b0b0b">You hit send.</div></div>
+ <div class="M ab" style="left:80px;top:1440px;color:#77776f;font-size:20px">sample · drafted from your own prices and rules</div>
+</div>
+
+<div class=sc id=s5 style="background:#D4FF3A">
+ <div class="M ab" style="left:80px;top:420px;color:#0b0b0b">5 setups · set up tonight on your phone</div>
+ <div class="A ab" id=off style="left:74px;top:470px;font-size:190px;color:#0b0b0b">Your<br>AI team.</div>
+ <div class="A ab" id=price style="left:80px;top:860px;font-size:300px;background:#0b0b0b;color:#D4FF3A;padding:20px 40px 0">$39</div>
+ <div class=ab style="left:80px;top:1230px;color:#0b0b0b">
+  <div class=M style="font-size:24px;line-height:1.9">front desk · collector · reviews<br>bookkeeper · marketer<br>$78.96 separately · 30 day refund<br>claude free plan works · it drafts, you send</div></div>
+ <div class="A ab" id=cta style="left:0;right:0;text-align:center;top:1500px;font-size:70px;color:#0b0b0b">Tap shop now ↓</div>
+</div>
+
+<div class=ab id=line style="left:0;right:0;top:1600px;height:8px;background:#D4FF3A;z-index:8"></div>
+<script>
+const T=[['the replies'],['the quotes'],['the late invoices'],['the reviews'],['the books'],['the posts']];
+document.getElementById('tasks').innerHTML=T.map((t,i)=>`<div><span class=task>${t[0]}<span class=strike id=st${i} style="width:calc(100% + 12px)"></span></span></div>`).join('');
+const R=[['Front desk','replies, quotes, follow ups'],['Collector','invoices + late reminders'],['Reviews','every review answered'],['Bookkeeper','statement sorted by category'],['Marketer','7 posts a week']];
+document.getElementById('roles').innerHTML=R.map((r,i)=>`<div class=role id=r${i} style="top:${720+i*160}px"><div><div class=A style="font-size:62px">${r[0]}</div><div class=M style="font-size:20px;color:#9a9a92;margin-top:6px">${r[1]}</div></div><div class=M style="color:#D4FF3A;font-size:30px">0${i+1}</div></div>`).join('');
+const MSG="Hi! A full SUV detail is $250 and takes about 3 hours. We come to you. Saturday at 9 AM or 1 PM?";
+const cl=(x)=>Math.max(0,Math.min(1,x)),eo=(x)=>1-Math.pow(1-cl(x),3);
+const $=id=>document.getElementById(id);
+const S=[[0,3.2],[3.2,6],[6,10],[10,13.2],[13.2,16]];
+window.render=function(t){
+ S.forEach(([a,b],i)=>{$('s'+(i+1)).style.display=(t>=a&&t<b)||(i==4&&t>=b)?'block':'none'});
+ const light=(t>=3.2&&t<6)||(t>=10&&t<13.2)||t>=13.2;
+ $('bm').src=light?'../ap_ink.png':'../ap_paper.png';$('bt').style.color=light?'#0b0b0b':'#f2f2ee';
+ $('line').style.background=light?'#0b0b0b':'#D4FF3A';
+ // s1
+ $('clock').style.transform=`translateY(${(1-eo(t/0.4))*-60}px)`;$('clock').style.opacity=cl(t/0.25);
+ [['n1',0.35],['n2',0.8],['n3',1.25]].forEach(([id,s])=>{const k=eo((t-s)/0.35);$(id).style.transform=`translateX(${(1-k)*1100}px)`});
+ $('q1').style.opacity=cl((t-1.9)/0.25);$('q1').style.transform=`translateY(${(1-eo((t-1.9)/0.3))*40}px)`;
+ // s2
+ for(let i=0;i<6;i++){$('st'+i).style.transform=`scaleX(${eo((t-3.45-i*0.28)/0.25)})`}
+ $('q2').style.opacity=cl((t-5.0)/0.2);
+ // s3
+ $('team').style.transform=`scale(${1+0.25*(1-eo((t-6)/0.35))})`;$('team').style.transformOrigin='left center';
+ for(let i=0;i<5;i++){const k=eo((t-6.5-i*0.32)/0.3);$('r'+i).style.transform=`translateY(${(1-k)*120}px)`;$('r'+i).style.opacity=k}
+ // s4
+ $('c1').style.transform=`translateY(${(1-eo((t-10.1)/0.3))*60}px)`;$('c1').style.opacity=cl((t-10.1)/0.2);
+ $('lab').style.opacity=cl((t-10.6)/0.2);
+ const n=Math.floor(MSG.length*cl((t-10.8)/1.5));$('typed').textContent=MSG.slice(0,n);$('c2').style.opacity=cl((t-10.7)/0.15);
+ $('cur').style.opacity=(n<MSG.length&&Math.floor(t*6)%2==0)?1:0;
+ $('sendrow').style.opacity=cl((t-12.45)/0.2);$('sendrow').style.transform=`scale(${1+0.15*(1-eo((t-12.45)/0.3))})`;$('sendrow').style.transformOrigin='left center';
+ // s5
+ $('off').style.transform=`translateY(${(1-eo((t-13.2)/0.3))*-50}px)`;
+ $('price').style.transform=`scale(${0.6+0.4*eo((t-13.45)/0.35)})`;$('price').style.transformOrigin='left top';$('price').style.opacity=cl((t-13.45)/0.15);
+ $('cta').style.transform=`translateY(${Math.sin(t*6)*10}px)`;$('cta').style.opacity=cl((t-14)/0.25);
+};
+document.fonts.ready.then(()=>{render(0);window.READY=1});
+</script></body></html>

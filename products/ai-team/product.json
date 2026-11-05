@@ -10,10 +10,16 @@
   "bookkeeping-sorter",
   "content-week"
  ],
- "description_html": "<p><strong>Your AI team for the jobs that eat your week. 5 setups, one price: $39.</strong> Bought separately: $78.96.</p><ul><li><strong>Front Desk:</strong> drafts price replies, quotes with your deposit rules and follow ups, from your real prices, in your voice.</li><li><strong>Collector (Invoice Chaser):</strong> invoices from job notes and the right reminder for how late each customer is.</li><li><strong>Reviews (Review Desk):</strong> a reply to every review in your voice, plus the text that asks happy customers for a new one.</li><li><strong>Bookkeeper (Bookkeeping Sorter):</strong> upload a bank statement, type sort, every charge lands in a category with monthly totals.</li><li><strong>Marketer (Content Week):</strong> answer 5 questions on Sunday, get 7 posts for the week.</li></ul><p><strong>What you get:</strong> 5 PDF setup kits. Each one has a setup helper, a worked example and a cheat sheet.</p><p><strong>How it works:</strong> add a kit to a free Claude Project, paste one message, answer a few easy questions, then type one word. About 15 to 30 minutes per setup, right on your phone.</p><p><strong>You need:</strong> the Claude app (the free plan works).</p><p>It drafts, you send. It does not send messages, post, file taxes or take payments on its own. Not tax, legal or accounting advice. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
+ "description_html": "<p><strong>5 PDF setup kits for your own Claude account (free plan works).</strong> Your AI team for the jobs that eat your week: one price, $39. Bought separately: $78.96.</p><ul><li><strong>Front Desk:</strong> drafts price replies, quotes with your deposit rules and follow ups, from your real prices, in your voice.</li><li><strong>Collector (Invoice Chaser):</strong> invoices from job notes and the right reminder for how late each customer is.</li><li><strong>Reviews (Review Desk):</strong> a reply to every review in your voice, plus the text that asks happy customers for a new one.</li><li><strong>Bookkeeper (Bookkeeping Sorter):</strong> upload a bank statement, type sort, every charge lands in a category with monthly totals.</li><li><strong>Marketer (Content Week):</strong> answer 5 questions on Sunday, get 7 posts for the week.</li></ul><p><strong>What you get:</strong> 5 PDF setup kits. Each one has a setup helper, a worked example and a cheat sheet.</p><p><strong>How it works:</strong> add a kit to a free Claude Project, paste one message, answer a few easy questions, then type one word. About 15 to 30 minutes per setup, right on your phone.</p><p><strong>You need:</strong> the Claude app (the free plan works).</p><p>It drafts, you send. It does not send messages, post, file taxes or take payments on its own. Not tax, legal or accounting advice. 30 day refund: reply to your receipt.</p><p><em>AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</em></p>",
  "cover_url": "https://autopilotoi.app/store/ai-team-cover.png?v=1",
- "tags": ["small business", "ai", "claude", "ai agent", "automation"],
- "version": 1,
+ "tags": [
+  "small business",
+  "ai",
+  "claude",
+  "ai agent",
+  "automation"
+ ],
+ "version": 2,
  "cover_v": 1,
  "priority": 10,
  "landing": "/front-desk/",
