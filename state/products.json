@@ -218,9 +218,10 @@
   "id": "348wpQZONBr7Wxv47M2UyQ==",
   "url": "https://autopilotoi.gumroad.com/l/ai-team",
   "published": true,
-  "version": 1,
+  "version": 2,
   "live": true,
   "live_price_cents": 3900,
-  "live_name": "Your AI Team by AUTOPILOT.OI (5 setups)"
+  "live_name": "Your AI Team by AUTOPILOT.OI (5 setups)",
+  "cover_v": 1
  }
 }
