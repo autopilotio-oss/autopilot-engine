@@ -213,5 +213,14 @@
   "live_price_cents": 2400,
   "live_name": "AUTOPILOT.OI Owner Toolkit (4 tools)",
   "cover_v": 1
+ },
+ "ai-team": {
+  "id": "348wpQZONBr7Wxv47M2UyQ==",
+  "url": "https://autopilotoi.gumroad.com/l/ai-team",
+  "published": true,
+  "version": 1,
+  "live": true,
+  "live_price_cents": 3900,
+  "live_name": "Your AI Team by AUTOPILOT.OI (5 setups)"
  }
 }

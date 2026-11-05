@@ -1,5 +1,6 @@
 {
  "live": [
+  "ai-team",
   "all-money-agents",
   "autopilot",
   "bill-agent",
@@ -20,5 +21,5 @@
   "workspace",
   "workspace-founding"
  ],
- "checked": "2026-11-05T01:32:48Z"
+ "checked": "2026-11-05T02:17:41Z"
 }
