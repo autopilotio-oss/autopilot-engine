@@ -343,10 +343,6 @@
   "ok": true,
   "severity": "SEV-3"
  },
- "worker:publisher": {
-  "ok": false,
-  "severity": "SEV-2"
- },
  "worker:support_agent": {
   "ok": true,
   "severity": "SEV-3"
@@ -354,14 +350,6 @@
  "worker:tiktok_intel": {
   "ok": true,
   "severity": "SEV-4"
- },
- "worker:trend_scout": {
-  "ok": false,
-  "severity": "SEV-3"
- },
- "worker:viral_lab": {
-  "ok": false,
-  "severity": "SEV-3"
  },
  "worker:weekly_sprint": {
   "ok": true,
