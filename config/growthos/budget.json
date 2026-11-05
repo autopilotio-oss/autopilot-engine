@@ -58,6 +58,13 @@
    "by": "Seb (independent audit adopted)",
    "what": "Sales Recovery Plan: the stricter $60 Meta cap is binding; the ~$300 test is NOT authorized until Seb confirms a new amount. No ads until purchase tracking and 3 owner tests pass.",
    "quote": "Do not spend money ... without authorization"
+  },
+  {
+   "by": "Seb",
+   "at": "2026-11-05T00:30-03:00",
+   "channel": "chat",
+   "what": "AI Team ad at-main: 1 voice render (ElevenLabs)",
+   "quote": "Yes, render voice (Recommended)"
   }
  ],
  "paid_ads_cap_usd": 60
