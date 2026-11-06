@@ -101,3 +101,9 @@
 - TikTok 18:00: Google reviews photo post (uuid -6061677011529805933) set to draft, never deleted. Why: TikTok is videos only for the creator niche (MANAGER section 3); this was an owner niche photo post. Rollback: set draft false.
 - TikTok: new spec tools/kine/ads/tk-review.json (type review, paste your numbers, which hook to repeat, next week plan, CapCut cut; SAMPLE labeled, no view or money claims). Why: tk-hooks 71 views vs tk-week 96, so a third angle (reading your numbers) is tested. Rollback: draft the TikTok post.
 - Threads: 4 text posts at 12, 16, 19, 22 with no links (queue/threads/2026-11-06.json). Why: Threads daily views went 119, 87, 40, 26 from Nov 1 to 4 while most posts carried a link; test link free posts. Evidence: THEV06. Rollback: draft the 4 uuids. Judge Nov 8 against the link posts of Nov 6.
+
+## 2026-11-06 09:25 ART: simple questions all day (Seb in chat)
+- Seb: "Ask questions all day on X/ threads questions like… CHAT GPT OR CLAUDE ? Simple but things everyone can answer".
+- Threads today: 11:00 and 14:00 prompt teasers rewritten to questions (ChatGPT or Claude; would you let AI write your replies); new questions at 15:00 (text or call a late payer) and 21:00 (iPhone or Android). With 12:00 and 19:00 that is 6 question posts. Threads now 12 of 12.
+- X today: 12:00 and 21:00 prompt teasers rewritten to questions (ChatGPT or Claude; would you let AI answer your texts). X stays 5 of 5.
+- Standing rule added to MANAGER.md section 3 (SIMPLE QUESTIONS). Rollback: restore teaser texts from the 2026-11-04-promptpack-teasers queue files.

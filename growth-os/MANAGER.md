@@ -57,6 +57,11 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 - DAILY MANAGER Threads batch: 3 of the 12 are single prompt teasers (hook line + the prompt in quotes + 1 line why; 1 in 3 ends with the free starter UTM link, utm_campaign=promptpack). X batch: 2 of the 5. Text only, never repeat a teaser prompt within 7 days. Record hook ids in the queue file. Already scheduled Nov 5 to 9: queue/threads and queue/x 2026-11-04-promptpack-teasers.json.
 - Track: every pack's queue/car record gets "results" after 24h (views, saves, shares, comments, AGENTS comments). Compare hooks and niches in run-history; kill a hook after 3 packs under the median.
 
+### SIMPLE QUESTIONS (Seb, Nov 6 2026: "Ask questions all day on X/ threads questions like… CHAT GPT OR CLAUDE ? Simple but things everyone can answer")
+- Threads: at least half the day's posts (6 of 12) are simple questions anyone can answer in one word or a pick: "ChatGPT or Claude?", "Text or call when a customer is late paying?", "iPhone or Android for running your business?". X: at least 2 of 5.
+- Under 12 words, no link, no pitch, no dashes. Spread across the day. Never repeat the exact question on the same network within 7 days.
+- These replace prompt teasers first (Threads teasers drop from 3 to 1 a day, X from 2 to 0). Judge by replies after 48h; the question with the most replies gets 2 new versions.
+
 ### Threads writing rules
 - First line does all the work. Under 12 words. Ends with a hook: a number, a confession, a "nobody tells you", a question.
 - Write to owners who do not use AI yet: "You run a shop and still type every invoice reminder by hand?"
@@ -105,6 +110,8 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 ## 7. Open questions for Seb
 
 Answers go here with his quote and date.
+
+0. DIRECTION 2026-11-06 09:20, Seb: "Ask questions all day on X/ threads questions like… CHAT GPT OR CLAUDE ? Simple but things everyone can answer". Now the SIMPLE QUESTIONS rule in section 3.
 
 1. ANSWERED 2026-11-04 01:39, Seb: "yeah that's fine". Video Agent renamed TikTok Agent, $10, new money command and How TikTok Pays page (v5).
 2. ANSWERED 2026-11-04 01:39, Seb: "12". Threads cap is 12 a day.

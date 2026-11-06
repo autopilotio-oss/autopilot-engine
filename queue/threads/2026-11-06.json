@@ -33,6 +33,35 @@
    "at": "2026-11-06T22:00:00-03:00",
    "pillar": "b_hours_saved",
    "hook": "Unanswered reviews are the easiest win you're ignoring."
+  },
+  {
+   "uuid": "-6501146951000634878",
+   "metricool_id": 418864534,
+   "at": "2026-11-06T15:00:00-03:00",
+   "pillar": "simple_question",
+   "hook": "A customer is late paying. Do you text or call?"
+  },
+  {
+   "uuid": "5501796237489424072",
+   "metricool_id": 418864558,
+   "at": "2026-11-06T21:00:00-03:00",
+   "pillar": "simple_question",
+   "hook": "iPhone or Android for running your business?"
   }
- ]
+ ],
+ "edited": [
+  {
+   "uuid": "-1244562186088857380",
+   "at": "11:00",
+   "now": "ChatGPT or Claude? One word. Go.",
+   "was": "new hire checklist prompt teaser (queue/threads/2026-11-04-promptpack-teasers.json)"
+  },
+  {
+   "uuid": "-5769066184494987890",
+   "at": "14:00",
+   "now": "Would you let AI write your customer replies? Yes, no, or only if I read it first?",
+   "was": "change order prompt teaser"
+  }
+ ],
+ "seb_rule": "Seb 2026-11-06 09:20 ART: \"Ask questions all day on X/ threads questions like\u2026 CHAT GPT OR CLAUDE ? Simple but things everyone can answer\""
 }

@@ -1,0 +1,26 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "Ask questions all day on X/ threads questions like\u2026 CHAT GPT OR CLAUDE ? Simple but things everyone can answer",
+  "basis": "Seb in chat 2026-11-06"
+ },
+ "posts": [],
+ "edited": [
+  {
+   "uuid": "8587146770228792930",
+   "metricool_id": 418864574,
+   "at": "2026-11-06T12:00:00-03:00",
+   "pillar": "simple_question",
+   "hook": "ChatGPT or Claude? One word.",
+   "was": "change order prompt teaser"
+  },
+  {
+   "uuid": "-2048350171560981573",
+   "metricool_id": 418864597,
+   "at": "2026-11-06T21:00:00-03:00",
+   "pillar": "simple_question",
+   "hook": "Would you let AI answer your customer texts?",
+   "was": "late invoice prompt teaser"
+  }
+ ]
+}
