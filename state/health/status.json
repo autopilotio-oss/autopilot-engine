@@ -332,7 +332,7 @@
   "severity": "SEV-2"
  },
  "worker:kit_sync": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-2"
  },
  "worker:monthly_review": {
