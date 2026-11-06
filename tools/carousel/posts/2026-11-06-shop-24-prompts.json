@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 06 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 61,
+ "folders": [
+  "Customers",
+  "Orders",
+  "Reviews",
+  "Posts",
+  "Products",
+  "Money"
+ ],
+ "cover_bg": "bg-white",
+ "lava_opacity": 0.25,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px;background:#0a0a0a;color:#f2f2ee\">RETAIL &middot; ONLINE SHOPS</div><div class=\"fx\" style=\"left:56px;top:190px;width:340px;font:800 36px/1.25 I;letter-spacing:-.5px;color:#0a0a0a\">24 for shop owners. Copy. Paste. Swap the <span style=\"background:#D4FF3A;padding:0 6px\">[brackets]</span>.</div><div class=\"fx\" style=\"left:56px;top:470px;font:700 22px C;letter-spacing:3px;color:#f2f2ee;background:#0a0a0a;padding:16px 24px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div><div class=\"fx\" style=\"left:450px;top:150px;width:560px;transform:rotate(3deg);transform-origin:50% 0;background:#fff;color:#0a0a0a;border:4px solid #0a0a0a;box-shadow:0 26px 60px rgba(0,0,0,.22)\"><div style=\"background:#0a0a0a;color:#f2f2ee;padding:16px 24px 12px;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 22px C;letter-spacing:5px\">SHIPPING LABEL</span><span style=\"font:700 18px M;color:#D4FF3A\">PRIORITY</span></div><div style=\"padding:14px 24px 0;font:700 16px M;letter-spacing:1px;color:#0a0a0a99;display:flex;justify-content:space-between\"><span>TO: YOUR SHOP</span><span>ALL INSIDE</span></div><div style=\"padding:6px 24px 0;font:400 84px/1 A;text-transform:uppercase\">24 prompts</div><div style=\"padding:4px 24px 0\"><div style=\"display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:2px solid #0a0a0a1f\"><span style=\"font:400 34px/1 A;text-transform:uppercase\">Customers</span><span style=\"font:700 16px M;color:#0a0a0a99\">01 to 04</span></div><div style=\"display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:2px solid #0a0a0a1f\"><span style=\"font:400 34px/1 A;text-transform:uppercase\">Orders</span><span style=\"font:700 16px M;color:#0a0a0a99\">05 to 08</span></div><div style=\"display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:2px solid #0a0a0a1f\"><span style=\"font:400 34px/1 A;text-transform:uppercase\">Reviews</span><span style=\"font:700 16px M;color:#0a0a0a99\">09 to 12</span></div><div style=\"display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:2px solid #0a0a0a1f\"><span style=\"font:400 34px/1 A;text-transform:uppercase\">Posts</span><span style=\"font:700 16px M;color:#0a0a0a99\">13 to 16</span></div><div style=\"display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:2px solid #0a0a0a1f\"><span style=\"font:400 34px/1 A;text-transform:uppercase\">Products</span><span style=\"font:700 16px M;color:#0a0a0a99\">17 to 20</span></div><div style=\"display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:2px solid #0a0a0a1f\"><span style=\"font:400 34px/1 A;text-transform:uppercase\">Money</span><span style=\"font:700 16px M;color:#0a0a0a99\">21 to 24</span></div></div><div style=\"margin:18px 24px 22px;height:46px;background:repeating-linear-gradient(90deg,#0a0a0a 0 3px,#fff 3px 6px,#0a0a0a 6px 12px,#fff 12px 15px,#0a0a0a 15px 17px,#fff 17px 22px)\"></div></div><div class=\"fx A\" data-fit=\"680\" data-stack=\"h\" data-gap=\"16\" style=\"left:56px;top:830px;font-size:120px;white-space:nowrap;color:#0a0a0a\">Claude prompts</div><div class=\"fx A\" data-fit=\"680\" data-stack=\"h\" data-gap=\"16\" style=\"left:56px;top:950px;font-size:120px;white-space:nowrap;color:#0a0a0a\">that feel like</div><div class=\"fx A\" data-fit=\"680\" data-stack=\"h\" style=\"left:56px;top:1070px;font-size:170px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A;padding:14px 18px 0;box-sizing:border-box\">cheating</div><div class=\"fx A\" style=\"left:800px;top:1080px;font-size:44px;color:#0a0a0a;border:5px solid #0a0a0a;padding:10px 18px 4px;transform:rotate(-6deg)\">No DM<br>needed</div>",
+ "slides": [
+  {
+   "cat": "Customers",
+   "cards": [
+    {
+     "t": "Where is it",
+     "p": "A customer asks where their order is. Tracking says [status]. Reply calmly with the next step and a date.",
+     "star": true
+    },
+    {
+     "t": "Size help",
+     "p": "A shopper asks which size to pick. Using my size chart [paste], reply with one pick and why."
+    },
+    {
+     "t": "Return request",
+     "p": "Reply to this return request: [paste]. Follow my policy [policy]. Kind, clear, exact next steps."
+    },
+    {
+     "t": "Back in stock",
+     "p": "Write a short text and email: [product] is back, [quantity] left, link [link]. Under 40 words."
+    }
+   ]
+  },
+  {
+   "cat": "Orders",
+   "cards": [
+    {
+     "t": "Shipping delay",
+     "p": "Orders are [days] late because [reason]. Write one email for every buyer: sorry, new date, one choice.",
+     "star": true
+    },
+    {
+     "t": "Wrong item",
+     "p": "A buyer got the wrong item: [paste]. Reply with one sorry, the fix, and how the swap works."
+    },
+    {
+     "t": "Insert card",
+     "p": "Write a small card for my packages: thanks, how to care for [product], where to tag us."
+    },
+    {
+     "t": "Policy page",
+     "p": "Turn my shipping and return rules into a plain policy page with short headings: [paste rules]."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Late package",
+     "p": "Reply to this review about a late package: [paste]. Own our part, say the fix, under 60 words.",
+     "star": true
+    },
+    {
+     "t": "After delivery",
+     "p": "Write an email [days] after delivery asking for a review of [product]. One question, one link, no reward."
+    },
+    {
+     "t": "Love and fix",
+     "p": "Group these reviews into what buyers love and what they want changed: [paste]. Top 3 of each."
+    },
+    {
+     "t": "Buyer quotes",
+     "p": "Pick 3 short buyer quotes from these reviews for my product page. Keep their exact words: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "New drop",
+     "p": "Write a launch post for [product]: what it is, who it is for, price [price], drop date [date].",
+     "star": true
+    },
+    {
+     "t": "Unboxing script",
+     "p": "Write a 20 second unboxing video script for [product] with a hook in the first 2 seconds."
+    },
+    {
+     "t": "Packing day",
+     "p": "Write 5 short story posts about how we pack orders. One line each plus a photo idea."
+    },
+    {
+     "t": "Sale email",
+     "p": "Write a sale email: [percent] off [items] until [date]. Subject line, 3 short lines, one button."
+    }
+   ]
+  },
+  {
+   "cat": "Products",
+   "cards": [
+    {
+     "t": "Description",
+     "p": "Write a product description for [product] from my notes: [notes]. 80 words, plain words, 3 bullets.",
+     "star": true
+    },
+    {
+     "t": "Product title",
+     "p": "Give me 5 titles for [product] that say what it is, the size and who it is for."
+    },
+    {
+     "t": "Bundle ideas",
+     "p": "My best sellers are [list]. Suggest 3 bundles, each with a name and a fair bundle price."
+    },
+    {
+     "t": "Shot list",
+     "p": "Write a photo shot list for [product]: 6 shots, the angle, the background, and what each shows."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Sort expenses",
+     "p": "Sort these expenses into stock, shipping, fees, ads, packaging: [paste]. Total each. Flag anything twice.",
+     "star": true
+    },
+    {
+     "t": "What I keep",
+     "p": "[Product] sells for [price]. Item costs [cost], shipping [cost], fees [cost]. What do I keep per sale?"
+    },
+    {
+     "t": "Wholesale late",
+     "p": "A shop owes [amount] for a wholesale order, [days] late. Write a polite reminder with a due date and [link]."
+    },
+    {
+     "t": "Slow stock",
+     "p": "Here is my stock with units sold: [paste]. Which items move slowly, and what should I do with each?"
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "SHOP",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for retail and online shops in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

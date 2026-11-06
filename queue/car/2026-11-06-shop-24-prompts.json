@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-06-shop-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Off white page, a tilted black bordered SHIPPING LABEL (TO: YOUR SHOP, 24 PROMPTS, 6 folders as label rows, barcode) top right, short sub and black SAVE button in the left column, big headline bottom left (CLAUDE PROMPTS / THAT FEEL LIKE / CHEATING in a lime block), NO DM NEEDED stamp.",
+ "theme": "retail and online shops: 24 new prompts in 6 folders (Customers, Orders, Reviews, Posts, Products, Money), all visible, hook test 'Claude prompts that feel like cheating' (least recently used, last on Nov 4 contractor pack)",
+ "gate": {
+  "score": 93,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, none repeated from earlier packs (checked titles across every tools/carousel/posts/*prompts*.json); review ask says no reward, buyer quotes keep exact words; no legal or tax claims). Hook 21/25 (cheating hook tested once, new niche). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar). Design 14/15 vs last 5 covers: off white vs restaurant black, salon lime, cleaner split; shipping label vs kitchen ticket, giant number, calendar, chips; headline bottom left fitted to 680 vs right column (restaurant), middle (cleaner), top (contractor, detailer); first render had the label over the headline and a tape strip over the label title, fixed. CTA 9/10 (AGENTS is confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (customers, orders), Review Desk, Content Week, Invoice Chaser and Bookkeeping Sorter). QA PASS all 8; read every slide, legible on a phone."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You run a shop, online or on the corner, and still type every where is my order reply by hand?\n\nHere are 24 Claude prompts in 6 folders: customers, orders, reviews, posts, products and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next packing day.\n\n#smallbusiness #onlineshop #etsyseller #shopowner #claudeai",
+  "threads": "Claude prompts that feel like cheating, shop owner edition.\n\nWhere is my order replies, shipping delay emails, late package reviews, product descriptions, bundle ideas, expenses sorted. 24 in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Shop owners, online or in person: 24 Claude prompts for customers, orders, reviews, posts, products and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-06-shop-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-06T19:37Z"
+}
