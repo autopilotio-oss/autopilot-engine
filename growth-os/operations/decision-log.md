@@ -107,3 +107,10 @@
 - Threads today: 11:00 and 14:00 prompt teasers rewritten to questions (ChatGPT or Claude; would you let AI write your replies); new questions at 15:00 (text or call a late payer) and 21:00 (iPhone or Android). With 12:00 and 19:00 that is 6 question posts. Threads now 12 of 12.
 - X today: 12:00 and 21:00 prompt teasers rewritten to questions (ChatGPT or Claude; would you let AI answer your texts). X stays 5 of 5.
 - Standing rule added to MANAGER.md section 3 (SIMPLE QUESTIONS). Rollback: restore teaser texts from the 2026-11-04-promptpack-teasers queue files.
+
+## 2026-11-06 09:30 ART: 3 questions an hour on Threads and X (Seb in chat)
+- Seb: "Post 3 questions every hour on threads and x".
+- Scheduled 42 question posts, each to Threads and X, 10:10 to 23:50 ART at :10/:30/:50 (queue/threads and queue/x 2026-11-06-questions.json). Non question posts already scheduled stay.
+- Standing rule in MANAGER.md section 3 and campaign.json cadence.questions_per_hour. Daily caps now count only non question posts.
+- Risk: volume can read as spam on both networks. Stop rule: spam warning, failed posts, or a full day at 0 views per post drops it to 1 an hour and Seb is told.
+- Rollback: set the 42 uuids to draft.

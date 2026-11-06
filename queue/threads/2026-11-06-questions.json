@@ -1,0 +1,471 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "Post 3 questions every hour on threads and x",
+  "basis": "Seb in chat 2026-11-06 09:30 ART"
+ },
+ "posts": [
+  {
+   "uuid": "-5188384399695790019",
+   "metricool_id": 418867228,
+   "at": "2026-11-06T10:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "ChatGPT or Claude for writing emails?"
+  },
+  {
+   "uuid": "-9153772599083252300",
+   "metricool_id": 418867833,
+   "at": "2026-11-06T10:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Do you read the terms before you click agree?"
+  },
+  {
+   "uuid": "528031320640274986",
+   "metricool_id": 418867855,
+   "at": "2026-11-06T10:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Coffee or energy drink to start the workday?"
+  },
+  {
+   "uuid": "-8967693270259314758",
+   "metricool_id": 418867886,
+   "at": "2026-11-06T11:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Morning person or night owl?"
+  },
+  {
+   "uuid": "4214603594274784267",
+   "metricool_id": 418867908,
+   "at": "2026-11-06T11:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Would you trust AI to write your invoices?"
+  },
+  {
+   "uuid": "-4156788554559962134",
+   "metricool_id": 418867926,
+   "at": "2026-11-06T11:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Cash or card for small purchases?"
+  },
+  {
+   "uuid": "2721898527950458036",
+   "metricool_id": 418867937,
+   "at": "2026-11-06T12:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "How many unread emails do you have right now?"
+  },
+  {
+   "uuid": "-6252592618945952479",
+   "metricool_id": 418867952,
+   "at": "2026-11-06T12:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Phone calls or texts with customers?"
+  },
+  {
+   "uuid": "7328343585705904358",
+   "metricool_id": 418867966,
+   "at": "2026-11-06T12:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Have you ever used AI at work? Yes or no."
+  },
+  {
+   "uuid": "-3834986405014781738",
+   "metricool_id": 418867973,
+   "at": "2026-11-06T13:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Google or ChatGPT when you need an answer fast?"
+  },
+  {
+   "uuid": "-1571729092894110807",
+   "metricool_id": 418867981,
+   "at": "2026-11-06T13:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Weekends off, or work 7 days?"
+  },
+  {
+   "uuid": "1127202040370515893",
+   "metricool_id": 418867993,
+   "at": "2026-11-06T13:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "What app do you open first every morning?"
+  },
+  {
+   "uuid": "-2192641689683866290",
+   "metricool_id": 418868423,
+   "at": "2026-11-06T14:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Notes app or paper notebook?"
+  },
+  {
+   "uuid": "2416936801886947310",
+   "metricool_id": 418868437,
+   "at": "2026-11-06T14:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Would you pay $10 to never write another invoice?"
+  },
+  {
+   "uuid": "-5223520760652938193",
+   "metricool_id": 418868452,
+   "at": "2026-11-06T14:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Reply to customers right away or at day's end?"
+  },
+  {
+   "uuid": "7874834772474216939",
+   "metricool_id": 418868470,
+   "at": "2026-11-06T15:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Do you answer work texts after 9 PM?"
+  },
+  {
+   "uuid": "1445773386549642382",
+   "metricool_id": 418868490,
+   "at": "2026-11-06T15:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Instagram or TikTok for finding new customers?"
+  },
+  {
+   "uuid": "-5458749609638215238",
+   "metricool_id": 418868506,
+   "at": "2026-11-06T15:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Work from home or work from a shop?"
+  },
+  {
+   "uuid": "5983357201442096835",
+   "metricool_id": 418868516,
+   "at": "2026-11-06T16:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Has AI ever saved you an hour? Yes or no."
+  },
+  {
+   "uuid": "-8047706054808482660",
+   "metricool_id": 418868533,
+   "at": "2026-11-06T16:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "One word: the hardest part of running a business?"
+  },
+  {
+   "uuid": "8491057770274900295",
+   "metricool_id": 418868548,
+   "at": "2026-11-06T16:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Gmail or Outlook?"
+  },
+  {
+   "uuid": "7639019853356092700",
+   "metricool_id": 418868564,
+   "at": "2026-11-06T17:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Lose your phone or your laptop for a week?"
+  },
+  {
+   "uuid": "-5709469753055951181",
+   "metricool_id": 418868585,
+   "at": "2026-11-06T17:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Do you say please to ChatGPT?"
+  },
+  {
+   "uuid": "1213883416757684681",
+   "metricool_id": 418868604,
+   "at": "2026-11-06T17:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Spreadsheet or shoebox for receipts?"
+  },
+  {
+   "uuid": "713537073234985328",
+   "metricool_id": 418869011,
+   "at": "2026-11-06T18:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "How many hours a week do you spend on email?"
+  },
+  {
+   "uuid": "2368675932178958370",
+   "metricool_id": 418869031,
+   "at": "2026-11-06T18:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Google reviews: do you reply to every one?"
+  },
+  {
+   "uuid": "-8513480567245812922",
+   "metricool_id": 418869051,
+   "at": "2026-11-06T18:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Voice notes: love them or hate them?"
+  },
+  {
+   "uuid": "1421020049792716354",
+   "metricool_id": 418869083,
+   "at": "2026-11-06T19:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Mac or Windows?"
+  },
+  {
+   "uuid": "-2258089059068460506",
+   "metricool_id": 418869106,
+   "at": "2026-11-06T19:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Do you use AI more for work or for fun?"
+  },
+  {
+   "uuid": "6702987006575660065",
+   "metricool_id": 418869124,
+   "at": "2026-11-06T19:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "First hire for a small business: assistant or salesperson?"
+  },
+  {
+   "uuid": "3459593391224209531",
+   "metricool_id": 418869140,
+   "at": "2026-11-06T20:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Would you let AI book your appointments?"
+  },
+  {
+   "uuid": "-1121019306539725872",
+   "metricool_id": 418869159,
+   "at": "2026-11-06T20:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Late payer: wait a week or remind right away?"
+  },
+  {
+   "uuid": "1590887367126827363",
+   "metricool_id": 418869174,
+   "at": "2026-11-06T20:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Claude, ChatGPT or Gemini? Pick one."
+  },
+  {
+   "uuid": "-1270738023573994860",
+   "metricool_id": 418869186,
+   "at": "2026-11-06T21:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Do you keep a separate phone for work?"
+  },
+  {
+   "uuid": "6554869299903742953",
+   "metricool_id": 418869201,
+   "at": "2026-11-06T21:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Monday or Friday: which is your busiest day?"
+  },
+  {
+   "uuid": "-7622085044921545034",
+   "metricool_id": 418869213,
+   "at": "2026-11-06T21:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Would you read an AI reply before sending it?"
+  },
+  {
+   "uuid": "-5953502809059933522",
+   "metricool_id": 418869503,
+   "at": "2026-11-06T22:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Do you post on social media every day? Yes or no."
+  },
+  {
+   "uuid": "-7346143449447448429",
+   "metricool_id": 418869515,
+   "at": "2026-11-06T22:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "One task you'd hand to a robot today?"
+  },
+  {
+   "uuid": "-6015715734556358995",
+   "metricool_id": 418869523,
+   "at": "2026-11-06T22:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Do you check your phone in the first 5 minutes awake?"
+  },
+  {
+   "uuid": "-3050726362115978195",
+   "metricool_id": 418869532,
+   "at": "2026-11-06T23:10:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Free trial or pay upfront?"
+  },
+  {
+   "uuid": "1559628931489418202",
+   "metricool_id": 418869545,
+   "at": "2026-11-06T23:30:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Text, email or call: how should a business reach you?"
+  },
+  {
+   "uuid": "8219941392449095913",
+   "metricool_id": 418869561,
+   "at": "2026-11-06T23:50:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "4 day week if AI did one day of your work?"
+  }
+ ]
+}
