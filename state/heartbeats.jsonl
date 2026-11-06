@@ -157,3 +157,4 @@
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-06T11:19:17+00:00", "note": "0 orders; 20 checkouts ok; 0 unapproved posts; 23 queued approved; guard reads metricool_uuids"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-06T12:20:58+00:00", "note": "AM Nov 6: 0 orders, cleaner pack IG 18:00, tk-review TikTok 18:00, 4 link free Threads"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-06T12:24:49+00:00", "note": "1 post out today (X), top post saves+shares 0, feed written yes"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-06T13:14:07+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
