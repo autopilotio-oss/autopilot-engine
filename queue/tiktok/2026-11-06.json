@@ -1,0 +1,18 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "-8533712621615167879",
+   "metricool_id": 418861723,
+   "at": "2026-11-06T18:00:00-03:00",
+   "pillar": "tiktok_agent_review",
+   "hook": "10 videos posted. Which one worked?",
+   "media": "docs/media/ads/tk-review.mp4",
+   "gate": "86/100: hook in 1s, 21.4s 1080x1920, SAMPLE labeled, no view or money claims, audio mean -17.5 dB max -1.4 dB, run 42213808429"
+  }
+ ]
+}

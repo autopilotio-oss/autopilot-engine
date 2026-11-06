@@ -155,3 +155,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-06T00:22:16+00:00", "note": "18 posts out today, 0 ERROR, top post saves+shares 0, feed written yes"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-06T00:32:25+00:00", "note": "0 routed (no subscribers on forms)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-06T11:19:17+00:00", "note": "0 orders; 20 checkouts ok; 0 unapproved posts; 23 queued approved; guard reads metricool_uuids"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-06T12:20:58+00:00", "note": "AM Nov 6: 0 orders, cleaner pack IG 18:00, tk-review TikTok 18:00, 4 link free Threads"}
