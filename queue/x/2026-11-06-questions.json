@@ -6,6 +6,17 @@
  },
  "posts": [
   {
+   "uuid": "-1043638374109133529",
+   "metricool_id": 418879363,
+   "at": "2026-11-06T09:45:00-03:00",
+   "networks": [
+    "threads",
+    "twitter"
+   ],
+   "pillar": "simple_question",
+   "hook": "Coffee before emails, or emails before coffee?"
+  },
+  {
    "uuid": "-5188384399695790019",
    "metricool_id": 418873011,
    "at": "2026-11-06T10:10:00-03:00",
@@ -37,7 +48,8 @@
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Coffee or energy drink to start the workday?"
+   "hook": "Would you rather answer 50 emails or take 5 calls?",
+   "was": "Coffee or energy drink to start the workday?"
   },
   {
    "uuid": "-8967693270259314758",
@@ -480,5 +492,6 @@
    "was": "4 day week if AI did one day of your work?"
   }
  ],
- "audit": "2026-11-06 09:35 ART (Seb: \"Audit all questions make sure they are good and can get views\"): 12 of 42 rewritten; reasons: bland or no opinion to fight over, only fits some people, or near repeat of another question the same day."
+ "audit": "2026-11-06 09:35 ART (Seb: \"Audit all questions make sure they are good and can get views\"): 12 of 42 rewritten; reasons: bland or no opinion to fight over, only fits some people, or near repeat of another question the same day.",
+ "seeded": "2026-11-06 09:45 ART (Seb: \"Okay do it and start posting at 945am\"): every question now carries our own answer (Our pick / Our take / Ours) then \"You?\". Metricool ids changed on each update; uuids stay."
 }

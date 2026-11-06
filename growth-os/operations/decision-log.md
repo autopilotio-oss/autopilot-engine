@@ -118,3 +118,8 @@
 ## 2026-11-06 09:35 ART: question audit (Seb: "Audit all questions make sure they are good and can get views")
 - Checked all 48 question posts for today (42 hourly + 6 earlier). Rewrote 12 in place (same uuid and time): 4 near repeats (ChatGPT or Claude 3x by 11:00, late payer 2x, text or call 3x, read AI reply 2x), 8 bland or niche (cash or card, work from home or shop, separate work phone, Monday or Friday, post daily yes or no, free trial, AI 4 day week wording). Replacements are camp splitting picks or story prompts. Old text kept as "was" in the queue files.
 - Question bar added to MANAGER.md section 3.
+
+## 2026-11-06 09:45 ART: seeded answers + 09:45 start (Seb: "Okay do it and start posting at 945am let's get it")
+- New question at 09:45 (Coffee before emails?). All 49 question posts today rewritten with our own pick under the question and "You?" so a post with 0 replies still has a take to answer. 10:50 coffee question swapped (repeat of 09:45) for 50 emails or 5 calls.
+- Why: an unseeded question from an account with about 80 followers looks empty; a stated pick gives people something to agree or argue with.
+- Rule in MANAGER.md section 3. Rollback: question text without the pick lives in the queue files history (git).
