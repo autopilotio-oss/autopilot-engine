@@ -61,6 +61,7 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 - 3 questions every hour on Threads AND X, 10:00 to 23:00 ART, at :10, :30 and :50 (42 a day per network). One Metricool post per slot with providers threads + twitter. config/growthos/campaign.json cadence.questions_per_hour.
 - These sit on top of the daily caps (Threads 12, X 5), which now count only the non question posts.
 - Simple, anyone can answer in one word or a pick: "ChatGPT or Claude?", "Mac or Windows?", "Text or call a late payer?". Mix about half AI and business, half everyday. Under 12 words, no link, no pitch, no dashes, no politics. Never repeat a question within 7 days (check queue/*/*-questions.json).
+- Question bar (Seb audit, Nov 6): every question must pass all 4 or it is rewritten. 1) Anyone can answer in under 5 seconds. 2) People will argue or share a story (picks with two real camps: Mac or Windows, voice notes, saying please to ChatGPT; or story prompts: worst advice, most annoying customer text). 3) Fits most people, not one niche. 4) Not a near repeat of another question that day (max 2 on the same theme, 3+ hours apart). Weak: plain yes/no facts, preference with no camps (cash or card), business only details (separate work phone).
 - The Daily Manager AM run schedules the whole day's 42. Midday and PM runs: questions with the most replies get 2 new versions in tomorrow's batch.
 - Watch: if Threads or X shows a spam warning, posts fail, or per post views drop to 0 for a full day, cut to 1 an hour and tell Seb the same run.
 

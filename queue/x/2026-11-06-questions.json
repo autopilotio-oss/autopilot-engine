@@ -7,14 +7,15 @@
  "posts": [
   {
    "uuid": "-5188384399695790019",
-   "metricool_id": 418867228,
+   "metricool_id": 418873011,
    "at": "2026-11-06T10:10:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "ChatGPT or Claude for writing emails?"
+   "hook": "What did you last ask AI? Be honest.",
+   "was": "ChatGPT or Claude for writing emails?"
   },
   {
    "uuid": "-9153772599083252300",
@@ -62,14 +63,15 @@
   },
   {
    "uuid": "-4156788554559962134",
-   "metricool_id": 418867926,
+   "metricool_id": 418873020,
    "at": "2026-11-06T11:50:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Cash or card for small purchases?"
+   "hook": "Should small shops still take cash?",
+   "was": "Cash or card for small purchases?"
   },
   {
    "uuid": "2721898527950458036",
@@ -84,14 +86,15 @@
   },
   {
    "uuid": "-6252592618945952479",
-   "metricool_id": 418867952,
+   "metricool_id": 418873033,
    "at": "2026-11-06T12:30:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Phone calls or texts with customers?"
+   "hook": "Do you let unknown numbers go to voicemail?",
+   "was": "Phone calls or texts with customers?"
   },
   {
    "uuid": "7328343585705904358",
@@ -194,14 +197,15 @@
   },
   {
    "uuid": "-5458749609638215238",
-   "metricool_id": 418868506,
+   "metricool_id": 418873056,
    "at": "2026-11-06T15:50:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Work from home or work from a shop?"
+   "hook": "More customers or more free time? Pick one.",
+   "was": "Work from home or work from a shop?"
   },
   {
    "uuid": "5983357201442096835",
@@ -348,14 +352,15 @@
   },
   {
    "uuid": "-1121019306539725872",
-   "metricool_id": 418869159,
+   "metricool_id": 418873072,
    "at": "2026-11-06T20:30:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Late payer: wait a week or remind right away?"
+   "hook": "Customer says \"too expensive.\" Do you drop the price?",
+   "was": "Late payer: wait a week or remind right away?"
   },
   {
    "uuid": "1590887367126827363",
@@ -370,47 +375,51 @@
   },
   {
    "uuid": "-1270738023573994860",
-   "metricool_id": 418869186,
+   "metricool_id": 418873085,
    "at": "2026-11-06T21:10:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Do you keep a separate phone for work?"
+   "hook": "Most annoying text a customer ever sent you?",
+   "was": "Do you keep a separate phone for work?"
   },
   {
    "uuid": "6554869299903742953",
-   "metricool_id": 418869201,
+   "metricool_id": 418873422,
    "at": "2026-11-06T21:30:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Monday or Friday: which is your busiest day?"
+   "hook": "Worst business advice you ever got?",
+   "was": "Monday or Friday: which is your busiest day?"
   },
   {
    "uuid": "-7622085044921545034",
-   "metricool_id": 418869213,
+   "metricool_id": 418873441,
    "at": "2026-11-06T21:50:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Would you read an AI reply before sending it?"
+   "hook": "Could you tell if a text was written by AI?",
+   "was": "Would you read an AI reply before sending it?"
   },
   {
    "uuid": "-5953502809059933522",
-   "metricool_id": 418869503,
+   "metricool_id": 418873472,
    "at": "2026-11-06T22:10:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Do you post on social media every day? Yes or no."
+   "hook": "Is AI making people lazier or faster?",
+   "was": "Do you post on social media every day? Yes or no."
   },
   {
    "uuid": "-7346143449447448429",
@@ -436,36 +445,40 @@
   },
   {
    "uuid": "-3050726362115978195",
-   "metricool_id": 418869532,
+   "metricool_id": 418873500,
    "at": "2026-11-06T23:10:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Free trial or pay upfront?"
+   "hook": "A subscription you pay for but never use?",
+   "was": "Free trial or pay upfront?"
   },
   {
    "uuid": "1559628931489418202",
-   "metricool_id": 418869545,
+   "metricool_id": 418873512,
    "at": "2026-11-06T23:30:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "Text, email or call: how should a business reach you?"
+   "hook": "One app you'd delete forever if you could?",
+   "was": "Text, email or call: how should a business reach you?"
   },
   {
    "uuid": "8219941392449095913",
-   "metricool_id": 418869561,
+   "metricool_id": 418873525,
    "at": "2026-11-06T23:50:00-03:00",
    "networks": [
     "threads",
     "twitter"
    ],
    "pillar": "simple_question",
-   "hook": "4 day week if AI did one day of your work?"
+   "hook": "AI gives you one free day a week. What do you do?",
+   "was": "4 day week if AI did one day of your work?"
   }
- ]
+ ],
+ "audit": "2026-11-06 09:35 ART (Seb: \"Audit all questions make sure they are good and can get views\"): 12 of 42 rewritten; reasons: bland or no opinion to fight over, only fits some people, or near repeat of another question the same day."
 }

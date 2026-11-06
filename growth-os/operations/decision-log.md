@@ -114,3 +114,7 @@
 - Standing rule in MANAGER.md section 3 and campaign.json cadence.questions_per_hour. Daily caps now count only non question posts.
 - Risk: volume can read as spam on both networks. Stop rule: spam warning, failed posts, or a full day at 0 views per post drops it to 1 an hour and Seb is told.
 - Rollback: set the 42 uuids to draft.
+
+## 2026-11-06 09:35 ART: question audit (Seb: "Audit all questions make sure they are good and can get views")
+- Checked all 48 question posts for today (42 hourly + 6 earlier). Rewrote 12 in place (same uuid and time): 4 near repeats (ChatGPT or Claude 3x by 11:00, late payer 2x, text or call 3x, read AI reply 2x), 8 bland or niche (cash or card, work from home or shop, separate work phone, Monday or Friday, post daily yes or no, free trial, AI 4 day week wording). Replacements are camp splitting picks or story prompts. Old text kept as "was" in the queue files.
+- Question bar added to MANAGER.md section 3.
