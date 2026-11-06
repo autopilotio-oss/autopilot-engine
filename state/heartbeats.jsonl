@@ -158,3 +158,4 @@
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-06T12:20:58+00:00", "note": "AM Nov 6: 0 orders, cleaner pack IG 18:00, tk-review TikTok 18:00, 4 link free Threads"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-06T12:24:49+00:00", "note": "1 post out today (X), top post saves+shares 0, feed written yes"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-06T13:14:07+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
+{"worker": "draft_factory", "status": "ok", "at": "2026-11-06T13:40:27+00:00", "note": "built 2026-11-06-restaurant-24-prompts, score 94, QA PASS, bank 1"}
