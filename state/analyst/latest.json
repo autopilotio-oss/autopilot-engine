@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-06T20:30:00Z",
+  "at": "2026-11-06T20:22:00Z",
   "posts_today": {
     "threads": {
       "published": 30,
@@ -35,7 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/p/DfSzf-8Dx01/",
-      "metrics_seen_at": "2026-11-06T20:30:00Z"
+      "metrics_seen_at": "2026-11-06T20:22:00Z"
     },
     {
       "network": "instagram",
@@ -49,7 +49,7 @@
         "comments": 10
       },
       "url": "https://www.instagram.com/p/DfVkkbQCLwT/",
-      "metrics_seen_at": "2026-11-06T20:30:00Z"
+      "metrics_seen_at": "2026-11-06T20:22:00Z"
     },
     {
       "network": "instagram",
@@ -63,7 +63,7 @@
         "comments": 0
       },
       "url": null,
-      "metrics_seen_at": "2026-11-06T20:30:00Z"
+      "metrics_seen_at": "2026-11-06T20:22:00Z"
     }
   ],
   "kit": {
