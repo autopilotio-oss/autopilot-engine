@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 06 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 53,
+ "folders": [
+  "Guests",
+  "Catering",
+  "Reviews",
+  "Posts",
+  "Money",
+  "Kitchen"
+ ],
+ "cover_bg": "bg-black",
+ "lava_opacity": 0.3,
+ "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">RESTAURANTS &middot; FOOD TRUCKS</div><div class=\"fx\" style=\"left:56px;top:178px;width:420px;transform:rotate(-2.5deg);transform-origin:50% 0;background:#f2f2ee;color:#0a0a0a;box-shadow:0 30px 70px rgba(0,0,0,.6);clip-path:polygon(0 0,100% 0,100% 100%,95% 97.5%,90% 100%,85% 97.5%,80% 100%,75% 97.5%,70% 100%,65% 97.5%,60% 100%,55% 97.5%,50% 100%,45% 97.5%,40% 100%,35% 97.5%,30% 100%,25% 97.5%,20% 100%,15% 97.5%,10% 100%,5% 97.5%,0% 100%)\"><div style=\"background:#D4FF3A;padding:20px 28px 16px;display:flex;justify-content:space-between;align-items:center\"><span style=\"font:700 22px C;letter-spacing:5px\">KITCHEN TICKET</span><span style=\"font:700 20px M\">#024</span></div><div style=\"padding:16px 28px 0;font:700 17px M;letter-spacing:1px;color:#0a0a0a99;display:flex;justify-content:space-between\"><span>TABLE: YOU</span><span>ALL INSIDE</span></div><div style=\"padding:6px 28px 0\"><div style=\"display:flex;align-items:baseline;gap:18px;padding:22px 0;border-bottom:2px dashed #0a0a0a33\"><span style=\"font:700 24px M;color:#0a0a0a\">4x</span><span style=\"font:400 56px/1 A;text-transform:uppercase;color:#0a0a0a\">Guests</span><span style=\"margin-left:auto;font:700 17px M;color:#0a0a0a99\">01 to 04</span></div><div style=\"display:flex;align-items:baseline;gap:18px;padding:22px 0;border-bottom:2px dashed #0a0a0a33\"><span style=\"font:700 24px M;color:#0a0a0a\">4x</span><span style=\"font:400 56px/1 A;text-transform:uppercase;color:#0a0a0a\">Catering</span><span style=\"margin-left:auto;font:700 17px M;color:#0a0a0a99\">05 to 08</span></div><div style=\"display:flex;align-items:baseline;gap:18px;padding:22px 0;border-bottom:2px dashed #0a0a0a33\"><span style=\"font:700 24px M;color:#0a0a0a\">4x</span><span style=\"font:400 56px/1 A;text-transform:uppercase;color:#0a0a0a\">Reviews</span><span style=\"margin-left:auto;font:700 17px M;color:#0a0a0a99\">09 to 12</span></div><div style=\"display:flex;align-items:baseline;gap:18px;padding:22px 0;border-bottom:2px dashed #0a0a0a33\"><span style=\"font:700 24px M;color:#0a0a0a\">4x</span><span style=\"font:400 56px/1 A;text-transform:uppercase;color:#0a0a0a\">Posts</span><span style=\"margin-left:auto;font:700 17px M;color:#0a0a0a99\">13 to 16</span></div><div style=\"display:flex;align-items:baseline;gap:18px;padding:22px 0;border-bottom:2px dashed #0a0a0a33\"><span style=\"font:700 24px M;color:#0a0a0a\">4x</span><span style=\"font:400 56px/1 A;text-transform:uppercase;color:#0a0a0a\">Money</span><span style=\"margin-left:auto;font:700 17px M;color:#0a0a0a99\">17 to 20</span></div><div style=\"display:flex;align-items:baseline;gap:18px;padding:22px 0;border-bottom:2px dashed #0a0a0a33\"><span style=\"font:700 24px M;color:#0a0a0a\">4x</span><span style=\"font:400 56px/1 A;text-transform:uppercase;color:#0a0a0a\">Kitchen</span><span style=\"margin-left:auto;font:700 17px M;color:#0a0a0a99\">21 to 24</span></div></div><div style=\"padding:26px 28px 70px;display:flex;gap:16px;white-space:nowrap;justify-content:space-between;align-items:baseline\"><span style=\"font:700 22px M\">TOTAL</span><span style=\"font:400 60px/1 A;white-space:nowrap\">24 PROMPTS</span></div></div><div class=\"fx A\" data-fit=\"504\" data-stack=\"h\" data-gap=\"18\" style=\"left:520px;top:230px;font-size:90px;white-space:nowrap;color:#f2f2ee\">Claude prompts</div><div class=\"fx A\" data-fit=\"504\" data-stack=\"h\" data-gap=\"18\" style=\"left:520px;top:330px;font-size:90px;white-space:nowrap;color:#f2f2ee\">that should be</div><div class=\"fx A\" data-fit=\"504\" data-stack=\"h\" style=\"left:520px;top:430px;font-size:180px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A;padding:14px 18px 0;box-sizing:border-box\">illegal</div><div class=\"fx\" data-after=\"h\" data-gap=\"54\" style=\"left:520px;top:700px;width:504px;font:800 38px/1.25 I;letter-spacing:-.5px;color:#f2f2ee\">24 for restaurants and food trucks. Copy. Paste. Swap the <span style=\"color:#D4FF3A\">[brackets]</span>.</div><div class=\"fx A\" style=\"left:600px;top:1040px;font-size:52px;color:#D4FF3A;border:5px solid #D4FF3A;padding:10px 22px 4px;transform:rotate(-4deg)\">No DM needed</div><div class=\"fx\" style=\"left:520px;top:900px;font:700 22px C;letter-spacing:3px;color:#0a0a0a;background:#D4FF3A;padding:16px 24px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div>",
+ "slides": [
+  {
+   "cat": "Guests",
+   "cards": [
+    {
+     "t": "Menu question",
+     "p": "A guest asks if [dish] can be made [vegan, mild, smaller]. Reply in my voice using my notes: [notes].",
+     "star": true
+    },
+    {
+     "t": "Wrong order",
+     "p": "A guest says their order was wrong: [paste]. Reply with one sorry and the fix we offer. No excuses."
+    },
+    {
+     "t": "Waitlist text",
+     "p": "Write a waitlist text: table for [name] ready in [minutes], we hold it [minutes], reply 1 to keep it."
+    },
+    {
+     "t": "Closed day",
+     "p": "Write a post and an auto reply: closed [day] because [reason], back [date], how to order ahead."
+    }
+   ]
+  },
+  {
+   "cat": "Catering",
+   "cards": [
+    {
+     "t": "Catering quote",
+     "p": "Write a catering quote for [guests] people on [date]: menu [items], price per head [price], deposit, setup time.",
+     "star": true
+    },
+    {
+     "t": "Big party",
+     "p": "A party of [number] wants [day]. Reply with a set menu, a [amount] deposit, and one backup time."
+    },
+    {
+     "t": "Office lunch",
+     "p": "Write a short email to the office manager at [company] offering a free tasting of our lunch trays on [date]."
+    },
+    {
+     "t": "Event checklist",
+     "p": "Turn this catering order into a checklist: food, amounts, packing, setup time, who drives: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Cold food",
+     "p": "Reply to this review saying the food arrived cold: [paste]. Own it, do not blame the driver, under 60 words.",
+     "star": true
+    },
+    {
+     "t": "Staff shoutout",
+     "p": "A regular praises [staff] in this review: [paste]. Thank them, credit [staff], invite them to try [new dish]."
+    },
+    {
+     "t": "Dish ranking",
+     "p": "Rank the dishes in these reviews by praise and complaints: [paste]. Give one fix per complaint."
+    },
+    {
+     "t": "Table card",
+     "p": "Write a small table card asking guests for a Google review. One warm line, a QR code spot, no reward."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "Where we are",
+     "p": "Write today's location post for my food truck or pop up: [spot], hours [hours], two specials, how to order ahead.",
+     "star": true
+    },
+    {
+     "t": "New dish",
+     "p": "Write a post launching [new dish]: what is in it, why we made it, price [price], first day [date]."
+    },
+    {
+     "t": "Sold out",
+     "p": "We sold out of [dish] by [time]. Write a story post: thanks, when it returns, how to get it first."
+    },
+    {
+     "t": "Kitchen clips",
+     "p": "Give me 3 short video ideas showing how we make [dish], each with a hook for the first 2 seconds."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Supplier bills",
+     "p": "Sort these supplier bills by produce, meat, dry goods, drinks, packaging: [paste]. Total each. Flag repeats.",
+     "star": true
+    },
+    {
+     "t": "Plate cost",
+     "p": "Here are my ingredient costs for [dish]: [paste]. What does one plate cost me, and what is left at [price]?"
+    },
+    {
+     "t": "Unpaid catering",
+     "p": "Catering invoice [amount] for [event] is [X] days late. Write a polite text: pay by date and [link]."
+    },
+    {
+     "t": "Waste log",
+     "p": "Turn this week's waste notes into a table by item and reason: [paste]. What should I prep less of?"
+    }
+   ]
+  },
+  {
+   "cat": "Kitchen",
+   "cards": [
+    {
+     "t": "Prep list",
+     "p": "Turn my menu and [number] expected covers into tomorrow's prep list, by station: [paste menu].",
+     "star": true
+    },
+    {
+     "t": "Recipe card",
+     "p": "Turn how I make [dish] into a recipe card a new cook can follow: amounts, steps, plating, time."
+    },
+    {
+     "t": "Shift handover",
+     "p": "Turn tonight's notes into a handover for the morning crew: what ran out, what broke, what to prep: [paste]."
+    },
+    {
+     "t": "Pre shift brief",
+     "p": "Write a 2 minute pre shift brief: specials [list], sold out items [list], and one goal for tonight."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "KITCHEN",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for restaurants and food trucks in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}
