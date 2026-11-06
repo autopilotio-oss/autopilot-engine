@@ -1,6 +1,6 @@
 # Sales dashboard
 
-Updated 2026-11-06 04:43 UTC from the Gumroad ledger (paid orders only; test and $0 orders excluded) and the logs in `sales/`.
+Updated 2026-11-06 08:01 UTC from the Gumroad ledger (paid orders only; test and $0 orders excluded) and the logs in `sales/`.
 
 | Verified orders | Refunds | Revenue net of refunds | Gumroad fees | Ad spend | CAC | Contribution | Activated customers |
 | --- | --- | --- | --- | --- | --- | --- | --- |
