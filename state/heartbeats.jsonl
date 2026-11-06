@@ -167,3 +167,4 @@
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-06T19:38:03+00:00", "note": "built 2026-11-06-shop-24-prompts 93/100, bank 2"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-06T20:23:11+00:00", "note": "57 posts out today, top post saves+shares 0, feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-06T20:51:34+00:00", "note": "added missing /g/deposit/og.png share image (og:image pointed to a 404)"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-06T22:52:39+00:00", "note": "PM Nov 6: all posts published, per post numbers MISSING, no move"}
