@@ -95,6 +95,7 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 - Never claim results, sales or reviews we do not have.
 - Autopost: approved past Nov 10 (Seb, Nov 4: "yes") for posts that pass the 85/100 gate within the caps. Spend, prices, products and customer messages still need his yes.
 - Never print secrets. No personal data in the repo.
+- CAROUSEL PREVIEW (Seb, Nov 6 2026: "Show me carasouls here before you post it doesn't need approval"). Every worker that schedules a carousel (News Desk, Daily Manager, any chat) first sends Seb the slides in its own run with SendUserFile: one contact sheet image (all slides in a grid) per carousel, with a one line caption naming the network and slot. This is a preview, not an approval gate: do not wait for a reply, schedule as normal. The Draft Factory also sends a preview of each carousel it banks (this overrides its "do not message Seb" step for the preview only).
 - Every post scheduled anywhere (a worker or a chat with Seb) gets a queue record with its uuid and Seb's approval quote (queue/threads, queue/x, queue/tiktok, queue/car or queue/freel). The 08:13 Daily Pulse pulls any unrecorded post to draft; on Nov 4 that pulled 12 approved posts.
 
 ## 6. What works (evidence log, newest first)
