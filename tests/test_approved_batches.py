@@ -9,3 +9,11 @@ def test_threads_and_x_batches_count_as_approved(tmp_path):
     (tmp_path / "queue" / "x" / "d.json").write_text(json.dumps([{"uuid": "u2", "approval": {"quote": "q"}}, {"uuid": "u3"}]))
     ids = health.approved_post_uuids(str(tmp_path))
     assert {"u1", "11", "u2"} <= ids and "u3" not in ids
+
+
+def test_carousel_metricool_uuids_list_counts_only_when_approved(tmp_path):
+    (tmp_path / "queue" / "car").mkdir(parents=True)
+    (tmp_path / "queue" / "car" / "a.json").write_text(json.dumps({"approval": {"quote": "q"}, "metricool_uuids": ["c1", "c2"], "metricool_ids": [21]}))
+    (tmp_path / "queue" / "car" / "b.json").write_text(json.dumps({"metricool_uuids": ["c3"]}))
+    ids = health.approved_post_uuids(str(tmp_path))
+    assert {"c1", "c2", "21"} <= ids and "c3" not in ids

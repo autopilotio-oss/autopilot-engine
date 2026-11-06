@@ -119,6 +119,9 @@ def approved_post_uuids(root=ROOT):
     def add(p):
         for k in ("uuid", "metricool_id", "id_metricool"):
             if isinstance(p, dict) and p.get(k) is not None: ids.add(str(p[k]))
+        for k in ("metricool_uuids", "metricool_ids"):  # carousel records list one uuid per network
+            if isinstance(p, dict) and isinstance(p.get(k), list):
+                ids.update(str(v) for v in p[k] if v is not None)
     for f in files:
         try: q = json.load(open(f))
         except Exception: continue

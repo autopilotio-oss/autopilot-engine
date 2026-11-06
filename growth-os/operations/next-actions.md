@@ -59,6 +59,13 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Nov 5 run (13:12 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 5 run (19:17 UTC): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-06 (08:20 ART)
+- Health: meta_pixel_configured (SEV-3, known); worker:kit_sync heartbeat late 10.7h vs 8h (SEV-2, already on GitHub issue #18, detail "0 routed (no subscribers on forms)"). All 20 checkouts ok, all page probes ok. Actions: 3 pages build and deployment runs failed (Nov 6 08:01, 08:59, 09:16 UTC); the next two (10:25, 10:50 UTC) succeeded, so the site is current. No other failed runs in the last 40.
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, no new spend. Cost guard ok (no cap hit).
+- Metricool: 0 ERRORs, 19 deliveries last 24h (Threads 11, X 5, IG 2, TikTok 1), 23 non-draft posts queued Nov 6 08:15 to Nov 8 08:15 ART, all approved, within cadence caps. Kit 0 subscribers (owner test signup only, inactive).
+- ONE CHANGE: the approval guard flagged 2 Nov 7 18:30 prompt pack posts (Threads 5431603720913898413, X 4151879212138712021) as unapproved, but queue/car/2026-11-04-owner-24-prompts.json has Seb's quote and lists them under metricool_uuids, a key health.approved_post_uuids() did not read. It now reads metricool_uuids and metricool_ids lists (approved records only), tests/test_approved_batches.py +1 test, 111 pass. Nothing was drafted. Rollback: git revert.
+- Note: commander's only proposal ("Prove one funnel: 4 owner tools") needs the owner, not touched.
+
 ## Daily Pulse 2026-11-05 (08:25 ART)
 - Health: meta_pixel_configured (SEV-3, known) and 3 late heartbeats (publisher SEV-2 already on issue #17; trend_scout and viral_lab SEV-3). All 20 checkouts ok. 0 failed Actions runs in the last 40 (Nov 5 03:34 to 11:19 UTC; 2 pages builds cancelled by newer pushes).
 - inc:metricool_unapproved:2026-11-04: the restorable posts were restored with a recorded approval (queue/x/2026-11-04-restored.json, see Fix needed); today 0 pending posts are outside health.approved_post_uuids(). Treat as resolved.
