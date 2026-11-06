@@ -1,0 +1,38 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "note": "No link test: Threads views fell from 119 (Nov 1) to 26 (Nov 4); these 4 carry no link",
+ "posts": [
+  {
+   "uuid": "8063232710417727641",
+   "metricool_id": 418835721,
+   "at": "2026-11-06T12:00:00-03:00",
+   "pillar": "e_question",
+   "hook": "What's the one job you still do by hand and hate?"
+  },
+  {
+   "uuid": "-6665361824067925508",
+   "metricool_id": 418835474,
+   "at": "2026-11-06T16:00:00-03:00",
+   "pillar": "a_hate_tech",
+   "hook": "AI won't run your business. It will write your boring texts."
+  },
+  {
+   "uuid": "-8173020905606593522",
+   "metricool_id": 418835486,
+   "at": "2026-11-06T19:00:00-03:00",
+   "pillar": "c_owner_pain",
+   "hook": "Nobody tells you the business is half texting."
+  },
+  {
+   "uuid": "1315492024349574163",
+   "metricool_id": 418835506,
+   "at": "2026-11-06T22:00:00-03:00",
+   "pillar": "b_hours_saved",
+   "hook": "Unanswered reviews are the easiest win you're ignoring."
+  }
+ ]
+}

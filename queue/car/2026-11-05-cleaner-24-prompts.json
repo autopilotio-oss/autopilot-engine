@@ -1,7 +1,7 @@
 {
  "id": "2026-11-05-cleaner-24-prompts",
  "kind": "promptpack",
- "status": "bank",
+ "status": "scheduled",
  "tool": "Owner Toolkit tools (Invoice Chaser, Review Desk, Content Week, Bookkeeping Sorter, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
  "cover_idea": "Split page: black top with a tilted DAY 1 tear off calendar and a checked list of the 6 folders, lime bottom half with the headline in the middle of the page (CLAUDE PROMPTS / I WISH I HAD / ON DAY ONE in a black block), sub and black SWIPE button.",
  "theme": "cleaning businesses (home and office cleaners): 24 new prompts in 6 folders (Quotes, Bookings, Clients, Reviews, Posts, Money), all visible, untested hook 'Claude prompts I wish I had on day one'",
@@ -17,5 +17,23 @@
  },
  "media": "docs/media/car/2026-11-05-cleaner-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
  "story_key": "promptpack-cleaner-24",
- "built_at": "2026-11-05T19:42Z"
+ "built_at": "2026-11-05T19:42Z",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval; MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
+ },
+ "scheduled_by": "Daily Manager 2026-11-06 08:51 ART run (bank promotion, gate 92, QA PASS, CTA AGENTS confirmed)",
+ "posts": [
+  {
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-06T18:00:00-03:00",
+   "metricool_id": 418833795,
+   "uuid": "1020185909314077790",
+   "type": "POST carousel, cover_ig.mp4 + 02 to 08"
+  }
+ ],
+ "results": {}
 }

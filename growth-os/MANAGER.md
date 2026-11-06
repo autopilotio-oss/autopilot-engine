@@ -90,6 +90,8 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 
 ## 6. What works (evidence log, newest first)
 
+- 2026-11-06 CONFIRMED: Threads reach is falling for the whole account, not one format: daily views 119, 87, 40, 26 (Nov 1 to 4); Nov 4 to 5 media posts got 1 to 2 views like the text ones. Testing link free posts Nov 6.
+- 2026-11-06 EARLY: TikTok Agent videos 96 (week plan) and 71 (hooks), 0 likes; owner niche videos 88 to 99. No niche lift yet.
 - 2026-11-05 EARLY: IG 24 prompts pack drew 10 comments on 8 views, the most comments any IG post has had. Prompt packs pull comments; watch saves.
 - 2026-11-05 EARLY: Threads text only posts on Nov 4 got 0 to 11 views each (12 posts) while Nov 2 to 3 posts with media got 18 to 64. Check again tomorrow once Nov 4 numbers settle; if it holds, add an image to 1 in 2 Threads posts.
 - 2026-11-04 CONFIRMED: Nov 1 to 3, 0 shares and 0 link clicks on all 29 posts across Threads, TikTok and IG. Crypto and finance news is the weakest on Threads (7, 14) and TikTok (2, 54). Owner tool and useful warning posts lead.
@@ -110,6 +112,8 @@ Answers go here with his quote and date.
 
 4. PENDING 2026-11-04: Is the ManyChat keyword TOOLS live? Posts that say "Comment TOOLS" get switched to "link in bio" until it is in config/manychat.json confirmed.
 5. PENDING 2026-11-04: Can you add the GoatCounter API token? Without it site visits and UTM clicks are MISSING, so we cannot see which hook sends people to the site.
+
+7. PENDING 2026-11-06: Threads views fell from 119 a day to 26 while we post 10 to 12 a day. Keep 12, or cut to 6 for 3 days to test if volume is hurting reach?
 
 6. PENDING 2026-11-05: The IG 24 prompts post got 10 comments on 8 views. Were they real people (what did they ask), or our own replies?
 
