@@ -1,6 +1,6 @@
 # Daily report
 
-Generated 2026-11-06 08:01 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-06T08:01:02Z.
+Generated 2026-11-06 10:49 UTC by `scripts/revenue/report_daily.py`. Ledger synced 2026-11-06T10:49:30Z.
 Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown attribution stays unknown.
 
 | Metric | Value | Source |
@@ -15,7 +15,7 @@ Financial truth is the Gumroad ledger. Test and $0 orders are excluded. Unknown 
 | Landing conversion | 0 orders / sessions MISSING (GoatCounter token not set) | ledger + GoatCounter |
 | Activation | 0/0 buyers | sales/activations.csv |
 | Attribution quality | 0/0 orders with a source | ledger UTMs |
-| System health | failing: meta_pixel_configured | state/health/status.json |
+| System health | failing: meta_pixel_configured, worker:kit_sync | state/health/status.json |
 
 ## Outbound pilot (V3, draft only)
 - Leads researched: 10 · qualified or later: 6 · drafts waiting for approval: 1
