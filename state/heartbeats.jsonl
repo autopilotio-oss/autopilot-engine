@@ -162,3 +162,4 @@
 {"worker": "site_improver", "status": "ok", "at": "2026-11-06T14:42:58+00:00", "note": "kit_sync health limit matched to its real 8h cadence (10h); no page change"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-06T16:24:18+00:00", "note": "29 posts out today, top post saves+shares 0, feed written yes"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-06T16:32:05+00:00", "note": "0 routed (no subscribers on forms)"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-06T16:53:38+00:00", "note": "midday: 17 Threads, 15 X, 1 IG out; per post data MISSING; no move"}
