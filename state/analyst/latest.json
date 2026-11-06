@@ -1,28 +1,42 @@
 {
-  "at": "2026-11-06T00:21:00Z",
+  "at": "2026-11-06T12:30:00Z",
   "posts_today": {
     "threads": {
-      "published": 10,
-      "pending": 4,
+      "published": 0,
+      "pending": 13,
       "error": 0
     },
     "twitter": {
-      "published": 5,
-      "pending": 2,
+      "published": 1,
+      "pending": 5,
       "error": 0
     },
     "instagram": {
-      "published": 2,
-      "pending": 8,
+      "published": 0,
+      "pending": 6,
       "error": 0
     },
     "tiktok": {
-      "published": 1,
+      "published": 0,
       "pending": 3,
       "error": 0
     }
   },
   "top_posts": [
+    {
+      "network": "instagram",
+      "published_at": "2026-11-05T13:05:48Z",
+      "text": "A customer asks for a price while you're in the middle of a job.",
+      "metrics": {
+        "reach": 46,
+        "views": 50,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0
+      },
+      "url": "https://www.instagram.com/reel/DfXGSM7lR7D/",
+      "metrics_seen_at": "2026-11-06T12:30:00Z"
+    },
     {
       "network": "instagram",
       "published_at": "2026-11-03T21:04:47Z",
@@ -35,40 +49,26 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/p/DfSzf-8Dx01/",
-      "metrics_seen_at": "2026-11-06T00:21:00Z"
+      "metrics_seen_at": "2026-11-06T12:30:00Z"
     },
     {
       "network": "instagram",
       "published_at": "2026-11-04T22:52:06Z",
       "text": "24 Claude prompts that should be illegal. All 24 are in the slides, no DM needed.",
       "metrics": {
-        "reach": 3,
-        "views": 8,
+        "reach": 6,
+        "views": 11,
         "saves": 0,
         "shares": 0,
         "comments": 10
       },
       "url": "https://www.instagram.com/p/DfVkkbQCLwT/",
-      "metrics_seen_at": "2026-11-06T00:21:00Z"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-11-03T01:31:47Z",
-      "text": "A customer asks \"how much?\" and you're on a job.",
-      "metrics": {
-        "reach": 2,
-        "views": 3,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0
-      },
-      "url": null,
-      "metrics_seen_at": "2026-11-06T00:21:00Z"
+      "metrics_seen_at": "2026-11-06T12:30:00Z"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "21:21 ART Nov 5: 18 provider posts published today (Threads 10, X 5, IG 2, TikTok 1), 17 pending, 0 ERROR. One non draft Threads post (id 417637535, 22:00 ART slot) still PENDING but Metricool analytics shows it on Threads at 22:03 ART; not an ERROR. IG post 418046951 flagged last run no longer pending. Window 6-72h = Nov 2 21:21 to Nov 5 15:21 ART. No post in window has any save or share, so no winner; listed by reach only (timestamps kept in the same convention as earlier runs, as Metricool returns them). IG feed in window: reach 0 to 9. TikTok in window: views 71 to 99 (banks 99, hooks plan 96, front desk 92), comments 0, shares 0, reach MISSING. Threads in window: views up to 22 (banks), 18 (front desk cards), 11 (reviews poll); replies, reposts, shares MISSING (null). X analytics not available per post. Profile visits not provided. URL for the 3rd IG post MISSING (not returned by analytics). Kit: 0 subscribers, 0 new today. Revenue from hq_feed: 0 verified orders all time, 0 in 7d (unchanged). All 8 GitHub workflows latest conclusion success, 0 fails in 24h. HQ feed written (status/hub v47)."
+  "notes": "09:30 ART Nov 6: 1 provider post published so far today (X 416313167, 09:00 ART), 27 pending (Threads 13, X 5, IG 6, TikTok 3), 0 ERROR. Earliest pending slots are 10:00 ART, not yet due. Window 6-72h: no post has any save or share, so no winner; listed by reach only (timestamps in the same convention as earlier runs, as Metricool returns them). New: IG reel price-inquiry (Nov 5) reach 46, views 50, best IG result in window. IG feed in window: reach 1 to 9. TikTok in window: views 71 to 99, comments 0, shares 0, reach MISSING. Threads in window: views up to 22 (banks), 18 (front desk cards), 11 (reviews poll); most Threads views null; replies, reposts, shares MISSING (null). X analytics not available per post. Profile visits not provided. Kit: 0 subscribers, 0 new today. Revenue from hq_feed: 0 verified orders all time, 0 in 7d (unchanged). All 8 GitHub workflows latest conclusion success incl. ci.yml, 0 fails in 24h. HQ feed written (status/hub v48)."
 }
