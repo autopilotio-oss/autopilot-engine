@@ -1,19 +1,19 @@
 {
-  "at": "2026-11-06T12:30:00Z",
+  "at": "2026-11-06T16:25:00Z",
   "posts_today": {
     "threads": {
-      "published": 0,
-      "pending": 13,
+      "published": 15,
+      "pending": 41,
       "error": 0
     },
     "twitter": {
-      "published": 1,
-      "pending": 5,
+      "published": 13,
+      "pending": 36,
       "error": 0
     },
     "instagram": {
-      "published": 0,
-      "pending": 6,
+      "published": 1,
+      "pending": 5,
       "error": 0
     },
     "tiktok": {
@@ -35,7 +35,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/reel/DfXGSM7lR7D/",
-      "metrics_seen_at": "2026-11-06T12:30:00Z"
+      "metrics_seen_at": "2026-11-06T16:25:00Z"
     },
     {
       "network": "instagram",
@@ -49,7 +49,7 @@
         "comments": 0
       },
       "url": "https://www.instagram.com/p/DfSzf-8Dx01/",
-      "metrics_seen_at": "2026-11-06T12:30:00Z"
+      "metrics_seen_at": "2026-11-06T16:25:00Z"
     },
     {
       "network": "instagram",
@@ -63,12 +63,12 @@
         "comments": 10
       },
       "url": "https://www.instagram.com/p/DfVkkbQCLwT/",
-      "metrics_seen_at": "2026-11-06T12:30:00Z"
+      "metrics_seen_at": "2026-11-06T16:25:00Z"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "09:30 ART Nov 6: 1 provider post published so far today (X 416313167, 09:00 ART), 27 pending (Threads 13, X 5, IG 6, TikTok 3), 0 ERROR. Earliest pending slots are 10:00 ART, not yet due. Window 6-72h: no post has any save or share, so no winner; listed by reach only (timestamps in the same convention as earlier runs, as Metricool returns them). New: IG reel price-inquiry (Nov 5) reach 46, views 50, best IG result in window. IG feed in window: reach 1 to 9. TikTok in window: views 71 to 99, comments 0, shares 0, reach MISSING. Threads in window: views up to 22 (banks), 18 (front desk cards), 11 (reviews poll); most Threads views null; replies, reposts, shares MISSING (null). X analytics not available per post. Profile visits not provided. Kit: 0 subscribers, 0 new today. Revenue from hq_feed: 0 verified orders all time, 0 in 7d (unchanged). All 8 GitHub workflows latest conclusion success incl. ci.yml, 0 fails in 24h. HQ feed written (status/hub v48)."
+  "notes": "13:25 ART Nov 6: 29 provider posts published today (Threads 15, X 13, IG 1 reel DfZrNGPFW6F), 85 pending, 0 ERROR. Pending 10:00 ART slots (Bill coach IG/TikTok/Threads/X, 24 prompts IG, front desk IG duplicate) are drafts (draft true), not approved, so not overdue. Window 6-72h: no IG post or reel has any save or share, so no winner; ranked by reach only (IG reel price-inquiry reach 46 views 50; banks reach 9; 24 prompts reach 6 with 10 comments). Threads, X, TikTok per post analytics not pulled this run (MISSING). Profile visits not provided. Kit: 0 subscribers, 0 new today. Revenue from hq_feed: 0 verified orders all time, 0 in 7d (unchanged). GitHub: all workflows latest success incl. ci.yml except market.yml cancelled (not failure), 0 fails in 24h. HQ feed written (status/hub v49)."
 }
