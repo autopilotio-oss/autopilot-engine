@@ -32,12 +32,13 @@
  },
  "posts": [
   {
-   "metricool_id": 416312894,
+   "metricool_id": 418740366,
    "uuid": "5348254084733355277",
    "networks": [
     "instagram"
    ],
-   "at": "2026-11-06T10:00-03:00"
+   "at": "2026-11-06T10:00-03:00",
+   "note": "2026-11-06 07:20 ART: was left as a draft by the Nov 4 18:05 IG row switch; campaign operator set it back to scheduled (new id, same uuid). Duplicate created by a retried call (uuid 6731729518843150863) set to draft."
   },
   {
    "metricool_id": 416313122,

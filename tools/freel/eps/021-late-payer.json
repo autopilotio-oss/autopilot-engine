@@ -16,8 +16,8 @@
   "asking"
  ],
  "caption": {
-  "ig": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
-  "other": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
+  "ig": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
+  "other": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
  },
  "stat": {
   "prefix": "$",
@@ -84,14 +84,14 @@
   },
   {
    "chip": "get it",
-   "say": "Ten dollars, or all four owner tools for twenty four. Link in bio.",
+   "say": "Nine ninety nine, or all four owner tools for twenty four. Link in bio.",
    "screen": {
     "type": "cta",
     "product": true,
     "name": "Invoice Chaser",
     "sub": "Or all 4 owner tools for $24",
     "cover": "invoice-chaser-reel",
-    "price": "$10",
+    "price": "$9.99",
     "kw": "AGENTS",
     "url": "autopilotoi.app/#tools"
    }

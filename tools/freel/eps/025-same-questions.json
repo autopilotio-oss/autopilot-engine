@@ -1,0 +1,86 @@
+{
+ "id": "same-questions",
+ "kind": "product",
+ "offer": "front_desk_kit",
+ "room": "support",
+ "agent": "Front Desk",
+ "lane": "front desk",
+ "hook": [
+  "Same question",
+  "for the 10th time today?"
+ ],
+ "hook_lines": [
+  "Same *question*",
+  "for the",
+  "10th time",
+  "*today*?"
+ ],
+ "caption": {
+  "ig": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+  "other": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
+ },
+ "stat": {
+  "count": 3,
+  "suffix": " ANSWERS",
+  "label": "saved to your FAQ bank",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Same question for the tenth time today? Type faq and the questions you always get.",
+   "screen": {
+    "type": "ask",
+    "text": "faq: open Sundays? bring your own supplies? pets ok?",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It writes one answer for each, from your real hours and rules, in your voice.",
+   "screen": {
+    "type": "work",
+    "title": "Building your FAQ bank",
+    "lines": [
+     "read your hours and rules",
+     "write one answer each",
+     "match how you talk",
+     "save them to your FAQ bank"
+    ]
+   }
+  },
+  {
+   "chip": "answer",
+   "say": "Next time, paste the message and the answer is ready. Sample cleaning business shown.",
+   "screen": {
+    "type": "dm",
+    "title": "Draft, waiting for you",
+    "sample": true,
+    "msgs": [
+     [
+      "them",
+      "Do you bring your own supplies? I have a dog."
+     ],
+     [
+      "us",
+      "Yes, we bring everything, pet safe products included. Your dog can stay, we work around them."
+     ]
+    ]
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment AGENTS, or tap the link in bio, for the free Front Desk Starter.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Front Desk Kit",
+    "sub": "Start free with the Front Desk Starter",
+    "cover": "frontdesk-reel",
+    "price": "$39",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/front-desk"
+   }
+  }
+ ]
+}

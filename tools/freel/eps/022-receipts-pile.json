@@ -16,8 +16,8 @@
   "wants *totals*"
  ],
  "caption": {
-  "ig": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping",
-  "other": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping"
+  "ig": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping",
+  "other": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping"
  },
  "stat": {
   "count": 2,
@@ -100,14 +100,14 @@
   },
   {
    "chip": "get it",
-   "say": "Ten dollars, or all four owner tools for twenty four. Link in bio.",
+   "say": "Nine ninety nine, or all four owner tools for twenty four. Link in bio.",
    "screen": {
     "type": "cta",
     "product": true,
     "name": "Bookkeeping Sorter",
     "sub": "Or all 4 owner tools for $24",
     "cover": "bookkeeping-sorter-reel",
-    "price": "$10",
+    "price": "$9.99",
     "kw": "AGENTS",
     "url": "autopilotoi.app/#tools"
    }
