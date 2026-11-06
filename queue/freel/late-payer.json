@@ -1,0 +1,20 @@
+{
+ "id": "late-payer",
+ "ep": "021-late-payer",
+ "kind": "product",
+ "hook": [
+  "Dave still hasn't paid",
+  "and you hate asking"
+ ],
+ "keyword": "AGENTS",
+ "video": "https://autopilotoi.app/media/freel/late-payer.mp4",
+ "poster": "https://autopilotoi.app/media/freel/late-payer-poster.jpg",
+ "caption": {
+  "ig": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
+  "other": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
+ },
+ "rendered_at": "2026-11-06T11:51:43+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
