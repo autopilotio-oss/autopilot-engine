@@ -289,7 +289,7 @@ def index():
 <h1>Claude agents<br>for <em>real jobs.</em></h1>
 <p class="lead">Each one runs in a Claude Project. It reads what you upload, checks it and drafts the reply, the plan or the letter. You decide and send. Every kit has a free guide you can try first.</p>
 <nav class="flt"><a href="#money">Save money</a><a href="#tiktok">Grow on TikTok</a><a href="#business">Run a business</a><a href="/free/">Free guides</a></nav>
-{video_block('subs-agent', 'Subscription Agent · sample data')}
+{video_block('price-inquiry', 'Front Desk Kit · sample data')}
 <a class="hero" href="/store/autopilot/" style="margin-top:14px"><span class="tag">New · for any small business</span><span class="H">Front Desk<br>Kit · $39</span><p>Learns your business in a 15 minute interview, then builds your systems in Claude: replies with your prices, quotes, follow ups, reviews, FAQ and your weekly plan. Every draft waits for your OK.</p><span class="btn">See Autopilot →</span><span class="sm">One time · 30 day refund</span></a>
 <p class="sm">Every demo on this site is a real run on made-up data, with nothing cut out.</p>
 <div class="cathd" id="money"><span class="tag">{e(CATS[0][1])}</span><h2>The money jobs you keep putting off</h2><p>{e(CATS[0][2])}</p></div>
