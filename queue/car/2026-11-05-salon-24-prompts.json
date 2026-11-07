@@ -1,69 +1,69 @@
 {
-  "id": "2026-11-05-salon-24-prompts",
-  "kind": "promptpack",
-  "status": "scheduled",
-  "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
-  "cover_idea": "Full lime page, a giant black 24 as the main visual with the 6 folder chips stacked beside it, headline moved to the bottom at a smaller scale (CLAUDE PROMPTS EVERY / SALON AND BARBER NEEDS in a black block), sub and black button on one row.",
-  "theme": "salons and barbers: 24 new prompts in 6 folders (Bookings, Clients, Reviews, Posts, Money, Team), all visible, hook test '24 Claude prompts every <niche> needs'",
-  "gate": {
-    "score": 94,
-    "notes": "Accuracy 30/30 (no factual claims; prompts only, every prompt 22 words max, none repeated from earlier packs, script checked; no review incentives, no legal or tax advice). Hook 22/25 (untested hook in the rotation, new niche). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder). Design 14/15 vs last 5 covers: lime background vs black/paper, headline at the bottom vs top, giant number with stacked chips vs headline plus chip row, headline scale 120px vs 160 to 170px. CTA 9/10 (AGENTS is confirmed in config/manychat.json, TOOLS not yet; gift is the free starter per override; prompts map to Review Desk, Content Week, Invoice Chaser, Bookkeeping Sorter and Front Desk). QA PASS all 8; read every slide, legible on a phone."
+ "id": "2026-11-05-salon-24-prompts",
+ "kind": "promptpack",
+ "status": "scheduled",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Full lime page, a giant black 24 as the main visual with the 6 folder chips stacked beside it, headline moved to the bottom at a smaller scale (CLAUDE PROMPTS EVERY / SALON AND BARBER NEEDS in a black block), sub and black button on one row.",
+ "theme": "salons and barbers: 24 new prompts in 6 folders (Bookings, Clients, Reviews, Posts, Money, Team), all visible, hook test '24 Claude prompts every <niche> needs'",
+ "gate": {
+  "score": 94,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, every prompt 22 words max, none repeated from earlier packs, script checked; no review incentives, no legal or tax advice). Hook 22/25 (untested hook in the rotation, new niche). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder). Design 14/15 vs last 5 covers: lime background vs black/paper, headline at the bottom vs top, giant number with stacked chips vs headline plus chip row, headline scale 120px vs 160 to 170px. CTA 9/10 (AGENTS is confirmed in config/manychat.json, TOOLS not yet; gift is the free starter per override; prompts map to Review Desk, Content Week, Invoice Chaser, Bookkeeping Sorter and Front Desk). QA PASS all 8; read every slide, legible on a phone."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You run a salon or a barbershop and still type every booking reply between clients?\n\nHere are 24 Claude prompts in 6 folders: bookings, clients, reviews, posts, money and team. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next quiet hour.\n\n#salonowner #barbershop #hairstylist #smallbusiness #claudeai",
+  "threads": "24 Claude prompts every salon and barber needs.\n\nPrice question replies, waitlist texts, color timelines, review replies, a week of captions from one before and after, booth rent reminders, receipts sorted. All in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Salon and barbershop owners: 24 Claude prompts for bookings, clients, reviews, posts, money and team. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-05-salon-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-05T13:40Z",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval (news and prompt carousels); MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
+ },
+ "scheduled_by": "News Desk 2026-11-05 14:52 ART run (step 6 daily prompt pack, bank item re-checked: gate 94, QA PASS, CTA AGENTS confirmed, cover and end card reviewed)",
+ "story_key": "promptpack-salon-barber-24",
+ "posts": [
+  {
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-05T18:00:00-03:00",
+   "metricool_id": 418046951,
+   "uuid": "7955882541478660218",
+   "type": "POST carousel, cover_ig.mp4 + 02 to 08"
   },
-  "sources": [],
-  "captions": {
-    "ig": "You run a salon or a barbershop and still type every booking reply between clients?\n\nHere are 24 Claude prompts in 6 folders: bookings, clients, reviews, posts, money and team. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next quiet hour.\n\n#salonowner #barbershop #hairstylist #smallbusiness #claudeai",
-    "threads": "24 Claude prompts every salon and barber needs.\n\nPrice question replies, waitlist texts, color timelines, review replies, a week of captions from one before and after, booth rent reminders, receipts sorted. All in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
-    "x": "Salon and barbershop owners: 24 Claude prompts for bookings, clients, reviews, posts, money and team. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+  {
+   "networks": [
+    "threads"
+   ],
+   "at": "2026-11-06T13:00:00-03:00",
+   "metricool_id": 418047441,
+   "uuid": "719597793980137620",
+   "note": "Nov 5 Threads slots full (11 of 12 used, only past 08:00 open)"
   },
-  "media": "docs/media/car/2026-11-05-salon-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
-  "built_at": "2026-11-05T13:40Z",
-  "approval": {
-    "by": "Seb",
-    "quote": "Yes, autopost to Nov 10 (Recommended)",
-    "basis": "campaign standing approval (news and prompt carousels); MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
-  },
-  "scheduled_by": "News Desk 2026-11-05 14:52 ART run (step 6 daily prompt pack, bank item re-checked: gate 94, QA PASS, CTA AGENTS confirmed, cover and end card reviewed)",
-  "story_key": "promptpack-salon-barber-24",
-  "posts": [
-    {
-      "networks": [
-        "instagram"
-      ],
-      "at": "2026-11-05T18:00:00-03:00",
-      "metricool_id": 418046951,
-      "uuid": "7955882541478660218",
-      "type": "POST carousel, cover_ig.mp4 + 02 to 08"
-    },
-    {
-      "networks": [
-        "threads"
-      ],
-      "at": "2026-11-06T13:00:00-03:00",
-      "metricool_id": 418047441,
-      "uuid": "719597793980137620",
-      "note": "Nov 5 Threads slots full (11 of 12 used, only past 08:00 open)"
-    },
-    {
-      "networks": [
-        "twitter"
-      ],
-      "at": "2026-11-06T15:00:00-03:00",
-      "metricool_id": 418047464,
-      "uuid": "-8410028999968144139",
-      "note": "Nov 5 X full (5 of 5)"
-    }
-  ],
-  "results": {
-    "instagram": {
-      "reach": 3,
-      "views": 3,
-      "saves": 0,
-      "shares": 0,
-      "comments": 0,
-      "follows": 0,
-      "url": "https://www.instagram.com/p/DfX9R05DZNI/",
-      "pulled_at": "2026-11-06T11:58-03:00",
-      "window": "IG posted to now, Metricool IGPO; profile visits and keyword comments MISSING (not in post connector)"
-    }
+  {
+   "networks": [
+    "twitter"
+   ],
+   "at": "2026-11-06T15:00:00-03:00",
+   "metricool_id": 418047464,
+   "uuid": "-8410028999968144139",
+   "note": "Nov 5 X full (5 of 5)"
   }
+ ],
+ "results": {
+  "instagram": {
+   "reach": 7,
+   "views": 13,
+   "saves": 0,
+   "shares": 0,
+   "comments": 0,
+   "follows": 0,
+   "url": "https://www.instagram.com/p/DfX9R05DZNI/",
+   "pulled_at": "2026-11-07T11:58-03:00",
+   "window": "IG posted to now, Metricool IGPO; profile visits and keyword comments MISSING (not in post connector)"
+  }
+ }
 }

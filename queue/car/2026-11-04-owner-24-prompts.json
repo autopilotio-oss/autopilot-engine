@@ -1,51 +1,51 @@
 {
-  "id": "2026-11-04-owner-24-prompts",
-  "kind": "promptpack",
-  "status": "scheduled",
-  "approval": {
-    "by": "Seb",
-    "date": "2026-11-04",
-    "quote": "Let's make content like this and add it in the mix ... each thing we post needs to be a crazy hook and value don't post unless it's 100% good and has great value",
-    "design_quote": "Make the post more dynamic ... Make sure the post are simple and to the point as well as dynamic and easy to read use same design language from website",
-    "design_quote_2": "Make text better i want it to be more aesthetic to the human eye and also centered like a prompts that should be ilegal"
-  },
-  "cover_idea": "Website design language, centered: small label 24 PROMPTS FOR BUSINESS OWNERS, fitted Anton CLAUDE PROMPTS / THAT SHOULD BE / ILLEGAL (ILLEGAL in a lime block), NO DM NEEDED stamp slams onto its corner, six folder cards pop in, Copy. Paste. Swap the [brackets]., black SAVE IT button. Cards: centered Anton titles, balanced centered prompt text.",
-  "theme": "small business prompt pack: 24 short prompts (22 words max) in 6 folders, 4 cards a slide at 37px, all visible, AGENTS for the free Front Desk Starter",
-  "gate": {
-    "score": 95,
-    "notes": "Accuracy 29/30 (only claim: Google Business Profile description limit 750 characters, BrightLocal and Vendasta, checked Nov 4). Hook 23/25 (number pack hook from Seb's 3 references, all prompts inside, NO DM NEEDED). Clarity 20/20 (4 cards a slide, 37px text, 22 words max, brackets in lime). Design 14/15 (site language: paper, ink borders, lime marker; kinetic cover; QA PASS on all 8). CTA 9/10 (AGENTS confirmed)."
-  },
-  "sources": [
-    [
-      "BrightLocal",
-      "https://www.brightlocal.com/learn/google-business-profile/optimization/description/"
-    ],
-    [
-      "Vendasta",
-      "https://vendasta.com/blog/google-business-description-examples"
-    ]
+ "id": "2026-11-04-owner-24-prompts",
+ "kind": "promptpack",
+ "status": "scheduled",
+ "approval": {
+  "by": "Seb",
+  "date": "2026-11-04",
+  "quote": "Let's make content like this and add it in the mix ... each thing we post needs to be a crazy hook and value don't post unless it's 100% good and has great value",
+  "design_quote": "Make the post more dynamic ... Make sure the post are simple and to the point as well as dynamic and easy to read use same design language from website",
+  "design_quote_2": "Make text better i want it to be more aesthetic to the human eye and also centered like a prompts that should be ilegal"
+ },
+ "cover_idea": "Website design language, centered: small label 24 PROMPTS FOR BUSINESS OWNERS, fitted Anton CLAUDE PROMPTS / THAT SHOULD BE / ILLEGAL (ILLEGAL in a lime block), NO DM NEEDED stamp slams onto its corner, six folder cards pop in, Copy. Paste. Swap the [brackets]., black SAVE IT button. Cards: centered Anton titles, balanced centered prompt text.",
+ "theme": "small business prompt pack: 24 short prompts (22 words max) in 6 folders, 4 cards a slide at 37px, all visible, AGENTS for the free Front Desk Starter",
+ "gate": {
+  "score": 95,
+  "notes": "Accuracy 29/30 (only claim: Google Business Profile description limit 750 characters, BrightLocal and Vendasta, checked Nov 4). Hook 23/25 (number pack hook from Seb's 3 references, all prompts inside, NO DM NEEDED). Clarity 20/20 (4 cards a slide, 37px text, 22 words max, brackets in lime). Design 14/15 (site language: paper, ink borders, lime marker; kinetic cover; QA PASS on all 8). CTA 9/10 (AGENTS confirmed)."
+ },
+ "sources": [
+  [
+   "BrightLocal",
+   "https://www.brightlocal.com/learn/google-business-profile/optimization/description/"
   ],
-  "slots": {
-    "instagram": "2026-11-07 18:00 ART (carousel, cover_ig.mp4 first)",
-    "threads": "2026-11-07 18:30 ART",
-    "x": "2026-11-07 18:30 ART"
-  },
-  "metricool_uuids": [
-    "1677070771747900320",
-    "5431603720913898413",
-    "4151879212138712021"
-  ],
-  "results": {
-    "instagram": {
-      "reach": 6,
-      "views": 11,
-      "saves": 0,
-      "shares": 0,
-      "comments": 10,
-      "follows": 0,
-      "url": "https://www.instagram.com/p/DfVkkbQCLwT/",
-      "pulled_at": "2026-11-06T11:58-03:00",
-      "window": "IG posted to now, Metricool IGPO; profile visits and keyword comments MISSING (not in post connector)"
-    }
+  [
+   "Vendasta",
+   "https://vendasta.com/blog/google-business-description-examples"
+  ]
+ ],
+ "slots": {
+  "instagram": "2026-11-07 18:00 ART (carousel, cover_ig.mp4 first)",
+  "threads": "2026-11-07 18:30 ART",
+  "x": "2026-11-07 18:30 ART"
+ },
+ "metricool_uuids": [
+  "1677070771747900320",
+  "5431603720913898413",
+  "4151879212138712021"
+ ],
+ "results": {
+  "instagram": {
+   "reach": 7,
+   "views": 12,
+   "saves": 0,
+   "shares": 0,
+   "comments": 10,
+   "follows": 0,
+   "url": "https://www.instagram.com/p/DfVkkbQCLwT/",
+   "pulled_at": "2026-11-07T11:58-03:00",
+   "window": "IG posted to now, Metricool IGPO; profile visits and keyword comments MISSING (not in post connector)"
   }
+ }
 }
