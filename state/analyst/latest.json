@@ -1,45 +1,44 @@
 {
-  "at": "2026-11-06T20:22:00Z",
+  "at": "2026-11-07T00:30:00Z",
   "posts_today": {
     "threads": {
-      "published": 30,
-      "pending": 26,
+      "published": 46,
+      "pending": 10,
       "error": 0
     },
     "twitter": {
-      "published": 26,
-      "pending": 23,
+      "published": 40,
+      "pending": 9,
       "error": 0
     },
     "instagram": {
-      "published": 1,
-      "pending": 5,
+      "published": 2,
+      "pending": 4,
       "error": 0
     },
     "tiktok": {
-      "published": 0,
-      "pending": 3,
+      "published": 1,
+      "pending": 2,
       "error": 0
     }
   },
   "top_posts": [
     {
       "network": "instagram",
-      "published_at": "2026-11-03T21:04:47Z",
-      "text": "Banks are locking out AI agents.",
+      "published_at": "2026-11-05T13:05:48-03:00",
+      "text": "A customer asks for a price while you're in the middle of a job.",
       "metrics": {
-        "reach": 9,
-        "views": 16,
+        "reach": 46,
+        "views": 50,
         "saves": 0,
         "shares": 0,
         "comments": 0
       },
-      "url": "https://www.instagram.com/p/DfSzf-8Dx01/",
-      "metrics_seen_at": "2026-11-06T20:22:00Z"
+      "url": "https://www.instagram.com/reel/DfXGSM7lR7D/"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-04T22:52:06Z",
+      "published_at": "2026-11-04T22:52:06-03:00",
       "text": "24 Claude prompts that should be illegal. All 24 are in the slides, no DM needed.",
       "metrics": {
         "reach": 6,
@@ -48,12 +47,11 @@
         "shares": 0,
         "comments": 10
       },
-      "url": "https://www.instagram.com/p/DfVkkbQCLwT/",
-      "metrics_seen_at": "2026-11-06T20:22:00Z"
+      "url": "https://www.instagram.com/p/DfVkkbQCLwT/"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-05T21:06:25Z",
+      "published_at": "2026-11-05T21:06:25-03:00",
       "text": "You run a salon or a barbershop and still type every booking reply between clients?",
       "metrics": {
         "reach": 3,
@@ -62,13 +60,12 @@
         "shares": 0,
         "comments": 0
       },
-      "url": null,
-      "metrics_seen_at": "2026-11-06T20:22:00Z"
+      "url": "https://www.instagram.com/p/DfX9R05DZNI/"
     }
   ],
   "kit": {
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "17:30 ART Nov 6: 57 provider posts published today (Threads 30, X 26, IG 1 reel DfZrNGPFW6F), 57 pending, 0 ERROR. Pending 10:00 ART IG/TikTok/Threads/X items are drafts (draft true), not approved, so not overdue. Window 6-72h: no IG feed post has any save or share, so no winner; ranked by reach only. IG reels per post metrics not pulled this run (MISSING; earlier price-inquiry reel had reach 46 at 16:25Z). Threads per post: views only for some posts (max 22 views, banks post), replies/reposts/shares null (MISSING). X and TikTok per post MISSING. Profile visits not provided. Kit: 0 subscribers, 0 new today. Revenue from hq_feed: 0 verified orders all time, 0 in 7d (unchanged). GitHub: all workflows latest success incl. ci.yml, market.yml cancelled (not failure), 0 fails in 24h. HQ feed written (status/hub v50)."
+  "notes": "21:30 ART Nov 6 (Metricool day Nov 6 ART): 89 provider posts published (Threads 46, X 40, IG 2, TikTok 1), 25 pending, 0 ERROR. Pending 10:00 ART IG/TikTok/Threads/X items are drafts (draft true), not approved, so not overdue. Window 6-72h: no IG reel or feed post has any save or share, so no winner; ranked by reach only. Threads, X and TikTok per post metrics MISSING this run; profile visits not provided. Kit: 0 subscribers, 0 new today. Revenue from hq_feed: 0 verified orders all time, 0 in 7d (unchanged). GitHub: all workflows latest success incl. ci.yml, market.yml cancelled (not failure), 0 fails in 24h. HQ feed written (status/hub v51)."
 }
