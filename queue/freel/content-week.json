@@ -14,7 +14,22 @@
   "other": "You know you should post, you just never know what. Type week, answer 5 quick questions about your real jobs, and Content Week gives you 7 posts: what to shoot on your phone, the caption and the hashtags, in your voice. You post them yourself. Sample deck builder shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #socialmediatips"
  },
  "rendered_at": "2026-11-07T09:57:13+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "passed",
+ "gate": {
+  "score": 90,
+  "breakdown": {
+   "hook": 22,
+   "demo": 23,
+   "legibility": 13,
+   "honesty": 14,
+   "cta": 10,
+   "brand_sound": 8
+  },
+  "notes": "21.3s, -15.5 LUFS. Hook (you should post more, but post what) is real but softer than a money pain. Shows the week ask, planning steps and the 7 day plan from real jobs (sample data). End card $9.99 matches Gumroad 999 cents. CTA AGENTS confirmed.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-07T07:35-03:00"
+ },
+ "posts": [],
+ "note": "Gate passed; waiting for the next free IG 10:00 slot (Nov 11 on)."
 }

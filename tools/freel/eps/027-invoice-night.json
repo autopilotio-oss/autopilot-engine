@@ -1,0 +1,99 @@
+{
+ "id": "invoice-night",
+ "kind": "product",
+ "offer": "invoice_chaser",
+ "room": "ledger",
+ "agent": "Invoice Chaser",
+ "lane": "owner tools",
+ "hook": [
+  "Still typing invoices",
+  "at 10pm?"
+ ],
+ "hook_lines": [
+  "Still *typing*",
+  "invoices",
+  "at",
+  "*10pm*?"
+ ],
+ "caption": {
+  "ig": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
+  "other": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
+ },
+ "stat": {
+  "prefix": "$",
+  "count": 385,
+  "label": "invoice from one line of notes",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Still typing invoices at ten p m? Type invoice and your job notes.",
+   "screen": {
+    "type": "ask",
+    "text": "invoice: Sara, full detail + pet hair, paid deposit $50",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It reads your prices and your payment details.",
+   "screen": {
+    "type": "work",
+    "title": "Building the invoice",
+    "lines": [
+     "read your price list",
+     "full detail: $360",
+     "pet hair add on: $75",
+     "take off the $50 deposit"
+    ]
+   }
+  },
+  {
+   "chip": "invoice",
+   "say": "And gives you a clean invoice, ready to check. You send it yourself.",
+   "screen": {
+    "type": "table",
+    "title": "Invoice 1043, ready for you",
+    "sample": true,
+    "cols": [
+     "Item",
+     "Price"
+    ],
+    "rows": [
+     [
+      "Full detail",
+      "$360"
+     ],
+     [
+      "Pet hair add on",
+      "$75"
+     ],
+     [
+      "Deposit paid",
+      "-$50"
+     ],
+     [
+      "Due",
+      "$385"
+     ]
+    ],
+    "foot": "pay link from your details  ·  you send it"
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Ten dollars, or all four owner tools for twenty four. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Invoice Chaser",
+    "sub": "Or all 4 owner tools for $24",
+    "cover": "invoice-chaser-reel",
+    "price": "$10",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/#tools"
+   }
+  }
+ ]
+}

@@ -14,7 +14,35 @@
   "other": "Dave is a week late and you hate the awkward text. Type chase Dave and the Invoice Chaser drafts the right reminder for how late he is, friendly but clear, in your voice. It also keeps the list of who owes you. You read it and send it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
  },
  "rendered_at": "2026-11-06T11:51:43+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "scheduled",
+ "gate": {
+  "score": 94,
+  "breakdown": {
+   "hook": 24,
+   "demo": 24,
+   "legibility": 13,
+   "honesty": 15,
+   "cta": 10,
+   "brand_sound": 8
+  },
+  "notes": "19.3s, -15.7 LUFS, 1080x1920. Hook text on screen by 0.3s, names a real owner problem (late payer). Shows the chase ask, the who owes you list (520+150+490=1,160, labeled sample) and the drafted day 7 reminder. Claims match the Invoice Chaser listing (chase command, owner sends). CTA Comment AGENTS (confirmed) or link in bio, $10 / Toolkit $24. First frame at t=0 is a blurred olive frame; audio 1.7 LU under target.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-07T07:35-03:00"
+ },
+ "posts": [
+  {
+   "metricool_id": 419824705,
+   "uuid": "-8921258257798052316",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-09T10:00-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ }
 }

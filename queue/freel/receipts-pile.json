@@ -14,7 +14,22 @@
   "other": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping"
  },
  "rendered_at": "2026-11-06T11:51:47+00:00",
- "status": "rendered",
- "gate": "pending",
- "posts": []
+ "status": "passed",
+ "gate": {
+  "score": 92,
+  "breakdown": {
+   "hook": 23,
+   "demo": 24,
+   "legibility": 12,
+   "honesty": 15,
+   "cta": 10,
+   "brand_sound": 8
+  },
+  "notes": "18.9s, -15.7 LUFS. Hook names a real problem (receipts, accountant wants totals). Shows sort ask, October sorted table (612+388+150+74=1,224 business, personal 219 split out, labeled sample month) and the 2 questions it asks instead of guessing. 2 QUESTIONS stat overlaps the table for about 1s at 12s. CTA AGENTS confirmed, $10 / $24.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-07T07:35-03:00"
+ },
+ "posts": [],
+ "note": "Gate passed; waiting for the next free IG 10:00 slot (Nov 11 on)."
 }

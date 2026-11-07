@@ -1,0 +1,86 @@
+{
+ "id": "bad-review",
+ "kind": "product",
+ "offer": "review_desk",
+ "room": "support",
+ "agent": "Review Desk",
+ "lane": "owner tools",
+ "hook": [
+  "A 1 star review",
+  "and you want to fire back"
+ ],
+ "hook_lines": [
+  "A *1 star*",
+  "review and you",
+  "want to",
+  "*fire back*"
+ ],
+ "caption": {
+  "ig": "A 1 star review lands and you want to fire back. Type bad, paste the review, and the Review Desk drafts a calm, professional reply that won't make it worse, plus a private note of what to check first. You post it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews",
+  "other": "A 1 star review lands and you want to fire back. Type bad, paste the review, and the Review Desk drafts a calm, professional reply that won't make it worse, plus a private note of what to check first. You post it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews"
+ },
+ "stat": {
+  "count": 1,
+  "suffix": " CALM REPLY",
+  "label": "you post it yourself",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "A one star review, and you want to fire back. Don't. Type bad and paste it.",
+   "screen": {
+    "type": "ask",
+    "text": "bad: 1 star. Waited 40 minutes and the seats were still wet.",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "check",
+   "say": "First it gives you a private note of what to check before you answer.",
+   "screen": {
+    "type": "work",
+    "title": "Before you reply",
+    "lines": [
+     "check the booking time",
+     "was the wait real?",
+     "seats: drying time explained?",
+     "keep it calm and short"
+    ]
+   }
+  },
+  {
+   "chip": "reply",
+   "say": "Then a calm reply that won't make it worse, in your voice. You post it yourself.",
+   "screen": {
+    "type": "dm",
+    "title": "Reply draft, waiting for you",
+    "sample": true,
+    "msgs": [
+     [
+      "them",
+      "1 star. Waited 40 minutes and the seats were still wet."
+     ],
+     [
+      "us",
+      "Sorry about the wait and the damp seats, that's not the visit we want for you. Call me and I'll make it right. Mike"
+     ]
+    ]
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Ten dollars, or all four owner tools for twenty four. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Review Desk",
+    "sub": "Or all 4 owner tools for $24",
+    "cover": "review-desk-reel",
+    "price": "$10",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/#tools"
+   }
+  }
+ ]
+}
