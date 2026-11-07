@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T10:27:58Z",
+ "generated": "2026-11-07T13:39:50Z",
  "verified_orders_all_time": 0,
  "last_1d": {
   "orders": 0,
@@ -20,7 +20,7 @@
  "currencies": [],
  "notes": "Gumroad is the source of truth. Net = gross - Gumroad fee - refunds. Taxes are not included. Currencies are never mixed.",
  "sync": {
-  "ran": "2026-11-07T10:27:57Z",
+  "ran": "2026-11-07T13:39:49Z",
   "sales_api": "ok (1 page(s))",
   "products_api": "ok (10 products)",
   "new_events": 0
