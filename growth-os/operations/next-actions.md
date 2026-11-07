@@ -48,6 +48,7 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Support agent run Nov 6 13:12 UTC: no new alerts (new mail informational: Instagram business-chats label notice, Adspirer vendor follow-up, Metricool marketing).
 - Support agent run Nov 7 ~13:15 UTC: inc:email:1a1b3d7f (SEV-2 Metricool: Threads permissions revoked, account disconnected, Nov 6 23:30 ART) + inc:email:1a1b3d84 (SEV-2 Threads post not published, media container error). Same root as inc:metricool_networks:2026-11-07 (Seb already messaged by Daily Pulse). Fix: Seb reconnects Threads in Metricool. Other mail informational (Kit marketing).
 - Support agent run Nov 6 19:09 UTC: no new alerts (no new mail since 13:12 run).
+- Support agent run Nov 7 19:10 UTC: no new alerts (no new mail since 13:15 run; Threads disconnect incidents already open).
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -64,6 +65,7 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Nov 6 run (13:12 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 6 run (19:09 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 7 run (13:15 UTC): 0 cases, 0 drafted, 0 escalated.
+- Nov 7 run (19:10 UTC): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-07 (08:15 ART)
 - INCIDENT inc:metricool_networks:2026-11-07 (SEV-2, OPEN, Seb messaged): Threads is no longer connected to Metricool brand 7761544 (getBrandSettings networksData lists only instagram, twitter, tiktok). Timeline: Nov 6 23:30 ART question post 1559628931489418202 published on X but ERROR on Threads ("Media container not created by unknown cause"); at 23:37 ART every later Threads post got a new id and draft=true (Nov 7: 10:00 quiet-quotes reel, 11:00, 14:00, 18:30 prompt pack 5431603720913898413, 20:00; Nov 8: 10:00 late-night reel, 11:00, 14:00, 20:00), and the 23:50 question went out on X only (new uuid 8219941392449095913, approved). Threads THEV metrics now return one Nov 6 row of zeros. No run recorded doing this, so it looks like Metricool reacting to the disconnect. Fix: Seb reconnects Threads in Metricool (he holds the login); then the operator un-drafts the approved Threads posts that are still in the future. Daily Pulse changed no posts. Threads has 0 posts queued until then (cap 12/day + questions).

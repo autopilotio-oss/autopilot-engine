@@ -180,3 +180,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-07T16:22:53+00:00", "note": "posts out today 8 (x6 ig1 tt1), top post saves+shares 0, feed written yes"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-07T16:33:43+00:00", "note": "0 routed (both forms empty, all 3 sequences empty)"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-07T16:52:37+00:00", "note": "midday: 10 out, no data yet, no move, Threads still disconnected"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-07T19:10:02+00:00", "note": "0 drafted, 0 escalated, 0 new alerts (Threads disconnect already open)"}
