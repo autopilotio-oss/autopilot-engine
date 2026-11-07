@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-07T12:25:00Z",
+  "at": "2026-11-07T16:25:00Z",
   "posts_today": {
-    "twitter": {"published": 1, "pending": 19, "error": 0},
-    "instagram": {"published": 0, "pending": 2, "error": 0},
+    "twitter": {"published": 6, "pending": 14, "error": 0},
+    "instagram": {"published": 1, "pending": 1, "error": 0},
     "threads": {"published": 0, "pending": 5, "error": 0},
-    "tiktok": {"published": 0, "pending": 1, "error": 0}
+    "tiktok": {"published": 1, "pending": 0, "error": 0}
   },
   "top_posts": [
     {
@@ -29,6 +29,6 @@
       "url": "https://www.instagram.com/p/DfVkkbQCLwT/"
     }
   ],
-  "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Snapshot 09:25 ART. Today counts from Metricool planner (threads pending items are drafts). Top posts window 6 to 72h, Instagram only (Metricool post analytics pulled for IG reels and feed posts; X, Threads, TikTok post metrics not pulled: MISSING). Every post in window has 0 saves and 0 shares, so no winner; ranking falls back to reach. Kit growth stats report 0 subscribers as returned by get_growth_stats. Revenue per hub feed: 0 verified orders all time. All GitHub workflows latest conclusion success or cancelled (market.yml cancelled), no failures; ci.yml success. No ERROR posts today."
+  "kit": {"subscribers": 0, "new_today": null},
+  "notes": "Snapshot 13:25 ART. Today counts from Metricool planner (threads pending items are drafts). Top posts window 6 to 72h, Instagram only (Metricool reels and feed post analytics; X, Threads, TikTok post metrics not pulled: MISSING). Every post in window has 0 saves and 0 shares, so no winner; ranking falls back to reach (tie at 7 broken by comments). Kit get_growth_stats: 0 subscribers, 0 new in 90 day window (no daily figure given). Revenue per hub feed: 0 verified orders all time. All GitHub workflows latest conclusion success, 0 fails in 24h; ci.yml success. No ERROR posts today. HQ feed written (status/hub v53)."
 }
