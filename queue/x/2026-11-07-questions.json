@@ -1,0 +1,159 @@
+{
+  "approval": {
+    "by": "Seb",
+    "quote": "Ask questions all day on X/ threads questions like… CHAT GPT OR CLAUDE ? Simple but things everyone can answer",
+    "basis": "Daily Manager standing rule (SIMPLE QUESTIONS); cut to 1 an hour on X per the stop rule after the Nov 6 23:30 Threads ERROR and disconnect"
+  },
+  "posts": [
+    {
+      "uuid": "-489611579419900850",
+      "metricool_id": 419880194,
+      "at": "2026-11-07T09:45:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Snooze button: friend or enemy?"
+    },
+    {
+      "uuid": "5529575350396799887",
+      "metricool_id": 419880203,
+      "at": "2026-11-07T10:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Would you let AI read your inbox?"
+    },
+    {
+      "uuid": "1584503254062482127",
+      "metricool_id": 419880211,
+      "at": "2026-11-07T11:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Pineapple on pizza: yes or no?"
+    },
+    {
+      "uuid": "3826732213372733926",
+      "metricool_id": 419880223,
+      "at": "2026-11-07T12:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "One boring task you'd automate first?"
+    },
+    {
+      "uuid": "6025942848404997440",
+      "metricool_id": 419880228,
+      "at": "2026-11-07T13:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Booking an appointment: call or text?"
+    },
+    {
+      "uuid": "-3210853549556612067",
+      "metricool_id": 419880236,
+      "at": "2026-11-07T14:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Would you hire someone who uses ChatGPT for everything?"
+    },
+    {
+      "uuid": "1088855162774112049",
+      "metricool_id": 419880246,
+      "at": "2026-11-07T15:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Window seat or aisle?"
+    },
+    {
+      "uuid": "2270138373118967886",
+      "metricool_id": 419880253,
+      "at": "2026-11-07T16:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Should AI have to say when it wrote a message?"
+    },
+    {
+      "uuid": "-4639298134423155328",
+      "metricool_id": 419880269,
+      "at": "2026-11-07T17:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Paper receipt or email receipt?"
+    },
+    {
+      "uuid": "2569839124047154614",
+      "metricool_id": 419880285,
+      "at": "2026-11-07T18:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "The one email you always put off?"
+    },
+    {
+      "uuid": "130672881485103998",
+      "metricool_id": 419880300,
+      "at": "2026-11-07T19:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Group chat: mute it or read every message?"
+    },
+    {
+      "uuid": "6665156448331974994",
+      "metricool_id": 419880309,
+      "at": "2026-11-07T20:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Dark mode or light mode?"
+    },
+    {
+      "uuid": "8019645789517988907",
+      "metricool_id": 419880316,
+      "at": "2026-11-07T21:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Be your own boss, or have a great boss?"
+    },
+    {
+      "uuid": "-900024612400447096",
+      "metricool_id": 419880320,
+      "at": "2026-11-07T22:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Do you trust AI with math?"
+    },
+    {
+      "uuid": "9025534578903500546",
+      "metricool_id": 419880326,
+      "at": "2026-11-07T23:40:00-03:00",
+      "networks": [
+        "twitter"
+      ],
+      "pillar": "simple_question",
+      "hook": "Phone in the bedroom at night: yes or no?"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+ "template": "ad3.html",
+ "cold_open": 0.3,
+ "cap_fix": {},
+ "voice_speed": 1.0,
+ "sfx_only": [
+  "tick",
+  "cta"
+ ],
+ "foley": 0.8,
+ "music_prompt": "Cinematic emotional score for a {dur} second film. Opens with soft solo felt piano, lonely late night mood, slow, about 70 bpm, lots of space. Around the middle, warm strings and a gentle heartbeat pulse enter as hope arrives. Final third is warm, uplifting and resolved, with a soft swell in the last five seconds that lands and rings out. No vocals, no drums, no EDM, no risers.",
+ "streaks": false,
+ "id": "tk-mistakes",
+ "agents": [
+  "HOOK",
+  "MISTAKE 1",
+  "MISTAKE 2",
+  "MISTAKE 3",
+  "YOU POST",
+  "OFFER"
+ ],
+ "soft": [
+  "HOOK",
+  "YOU POST",
+  "OFFER"
+ ],
+ "dip": [
+  "YOU POST",
+  "OFFER"
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/store/video/?utm_source=tiktok&utm_campaign=manager&utm_content=tk_mistakes_1107",
+  "primary_text": "Three mistakes that cost TikTok views: a late hook, no reason to stay, and never checking what worked. The TikTok Agent checks all three. You film, edit and post. Sample data shown.",
+  "headline": "3 mistakes killing your views",
+  "description": "$10 \u00b7 TikTok Agent",
+  "cta": "LEARN_MORE"
+ },
+ "beats": [
+  {
+   "say": "Three mistakes killing your TikTok views.",
+   "head": [
+    "3 MISTAKES",
+    "*KILLING YOUR VIEWS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh03"
+    ],
+    "clip_ins": {
+     "sh03": 1.4
+    }
+   },
+   "agent": 0
+  },
+  {
+   "say": "One. Your hook starts too late.",
+   "head": [
+    "ONE.",
+    "*YOUR HOOK IS LATE.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh19"
+    ],
+    "clip_ins": {
+     "sh19": 2.4
+    },
+    "kind": "HOOK CHECK",
+    "msg": "hooks: my opener",
+    "draft": "SAMPLE \u00b7 Was: so today I wanted to show you \u00b7 Now: the packing trick nobody uses"
+   },
+   "agent": 1
+  },
+  {
+   "say": "Two. No reason to stay to the end.",
+   "head": [
+    "TWO.",
+    "*NO REASON TO STAY.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh04"
+    ],
+    "clip_ins": {
+     "sh04": 0.4
+    },
+    "kind": "CAPCUT PLAN",
+    "msg": "cut: my next video",
+    "draft": "SAMPLE \u00b7 0 to 2s: hook as text \u00b7 2 to 10s: the problem \u00b7 last 3s: the answer"
+   },
+   "agent": 2
+  },
+  {
+   "say": "Three. You never check what worked.",
+   "head": [
+    "THREE.",
+    "*YOU NEVER CHECK.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh18"
+    ],
+    "clip_ins": {
+     "sh18": 1.2
+    },
+    "kind": "WEEKLY REVIEW",
+    "msg": "review: my last 10 videos",
+    "draft": "SAMPLE \u00b7 Repeat: packing trick \u00b7 Drop: day in the life \u00b7 Test: a question hook",
+    "check": "[YOU FILM. YOU EDIT.]"
+   },
+   "agent": 3
+  },
+  {
+   "say": "The TikTok Agent checks all three. You film, edit and post.",
+   "head": [
+    "IT CHECKS ALL 3.",
+    "*YOU POST.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh09",
+     "sh11"
+    ],
+    "clip_ins": {
+     "sh09": 1.5,
+     "sh11": 0.8
+    },
+    "splits": [
+     0.5,
+     0.5
+    ]
+   },
+   "agent": 4
+  },
+  {
+   "say": "The TikTok Agent. Ten dollars. Link in bio.",
+   "head": [],
+   "scene": {
+    "type": "commentcard",
+    "plates": [
+     "sh14",
+     "sh15"
+    ],
+    "clip_ins": {
+     "sh14": 0.8,
+     "sh15": 2.3
+    },
+    "splits": [
+     0.3,
+     0.7
+    ],
+    "card_at": 2.7,
+    "track": [
+     [
+      3.0,
+      186,
+      1215,
+      654,
+      405
+     ],
+     [
+      4.0,
+      141,
+      990,
+      774,
+      570
+     ],
+     [
+      4.9,
+      69,
+      999,
+      921,
+      681
+     ]
+    ],
+    "card": {
+     "n": "TIKTOK AGENT",
+     "p": "$10",
+     "s": "LINK IN BIO"
+    }
+   },
+   "agent": 5
+  }
+ ]
+}

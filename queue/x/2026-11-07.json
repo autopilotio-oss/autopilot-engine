@@ -1,0 +1,17 @@
+{
+  "approval": {
+    "by": "Seb",
+    "quote": "treads should be mass posting waiting for viral",
+    "basis": "Daily Manager standing rule"
+  },
+  "posts": [
+    {
+      "uuid": "-4317330743138302030",
+      "metricool_id": 419880189,
+      "at": "2026-11-07T15:00:00-03:00",
+      "pillar": "invoice_chaser",
+      "hook": "You did the job. Now you have to text them about the money.",
+      "hook_id": "ic_did_the_job"
+    }
+  ]
+}
