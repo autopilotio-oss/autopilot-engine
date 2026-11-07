@@ -1,0 +1,18 @@
+{
+  "approval": {
+    "by": "Seb",
+    "quote": "treads should be mass posting waiting for viral",
+    "basis": "Daily Manager standing rule"
+  },
+  "posts": [
+    {
+      "uuid": "-2642483271279620149",
+      "metricool_id": 419890732,
+      "at": "2026-11-07T10:00:00-03:00",
+      "pillar": "tiktok_mistakes",
+      "hook": "3 mistakes killing your TikTok views",
+      "media": "docs/media/ads/tk-mistakes.mp4",
+      "gate": "86/100: hook in under 1s, 21.1s 1080x1920, SAMPLE labeled, value first (agent only last 2 beats), no view or money claims, audio mean -17.3 dB max -1.2 dB, run 42370256196; minus points: stock plates not creator specific"
+    }
+  ]
+}

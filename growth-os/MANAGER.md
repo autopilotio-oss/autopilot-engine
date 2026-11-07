@@ -100,6 +100,9 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 
 ## 6. What works (evidence log, newest first)
 
+- 2026-11-07 CONFIRMED: TikTok Agent demo videos have no signal after 3 tries (96, 101, 36 views, 0 likes, 0 shares) and TikTok daily views fell 450 to 36 (Nov 1 to 6). Demo format dropped; testing value first videos (mistakes, how to) with the agent only at the end.
+- 2026-11-07 CONFIRMED: IG prompt packs after the first one got 10 to 13 views and 0 saves, 0 shares, 0 comments (salon, cleaner). The 10 comments on Nov 4 did not repeat.
+- 2026-11-07 EARLY: Threads disconnected from Metricool minutes after a post failed, at the end of the first day of 3 questions an hour (about 60 Threads posts that day). Possible volume flag; X questions cut to 1 an hour.
 - 2026-11-06 CONFIRMED: Threads reach is falling for the whole account, not one format: daily views 119, 87, 40, 26 (Nov 1 to 4); Nov 4 to 5 media posts got 1 to 2 views like the text ones. Testing link free posts Nov 6.
 - 2026-11-06 EARLY: TikTok Agent videos 96 (week plan) and 71 (hooks), 0 likes; owner niche videos 88 to 99. No niche lift yet.
 - 2026-11-05 EARLY: IG 24 prompts pack drew 10 comments on 8 views, the most comments any IG post has had. Prompt packs pull comments; watch saves.
@@ -126,6 +129,9 @@ Answers go here with his quote and date.
 5. PENDING 2026-11-04: Can you add the GoatCounter API token? Without it site visits and UTM clicks are MISSING, so we cannot see which hook sends people to the site.
 
 7. PENDING 2026-11-06: Threads views fell from 119 a day to 26 while we post 10 to 12 a day. Keep 12, or cut to 6 for 3 days to test if volume is hurting reach?
+
+8. PENDING 2026-11-07: Threads is disconnected from Metricool. Can you reconnect it today? 5 approved Threads posts a day are on hold until then.
+9. PENDING 2026-11-07: The disconnect came after a day of about 60 Threads posts. When it is back, restart Threads questions at 1 an hour instead of 3?
 
 6. PENDING 2026-11-05: The IG 24 prompts post got 10 comments on 8 views. Were they real people (what did they ask), or our own replies?
 

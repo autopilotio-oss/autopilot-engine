@@ -172,3 +172,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-07T00:33:32+00:00", "note": "0 routed (no subscribers on forms)"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-07T08:32:23+00:00", "note": "0 routed (no subscribers on forms)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-07T11:19:13+00:00", "note": "0 orders; 20 checkouts ok; Threads disconnected from Metricool (SEV-2, Seb messaged); 9 queued approved; metricool_networks check"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-07T12:11:19+00:00", "note": "AM Nov 7: Threads disconnected (batch skipped), X 5 + 15 questions at 1/h, IG pack 18:00, TikTok tk-mistakes 10:00, 0 orders"}
