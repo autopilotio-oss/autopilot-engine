@@ -218,6 +218,18 @@ def check_metricool(posts, approved_ids=None):
     return out
 
 
+def check_metricool_networks(brand, expected=None):
+    """brand = one entry of Metricool getBrandSettings data. A cadence network missing from networksData means the
+    account was disconnected: Metricool drafts its pending posts and analytics go blank (Threads, Nov 6 2026)."""
+    if expected is None:
+        camp = json.load(open(os.path.join(ROOT, "config", "growthos", "campaign.json")))
+        expected = list(camp.get("cadence", {}).get("max_per_day", {}))
+    have = {k[:-4] for k in (brand.get("networksData") or {}) if k.endswith("Data")}
+    missing = sorted(n for n in expected if n not in have)
+    return [{"check": "metricool_networks", "ok": not missing, "severity": "SEV-2",
+             "detail": ("disconnected from Metricool: " + ", ".join(missing)) if missing else "all cadence networks connected"}]
+
+
 def p_pending(posts):
     return [p for p in posts if not p.get("draft") and any(pr.get("status") == "PENDING" for pr in p.get("providers", []))]
 
