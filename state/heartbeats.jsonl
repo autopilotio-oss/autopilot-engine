@@ -176,3 +176,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-07T12:22:32+00:00", "note": "1 post out today (X), top post saves+shares 0, feed written yes (v52)"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-07T13:10:17+00:00", "note": "0 drafted, 0 escalated, 2 alerts (SEV-2 Threads disconnect, known)"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-07T13:39:39+00:00", "note": "built 2026-11-07-realtor-24-prompts, 93/100, QA PASS, bank 2"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-07T14:51:37+00:00", "note": "library hero: Front Desk price inquiry reel replaces Subscription Agent reel that claimed it finds every subscription (1913dfa, Pages deploy ok)"}
