@@ -146,7 +146,7 @@ P = {
   need=["Your niche, budget and country (written for the US)", "A Claude account (free works)", "A TikTok Shop seller or affiliate account when you're ready"],
   faq=[("Seller or affiliate?", "Both. The quiz asks which path you're on and the prompts change for each.")]),
  "sell": dict(cat="tiktok", ic="💬", name="Sales Agent", price="$10", buy="sell-agent", kw="SALES", guide="sell", video=None,
-  title="Every DM answered in your voice", short="Every DM answered in your voice, videos, LIVE plans",
+  title="DM replies drafted in your voice", short="DM and comment replies drafted in your voice, videos, LIVE plans",
   lead="Tell it what you sell, your prices, shipping and the 5 questions buyers always ask. Claude drafts replies to comments and DMs in your voice, writes the product videos, and plans your LIVE. You read, tweak and send.",
   who=["You sell something and the DMs are eating your evenings", "You want replies that sound like you and never make a claim you can't back", "You want a LIVE plan that isn't just 'go live and talk'"],
   sample_note="Sample output from a test run with a made-up candle shop. Your replies use your real prices and policies.",
