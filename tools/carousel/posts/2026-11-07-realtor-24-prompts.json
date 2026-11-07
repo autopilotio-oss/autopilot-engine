@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 07 2026",
+ "theme": "dark",
+ "music": "tense",
+ "seed": 71,
+ "folders": [
+  "Leads",
+  "Listings",
+  "Showings",
+  "Clients",
+  "Posts",
+  "Money"
+ ],
+ "cover_bg": "bg-black",
+ "lava_opacity": 0.2,
+ "cover_html": "<div class=\"fx\" style=\"left:540px;top:0;width:540px;height:1350px;background:#f2f2ee\"></div><div class=\"fx chip l\" style=\"left:56px;top:70px\">REAL ESTATE AGENTS</div><div class=\"fx A\" data-fit=\"430\" data-stack=\"h\" data-gap=\"18\" style=\"left:56px;top:170px;font-size:240px;white-space:nowrap;color:#f2f2ee\">Stop</div><div class=\"fx A\" data-fit=\"430\" data-stack=\"h\" style=\"left:56px;top:400px;font-size:160px;white-space:nowrap;color:#f2f2ee\">typing</div><div class=\"fx A\" data-fit=\"430\" data-stack=\"h\" style=\"left:56px;top:560px;font-size:160px;white-space:nowrap;color:#f2f2ee\">these.</div><div class=\"fx A\" data-fit=\"430\" data-stack=\"h\" style=\"left:56px;top:720px;font-size:170px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A;padding:12px 14px 0;box-sizing:border-box\">Paste</div><div class=\"fx A\" data-fit=\"430\" data-stack=\"h\" style=\"left:56px;top:900px;font-size:170px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A;padding:12px 14px 0;box-sizing:border-box\">them.</div><div class=\"fx\" data-after=\"h\" data-gap=\"44\" style=\"left:56px;top:1100px;width:430px;font:800 30px/1.3 I;letter-spacing:-.3px;color:#f2f2ee\">24 for agents. Copy. Paste. Swap the <span style=\"color:#D4FF3A\">[brackets]</span>.</div><div class=\"fx\" style=\"left:56px;top:1236px;font:700 22px C;letter-spacing:3px;color:#0a0a0a;background:#D4FF3A;padding:16px 24px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div><div class=\"fx\" style=\"left:600px;top:150px;width:22px;height:1020px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:600px;top:150px;width:430px;height:20px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:690px;top:170px;width:6px;height:40px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:950px;top:170px;width:6px;height:40px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:650px;top:208px;width:350px;background:#fff;color:#0a0a0a;border:6px solid #0a0a0a;box-shadow:0 24px 50px rgba(0,0,0,.18)\"><div style=\"background:#D4FF3A;padding:12px 20px 10px;font:700 22px C;letter-spacing:5px;color:#0a0a0a;border-bottom:6px solid #0a0a0a\">JUST LISTED</div><div style=\"padding:16px 20px 0;font:400 150px/0.95 A;color:#0a0a0a\">24</div><div style=\"padding:4px 20px 0;font:400 58px/1 A;text-transform:uppercase;color:#0a0a0a\">prompts</div><div style=\"padding:12px 20px 18px;font:700 17px M;color:#0a0a0a99\">ALL INSIDE &middot; NO DM</div></div><div class=\"fx\" style=\"left:760px;top:552px;width:6px;height:50px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:880px;top:552px;width:6px;height:50px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:560px;top:1166px;width:110px;height:10px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:690px;top:600px;width:266px;background:#0a0a0a;color:#D4FF3A;text-align:center;padding:12px 0 10px;font:700 20px C;letter-spacing:4px\">6 FOLDERS</div><div class=\"fx\" style=\"left:660px;top:760px;width:360px;color:#0a0a0a;background:#f2f2ee\"><div style=\"display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 8px;border-bottom:2px solid #0a0a0a22\"><span style=\"font:400 40px/1 A;text-transform:uppercase;color:#0a0a0a\">Leads</span><span style=\"font:700 17px M;color:#0a0a0a99\">01 to 04</span></div><div style=\"display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 8px;border-bottom:2px solid #0a0a0a22\"><span style=\"font:400 40px/1 A;text-transform:uppercase;color:#0a0a0a\">Listings</span><span style=\"font:700 17px M;color:#0a0a0a99\">05 to 08</span></div><div style=\"display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 8px;border-bottom:2px solid #0a0a0a22\"><span style=\"font:400 40px/1 A;text-transform:uppercase;color:#0a0a0a\">Showings</span><span style=\"font:700 17px M;color:#0a0a0a99\">09 to 12</span></div><div style=\"display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 8px;border-bottom:2px solid #0a0a0a22\"><span style=\"font:400 40px/1 A;text-transform:uppercase;color:#0a0a0a\">Clients</span><span style=\"font:700 17px M;color:#0a0a0a99\">13 to 16</span></div><div style=\"display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 8px;border-bottom:2px solid #0a0a0a22\"><span style=\"font:400 40px/1 A;text-transform:uppercase;color:#0a0a0a\">Posts</span><span style=\"font:700 17px M;color:#0a0a0a99\">17 to 20</span></div><div style=\"display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 8px;border-bottom:2px solid #0a0a0a22\"><span style=\"font:400 40px/1 A;text-transform:uppercase;color:#0a0a0a\">Money</span><span style=\"font:700 17px M;color:#0a0a0a99\">21 to 24</span></div></div>",
+ "slides": [
+  {
+   "cat": "Leads",
+   "cards": [
+    {
+     "t": "New lead",
+     "p": "A lead asked about [address] on [site]. Write a short reply with two showing times and one question.",
+     "star": true
+    },
+    {
+     "t": "Gone quiet",
+     "p": "This lead went quiet [weeks] ago: [notes]. Write a friendly check in with one easy yes or no question."
+    },
+    {
+     "t": "Open house thanks",
+     "p": "Write a thank you text for open house visitors at [address]. Mention [feature], offer a second look."
+    },
+    {
+     "t": "First buyer call",
+     "p": "Write 8 questions for a first call with a buyer: budget, areas, must haves, timing, loan status."
+    }
+   ]
+  },
+  {
+   "cat": "Listings",
+   "cards": [
+    {
+     "t": "Listing description",
+     "p": "Write a listing description for [address] from my notes: [notes]. 120 words. Describe the home, not the buyer.",
+     "star": true
+    },
+    {
+     "t": "Photo day",
+     "p": "Write a shot list for [address]: 15 photos in order, which room, which angle, what to tidy first."
+    },
+    {
+     "t": "Price change",
+     "p": "Write a short post and email: [address] is now [new price]. Lead with the best feature, not the price."
+    },
+    {
+     "t": "Feature sheet",
+     "p": "Turn these details into a one page feature sheet with short headings: [paste details]."
+    }
+   ]
+  },
+  {
+   "cat": "Showings",
+   "cards": [
+    {
+     "t": "Showing feedback",
+     "p": "Write a text asking the buyer's agent for feedback on [address]. Three quick questions, under 50 words.",
+     "star": true
+    },
+    {
+     "t": "Seller update",
+     "p": "Write my weekly seller update for [address]: showings [number], feedback [paste], next step. Calm and honest."
+    },
+    {
+     "t": "Move a showing",
+     "p": "A buyer must move their [time] showing at [address]. Write a reply offering two new times."
+    },
+    {
+     "t": "Tour notes",
+     "p": "Turn my notes from today's showings into a table: home, likes, dislikes, buyer score out of 10: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Clients",
+   "cards": [
+    {
+     "t": "What happens next",
+     "p": "Turn my closing steps into a plain email for first time buyers: what happens, when, what they do: [steps].",
+     "star": true
+    },
+    {
+     "t": "Closing review",
+     "p": "Write a text [days] after closing asking [name] for a review. Mention one detail from their move, add [link]."
+    },
+    {
+     "t": "Tough review",
+     "p": "Reply to this unhappy review: [paste]. Thank them, own one fair point, offer a call. Under 60 words."
+    },
+    {
+     "t": "Who is moving",
+     "p": "Write a short note asking [name] if they know anyone moving this year. Thank them first, no pressure."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "Just listed",
+     "p": "Write a just listed post for [address]: 3 best features, price [price], open house [date]. Under 80 words.",
+     "star": true
+    },
+    {
+     "t": "Numbers made plain",
+     "p": "Explain this month's local numbers in plain words for a post: [paste numbers]. No predictions."
+    },
+    {
+     "t": "Area guide",
+     "p": "Write a short guide to [area] from my notes: [notes]. Coffee, parks, getting around. 5 lines."
+    },
+    {
+     "t": "Open house week",
+     "p": "Plan 5 posts leading to my open house at [address], [date]. One line and a photo idea each."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Sort my spend",
+     "p": "Sort my expenses into marketing, car, signs, fees, other: [paste]. Total each. Flag anything charged twice.",
+     "star": true
+    },
+    {
+     "t": "Referral fee",
+     "p": "An agent owes me a [amount] referral fee for [address], [days] late. Write a polite reminder with a date."
+    },
+    {
+     "t": "Mileage log",
+     "p": "Turn my calendar notes into a mileage table: date, from, to, purpose, miles: [paste]."
+    },
+    {
+     "t": "Best lead source",
+     "p": "Here is my spend and deals by lead source: [paste]. Which source works best? Show a table."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "AGENTS",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for real estate agents in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

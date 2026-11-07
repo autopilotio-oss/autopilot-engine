@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-07-realtor-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Vertical split: black left column with a tall justified stack STOP / TYPING / THESE. / PASTE THEM. (lime blocks), off white right side with a hanging yard sign (JUST LISTED, 24 PROMPTS, 6 FOLDERS rider) on a black post and the folder list under it.",
+ "theme": "real estate agents: 24 new prompts in 6 folders (Leads, Listings, Showings, Clients, Posts, Money), all visible, hook test 'Stop typing these. Paste them.' (least recently used, last on Nov 4 detailer pack)",
+ "gate": {
+  "score": 93,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, titles and prompts checked against every tools/carousel/posts/*prompts*.json, no repeats; listing prompt says describe the home, not the buyer; market post says no predictions; no legal, tax or money advice). Hook 21/25 (least recently used hook, new niche; note IG packs after Nov 4 got 10 to 13 views, so hook is unproven). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, read every slide). Design 14/15 vs last 5 covers: vertical black and off white split (new; shop off white, restaurant black, salon lime, cleaner horizontal split, detailer black), headline as a tall left column stack (vs bottom, right column, bottom, bottom, middle full width), yard sign visual (vs shipping label, kitchen ticket, giant number, calendar, folder tabs), narrow justified scale; first render failed QA on contrast (panel colors), fixed with bg-black and explicit panel colors. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (leads, showings), Review Desk, Content Week, Invoice Chaser (referral fee) and Bookkeeping Sorter). QA PASS all 8."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You sell homes and still type every lead reply, showing update and just listed post by hand?\n\nHere are 24 Claude prompts in 6 folders: leads, listings, showings, clients, posts and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next listing.\n\n#realestateagent #realtor #realestatemarketing #smallbusiness #claudeai",
+  "threads": "Stop typing these. Paste them. Real estate agent edition.\n\nNew lead replies, listing descriptions, showing feedback texts, seller updates, just listed posts, expenses sorted. 24 Claude prompts in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Real estate agents: 24 Claude prompts for leads, listings, showings, clients, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-07-realtor-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-07T13:39Z"
+}
