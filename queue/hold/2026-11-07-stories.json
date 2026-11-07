@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-07-tip",
+  "group": "stories-2026-11-07",
+  "at": "2026-11-07T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-07-tip.jpg"
+  ],
+  "text": "AI tip: Got a bad review? Paste it and say: \"Write a calm, professional reply.\""
+ },
+ {
+  "id": "story-2026-11-07-quiz",
+  "group": "stories-2026-11-07",
+  "at": "2026-11-07T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-07-quiz.jpg"
+  ],
+  "text": "Quiz: Most nonprofit hospitals are required to have a..."
+ },
+ {
+  "id": "story-2026-11-07-answer",
+  "group": "stories-2026-11-07",
+  "at": "2026-11-07T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-07-answer.jpg"
+  ],
+  "text": "Quiz answer: Financial assistance policy. A {financial assistance policy.} Many people qualify and never ask. Comment BILL for the call script."
+ },
+ {
+  "id": "story-2026-11-07-fact",
+  "group": "stories-2026-11-07",
+  "at": "2026-11-07T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-07-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can explain homework like you're 10. Snap the problem. Ask it to teach the steps, not just give the answer, so you can help."
+ },
+ {
+  "id": "story-2026-11-07-poll",
+  "group": "stories-2026-11-07",
+  "at": "2026-11-07T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-07-poll.jpg"
+  ],
+  "text": "Poll: Which hurts more? A) A bad review B) A lost lead"
+ }
+]
