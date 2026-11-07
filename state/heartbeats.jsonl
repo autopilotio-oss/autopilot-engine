@@ -182,3 +182,4 @@
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-07T16:52:37+00:00", "note": "midday: 10 out, no data yet, no move, Threads still disconnected"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-07T19:10:02+00:00", "note": "0 drafted, 0 escalated, 0 new alerts (Threads disconnect already open)"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-07T19:39:44+00:00", "note": "built 2026-11-07-landscaper-24-prompts, score 92, QA PASS, bank 3"}
+{"worker": "analyst", "status": "ok", "at": "2026-11-07T20:22:14+00:00", "note": "13 posts out today (X 11, IG 1, TikTok 1), top post saves+shares 0, feed written yes"}
