@@ -184,3 +184,4 @@
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-07T19:39:44+00:00", "note": "built 2026-11-07-landscaper-24-prompts, score 92, QA PASS, bank 3"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-07T20:22:14+00:00", "note": "13 posts out today (X 11, IG 1, TikTok 1), top post saves+shares 0, feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-07T20:50:11+00:00", "note": "Sales Agent headline: DM replies drafted in your voice (was Every DM answered), /store/sell/, /library/, /store/tiktok/; Pages deploy 42412510075 success"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-07T22:52:09+00:00", "note": "PM run: X 15 out, IG 2, TikTok 1, Threads disconnected, no per post data, no move"}
