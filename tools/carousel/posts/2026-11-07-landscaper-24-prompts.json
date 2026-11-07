@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 07 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 83,
+ "folders": [
+  "Quotes",
+  "Schedule",
+  "Clients",
+  "Reviews",
+  "Posts",
+  "Money"
+ ],
+ "cover_bg": "bg-white",
+ "lava_opacity": 0.25,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px;background:#0a0a0a;color:#D4FF3A\">LANDSCAPERS &middot; LAWN CARE</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"14\" style=\"left:56px;top:160px;font-size:150px;white-space:nowrap;color:#0a0a0a\">24 Claude prompts</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:330px;font-size:150px;white-space:nowrap;color:#0a0a0a\">every landscaper</div><div class=\"fx A\" data-stack=\"h\" style=\"left:56px;top:500px;font-size:190px;white-space:nowrap;color:#D4FF3A;background:#0a0a0a;padding:14px 26px 0;box-sizing:border-box\">needs.</div><div class=\"fx\" style=\"left:600px;top:540px;width:424px;font:800 30px/1.3 I;letter-spacing:-.3px;color:#0a0a0a\">All 24 inside. Copy. Paste. Swap the <span style=\"background:#D4FF3A;padding:0 4px\">[brackets]</span>.</div><div class=\"fx\" style=\"left:600px;top:660px;font:700 22px C;letter-spacing:3px;color:#D4FF3A;background:#0a0a0a;padding:16px 24px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div><div class=\"fx\" style=\"left:0;top:1010px;width:1080px;height:340px;background:#D4FF3A;background-image:repeating-linear-gradient(105deg,rgba(10,10,10,0) 0 120px,rgba(10,10,10,.13) 120px 240px)\"></div><div class=\"fx\" style=\"left:0;top:1000px;width:1080px;height:12px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:126px;top:900px;width:10px;height:200px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:56px;top:760px;width:150px;height:150px;transform:rotate(-3deg);background:#f2f2ee;border:5px solid #0a0a0a;box-sizing:border-box;border-radius:10px 10px 4px 4px\"><div style=\"margin:12px auto 0;width:18px;height:18px;border-radius:50%;background:#0a0a0a\"></div><div style=\"text-align:center;padding-top:14px;font:400 34px/1 A;text-transform:uppercase;color:#0a0a0a\">Quotes</div><div style=\"text-align:center;padding-top:12px;font:700 17px M;color:#0a0a0a\">01 to 04</div></div><div class=\"fx\" style=\"left:288px;top:900px;width:10px;height:200px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:218px;top:800px;width:150px;height:150px;transform:rotate(2deg);background:#f2f2ee;border:5px solid #0a0a0a;box-sizing:border-box;border-radius:10px 10px 4px 4px\"><div style=\"margin:12px auto 0;width:18px;height:18px;border-radius:50%;background:#0a0a0a\"></div><div style=\"text-align:center;padding-top:14px;font:400 30px/1 A;text-transform:uppercase;color:#0a0a0a\">Schedule</div><div style=\"text-align:center;padding-top:12px;font:700 17px M;color:#0a0a0a\">05 to 08</div></div><div class=\"fx\" style=\"left:450px;top:900px;width:10px;height:200px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:380px;top:760px;width:150px;height:150px;transform:rotate(-2deg);background:#f2f2ee;border:5px solid #0a0a0a;box-sizing:border-box;border-radius:10px 10px 4px 4px\"><div style=\"margin:12px auto 0;width:18px;height:18px;border-radius:50%;background:#0a0a0a\"></div><div style=\"text-align:center;padding-top:14px;font:400 34px/1 A;text-transform:uppercase;color:#0a0a0a\">Clients</div><div style=\"text-align:center;padding-top:12px;font:700 17px M;color:#0a0a0a\">09 to 12</div></div><div class=\"fx\" style=\"left:612px;top:900px;width:10px;height:200px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:542px;top:800px;width:150px;height:150px;transform:rotate(3deg);background:#f2f2ee;border:5px solid #0a0a0a;box-sizing:border-box;border-radius:10px 10px 4px 4px\"><div style=\"margin:12px auto 0;width:18px;height:18px;border-radius:50%;background:#0a0a0a\"></div><div style=\"text-align:center;padding-top:14px;font:400 34px/1 A;text-transform:uppercase;color:#0a0a0a\">Reviews</div><div style=\"text-align:center;padding-top:12px;font:700 17px M;color:#0a0a0a\">13 to 16</div></div><div class=\"fx\" style=\"left:774px;top:900px;width:10px;height:200px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:704px;top:760px;width:150px;height:150px;transform:rotate(-2deg);background:#f2f2ee;border:5px solid #0a0a0a;box-sizing:border-box;border-radius:10px 10px 4px 4px\"><div style=\"margin:12px auto 0;width:18px;height:18px;border-radius:50%;background:#0a0a0a\"></div><div style=\"text-align:center;padding-top:14px;font:400 34px/1 A;text-transform:uppercase;color:#0a0a0a\">Posts</div><div style=\"text-align:center;padding-top:12px;font:700 17px M;color:#0a0a0a\">17 to 20</div></div><div class=\"fx\" style=\"left:936px;top:900px;width:10px;height:200px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:866px;top:800px;width:150px;height:150px;transform:rotate(2deg);background:#f2f2ee;border:5px solid #0a0a0a;box-sizing:border-box;border-radius:10px 10px 4px 4px\"><div style=\"margin:12px auto 0;width:18px;height:18px;border-radius:50%;background:#0a0a0a\"></div><div style=\"text-align:center;padding-top:14px;font:400 34px/1 A;text-transform:uppercase;color:#0a0a0a\">Money</div><div style=\"text-align:center;padding-top:12px;font:700 17px M;color:#0a0a0a\">21 to 24</div></div>",
+ "slides": [
+  {
+   "cat": "Quotes",
+   "cards": [
+    {
+     "t": "Lawn quote",
+     "p": "Write a text quote for [service] at [address]: [yard size], [visits a month], price [price]. Under 60 words.",
+     "star": true
+    },
+    {
+     "t": "From yard photos",
+     "p": "A client sent yard photos and says: [notes]. List what I must ask before I give a price."
+    },
+    {
+     "t": "Season package",
+     "p": "Turn my services into 3 season packages: basic, plus, full care. Visits, what is included, price [prices]."
+    },
+    {
+     "t": "Lead from a sign",
+     "p": "Someone saw my yard sign on [street] and texted: [message]. Write a friendly reply asking for their address."
+    }
+   ]
+  },
+  {
+   "cat": "Schedule",
+   "cards": [
+    {
+     "t": "Route my week",
+     "p": "Sort these jobs into a weekly route by area so I drive less: [addresses and days]. Show a table.",
+     "star": true
+    },
+    {
+     "t": "Year by month",
+     "p": "Plan my year by month for [region]: which services to offer when. Mowing, aeration, mulch, cleanups."
+    },
+    {
+     "t": "Skip a week",
+     "p": "A client wants to skip [date] because of [reason]. Write a reply confirming the skip and the next visit."
+    },
+    {
+     "t": "Storm cleanup",
+     "p": "Write a text offering storm cleanup to my clients: what we clear, price from [price], reply YES to book."
+    }
+   ]
+  },
+  {
+   "cat": "Clients",
+   "cards": [
+    {
+     "t": "New client sheet",
+     "p": "Write a one page welcome note for new lawn clients: visit day, gate, pets, rain plan, how to pay.",
+     "star": true
+    },
+    {
+     "t": "Fall cleanup offer",
+     "p": "Write a text to current clients offering fall cleanup on [dates], price [price], reply to book. Under 50 words."
+    },
+    {
+     "t": "Plant care note",
+     "p": "Write simple care steps for the plants we put in at [address]: [plant list]. First month watering. Short."
+    },
+    {
+     "t": "HOA bid",
+     "p": "Turn my notes into a short bid letter for [HOA name]: scope, visits, price [price], start date: [notes]."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Before and after ask",
+     "p": "Write a text sending [name] their before and after photos, then asking for a review at [link].",
+     "star": true
+    },
+    {
+     "t": "Cut too short",
+     "p": "Reply to this review about our crew cutting too short: [paste]. Own it, explain the fix. Under 60 words."
+    },
+    {
+     "t": "Street flyer line",
+     "p": "Turn these 3 reviews into one short flyer line for the street we work on: [paste reviews]."
+    },
+    {
+     "t": "Question on Google",
+     "p": "Someone asked on our Google page: [question]. Write a short public answer and invite them to text."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "One job, 5 posts",
+     "p": "Plan 5 posts from this job: [job], plus before, during and after photos. One caption line each.",
+     "star": true
+    },
+    {
+     "t": "Time lapse script",
+     "p": "Write a 15 second script for a time lapse of [job]: hook, 3 on screen captions, ending line."
+    },
+    {
+     "t": "Photo checklist",
+     "p": "Write a checklist for better before and after yard photos on a phone: angles, light, same spot."
+    },
+    {
+     "t": "Leaf season post",
+     "p": "Write a post offering [service] this [month]: what is included, price from [price], how to book."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Fuel and parts",
+     "p": "Sort these receipts into fuel, parts, plants, dump fees, other: [paste]. Total each. Flag duplicates.",
+     "star": true
+    },
+    {
+     "t": "Unpaid season",
+     "p": "[name] owes [amount] for [months] of mowing. Write a polite reminder with a pay by date and [link]."
+    },
+    {
+     "t": "Worth it?",
+     "p": "Job at [address] takes [time], fuel [cost], crew [cost], price [price]. Am I making money? Show the math."
+    },
+    {
+     "t": "Mower log",
+     "p": "Turn my notes into a mower service log: machine, date, hours, work done, next service: [notes]."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "AGENTS",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for landscapers in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}
