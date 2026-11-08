@@ -100,6 +100,8 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 
 ## 6. What works (evidence log, newest first)
 
+- 2026-11-08 EARLY: TikTok tk-review (reading your numbers, Nov 6) settled at 147 views and the only like of the week, ahead of tk-hooks 101 and value first tk-mistakes 77. Numbers angle gets a value first follow up (tk-numbers).
+- 2026-11-08 CONFIRMED: IG prompt packs Nov 5 to 7 (salon 13, cleaner 15, restaurant 5 views) all 0 saves, 0 shares, 0 comments.
 - 2026-11-07 CONFIRMED: TikTok Agent demo videos have no signal after 3 tries (96, 101, 36 views, 0 likes, 0 shares) and TikTok daily views fell 450 to 36 (Nov 1 to 6). Demo format dropped; testing value first videos (mistakes, how to) with the agent only at the end.
 - 2026-11-07 CONFIRMED: IG prompt packs after the first one got 10 to 13 views and 0 saves, 0 shares, 0 comments (salon, cleaner). The 10 comments on Nov 4 did not repeat.
 - 2026-11-07 EARLY: Threads disconnected from Metricool minutes after a post failed, at the end of the first day of 3 questions an hour (about 60 Threads posts that day). Possible volume flag; X questions cut to 1 an hour.
@@ -132,6 +134,8 @@ Answers go here with his quote and date.
 
 8. PENDING 2026-11-07: Threads is disconnected from Metricool. Can you reconnect it today? 5 approved Threads posts a day are on hold until then.
 9. PENDING 2026-11-07: The disconnect came after a day of about 60 Threads posts. When it is back, restart Threads questions at 1 an hour instead of 3?
+
+10. PENDING 2026-11-08: IG prompt packs got 0 saves and 0 shares 4 days running. Keep a pack every day at 18:00, or swap that slot to Front Desk reels for a week?
 
 6. PENDING 2026-11-05: The IG 24 prompts post got 10 comments on 8 views. Were they real people (what did they ask), or our own replies?
 

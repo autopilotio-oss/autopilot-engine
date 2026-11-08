@@ -1,0 +1,25 @@
+{
+  "approval": {
+    "by": "Seb",
+    "quote": "treads should be mass posting waiting for viral",
+    "basis": "Daily Manager standing rule"
+  },
+  "posts": [
+    {
+      "uuid": "8365906936228365638",
+      "metricool_id": 420680446,
+      "at": "2026-11-08T09:30:00-03:00",
+      "pillar": "review_desk",
+      "hook": "A 1 star review with no reply looks worse than the review.",
+      "hook_id": "rd_silence"
+    },
+    {
+      "uuid": "-6690708828614144271",
+      "metricool_id": 420680462,
+      "at": "2026-11-08T18:00:00-03:00",
+      "pillar": "content_week",
+      "hook": "Monday. You need to post. You have nothing.",
+      "hook_id": "cw_nothing_to_post"
+    }
+  ]
+}

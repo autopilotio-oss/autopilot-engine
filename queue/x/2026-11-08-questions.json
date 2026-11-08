@@ -1,0 +1,114 @@
+{
+  "approval": {
+    "by": "Seb",
+    "quote": "Post 3 questions every hour on threads and x",
+    "basis": "Seb 2026-11-06 09:30 ART; cut to 1 an hour on X by the stop rule Nov 7"
+  },
+  "posts": [
+    {
+      "uuid": "1522321322470034646",
+      "metricool_id": 420680472,
+      "at": "2026-11-08T09:45:00-03:00",
+      "pillar": "question",
+      "hook": "Shower in the morning or at night?"
+    },
+    {
+      "uuid": "-447460030982894047",
+      "metricool_id": 420680479,
+      "at": "2026-11-08T10:40:00-03:00",
+      "pillar": "question",
+      "hook": "Would you let AI reply to your Google reviews?"
+    },
+    {
+      "uuid": "-1732993891747937904",
+      "metricool_id": 420680493,
+      "at": "2026-11-08T11:40:00-03:00",
+      "pillar": "question",
+      "hook": "Texts: full sentences or short replies?"
+    },
+    {
+      "uuid": "-6159933657622624935",
+      "metricool_id": 420680503,
+      "at": "2026-11-08T12:40:00-03:00",
+      "pillar": "question",
+      "hook": "What task do you put off every single week?"
+    },
+    {
+      "uuid": "428611449582207418",
+      "metricool_id": 420680513,
+      "at": "2026-11-08T13:40:00-03:00",
+      "pillar": "question",
+      "hook": "Sunday: rest day or catch up day?"
+    },
+    {
+      "uuid": "-5717834834982320134",
+      "metricool_id": 420680518,
+      "at": "2026-11-08T14:40:00-03:00",
+      "pillar": "question",
+      "hook": "Would you read a book written by AI?"
+    },
+    {
+      "uuid": "-4066231184666115417",
+      "metricool_id": 420680529,
+      "at": "2026-11-08T15:40:00-03:00",
+      "pillar": "question",
+      "hook": "Tea or coffee?"
+    },
+    {
+      "uuid": "1040325700955096431",
+      "metricool_id": 420680540,
+      "at": "2026-11-08T16:40:00-03:00",
+      "pillar": "question",
+      "hook": "Is ChatGPT better at emails than you?"
+    },
+    {
+      "uuid": "-5790587973180502918",
+      "metricool_id": 420680551,
+      "at": "2026-11-08T17:40:00-03:00",
+      "pillar": "question",
+      "hook": "Best day of the week to get real work done?"
+    },
+    {
+      "uuid": "-1849868716257490222",
+      "metricool_id": 420680559,
+      "at": "2026-11-08T18:40:00-03:00",
+      "pillar": "question",
+      "hook": "Worst customer: the haggler or the ghost?"
+    },
+    {
+      "uuid": "-3443702210672573197",
+      "metricool_id": 420680569,
+      "at": "2026-11-08T19:40:00-03:00",
+      "pillar": "question",
+      "hook": "Four long workdays or five short ones?"
+    },
+    {
+      "uuid": "5567703015804454099",
+      "metricool_id": 420680575,
+      "at": "2026-11-08T20:40:00-03:00",
+      "pillar": "question",
+      "hook": "Do you trust online reviews?"
+    },
+    {
+      "uuid": "-2458042787002561277",
+      "metricool_id": 420680581,
+      "at": "2026-11-08T21:40:00-03:00",
+      "pillar": "question",
+      "hook": "Funny WiFi name: yes or no?"
+    },
+    {
+      "uuid": "5359541801703197986",
+      "metricool_id": 420680592,
+      "at": "2026-11-08T22:40:00-03:00",
+      "pillar": "question",
+      "hook": "Would you let AI plan your week?"
+    },
+    {
+      "uuid": "-1392176912644814527",
+      "metricool_id": 420680603,
+      "at": "2026-11-08T23:40:00-03:00",
+      "pillar": "question",
+      "hook": "Night before: plan tomorrow or wing it?"
+    }
+  ]
+}

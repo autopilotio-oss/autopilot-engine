@@ -1,38 +1,47 @@
 {
-  "id": "2026-11-06-restaurant-24-prompts",
-  "kind": "promptpack",
-  "status": "scheduled",
-  "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
-  "cover_idea": "Black page, a tilted white kitchen ticket (order #024) listing the 6 folders as 4x line items with a TOTAL 24 PROMPTS line and torn bottom edge, headline moved to a right column at a smaller scale (CLAUDE PROMPTS THAT SHOULD BE / ILLEGAL in a lime block), NO DM NEEDED stamp.",
-  "theme": "restaurants and food trucks: 24 new prompts in 6 folders (Guests, Catering, Reviews, Posts, Money, Kitchen), all visible, hook test 'Claude prompts that should be illegal' (least recently used hook, last on Nov 4 owner pack)",
-  "gate": {
-    "score": 94,
-    "notes": "Accuracy 30/30 (no factual claims; prompts only, all 21 words or fewer, none repeated from earlier packs (checked against every tools/carousel/posts/*prompts*.json), no food safety, allergy, legal or tax claims; review card says no reward, in line with Google's no incentives rule). Hook 22/25 (illegal hook already tested once, new niche). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder; Money slide shortened after first render to keep clear of the progress bar). Design 14/15 vs last 5 covers: black vs salon's lime; headline in a right column vs bottom (salon) or full width top (owner, contractor, detailer); kitchen ticket vs giant number, calendar, chip rows; headline scale 90 to 180px fitted to 504 vs 120 to 170 at 968. CTA 9/10 (AGENTS is confirmed in config/manychat.json, TOOLS not yet; gift is the free starter per override; prompts map to Front Desk (guests, catering), Review Desk, Content Week, Invoice Chaser and Bookkeeping Sorter). QA PASS all 8; read every slide, legible on a phone."
-  },
-  "sources": [],
-  "captions": {
-    "ig": "You run a restaurant or a food truck and still type every catering quote and review reply after close?\n\nHere are 24 Claude prompts in 6 folders: guests, catering, reviews, posts, money and kitchen. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next slow afternoon.\n\n#restaurantowner #foodtruck #smallbusiness #restaurantlife #claudeai",
-    "threads": "Claude prompts that should be illegal, restaurant and food truck edition.\n\nCatering quotes, cold food review replies, where we are today posts, supplier bills sorted, plate cost, tomorrow's prep list. 24 in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
-    "x": "Restaurant and food truck owners: 24 Claude prompts for guests, catering, reviews, posts, money and the kitchen. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
-  },
-  "media": "docs/media/car/2026-11-06-restaurant-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
-  "built_at": "2026-11-06T13:40Z",
-  "approval": {
-    "by": "Seb",
-    "quote": "Yes, autopost to Nov 10 (Recommended)",
-    "basis": "campaign standing approval; MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
-  },
-  "scheduled_by": "Daily Manager 2026-11-07 08:51 ART run (bank promotion, gate 94, QA PASS, CTA AGENTS confirmed)",
-  "posts": [
-    {
-      "networks": [
-        "instagram"
-      ],
-      "at": "2026-11-07T18:00:00-03:00",
-      "metricool_id": 419879641,
-      "uuid": "8369718559919064861",
-      "type": "POST carousel, cover_ig.mp4 + 02 to 08"
-    }
-  ],
-  "results": {}
+ "id": "2026-11-06-restaurant-24-prompts",
+ "kind": "promptpack",
+ "status": "scheduled",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Black page, a tilted white kitchen ticket (order #024) listing the 6 folders as 4x line items with a TOTAL 24 PROMPTS line and torn bottom edge, headline moved to a right column at a smaller scale (CLAUDE PROMPTS THAT SHOULD BE / ILLEGAL in a lime block), NO DM NEEDED stamp.",
+ "theme": "restaurants and food trucks: 24 new prompts in 6 folders (Guests, Catering, Reviews, Posts, Money, Kitchen), all visible, hook test 'Claude prompts that should be illegal' (least recently used hook, last on Nov 4 owner pack)",
+ "gate": {
+  "score": 94,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 21 words or fewer, none repeated from earlier packs (checked against every tools/carousel/posts/*prompts*.json), no food safety, allergy, legal or tax claims; review card says no reward, in line with Google's no incentives rule). Hook 22/25 (illegal hook already tested once, new niche). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder; Money slide shortened after first render to keep clear of the progress bar). Design 14/15 vs last 5 covers: black vs salon's lime; headline in a right column vs bottom (salon) or full width top (owner, contractor, detailer); kitchen ticket vs giant number, calendar, chip rows; headline scale 90 to 180px fitted to 504 vs 120 to 170 at 968. CTA 9/10 (AGENTS is confirmed in config/manychat.json, TOOLS not yet; gift is the free starter per override; prompts map to Front Desk (guests, catering), Review Desk, Content Week, Invoice Chaser and Bookkeeping Sorter). QA PASS all 8; read every slide, legible on a phone."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You run a restaurant or a food truck and still type every catering quote and review reply after close?\n\nHere are 24 Claude prompts in 6 folders: guests, catering, reviews, posts, money and kitchen. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next slow afternoon.\n\n#restaurantowner #foodtruck #smallbusiness #restaurantlife #claudeai",
+  "threads": "Claude prompts that should be illegal, restaurant and food truck edition.\n\nCatering quotes, cold food review replies, where we are today posts, supplier bills sorted, plate cost, tomorrow's prep list. 24 in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Restaurant and food truck owners: 24 Claude prompts for guests, catering, reviews, posts, money and the kitchen. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-06-restaurant-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-06T13:40Z",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval; MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
+ },
+ "scheduled_by": "Daily Manager 2026-11-07 08:51 ART run (bank promotion, gate 94, QA PASS, CTA AGENTS confirmed)",
+ "posts": [
+  {
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-07T18:00:00-03:00",
+   "metricool_id": 419879641,
+   "uuid": "8369718559919064861",
+   "type": "POST carousel, cover_ig.mp4 + 02 to 08"
+  }
+ ],
+ "results": {
+  "checked": "2026-11-08 08:51 ART",
+  "views_IGPO28": 5,
+  "IGPO14": 4,
+  "IGPO08": 0,
+  "IGPO15": 0,
+  "IGPO27": 0,
+  "IGPO29": 0,
+  "note": "saves, shares, comments 0 (same column pattern as salon 13 views, cleaner 15 views)"
+ }
 }

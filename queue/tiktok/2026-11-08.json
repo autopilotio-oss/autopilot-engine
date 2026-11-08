@@ -1,0 +1,18 @@
+{
+  "approval": {
+    "by": "Seb",
+    "quote": "treads should be mass posting waiting for viral",
+    "basis": "Daily Manager standing rule"
+  },
+  "posts": [
+    {
+      "uuid": "-6146172986478932933",
+      "metricool_id": 420693965,
+      "at": "2026-11-08T10:00:00-03:00",
+      "pillar": "tiktok_numbers",
+      "hook": "Stop guessing which video worked",
+      "media": "docs/media/ads/tk-numbers.mp4",
+      "gate": "86/100: hook in under 1s, 21.9s 1080x1920, SAMPLE labeled, value first (agent only last 2 beats), no view or money claims, audio mean -17.3 dB max -1.4 dB, run 42478084775; minus points: stock plates not creator specific, beat 2 draft text truncated"
+    }
+  ]
+}
