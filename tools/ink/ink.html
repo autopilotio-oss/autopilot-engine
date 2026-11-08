@@ -187,7 +187,7 @@ function drawPen(p,cam){const sx=p.x,sy=p.y;const ang=-0.95+Math.sin(p.x*.004)*.
  // shadow: offset grows with lift, soft
  X.save();X.globalAlpha=.30-lift*.08;X.filter=`blur(${(5+lift*9)*z|0}px)`;const so=(6+lift*26)*z;body(X,so*.9,so*1.15,true);X.restore();
  const lx=-lift*7*z,ly=-lift*9*z;body(X,lx,ly,false)}
-function drawKaraoke(cp,t,cam){X.font='900 68px CAP, Inter, sans-serif';X.textBaseline='middle';X.textAlign='left';const ws=cp.w;const sp=X.measureText(' ').width;
+function drawKaraoke(cp,t,cam){X.font='800 76px CAP, Inter, sans-serif';X.textBaseline='middle';X.textAlign='left';const ws=cp.w;const sp=X.measureText(' ').width;
  const widths=ws.map(w=>X.measureText(w[0].toUpperCase()).width);const tot=widths.reduce((a,b)=>a+b,0)+sp*(ws.length-1);let x=W/2-tot/2;const y=cam.w>950?205:1330;
  const pop=Math.min(1,(t-cp.s)/.09);X.save();X.translate(W/2,y);const fit=Math.min(1,980/tot);X.scale(fit*(.86+.14*pop),fit*(.86+.14*pop));X.translate(-W/2,-y);
  ws.forEach((w,i)=>{const txt=w[0].toUpperCase();const on=t>=w[1]-.03;X.lineJoin='round';X.lineWidth=14;X.strokeStyle='rgba(0,0,0,.92)';X.strokeText(txt,x,y);

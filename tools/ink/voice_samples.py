@@ -21,5 +21,5 @@ for w in want:
     req = urllib.request.Request(f"{tts.API}/text-to-speech/{v['voice_id']}?output_format=mp3_44100_128", data=body, method="POST",
                                  headers={"xi-api-key": KEY, "Content-Type": "application/json", "Accept": "audio/mpeg"})
     try:
-        slug = w.split(" - ")[0].replace(" ", "_") + ("_" + w.split(" - ")[1].split()[0] if " - " in w else ""); open(f"{D}/{slug}_{mid.split('_')[-1]}.mp3", "wb").write(urllib.request.urlopen(req, timeout=120).read()); print("sample", w, mid, slug)
+        slug = w.split(" - ")[0].replace(" ", "_") + ("_" + w.split(" - ")[1].split()[0] if " - " in w else ""); data = urllib.request.urlopen(req, timeout=120).read(); open(f"{D}/{slug}_{mid.split('_')[-1]}.mp3", "wb").write(data); print("sample", w, mid, slug)
     except Exception as e: print("failed", w, str(e)[:200])
