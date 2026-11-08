@@ -73,7 +73,7 @@ let FILM,ELS=[],BYID={},DUR=10,WORDS=[],CAPS=[],CAMK=[],PEN_REST=[1450,2150],TWI
 function norm(w){return w.toLowerCase().replace(/[^a-z0-9']/g,'').replace(/'/g,'')}
 function phraseTime(bw,ph){const want=ph.split(/\s+/).map(norm);for(let i=0;i<bw.length;i++){let ok=true;for(let j=0;j<want.length;j++){if(!bw[i+j]||norm(bw[i+j][0])!==want[j]){ok=false;break}}if(ok)return bw[i][1]}
  console.log('PHRASE MISS',ph);return null}
-function compile(e){const R=rng(e.id);const w=e.lw||(e.t!=='rect'&&e.w)||(e.t==='text'?Math.max(1.6,e.size*.1):2.4);let strokes=[];
+function compile(e){const R=rng(e.id);const w=e.lw||(e.t!=='rect'&&e.w)||(e.t==='text'?Math.max(2.6,e.size*.17):3.0);let strokes=[];
  if(e.t==='text'){const r=textStrokes(e,R);strokes=r.strokes;e._boxes=r.boxes;e._x0=r.x0;e._tw=r.tw}
  else if(e.t==='rect')strokes=roughRect(e.x,e.y,e.w,e.h,R);
  else if(e.t==='path')strokes=[e.smooth?catmull(e.pts,10):e.pts];
@@ -197,9 +197,9 @@ function render(t){const cam=camAt(t);X.setTransform(1,0,0,1,0,0);X.filter='none
  // grain
  X.globalAlpha=.045;X.globalCompositeOperation='overlay';X.drawImage(GRAIN[Math.floor(t*24)%4],0,0,W,H);X.globalAlpha=1;X.globalCompositeOperation='source-over';
  // captions (lower third, inside the TikTok safe area)
- const cp=CAPS.find(c=>t>=c.s&&t<c.e);if(cp&&!Q.has('nocap')){X.font='800 46px CAP, Inter, sans-serif';X.textAlign='center';X.textBaseline='middle';
+ const cp=CAPS.find(c=>t>=c.s&&t<c.e);if(cp&&!Q.has('nocap')){X.font='800 36px CAP, Inter, sans-serif';X.textAlign='center';X.textBaseline='middle';
   const txt=cp.t.toUpperCase().replace(/[—–-]/g,' '),tw=X.measureText(txt).width;const y=cam.w>950?205:1400;
-  X.fillStyle='rgba(12,12,14,.72)';const r=16,bx=W/2-tw/2-26,bw2=tw+52,by=y-40,bh=80;X.beginPath();X.roundRect(bx,by,bw2,bh,r);X.fill();
+  X.fillStyle='rgba(12,12,14,.72)';const r=12,bx=W/2-tw/2-20,bw2=tw+40,by=y-31,bh=62;X.beginPath();X.roundRect(bx,by,bw2,bh,r);X.fill();
   X.fillStyle='#fff';X.fillText(txt,W/2,y+3)}
 }
 // ---------- boot ----------
