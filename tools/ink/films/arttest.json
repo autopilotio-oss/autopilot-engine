@@ -1,0 +1,44 @@
+{
+ "id": "arttest",
+ "style": "ref",
+ "captions": false,
+ "tail": 1.5,
+ "voice_speed": 1.0,
+ "beats": [
+  {
+   "say": "This is a quick test of drawing a real illustration with the pen, line by line, and then adding the colour.",
+   "cam": [
+    {
+     "box": [
+      30,
+      380,
+      970,
+      1000
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "st",
+     "t": "art",
+     "src": "_private_stad",
+     "x": 40,
+     "y": 420,
+     "w": 920,
+     "c": "k",
+     "dur": 5.5
+    },
+    {
+     "id": "stc",
+     "t": "artcol",
+     "src": "_private_stad",
+     "x": 40,
+     "y": 420,
+     "w": 920,
+     "c": "mg",
+     "dur": 2.8
+    }
+   ]
+  }
+ ]
+}

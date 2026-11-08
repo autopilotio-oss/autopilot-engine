@@ -8,7 +8,7 @@ html,body{margin:0;background:#111}canvas{display:block}
 // INK: one sheet, pen drawn vector infographic, camera crops of the same page. ink.html?film=<stem>
 // Reads out/<stem>.film.json (built by build.py). Exposes READY, DUR, render(t), TL (ink intervals for the sound mix).
 const W=1080,H=1920,SW=1000,SH=1414,PXU=2.6;
-let CUTS=[],REF=false,HAND=false,MARK=new Set(['hl','hr','mg','mb','mr','my','mk']),MARKA={},RULERS=[],CLEAN=false,COL={k:'#141418',hl:'#c2f23a'},HL_A=.62,PUNCH=false,PAPERC='#f2efe7',SPEED=1,SHAKES=[],FLASH=[];
+let ART={},CUTS=[],REF=false,HAND=false,MARK=new Set(['hl','hr','mg','mb','mr','my','mk']),MARKA={},RULERS=[],CLEAN=false,COL={k:'#141418',hl:'#c2f23a'},HL_A=.62,PUNCH=false,PAPERC='#f2efe7',SPEED=1,SHAKES=[],FLASH=[];
 const BAND={k:'#c2f23a',hl:'#1a1a1d'};
 const cv=document.getElementById('c'),X=cv.getContext('2d');
 const Q=new URLSearchParams(location.search),STEM=Q.get('film')||'ai-sounds-right';
@@ -127,26 +127,29 @@ function compile(e){const R=rng(e.id);let w=e.lw||(e.t!=='rect'&&e.w)||(e.t==='t
  else if(e.t==='hlbox'){const lw=e.lw||Math.min(e.w,e.h)*.3,st=lw*.62,p=[];let left=true;for(let y=e.y+lw*.45;y<=e.y+e.h-lw*.4;y+=st){const j=(R()-.5)*lw*.2;
    if(left){p.push([e.x+j,y]);p.push([e.x+e.w+j,y+st*.15])}else{p.push([e.x+e.w+j,y]);p.push([e.x+j,y+st*.15])}left=!left}strokes=[p];e._hlw=lw}
  else if(e.t==='logo'){strokes=icon('ap',e.x,e.y,e.s,R)}
+ else if(e.t==='art'||e.t==='artcol'){const A=ART[e.src];const sc=e.w/A.w;e._sc=sc;e._h=A.h*sc;e._art=A;
+   strokes=(e.t==='art'?A.j.ink:A.j.col).map(f=>{const o=[];for(let i=0;i<f.length;i+=2)o.push([e.x+f[i]*sc,e.y+f[i+1]*sc]);return o});
+   e._mask=document.createElement('canvas');e._mask.width=A.w;e._mask.height=A.h;e._tmp=document.createElement('canvas');e._tmp.width=A.w;e._tmp.height=A.h}
  else if(e.t==='mark'){const ref=BYID[e.ref];const i0=ref.s.indexOf(e.sub);const bx=ref._boxes.slice(i0,i0+e.sub.length);
    const x0=bx[0][0]-ref.size*.15,x1=bx[bx.length-1][0]+bx[bx.length-1][2]-ref.size*.1,y0=ref.y,y1=ref.y+ref.size;
    if(e.style==='wavy'){const p=[];for(let x=x0;x<=x1;x+=3)p.push([x,y1+ref.size*.32+Math.sin((x-x0)/9)*ref.size*.09]);strokes=[p]}
    else strokes=ell((x0+x1)/2,(y0+y1)/2,(x1-x0)/2+ref.size*.5,(y1-y0)/2+ref.size*.6,R,1.12)}
- strokes=strokes.filter(p=>p&&p.length>1).map(p=>resample(p,1.2));
- if(REF&&!e.ruler&&e.t!=='text'&&!MARK.has(e.c)&&e.t!=='hl')strokes=strokes.map(p=>humanize(p,R));
+ strokes=strokes.filter(p=>p&&p.length>1).map(p=>resample(p,e.t&&e.t.startsWith('art')?2.0:1.2));
+ if(REF&&!e.ruler&&e.t!=='text'&&!e.t.startsWith('art')&&!MARK.has(e.c)&&e.t!=='hl')strokes=strokes.map(p=>humanize(p,R));
  if(e._hlw)w=e._hlw;e._w=w;e._strokes=strokes.map(p=>{const L=[0];for(let i=1;i<p.length;i++)L.push(L[i-1]+Math.hypot(p[i][0]-p[i-1][0],p[i][1]-p[i-1][1]));return{p,L,len:L[L.length-1]}});
  // pen sequence: ink strokes plus pen up travel between them (weighted)
  let tot=0;e._seq=[];let prev=null;for(const s of e._strokes){if(prev){const d=Math.hypot(s.p[0][0]-prev[0],s.p[0][1]-prev[1]);e._seq.push({up:true,a:prev,b:s.p[0],l0:tot,len:d*.35});tot+=d*.35}
   e._seq.push({up:false,s,l0:tot,len:s.len});tot+=s.len;prev=s.p[s.p.length-1]}
  e._tot=Math.max(tot,1);
  let tw=0;for(const q of e._seq){q.w0=tw;q.w=q.up?(REF?q.len*1.6+14:q.len):q.len;tw+=q.w}e._tw=Math.max(tw,1);
- const xs=strokes.flat();e._bb=[Math.min(...xs.map(p=>p[0])),Math.min(...xs.map(p=>p[1])),Math.max(...xs.map(p=>p[0])),Math.max(...xs.map(p=>p[1]))]}
+ let bx0=1e9,by0=1e9,bx1=-1e9,by1=-1e9;for(const st of strokes)for(const p of st){if(p[0]<bx0)bx0=p[0];if(p[1]<by0)by0=p[1];if(p[0]>bx1)bx1=p[0];if(p[1]>by1)by1=p[1]}e._bb=[bx0,by0,bx1,by1]}
 function schedule(){const B=FILM.beats;let tEnd=0;
  B.forEach((b,i)=>{b._s=b.words.length?b.words[0][1]:0;b._e=i+1<B.length&&B[i+1].words.length?B[i+1].words[0][1]:DUR});
  B.forEach((b,bi)=>{let cur=Math.max(b._s+.05,bi===0?(FILM.tease||0)+.05:0);const list=b.els;
   for(const e of list){if(e.pre){e._s=-2;e._e=-1;continue}
    let s=cur;if(e.at){const t=phraseTime(b.words,e.at);if(t!=null)s=Math.max(t+(e.dt||0),bi===0?(FILM.tease||0)+.05:-9)}
    s=Math.max(s,cur-0.02);
-   const rate=REF?SPEED*(e.t==='text'?e.size*19:e.t==='hlbox'?4200:MARK.has(e.c)?1100:560):SPEED*(e.t==='text'?e.size*24:e.t==='tokens'?e.size*30:(MARK.has(e.c)?(e.t==='hlbox'?(e._pencil?5200:2600):1100):820));e._dur=e.dur||Math.max(.35,(REF?e._tw:e._tot)/rate);e._s=s;e._e=s+e._dur;cur=e._e+.1;if(e.ruler)e._ruler=true;if(e.shake)SHAKES.push({t:e._s+e._dur*.25,a:e.shake})}
+   const rate=e.t==='art'?1500:e.t==='artcol'?9000:REF?SPEED*(e.t==='text'?e.size*19:e.t==='hlbox'?4200:MARK.has(e.c)?1100:560):SPEED*(e.t==='text'?e.size*24:e.t==='tokens'?e.size*30:(MARK.has(e.c)?(e.t==='hlbox'?(e._pencil?5200:2600):1100):820));e._dur=e.dur||Math.max(.35,(REF?e._tw:e._tot)/rate);e._s=s;e._e=s+e._dur;cur=e._e+.1;if(e.ruler)e._ruler=true;if(e.shake)SHAKES.push({t:e._s+e._dur*.25,a:e.shake})}
   // compress the beat if the ink would overrun into the next beat
   const live=list.filter(e=>!e.pre);if(live.length){const last=Math.max(...live.map(e=>e._e)),lim=b._e-.15;
    if(last>lim){const s0=Math.min(...live.map(e=>e._s));const f=Math.max(.35,(lim-s0)/(last-s0));
@@ -211,8 +214,15 @@ function penAt(t){const live=ELS.filter(e=>!e.pre&&!e._pop);let cur=live.find(e=
  const settle=Math.min(1,(t-prev._e)/.2);
  return{x:a[0]+(b[0]-a[0])*u+settle*(1-u)*12,y:a[1]+(b[1]-a[1])*u+settle*(1-u)*10,lift:Math.min(1,settle)*(1-Math.max(0,u-.85)/.15*.8),c:u>.5?next.c:prev.c}}
 // ---------- drawing ----------
+function drawArt(e,t){const A=e._art,img=e.t==='art'?A.ink:A.col;X.save();X.globalCompositeOperation='multiply';X.globalAlpha=1;
+ if(e.pre||t>=e._e){X.drawImage(img,e.x,e.y,e.w,e._h);X.restore();return}
+ const L=Lof(e,t),m=e._mask.getContext('2d');m.setTransform(1,0,0,1,0,0);m.clearRect(0,0,A.w,A.h);m.setTransform(1/e._sc,0,0,1/e._sc,-e.x/e._sc,-e.y/e._sc);
+ m.lineCap='round';m.lineJoin='round';m.strokeStyle='#000';m.lineWidth=(e.t==='art'?7:9)*e._sc;
+ for(const q of e._seq){if(q.l0>L)break;if(q.up)continue;const sp=q.s.p,lim=L-q.l0;m.beginPath();m.moveTo(sp[0][0],sp[0][1]);for(let i=1;i<sp.length&&q.s.L[i]<=lim;i++)m.lineTo(sp[i][0],sp[i][1]);m.stroke()}
+ const g=e._tmp.getContext('2d');g.globalCompositeOperation='source-over';g.clearRect(0,0,A.w,A.h);g.drawImage(img,0,0);g.globalCompositeOperation='destination-in';g.drawImage(e._mask,0,0);
+ X.drawImage(e._tmp,e.x,e.y,e.w,e._h);X.restore()}
 function drawInk(t,cam){X.save();X.globalCompositeOperation='multiply';X.lineCap='round';X.lineJoin='round';
- for(const e of ELS){if(!e.pre&&t<e._s)continue;const L=e._pop?(t>=e._s?1e9:-1):Lof(e,t);if(L<0)continue;const col=COL[e.c]||COL.k;X.strokeStyle=col;X.globalAlpha=.93;const HL=MARK.has(e.c);if(HL){X.globalAlpha=e._pencil?.62:(MARKA[e.c]||HL_A);X.lineCap=e._pencil?'round':'butt'}else X.lineCap='round';if(e.clip){X.save();X.beginPath();X.moveTo(e.clip[0][0],e.clip[0][1]);for(const c of e.clip.slice(1))X.lineTo(c[0],c[1]);X.closePath();X.clip()}
+ for(const e of ELS){if(!e.pre&&t<e._s)continue;if(e._art){drawArt(e,t);continue}const L=e._pop?(t>=e._s?1e9:-1):Lof(e,t);if(L<0)continue;const col=COL[e.c]||COL.k;X.strokeStyle=col;X.globalAlpha=.93;const HL=MARK.has(e.c);if(HL){X.globalAlpha=e._pencil?.62:(MARKA[e.c]||HL_A);X.lineCap=e._pencil?'round':'butt'}else X.lineCap='round';if(e.clip){X.save();X.beginPath();X.moveTo(e.clip[0][0],e.clip[0][1]);for(const c of e.clip.slice(1))X.lineTo(c[0],c[1]);X.closePath();X.clip()}
   for(const q of e._seq){if(q.l0>L)break;if(q.up)continue;const s=q.s,p=s.p,lim=L-q.l0;
    let n=0;while(n+1<p.length&&s.L[n+1]<=lim)n++;const pts=p.slice(0,n+1);
    if(n+1<p.length&&lim<s.len){const a=p[n],b=p[n+1],f=(lim-s.L[n])/Math.max(1e-6,s.L[n+1]-s.L[n]);pts.push([a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f])}
@@ -290,7 +300,7 @@ function render(t){const TZ=FILM.tease||0;if(TZ&&t<TZ){return renderTease(t,TZ)}
  X.setTransform(1,0,0,1,0,0);
  // pen in screen space
  const c=Math.cos(cam.rot-.006),s=Math.sin(cam.rot-.006);const dx=(p.x-cam.cx)*cam.s,dy=(p.y-cam.cy)*cam.s;
- let pang=null;if(REF){let wx=0,wy=0;for(let j=1;j<=6;j++){const q=penAt(t-j*.09);wx+=q.x;wy+=q.y}wx=wx/6+250;wy=wy/6+330;const a=Math.atan2(wy-p.y,wx-p.x);pang=a-Math.PI/2-.3+(MARK.has(p.c)?.08:0)}
+ let pang=null;if(REF){let wx=0,wy=0;for(let j=1;j<=10;j++){const q=penAt(t-j*.12);wx+=q.x;wy+=q.y}wx=wx/10+250;wy=wy/10+330;let a=Math.atan2(wy-p.y,wx-p.x);a=Math.max(.55,Math.min(1.25,a));pang=a-Math.PI/2-.3+(MARK.has(p.c)?.08:0)}
  drawPen({x:W/2+dx*c-dy*s,y:H/2+dx*s+dy*c,lift:p.lift,c:p.c,ang:pang},cam);
  // light
  if(CLEAN){let g2=X.createRadialGradient(W*.42,H*.36,H*.2,W*.5,H*.5,H*.85);g2.addColorStop(0,'rgba(255,255,255,.05)');g2.addColorStop(.6,'rgba(0,0,0,.06)');g2.addColorStop(1,'rgba(0,0,0,.42)');X.fillStyle=g2;X.fillRect(0,0,W,H)}
@@ -315,7 +325,9 @@ function render(t){const TZ=FILM.tease||0;if(TZ&&t<TZ){return renderTease(t,TZ)}
  if(FILM.style==='ref'){REF=true;CLEAN=true;COL={k:'#121216',g:'#1c8a42',b:'#2356c4',r:'#cf2a22',hl:'#c6f23a',hr:'#ff3b30',mg:'#3fb860',mb:'#5b98ea',mr:'#e5483e',my:'#f2c230',mk:'#1a1a1c'};MARKA={mg:.72,mb:.62,mr:.72,my:.7,mk:.92};HL_A=.75;PAPERC='#faf8f2';SPEED=FILM.speed||1.0}
  if(Q.has('hand')||FILM.hand)HAND=true;
  if(FILM.style==='clean'){PUNCH=true;CLEAN=true;COL={k:'#0a0a0c',hl:'#b9f200',hr:'#ff2e2e'};HL_A=.78;PAPERC='#f7f6f1';SPEED=FILM.speed||1.7}
- ELS=FILM.beats.flatMap(b=>b.els);for(const e of ELS){BYID[e.id]=e;compile(e)}schedule();mkPaper();
+ ELS=FILM.beats.flatMap(b=>b.els);
+ for(const src of new Set(ELS.filter(e=>e.t==='art'||e.t==='artcol').map(e=>e.src))){const j=await (await fetch(`art/${src}.json`)).json();
+  const ld=f=>new Promise(r=>{const im=new Image();im.onload=()=>r(im);im.src=`art/${src}_${f}.png`});ART[src]={j,w:j.w,h:j.h,ink:await ld('ink'),col:await ld('col')}}for(const e of ELS){BYID[e.id]=e;compile(e)}schedule();mkPaper();
  try{await document.fonts.load('800 54px CAP')}catch(e){}
  window.DUR=DUR;window.render=render;render(Number(Q.get('t')||0));window.READY=1})();
 </script></body></html>
