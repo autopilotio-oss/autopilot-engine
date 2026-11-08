@@ -327,9 +327,17 @@
   "ok": true,
   "severity": "SEV-1"
  },
+ "worker:agent_factory": {
+  "ok": true,
+  "severity": "SEV-4"
+ },
  "worker:daily_pulse": {
   "ok": true,
   "severity": "SEV-2"
+ },
+ "worker:day_series": {
+  "ok": true,
+  "severity": "SEV-3"
  },
  "worker:kit_sync": {
   "ok": true,
@@ -343,6 +351,14 @@
   "ok": true,
   "severity": "SEV-3"
  },
+ "worker:publisher": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "worker:reel_maker": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
  "worker:support_agent": {
   "ok": true,
   "severity": "SEV-3"
@@ -350,6 +366,14 @@
  "worker:tiktok_intel": {
   "ok": true,
   "severity": "SEV-4"
+ },
+ "worker:trend_scout": {
+  "ok": true,
+  "severity": "SEV-3"
+ },
+ "worker:viral_lab": {
+  "ok": true,
+  "severity": "SEV-3"
  },
  "worker:weekly_sprint": {
   "ok": true,
