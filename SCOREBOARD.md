@@ -1,6 +1,6 @@
 # Scoreboard
 
-Updated 2026-11-08 04:13 UTC. Score = likes + 3×comments/replies + 4×saves/shares/reposts, per 100 views. Last 14 days.
+Updated 2026-11-08 05:11 UTC. Score = likes + 3×comments/replies + 4×saves/shares/reposts, per 100 views. Last 14 days.
 
 ## By series (what to double down on)
 
