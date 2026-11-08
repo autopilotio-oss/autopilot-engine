@@ -329,8 +329,9 @@ def test_heartbeat_late_and_failed_workers(env):
     assert not r["worker:kit_sync"]["ok"] and r["worker:viral_lab"]["ok"]
 
 
-def test_disabled_worker_resolves_its_open_incident(env):
+def test_disabled_worker_resolves_its_open_incident(env, monkeypatch):
     import heartbeat, datetime as dt
+    monkeypatch.setattr(health, "HDIR", str(env["tmp"] / "health"))
     hb = str(env["tmp"] / "hb.jsonl"); wp = str(env["tmp"] / "w.json"); st = env["store"]
     json.dump({"workers": {"viral_lab": {"enabled": False, "why_disabled": "paused", "max_gap_hours": 30, "severity": "SEV-3",
                                          "since": "2026-10-31T00:00:00+00:00"}}}, open(wp, "w"))
