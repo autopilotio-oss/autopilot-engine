@@ -195,3 +195,4 @@
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-08T13:38:41+00:00", "note": "built 2026-11-08-photographer-24-prompts score 92, bank 3"}
 {"worker": "newsletter", "status": "ok", "at": "2026-11-08T14:14:39+00:00", "note": "skipped: 0 subscribers"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-08T14:52:51+00:00", "note": "/brain/ time back plan rows now name the Starter's own prompts instead of Workspace agents it does not include"}
+{"worker": "analyst", "status": "ok", "at": "2026-11-08T16:23:17+00:00", "note": "8 posts out today, top post saves+shares 0, feed written yes"}
