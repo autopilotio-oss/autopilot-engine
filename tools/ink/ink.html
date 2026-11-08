@@ -141,7 +141,7 @@ function schedule(){const B=FILM.beats;let tEnd=0;
   for(const e of list){if(e.pre){e._s=-2;e._e=-1;continue}
    let s=cur;if(e.at){const t=phraseTime(b.words,e.at);if(t!=null)s=Math.max(t+(e.dt||0),bi===0?(FILM.tease||0)+.05:-9)}
    s=Math.max(s,cur-0.02);
-   const rate=REF?SPEED*(e.t==='text'?e.size*15:e.t==='hlbox'?3600:MARK.has(e.c)?900:430):SPEED*(e.t==='text'?e.size*24:e.t==='tokens'?e.size*30:(MARK.has(e.c)?(e.t==='hlbox'?(e._pencil?5200:2600):1100):820));e._dur=e.dur||Math.max(.35,(REF?e._tw:e._tot)/rate);e._s=s;e._e=s+e._dur;cur=e._e+.1;if(e.ruler)e._ruler=true;if(e.shake)SHAKES.push({t:e._s+e._dur*.25,a:e.shake})}
+   const rate=REF?SPEED*(e.t==='text'?e.size*19:e.t==='hlbox'?4200:MARK.has(e.c)?1100:560):SPEED*(e.t==='text'?e.size*24:e.t==='tokens'?e.size*30:(MARK.has(e.c)?(e.t==='hlbox'?(e._pencil?5200:2600):1100):820));e._dur=e.dur||Math.max(.35,(REF?e._tw:e._tot)/rate);e._s=s;e._e=s+e._dur;cur=e._e+.1;if(e.ruler)e._ruler=true;if(e.shake)SHAKES.push({t:e._s+e._dur*.25,a:e.shake})}
   // compress the beat if the ink would overrun into the next beat
   const live=list.filter(e=>!e.pre);if(live.length){const last=Math.max(...live.map(e=>e._e)),lim=b._e-.15;
    if(last>lim){const s0=Math.min(...live.map(e=>e._s));const f=Math.max(.35,(lim-s0)/(last-s0));
