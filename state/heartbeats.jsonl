@@ -191,3 +191,4 @@
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-08T11:17:40+00:00", "note": "0 orders; 20 checkouts ok; Threads still disconnected (SEV-2 open, already messaged); 8 queued approved; ONE CHANGE NONE"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-08T12:16:00+00:00", "note": "AM Nov 8: IG landscaper pack 18:00, TikTok tk-numbers 10:00, X 5 + 15 questions, Threads disconnected"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-08T12:22:56+00:00", "note": "0 posts out yet today (28 pending, 0 error), top post saves+shares 0, feed written yes"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-08T13:12:38+00:00", "note": "0 drafted, 0 escalated, 0 new alerts (Threads disconnect already open)"}
