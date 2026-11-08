@@ -3,10 +3,9 @@
  "title": "The AI takeover nobody would notice",
  "style": "ref",
  "captions": false,
- "voice": "Chris",
+ "voice": "Brian",
  "model": "eleven_v4",
- "voice_speed": 1.0,
- "dur_exact": 90.0,
+ "voice_speed": 1.2,
  "beats": [
   {
    "say": "The most dangerous AI takeover might look completely normal.",
@@ -1808,5 +1807,13 @@
    ]
   }
  ],
- "tease": 1.9
+ "tease": 1.9,
+ "voice_settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.8,
+  "style": 0.2,
+  "use_speaker_boost": true,
+  "speed": 0.94
+ },
+ "tail": 3.6
 }
