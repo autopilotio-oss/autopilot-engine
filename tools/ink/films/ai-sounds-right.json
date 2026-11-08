@@ -1,0 +1,1079 @@
+{
+ "id": "ai-sounds-right",
+ "title": "AI can sound right even when it is wrong",
+ "voice_speed": 1.04,
+ "tail": 3.2,
+ "beats": [
+  {
+   "say": "This answer sounds perfect.",
+   "cam": [
+    {
+     "box": [
+      170,
+      150,
+      830,
+      370
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "card",
+     "t": "rect",
+     "x": 180,
+     "y": 160,
+     "w": 640,
+     "h": 194,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "lab",
+     "t": "text",
+     "s": "AI ANSWER",
+     "x": 200,
+     "y": 174,
+     "size": 13,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "samp",
+     "t": "text",
+     "s": "SAMPLE",
+     "x": 800,
+     "y": 174,
+     "size": 11,
+     "c": "k",
+     "align": "right",
+     "pre": true
+    },
+    {
+     "id": "ans1",
+     "t": "text",
+     "s": "YES. A 2019 STUDY",
+     "x": 200,
+     "y": 202,
+     "size": 30,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "ans2",
+     "t": "text",
+     "s": "BY DR. L. MORENO",
+     "x": 200,
+     "y": 252,
+     "size": 30,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "ans3",
+     "t": "text",
+     "s": "PROVED IT.",
+     "x": 200,
+     "y": 302,
+     "size": 30,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "tick",
+     "t": "icon",
+     "name": "check",
+     "x": 718,
+     "y": 196,
+     "s": 66,
+     "c": "k",
+     "at": "perfect",
+     "dt": -0.35
+    }
+   ]
+  },
+  {
+   "say": "The study it cites does not exist.",
+   "els": [
+    {
+     "id": "wavy",
+     "t": "mark",
+     "ref": "ans2",
+     "sub": "DR. L. MORENO",
+     "style": "wavy",
+     "c": "k",
+     "at": "cites"
+    },
+    {
+     "id": "q",
+     "t": "text",
+     "s": "?",
+     "x": 664,
+     "y": 250,
+     "size": 40,
+     "c": "k",
+     "w": 4.2,
+     "at": "not"
+    }
+   ]
+  },
+  {
+   "say": "Here's why AI does that, and how to use it anyway.",
+   "cam": [
+    {
+     "box": [
+      150,
+      20,
+      850,
+      150
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "title",
+     "t": "text",
+     "s": "HOW AI WORKS",
+     "x": 500,
+     "y": 34,
+     "size": 56,
+     "c": "k",
+     "align": "center",
+     "w": 5.6
+    },
+    {
+     "id": "sub",
+     "t": "text",
+     "s": "AND WHY IT CAN BE WRONG",
+     "x": 500,
+     "y": 112,
+     "size": 21,
+     "c": "k",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "say": "Chatbots like ChatGPT and Claude learn from huge amounts of text.",
+   "cam": [
+    {
+     "box": [
+      20,
+      370,
+      440,
+      700
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "datalab",
+     "t": "text",
+     "s": "DATA",
+     "x": 62,
+     "y": 384,
+     "size": 15,
+     "c": "b"
+    },
+    {
+     "id": "book",
+     "t": "icon",
+     "name": "book",
+     "x": 58,
+     "y": 412,
+     "s": 78,
+     "c": "b",
+     "at": "learn"
+    },
+    {
+     "id": "codebox",
+     "t": "rect",
+     "x": 62,
+     "y": 508,
+     "w": 74,
+     "h": 52,
+     "c": "b"
+    },
+    {
+     "id": "codetx",
+     "t": "text",
+     "s": "</>",
+     "x": 99,
+     "y": 524,
+     "size": 20,
+     "c": "b",
+     "align": "center"
+    },
+    {
+     "id": "img",
+     "t": "icon",
+     "name": "image",
+     "x": 60,
+     "y": 584,
+     "s": 78,
+     "c": "b"
+    },
+    {
+     "id": "a1",
+     "t": "arrow",
+     "pts": [
+      [
+       150,
+       452
+      ],
+      [
+       215,
+       470
+      ],
+      [
+       272,
+       492
+      ]
+     ],
+     "c": "b"
+    },
+    {
+     "id": "a2",
+     "t": "arrow",
+     "pts": [
+      [
+       150,
+       534
+      ],
+      [
+       272,
+       512
+      ]
+     ],
+     "c": "b"
+    },
+    {
+     "id": "a3",
+     "t": "arrow",
+     "pts": [
+      [
+       150,
+       622
+      ],
+      [
+       218,
+       584
+      ],
+      [
+       276,
+       535
+      ]
+     ],
+     "c": "b"
+    }
+   ]
+  },
+  {
+   "say": "Training tunes billions of numbers so the model gets very good at predicting what comes next.",
+   "els": [
+    {
+     "id": "net",
+     "t": "icon",
+     "name": "net",
+     "x": 318,
+     "y": 404,
+     "s": 190,
+     "c": "b",
+     "at": "training",
+     "dt": -0.2
+    },
+    {
+     "id": "trlab",
+     "t": "text",
+     "s": "TRAINING",
+     "x": 410,
+     "y": 598,
+     "size": 21,
+     "c": "k",
+     "align": "center",
+     "at": "billions"
+    },
+    {
+     "id": "cyc",
+     "t": "text",
+     "s": "PREDICT → COMPARE → ADJUST",
+     "x": 410,
+     "y": 640,
+     "size": 12,
+     "c": "b",
+     "align": "center",
+     "at": "predicting"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      260,
+      380,
+      600,
+      680
+     ]
+    },
+    {
+     "box": [
+      200,
+      380,
+      620,
+      690
+     ],
+     "at": "predicting"
+    }
+   ]
+  },
+  {
+   "say": "Your question is split into small pieces called tokens. The answer is built the same way, one piece at a time.",
+   "cam": [
+    {
+     "box": [
+      580,
+      380,
+      980,
+      680
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "qtx",
+     "t": "text",
+     "s": "WHAT IS A TOKEN?",
+     "x": 600,
+     "y": 396,
+     "size": 18,
+     "c": "k"
+    },
+    {
+     "id": "tok1",
+     "t": "tokens",
+     "words": [
+      "WHAT",
+      "IS",
+      "A",
+      "TOK",
+      "EN",
+      "?"
+     ],
+     "x": 600,
+     "y": 446,
+     "size": 15,
+     "c": "b",
+     "at": "split"
+    },
+    {
+     "id": "tokl",
+     "t": "text",
+     "s": "TOKENS",
+     "x": 600,
+     "y": 498,
+     "size": 12,
+     "c": "b",
+     "at": "tokens"
+    },
+    {
+     "id": "tdn",
+     "t": "arrow",
+     "pts": [
+      [
+       770,
+       500
+      ],
+      [
+       770,
+       540
+      ]
+     ],
+     "c": "k",
+     "at": "answer"
+    },
+    {
+     "id": "tok2",
+     "t": "tokens",
+     "words": [
+      "A",
+      "SMALL",
+      "PIECE"
+     ],
+     "x": 600,
+     "y": 556,
+     "size": 15,
+     "c": "b"
+    },
+    {
+     "id": "nx",
+     "t": "arrow",
+     "pts": [
+      [
+       842,
+       572
+      ],
+      [
+       880,
+       552
+      ]
+     ],
+     "c": "b"
+    },
+    {
+     "id": "nx2",
+     "t": "arrow",
+     "pts": [
+      [
+       842,
+       576
+      ],
+      [
+       880,
+       600
+      ]
+     ],
+     "c": "b"
+    },
+    {
+     "id": "nxa",
+     "t": "text",
+     "s": "OF",
+     "x": 888,
+     "y": 540,
+     "size": 13,
+     "c": "b"
+    },
+    {
+     "id": "nxb",
+     "t": "text",
+     "s": "?",
+     "x": 888,
+     "y": 592,
+     "size": 13,
+     "c": "b"
+    },
+    {
+     "id": "one",
+     "t": "text",
+     "s": "ONE PIECE AT A TIME",
+     "x": 600,
+     "y": 640,
+     "size": 14,
+     "c": "k",
+     "at": "one"
+    }
+   ]
+  },
+  {
+   "say": "And that is useful. It can translate, explain, draft and write code in seconds.",
+   "cam": [
+    {
+     "box": [
+      20,
+      700,
+      520,
+      840
+     ]
+    },
+    {
+     "box": [
+      480,
+      700,
+      980,
+      840
+     ],
+     "at": "draft"
+    }
+   ],
+   "els": [
+    {
+     "id": "use",
+     "t": "text",
+     "s": "USEFUL",
+     "x": 52,
+     "y": 728,
+     "size": 38,
+     "c": "g",
+     "w": 4.4,
+     "at": "useful",
+     "dt": -0.3
+    },
+    {
+     "id": "useu",
+     "t": "path",
+     "pts": [
+      [
+       48,
+       784
+      ],
+      [
+       140,
+       781
+      ],
+      [
+       236,
+       786
+      ]
+     ],
+     "smooth": true,
+     "c": "g",
+     "w": 3.6
+    },
+    {
+     "id": "i1",
+     "t": "icon",
+     "name": "bubbles",
+     "x": 296,
+     "y": 716,
+     "s": 84,
+     "c": "g",
+     "at": "translate"
+    },
+    {
+     "id": "l1",
+     "t": "text",
+     "s": "TRANSLATE",
+     "x": 338,
+     "y": 812,
+     "size": 12,
+     "c": "g",
+     "align": "center"
+    },
+    {
+     "id": "i2",
+     "t": "icon",
+     "name": "bulb",
+     "x": 470,
+     "y": 714,
+     "s": 86,
+     "c": "g",
+     "at": "explain"
+    },
+    {
+     "id": "l2",
+     "t": "text",
+     "s": "EXPLAIN",
+     "x": 513,
+     "y": 812,
+     "size": 12,
+     "c": "g",
+     "align": "center"
+    },
+    {
+     "id": "i3",
+     "t": "icon",
+     "name": "draft",
+     "x": 646,
+     "y": 714,
+     "s": 86,
+     "c": "g",
+     "at": "draft"
+    },
+    {
+     "id": "l3",
+     "t": "text",
+     "s": "DRAFT",
+     "x": 689,
+     "y": 812,
+     "size": 12,
+     "c": "g",
+     "align": "center"
+    },
+    {
+     "id": "i4",
+     "t": "icon",
+     "name": "term",
+     "x": 822,
+     "y": 718,
+     "s": 84,
+     "c": "g",
+     "at": "code"
+    },
+    {
+     "id": "l4",
+     "t": "text",
+     "s": "CODE",
+     "x": 864,
+     "y": 812,
+     "size": 12,
+     "c": "g",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "say": "But here's the catch. Sounding true is not the same as being true.",
+   "cam": [
+    {
+     "box": [
+      50,
+      850,
+      520,
+      950
+     ],
+     "at": "sounding",
+     "dt": -0.2
+    },
+    {
+     "box": [
+      470,
+      850,
+      950,
+      950
+     ],
+     "at": "same"
+    }
+   ],
+   "twist": "catch",
+   "els": [
+    {
+     "id": "big",
+     "t": "text",
+     "s": "SOUNDS TRUE ≠ IS TRUE",
+     "x": 500,
+     "y": 872,
+     "size": 46,
+     "c": "r",
+     "align": "center",
+     "w": 5.2,
+     "at": "sounding",
+     "dt": -0.3
+    }
+   ]
+  },
+  {
+   "say": "On its own, it doesn't check its claims against reality. So it can invent a number, a quote or a source, in the same confident voice.",
+   "cam": [
+    {
+     "box": [
+      0,
+      330,
+      500,
+      950
+     ],
+     "at": "check"
+    },
+    {
+     "box": [
+      170,
+      150,
+      830,
+      370
+     ],
+     "at": "invent"
+    },
+    {
+     "box": [
+      20,
+      960,
+      420,
+      1130
+     ],
+     "at": "same"
+    }
+   ],
+   "els": [
+    {
+     "id": "la",
+     "t": "arrow",
+     "pts": [
+      [
+       92,
+       900
+      ],
+      [
+       34,
+       840
+      ],
+      [
+       24,
+       560
+      ],
+      [
+       54,
+       390
+      ],
+      [
+       176,
+       318
+      ]
+     ],
+     "c": "r",
+     "w": 3.2,
+     "at": "check"
+    },
+    {
+     "id": "ring",
+     "t": "mark",
+     "ref": "ans2",
+     "sub": "DR. L. MORENO",
+     "style": "ring",
+     "c": "r",
+     "w": 3.4,
+     "at": "invent"
+    },
+    {
+     "id": "nr",
+     "t": "text",
+     "s": "NOT REAL",
+     "x": 520,
+     "y": 306,
+     "size": 24,
+     "c": "r",
+     "w": 3.2,
+     "at": "source"
+    },
+    {
+     "id": "p1",
+     "t": "icon",
+     "name": "fake",
+     "x": 90,
+     "y": 990,
+     "s": 86,
+     "c": "r",
+     "at": "same"
+    },
+    {
+     "id": "pl1",
+     "t": "text",
+     "s": "FALSE ANSWERS",
+     "x": 133,
+     "y": 1100,
+     "size": 13,
+     "c": "r",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "say": "Now add cloned voices and fake video. Private data pasted into the wrong tool. Unfair patterns copied from old data. And one small mistake repeated across a thousand messages.",
+   "cam": [
+    {
+     "box": [
+      200,
+      960,
+      580,
+      1130
+     ]
+    },
+    {
+     "box": [
+      560,
+      960,
+      960,
+      1130
+     ],
+     "at": "unfair"
+    }
+   ],
+   "els": [
+    {
+     "id": "p2",
+     "t": "icon",
+     "name": "deepfake",
+     "x": 270,
+     "y": 990,
+     "s": 96,
+     "c": "r",
+     "at": "cloned"
+    },
+    {
+     "id": "pl2",
+     "t": "text",
+     "s": "DEEPFAKES",
+     "x": 318,
+     "y": 1100,
+     "size": 13,
+     "c": "r",
+     "align": "center"
+    },
+    {
+     "id": "p3",
+     "t": "icon",
+     "name": "lock",
+     "x": 462,
+     "y": 990,
+     "s": 86,
+     "c": "r",
+     "at": "private"
+    },
+    {
+     "id": "pl3",
+     "t": "text",
+     "s": "PRIVACY",
+     "x": 505,
+     "y": 1100,
+     "size": 13,
+     "c": "r",
+     "align": "center"
+    },
+    {
+     "id": "p4",
+     "t": "icon",
+     "name": "scale",
+     "x": 646,
+     "y": 988,
+     "s": 92,
+     "c": "r",
+     "at": "unfair"
+    },
+    {
+     "id": "pl4",
+     "t": "text",
+     "s": "BIAS",
+     "x": 692,
+     "y": 1100,
+     "size": 13,
+     "c": "r",
+     "align": "center"
+    },
+    {
+     "id": "p5",
+     "t": "icon",
+     "name": "dominoes",
+     "x": 826,
+     "y": 990,
+     "s": 92,
+     "c": "r",
+     "at": "repeated",
+     "dt": -0.6
+    },
+    {
+     "id": "pl5",
+     "t": "text",
+     "s": "SCALE X1000",
+     "x": 872,
+     "y": 1100,
+     "size": 13,
+     "c": "r",
+     "align": "center"
+    },
+    {
+     "id": "bus",
+     "t": "path",
+     "pts": [
+      [
+       133,
+       972
+      ],
+      [
+       872,
+       972
+      ]
+     ],
+     "c": "r",
+     "w": 2.2
+    }
+   ]
+  },
+  {
+   "say": "So treat it like a fast assistant, not a judge. Verify what matters. Keep private data out. And let a person review it before it goes out.",
+   "cam": [
+    {
+     "box": [
+      30,
+      1150,
+      470,
+      1360
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "h",
+     "t": "text",
+     "s": "A FAST ASSISTANT, NOT A JUDGE",
+     "x": 52,
+     "y": 1168,
+     "size": 16,
+     "c": "k",
+     "at": "fast"
+    },
+    {
+     "id": "b1",
+     "t": "rect",
+     "x": 56,
+     "y": 1210,
+     "w": 32,
+     "h": 32,
+     "c": "k",
+     "at": "verify",
+     "dt": -0.4
+    },
+    {
+     "id": "t1",
+     "t": "text",
+     "s": "VERIFY",
+     "x": 106,
+     "y": 1214,
+     "size": 23,
+     "c": "k"
+    },
+    {
+     "id": "c1",
+     "t": "icon",
+     "name": "check",
+     "x": 54,
+     "y": 1196,
+     "s": 46,
+     "c": "g",
+     "w": 4.2
+    },
+    {
+     "id": "b2",
+     "t": "rect",
+     "x": 56,
+     "y": 1264,
+     "w": 32,
+     "h": 32,
+     "c": "k",
+     "at": "keep",
+     "dt": -0.2
+    },
+    {
+     "id": "t2",
+     "t": "text",
+     "s": "PROTECT DATA",
+     "x": 106,
+     "y": 1268,
+     "size": 23,
+     "c": "k"
+    },
+    {
+     "id": "c2",
+     "t": "icon",
+     "name": "check",
+     "x": 54,
+     "y": 1250,
+     "s": 46,
+     "c": "g",
+     "w": 4.2
+    },
+    {
+     "id": "b3",
+     "t": "rect",
+     "x": 56,
+     "y": 1318,
+     "w": 32,
+     "h": 32,
+     "c": "k",
+     "at": "person"
+    },
+    {
+     "id": "t3",
+     "t": "text",
+     "s": "HUMAN REVIEW",
+     "x": 106,
+     "y": 1322,
+     "size": 23,
+     "c": "k"
+    },
+    {
+     "id": "c3",
+     "t": "icon",
+     "name": "check",
+     "x": 54,
+     "y": 1304,
+     "s": 46,
+     "c": "g",
+     "w": 4.2
+    }
+   ]
+  },
+  {
+   "say": "AI isn't the danger. Confusing a confident answer with the truth is.",
+   "cam": [
+    {
+     "box": [
+      480,
+      1180,
+      990,
+      1380
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "f1",
+     "t": "text",
+     "s": "DON'T CONFUSE",
+     "x": 520,
+     "y": 1206,
+     "size": 32,
+     "c": "k",
+     "w": 3.6,
+     "at": "confusing",
+     "dt": -0.5
+    },
+    {
+     "id": "f2",
+     "t": "text",
+     "s": "CONFIDENCE",
+     "x": 520,
+     "y": 1256,
+     "size": 32,
+     "c": "k",
+     "w": 3.6
+    },
+    {
+     "id": "f3",
+     "t": "text",
+     "s": "WITH TRUTH.",
+     "x": 520,
+     "y": 1306,
+     "size": 32,
+     "c": "k",
+     "w": 3.6
+    },
+    {
+     "id": "fu",
+     "t": "path",
+     "pts": [
+      [
+       514,
+       1354
+      ],
+      [
+       700,
+       1350
+      ],
+      [
+       850,
+       1356
+      ]
+     ],
+     "smooth": true,
+     "c": "r",
+     "w": 4.6
+    }
+   ]
+  },
+  {
+   "say": "Save this for the next time an answer sounds a little too sure.",
+   "cam": [
+    {
+     "box": [
+      -10,
+      -10,
+      1010,
+      1424
+     ],
+     "at": "save",
+     "dt": -0.6,
+     "move": 2.2
+    }
+   ],
+   "els": [
+    {
+     "id": "sig",
+     "t": "text",
+     "s": "AUTOPILOT.OI",
+     "x": 950,
+     "y": 1382,
+     "size": 12,
+     "c": "k",
+     "align": "right",
+     "at": "next"
+    }
+   ]
+  }
+ ]
+}

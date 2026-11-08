@@ -1,0 +1,51 @@
+name: Ink (pen drawn explainer films)
+on:
+  workflow_dispatch:
+    inputs:
+      eps: { description: "Film stems in tools/ink/films (space separated). Each one is one ElevenLabs voice render.", required: true }
+permissions:
+  contents: write
+concurrency: ink
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs: { eps: "${{ steps.p.outputs.eps }}" }
+    steps:
+      - id: p
+        run: python3 -c "import json;print('eps='+json.dumps('${{ github.event.inputs.eps }}'.split()))" >> "$GITHUB_OUTPUT"
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      matrix: { ep: "${{ fromJson(needs.plan.outputs.eps) }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy
+          npm i -g --silent playwright@1 && npx playwright install --with-deps chromium
+          echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
+      - name: Voice + render
+        env: { ELEVENLABS_API_KEY: "${{ secrets.ELEVENLABS_API_KEY }}" }
+        run: bash tools/ink/make.sh "${{ matrix.ep }}" 4
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: "ink-${{ matrix.ep }}", path: "docs/media/ink/${{ matrix.ep }}*\ntools/ink/out/${{ matrix.ep }}.wav\ntools/ink/out/${{ matrix.ep }}.words.json" }
+  commit:
+    needs: render
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { pattern: "ink-*", path: /tmp/ink, merge-multiple: true }
+      - name: Commit
+        run: |
+          mkdir -p docs/media/ink tools/ink/voice; ls -R /tmp/ink
+          find /tmp/ink -name '*.mp4' -exec cp {} docs/media/ink/ \; ; find /tmp/ink -name '*.jpg' -exec cp {} docs/media/ink/ \;
+          find /tmp/ink -name '*.wav' -exec cp {} tools/ink/voice/ \; ; find /tmp/ink -name '*.words.json' -exec cp {} tools/ink/voice/ \;
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add docs/media/ink tools/ink/voice; git diff --cached --quiet && exit 0
+          git commit -m "Ink films rendered: ${{ github.event.inputs.eps }}"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
