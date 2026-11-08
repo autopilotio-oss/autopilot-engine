@@ -94,7 +94,7 @@ function icon(name,x,y,s,R){const k=s/100,T=p=>p.map(([a,b])=>[x+a*k,y+b*k]);con
    out.push(T([[0,96],[104,96]]));return out}
  }return[]}
 // ---------- page build ----------
-let FILM,ELS=[],BYID={},DUR=10,WORDS=[],CAPS=[],CAMK=[],PEN_REST=[1450,2150],TWIST=null;
+let FILM,ELS=[],BYID={},DUR=10,WORDS=[],CAPS=[],CAMK=[],PEN_REST=[1700,2700],TWIST=null;
 function norm(w){return w.toLowerCase().replace(/[^a-z0-9']/g,'').replace(/'/g,'')}
 function phraseTime(bw,ph){const want=ph.split(/\s+/).map(norm);for(let i=0;i<bw.length;i++){let ok=true;for(let j=0;j<want.length;j++){if(!bw[i+j]||norm(bw[i+j][0])!==want[j]){ok=false;break}}if(ok)return bw[i][1]}
  console.log('PHRASE MISS',ph);return null}
@@ -110,6 +110,9 @@ function compile(e){const R=rng(e.id);let w=e.lw||(e.t!=='rect'&&e.w)||(e.t==='t
    if(e.sub){const i0=ref.s.indexOf(e.sub);const bx=ref._boxes.slice(i0,i0+e.sub.length);x0=bx[0][0];x1=bx[bx.length-1][0]+bx[bx.length-1][2]-ref.size*.21}else{x0=ref._x0;x1=ref._x0+ref._tw}
    const pad=ref.size*.22,ym=ref.y+ref.size*.52,tilt=(R()-.5)*ref.size*.12;const p=[];for(let k=0;k<=24;k++){const u=k/24;p.push([x0-pad+(x1-x0+pad*2)*u,ym+tilt*(u-.5)+Math.sin(u*3+R())*ref.size*.03])}
    strokes=[p];e._hlw=e.lw||ref.size*1.3}
+ else if(e.t==='hlbox'&&REF&&e.c!=='hl'&&e.c!=='hr'){const st=3.1,p=[];const ang=1.05,ca=Math.cos(ang),sa=Math.sin(ang);const diag=e.w+e.h;let flip=false;
+   for(let d=-e.h;d<=e.w+e.h*.6;d+=st){const j=(R()-.5)*1.2;const a=[e.x+d+j,e.y+e.h+2],b=[e.x+d+e.h*ca/sa+j,e.y-2];if(flip)p.push(a,b);else p.push(b,a);flip=!flip}
+   strokes=[p];e._hlw=e.pw||2.3;e.clip=e.clip||[[e.x,e.y],[e.x+e.w,e.y],[e.x+e.w,e.y+e.h],[e.x,e.y+e.h]];e._pencil=true}
  else if(e.t==='hlbox'){const lw=e.lw||Math.min(e.w,e.h)*.3,st=lw*.62,p=[];let left=true;for(let y=e.y+lw*.45;y<=e.y+e.h-lw*.4;y+=st){const j=(R()-.5)*lw*.2;
    if(left){p.push([e.x+j,y]);p.push([e.x+e.w+j,y+st*.15])}else{p.push([e.x+e.w+j,y]);p.push([e.x+j,y+st*.15])}left=!left}strokes=[p];e._hlw=lw}
  else if(e.t==='logo'){strokes=icon('ap',e.x,e.y,e.s,R)}
@@ -126,11 +129,11 @@ function compile(e){const R=rng(e.id);let w=e.lw||(e.t!=='rect'&&e.w)||(e.t==='t
  const xs=strokes.flat();e._bb=[Math.min(...xs.map(p=>p[0])),Math.min(...xs.map(p=>p[1])),Math.max(...xs.map(p=>p[0])),Math.max(...xs.map(p=>p[1]))]}
 function schedule(){const B=FILM.beats;let tEnd=0;
  B.forEach((b,i)=>{b._s=b.words.length?b.words[0][1]:0;b._e=i+1<B.length&&B[i+1].words.length?B[i+1].words[0][1]:DUR});
- B.forEach((b,bi)=>{let cur=b._s+.05;const list=b.els;
+ B.forEach((b,bi)=>{let cur=Math.max(b._s+.05,bi===0?(FILM.tease||0)+.05:0);const list=b.els;
   for(const e of list){if(e.pre){e._s=-2;e._e=-1;continue}
-   let s=cur;if(e.at){const t=phraseTime(b.words,e.at);if(t!=null)s=t+(e.dt||0)}
+   let s=cur;if(e.at){const t=phraseTime(b.words,e.at);if(t!=null)s=Math.max(t+(e.dt||0),bi===0?(FILM.tease||0)+.05:-9)}
    s=Math.max(s,cur-0.02);
-   const rate=SPEED*(e.t==='text'?e.size*24:e.t==='tokens'?e.size*30:(MARK.has(e.c)?(e.t==='hlbox'?2600:1100):820));e._dur=e.dur||Math.max(.35,e._tot/rate);e._s=s;e._e=s+e._dur;cur=e._e+.1;if(e.ruler)e._ruler=true;if(e.shake)SHAKES.push({t:e._s+e._dur*.25,a:e.shake})}
+   const rate=SPEED*(e.t==='text'?e.size*24:e.t==='tokens'?e.size*30:(MARK.has(e.c)?(e.t==='hlbox'?(e._pencil?5200:2600):1100):820));e._dur=e.dur||Math.max(.35,e._tot/rate);e._s=s;e._e=s+e._dur;cur=e._e+.1;if(e.ruler)e._ruler=true;if(e.shake)SHAKES.push({t:e._s+e._dur*.25,a:e.shake})}
   // compress the beat if the ink would overrun into the next beat
   const live=list.filter(e=>!e.pre);if(live.length){const last=Math.max(...live.map(e=>e._e)),lim=b._e-.15;
    if(last>lim){const s0=Math.min(...live.map(e=>e._s));const f=Math.max(.35,(lim-s0)/(last-s0));for(const e of live){e._s=s0+(e._s-s0)*f;e._e=s0+(e._e-s0)*f}}}
@@ -172,7 +175,7 @@ function camAt(t){let i=0;while(i+1<CAMK.length&&CAMK[i+1].t<=t)i++;const k=CAMK
  const hh=w*H/W;let px=0,py=0,n=0;for(let j=0;j<6;j++){const q=penAt(t-j*.12);px+=q.x;py+=q.y;n++}px/=n;py/=n;
  if(px>-50&&px<SW+50&&py>-50&&py<SH+50){const mx=w*(PUNCH?.42:.32),my=hh*(PUNCH?.38:.30);if(px<cx-mx)cx=px+mx;if(px>cx+mx)cx=px-mx;if(py<cy-my)cy=py+my;if(py>cy+my)cy=py-my}
  // stay on the sheet when zoomed in
- if(w<SW+20)cx=Math.max(w/2-14,Math.min(SW+14-w/2,cx));if(hh<SH+20)cy=Math.max(hh/2-14-hh*.24,Math.min(SH+14-hh/2+hh*.32,cy));
+ if(w<SW+20)cx=Math.max(w/2-14,Math.min(SW+14-w/2,cx));if(hh<SH+20)cy=Math.max(hh/2-14-hh*.24,Math.min(SH+14-hh/2+hh*(REF?.1:.32),cy));
  if(REF){cx+=Math.sin(t*.41)*w*.0016;cy+=Math.cos(t*.37)*w*.0016}else if(!PUNCH){cx+=Math.sin(t*.53)*w*.004+Math.sin(t*1.31)*w*.0018;cy+=Math.cos(t*.47)*w*.004+Math.sin(t*1.17)*w*.002}
  let rot=PUNCH||REF?0:Math.sin(t*.29)*.0035;for(const sh of SHAKES){const d=t-sh.t;if(d>=0&&d<.45){const f=Math.exp(-d*9)*sh.a*w*.012;cx+=Math.sin(d*97)*f;cy+=Math.cos(d*83)*f;rot+=Math.sin(d*71)*f*.00025}}
  return{cx,cy,s:W/w,w,rot}}
@@ -190,7 +193,7 @@ function penAt(t){const live=ELS.filter(e=>!e.pre);let cur=live.find(e=>t>=e._s&
  return{x:a[0]+(b[0]-a[0])*u+settle*(1-u)*12,y:a[1]+(b[1]-a[1])*u+settle*(1-u)*10,lift:Math.min(1,settle)*(1-Math.max(0,u-.85)/.15*.8),c:u>.5?next.c:prev.c}}
 // ---------- drawing ----------
 function drawInk(t,cam){X.save();X.globalCompositeOperation='multiply';X.lineCap='round';X.lineJoin='round';
- for(const e of ELS){if(!e.pre&&t<e._s)continue;const L=e.pre||t>=e._e?1e9:(t-e._s)/e._dur*e._tot;const col=COL[e.c]||COL.k;X.strokeStyle=col;X.globalAlpha=.93;const HL=MARK.has(e.c);if(HL){X.globalAlpha=MARKA[e.c]||HL_A;X.lineCap='butt'}else X.lineCap='round';if(e.clip){X.save();X.beginPath();X.moveTo(e.clip[0][0],e.clip[0][1]);for(const c of e.clip.slice(1))X.lineTo(c[0],c[1]);X.closePath();X.clip()}
+ for(const e of ELS){if(!e.pre&&t<e._s)continue;const L=e.pre||t>=e._e?1e9:(t-e._s)/e._dur*e._tot;const col=COL[e.c]||COL.k;X.strokeStyle=col;X.globalAlpha=.93;const HL=MARK.has(e.c);if(HL){X.globalAlpha=e._pencil?.62:(MARKA[e.c]||HL_A);X.lineCap=e._pencil?'round':'butt'}else X.lineCap='round';if(e.clip){X.save();X.beginPath();X.moveTo(e.clip[0][0],e.clip[0][1]);for(const c of e.clip.slice(1))X.lineTo(c[0],c[1]);X.closePath();X.clip()}
   for(const q of e._seq){if(q.l0>L)break;if(q.up)continue;const s=q.s,p=s.p,lim=L-q.l0;
    let n=0;while(n+1<p.length&&s.L[n+1]<=lim)n++;const pts=p.slice(0,n+1);
    if(n+1<p.length&&lim<s.len){const a=p[n],b=p[n+1],f=(lim-s.L[n])/Math.max(1e-6,s.L[n+1]-s.L[n]);pts.push([a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f])}
@@ -238,6 +241,13 @@ function drawKaraoke(cp,t,cam){X.font='800 76px CAP, Inter, sans-serif';X.textBa
  const pop=Math.min(1,(t-cp.s)/.09);X.save();X.translate(W/2,y);const fit=Math.min(1,980/tot);X.scale(fit*(.86+.14*pop),fit*(.86+.14*pop));X.translate(-W/2,-y);
  ws.forEach((w,i)=>{const txt=w[0].toUpperCase();const on=t>=w[1]-.03;X.lineJoin='round';X.lineWidth=14;X.strokeStyle='rgba(0,0,0,.92)';X.strokeText(txt,x,y);
   X.fillStyle=on&&t<(ws[i+1]?ws[i+1][1]:cp.e)?'#c6ff1a':'#ffffff';X.fillText(txt,x,y);x+=widths[i]+sp});X.restore()}
+function renderTease(t,TZ){X.setTransform(1,0,0,1,0,0);X.filter='none';X.globalAlpha=1;X.globalCompositeOperation='source-over';X.drawImage(DESK,0,0);
+ const slide=1-Math.pow(1-Math.min(1,Math.max(0,(t-.35)/.5)),3);const w=1100*(1-.025*Math.max(0,t-.85)/(TZ-.85));const s=W/w;const cy=707+(1-slide)*1500;
+ X.translate(W/2,H/2);X.rotate(-.012*(1-slide)-.006);X.scale(s,s);X.translate(-500,-cy);
+ X.save();X.shadowColor='rgba(0,0,0,.55)';X.shadowBlur=40*s;X.shadowOffsetX=10*s;X.shadowOffsetY=16*s;X.fillStyle=PAPERC;X.fillRect(0,0,SW,SH);X.restore();
+ X.drawImage(PAPER,0,0,SW,SH);drawInk(DUR+1,{s});X.setTransform(1,0,0,1,0,0);
+ let g2=X.createRadialGradient(W*.42,H*.36,H*.2,W*.5,H*.5,H*.85);g2.addColorStop(0,'rgba(255,255,255,.05)');g2.addColorStop(.6,'rgba(0,0,0,.06)');g2.addColorStop(1,'rgba(0,0,0,.42)');X.fillStyle=g2;X.fillRect(0,0,W,H);
+ X.globalAlpha=.045;X.globalCompositeOperation='overlay';X.drawImage(GRAIN[Math.floor(t*24)%4],0,0,W,H);X.globalAlpha=1;X.globalCompositeOperation='source-over'}
 function drawRulers(t){for(const r of RULERS){const t0=r.s-.42,t1=r.e+.3;if(t<t0||t>t1)continue;
   const inn=Math.min(1,(t-t0)/.36),out=Math.max(0,(t-r.e)/.3);const vis=ease(inn)*(1-ease(Math.min(1,out)));
   let dx=r.b[0]-r.a[0],dy=r.b[1]-r.a[1];const L=Math.hypot(dx,dy)||1;dx/=L;dy/=L;let nx=-dy,ny=dx;if(nx+ny>0){nx=-nx;ny=-ny}
@@ -249,7 +259,7 @@ function drawRulers(t){for(const r of RULERS){const t0=r.s-.42,t1=r.e+.3;if(t<t0
   X.fillStyle='rgba(255,255,255,.35)';X.fillRect(0,side>0?wid-3:y0,len,2);X.strokeStyle='rgba(40,30,0,.75)';X.lineWidth=.9;
   for(let u=10;u<len-6;u+=5){const big=u%50===0,mid=u%10===0;const h=big?12:mid?8:4;const ey=side>0?0:0;X.beginPath();X.moveTo(u,side>0?ey:-0);X.lineTo(u,side>0?h:-h);X.stroke()}
   X.restore()}}
-function render(t){const cam=camAt(t);X.setTransform(1,0,0,1,0,0);X.filter='none';X.globalAlpha=1;X.globalCompositeOperation='source-over';
+function render(t){const TZ=FILM.tease||0;if(TZ&&t<TZ){return renderTease(t,TZ)}const cam=camAt(t);X.setTransform(1,0,0,1,0,0);X.filter='none';X.globalAlpha=1;X.globalCompositeOperation='source-over';
  X.drawImage(DESK,0,0);
  X.translate(W/2,H/2);X.rotate(cam.rot-.006);X.scale(cam.s,cam.s);X.translate(-cam.cx,-cam.cy);cam.sp=1;
  // sheet shadow + sheet

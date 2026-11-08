@@ -5,7 +5,7 @@ const {chromium}=require('playwright');const {spawn}=require('child_process');co
 const [,,stem,a2,a3,a4]=process.argv;const RANGE=process.env.RANGE||'';
 (async()=>{const b=await chromium.launch({args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
 const p=await b.newPage({viewport:{width:1080,height:1920}});p.on('pageerror',e=>console.log('PAGEERR',e.message));p.on('console',m=>{if(/MISS|warn/i.test(m.text()))console.log('PAGE',m.text())});
-await p.goto(`http://localhost:8779/tools/ink/ink.html?film=${stem}`+(process.env.NOCAP?'&nocap':''));await p.waitForFunction(()=>window.READY===1,null,{timeout:120000});
+await p.goto(`http://localhost:8779/tools/ink/ink.html?film=${stem}`+(process.env.NOCAP?'&nocap':'')+(process.env.HANDQ?'&hand=1':''));await p.waitForFunction(()=>window.READY===1,null,{timeout:120000});
 const D=await p.evaluate(()=>window.DUR);
 if(a2==='--grab'){for(const t of a3.split(',').map(Number)){await p.evaluate(t=>window.render(t),t);await p.screenshot({path:`${a4}_${t.toFixed(1)}.jpg`,type:'jpeg',quality:88})}
  fs.writeFileSync(`${a4}_tl.json`,JSON.stringify(await p.evaluate(()=>window.TL)));await b.close();return}

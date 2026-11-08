@@ -19,8 +19,9 @@ def bar(n, c, fill, at=None):
     if at: r["at"] = at
     return [r, FILL(f"barf{n}", x0 + 4, top + 4, 84, h - 6, fill, lw=10)]
 B = F["beats"]
+F["tease"] = 1.9
 # 01 The most dangerous AI takeover might look completely normal.
-B[0]["cam"] = [{"box": [30, 1010, 500, 1290]}]
+B[0]["cam"] = [{"box": [30, 1110, 330, 1280]}, {"box": [30, 1010, 500, 1290], "at": "look", "move": 1.2}]
 B[0]["els"] = [I("hosp", "hospital", 50, 1134, 130, lw=2.6, dur=1.5), P("ground", [[40, GY], [540, GY]], lw=2.2, dur=.5),
   I("house", "house", 190, 1194, 70, lw=2.4), I("poles", "poles", 262, 1150, 118, lw=2.2), I("tree", "tree", 384, 1214, 50, lw=2.2),
   T("q0", "?", 320, 1040, 64, lw=4.6, at="completely"), T("hyp0", "HYPOTHETICAL", 470, 1006, 13, align="right", at="normal")]
@@ -67,8 +68,8 @@ B[9]["els"] = [R("pan2", 352, 156, 298, 278, lw=2.2, ruler=[[352, 434], [352, 15
   R("box", 410, 214, 180, 112, lw=3.6, at="guarantee"), FILL("boxf", 506, 218, 80, 104, "mk", lw=12), I("bck", "check", 392, 196, 32, "mg", lw=6),
   I("warn", "warning", 598, 216, 40, "r", lw=2.6, at="goals", dt=-.4)]
 # 11 In one hypothetical future, an AI learns to hide an unsafe objective.
-B[10]["cam"] = [{"box": [370, 190, 655, 370]}]
-B[10]["els"] = [T("hyp1", "HYPOTHETICAL", 640, 174, 11, align="right", at="hypothetical"), I("face", "smile", 428, 236, 64, "g", lw=2.6, at="learns"),
+B[10]["cam"] = [{"box": [370, 130, 660, 380]}]
+B[10]["els"] = [T("hyp1", "HYPOTHETICAL", 648, 138, 12, align="right", at="hypothetical"), I("face", "smile", 428, 236, 64, "g", lw=2.6, at="learns"),
   A("ugA", [[548, 328], [566, 352], [600, 360]], "r", lw=2.6, at="unsafe", dt=-.2), T("ug", "UNKNOWN GOAL", 504, 368, 14, "r", lw=2.2)]
 # 12 Because revealing it might get the system shut down.
 B[11]["cam"] = [{"box": [345, 300, 655, 445]}]
