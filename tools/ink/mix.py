@@ -18,7 +18,7 @@ voice = np.zeros(N); v = readwav(f"{D}/out/{stem}.wav"); voice[:min(N, len(v))] 
 # --- pen scratch ---
 envF = np.zeros(N); envM = np.zeros(N); taps = np.zeros(N); pan = np.zeros(N)
 for e in TL["ink"]:
-    marker = e["c"] == "hl" or e["w"] >= 5
+    marker = e["c"] in ("hl", "hr", "mg", "mb", "mr", "my", "mk") or e["w"] >= 5
     for s, t, down in e["seq"]:
         if not down or t - s < .02: continue
         i0, i1 = int(s * SR), min(N, int(t * SR)); n = i1 - i0
@@ -30,6 +30,11 @@ for e in TL["ink"]:
 wn = rng.standard_normal(N)
 scratch = band(wn * envF, 2600, 8000) * 1.0 + band(rng.standard_normal(N) * envM, 900, 4200) * .8
 taps = band(taps, 1500, 9000)
+# ruler: a soft wooden tap when it lands and a slide when it lifts
+for r0, r1 in TL.get("rulers", []):
+    for t0, g in ((r0 + .3, .9), (r1 - .05, .5)):
+        i0 = int(t0 * SR); k = np.arange(int(.09 * SR))
+        if 0 <= i0 < N - len(k): taps[i0:i0 + len(k)] += band(rng.standard_normal(len(k)), 300, 2500) * np.exp(-k / (.012 * SR)) * g
 # --- room tone ---
 room = band(rng.standard_normal(N), 60, 900) * .006
 # --- twist pulse ---

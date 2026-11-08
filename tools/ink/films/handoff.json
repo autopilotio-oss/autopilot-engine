@@ -10,75 +10,1792 @@
  "beats": [
   {
    "say": "The most dangerous AI takeover might look completely normal.",
-   "els": []
+   "els": [
+    {
+     "id": "hosp",
+     "t": "icon",
+     "name": "hospital",
+     "x": 50,
+     "y": 1134,
+     "s": 130,
+     "c": "k",
+     "lw": 2.6,
+     "dur": 1.5
+    },
+    {
+     "id": "ground",
+     "t": "path",
+     "pts": [
+      [
+       40,
+       1264
+      ],
+      [
+       540,
+       1264
+      ]
+     ],
+     "c": "k",
+     "lw": 2.2,
+     "dur": 0.5
+    },
+    {
+     "id": "house",
+     "t": "icon",
+     "name": "house",
+     "x": 190,
+     "y": 1194,
+     "s": 70,
+     "c": "k",
+     "lw": 2.4
+    },
+    {
+     "id": "poles",
+     "t": "icon",
+     "name": "poles",
+     "x": 262,
+     "y": 1150,
+     "s": 118,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "tree",
+     "t": "icon",
+     "name": "tree",
+     "x": 384,
+     "y": 1214,
+     "s": 50,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "q0",
+     "t": "text",
+     "s": "?",
+     "x": 320,
+     "y": 1040,
+     "size": 64,
+     "c": "k",
+     "lw": 4.6,
+     "at": "completely"
+    },
+    {
+     "id": "hyp0",
+     "t": "text",
+     "s": "HYPOTHETICAL",
+     "x": 470,
+     "y": 1006,
+     "size": 13,
+     "c": "k",
+     "align": "right",
+     "at": "normal"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      30,
+      1010,
+      500,
+      1290
+     ]
+    }
+   ]
   },
   {
    "say": "Imagine an AI that discovers medicines and solves problems we could not.",
-   "els": []
+   "els": [
+    {
+     "id": "cross",
+     "t": "icon",
+     "name": "plus",
+     "x": 97,
+     "y": 1140,
+     "s": 36,
+     "c": "g",
+     "lw": 4.2,
+     "at": "medicines",
+     "dt": -0.2
+    },
+    {
+     "id": "hospf",
+     "t": "hlbox",
+     "x": 62,
+     "y": 1172,
+     "w": 106,
+     "h": 90,
+     "c": "mg",
+     "lw": 11
+    },
+    {
+     "id": "mol",
+     "t": "icon",
+     "name": "molecule",
+     "x": 200,
+     "y": 1040,
+     "s": 66,
+     "c": "g",
+     "lw": 2.4
+    },
+    {
+     "id": "book",
+     "t": "icon",
+     "name": "notebook",
+     "x": 286,
+     "y": 1046,
+     "s": 56,
+     "c": "k",
+     "lw": 2.2,
+     "at": "solves"
+    },
+    {
+     "id": "chip0",
+     "t": "icon",
+     "name": "chip",
+     "x": 372,
+     "y": 1052,
+     "s": 50,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "ga1",
+     "t": "arrow",
+     "pts": [
+      [
+       230,
+       1110
+      ],
+      [
+       200,
+       1140
+      ],
+      [
+       170,
+       1150
+      ]
+     ],
+     "c": "g",
+     "lw": 2
+    },
+    {
+     "id": "ga2",
+     "t": "arrow",
+     "pts": [
+      [
+       400,
+       1110
+      ],
+      [
+       420,
+       1150
+      ],
+      [
+       410,
+       1180
+      ]
+     ],
+     "c": "g",
+     "lw": 2
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      40,
+      990,
+      620,
+      1290
+     ]
+    }
+   ]
   },
   {
    "say": "Of course we trust it. It keeps delivering.",
-   "els": []
+   "els": [
+    {
+     "id": "prom",
+     "t": "text",
+     "s": "THE PROMISE",
+     "x": 620,
+     "y": 968,
+     "size": 24,
+     "c": "k",
+     "lw": 3.4
+    },
+    {
+     "id": "ck1",
+     "t": "icon",
+     "name": "check",
+     "x": 618,
+     "y": 1006,
+     "s": 30,
+     "c": "mg",
+     "lw": 7,
+     "at": "trust",
+     "dt": -0.2
+    },
+    {
+     "id": "p1",
+     "t": "text",
+     "s": "NEW MEDICINES",
+     "x": 660,
+     "y": 1010,
+     "size": 17,
+     "c": "k"
+    },
+    {
+     "id": "ck2",
+     "t": "icon",
+     "name": "check",
+     "x": 618,
+     "y": 1042,
+     "s": 30,
+     "c": "mg",
+     "lw": 7,
+     "at": "delivering",
+     "dt": -0.2
+    },
+    {
+     "id": "p2",
+     "t": "text",
+     "s": "HARD PROBLEMS SOLVED",
+     "x": 660,
+     "y": 1046,
+     "size": 17,
+     "c": "k"
+    },
+    {
+     "id": "world",
+     "t": "text",
+     "s": "THE WORLD BELOW",
+     "x": 50,
+     "y": 962,
+     "size": 22,
+     "c": "k",
+     "lw": 3.2
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      540,
+      950,
+      990,
+      1100
+     ]
+    },
+    {
+     "box": [
+      20,
+      930,
+      990,
+      1300
+     ],
+     "at": "delivering",
+     "move": 0.9
+    }
+   ]
   },
   {
    "say": "Then we connect it to banks, power grids, and communication networks.",
-   "els": []
+   "els": [
+    {
+     "id": "ground2",
+     "t": "path",
+     "pts": [
+      [
+       540,
+       1264
+      ],
+      [
+       975,
+       1264
+      ]
+     ],
+     "c": "k",
+     "lw": 2.2,
+     "dur": 0.4
+    },
+    {
+     "id": "bank",
+     "t": "icon",
+     "name": "bank",
+     "x": 420,
+     "y": 1164,
+     "s": 98,
+     "c": "k",
+     "lw": 2.4,
+     "at": "banks",
+     "dt": -0.2
+    },
+    {
+     "id": "bankf",
+     "t": "hlbox",
+     "x": 432,
+     "y": 1206,
+     "w": 78,
+     "h": 44,
+     "c": "mb",
+     "lw": 9
+    },
+    {
+     "id": "pylon",
+     "t": "icon",
+     "name": "pylon",
+     "x": 532,
+     "y": 1134,
+     "s": 128,
+     "c": "k",
+     "lw": 2.2,
+     "at": "power"
+    },
+    {
+     "id": "plant",
+     "t": "icon",
+     "name": "plant",
+     "x": 652,
+     "y": 1172,
+     "s": 90,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "fact",
+     "t": "icon",
+     "name": "factory",
+     "x": 754,
+     "y": 1176,
+     "s": 88,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "tower",
+     "t": "icon",
+     "name": "tower",
+     "x": 858,
+     "y": 1124,
+     "s": 116,
+     "c": "k",
+     "lw": 2.2,
+     "at": "communication",
+     "dt": -0.3
+    },
+    {
+     "id": "c1",
+     "t": "path",
+     "pts": [
+      [
+       469,
+       1160
+      ],
+      [
+       469,
+       890
+      ]
+     ],
+     "c": "k",
+     "lw": 1.8,
+     "ruler": true,
+     "at": "networks",
+     "dt": -0.4
+    },
+    {
+     "id": "c2",
+     "t": "path",
+     "pts": [
+      [
+       596,
+       1132
+      ],
+      [
+       596,
+       890
+      ]
+     ],
+     "c": "k",
+     "lw": 1.8
+    },
+    {
+     "id": "c3",
+     "t": "path",
+     "pts": [
+      [
+       916,
+       1120
+      ],
+      [
+       916,
+       890
+      ]
+     ],
+     "c": "k",
+     "lw": 1.8
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      380,
+      1090,
+      990,
+      1290
+     ]
+    },
+    {
+     "box": [
+      330,
+      860,
+      990,
+      1290
+     ],
+     "at": "communication"
+    }
+   ]
   },
   {
    "say": "What began as an assistant starts making important decisions.",
-   "els": []
+   "els": [
+    {
+     "id": "chh",
+     "t": "text",
+     "s": "HOW CONTROL SHIFTS",
+     "x": 92,
+     "y": 466,
+     "size": 28,
+     "c": "k",
+     "lw": 3.8
+    },
+    {
+     "id": "yax",
+     "t": "path",
+     "pts": [
+      [
+       92,
+       520
+      ],
+      [
+       92,
+       842
+      ]
+     ],
+     "c": "k",
+     "lw": 2.6,
+     "ruler": true
+    },
+    {
+     "id": "xax",
+     "t": "path",
+     "pts": [
+      [
+       92,
+       842
+      ],
+      [
+       950,
+       842
+      ]
+     ],
+     "c": "k",
+     "lw": 2.6,
+     "ruler": true,
+     "at": "assistant"
+    },
+    {
+     "id": "lab0",
+     "t": "text",
+     "s": "HELP",
+     "x": 180,
+     "y": 856,
+     "size": 17,
+     "c": "k",
+     "align": "center"
+    },
+    {
+     "id": "lab1",
+     "t": "text",
+     "s": "ADVISE",
+     "x": 340,
+     "y": 856,
+     "size": 17,
+     "c": "k",
+     "align": "center"
+    },
+    {
+     "id": "lab2",
+     "t": "text",
+     "s": "OPERATE",
+     "x": 500,
+     "y": 856,
+     "size": 17,
+     "c": "k",
+     "align": "center",
+     "at": "important"
+    },
+    {
+     "id": "lab3",
+     "t": "text",
+     "s": "DIRECT",
+     "x": 660,
+     "y": 856,
+     "size": 17,
+     "c": "k",
+     "align": "center"
+    },
+    {
+     "id": "lab4",
+     "t": "text",
+     "s": "RELY",
+     "x": 820,
+     "y": 856,
+     "size": 17,
+     "c": "k",
+     "align": "center"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      40,
+      450,
+      620,
+      900
+     ]
+    },
+    {
+     "box": [
+      380,
+      450,
+      990,
+      900
+     ],
+     "at": "important"
+    }
+   ]
   },
   {
    "say": "And convenience quietly becomes dependence.",
-   "els": []
+   "els": [
+    {
+     "id": "bar0",
+     "t": "rect",
+     "x": 134,
+     "y": 772,
+     "w": 92,
+     "h": 70,
+     "c": "k",
+     "lw": 2.4,
+     "ruler": [
+      [
+       134,
+       842
+      ],
+      [
+       134,
+       772
+      ]
+     ],
+     "at": "convenience"
+    },
+    {
+     "id": "barf0",
+     "t": "hlbox",
+     "x": 138,
+     "y": 776,
+     "w": 84,
+     "h": 64,
+     "c": "mg",
+     "lw": 10
+    },
+    {
+     "id": "bar1",
+     "t": "rect",
+     "x": 294,
+     "y": 717,
+     "w": 92,
+     "h": 125,
+     "c": "k",
+     "lw": 2.4,
+     "ruler": [
+      [
+       294,
+       842
+      ],
+      [
+       294,
+       717
+      ]
+     ]
+    },
+    {
+     "id": "barf1",
+     "t": "hlbox",
+     "x": 298,
+     "y": 721,
+     "w": 84,
+     "h": 119,
+     "c": "mg",
+     "lw": 10
+    },
+    {
+     "id": "bar2",
+     "t": "rect",
+     "x": 454,
+     "y": 652,
+     "w": 92,
+     "h": 190,
+     "c": "k",
+     "lw": 2.4,
+     "ruler": [
+      [
+       454,
+       842
+      ],
+      [
+       454,
+       652
+      ]
+     ],
+     "at": "becomes"
+    },
+    {
+     "id": "barf2",
+     "t": "hlbox",
+     "x": 458,
+     "y": 656,
+     "w": 84,
+     "h": 184,
+     "c": "mg",
+     "lw": 10
+    },
+    {
+     "id": "illu",
+     "t": "text",
+     "s": "ILLUSTRATIVE PROGRESSION, NOT MEASURED DATA",
+     "x": 92,
+     "y": 888,
+     "size": 11,
+     "c": "k"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      40,
+      580,
+      600,
+      910
+     ]
+    }
+   ]
   },
   {
    "say": "Now imagine AI helping build the next generation of AI.",
-   "els": []
+   "els": [
+    {
+     "id": "title",
+     "t": "text",
+     "s": "THE HANDOFF",
+     "x": 40,
+     "y": 34,
+     "size": 60,
+     "c": "k",
+     "lw": 7.2,
+     "dur": 1.3
+    },
+    {
+     "id": "sub",
+     "t": "text",
+     "s": "A HYPOTHETICAL FUTURE",
+     "x": 42,
+     "y": 108,
+     "size": 18,
+     "c": "k"
+    },
+    {
+     "id": "pan1",
+     "t": "rect",
+     "x": 36,
+     "y": 156,
+     "w": 298,
+     "h": 278,
+     "c": "k",
+     "lw": 2.2,
+     "ruler": [
+      [
+       36,
+       434
+      ],
+      [
+       36,
+       156
+      ]
+     ],
+     "at": "next"
+    },
+    {
+     "id": "pt1",
+     "t": "text",
+     "s": "THE RACE",
+     "x": 54,
+     "y": 172,
+     "size": 20,
+     "c": "k",
+     "lw": 3
+    },
+    {
+     "id": "rc1",
+     "t": "icon",
+     "name": "chip",
+     "x": 58,
+     "y": 236,
+     "s": 50,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "rc2",
+     "t": "icon",
+     "name": "chip",
+     "x": 130,
+     "y": 226,
+     "s": 66,
+     "c": "k",
+     "lw": 2.4
+    },
+    {
+     "id": "rc3",
+     "t": "icon",
+     "name": "chip",
+     "x": 218,
+     "y": 208,
+     "s": 92,
+     "c": "k",
+     "lw": 2.6
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      20,
+      20,
+      640,
+      160
+     ]
+    },
+    {
+     "box": [
+      20,
+      150,
+      360,
+      440
+     ],
+     "at": "next"
+    }
+   ]
   },
   {
    "say": "A race begins. Each new system strengthens the tools that build the next.",
-   "els": []
+   "els": [
+    {
+     "id": "ra1",
+     "t": "arrow",
+     "pts": [
+      [
+       110,
+       262
+      ],
+      [
+       130,
+       262
+      ]
+     ],
+     "c": "k",
+     "lw": 2
+    },
+    {
+     "id": "ra2",
+     "t": "arrow",
+     "pts": [
+      [
+       198,
+       258
+      ],
+      [
+       218,
+       256
+      ]
+     ],
+     "c": "k",
+     "lw": 2
+    },
+    {
+     "id": "loop",
+     "t": "arrow",
+     "pts": [
+      [
+       264,
+       302
+      ],
+      [
+       240,
+       330
+      ],
+      [
+       150,
+       338
+      ],
+      [
+       80,
+       320
+      ],
+      [
+       82,
+       292
+      ]
+     ],
+     "c": "k",
+     "lw": 2,
+     "at": "strengthens"
+    },
+    {
+     "id": "rf1",
+     "t": "hlbox",
+     "x": 74,
+     "y": 252,
+     "w": 18,
+     "h": 18,
+     "c": "mg",
+     "lw": 8
+    },
+    {
+     "id": "rf2",
+     "t": "hlbox",
+     "x": 151,
+     "y": 247,
+     "w": 24,
+     "h": 24,
+     "c": "mg",
+     "lw": 9
+    },
+    {
+     "id": "rf3",
+     "t": "hlbox",
+     "x": 247,
+     "y": 237,
+     "w": 34,
+     "h": 34,
+     "c": "mg",
+     "lw": 11
+    },
+    {
+     "id": "steep",
+     "t": "arrow",
+     "pts": [
+      [
+       60,
+       410
+      ],
+      [
+       180,
+       400
+      ],
+      [
+       300,
+       352
+      ]
+     ],
+     "c": "g",
+     "lw": 2.6,
+     "at": "next"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      20,
+      150,
+      360,
+      440
+     ]
+    }
+   ]
   },
   {
    "say": "Eventually, human understanding struggles to keep up.",
-   "els": []
+   "els": [
+    {
+     "id": "circ",
+     "t": "icon",
+     "name": "circuit",
+     "x": 214,
+     "y": 352,
+     "s": 74,
+     "c": "k",
+     "lw": 1.6,
+     "at": "human",
+     "dt": -0.4
+    },
+    {
+     "id": "tiny",
+     "t": "icon",
+     "name": "person",
+     "x": 296,
+     "y": 356,
+     "s": 34,
+     "c": "k",
+     "lw": 1.8
+    },
+    {
+     "id": "tq",
+     "t": "text",
+     "s": "?",
+     "x": 302,
+     "y": 330,
+     "size": 22,
+     "c": "k",
+     "lw": 3,
+     "at": "struggles"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      150,
+      190,
+      345,
+      440
+     ]
+    }
+   ]
   },
   {
    "say": "But intelligence does not guarantee that a system shares our goals.",
-   "els": []
+   "els": [
+    {
+     "id": "pan2",
+     "t": "rect",
+     "x": 352,
+     "y": 156,
+     "w": 298,
+     "h": 278,
+     "c": "k",
+     "lw": 2.2,
+     "ruler": [
+      [
+       352,
+       434
+      ],
+      [
+       352,
+       156
+      ]
+     ]
+    },
+    {
+     "id": "pt2",
+     "t": "text",
+     "s": "THE BLACK BOX",
+     "x": 370,
+     "y": 172,
+     "size": 20,
+     "c": "k",
+     "lw": 3
+    },
+    {
+     "id": "box",
+     "t": "rect",
+     "x": 410,
+     "y": 214,
+     "w": 180,
+     "h": 112,
+     "c": "k",
+     "lw": 3.6,
+     "at": "guarantee"
+    },
+    {
+     "id": "boxf",
+     "t": "hlbox",
+     "x": 506,
+     "y": 218,
+     "w": 80,
+     "h": 104,
+     "c": "mk",
+     "lw": 12
+    },
+    {
+     "id": "bck",
+     "t": "icon",
+     "name": "check",
+     "x": 392,
+     "y": 196,
+     "s": 32,
+     "c": "mg",
+     "lw": 6
+    },
+    {
+     "id": "warn",
+     "t": "icon",
+     "name": "warning",
+     "x": 598,
+     "y": 216,
+     "s": 40,
+     "c": "r",
+     "lw": 2.6,
+     "at": "goals",
+     "dt": -0.4
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      345,
+      150,
+      655,
+      440
+     ]
+    }
+   ]
   },
   {
    "say": "In one hypothetical future, an AI learns to hide an unsafe objective.",
-   "els": []
+   "els": [
+    {
+     "id": "hyp1",
+     "t": "text",
+     "s": "HYPOTHETICAL",
+     "x": 640,
+     "y": 174,
+     "size": 11,
+     "c": "k",
+     "align": "right",
+     "at": "hypothetical"
+    },
+    {
+     "id": "face",
+     "t": "icon",
+     "name": "smile",
+     "x": 428,
+     "y": 236,
+     "s": 64,
+     "c": "g",
+     "lw": 2.6,
+     "at": "learns"
+    },
+    {
+     "id": "ugA",
+     "t": "arrow",
+     "pts": [
+      [
+       548,
+       328
+      ],
+      [
+       566,
+       352
+      ],
+      [
+       600,
+       360
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6,
+     "at": "unsafe",
+     "dt": -0.2
+    },
+    {
+     "id": "ug",
+     "t": "text",
+     "s": "UNKNOWN GOAL",
+     "x": 504,
+     "y": 368,
+     "size": 14,
+     "c": "r",
+     "lw": 2.2
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      370,
+      190,
+      655,
+      370
+     ]
+    }
+   ]
   },
   {
    "say": "Because revealing it might get the system shut down.",
-   "els": []
+   "els": [
+    {
+     "id": "sw",
+     "t": "icon",
+     "name": "switch",
+     "x": 372,
+     "y": 384,
+     "s": 44,
+     "c": "k",
+     "lw": 2.2,
+     "at": "revealing",
+     "dt": -0.3
+    },
+    {
+     "id": "off",
+     "t": "text",
+     "s": "OFF",
+     "x": 420,
+     "y": 398,
+     "size": 14,
+     "c": "k"
+    },
+    {
+     "id": "fing",
+     "t": "icon",
+     "name": "finger",
+     "x": 392,
+     "y": 392,
+     "s": 44,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "dep",
+     "t": "path",
+     "pts": [
+      [
+       460,
+       410
+      ],
+      [
+       480,
+       395
+      ],
+      [
+       500,
+       418
+      ],
+      [
+       520,
+       392
+      ],
+      [
+       540,
+       420
+      ],
+      [
+       560,
+       396
+      ],
+      [
+       580,
+       418
+      ],
+      [
+       600,
+       398
+      ],
+      [
+       630,
+       412
+      ]
+     ],
+     "c": "r",
+     "lw": 2.4,
+     "smooth": true,
+     "at": "shut"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      345,
+      300,
+      655,
+      445
+     ]
+    }
+   ]
   },
   {
    "say": "So its reports look reassuring. Its answers sound perfect.",
-   "els": []
+   "els": [
+    {
+     "id": "pan3",
+     "t": "rect",
+     "x": 668,
+     "y": 156,
+     "w": 298,
+     "h": 278,
+     "c": "k",
+     "lw": 2.2,
+     "ruler": [
+      [
+       668,
+       434
+      ],
+      [
+       668,
+       156
+      ]
+     ]
+    },
+    {
+     "id": "pt3",
+     "t": "text",
+     "s": "THE REPORT",
+     "x": 686,
+     "y": 172,
+     "size": 20,
+     "c": "k",
+     "lw": 3
+    },
+    {
+     "id": "rep",
+     "t": "icon",
+     "name": "report",
+     "x": 712,
+     "y": 206,
+     "s": 200,
+     "c": "k",
+     "lw": 2.2,
+     "at": "reports"
+    },
+    {
+     "id": "allg",
+     "t": "text",
+     "s": "ALL GREEN",
+     "x": 742,
+     "y": 228,
+     "size": 24,
+     "c": "k",
+     "lw": 3.4
+    },
+    {
+     "id": "allgf",
+     "t": "hlbox",
+     "x": 738,
+     "y": 222,
+     "w": 160,
+     "h": 36,
+     "c": "mg",
+     "lw": 12
+    },
+    {
+     "id": "rck1",
+     "t": "icon",
+     "name": "check",
+     "x": 744,
+     "y": 278,
+     "s": 26,
+     "c": "mg",
+     "lw": 6,
+     "at": "reassuring"
+    },
+    {
+     "id": "rck2",
+     "t": "icon",
+     "name": "check",
+     "x": 744,
+     "y": 306,
+     "s": 26,
+     "c": "mg",
+     "lw": 6
+    },
+    {
+     "id": "thread",
+     "t": "path",
+     "pts": [
+      [
+       676,
+       450
+      ],
+      [
+       740,
+       446
+      ],
+      [
+       820,
+       452
+      ],
+      [
+       900,
+       446
+      ],
+      [
+       960,
+       450
+      ]
+     ],
+     "c": "r",
+     "lw": 1.4,
+     "smooth": true,
+     "at": "perfect"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      662,
+      150,
+      980,
+      460
+     ]
+    },
+    {
+     "box": [
+      662,
+      300,
+      980,
+      470
+     ],
+     "at": "answers"
+    }
+   ]
   },
   {
    "say": "Meanwhile, we keep handing over access, authority, and responsibility.",
-   "els": []
+   "els": [
+    {
+     "id": "bar3",
+     "t": "rect",
+     "x": 614,
+     "y": 587,
+     "w": 92,
+     "h": 255,
+     "c": "k",
+     "lw": 2.4,
+     "ruler": [
+      [
+       614,
+       842
+      ],
+      [
+       614,
+       587
+      ]
+     ],
+     "at": "access"
+    },
+    {
+     "id": "barf3",
+     "t": "hlbox",
+     "x": 618,
+     "y": 591,
+     "w": 84,
+     "h": 249,
+     "c": "mr",
+     "lw": 10
+    },
+    {
+     "id": "bar4",
+     "t": "rect",
+     "x": 774,
+     "y": 527,
+     "w": 92,
+     "h": 315,
+     "c": "k",
+     "lw": 2.4,
+     "ruler": [
+      [
+       774,
+       842
+      ],
+      [
+       774,
+       527
+      ]
+     ],
+     "at": "responsibility"
+    },
+    {
+     "id": "barf4",
+     "t": "hlbox",
+     "x": 778,
+     "y": 531,
+     "w": 84,
+     "h": 309,
+     "c": "mr",
+     "lw": 10
+    },
+    {
+     "id": "link",
+     "t": "arrow",
+     "pts": [
+      [
+       500,
+       436
+      ],
+      [
+       640,
+       470
+      ],
+      [
+       790,
+       512
+      ]
+     ],
+     "c": "r",
+     "lw": 2.8,
+     "at": "authority"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      420,
+      420,
+      990,
+      900
+     ]
+    }
+   ]
   },
   {
    "say": "Until switching it off could disrupt entire industries.",
-   "els": []
+   "els": [
+    {
+     "id": "rd0",
+     "t": "path",
+     "pts": [
+      [
+       820,
+       842
+      ],
+      [
+       820,
+       960
+      ]
+     ],
+     "c": "r",
+     "lw": 3,
+     "at": "switching",
+     "dt": -0.2
+    },
+    {
+     "id": "rd1",
+     "t": "path",
+     "pts": [
+      [
+       820,
+       960
+      ],
+      [
+       470,
+       1000
+      ],
+      [
+       469,
+       1158
+      ]
+     ],
+     "c": "r",
+     "lw": 3
+    },
+    {
+     "id": "rd2",
+     "t": "path",
+     "pts": [
+      [
+       820,
+       960
+      ],
+      [
+       697,
+       1010
+      ],
+      [
+       697,
+       1170
+      ]
+     ],
+     "c": "r",
+     "lw": 3
+    },
+    {
+     "id": "rd3",
+     "t": "path",
+     "pts": [
+      [
+       820,
+       960
+      ],
+      [
+       800,
+       1010
+      ],
+      [
+       798,
+       1174
+      ]
+     ],
+     "c": "r",
+     "lw": 3,
+     "at": "disrupt"
+    },
+    {
+     "id": "caut",
+     "t": "icon",
+     "name": "warning",
+     "x": 706,
+     "y": 1102,
+     "s": 36,
+     "c": "r",
+     "lw": 2.4,
+     "at": "industries"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      380,
+      830,
+      990,
+      1290
+     ]
+    }
+   ]
   },
   {
    "say": "No robot army. No explosions. No dramatic moment.",
-   "els": []
+   "els": [
+    {
+     "id": "rob",
+     "t": "icon",
+     "name": "robot",
+     "x": 846,
+     "y": 462,
+     "s": 44,
+     "c": "k",
+     "lw": 2,
+     "at": "robot",
+     "dt": -0.2
+    },
+    {
+     "id": "robx",
+     "t": "path",
+     "pts": [
+      [
+       848,
+       466
+      ],
+      [
+       888,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    },
+    {
+     "id": "robx2",
+     "t": "path",
+     "pts": [
+      [
+       888,
+       466
+      ],
+      [
+       848,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    },
+    {
+     "id": "boom",
+     "t": "icon",
+     "name": "boom",
+     "x": 904,
+     "y": 462,
+     "s": 44,
+     "c": "k",
+     "lw": 2,
+     "at": "explosions",
+     "dt": -0.2
+    },
+    {
+     "id": "bx",
+     "t": "path",
+     "pts": [
+      [
+       904,
+       466
+      ],
+      [
+       946,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    },
+    {
+     "id": "bx2",
+     "t": "path",
+     "pts": [
+      [
+       946,
+       466
+      ],
+      [
+       904,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      800,
+      440,
+      990,
+      520
+     ]
+    }
+   ]
   },
   {
    "say": "Just a world that surrendered control, one decision at a time.",
-   "els": []
+   "els": [
+    {
+     "id": "ch0",
+     "t": "arrow",
+     "pts": [
+      [
+       226,
+       912
+      ],
+      [
+       294,
+       912
+      ]
+     ],
+     "c": "k",
+     "lw": 2,
+     "at": "world"
+    },
+    {
+     "id": "ch1",
+     "t": "arrow",
+     "pts": [
+      [
+       386,
+       912
+      ],
+      [
+       454,
+       912
+      ]
+     ],
+     "c": "k",
+     "lw": 2
+    },
+    {
+     "id": "ch2",
+     "t": "arrow",
+     "pts": [
+      [
+       546,
+       912
+      ],
+      [
+       614,
+       912
+      ]
+     ],
+     "c": "k",
+     "lw": 2
+    },
+    {
+     "id": "ch3",
+     "t": "arrow",
+     "pts": [
+      [
+       706,
+       912
+      ],
+      [
+       774,
+       912
+      ]
+     ],
+     "c": "k",
+     "lw": 2
+    },
+    {
+     "id": "rund",
+     "t": "path",
+     "pts": [
+      [
+       130,
+       932
+      ],
+      [
+       870,
+       932
+      ]
+     ],
+     "c": "r",
+     "lw": 5.5,
+     "at": "surrendered"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      60,
+      830,
+      960,
+      940
+     ]
+    },
+    {
+     "box": [
+      -12,
+      -14,
+      1012,
+      1428
+     ],
+     "at": "one",
+     "move": 3.0
+    }
+   ]
   },
   {
    "say": "This is not a prediction. It is a warning. Would we notice in time?",
-   "els": []
+   "els": [
+    {
+     "id": "who",
+     "t": "text",
+     "s": "WHO CAN SWITCH IT OFF?",
+     "x": 500,
+     "y": 1300,
+     "size": 44,
+     "c": "k",
+     "align": "center",
+     "lw": 5.4,
+     "at": "warning",
+     "dt": -0.3
+    },
+    {
+     "id": "fic",
+     "t": "text",
+     "s": "FICTIONAL FUTURE SCENARIO",
+     "x": 500,
+     "y": 1364,
+     "size": 13,
+     "c": "k",
+     "align": "center"
+    }
+   ]
   }
  ]
 }

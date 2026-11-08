@@ -9,15 +9,309 @@
  "beats": [
   {
    "say": "The scariest AI takeover might have no robots at all.",
-   "els": []
+   "els": [
+    {
+     "id": "rob",
+     "t": "icon",
+     "name": "robot",
+     "x": 846,
+     "y": 462,
+     "s": 44,
+     "c": "k",
+     "lw": 2,
+     "at": "scariest"
+    },
+    {
+     "id": "robx",
+     "t": "path",
+     "pts": [
+      [
+       848,
+       466
+      ],
+      [
+       888,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    },
+    {
+     "id": "robx2",
+     "t": "path",
+     "pts": [
+      [
+       888,
+       466
+      ],
+      [
+       848,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    },
+    {
+     "id": "boom",
+     "t": "icon",
+     "name": "boom",
+     "x": 904,
+     "y": 462,
+     "s": 44,
+     "c": "k",
+     "lw": 2,
+     "at": "robots"
+    },
+    {
+     "id": "bx",
+     "t": "path",
+     "pts": [
+      [
+       904,
+       466
+      ],
+      [
+       946,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    },
+    {
+     "id": "bx2",
+     "t": "path",
+     "pts": [
+      [
+       946,
+       466
+      ],
+      [
+       904,
+       506
+      ]
+     ],
+     "c": "r",
+     "lw": 2.6
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      800,
+      440,
+      990,
+      520
+     ]
+    }
+   ]
+  },
+  {
+   "say": "The most dangerous one might look completely normal.",
+   "els": [
+    {
+     "id": "hosp",
+     "t": "icon",
+     "name": "hospital",
+     "x": 50,
+     "y": 1134,
+     "s": 130,
+     "c": "k",
+     "lw": 2.6,
+     "dur": 1.5
+    },
+    {
+     "id": "ground",
+     "t": "path",
+     "pts": [
+      [
+       40,
+       1264
+      ],
+      [
+       540,
+       1264
+      ]
+     ],
+     "c": "k",
+     "lw": 2.2,
+     "dur": 0.5
+    },
+    {
+     "id": "house",
+     "t": "icon",
+     "name": "house",
+     "x": 190,
+     "y": 1194,
+     "s": 70,
+     "c": "k",
+     "lw": 2.4
+    },
+    {
+     "id": "poles",
+     "t": "icon",
+     "name": "poles",
+     "x": 262,
+     "y": 1150,
+     "s": 118,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "tree",
+     "t": "icon",
+     "name": "tree",
+     "x": 384,
+     "y": 1214,
+     "s": 50,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "q0",
+     "t": "text",
+     "s": "?",
+     "x": 320,
+     "y": 1040,
+     "size": 64,
+     "c": "k",
+     "lw": 4.6,
+     "at": "completely"
+    },
+    {
+     "id": "hyp0",
+     "t": "text",
+     "s": "HYPOTHETICAL",
+     "x": 470,
+     "y": 1006,
+     "size": 13,
+     "c": "k",
+     "align": "right",
+     "at": "normal"
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      30,
+      1010,
+      500,
+      1290
+     ],
+     "move": 0.5
+    }
+   ]
   },
   {
    "say": "Imagine an AI that discovers medicines and solves problems we could not.",
-   "els": []
-  },
-  {
-   "say": "Of course we trust it. It keeps delivering.",
-   "els": []
+   "els": [
+    {
+     "id": "cross",
+     "t": "icon",
+     "name": "plus",
+     "x": 97,
+     "y": 1140,
+     "s": 36,
+     "c": "g",
+     "lw": 4.2,
+     "at": "medicines",
+     "dt": -0.2
+    },
+    {
+     "id": "hospf",
+     "t": "hlbox",
+     "x": 62,
+     "y": 1172,
+     "w": 106,
+     "h": 90,
+     "c": "mg",
+     "lw": 11
+    },
+    {
+     "id": "mol",
+     "t": "icon",
+     "name": "molecule",
+     "x": 200,
+     "y": 1040,
+     "s": 66,
+     "c": "g",
+     "lw": 2.4
+    },
+    {
+     "id": "book",
+     "t": "icon",
+     "name": "notebook",
+     "x": 286,
+     "y": 1046,
+     "s": 56,
+     "c": "k",
+     "lw": 2.2,
+     "at": "solves"
+    },
+    {
+     "id": "chip0",
+     "t": "icon",
+     "name": "chip",
+     "x": 372,
+     "y": 1052,
+     "s": 50,
+     "c": "k",
+     "lw": 2.2
+    },
+    {
+     "id": "ga1",
+     "t": "arrow",
+     "pts": [
+      [
+       230,
+       1110
+      ],
+      [
+       200,
+       1140
+      ],
+      [
+       170,
+       1150
+      ]
+     ],
+     "c": "g",
+     "lw": 2
+    },
+    {
+     "id": "ga2",
+     "t": "arrow",
+     "pts": [
+      [
+       400,
+       1110
+      ],
+      [
+       420,
+       1150
+      ],
+      [
+       410,
+       1180
+      ]
+     ],
+     "c": "g",
+     "lw": 2
+    }
+   ],
+   "cam": [
+    {
+     "box": [
+      40,
+      990,
+      620,
+      1290
+     ]
+    }
+   ]
   }
- ]
+ ],
+ "tail": 1.0
 }
