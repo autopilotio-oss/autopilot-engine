@@ -6,8 +6,8 @@ import tts
 KEY = os.environ.get("ELEVENLABS_API_KEY", "").strip(); tts.KEY = KEY
 if not KEY: sys.exit("No ELEVENLABS_API_KEY")
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "voice", "samples"); os.makedirs(D, exist_ok=True)
-TEXT = ("This doctor does not exist. An AI made her up in under a second... "
-        "And it wasn't a glitch. It did exactly what it was built to do.")
+TEXT = os.environ.get("SAMPLE_TEXT") or ("The most dangerous AI takeover might look completely normal. "
+        "Imagine an AI that discovers medicines, and solves problems we could not. Of course we trust it. It keeps delivering.")
 voices = tts.get("/voices").get("voices", [])
 open(f"{D}/voices.txt", "w").write("\n".join(f'{v.get("name")} | {v.get("category")} | {(v.get("labels") or {})}' for v in voices))
 want = [w.strip().lower() for w in sys.argv[1].split(",")]
@@ -17,7 +17,7 @@ mid = next((m for m in [os.environ.get("ELEVEN_MODEL", ""), "eleven_v4", "eleven
 for w in want:
     v = next((v for v in voices if v.get("name", "").lower().startswith(w)), None)
     if not v: print("missing voice", w); continue
-    body = json.dumps({"text": TEXT, "model_id": mid, "voice_settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True}}).encode()
+    body = json.dumps({"text": TEXT, "model_id": mid, "voice_settings": {"stability": 0.5, "similarity_boost": 0.8, "style": 0.2, "use_speaker_boost": True, "speed": 0.94}}).encode()
     req = urllib.request.Request(f"{tts.API}/text-to-speech/{v['voice_id']}?output_format=mp3_44100_128", data=body, method="POST",
                                  headers={"xi-api-key": KEY, "Content-Type": "application/json", "Accept": "audio/mpeg"})
     try:
