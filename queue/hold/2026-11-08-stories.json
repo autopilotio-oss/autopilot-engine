@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-08-tip",
+  "group": "stories-2026-11-08",
+  "at": "2026-11-08T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-08-tip.jpg"
+  ],
+  "text": "AI tip: Paste your to do list and ask: \"Put this in order. What makes me money first?\""
+ },
+ {
+  "id": "story-2026-11-08-quiz",
+  "group": "stories-2026-11-08",
+  "at": "2026-11-08T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-08-quiz.jpg"
+  ],
+  "text": "Quiz: Which prompt gets the better answer?"
+ },
+ {
+  "id": "story-2026-11-08-answer",
+  "group": "stories-2026-11-08",
+  "at": "2026-11-08T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-08-answer.jpg"
+  ],
+  "text": "Quiz answer: \"Write a friendly 3 line email to a customer whose order is late. Offer 10% off.\". {Details in, quality out.} Tell it who, what and how."
+ },
+ {
+  "id": "story-2026-11-08-fact",
+  "group": "stories-2026-11-08",
+  "at": "2026-11-08T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-08-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can explain official letters. Upload the letter. It tells you what it means, the deadline and what to do next."
+ },
+ {
+  "id": "story-2026-11-08-poll",
+  "group": "stories-2026-11-08",
+  "at": "2026-11-08T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-08-poll.jpg"
+  ],
+  "text": "Poll: What eats more of your week? A) Answering messages B) Chasing payments"
+ }
+]
