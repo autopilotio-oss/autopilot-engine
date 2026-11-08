@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 08 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 83,
+ "folders": [
+  "Inquiries",
+  "Bookings",
+  "Shoot day",
+  "Galleries",
+  "Posts",
+  "Money"
+ ],
+ "cover_bg": "bg-lime",
+ "lava_opacity": 0.2,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px;background:#0a0a0a;color:#D4FF3A\">PHOTOGRAPHERS &middot; ALL 24 INSIDE</div><div class=\"fx\" style=\"left:56px;top:160px;width:70px;height:10px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:56px;top:160px;width:10px;height:70px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:954px;top:160px;width:70px;height:10px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:1014px;top:160px;width:10px;height:70px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:56px;top:840px;width:70px;height:10px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:56px;top:780px;width:10px;height:70px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:954px;top:840px;width:70px;height:10px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:1014px;top:780px;width:10px;height:70px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:500px;top:182px;width:80px;height:24px;display:flex;gap:8px;align-items:center\"><span style=\"width:16px;height:16px;border-radius:50%;background:#0a0a0a\"></span><span style=\"font:700 20px M;color:#0a0a0a\">REC</span></div><div class=\"fx A\" data-fit=\"820\" data-stack=\"h\" data-gap=\"22\" style=\"left:130px;top:250px;font-size:150px;white-space:nowrap;color:#0a0a0a\">CLAUDE PROMPTS</div><div class=\"fx A\" data-fit=\"820\" data-stack=\"h\" style=\"left:130px;top:420px;font-size:150px;white-space:nowrap;color:#0a0a0a\">I WISH I HAD</div><div class=\"fx A\" data-fit=\"820\" data-stack=\"h\" style=\"left:130px;top:590px;font-size:150px;white-space:nowrap;color:#D4FF3A;background:#0a0a0a;padding:14px 18px 0;box-sizing:border-box\">ON DAY ONE</div><div class=\"fx\" style=\"left:130px;top:790px;width:820px;display:flex;justify-content:space-between;font:400 24px M;color:#0a0a0a\"><span>1/250</span><span>F2.8</span><span>ISO 400</span><span>24 SHOTS</span></div><div class=\"fx\" style=\"left:56px;top:900px;width:620px;font:800 34px/1.25 I;letter-spacing:-.3px;color:#0a0a0a\">24 for photographers. Copy. Paste. Swap the [brackets].</div><div class=\"fx\" style=\"left:724px;top:912px;font:700 22px C;letter-spacing:3px;color:#D4FF3A;background:#0a0a0a;padding:16px 24px 14px;border-radius:6px\">SAVE IT &middot; SWIPE &#9656;</div><div class=\"fx\" style=\"left:0;top:1020px;width:1080px;height:200px;background:#0a0a0a\"></div><div class=\"fx\" style=\"left:20px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:20px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:64px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:64px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:108px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:108px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:152px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:152px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:196px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:196px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:240px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:240px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:284px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:284px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:328px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:328px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:372px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:372px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:416px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:416px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:460px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:460px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:504px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:504px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:548px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:548px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:592px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:592px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:636px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:636px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:680px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:680px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:724px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:724px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:768px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:768px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:812px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:812px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:856px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:856px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:900px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:900px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:944px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:944px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:988px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:988px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:1032px;top:1032px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:1032px;top:1192px;width:24px;height:16px;border-radius:4px;background:#f2f2ee\"></div><div class=\"fx\" style=\"left:60px;top:1060px;width:153px;height:120px;background:#1c1c1c;border:2px solid #f2f2ee55;box-sizing:border-box;text-align:center;color:#f2f2ee\"><div style=\"padding-top:18px;font:400 30px/1 A;text-transform:uppercase;color:#f2f2ee;background:#1c1c1c\">Inquiries</div><div style=\"padding-top:20px;font:400 17px M;color:#D4FF3A;background:#1c1c1c\">01 to 04</div></div><div class=\"fx\" style=\"left:221px;top:1060px;width:153px;height:120px;background:#1c1c1c;border:2px solid #f2f2ee55;box-sizing:border-box;text-align:center;color:#f2f2ee\"><div style=\"padding-top:18px;font:400 30px/1 A;text-transform:uppercase;color:#f2f2ee;background:#1c1c1c\">Bookings</div><div style=\"padding-top:20px;font:400 17px M;color:#D4FF3A;background:#1c1c1c\">05 to 08</div></div><div class=\"fx\" style=\"left:383px;top:1060px;width:153px;height:120px;background:#1c1c1c;border:2px solid #f2f2ee55;box-sizing:border-box;text-align:center;color:#f2f2ee\"><div style=\"padding-top:18px;font:400 30px/1 A;text-transform:uppercase;color:#f2f2ee;background:#1c1c1c\">Shoot day</div><div style=\"padding-top:20px;font:400 17px M;color:#D4FF3A;background:#1c1c1c\">09 to 12</div></div><div class=\"fx\" style=\"left:544px;top:1060px;width:153px;height:120px;background:#1c1c1c;border:2px solid #f2f2ee55;box-sizing:border-box;text-align:center;color:#f2f2ee\"><div style=\"padding-top:18px;font:400 30px/1 A;text-transform:uppercase;color:#f2f2ee;background:#1c1c1c\">Galleries</div><div style=\"padding-top:20px;font:400 17px M;color:#D4FF3A;background:#1c1c1c\">13 to 16</div></div><div class=\"fx\" style=\"left:705px;top:1060px;width:153px;height:120px;background:#1c1c1c;border:2px solid #f2f2ee55;box-sizing:border-box;text-align:center;color:#f2f2ee\"><div style=\"padding-top:18px;font:400 30px/1 A;text-transform:uppercase;color:#f2f2ee;background:#1c1c1c\">Posts</div><div style=\"padding-top:20px;font:400 17px M;color:#D4FF3A;background:#1c1c1c\">17 to 20</div></div><div class=\"fx\" style=\"left:867px;top:1060px;width:153px;height:120px;background:#1c1c1c;border:2px solid #f2f2ee55;box-sizing:border-box;text-align:center;color:#f2f2ee\"><div style=\"padding-top:18px;font:400 30px/1 A;text-transform:uppercase;color:#f2f2ee;background:#1c1c1c\">Money</div><div style=\"padding-top:20px;font:400 17px M;color:#D4FF3A;background:#1c1c1c\">21 to 24</div></div>",
+ "slides": [
+  {
+   "cat": "Inquiries",
+   "cards": [
+    {
+     "t": "Price inquiry",
+     "p": "Someone asked my price for a [type] shoot. Reply with my starting price [price], what is included, and two dates.",
+     "star": true
+    },
+    {
+     "t": "Quiet couple",
+     "p": "A couple asked about [date], then went quiet. Write one short follow up that says the date is still free."
+    },
+    {
+     "t": "Pick a package",
+     "p": "Write 5 short questions for a new inquiry so I can suggest a package: event, hours, guests, place, budget."
+    },
+    {
+     "t": "Packages compared",
+     "p": "Explain my three packages in plain words so a client can pick one fast: [paste packages]. A short table."
+    }
+   ]
+  },
+  {
+   "cat": "Bookings",
+   "cards": [
+    {
+     "t": "Booked, now what",
+     "p": "Write a welcome email for [name] after they book: date, deposit received, what happens next, how to reach me.",
+     "star": true
+    },
+    {
+     "t": "Shoot timeline",
+     "p": "Plan a shoot day timeline for a [type] session from [start] to [end]. Include travel, setup and buffer time."
+    },
+    {
+     "t": "Move a session",
+     "p": "A client must move their [date] session because of [reason]. Reply kindly with two new dates and my policy: [policy]."
+    },
+    {
+     "t": "Week before",
+     "p": "Write the week before message: time, address, parking, what to wear, what to bring, and what if it rains."
+    }
+   ]
+  },
+  {
+   "cat": "Shoot day",
+   "cards": [
+    {
+     "t": "What to wear",
+     "p": "Write a what to wear guide for a [type] shoot: colors, patterns to skip, shoes, and one tip for kids.",
+     "star": true
+    },
+    {
+     "t": "Must have photos",
+     "p": "Turn my client's wishes into a must have shot list in order: [paste wishes]. Group by place and people."
+    },
+    {
+     "t": "Family photos",
+     "p": "Turn this family list into group photo combos in a smart order, biggest first, so grandparents leave early: [paste]."
+    },
+    {
+     "t": "Pack the bag",
+     "p": "Make a gear checklist for a [type] shoot from my kit list: [paste]. Group it by bag, add backups."
+    }
+   ]
+  },
+  {
+   "cat": "Galleries",
+   "cards": [
+    {
+     "t": "Gallery is ready",
+     "p": "Write a short email that [name]'s gallery is ready: link [link], how long it stays up, how to download.",
+     "star": true
+    },
+    {
+     "t": "Sneak peek",
+     "p": "Write a short text sending [name] 3 sneak peek photos today and the date the full gallery arrives."
+    },
+    {
+     "t": "Gallery review",
+     "p": "Write a text asking [name] for a Google review a week after delivery. Mention a favorite photo, link [link]."
+    },
+    {
+     "t": "Extra edits",
+     "p": "A client asks for [edit] on [number] photos. Reply kindly with what my edit includes and the extra price [price]."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "Behind the photo",
+     "p": "Write a caption telling the story behind this photo: [describe it]. What I saw, the setting, one tip. 60 words.",
+     "star": true
+    },
+    {
+     "t": "Shoot blog",
+     "p": "Write a 300 word blog post about a [type] shoot at [place] from my notes: [notes]. Plain and warm."
+    },
+    {
+     "t": "Myths, busted",
+     "p": "Write 5 short posts busting myths about [type] photos, like [myth]. One line each, friendly, no jargon."
+    },
+    {
+     "t": "Fill a slow month",
+     "p": "Plan 2 weeks of posts to fill [month] sessions: 6 posts, one idea, photo and caption line each."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Final payment",
+     "p": "Write a polite reminder that [name]'s [amount] balance is due [date] before the shoot. Add my pay link [link].",
+     "star": true
+    },
+    {
+     "t": "Gear and gas",
+     "p": "Sort these expenses into gear, software, travel, prints, other: [paste]. Total each and flag repeats."
+    },
+    {
+     "t": "Real hourly rate",
+     "p": "Here are my last 10 shoots: price, hours shooting, hours editing: [paste]. What did I make per hour?"
+    },
+    {
+     "t": "Print offer",
+     "p": "Write a short note offering [name] prints from their gallery: 3 sizes, prices [prices], order by [date]."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "AGENTS",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for photographers in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}
