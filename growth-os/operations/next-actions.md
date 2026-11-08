@@ -67,6 +67,14 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Nov 7 run (13:15 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 7 run (19:10 UTC): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-08 (08:20 ART)
+- Health: only meta_pixel_configured failing (SEV-3, known). All 20 checkouts ok. 0 failed Actions runs in the last 40 (Nov 8 04:38 to 11:10 UTC; 2 pages builds cancelled by newer pushes). No late heartbeats.
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off. Cost guard ok (no cap hit). 2 days left in FIRST SALES MODE, 0 of 10.
+- Threads: inc:metricool_networks:2026-11-07 still OPEN (SEV-2, Seb messaged Nov 7, not re-sent). getBrandSettings networksData still instagram, twitter, tiktok. All future Threads posts remain draft in Metricool.
+- Metricool: 23 deliveries last 24h (X 20 incl. 15 questions, IG 2, TikTok 1), 0 ERROR. 8 non-draft posts Nov 8 08:15 to Nov 10 08:15 ART (X 6, IG 2), all approved (incl. new IG Invoice Chaser reel uuid -8921258257798052316, Nov 9 10:00). No X question posts queued for Nov 8: operator to confirm the 1 an hour batch is meant to stop. Kit 0 subscribers.
+- ONE CHANGE: NONE (the only commander proposal, "Prove one funnel: 4 owner tools", needs the owner; nothing low risk and internal was proposed).
+- Note: reports.py shows 22 open incidents, mostly stale SEV-3 worker lateness from Nov 1 to 4 that resolved on the next beat; a reconciliation pass that closes incidents whose check now passes would make that number meaningful (candidate for a builder run).
+
 ## Daily Pulse 2026-11-07 (08:15 ART)
 - INCIDENT inc:metricool_networks:2026-11-07 (SEV-2, OPEN, Seb messaged): Threads is no longer connected to Metricool brand 7761544 (getBrandSettings networksData lists only instagram, twitter, tiktok). Timeline: Nov 6 23:30 ART question post 1559628931489418202 published on X but ERROR on Threads ("Media container not created by unknown cause"); at 23:37 ART every later Threads post got a new id and draft=true (Nov 7: 10:00 quiet-quotes reel, 11:00, 14:00, 18:30 prompt pack 5431603720913898413, 20:00; Nov 8: 10:00 late-night reel, 11:00, 14:00, 20:00), and the 23:50 question went out on X only (new uuid 8219941392449095913, approved). Threads THEV metrics now return one Nov 6 row of zeros. No run recorded doing this, so it looks like Metricool reacting to the disconnect. Fix: Seb reconnects Threads in Metricool (he holds the login); then the operator un-drafts the approved Threads posts that are still in the future. Daily Pulse changed no posts. Threads has 0 posts queued until then (cap 12/day + questions).
 - Health: only meta_pixel_configured failing (SEV-3, known). All 20 checkouts ok. 0 failed Actions runs in the last 40 (Nov 7 04:31 to 11:00 UTC, one pages build cancelled by a newer push). No late heartbeats; kit_sync issue #18 closed Nov 6 16:56 UTC.
