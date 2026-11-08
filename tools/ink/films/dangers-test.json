@@ -1,0 +1,398 @@
+{
+ "id": "dangers-test",
+ "style": "clean",
+ "captions": false,
+ "speed": 1.9,
+ "tail": 1.5,
+ "beats": [
+  {
+   "say": "This man sent twenty five million dollars to his boss.",
+   "cam": [
+    {
+     "box": [
+      210,
+      215,
+      790,
+      570
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "tile0",
+     "t": "rect",
+     "x": 220,
+     "y": 250,
+     "w": 270,
+     "h": 145,
+     "c": "k",
+     "pre": true,
+     "lw": 3.2
+    },
+    {
+     "id": "pp0",
+     "t": "icon",
+     "name": "person",
+     "x": 310,
+     "y": 272,
+     "s": 96,
+     "c": "k",
+     "pre": true,
+     "lw": 3.4
+    },
+    {
+     "id": "lb0",
+     "t": "text",
+     "s": "CFO",
+     "x": 232,
+     "y": 370,
+     "size": 14,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "tile1",
+     "t": "rect",
+     "x": 510,
+     "y": 250,
+     "w": 270,
+     "h": 145,
+     "c": "k",
+     "pre": true,
+     "lw": 3.2
+    },
+    {
+     "id": "pp1",
+     "t": "icon",
+     "name": "person",
+     "x": 600,
+     "y": 272,
+     "s": 96,
+     "c": "k",
+     "pre": true,
+     "lw": 3.4
+    },
+    {
+     "id": "lb1",
+     "t": "text",
+     "s": "COWORKER",
+     "x": 522,
+     "y": 370,
+     "size": 14,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "tile2",
+     "t": "rect",
+     "x": 220,
+     "y": 415,
+     "w": 270,
+     "h": 145,
+     "c": "k",
+     "pre": true,
+     "lw": 3.2
+    },
+    {
+     "id": "pp2",
+     "t": "icon",
+     "name": "person",
+     "x": 310,
+     "y": 437,
+     "s": 96,
+     "c": "k",
+     "pre": true,
+     "lw": 3.4
+    },
+    {
+     "id": "lb2",
+     "t": "text",
+     "s": "COWORKER",
+     "x": 232,
+     "y": 535,
+     "size": 14,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "tile3",
+     "t": "rect",
+     "x": 510,
+     "y": 415,
+     "w": 270,
+     "h": 145,
+     "c": "k",
+     "pre": true,
+     "lw": 3.2
+    },
+    {
+     "id": "pp3",
+     "t": "icon",
+     "name": "person",
+     "x": 600,
+     "y": 437,
+     "s": 96,
+     "c": "k",
+     "pre": true,
+     "lw": 3.4
+    },
+    {
+     "id": "lb3",
+     "t": "text",
+     "s": "HIM",
+     "x": 522,
+     "y": 535,
+     "size": 14,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "live",
+     "t": "text",
+     "s": "LIVE VIDEO CALL",
+     "x": 220,
+     "y": 222,
+     "size": 16,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "hl4",
+     "t": "hlbox",
+     "x": 514,
+     "y": 419,
+     "w": 262,
+     "h": 137,
+     "c": "hl",
+     "lw": 40,
+     "at": "man",
+     "dt": -0.1
+    }
+   ]
+  },
+  {
+   "say": "On a live video call. With his coworkers watching.",
+   "cam": [
+    {
+     "box": [
+      505,
+      405,
+      785,
+      565
+     ],
+     "flash": true
+    },
+    {
+     "box": [
+      210,
+      215,
+      790,
+      570
+     ],
+     "at": "coworkers"
+    }
+   ],
+   "els": []
+  },
+  {
+   "say": "None of them were real.",
+   "cam": [
+    {
+     "box": [
+      210,
+      215,
+      790,
+      570
+     ],
+     "at": "none",
+     "shake": 1.2
+    }
+   ],
+   "els": [
+    {
+     "id": "x0a",
+     "t": "path",
+     "pts": [
+      [
+       240,
+       265
+      ],
+      [
+       470,
+       380
+      ]
+     ],
+     "c": "hr",
+     "lw": 16,
+     "dur": 0.12,
+     "shake": 0.9,
+     "at": "none",
+     "dt": -0.1
+    },
+    {
+     "id": "x0b",
+     "t": "path",
+     "pts": [
+      [
+       470,
+       265
+      ],
+      [
+       240,
+       380
+      ]
+     ],
+     "c": "hr",
+     "lw": 16,
+     "dur": 0.12
+    },
+    {
+     "id": "x1a",
+     "t": "path",
+     "pts": [
+      [
+       530,
+       265
+      ],
+      [
+       760,
+       380
+      ]
+     ],
+     "c": "hr",
+     "lw": 16,
+     "dur": 0.12,
+     "shake": 0.5
+    },
+    {
+     "id": "x1b",
+     "t": "path",
+     "pts": [
+      [
+       760,
+       265
+      ],
+      [
+       530,
+       380
+      ]
+     ],
+     "c": "hr",
+     "lw": 16,
+     "dur": 0.12
+    },
+    {
+     "id": "x2a",
+     "t": "path",
+     "pts": [
+      [
+       240,
+       430
+      ],
+      [
+       470,
+       545
+      ]
+     ],
+     "c": "hr",
+     "lw": 16,
+     "dur": 0.12,
+     "shake": 0.5
+    },
+    {
+     "id": "x2b",
+     "t": "path",
+     "pts": [
+      [
+       470,
+       430
+      ],
+      [
+       240,
+       545
+      ]
+     ],
+     "c": "hr",
+     "lw": 16,
+     "dur": 0.12
+    },
+    {
+     "id": "fk",
+     "t": "text",
+     "s": "ALL FAKE",
+     "x": 780,
+     "y": 218,
+     "size": 26,
+     "c": "k",
+     "lw": 4.4,
+     "align": "right",
+     "at": "real",
+     "dt": -0.2
+    },
+    {
+     "id": "hfk",
+     "t": "hl",
+     "ref": "fk",
+     "c": "hr"
+    }
+   ]
+  },
+  {
+   "say": "Every face and every voice on that call was made with AI. And that was two years ago.",
+   "cam": [
+    {
+     "box": [
+      205,
+      580,
+      795,
+      720
+     ],
+     "flash": true
+    }
+   ],
+   "els": [
+    {
+     "id": "amt",
+     "t": "text",
+     "s": "$25,600,000",
+     "x": 500,
+     "y": 600,
+     "size": 64,
+     "c": "k",
+     "lw": 8,
+     "align": "center",
+     "at": "every"
+    },
+    {
+     "id": "hamt",
+     "t": "hl",
+     "ref": "amt",
+     "c": "hr"
+    },
+    {
+     "id": "amt2",
+     "t": "text",
+     "s": "15 TRANSFERS. HONG KONG, 2024.",
+     "x": 500,
+     "y": 690,
+     "size": 20,
+     "c": "k",
+     "align": "center",
+     "at": "voice"
+    },
+    {
+     "id": "q",
+     "t": "text",
+     "s": "SO WHAT IS AI DOING NOW?",
+     "x": 500,
+     "y": 740,
+     "size": 30,
+     "c": "k",
+     "lw": 4.6,
+     "align": "center",
+     "at": "two"
+    }
+   ]
+  }
+ ]
+}
