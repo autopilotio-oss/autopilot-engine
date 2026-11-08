@@ -1,0 +1,23 @@
+{
+ "id": "handoff-hookb",
+ "title": "The AI takeover nobody would notice",
+ "style": "ref",
+ "captions": false,
+ "voice": "Chris",
+ "model": "eleven_v4",
+ "voice_speed": 1.0,
+ "beats": [
+  {
+   "say": "The scariest AI takeover might have no robots at all.",
+   "els": []
+  },
+  {
+   "say": "Imagine an AI that discovers medicines and solves problems we could not.",
+   "els": []
+  },
+  {
+   "say": "Of course we trust it. It keeps delivering.",
+   "els": []
+  }
+ ]
+}

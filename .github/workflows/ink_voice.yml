@@ -1,0 +1,24 @@
+name: Ink voice only
+on:
+  workflow_dispatch:
+    inputs:
+      eps: { description: "Film stems (space separated)", required: true }
+permissions:
+  contents: write
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Voice
+        env: { ELEVENLABS_API_KEY: "${{ secrets.ELEVENLABS_API_KEY }}" }
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          mkdir -p tools/ink/voice
+          for ep in ${{ github.event.inputs.eps }}; do python3 tools/ink/voice.py "$ep" && cp tools/ink/out/$ep.wav tools/ink/out/$ep.words.json tools/ink/voice/; done
+      - name: Commit
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add tools/ink/voice; git diff --cached --quiet && exit 0
+          git commit -m "Ink voice: ${{ github.event.inputs.eps }}"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
