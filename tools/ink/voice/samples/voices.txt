@@ -1,0 +1,37 @@
+Roger - Laid-Back, Casual, Resonant | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'conversational', 'descriptive': 'classy', 'language': 'en', 'gender': 'male'}
+Sarah - Mature, Reassuring, Confident | premade | {'age': 'young', 'accent': 'american', 'use_case': 'entertainment_tv', 'descriptive': 'professional', 'language': 'en', 'gender': 'female'}
+Laura - Enthusiast, Quirky Attitude | premade | {'age': 'young', 'accent': 'american', 'use_case': 'social_media', 'descriptive': 'sassy', 'language': 'en', 'gender': 'female'}
+Charlie - Deep, Confident, Energetic | premade | {'age': 'young', 'accent': 'australian', 'use_case': 'conversational', 'descriptive': 'hyped', 'language': 'en', 'gender': 'male'}
+George - Warm, Captivating Storyteller | premade | {'age': 'middle_aged', 'accent': 'british', 'use_case': 'narrative_story', 'descriptive': 'mature', 'language': 'en', 'gender': 'male'}
+Callum - Husky Trickster | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'characters_animation', 'language': 'en', 'gender': 'male'}
+River - Relaxed, Neutral, Informative | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'conversational', 'descriptive': 'calm', 'language': 'en', 'gender': 'neutral'}
+Harry - Fierce Warrior | premade | {'age': 'young', 'accent': 'american', 'use_case': 'characters_animation', 'descriptive': 'rough', 'language': 'en', 'gender': 'male'}
+Liam - Energetic, Social Media Creator | premade | {'age': 'young', 'accent': 'american', 'use_case': 'social_media', 'descriptive': 'confident', 'language': 'en', 'gender': 'male'}
+Alice - Clear, Engaging Educator | premade | {'age': 'middle_aged', 'accent': 'british', 'use_case': 'informative_educational', 'descriptive': 'professional', 'language': 'en', 'gender': 'female'}
+Matilda - Knowledgable, Professional | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'informative_educational', 'descriptive': 'upbeat', 'language': 'en', 'gender': 'female'}
+Will - Relaxed Optimist | premade | {'age': 'young', 'accent': 'american', 'use_case': 'conversational', 'descriptive': 'chill', 'language': 'en', 'gender': 'male'}
+Jessica - Playful, Bright, Warm | premade | {'age': 'young', 'accent': 'american', 'use_case': 'conversational', 'descriptive': 'cute', 'language': 'en', 'gender': 'female'}
+Eric - Smooth, Trustworthy | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'conversational', 'descriptive': 'classy', 'language': 'en', 'gender': 'male'}
+Bella - Professional, Bright, Warm | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'informative_educational', 'descriptive': 'professional', 'language': 'en', 'gender': 'female'}
+Chris - Charming, Down-to-Earth | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'conversational', 'descriptive': 'casual', 'language': 'en', 'gender': 'male'}
+Brian - Deep, Resonant and Comforting | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'social_media', 'descriptive': 'classy', 'language': 'en', 'gender': 'male'}
+Daniel - Steady Broadcaster | premade | {'age': 'middle_aged', 'accent': 'british', 'use_case': 'informative_educational', 'descriptive': 'formal', 'language': 'en', 'gender': 'male'}
+Lily - Velvety Actress | premade | {'age': 'middle_aged', 'accent': 'british', 'use_case': 'informative_educational', 'descriptive': 'confident', 'language': 'en', 'gender': 'female'}
+Adam - Dominant, Firm | premade | {'age': 'middle_aged', 'accent': 'american', 'use_case': 'social_media', 'language': 'en', 'gender': 'male'}
+Bill - Wise, Mature, Balanced | premade | {'age': 'old', 'accent': 'american', 'use_case': 'advertisement', 'descriptive': 'crisp', 'language': 'en', 'gender': 'male'}
+Liffy | generated | {'age': 'middle-aged', 'language': 'en', 'accent': 'en-nigerian', 'gender': 'female'}
+Juh | generated | {'language': 'en', 'accent': 'en-american'}
+Mark - Natural Conversations | professional | {'age': 'young', 'descriptive': 'casual', 'language': 'en', 'use_case': 'conversational', 'accent': 'american', 'gender': 'male'}
+Hope - upbeat and clear | professional | {'age': 'young', 'descriptive': 'upbeat', 'language': 'en', 'use_case': 'social_media', 'accent': 'american', 'gender': 'female'}
+Titan - Deep, Bold, and Powerful | professional | {'age': 'young', 'descriptive': 'intense', 'language': 'en', 'use_case': 'narrative_story', 'accent': 'american', 'gender': 'male'}
+Mark - Normal | professional | {'age': 'young', 'descriptive': 'wise', 'language': 'en', 'use_case': 'social_media', 'accent': 'american', 'gender': 'male'}
+Jim - Modern, Clear and Collected | professional | {'age': 'middle_aged', 'descriptive': 'confident', 'language': 'en', 'use_case': 'advertisement', 'accent': 'american', 'gender': 'male'}
+Mark - ConvoAI | professional | {'age': 'middle_aged', 'descriptive': 'casual', 'language': 'en', 'use_case': 'conversational', 'accent': 'american', 'gender': 'male'}
+Meher - Romantic & Intimate Narration | professional | {'age': 'young', 'descriptive': 'pleasant', 'language': 'hi', 'use_case': 'narrative_story', 'accent': 'standard', 'gender': 'female'}
+Ayden | professional | {'age': 'young', 'descriptive': 'calm', 'language': 'en', 'use_case': 'social_media', 'accent': 'american', 'gender': 'male'}
+Bruce - deep, dark, gravelly, intense | professional | {'deep': 'serious', 'commanding': 'rough', 'dark': 'raspy', 'intense': 'dramatic', 'batman': 'american'}
+DJ Marathon | professional | {'age': 'young', 'descriptive': 'confident', 'language': 'en', 'use_case': 'social_media', 'accent': 'american', 'gender': 'male'}
+Victor | professional | {'age': 'young', 'language': 'en', 'use_case': 'narrative_story', 'accent': 'american', 'gender': 'male'}
+Jack Bass - The Calm and Gritty Storyteller  | professional | {'descriptive': 'calm', 'age': 'middle_aged', 'language': 'en', 'use_case': 'social_media', 'gender': 'male', 'accent': 'american'}
+Zuri - New Yorker | professional | {'age': 'middle_aged', 'descriptive': 'calm', 'language': 'en', 'use_case': 'conversational', 'accent': 'american', 'gender': 'female'}
+LINA | professional | {'age': 'middle_aged', 'descriptive': 'casual', 'language': 'en', 'use_case': 'conversational', 'accent': 'american', 'gender': 'female'}
