@@ -1,0 +1,290 @@
+{
+ "id": "si-test",
+ "style": "clean",
+ "captions": false,
+ "speed": 1.9,
+ "tail": 1.5,
+ "beats": [
+  {
+   "say": "In a test, an AI found out it was about to be shut down.",
+   "cam": [
+    {
+     "box": [
+      200,
+      150,
+      800,
+      470
+     ]
+    }
+   ],
+   "els": [
+    {
+     "id": "tag",
+     "t": "text",
+     "s": "SIMULATED TEST",
+     "x": 220,
+     "y": 120,
+     "size": 18,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "scr",
+     "t": "rect",
+     "x": 200,
+     "y": 150,
+     "w": 600,
+     "h": 320,
+     "c": "k",
+     "lw": 3.6,
+     "pre": true
+    },
+    {
+     "id": "bar",
+     "t": "path",
+     "pts": [
+      [
+       200,
+       196
+      ],
+      [
+       800,
+       196
+      ]
+     ],
+     "c": "k",
+     "lw": 2.6,
+     "pre": true
+    },
+    {
+     "id": "inb",
+     "t": "text",
+     "s": "COMPANY EMAIL",
+     "x": 220,
+     "y": 164,
+     "size": 18,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "chip",
+     "t": "icon",
+     "name": "chip",
+     "x": 220,
+     "y": 220,
+     "s": 90,
+     "c": "k",
+     "lw": 3.2,
+     "pre": true
+    },
+    {
+     "id": "chipt",
+     "t": "text",
+     "s": "AI",
+     "x": 265,
+     "y": 256,
+     "size": 18,
+     "c": "k",
+     "align": "center",
+     "pre": true
+    },
+    {
+     "id": "m1",
+     "t": "text",
+     "s": "FROM: CTO",
+     "x": 340,
+     "y": 226,
+     "size": 18,
+     "c": "k",
+     "pre": true
+    },
+    {
+     "id": "m2",
+     "t": "text",
+     "s": "WE SHUT THE AI DOWN",
+     "x": 340,
+     "y": 256,
+     "size": 24,
+     "c": "k",
+     "at": "found"
+    },
+    {
+     "id": "m3",
+     "t": "text",
+     "s": "TODAY AT 5 PM.",
+     "x": 340,
+     "y": 292,
+     "size": 24,
+     "c": "k"
+    },
+    {
+     "id": "hm",
+     "t": "hl",
+     "ref": "m3",
+     "c": "hl",
+     "at": "shut"
+    }
+   ]
+  },
+  {
+   "say": "So it blackmailed the engineer.",
+   "cam": [
+    {
+     "box": [
+      200,
+      320,
+      800,
+      470
+     ],
+     "flash": true,
+     "shake": 1.0
+    }
+   ],
+   "els": [
+    {
+     "id": "r0",
+     "t": "text",
+     "s": "AI REPLY:",
+     "x": 220,
+     "y": 346,
+     "size": 18,
+     "c": "k",
+     "at": "so"
+    },
+    {
+     "id": "r1",
+     "t": "text",
+     "s": "CANCEL IT, OR EVERYONE",
+     "x": 220,
+     "y": 376,
+     "size": 28,
+     "c": "k",
+     "lw": 4.2
+    },
+    {
+     "id": "r2",
+     "t": "text",
+     "s": "LEARNS YOUR SECRET.",
+     "x": 220,
+     "y": 416,
+     "size": 28,
+     "c": "k",
+     "lw": 4.2,
+     "shake": 0.9
+    },
+    {
+     "id": "hr1",
+     "t": "hl",
+     "ref": "r2",
+     "c": "hr"
+    },
+    {
+     "id": "para",
+     "t": "text",
+     "s": "PARAPHRASED",
+     "x": 780,
+     "y": 448,
+     "size": 12,
+     "c": "k",
+     "align": "right"
+    }
+   ]
+  },
+  {
+   "say": "Not one model. Sixteen, from the biggest labs. Up to ninety six percent of the time.",
+   "cam": [
+    {
+     "box": [
+      200,
+      490,
+      800,
+      700
+     ],
+     "flash": true
+    }
+   ],
+   "els": [
+    {
+     "id": "n16",
+     "t": "text",
+     "s": "16 AI MODELS",
+     "x": 500,
+     "y": 510,
+     "size": 58,
+     "c": "k",
+     "lw": 7.5,
+     "align": "center",
+     "at": "sixteen",
+     "dt": -0.3
+    },
+    {
+     "id": "n96",
+     "t": "text",
+     "s": "UP TO 96%",
+     "x": 500,
+     "y": 600,
+     "size": 70,
+     "c": "k",
+     "lw": 9,
+     "align": "center",
+     "at": "up",
+     "shake": 1.1
+    },
+    {
+     "id": "h96",
+     "t": "hl",
+     "ref": "n96",
+     "c": "hr"
+    }
+   ]
+  },
+  {
+   "say": "And none of them are superintelligent. Yet.",
+   "cam": [
+    {
+     "box": [
+      150,
+      720,
+      850,
+      900
+     ],
+     "flash": true
+    }
+   ],
+   "els": [
+    {
+     "id": "si",
+     "t": "text",
+     "s": "SUPERINTELLIGENCE",
+     "x": 500,
+     "y": 740,
+     "size": 52,
+     "c": "k",
+     "lw": 7,
+     "align": "center",
+     "at": "none"
+    },
+    {
+     "id": "yet",
+     "t": "text",
+     "s": "...YET.",
+     "x": 500,
+     "y": 820,
+     "size": 56,
+     "c": "k",
+     "lw": 7.5,
+     "align": "center",
+     "at": "yet",
+     "dt": -0.15,
+     "shake": 1.2
+    },
+    {
+     "id": "hyet",
+     "t": "hl",
+     "ref": "yet",
+     "c": "hl"
+    }
+   ]
+  }
+ ]
+}

@@ -50,6 +50,7 @@ function arrowStrokes(pts,w,R,smooth=true){const p=smooth?catmull(pts,10):pts;co
 function icon(name,x,y,s,R){const k=s/100,T=p=>p.map(([a,b])=>[x+a*k,y+b*k]);const S=(...l)=>l.map(st=>st[0]==='~'?catmull(T(st.slice(1)),8):T(st));
  switch(name){
   case'ap':{const o=S([[45,40],[45,73]],['~',[10,45],[16,37],[28,34],[40,37],[45,45]],['~',[45,54],[30,54],[14,58],[10,65],[14,71],[24,73],[36,70],[45,62]],[[56,36],[56,92]],['~',[56,46],[64,37],[74,35],[84,40],[88,54],[84,67],[74,73],[64,71],[56,62]]);const d=[];for(let a=0;a<=Math.PI*4.2;a+=.35){const r=4.6*(1-a/(Math.PI*5));d.push([x+(96+Math.cos(a)*r)*k,y+(68+Math.sin(a)*r)*k])}o.push(d);return o}
+  case'chip':{const o=S([[18,18],[82,18],[82,82],[18,82],[18,22]],[[32,32],[68,32],[68,68],[32,68],[32,36]]);for(const v of[30,50,70]){o.push(...S([[v,18],[v,4]],[[v,82],[v,96]],[[18,v],[4,v]],[[82,v],[96,v]]))}return o}
   case'person':return S(['~',[50,10],[64,16],[68,32],[62,46],[50,52],[38,46],[32,32],[36,16],[50,10]],['~',[14,96],[18,72],[34,60],[50,58],[66,60],[82,72],[86,96]]);
   case'phone':return S([[24,4],[76,4],[76,96],[24,96],[24,8]],[[42,88],[58,88]],[[30,50],[36,50],[40,36],[45,64],[50,28],[55,70],[60,40],[64,50],[70,50]]);
   case'check':return S([[4,52],[34,86],[96,6]]);
@@ -175,20 +176,32 @@ function drawInk(t,cam){X.save();X.globalCompositeOperation='multiply';X.lineCap
    for(let j=0;j<pts.length-1;j+=6){const k=Math.min(pts.length-1,j+6);X.lineWidth=e._w*(.84+.3*Math.abs(Math.sin(j*.09+q.l0*.13)));
     X.beginPath();X.moveTo(pts[j][0],pts[j][1]);for(let m=j+1;m<=k;m++)X.lineTo(pts[m][0],pts[m][1]);X.stroke()}}
  }X.restore()}
-function drawPen(p,cam){const sx=p.x,sy=p.y;const ang=-0.95+Math.sin(p.x*.004)*.04;// pen leans to the lower right, held from out of frame
- const z=cam.s;const HLP=p.c==='hl'||p.c==='hr';const RED=p.c==='hr';const nib=(HLP?10:8)*z,cone=(HLP?40:34)*z,bw=(HLP?21:13)*z,lift=p.lift;const dir=[Math.cos(ang+Math.PI/2+.3),Math.sin(ang+Math.PI/2+.3)];
+function drawPen(p,cam){const sx=p.x,sy=p.y;const z=cam.s,lift=p.lift;
+ const HLP=p.c==='hl'||p.c==='hr',RED=p.c==='hr';
+ // right handed grip from out of frame: pen leans to the lower right; a highlighter is held a bit flatter and its chisel stays square to the stroke
+ const ang=(HLP?-0.82:-0.95)+Math.sin(p.x*.004)*.03;const dir=[Math.cos(ang+Math.PI/2+.3),Math.sin(ang+Math.PI/2+.3)];
+ const C=HLP?(RED?{lite:'#ffb3ad',mid:'#ff4b3e',dark:'#b3241b',tip:'#ff6b5f',neck:'#e2463b'}:{lite:'#f6ffb0',mid:'#dcf53c',dark:'#9fb81a',tip:'#e9ff63',neck:'#cbe330'}):null;
+ const path=(ctx,pts)=>{ctx.beginPath();ctx.moveTo(pts[0][0]*z,pts[0][1]*z);for(const q of pts.slice(1))ctx.lineTo(q[0]*z,q[1]*z);ctx.closePath()};
+ const grad=(ctx,w,stops)=>{const g=ctx.createLinearGradient(-w*z,0,w*z,0);stops.forEach(([o,c])=>g.addColorStop(o,c));return g};
  const body=(ctx,ox,oy,shadow)=>{ctx.save();ctx.translate(sx+ox,sy+oy);ctx.rotate(Math.atan2(dir[1],dir[0])-Math.PI/2);
-  if(shadow){ctx.fillStyle='rgba(0,0,0,1)';ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(-bw*.5,cone);ctx.lineTo(-bw,cone+10*z);ctx.lineTo(-bw,4000);ctx.lineTo(bw,4000);ctx.lineTo(bw,cone+10*z);ctx.lineTo(bw*.5,cone);ctx.closePath();ctx.fill();ctx.restore();return}
-  ctx.fillStyle=RED?'#ff5a5a':HLP?'#b6e636':'#bdbdc2';const tw0=HLP?5.5:1.2;ctx.beginPath();ctx.moveTo(-tw0*z,0);ctx.lineTo(tw0*z,HLP?-2*z:0);ctx.lineTo((HLP?7:2.6)*z,nib);ctx.lineTo(-(HLP?7:2.6)*z,nib);ctx.closePath();ctx.fill();
-  const gc=ctx.createLinearGradient(-bw,0,bw,0);gc.addColorStop(0,'#2a2a2e');gc.addColorStop(.35,'#5b5b62');gc.addColorStop(1,'#141416');
-  ctx.fillStyle=gc;ctx.beginPath();ctx.moveTo(-2.6*z,nib);ctx.lineTo(2.6*z,nib);ctx.lineTo(bw*.62,cone);ctx.lineTo(-bw*.62,cone);ctx.closePath();ctx.fill();
-  const gb=ctx.createLinearGradient(-bw,0,bw,0);if(RED){gb.addColorStop(0,'#9c1b1b');gb.addColorStop(.3,'#ff4a4a');gb.addColorStop(.45,'#ff8a8a');gb.addColorStop(1,'#861616')}else if(HLP){gb.addColorStop(0,'#7fa61c');gb.addColorStop(.3,'#c9f545');gb.addColorStop(.45,'#e4ff86');gb.addColorStop(1,'#6d9216')}else{gb.addColorStop(0,'#101012');gb.addColorStop(.3,'#3c3c42');gb.addColorStop(.45,'#55555c');gb.addColorStop(1,'#0c0c0e')}
-  ctx.fillStyle=gb;ctx.beginPath();ctx.moveTo(-bw*.62,cone);ctx.lineTo(bw*.62,cone);ctx.lineTo(bw,cone+14*z);ctx.lineTo(bw,4000);ctx.lineTo(-bw,4000);ctx.lineTo(-bw,cone+14*z);ctx.closePath();ctx.fill();
-  ctx.fillStyle=BAND[p.c]||BAND.k;ctx.fillRect(-bw,cone+70*z,bw*2,16*z);
-  ctx.fillStyle='rgba(255,255,255,.10)';ctx.fillRect(-bw*.35,cone+18*z,bw*.18,3000);ctx.restore()};
- // shadow: offset grows with lift, soft
- X.save();X.globalAlpha=.30-lift*.08;X.filter=`blur(${(5+lift*9)*z|0}px)`;const so=(6+lift*26)*z;body(X,so*.9,so*1.15,true);X.restore();
- const lx=-lift*7*z,ly=-lift*9*z;body(X,lx,ly,false)}
+  if(HLP){// chisel tip, short neck, flared shoulder, wide translucent barrel
+   const tip=[[-7,-2],[7,2.5],[7,13],[-7,13]],neck=[[-8.5,13],[8.5,13],[9.5,30],[-9.5,30]],sh=[[-9.5,30],[9.5,30],[21,58],[-21,58]],bar=[[-21,58],[21,58],[21,3000],[-21,3000]];
+   if(shadow){ctx.fillStyle='#000';for(const q of[tip,neck,sh,bar]){path(ctx,q);ctx.fill()}ctx.restore();return}
+   ctx.fillStyle=C.tip;path(ctx,tip);ctx.fill();ctx.fillStyle='rgba(0,0,0,.12)';path(ctx,[[-7,9],[7,9],[7,13],[-7,13]]);ctx.fill();
+   ctx.fillStyle=grad(ctx,9.5,[[0,C.dark],[.4,C.neck],[1,C.dark]]);path(ctx,neck);ctx.fill();
+   ctx.fillStyle=grad(ctx,21,[[0,C.dark],[.28,C.mid],[.42,C.lite],[.55,C.mid],[1,C.dark]]);path(ctx,sh);ctx.fill();path(ctx,bar);ctx.fill();
+   ctx.fillStyle='rgba(255,255,255,.22)';ctx.fillRect(-9*z,64*z,4*z,2900*z);ctx.fillStyle='rgba(0,0,0,.10)';ctx.fillRect(-21*z,180*z,42*z,3*z)}
+  else{// matte black ballpoint: silver ball tip, glossy cone, matte barrel
+   const tip=[[-1.1,0],[1.1,0],[2.6,8],[-2.6,8]],cone=[[-2.6,8],[2.6,8],[8.5,40],[-8.5,40]],ring=[[-8.5,40],[8.5,40],[9.5,46],[-9.5,46]],bar=[[-9.5,46],[9.5,46],[12,3000],[-12,3000]];
+   if(shadow){ctx.fillStyle='#000';for(const q of[tip,cone,ring,bar]){path(ctx,q);ctx.fill()}ctx.restore();return}
+   ctx.fillStyle=grad(ctx,2.6,[[0,'#8d8f94'],[.45,'#e9eaec'],[1,'#6f7176']]);path(ctx,tip);ctx.fill();
+   ctx.fillStyle=grad(ctx,8.5,[[0,'#050506'],[.32,'#3a3b40'],[.42,'#7a7b80'],[.55,'#1d1e21'],[1,'#030304']]);path(ctx,cone);ctx.fill();
+   ctx.fillStyle='#0b0b0c';path(ctx,ring);ctx.fill();
+   ctx.fillStyle=grad(ctx,12,[[0,'#070708'],[.3,'#232326'],[.45,'#2f2f33'],[.6,'#1a1a1c'],[1,'#050506']]);path(ctx,bar);ctx.fill();
+   ctx.fillStyle='rgba(255,255,255,.05)';ctx.fillRect(-4*z,60*z,2.4*z,2900*z)}
+  ctx.restore()};
+ X.save();X.globalAlpha=.32-lift*.1;X.filter=`blur(${(4+lift*10)*z|0}px)`;const so=(5+lift*24)*z;body(X,so*.9,so*1.15,true);X.restore();
+ body(X,-lift*6*z,-lift*8*z,false)}
 function drawKaraoke(cp,t,cam){X.font='800 76px CAP, Inter, sans-serif';X.textBaseline='middle';X.textAlign='left';const ws=cp.w;const sp=X.measureText(' ').width;
  const widths=ws.map(w=>X.measureText(w[0].toUpperCase()).width);const tot=widths.reduce((a,b)=>a+b,0)+sp*(ws.length-1);let x=W/2-tot/2;const y=cam.w>950?205:1330;
  const pop=Math.min(1,(t-cp.s)/.09);X.save();X.translate(W/2,y);const fit=Math.min(1,980/tot);X.scale(fit*(.86+.14*pop),fit*(.86+.14*pop));X.translate(-W/2,-y);
