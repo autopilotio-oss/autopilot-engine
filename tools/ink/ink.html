@@ -72,6 +72,11 @@ function icon(name,x,y,s,R){const k=s/100,T=p=>p.map(([a,b])=>[x+a*k,y+b*k]);con
   case'boom':return S([[50,4],[60,34],[92,28],[68,52],[90,80],[56,68],[50,98],[42,68],[10,80],[32,52],[8,28],[40,34],[50,4]]);
   case'report':return S([[12,4],[88,4],[88,96],[12,96],[12,4]],[[24,62],[76,62]],[[24,76],[76,76]],[[24,88],[60,88]]);
   case'circuit':return S([[0,20],[30,20],[40,30],[70,30]],[[0,44],[22,44],[34,56],[80,56]],[[10,70],[46,70],[56,80],[90,80]],[[30,20],[30,6]],[[56,80],[56,96]],[[70,30],[84,16]]);
+  case'key':return[ell(x+24*k,y+50*k,16*k,16*k,R,1.06)[0],...S([[40,50],[96,50]],[[80,50],[80,66]],[[92,50],[92,62]])];
+  case'eye':return[...S(['~',[4,50],[28,28],[50,22],[72,28],[96,50],[72,72],[50,78],[28,72],[4,50]]),ell(x+50*k,y+50*k,15*k,15*k,R,1.06)[0],ell(x+50*k,y+50*k,4*k,4*k,R,1.1)[0]];
+  case'stairs':return S([[0,10],[20,10],[20,30],[40,30],[40,50],[60,50],[60,70],[80,70],[80,90],[100,90]]);
+  case'meter':return[...S(['~',[6,90],[14,50],[50,16],[86,50],[94,90]],[[6,90],[94,90]],[[14,50],[22,56]],[[50,16],[50,26]],[[86,50],[78,56]])];
+  case'diamond':return S([[50,4],[96,50],[50,96],[4,50],[50,4]]);
   case'person':return S(['~',[50,10],[64,16],[68,32],[62,46],[50,52],[38,46],[32,32],[36,16],[50,10]],['~',[14,96],[18,72],[34,60],[50,58],[66,60],[82,72],[86,96]]);
   case'phone':return S([[24,4],[76,4],[76,96],[24,96],[24,8]],[[42,88],[58,88]],[[30,50],[36,50],[40,36],[45,64],[50,28],[55,70],[60,40],[64,50],[70,50]]);
   case'check':return S([[4,52],[34,86],[96,6]]);
@@ -145,7 +150,7 @@ function schedule(){const B=FILM.beats;let tEnd=0;
   // compress the beat if the ink would overrun into the next beat
   const live=list.filter(e=>!e.pre);if(live.length){const last=Math.max(...live.map(e=>e._e)),lim=b._e-.15;
    if(last>lim){const s0=Math.min(...live.map(e=>e._s));const f=Math.max(.35,(lim-s0)/(last-s0));
-    if(REF&&f<.85){// keep the first strokes live at human speed; the rest arrive by jump cut while the pen is out of shot
+    if(REF&&f<.5){// keep the first strokes live at human speed; the rest arrive by jump cut while the pen is out of shot
      let t=s0;const keep=[],pop=[];for(const e of live){const d=e._e-e._s;if(t+d<=lim-.9||!keep.length){e._s=Math.max(e._s,t);e._e=e._s+d;t=e._e+.12;keep.push(e)}else pop.push(e)}
      const n=pop.length,a=t+.55,b=lim-.1;pop.forEach((e,i)=>{e._pop=true;e._s=a+(b-a)*(n>1?i/(n-1):.5);e._dur=.02;e._e=e._s+.02;CUTS.push(e._s)})}
     else for(const e of live){e._s=s0+(e._s-s0)*f;e._e=s0+(e._e-s0)*f}}}
@@ -185,7 +190,7 @@ function camAt(t){let i=0;while(i+1<CAMK.length&&CAMK[i+1].t<=t)i++;const k=CAMK
  const hold=Math.max(0,t-k.t-k.mv);if(REF){const nc=CUTS.filter(c=>c<=t&&c>k.t).length;if(nc){w*=1+((nc%2)?-.035:.02);cx+=((nc%3)-1)*w*.02}w*=1-Math.min(.035,hold*.007);cx+=Math.min(hold*.006,.03)*w*(k.dir||1)}else w*=PUNCH?1-Math.min(.08,hold*.022):1-Math.min(.05,hold*.008);
  // follow the pen softly: keep its recent position inside the middle of the frame
  const hh=w*H/W;let px=0,py=0,n=0;for(let j=0;j<6;j++){const q=penAt(t-j*.12);px+=q.x;py+=q.y;n++}px/=n;py/=n;
- if(px>-50&&px<SW+50&&py>-50&&py<SH+50){const mx=w*(PUNCH?.42:.32),my=hh*(PUNCH?.38:.30);if(px<cx-mx)cx=px+mx;if(px>cx+mx)cx=px-mx;if(py<cy-my)cy=py+my;if(py>cy+my)cy=py-my}
+ if(!REF&&px>-50&&px<SW+50&&py>-50&&py<SH+50){const mx=w*(PUNCH?.42:.32),my=hh*(PUNCH?.38:.30);if(px<cx-mx)cx=px+mx;if(px>cx+mx)cx=px-mx;if(py<cy-my)cy=py+my;if(py>cy+my)cy=py-my}
  // stay on the sheet when zoomed in
  if(w<SW+20)cx=Math.max(w/2-14,Math.min(SW+14-w/2,cx));if(hh<SH+20)cy=Math.max(hh/2-14-hh*.24,Math.min(SH+14-hh/2+hh*(REF?.1:.32),cy));
  if(REF){cx+=Math.sin(t*.41)*w*.0016;cy+=Math.cos(t*.37)*w*.0016}else if(!PUNCH){cx+=Math.sin(t*.53)*w*.004+Math.sin(t*1.31)*w*.0018;cy+=Math.cos(t*.47)*w*.004+Math.sin(t*1.17)*w*.002}
