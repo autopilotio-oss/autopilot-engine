@@ -1,0 +1,21 @@
+name: Ink voice auditions
+on:
+  workflow_dispatch:
+    inputs:
+      voices: { description: "Comma separated ElevenLabs voice names", required: true, default: "Chris,Eric,Liam,Jessica,Brian" }
+permissions:
+  contents: write
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Auditions
+        env: { ELEVENLABS_API_KEY: "${{ secrets.ELEVENLABS_API_KEY }}" }
+        run: python3 tools/ink/voice_samples.py "${{ github.event.inputs.voices }}"
+      - name: Commit
+        run: |
+          git config user.name "autopilotio-oss"; git config user.email "autopilotio-oss@users.noreply.github.com"
+          git add tools/ink/voice/samples; git diff --cached --quiet && exit 0
+          git commit -m "Ink voice auditions"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 6; done
