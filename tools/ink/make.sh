@@ -14,7 +14,7 @@ cp "$K/out/${EP}_p0.tl.json" "$K/out/${EP}_v.tl.json"
 for i in $(seq 0 $((P - 1))); do echo "file '$K/out/${EP}_p$i.mp4'"; done > "$K/out/${EP}_p.txt"
 ffmpeg -v error -y -f concat -safe 0 -i "$K/out/${EP}_p.txt" -c copy "$K/out/${EP}_v.mp4"
 python3 "$K/mix.py" "$EP"
-ffmpeg -v error -y -i "$K/out/${EP}_v.mp4" -i "$K/out/${EP}_mix.wav" -map 0:v -map 1:a -c:v copy \
+ffmpeg -v error -y -i "$K/out/${EP}_v.mp4" -i "$K/out/${EP}_mix.wav" -map 0:v -map 1:a -c:v libx264 -preset slow -crf 22 -maxrate 3500k -bufsize 7000k -pix_fmt yuv420p \
   -af "loudnorm=I=-14:TP=-1.5:LRA=9" -c:a aac -b:a 192k -ar 44100 -shortest -movflags +faststart "$ROOT/docs/media/ink/$EP.mp4"
 ffmpeg -v error -y -ss 0.4 -i "$ROOT/docs/media/ink/$EP.mp4" -frames:v 1 -q:v 3 "$ROOT/docs/media/ink/$EP-poster.jpg"
 rm -f "$K/out/${EP}_p"*
