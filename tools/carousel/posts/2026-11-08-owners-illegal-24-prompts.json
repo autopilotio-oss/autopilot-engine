@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 08 2026",
+ "theme": "dark",
+ "music": "tense",
+ "seed": 91,
+ "folders": [
+  "Start here",
+  "Receipts",
+  "Late payers",
+  "Reviews",
+  "Posts",
+  "Prices"
+ ],
+ "cover_bg": "bg-black",
+ "lava_opacity": 0.15,
+ "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px;background:#D4FF3A;color:#0a0a0a\">BUSINESS OWNERS &middot; ALL 24 INSIDE</div><div class=\"fx\" style=\"left:56px;top:150px;width:968px;height:500px;background:#f2f2ee;border-radius:6px\"></div><div class=\"fx\" style=\"left:96px;top:180px;width:888px;display:flex;justify-content:space-between;font:700 20px C;letter-spacing:3px;color:#0a0a0a;background:#f2f2ee\"><span>CASE FILE 24</span></div><div class=\"fx A\" style=\"left:96px;top:226px;font-size:58px;line-height:1;color:#0a0a0a;background:#f2f2ee\">EXHIBIT A: 24 PROMPTS</div><div class=\"fx\" style=\"left:96px;top:306px;width:888px;background:#f2f2ee;color:#0a0a0a\"><div style=\"background:#f2f2ee;display:flex;align-items:center;height:50px;border-top:2px solid #0a0a0a22\"><span style=\"width:70px;font:400 20px M;color:#0a0a0a;background:#f2f2ee\">01</span><span style=\"width:250px;font:400 32px/1 A;text-transform:uppercase;color:#0a0a0a;background:#f2f2ee\">Start here</span><span style=\"width:210px;height:22px;background:#0a0a0a\"></span><span style=\"margin-left:auto;font:400 18px M;color:#0a0a0a;background:#f2f2ee\">01 to 04</span></div><div style=\"background:#f2f2ee;display:flex;align-items:center;height:50px;border-top:2px solid #0a0a0a22\"><span style=\"width:70px;font:400 20px M;color:#0a0a0a;background:#f2f2ee\">02</span><span style=\"width:250px;font:400 32px/1 A;text-transform:uppercase;color:#0a0a0a;background:#f2f2ee\">Receipts</span><span style=\"width:170px;height:22px;background:#0a0a0a\"></span><span style=\"margin-left:auto;font:400 18px M;color:#0a0a0a;background:#f2f2ee\">05 to 08</span></div><div style=\"background:#f2f2ee;display:flex;align-items:center;height:50px;border-top:2px solid #0a0a0a22\"><span style=\"width:70px;font:400 20px M;color:#0a0a0a;background:#f2f2ee\">03</span><span style=\"width:250px;font:400 32px/1 A;text-transform:uppercase;color:#0a0a0a;background:#f2f2ee\">Late payers</span><span style=\"width:240px;height:22px;background:#0a0a0a\"></span><span style=\"margin-left:auto;font:400 18px M;color:#0a0a0a;background:#f2f2ee\">09 to 12</span></div><div style=\"background:#f2f2ee;display:flex;align-items:center;height:50px;border-top:2px solid #0a0a0a22\"><span style=\"width:70px;font:400 20px M;color:#0a0a0a;background:#f2f2ee\">04</span><span style=\"width:250px;font:400 32px/1 A;text-transform:uppercase;color:#0a0a0a;background:#f2f2ee\">Reviews</span><span style=\"width:150px;height:22px;background:#0a0a0a\"></span><span style=\"margin-left:auto;font:400 18px M;color:#0a0a0a;background:#f2f2ee\">13 to 16</span></div><div style=\"background:#f2f2ee;display:flex;align-items:center;height:50px;border-top:2px solid #0a0a0a22\"><span style=\"width:70px;font:400 20px M;color:#0a0a0a;background:#f2f2ee\">05</span><span style=\"width:250px;font:400 32px/1 A;text-transform:uppercase;color:#0a0a0a;background:#f2f2ee\">Posts</span><span style=\"width:200px;height:22px;background:#0a0a0a\"></span><span style=\"margin-left:auto;font:400 18px M;color:#0a0a0a;background:#f2f2ee\">17 to 20</span></div><div style=\"background:#f2f2ee;display:flex;align-items:center;height:50px;border-top:2px solid #0a0a0a22\"><span style=\"width:70px;font:400 20px M;color:#0a0a0a;background:#f2f2ee\">06</span><span style=\"width:250px;font:400 32px/1 A;text-transform:uppercase;color:#0a0a0a;background:#f2f2ee\">Prices</span><span style=\"width:180px;height:22px;background:#0a0a0a\"></span><span style=\"margin-left:auto;font:400 18px M;color:#0a0a0a;background:#f2f2ee\">21 to 24</span></div></div><div class=\"fx\" style=\"left:96px;top:322px;width:888px;height:2px\"></div><div class=\"fx A\" style=\"left:700px;top:208px;font-size:54px;line-height:1;color:#0a0a0a;background:#D4FF3A;border:5px solid #0a0a0a;padding:12px 20px 4px;transform:rotate(-7deg)\">TOO EASY</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"20\" style=\"left:56px;top:700px;font-size:150px;white-space:nowrap;color:#f2f2ee\">CLAUDE PROMPTS</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"20\" style=\"left:56px;top:870px;font-size:150px;white-space:nowrap;color:#f2f2ee\">THAT SHOULD BE</div><div class=\"fx A\" data-stack=\"h\" style=\"left:56px;top:1040px;font-size:170px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A;padding:14px 22px 0\">ILLEGAL</div><div class=\"fx\" data-after=\"h\" data-gap=\"-150\" style=\"left:640px;top:1100px;width:384px;font:800 30px/1.25 I;letter-spacing:-.3px;color:#f2f2ee\">Copy. Paste. Swap the <span style=\"color:#D4FF3A\">[brackets]</span>. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "cat": "Start here",
+   "cards": [
+    {
+     "t": "Ask me first",
+     "p": "Before you write anything, ask me 5 questions about my [business] so your answers fit me.",
+     "star": true
+    },
+    {
+     "t": "Fix my message",
+     "p": "Fix the spelling and tone of this customer message. Keep my words where you can: [paste]."
+    },
+    {
+     "t": "Make it shorter",
+     "p": "This email is too long: [paste]. Cut it to 3 sentences and keep the one thing they must do."
+    },
+    {
+     "t": "Check your work",
+     "p": "Read your last answer again. What could be wrong or missing for a [business] like mine? Fix it."
+    }
+   ]
+  },
+  {
+   "cat": "Receipts",
+   "cards": [
+    {
+     "t": "Shoebox sort",
+     "p": "Sort these [month] receipts into categories that fit a [business]. Total each. Table, biggest first: [paste].",
+     "star": true
+    },
+    {
+     "t": "Read the photo",
+     "p": "I attached a photo of a receipt. Pull out date, store, total and tax as one table row."
+    },
+    {
+     "t": "Missing receipts",
+     "p": "Compare my bank lines [paste] with my receipt list [paste]. Which charges have no receipt yet?"
+    },
+    {
+     "t": "Spot the creep",
+     "p": "Here are 3 months of my business costs: [paste]. Which ones went up, and by how much?"
+    }
+   ]
+  },
+  {
+   "cat": "Late payers",
+   "cards": [
+    {
+     "t": "First nudge",
+     "p": "Write a friendly first reminder for invoice [number], [amount], due [date]. Assume they forgot. Pay link [link].",
+     "star": true
+    },
+    {
+     "t": "Third try",
+     "p": "Two reminders about [amount] got no reply. Write a calm final notice with a clear pay by date [date]."
+    },
+    {
+     "t": "Pay in parts",
+     "p": "A client cannot pay [amount] at once. Offer a 3 part payment plan with dates. Kind and short."
+    },
+    {
+     "t": "Who first",
+     "p": "Here are my open invoices: [paste]. Sort them by days late and tell me who to chase today."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Cool head",
+     "p": "I am upset about this review: [paste]. First tell me what is fair in it, then write a calm reply.",
+     "star": true
+    },
+    {
+     "t": "Not my customer",
+     "p": "I cannot find this reviewer in my records: [paste]. Write a short, polite public reply asking them to call me."
+    },
+    {
+     "t": "Thank you text",
+     "p": "Turn this kind review into a short thank you text I can send the customer myself: [paste]."
+    },
+    {
+     "t": "Their language",
+     "p": "Reply to this review in the language it was written in, then show me the English: [paste]."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "7 hooks, 1 photo",
+     "p": "Look at the photo I attached. Write 7 captions for next week, each opening with a different hook.",
+     "star": true
+    },
+    {
+     "t": "Answer as a post",
+     "p": "Customers keep asking me [question]. Turn my answer into a short post with one tip at the end."
+    },
+    {
+     "t": "Sound like me",
+     "p": "Here are 3 posts I wrote: [paste]. Describe my voice, then write my next post about [topic]."
+    },
+    {
+     "t": "Open to close",
+     "p": "Write 5 short posts about a normal day at my [business], from opening to closing. One line each."
+    }
+   ]
+  },
+  {
+   "cat": "Prices",
+   "cards": [
+    {
+     "t": "Just how much?",
+     "p": "Someone texted only 'how much?'. Reply with my range [range] and one question so I can price it.",
+     "star": true
+    },
+    {
+     "t": "Discount ask",
+     "p": "A customer wants a discount on [service]. Say no kindly and offer [small extra] instead. Under 40 words."
+    },
+    {
+     "t": "After hours",
+     "p": "Write an auto reply for texts after [time]: we got it, when we reply, and my price page [link]."
+    },
+    {
+     "t": "Price list text",
+     "p": "Turn my price list into a short text I can paste when asked. Plain words, no table: [paste]."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "AGENTS",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for business owners in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

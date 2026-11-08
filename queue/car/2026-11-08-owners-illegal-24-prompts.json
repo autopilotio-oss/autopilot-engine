@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-08-owners-illegal-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Black cover with an off white case file card on top (EXHIBIT A: 24 PROMPTS, the 6 folders listed with black redaction bars and a tilted lime TOO EASY stamp) and a huge full width bottom headline CLAUDE PROMPTS / THAT SHOULD BE / ILLEGAL (lime box).",
+ "theme": "business owners new to AI (round 2 of the niche rotation): 24 new prompts in 6 folders that map one to one to the offers (Start here, Receipts = Bookkeeping Sorter, Late payers = Invoice Chaser, Reviews = Review Desk, Posts = Content Week, Prices = Front Desk Kit), all visible, hook test 'Claude prompts that should be illegal' (least recently used, last on Nov 6 restaurant pack)",
+ "gate": {
+  "score": 92,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, titles and prompts checked against every tools/carousel/posts/*prompts*.json; photo and translation prompts rely only on things Claude chat can do; no legal, tax or money advice). Hook 20/25 (least recently used hook, broad owner niche; IG packs Nov 4 to 7 got 0 saves and 0 shares, format unproven, Seb has open question 10 on the 18:00 slot). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, every slide read; card 21 has slightly awkward quote punctuation). Design 14/15 vs last 5 covers: full black background (photographer lime), headline full width at the bottom at 968 fit (photographer centered 820, realtor left column, restaurant right column), new main visual case file with redaction bars and stamp (vs viewfinder, yard sign, garden stakes, shipping label, kitchen ticket); first render failed QA on case file row contrast, fixed. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; folders map directly to all 4 owner tools plus the Front Desk Kit). QA PASS all 8."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You still type every late payment reminder, review reply and price answer by hand?\n\nHere are 24 Claude prompts in 6 folders: start here, receipts, late payers, reviews, posts and prices. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nNew to AI? Start with folder 01.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next slow afternoon.\n\n#smallbusiness #businessowner #smallbusinessowner #entrepreneur #claudeai",
+  "threads": "Claude prompts that should be illegal. Business owner edition.\n\nSort a month of receipts. Nudge a late payer without sounding rude. Reply to a bad review with a cool head. Answer \"how much?\" in one text. 24 prompts in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Business owners: 24 Claude prompts for receipts, late payers, reviews, posts and price questions. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-08-owners-illegal-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-08T19:40Z"
+}
