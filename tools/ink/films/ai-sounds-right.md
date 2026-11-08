@@ -19,6 +19,9 @@ Accuracy fixes, kept from the kit's own QA notes:
 - The fake answer is labelled SAMPLE on the card; "Dr. L. Moreno" is fictional. No real people, faces, headlines or brands are drawn.
 - Risk panels match the kit and NIST's generative AI profile: false answers, deepfakes, privacy, bias, scale.
 
+## Look (Seb, Nov 8)
+Black ink only, lime highlighter for emphasis (the fake citation, AI, TRAINING, TOKENS, USEFUL, the twist line, NOT REAL, the three boxes, WITH TRUTH.). Bold lettering, small captions. Ends on a hand drawn ap. logo: lime highlighter square, black letters, then the full page.
+
 ## Brand fit
 Our rule for every helper is "it drafts, you send". This film argues for exactly that (VERIFY, PROTECT DATA, HUMAN REVIEW), without selling anything, so it works as a trust builder and a test of a new format. The page is signed AUTOPILOT.OI in the corner.
 

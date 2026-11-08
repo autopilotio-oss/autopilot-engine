@@ -18,7 +18,7 @@ voice = np.zeros(N); v = readwav(f"{D}/out/{stem}.wav"); voice[:min(N, len(v))] 
 # --- pen scratch ---
 envF = np.zeros(N); envM = np.zeros(N); taps = np.zeros(N); pan = np.zeros(N)
 for e in TL["ink"]:
-    marker = e["c"] in ("g", "r") and e["w"] >= 3.2
+    marker = e["c"] == "hl" or e["w"] >= 5
     for s, t, down in e["seq"]:
         if not down or t - s < .02: continue
         i0, i1 = int(s * SR), min(N, int(t * SR)); n = i1 - i0
