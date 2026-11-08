@@ -1,0 +1,86 @@
+{
+ "id": "job-caption",
+ "kind": "product",
+ "offer": "content_week",
+ "room": "studio",
+ "agent": "Content Week",
+ "lane": "owner tools",
+ "hook": [
+  "Great job photo",
+  "and no idea what to write?"
+ ],
+ "hook_lines": [
+  "Great *job* photo.",
+  "No idea",
+  "what to",
+  "*write*?"
+ ],
+ "caption": {
+  "ig": "Great job photo and no idea what to write? Type caption and say what you did. Content Week writes 3 short captions in your voice, each ending with how to book. You pick one and post it yourself. Sample landscaping business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #socialmedia",
+  "other": "Great job photo and no idea what to write? Type caption and say what you did. Content Week writes 3 short captions in your voice, each ending with how to book. You pick one and post it yourself. Sample landscaping business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #socialmedia"
+ },
+ "stat": {
+  "count": 3,
+  "suffix": " CAPTIONS",
+  "label": "you pick one and post",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Great job photo and no idea what to write? Type caption and say what you did.",
+   "screen": {
+    "type": "ask",
+    "text": "caption: backyard cleanup in Maple Ridge, 6 bags of leaves, new edging",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It writes three short captions in your voice, each one ending with how to book.",
+   "screen": {
+    "type": "work",
+    "title": "Writing your captions",
+    "lines": [
+     "read what you did",
+     "keep it short and real",
+     "match how you talk",
+     "end with how to book"
+    ]
+   }
+  },
+  {
+   "chip": "pick",
+   "say": "You pick one and post it yourself. Sample landscaping business shown.",
+   "screen": {
+    "type": "dm",
+    "title": "3 captions, waiting for you",
+    "sample": true,
+    "msgs": [
+     [
+      "us",
+      "6 bags of leaves later, this Maple Ridge yard can breathe. Want yours done before snow? Text us."
+     ],
+     [
+      "us",
+      "Before: buried in leaves. After: clean edges. Booking fall cleanups now."
+     ]
+    ]
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Nine ninety nine, or all four owner tools for twenty four. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Content Week",
+    "sub": "Or all 4 owner tools for $24",
+    "cover": "content-week-reel",
+    "price": "$9.99",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/#tools"
+   }
+  }
+ ]
+}

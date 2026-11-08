@@ -14,7 +14,21 @@
   "other": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
  },
  "rendered_at": "2026-11-08T09:59:56+00:00",
- "status": "rendered",
- "gate": "pending",
+ "status": "passed",
+ "gate": {
+  "score": 90,
+  "breakdown": {
+   "hook": 23,
+   "demo": 22,
+   "legibility": 13,
+   "honesty": 14,
+   "cta": 10,
+   "brand_sound": 8
+  },
+  "notes": "19.8s, -15.0 LUFS, 1080x1920. Hook names a real owner problem (same question 10th time). Shows faq ask, FAQ bank build steps, a labeled sample answer and 3 ANSWERS stat. FAQ bank is on the Front Desk Kit listing; the literal faq command is not named there (minus 1 honesty). Answer bubble appears late in the reply beat. CTA AGENTS confirmed, Front Desk Kit $39.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-08T07:40-03:00"
+ },
  "posts": []
 }

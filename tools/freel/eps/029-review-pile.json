@@ -1,0 +1,85 @@
+{
+ "id": "review-pile",
+ "kind": "product",
+ "offer": "review_desk",
+ "room": "support",
+ "agent": "Review Desk",
+ "lane": "owner tools",
+ "hook": [
+  "20 reviews",
+  "you never answered?"
+ ],
+ "hook_lines": [
+  "*20 reviews*",
+  "you never",
+  "*answered*?"
+ ],
+ "caption": {
+  "ig": "20 reviews you never answered? Type batch and paste them. The Review Desk drafts a short reply for each one in your voice: thanks for the good ones, calm answers for the bad. You read them and post them yourself. Sample cleaning business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews",
+  "other": "20 reviews you never answered? Type batch and paste them. The Review Desk drafts a short reply for each one in your voice: thanks for the good ones, calm answers for the bad. You read them and post them yourself. Sample cleaning business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews"
+ },
+ "stat": {
+  "count": 20,
+  "suffix": " REPLIES",
+  "label": "drafted, you post them",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "Twenty reviews you never answered? Type batch and paste them.",
+   "screen": {
+    "type": "ask",
+    "text": "batch: 20 Google reviews from the last 3 months",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It drafts a short reply for each one, in your voice. Thanks for the good ones, calm answers for the bad.",
+   "screen": {
+    "type": "work",
+    "title": "Drafting 20 replies",
+    "lines": [
+     "read each review",
+     "thank the happy ones by name",
+     "calm reply for the unhappy one",
+     "keep each under 40 words"
+    ]
+   }
+  },
+  {
+   "chip": "reply",
+   "say": "You read them and post them yourself. Sample cleaning business shown.",
+   "screen": {
+    "type": "dm",
+    "title": "Reply drafts, waiting for you",
+    "sample": true,
+    "msgs": [
+     [
+      "them",
+      "5 stars. Lisa and her team got our move out clean done in one day!"
+     ],
+     [
+      "us",
+      "Thank you! Lisa will be happy to hear it. Good luck in the new place."
+     ]
+    ]
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Nine ninety nine, or all four owner tools for twenty four. Link in bio.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Review Desk",
+    "sub": "Or all 4 owner tools for $24",
+    "cover": "review-desk-reel",
+    "price": "$9.99",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/#tools"
+   }
+  }
+ ]
+}

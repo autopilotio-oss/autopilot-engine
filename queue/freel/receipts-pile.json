@@ -14,7 +14,7 @@
   "other": "A shoebox of receipts and your accountant wants totals. Upload your bank statement, type sort, and the Bookkeeping Sorter puts every charge in a category with monthly totals. When it isn't sure, it asks you instead of guessing. Sample month shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #bookkeeping"
  },
  "rendered_at": "2026-11-06T11:51:47+00:00",
- "status": "passed",
+ "status": "scheduled",
  "gate": {
   "score": 92,
   "breakdown": {
@@ -30,6 +30,20 @@
   "by": "campaign operator",
   "at": "2026-11-07T07:35-03:00"
  },
- "posts": [],
- "note": "Gate passed; waiting for the next free IG 10:00 slot (Nov 11 on)."
+ "posts": [
+  {
+   "metricool_id": 420619188,
+   "uuid": "6439895965595419305",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-11T10:00-03:00"
+  }
+ ],
+ "note": "Gate passed; waiting for the next free IG 10:00 slot (Nov 11 on).",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval; autopost after Nov 10 approved by Seb Nov 4 (\"yes\", campaign.json approvals.autopost_after_nov10)"
+ }
 }

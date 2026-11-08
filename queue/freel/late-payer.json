@@ -32,7 +32,7 @@
  },
  "posts": [
   {
-   "metricool_id": 419824705,
+   "metricool_id": 420619169,
    "uuid": "-8921258257798052316",
    "networks": [
     "instagram"
@@ -44,5 +44,12 @@
   "by": "Seb",
   "quote": "Yes, 10 days only (Recommended)",
   "basis": "campaign standing approval"
- }
+ },
+ "log": [
+  {
+   "at": "2026-11-08T07:45-03:00",
+   "by": "campaign operator",
+   "what": "IG caption $10 changed to $9.99 per store-prices.md (updateScheduledPost, uuid unchanged)"
+  }
+ ]
 }

@@ -14,7 +14,21 @@
   "other": "A 1 star review lands and you want to fire back. Type bad, paste the review, and the Review Desk drafts a calm, professional reply that won't make it worse, plus a private note of what to check first. You post it yourself. Sample detailing business shown. $10, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews"
  },
  "rendered_at": "2026-11-08T10:00:02+00:00",
- "status": "rendered",
- "gate": "pending",
+ "status": "rerender",
+ "gate": {
+  "score": 93,
+  "breakdown": {
+   "hook": 24,
+   "demo": 23,
+   "legibility": 13,
+   "honesty": 15,
+   "cta": 10,
+   "brand_sound": 8
+  },
+  "notes": "19.2s, -15.4 LUFS, 1080x1920. Hook on screen by 0.5s names a real owner problem (1 star review, urge to fire back). Shows the bad command, a private check list before replying and a calm labeled sample reply. Claims match the Review Desk listing (bad command, calm reply plus private note, owner posts). CTA AGENTS (confirmed) or link in bio, $10 / Toolkit $24. Hook frames 0 to 2s have an empty blurred lower half; audio 1.4 LU under target. HOLD: end card, voice and caption say $10; store-prices.md requires $9.99. Episode fixed, video removed so the Nov 9 freel cron re-renders it with a new voice line.",
+  "result": "hold",
+  "by": "campaign operator",
+  "at": "2026-11-08T07:40-03:00"
+ },
  "posts": []
 }
