@@ -1,17 +1,17 @@
 {
-  "at": "2026-11-08T00:25:00Z",
+  "at": "2026-11-08T12:25:00Z",
   "posts_today": {
-    "twitter": {"published": 17, "pending": 3, "error": 0},
-    "instagram": {"published": 2, "pending": 0, "error": 0},
-    "threads": {"published": 0, "pending": 5, "error": 0},
-    "tiktok": {"published": 1, "pending": 0, "error": 0}
+    "twitter": {"published": 0, "pending": 20, "error": 0},
+    "instagram": {"published": 0, "pending": 3, "error": 0},
+    "threads": {"published": 0, "pending": 4, "error": 0},
+    "tiktok": {"published": 0, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
       "network": "instagram",
       "published_at": "2026-11-06T13:07:28-03:00",
       "text": "Type review and list the jobs you finished today.",
-      "metrics": {"reach": 67, "views": 75, "saves": 0, "shares": 0, "comments": 0},
+      "metrics": {"reach": 69, "views": 78, "saves": 0, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfZrNGPFW6F/"
     },
     {
@@ -20,8 +20,15 @@
       "text": "A customer asks for a price while you're in the middle of a job.",
       "metrics": {"reach": 49, "views": 56, "saves": 0, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfXGSM7lR7D/"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-07T13:04:23-03:00",
+      "text": "A quote that goes quiet is a customer still deciding.",
+      "metrics": {"reach": 31, "views": 39, "saves": 0, "shares": 0, "comments": 0},
+      "url": "https://www.instagram.com/reel/DfcPraQjMuG/"
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Snapshot 21:25 ART Nov 7. Today counts from Metricool planner (threads pending items are drafts, all 5 past their slot). Top posts window 6 to 72h: Instagram reels only via Metricool analytics; today's 10:00 reel not yet in analytics; Instagram feed posts, X, Threads, TikTok post metrics not pulled: MISSING. All posts in window have 0 saves and 0 shares, so no winner; ranking falls back to reach. Kit get_growth_stats for today: 0 subscribers, 0 new. Revenue per hub feed: 0 verified orders all time (unchanged). All GitHub workflows latest conclusion success, 0 fails in 24h; ci.yml success. No ERROR posts today. HQ feed written (status/hub v55)."
+  "notes": "Snapshot 09:25 ART Nov 8. First slot of the day is 09:30, so nothing published yet; all 28 planner items PENDING, 0 ERROR (threads 4 and 1 instagram carousel are drafts). Top posts window 6 to 72h: Instagram reels only via Metricool analytics; Instagram feed posts, X, Threads, TikTok post metrics not pulled: MISSING. All posts in window have 0 saves and 0 shares, so no winner; ranking falls back to reach. Kit get_growth_stats: 0 subscribers, 0 new. Revenue per hub feed: 0 verified orders all time (unchanged). All GitHub workflows latest conclusion success, 0 fails in 24h; ci.yml success. HQ feed written (status/hub v56)."
 }
