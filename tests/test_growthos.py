@@ -329,6 +329,18 @@ def test_heartbeat_late_and_failed_workers(env):
     assert not r["worker:kit_sync"]["ok"] and r["worker:viral_lab"]["ok"]
 
 
+def test_disabled_worker_resolves_its_open_incident(env):
+    import heartbeat, datetime as dt
+    hb = str(env["tmp"] / "hb.jsonl"); wp = str(env["tmp"] / "w.json"); st = env["store"]
+    json.dump({"workers": {"viral_lab": {"enabled": False, "why_disabled": "paused", "max_gap_hours": 30, "severity": "SEV-3",
+                                         "since": "2026-10-31T00:00:00+00:00"}}}, open(wp, "w"))
+    health.record(st, [{"check": "worker:viral_lab", "ok": False, "severity": "SEV-3", "detail": "late"}], day="2026-11-04")
+    r = heartbeat.check(hb, wp, dt.datetime.now(dt.timezone.utc))
+    assert r == [{"check": "worker:viral_lab", "ok": True, "severity": "SEV-3", "detail": "disabled: paused"}]
+    health.record(st, r, day="2026-11-08")
+    assert [e["payload"]["incident_id"] for e in st.of("incident.resolved")] == ["inc:worker:viral_lab:2026-11-04"]
+
+
 def test_out_of_band_alert_opens_one_issue_and_closes_on_recovery(env, monkeypatch):
     import heartbeat
     monkeypatch.setattr(health, "HDIR", str(env["tmp"] / "health"))

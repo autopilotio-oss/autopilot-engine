@@ -40,6 +40,9 @@ def check(path=HB, workers_path=WORKERS, at=None):
     W = json.load(open(workers_path))["workers"]; lb = last_beats(path); res = []
     for w, cfg in W.items():
         if not cfg.get("enabled", True):
+            # report disabled workers as ok so incidents opened before the pause resolve instead of staying open forever
+            res.append({"check": f"worker:{w}", "ok": True, "severity": cfg.get("severity", "SEV-3"),
+                        "detail": ("disabled: " + cfg.get("why_disabled", ""))[:160]})
             continue
         b = lb.get(w)
         if not b:

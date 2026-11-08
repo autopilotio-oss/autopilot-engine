@@ -25,3 +25,4 @@
 {"incident_id": "inc:worker:kit_sync:2026-11-06", "severity": "SEV-2", "check": "worker:kit_sync", "detail": "last ok 8.4h ago (limit 8h) 0 routed (no subscribers on forms)", "at": "2026-11-06T08:59:20+00:00", "sent": true, "issue": 18, "sent_at": "2026-11-06T08:59:20+00:00", "channel": "github_issue", "issue_closed": "2026-11-06T16:56:18+00:00"}
 {"incident_id": "inc:metricool_networks:2026-11-07", "severity": "SEV-2", "check": "metricool_networks", "detail": "disconnected from Metricool: threads", "at": "2026-11-07T11:18:07+00:00", "sent": true, "sent_at": "2026-11-07T11:21:00+00:00", "channel": "claude_message"}
 {"incident_id": "inc:metricool_errors:2026-11-07", "severity": "SEV-3", "check": "metricool_errors", "detail": "1 post(s) in ERROR", "at": "2026-11-07T11:18:07+00:00", "sent": false}
+{"incident_id": "inc:worker:viral_lab:2026-11-04", "severity": "SEV-3", "check": "worker:viral_lab", "detail": "late", "at": "2026-11-08T20:43:15+00:00", "sent": false}
