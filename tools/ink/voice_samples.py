@@ -13,7 +13,7 @@ open(f"{D}/voices.txt", "w").write("\n".join(f'{v.get("name")} | {v.get("categor
 want = [w.strip().lower() for w in sys.argv[1].split(",")]
 models = [m["model_id"] for m in tts.get("/models") if m.get("can_do_text_to_speech")]
 print("models", models)
-mid = next((m for m in ["eleven_v3", "eleven_multilingual_v2"] if m in models), "eleven_multilingual_v2")
+mid = next((m for m in [os.environ.get("ELEVEN_MODEL", ""), "eleven_v4", "eleven_v3", "eleven_multilingual_v2"] if m and m in models), "eleven_multilingual_v2")
 for w in want:
     v = next((v for v in voices if v.get("name", "").lower().startswith(w)), None)
     if not v: print("missing voice", w); continue
@@ -21,5 +21,5 @@ for w in want:
     req = urllib.request.Request(f"{tts.API}/text-to-speech/{v['voice_id']}?output_format=mp3_44100_128", data=body, method="POST",
                                  headers={"xi-api-key": KEY, "Content-Type": "application/json", "Accept": "audio/mpeg"})
     try:
-        open(f"{D}/{w}.mp3", "wb").write(urllib.request.urlopen(req, timeout=120).read()); print("sample", w, mid)
+        slug = w.split(" - ")[0].replace(" ", "_") + ("_" + w.split(" - ")[1].split()[0] if " - " in w else ""); open(f"{D}/{slug}_{mid.split('_')[-1]}.mp3", "wb").write(urllib.request.urlopen(req, timeout=120).read()); print("sample", w, mid, slug)
     except Exception as e: print("failed", w, str(e)[:200])

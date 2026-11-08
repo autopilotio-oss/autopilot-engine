@@ -1,0 +1,53 @@
+{
+ "id": "why-test",
+ "style": "punch",
+ "speed": 1.8,
+ "voice_speed": 1.0,
+ "tail": 1.2,
+ "beats": [
+  {"say": "This doctor doesn't exist.",
+   "cam": [{"box": [100, 228, 700, 350]}],
+   "els": [
+    {"id": "card", "t": "rect", "x": 110, "y": 160, "w": 780, "h": 196, "c": "k", "pre": true},
+    {"id": "lab", "t": "text", "s": "AI ANSWER", "x": 132, "y": 174, "size": 14, "c": "k", "pre": true},
+    {"id": "samp", "t": "text", "s": "SAMPLE", "x": 868, "y": 174, "size": 12, "c": "k", "align": "right", "pre": true},
+    {"id": "l1", "t": "text", "s": "YES, SIX HOURS IS ENOUGH.", "x": 132, "y": 206, "size": 30, "c": "k", "pre": true},
+    {"id": "l2", "t": "text", "s": "SOURCE: DR. ELENA VOSS,", "x": 132, "y": 256, "size": 30, "c": "k", "pre": true},
+    {"id": "l3", "t": "text", "s": "JOURNAL OF SLEEP, 2019.", "x": 132, "y": 306, "size": 30, "c": "k", "pre": true},
+    {"id": "hl0", "t": "hl", "ref": "l2", "sub": "DR. ELENA VOSS", "c": "hl", "pre": true},
+    {"id": "slash", "t": "path", "pts": [[244, 290], [560, 262]], "c": "k", "lw": 7, "at": "exist", "dt": -0.35, "shake": 1.4, "dur": 0.16},
+    {"id": "slash2", "t": "path", "pts": [[248, 268], [556, 296]], "c": "k", "lw": 7, "dur": 0.14, "shake": 1.0}
+   ]},
+  {"say": "An AI made her up in under a second.",
+   "cam": [{"box": [480, 330, 960, 520], "flash": true}],
+   "els": [
+    {"id": "fake", "t": "text", "s": "FAKE", "x": 600, "y": 372, "size": 74, "c": "k", "lw": 9, "at": "made", "dt": -0.2, "shake": 0.8},
+    {"id": "hlf", "t": "hl", "ref": "fake", "c": "hl"},
+    {"id": "sec", "t": "text", "s": "IN UNDER 1 SECOND", "x": 600, "y": 470, "size": 22, "c": "k", "at": "under"}
+   ]},
+  {"say": "And it wasn't a glitch. It did exactly what it was built to do.",
+   "cam": [{"box": [40, 520, 960, 700], "move": 0.22}],
+   "els": [
+    {"id": "ng", "t": "text", "s": "NOT A GLITCH.", "x": 500, "y": 540, "size": 34, "c": "k", "align": "center", "at": "glitch", "dt": -0.3},
+    {"id": "q1", "t": "text", "s": "SO WHAT WAS IT BUILT TO DO?", "x": 500, "y": 610, "size": 42, "c": "k", "align": "center", "lw": 6, "at": "exactly"},
+    {"id": "hlq1", "t": "hl", "ref": "q1", "sub": "BUILT TO DO?", "c": "hl"}
+   ]},
+  {"say": "It doesn't look up answers. It guesses the next word.",
+   "cam": [{"box": [60, 720, 940, 1040], "flash": true}],
+   "els": [
+    {"id": "src", "t": "text", "s": "SOURCE: DR.", "x": 110, "y": 740, "size": 40, "c": "k", "lw": 5.6, "at": "look"},
+    {"id": "blank", "t": "path", "pts": [[440, 782], [600, 782]], "c": "k", "lw": 4},
+    {"id": "qm", "t": "text", "s": "?", "x": 612, "y": 740, "size": 40, "c": "k", "lw": 5.6},
+    {"id": "n1", "t": "text", "s": "SMITH", "x": 110, "y": 822, "size": 24, "c": "k", "at": "guesses"},
+    {"id": "b1", "t": "hlbox", "x": 270, "y": 820, "w": 420, "h": 30, "c": "hl", "lw": 12},
+    {"id": "p1", "t": "text", "s": "31%", "x": 704, "y": 822, "size": 24, "c": "k"},
+    {"id": "n2", "t": "text", "s": "LEE", "x": 110, "y": 872, "size": 24, "c": "k"},
+    {"id": "b2", "t": "hlbox", "x": 270, "y": 870, "w": 298, "h": 30, "c": "hl", "lw": 12},
+    {"id": "p2", "t": "text", "s": "22%", "x": 582, "y": 872, "size": 24, "c": "k"},
+    {"id": "n3", "t": "text", "s": "VOSS", "x": 110, "y": 922, "size": 24, "c": "k", "at": "next"},
+    {"id": "b3", "t": "hlbox", "x": 270, "y": 920, "w": 122, "h": 30, "c": "hl", "lw": 12},
+    {"id": "p3", "t": "text", "s": "9%", "x": 406, "y": 922, "size": 24, "c": "k"},
+    {"id": "pick", "t": "mark", "ref": "n3", "sub": "VOSS", "style": "ring", "c": "k", "lw": 4.2, "shake": 0.7}
+   ]}
+ ]
+}
