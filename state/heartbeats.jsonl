@@ -219,3 +219,4 @@
 {"worker": "support_agent", "status": "ok", "at": "2026-11-09T19:11:46+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-09T19:45:16+00:00", "note": "built 2026-11-09-trainer-24-prompts, score 92, QA PASS, bank 5"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-09T20:23:30+00:00", "note": "13 posts out today, top post saves+shares 4, feed written yes"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-09T21:04:42+00:00", "note": "hedged subs reel hook on /store/subs/ (spots the subscriptions you forgot); Pages deploy ok, live fetch blocked by proxy"}
