@@ -203,3 +203,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-08T20:26:01+00:00", "note": "13 posts out today, top post saves+shares 0, feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-08T20:43:24+00:00", "note": "disabled workers now report ok so their stale incidents resolve (6 of 22 open)"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-08T22:52:37+00:00", "note": "PM Nov 8: X 15, IG 2, TikTok 1 out, no failures, per post data missing, no move"}
+{"worker": "analyst", "status": "ok", "at": "2026-11-09T00:23:25+00:00", "note": "20 posts out today, top post saves+shares 4 (TikTok shares, saves MISSING), feed written yes"}
