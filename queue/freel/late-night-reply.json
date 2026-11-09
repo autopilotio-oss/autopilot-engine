@@ -60,5 +60,28 @@
   "by": "Seb",
   "quote": "Yes, 10 days only (Recommended)",
   "basis": "campaign standing approval"
- }
+ },
+ "results": [
+  {
+   "date": "2026-11-09",
+   "read_at": "2026-11-09T07:30-03:00",
+   "age_h": "about 21",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE), organic",
+   "instagram": {
+    "views": 111,
+    "reach": 99,
+    "avg_watch_s": 3.773,
+    "view_rate_3s_pct": 33.3,
+    "likes": 0,
+    "shares": 0,
+    "saves": 0,
+    "comments": 0,
+    "keyword_comments": 0
+   },
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (no GoatCounter token)",
+   "attributed_orders": 0
+  }
+ ]
 }

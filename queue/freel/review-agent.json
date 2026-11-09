@@ -104,6 +104,27 @@
    "x": "MISSING",
    "guide_visits": "MISSING (no GoatCounter token)",
    "attributed_orders": 0
+  },
+  {
+   "date": "2026-11-09",
+   "read_at": "2026-11-09T07:30-03:00",
+   "age_h": "about 69",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE), organic",
+   "instagram": {
+    "views": 79,
+    "reach": 70,
+    "avg_watch_s": 1.721,
+    "view_rate_3s_pct": 6.8,
+    "likes": 2,
+    "shares": 0,
+    "saves": 0,
+    "comments": 0,
+    "keyword_comments": 0
+   },
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (no GoatCounter token)",
+   "attributed_orders": 0
   }
  ]
 }

@@ -1,0 +1,86 @@
+{
+ "id": "deposit-ask",
+ "kind": "product",
+ "offer": "front_desk_kit",
+ "room": "owner",
+ "agent": "Front Desk",
+ "lane": "front desk",
+ "hook": [
+  "They want Saturday",
+  "but no deposit"
+ ],
+ "hook_lines": [
+  "They want",
+  "*Saturday*",
+  "but no",
+  "*deposit*"
+ ],
+ "caption": {
+  "ig": "They want your Saturday slot but don't want to pay a deposit. Type reply and paste their text, and the Front Desk Kit drafts a friendly answer from your own deposit and cancel rules, so you hold the line without sounding rude. You check it and send it yourself. Sample lawn care business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+  "other": "They want your Saturday slot but don't want to pay a deposit. Type reply and paste their text, and the Front Desk Kit drafts a friendly answer from your own deposit and cancel rules, so you hold the line without sounding rude. You check it and send it yourself. Sample lawn care business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
+ },
+ "stat": {
+  "count": 1,
+  "suffix": " REPLY",
+  "label": "from your own rules",
+  "note": "sample business"
+ },
+ "beats": [
+  {
+   "chip": "ask",
+   "say": "They want your Saturday slot, but no deposit. Type reply and paste their text.",
+   "screen": {
+    "type": "ask",
+    "text": "reply: can I book Saturday and just pay after? don't love deposits",
+    "by": "owner"
+   }
+  },
+  {
+   "chip": "work",
+   "say": "It reads your own deposit and cancel rules, and keeps it friendly.",
+   "screen": {
+    "type": "work",
+    "title": "Drafting the reply",
+    "lines": [
+     "read your deposit rule",
+     "deposit: $25 holds a Saturday",
+     "add your cancel rule",
+     "friendly, no lecture"
+    ]
+   }
+  },
+  {
+   "chip": "reply",
+   "say": "Ready for a sample lawn care business. You check it and send it yourself.",
+   "screen": {
+    "type": "dm",
+    "title": "Reply draft, waiting for you",
+    "sample": true,
+    "msgs": [
+     [
+      "them",
+      "Can I book Saturday and just pay after? Don't love deposits."
+     ],
+     [
+      "us",
+      "Totally get it! Saturdays fill fast, so a $25 deposit holds yours and comes off the bill. Free to move it up to 48h before. Want me to lock it in?"
+     ]
+    ]
+   }
+  },
+  {
+   "chip": "get it",
+   "say": "Comment AGENTS, or tap the link in bio, for the free Front Desk Starter.",
+   "screen": {
+    "type": "cta",
+    "product": true,
+    "name": "Front Desk Kit",
+    "sub": "Start free with the Front Desk Starter",
+    "cover": "frontdesk-reel",
+    "price": "$39",
+    "kw": "AGENTS",
+    "url": "autopilotoi.app/front-desk"
+   }
+  }
+ ]
+}

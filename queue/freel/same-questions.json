@@ -14,7 +14,7 @@
   "other": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
  },
  "rendered_at": "2026-11-08T09:59:56+00:00",
- "status": "passed",
+ "status": "scheduled",
  "gate": {
   "score": 90,
   "breakdown": {
@@ -30,5 +30,26 @@
   "by": "campaign operator",
   "at": "2026-11-08T07:40-03:00"
  },
- "posts": []
+ "posts": [
+  {
+   "metricool_id": 421610369,
+   "uuid": "2419934413127762024",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-12T10:00-03:00"
+  }
+ ],
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ },
+ "log": [
+  {
+   "at": "2026-11-09T07:35-03:00",
+   "by": "campaign operator",
+   "what": "scheduled IG reel 10:00 Nov 12 (gate 90 pass, check_queue 0 problems, -15.0 LUFS, 19.8s). Threads/X skipped: Threads disconnected (MANAGER Q8), X text lane owned by Daily Manager."
+  }
+ ]
 }
