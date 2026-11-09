@@ -19,6 +19,14 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 +shops start at 200 points, at 150 you can't add new listings or join big campaigns for 7 days (14 days at 100, 28 days at 50), and at 0 the shop can be closed.
 ```
 
+## Weekly Sprint 2026-11-09 (handoff)
+- Experiment value_first_tk_001 running (value first TikToks vs agent demos). Daily Manager: keep 1 value first TikTok a day. Nov 16 Sprint reads TKPO07/TKPO10 at 72h for every TikTok Nov 4 to 13 and applies the rule in experiments/experiments.jsonl.
+- hook_number_001 closed INCONCLUSIVE (never posted). optin_top_001 INCONCLUSIVE, proposed retire + delete docs/g/subs-v2 (waits for Seb).
+- Proposed to Seb (waiting): GOATCOUNTER_TOKEN; reconnect Threads; stop daily IG prompt pack; cut X questions to 5 a day; kit_sync daily; Kit single opt-in on form 10118407; retire subs-v2.
+- System can do (internal, reversible): Daily Pulse incidents of SEV-1/2 should also open a GitHub issue (metricool_unapproved Nov 4 and metricool_networks Nov 7 had none). Builder candidate.
+- Product fix proposed: "where to paste" 3 frame phone strip above Step 01 on /brain/ and on page 1 of the Front Desk Kit PDF.
+- Do NOT run scripts/growthos/health.py from the cloud sandbox (it has no site access, writes 61 false alerts to state/health); it belongs to health.yml.
+
 ## Weekly Sprint 2026-11-02 (handoff)
 - Experiment optin_top_001 drafted: /g/subs-v2/ (noindex, unlinked) built from G["subs-v2"] in tools/guides/guides.py with optin_top=True. Do NOT link it or route traffic until Seb approves; then split /free/ subs row 50/50 or alternate weeks. Decision rule in experiments/experiments.jsonl.
 - Tests green again: /g/bill rebuilt with bill-coach (commit 214ef55). Next guide reel swap: rebuild and commit the page in the same commit.

@@ -150,3 +150,8 @@
 - X 09:30 Bookkeeping Sorter "Your receipts are not lost. They are just in 4 different places." (bs_four_places) and X 15:00 Front Desk "Some days you answer how much more than you do the work." (fd_how_much_more). Sorter had no X hook test this week. X 5 of 5. Rollback: draft uuids -4280424973340948300 and -4539025602255565342.
 - X questions: 13 at 1 an hour, queue/x/2026-11-09-questions.json, none repeated from the last 7 days. 18:40 and 20:40 not scheduled (tool permission denied). Rollback: draft the uuids.
 - Threads batch skipped: Threads still not connected in Metricool. Drafts stay draft.
+
+## 2026-11-09 09:45 ART: Weekly Growth Sprint
+- Experiments: hook_number_001 closed INCONCLUSIVE (never posted); optin_top_001 INCONCLUSIVE, proposed retire (superseded by /brain/); subs_hook_001 and deposit_cta_001 retired. New card value_first_tk_001 (running since Nov 7 under the Nov 4 autopost approval, no new customer facing action). Evidence: Metricool TKEV02 Nov 2 to 8, LEARNINGS Nov 3 to 9. Rollback: git revert.
+- No scheduled task disabled (0 non ok heartbeats in 7 days, none failed every run). Monthly drill not due (ran Nov 2).
+- Ops note: health.py was run locally by mistake; state/health and state/events changes reverted before commit, 0 alerts sent.
