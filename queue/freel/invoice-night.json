@@ -14,7 +14,21 @@
   "other": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
  },
  "rendered_at": "2026-11-09T10:19:25+00:00",
- "status": "rendered",
- "gate": "pending",
+ "status": "passed",
+ "gate": {
+  "score": 91,
+  "breakdown": {
+   "hook": 24,
+   "demo": 22,
+   "legibility": 13,
+   "honesty": 15,
+   "cta": 10,
+   "brand_sound": 7
+  },
+  "notes": "16.4s, -15.2 LUFS, 1080x1920. Hook 'Still typing invoices at 10pm?' on screen by 0.5s, real owner pain. Ask (invoice: Sara, full detail + pet hair, paid deposit $50) is on screen only about 1s, then the build steps and invoice 1043 labeled sample data ($360 + $75 - $50 = $385, math checks). Claims match the site listing (job notes to a clean invoice, who owes you list, owner sends). End card $9.99, Toolkit $24, CTA AGENTS (confirmed). Blurred olive frame at t=0; audio 1.2 LU under target. Held in the bank: same tool as late-payer (Nov 9), so it goes after a different tool.",
+  "result": "pass",
+  "by": "campaign operator",
+  "at": "2026-11-09T07:30-03:00"
+ },
  "posts": []
 }
