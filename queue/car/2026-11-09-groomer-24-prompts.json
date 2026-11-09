@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-09-groomer-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Black cover, huge right aligned headline at the top (CLAUDE PROMPTS / THAT FEEL LIKE / CHEATING in a lime block), a big tilted lime dog ID tag on a ring (24 PROMPTS, IF FOUND: COPY, PASTE) bottom left, the 6 folders as a ruled list beside it with a lime SAVE button.",
+ "theme": "pet groomers (new niche, all 10 rotation niches already done): 24 new prompts in 6 folders (Bookings, Pet parents, Groom day, Reviews, Posts, Money), all visible, hook test 'Claude prompts that feel like cheating' (least recently used, last on Nov 6 shop pack)",
+ "gate": {
+  "score": 92,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, titles and prompts checked against every tools/carousel/posts/*.json with no clash; no vet, legal, tax or money advice: the found something prompt says no diagnosis, suggest their vet). Hook 20/25 (least recently used hook, fresh niche; IG packs still have 0 saves and 0 shares, format unproven, Seb has an open question on the 18:00 slot). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, every slide read). Design 14/15 vs last 5 covers: black (photographer lime), headline top right aligned (vs centered, bottom, left column, top full width, bottom), dog ID tag visual (vs viewfinder, case file, yard sign, garden stakes, shipping label), largest headline scale yet with a 170px CHEATING block; tag ring sits behind the tag rather than through the hole, minor. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (bookings, pet parents), Review Desk, Content Week, Invoice Chaser (missed groom fee) and Bookkeeping Sorter (supply receipts)). QA PASS all 8."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You groom dogs all day and still type every booking reply, pick up text and no show message by hand?\n\nHere are 24 Claude prompts in 6 folders: bookings, pet parents, groom day, reviews, posts and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next slow morning.\n\n#doggrooming #petgroomer #groomingbusiness #smallbusiness #claudeai",
+  "threads": "Claude prompts that feel like cheating. Pet groomer edition.\n\nNew pup bookings, matted coat talks, cut cards, pick up texts, missed groom fees. 24 prompts in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Pet groomers: 24 Claude prompts for bookings, pet parents, groom day, reviews, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-09-groomer-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-09T13:55Z"
+}
