@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-09-trainer-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Light paper cover (#f2f2ee), a big black stopwatch dial at top left with a lime progress ring and a lime 24, a TODAY'S SESSION 6 X 4 workout card listing the 6 folders on the right, headline at the bottom: STOP TYPING THESE. with PASTE THEM. in a full width lime block.",
+ "theme": "personal trainers (new niche after the 10 rotation niches plus groomers): 24 new prompts in 6 folders (Leads, Clients, Sessions, Reviews, Posts, Money), all visible, hook test 'Stop typing these. Paste them.' (least recently used, last on Nov 7 realtor pack)",
+ "gate": {
+  "score": 92,
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, titles checked against every tools/carousel/posts/*prompts*.json with no clash; no health, diet, legal, tax or money advice: injuries are left to the client's doctor, client posts need their okay and focus on effort not looks). Hook 20/25 (least recently used hook, fresh niche; IG packs still at 0 saves and 0 shares, format unproven, Seb has an open question on the 18:00 slot). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, every slide read). Design 14/15 vs last 5 covers (groomer black/top/dog tag/huge, photographer lime/top/viewfinder, owners black/split/case file, landscaper white/top/stakes, realtor split/left/sign): light paper bg, headline at the bottom (first in 5), stopwatch visual, mid scale top line with a 200px lime block; first range chip sits 8px wider than the rest, minor. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (leads, clients), Review Desk, Content Week, Invoice Chaser (late package pay) and Bookkeeping Sorter (gear receipts)). QA PASS all 8."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You train clients all day and still type every booking reply, check in and late payment text by hand?\n\nHere are 24 Claude prompts in 6 folders: leads, clients, sessions, reviews, posts and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next gap between clients.\n\n#personaltrainer #fitnessbusiness #personaltraining #smallbusiness #claudeai",
+  "threads": "Stop typing these. Paste them. Personal trainer edition.\n\nFirst session replies, missed session check ins, session cards, review asks after a win, late package payments. 24 Claude prompts in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Personal trainers: 24 Claude prompts for leads, clients, sessions, reviews, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-09-trainer-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-09T19:40Z"
+}
