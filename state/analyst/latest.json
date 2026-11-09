@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-09T00:30:00Z",
+  "at": "2026-11-09T12:30:00Z",
   "posts_today": {
-    "twitter": {"published": 17, "pending": 3, "error": 0},
-    "instagram": {"published": 2, "pending": 1, "error": 0},
+    "twitter": {"published": 0, "pending": 18, "error": 0},
+    "instagram": {"published": 0, "pending": 3, "error": 0},
     "threads": {"published": 0, "pending": 4, "error": 0},
-    "tiktok": {"published": 1, "pending": 0, "error": 0}
+    "tiktok": {"published": 0, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
@@ -12,23 +12,23 @@
       "published_at": "2026-11-07T13:04:56-03:00",
       "text": "3 mistakes that quietly kill TikTok views.",
       "metrics": {"views": 128, "likes": 0, "comments": 0, "shares": 4, "saves": null, "reach": null},
-      "url": null
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7705414851664809236"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-08T13:03:12-03:00",
+      "text": "A customer messages late at night.",
+      "metrics": {"reach": 99, "views": 111, "saves": 0, "shares": 0, "comments": 0},
+      "url": "https://www.instagram.com/reel/Dfe0Wj8D9J5/"
     },
     {
       "network": "instagram",
       "published_at": "2026-11-06T13:07:28-03:00",
       "text": "Type review and list the jobs you finished today.",
-      "metrics": {"reach": 69, "views": 78, "saves": 0, "shares": 0, "comments": 0},
+      "metrics": {"reach": 70, "views": 79, "saves": 0, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfZrNGPFW6F/"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-11-07T13:04:23-03:00",
-      "text": "A quote that goes quiet is a customer still deciding.",
-      "metrics": {"reach": 31, "views": 39, "saves": 0, "shares": 0, "comments": 0},
-      "url": "https://www.instagram.com/reel/DfcPraQjMuG/"
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Snapshot 21:30 ART Nov 8. 20 posts out today (X 17, IG 2: Front Desk reel 10:00 and landscaping carousel 18:00, TikTok 1), 8 pending (X 3 later tonight; Threads 4 and IG contractor carousel are drafts), 0 ERROR. Window 6 to 72h: only TikTok Nov 7 '3 mistakes' has shares (4; TikTok saves and reach not provided: MISSING); every IG reel and carousel 0 saves, 0 shares. IG carousels: reach 8 cleaning, 7 salon, 4 restaurant. TikTok views 147 (Nov 6), 128 (Nov 7), 56 (Nov 8, ~8h). Nov 8 IG reel not yet in Metricool reels rows: MISSING. TikTok post URLs not in analytics rows: MISSING. X and Threads post metrics not pulled: MISSING. Kit: 0 subscribers, 0 new. Revenue per hub feed: 0 verified orders all time (unchanged). All GitHub workflows latest success, 0 fails 24h; ci.yml success. HQ feed written (status/hub v59)."
+  "notes": "Snapshot 09:30 ART Nov 9. 0 posts out yet today (first slot 09:30), 26 pending, 0 ERROR: X 18, IG 3 (Invoice Chaser reel 10:00, small business carousel 18:00, detailing carousel is a draft), Threads 4 (all drafts), TikTok 1 (tk-mistakes2 10:00). Window 6 to 72h: only TikTok Nov 7 '3 mistakes' has shares (4; TikTok saves and reach not provided: MISSING). All IG reels and carousels 0 saves, 0 shares. IG reels reach 99 (Nov 8), 70 (Nov 6), 49 (Nov 7). IG carousels reach 13 restaurant, 9 cleaning, 2 landscaping. TikTok views 147 (Nov 6), 128 (Nov 7), 56 (Nov 8). X, Threads and profile visits not pulled: MISSING. Kit: 0 subscribers, 0 new. Revenue per hub feed: 0 verified orders all time (unchanged). All GitHub workflows latest success, 0 fails 24h; ci.yml success. HQ feed written (status/hub v60)."
 }
