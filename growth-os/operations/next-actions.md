@@ -71,6 +71,13 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Nov 8 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 8 run (19:10 UTC): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-09 (08:25 ART)
+- Health: only meta_pixel_configured failing (SEV-3, known). All 20 checkouts ok. 1 failed Actions run in 24h: pages build 08:12 UTC (14m, superseded; every later pages build succeeded, page probes ok). No late heartbeats.
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off. Cost guard ok (no cap hit). Last campaign day is Nov 10: 0 of 10. Final report due Nov 11 09:13 ART.
+- Threads: inc:metricool_networks still OPEN (SEV-2, Seb messaged Nov 7, not re-sent; recorded again for Nov 9, no new alert). 8 Threads drafts held.
+- Metricool: 23 deliveries last 24h (X 20 incl. 15 questions, IG 2, TikTok 1), 0 ERROR. 5 non-draft posts Nov 9 08:15 to Nov 11 08:15 ART (X 3, IG 2), all approved. No X question batch queued for Nov 9 yet. Kit 0 subscribers.
+- ONE CHANGE: NONE (the only commander proposal, "Prove one funnel: 4 owner tools", needs the owner; nothing low risk and internal was proposed).
+
 ## Daily Pulse 2026-11-08 (08:20 ART)
 - Health: only meta_pixel_configured failing (SEV-3, known). All 20 checkouts ok. 0 failed Actions runs in the last 40 (Nov 8 04:38 to 11:10 UTC; 2 pages builds cancelled by newer pushes). No late heartbeats.
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off. Cost guard ok (no cap hit). 2 days left in FIRST SALES MODE, 0 of 10.

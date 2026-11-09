@@ -1,0 +1,54 @@
+{
+ "date": "2026-11-09",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts + getBrandSettings (brand 7761544) + Kit get_growth_stats, pulled 2026-11-09 11:25 UTC by Daily Pulse. 7d window Nov 2 to Nov 8 (Metricool daily rows; IG reel views for Nov 3 and Nov 4 not reported).",
+ "kit": {
+  "subscribers": 0,
+  "new_7d": 0
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 86,
+   "posts_7d": 15,
+   "interactions_7d": 24,
+   "accounts_engaged_7d": 1,
+   "reel_views_7d": 342,
+   "note": "accounts_engaged_7d is the Nov 8 daily value (IGEV42, not additive); followers = IGEV01 on Nov 8; Nov 3 and Nov 4 reel views (IGEV23) missing, so reel_views_7d covers Nov 2 plus Nov 5 to 8 (Nov 8: 111, best day of the window)"
+  },
+  "threads": {
+   "followers": null,
+   "posts_7d": null,
+   "views_7d": null,
+   "interactions_7d": null,
+   "note": "MISSING: Threads still absent from the brand's networksData (getBrandSettings: instagram, twitter, tiktok) on Nov 9. THEV metrics return one Nov 8 row of zeros. Incident inc:metricool_networks:2026-11-07 open, Seb messaged Nov 7."
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 23,
+  "queued": 5,
+  "failed": 0,
+  "window": "published/failed = Metricool deliveries Nov 8 08:15 to Nov 9 08:15 ART (X 20 incl. 15 questions, IG 2, TikTok 1, Threads 0), queued = non-draft pending posts Nov 9 08:15 to Nov 11 08:15 ART (X 3, IG 2, Threads 0, TikTok 0)",
+  "unapproved_pending": 0,
+  "unapproved_action": "none: all 5 pending non-draft posts are in health.approved_post_uuids() (499 approved). No post created after Nov 8 09:15 ART in the window. Nothing drafted by Daily Pulse.",
+  "cadence_ok": "Nov 9: IG 1, X 3 non-draft; Nov 10: IG 1. Within caps. Threads 0 (8 drafts held since the disconnect), TikTok 0 queued, no X question posts queued for Nov 9."
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-08",
+  "campaign": "120248645551300265 PAUSED Nov 3; campaign ads.status off since Nov 2",
+  "cap_usd": 60,
+  "source": "costs ledger (no spend after Nov 1; Adspirer not re-queried this run)"
+ },
+ "decisions": [
+  "Threads: reconnect the Threads account to Metricool brand autopilot.oi (dropped Nov 6 ~23:30 ART, still disconnected Nov 8); then the operator can un-draft the remaining future Threads posts.",
+  "Viral Lab: pick a source for public view counts so references can be certified (YouTube Data API key, or you capture URL + views + creator's last 10 from your phone). Open since Oct 31.",
+  "Meta ads restart needs a live Meta Pixel and your explicit yes (withdrawn Nov 2).",
+  "Kit: 0 subscribers ever; the only test signup is unconfirmed."
+ ]
+}
