@@ -207,3 +207,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-09T00:34:11+00:00", "note": "0 routed (forms 10118407/10118386 empty)"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-09T08:36:49+00:00", "note": "0 routed (forms 10118407/10118386 empty)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-09T11:22:09+00:00", "note": "0 orders, 20 checkouts ok, Threads still disconnected (SEV-2 known), 5 queued posts approved, ONE CHANGE NONE"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-09T12:14:02+00:00", "note": "AM Nov 9: IG illegal hook pack 18:00, X 5+13 questions, TikTok tk-mistakes2 10:00, Threads still disconnected"}
