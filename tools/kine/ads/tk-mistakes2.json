@@ -1,0 +1,190 @@
+{
+ "template": "ad3.html",
+ "cold_open": 0.3,
+ "cap_fix": {},
+ "voice_speed": 1.0,
+ "sfx_only": [
+  "tick",
+  "cta"
+ ],
+ "foley": 0.8,
+ "music_prompt": "Cinematic emotional score for a {dur} second film. Opens with soft solo felt piano, lonely late night mood, slow, about 70 bpm, lots of space. Around the middle, warm strings and a gentle heartbeat pulse enter as hope arrives. Final third is warm, uplifting and resolved, with a soft swell in the last five seconds that lands and rings out. No vocals, no drums, no EDM, no risers.",
+ "streaks": false,
+ "id": "tk-mistakes2",
+ "agents": [
+  "HOOK",
+  "MISTAKE 1",
+  "MISTAKE 2",
+  "MISTAKE 3",
+  "YOU POST",
+  "OFFER"
+ ],
+ "soft": [
+  "HOOK",
+  "YOU POST",
+  "OFFER"
+ ],
+ "dip": [
+  "YOU POST",
+  "OFFER"
+ ],
+ "meta": {
+  "landing": "https://autopilotoi.app/store/video/?utm_source=tiktok&utm_campaign=manager&utm_content=tk_mistakes2_1109",
+  "primary_text": "Three more mistakes that cost TikTok views: a face before the thing, no words on screen, and a video longer than the idea. The TikTok Agent flags them in your cut plan. You film, edit and post. Sample data shown.",
+  "headline": "3 more mistakes killing your views",
+  "description": "$10 \u00b7 TikTok Agent",
+  "cta": "LEARN_MORE"
+ },
+ "beats": [
+  {
+   "say": "Three more mistakes killing your TikTok views.",
+   "head": [
+    "3 MORE MISTAKES",
+    "*KILLING YOUR VIEWS.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh03"
+    ],
+    "clip_ins": {
+     "sh03": 1.4
+    }
+   },
+   "agent": 0
+  },
+  {
+   "say": "One. You open on your face, not the thing.",
+   "head": [
+    "ONE.",
+    "*SHOW THE THING FIRST.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh19"
+    ],
+    "clip_ins": {
+     "sh19": 2.4
+    },
+    "kind": "HOOK CHECK",
+    "msg": "hooks: my first second",
+    "draft": "SAMPLE \u00b7 Was: hi guys, quick video \u00b7 Now: open on the finished result"
+   },
+   "agent": 1
+  },
+  {
+   "say": "Two. No words on screen in the first second.",
+   "head": [
+    "TWO.",
+    "*NO WORDS ON SCREEN.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh04"
+    ],
+    "clip_ins": {
+     "sh04": 0.4
+    },
+    "kind": "CAPCUT PLAN",
+    "msg": "cut: my opener",
+    "draft": "SAMPLE \u00b7 0 to 1s: hook as big text \u00b7 under 8 words"
+   },
+   "agent": 2
+  },
+  {
+   "say": "Three. Your video runs longer than the idea.",
+   "head": [
+    "THREE.",
+    "*TOO LONG.*"
+   ],
+   "scene": {
+    "type": "thread",
+    "plates": [
+     "sh18"
+    ],
+    "clip_ins": {
+     "sh18": 1.2
+    },
+    "kind": "CAPCUT PLAN",
+    "msg": "cut: trim my video",
+    "draft": "SAMPLE \u00b7 Cut: 4s intro \u00b7 Cut: repeat at 12s \u00b7 End at 18s",
+    "check": "[YOU FILM. YOU EDIT.]"
+   },
+   "agent": 3
+  },
+  {
+   "say": "The TikTok Agent flags all three in your cut plan. You film, edit and post.",
+   "head": [
+    "IT FLAGS ALL 3.",
+    "*YOU POST.*"
+   ],
+   "scene": {
+    "type": "plain",
+    "plates": [
+     "sh09",
+     "sh11"
+    ],
+    "clip_ins": {
+     "sh09": 1.5,
+     "sh11": 0.8
+    },
+    "splits": [
+     0.5,
+     0.5
+    ]
+   },
+   "agent": 4
+  },
+  {
+   "say": "The TikTok Agent. Ten dollars. Link in bio.",
+   "head": [],
+   "scene": {
+    "type": "commentcard",
+    "plates": [
+     "sh14",
+     "sh15"
+    ],
+    "clip_ins": {
+     "sh14": 0.8,
+     "sh15": 2.3
+    },
+    "splits": [
+     0.3,
+     0.7
+    ],
+    "card_at": 2.7,
+    "track": [
+     [
+      3.0,
+      186,
+      1215,
+      654,
+      405
+     ],
+     [
+      4.0,
+      141,
+      990,
+      774,
+      570
+     ],
+     [
+      4.9,
+      69,
+      999,
+      921,
+      681
+     ]
+    ],
+    "card": {
+     "n": "TIKTOK AGENT",
+     "p": "$10",
+     "s": "LINK IN BIO"
+    }
+   },
+   "agent": 5
+  }
+ ]
+}
