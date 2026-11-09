@@ -1,7 +1,7 @@
 {
  "id": "2026-11-08-owners-illegal-24-prompts",
  "kind": "promptpack",
- "status": "bank",
+ "status": "scheduled",
  "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
  "cover_idea": "Black cover with an off white case file card on top (EXHIBIT A: 24 PROMPTS, the 6 folders listed with black redaction bars and a tilted lime TOO EASY stamp) and a huge full width bottom headline CLAUDE PROMPTS / THAT SHOULD BE / ILLEGAL (lime box).",
  "theme": "business owners new to AI (round 2 of the niche rotation): 24 new prompts in 6 folders that map one to one to the offers (Start here, Receipts = Bookkeeping Sorter, Late payers = Invoice Chaser, Reviews = Review Desk, Posts = Content Week, Prices = Front Desk Kit), all visible, hook test 'Claude prompts that should be illegal' (least recently used, last on Nov 6 restaurant pack)",
@@ -16,5 +16,23 @@
   "x": "Business owners: 24 Claude prompts for receipts, late payers, reviews, posts and price questions. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
  },
  "media": "docs/media/car/2026-11-08-owners-illegal-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
- "built_at": "2026-11-08T19:40Z"
+ "built_at": "2026-11-08T19:40Z",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, autopost to Nov 10 (Recommended)",
+  "basis": "campaign standing approval; MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
+ },
+ "scheduled_by": "Daily Manager 2026-11-09 08:51 ART run (bank promotion, gate 92, QA PASS, CTA AGENTS confirmed, new cover hook test)",
+ "posts": [
+  {
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-09T18:00:00-03:00",
+   "metricool_id": 421711548,
+   "uuid": "-4561583537357634839",
+   "type": "POST carousel, cover_ig.mp4 + 02 to 08"
+  }
+ ],
+ "results": {}
 }

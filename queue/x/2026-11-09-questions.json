@@ -1,0 +1,101 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "5380720738187952854",
+   "metricool_id": 421713821,
+   "at": "2026-11-09T09:45:00-03:00",
+   "pillar": "question",
+   "hook": "Breakfast: every day or skip it?"
+  },
+  {
+   "uuid": "5229471010452556820",
+   "metricool_id": 421713842,
+   "at": "2026-11-09T10:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you let AI write your wedding speech?"
+  },
+  {
+   "uuid": "8519024479800870593",
+   "metricool_id": 421713879,
+   "at": "2026-11-09T11:40:00-03:00",
+   "pillar": "question",
+   "hook": "Busy and the phone rings: answer it or let it ring?"
+  },
+  {
+   "uuid": "6458204236580736674",
+   "metricool_id": 421713907,
+   "at": "2026-11-09T12:40:00-03:00",
+   "pillar": "question",
+   "hook": "Lunch at your desk or away from it?"
+  },
+  {
+   "uuid": "-3566598772575092690",
+   "metricool_id": 421713936,
+   "at": "2026-11-09T13:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you tell a customer AI helped write their quote?"
+  },
+  {
+   "uuid": "-5470797072244323860",
+   "metricool_id": 421713956,
+   "at": "2026-11-09T14:40:00-03:00",
+   "pillar": "question",
+   "hook": "Emojis in work texts: yes or no?"
+  },
+  {
+   "uuid": "7823683458117947366",
+   "metricool_id": 421713969,
+   "at": "2026-11-09T15:40:00-03:00",
+   "pillar": "question",
+   "hook": "Worst chore: dishes or laundry?"
+  },
+  {
+   "uuid": "-1584775291831234813",
+   "metricool_id": 421713985,
+   "at": "2026-11-09T16:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you let AI set your prices?"
+  },
+  {
+   "uuid": "7421514691922970967",
+   "metricool_id": 421714334,
+   "at": "2026-11-09T17:40:00-03:00",
+   "pillar": "question",
+   "hook": "Early to every meeting or right on time?"
+  },
+  {
+   "uuid": "-9121121426012680331",
+   "metricool_id": 421714355,
+   "at": "2026-11-09T19:40:00-03:00",
+   "pillar": "question",
+   "hook": "AI answer or a stranger's forum answer?"
+  },
+  {
+   "uuid": "-4938288592889427208",
+   "metricool_id": 421714372,
+   "at": "2026-11-09T21:40:00-03:00",
+   "pillar": "question",
+   "hook": "Biggest time waster at work: meetings or email?"
+  },
+  {
+   "uuid": "1342787859422726073",
+   "metricool_id": 421714390,
+   "at": "2026-11-09T22:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you use an AI that writes exactly like you?"
+  },
+  {
+   "uuid": "5781309185433094061",
+   "metricool_id": 421714419,
+   "at": "2026-11-09T23:40:00-03:00",
+   "pillar": "question",
+   "hook": "Bed by 11 or one more episode?"
+  }
+ ],
+ "note": "18:40 and 20:40 not scheduled (tool permission denied this run)"
+}

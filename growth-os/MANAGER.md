@@ -100,6 +100,8 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 
 ## 6. What works (evidence log, newest first)
 
+- 2026-11-09 EARLY: TikTok tk-mistakes (value first list, Nov 7) got 4 shares, the first TikTok shares ever, at 128 views. Demos never got a share. Follow up tk-mistakes2.
+- 2026-11-09 CONFIRMED: IG "You run a <niche> business" prompt pack covers dead after 5 tries (7 to 16 views, 0 saves, 0 shares). Testing the "should be illegal" cover on Nov 9.
 - 2026-11-08 EARLY: TikTok tk-review (reading your numbers, Nov 6) settled at 147 views and the only like of the week, ahead of tk-hooks 101 and value first tk-mistakes 77. Numbers angle gets a value first follow up (tk-numbers).
 - 2026-11-08 CONFIRMED: IG prompt packs Nov 5 to 7 (salon 13, cleaner 15, restaurant 5 views) all 0 saves, 0 shares, 0 comments.
 - 2026-11-07 CONFIRMED: TikTok Agent demo videos have no signal after 3 tries (96, 101, 36 views, 0 likes, 0 shares) and TikTok daily views fell 450 to 36 (Nov 1 to 6). Demo format dropped; testing value first videos (mistakes, how to) with the agent only at the end.
