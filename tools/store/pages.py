@@ -21,8 +21,8 @@ KIT = "A PDF with the master prompt, 5 starter prompts, a 10 minute setup guide 
 
 P = {
  "subs": dict(cat="money", ic="✂️", name="Subscription Agent", price="$10", buy="subs-agent", kw="SUBS", guide="subs", video=vid("subs-agent"),
-  title="Find every subscription you pay for", short="Lists every recurring charge, drafts the cancel messages",
-  lead="Upload 2 to 3 months of statements. Claude lists every recurring charge, helps you sort keep and cut, and drafts the cancel messages. Do a sweep once a month and new charges don't slip by.",
+  title="Find the subscriptions hiding in your statements", short="Lists the recurring charges on your statements, drafts the cancel messages",
+  lead="Upload 2 to 3 months of statements. Claude lists the recurring charges it finds, helps you sort keep and cut, and drafts the cancel messages. A yearly plan only shows up if it was billed in those months, so do a sweep once a month to catch new charges.",
   who=["You pay for apps, streaming or trials you've lost track of", "You want one clear list with the yearly cost of each", "You'd rather not write cancel emails yourself"],
   sample_note="Sample output from a test run on made-up statements. Your results depend on your statements.",
   sample_head=["Merchant", "Amount", "Every", "Yearly"],
