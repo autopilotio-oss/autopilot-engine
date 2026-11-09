@@ -1,25 +1,25 @@
 {
-  "at": "2026-11-08T20:26:00Z",
+  "at": "2026-11-09T00:30:00Z",
   "posts_today": {
-    "twitter": {"published": 11, "pending": 9, "error": 0},
-    "instagram": {"published": 1, "pending": 2, "error": 0},
+    "twitter": {"published": 17, "pending": 3, "error": 0},
+    "instagram": {"published": 2, "pending": 1, "error": 0},
     "threads": {"published": 0, "pending": 4, "error": 0},
     "tiktok": {"published": 1, "pending": 0, "error": 0}
   },
   "top_posts": [
+    {
+      "network": "tiktok",
+      "published_at": "2026-11-07T13:04:56-03:00",
+      "text": "3 mistakes that quietly kill TikTok views.",
+      "metrics": {"views": 128, "likes": 0, "comments": 0, "shares": 4, "saves": null, "reach": null},
+      "url": null
+    },
     {
       "network": "instagram",
       "published_at": "2026-11-06T13:07:28-03:00",
       "text": "Type review and list the jobs you finished today.",
       "metrics": {"reach": 69, "views": 78, "saves": 0, "shares": 0, "comments": 0},
       "url": "https://www.instagram.com/reel/DfZrNGPFW6F/"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-11-05T13:05:48-03:00",
-      "text": "A customer asks for a price while you're in the middle of a job.",
-      "metrics": {"reach": 49, "views": 56, "saves": 0, "shares": 0, "comments": 0},
-      "url": "https://www.instagram.com/reel/DfXGSM7lR7D/"
     },
     {
       "network": "instagram",
@@ -30,5 +30,5 @@
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Snapshot 17:26 ART Nov 8. 13 posts out today (X 11, IG reel 1, TikTok 1), 15 pending, 0 ERROR. Threads 4 and 1 IG carousel are drafts. Window 6 to 72h: every IG reel, IG carousel and TikTok post has 0 saves and 0 shares, so no winner; ranking falls back to reach. IG carousels: reach 8 (cleaning), 7 (salon), 4 (restaurant). TikTok views 147 (Nov 6 'Posted 10 videos'), 101, 77; TikTok reach and saves not provided: MISSING. X and Threads post metrics not pulled: MISSING. Kit get_growth_stats: 0 subscribers, 0 new. Revenue per hub feed: 0 verified orders all time (unchanged). All GitHub workflows latest conclusion success, 0 fails in 24h; ci.yml success. HQ feed written (status/hub v58)."
+  "notes": "Snapshot 21:30 ART Nov 8. 20 posts out today (X 17, IG 2: Front Desk reel 10:00 and landscaping carousel 18:00, TikTok 1), 8 pending (X 3 later tonight; Threads 4 and IG contractor carousel are drafts), 0 ERROR. Window 6 to 72h: only TikTok Nov 7 '3 mistakes' has shares (4; TikTok saves and reach not provided: MISSING); every IG reel and carousel 0 saves, 0 shares. IG carousels: reach 8 cleaning, 7 salon, 4 restaurant. TikTok views 147 (Nov 6), 128 (Nov 7), 56 (Nov 8, ~8h). Nov 8 IG reel not yet in Metricool reels rows: MISSING. TikTok post URLs not in analytics rows: MISSING. X and Threads post metrics not pulled: MISSING. Kit: 0 subscribers, 0 new. Revenue per hub feed: 0 verified orders all time (unchanged). All GitHub workflows latest success, 0 fails 24h; ci.yml success. HQ feed written (status/hub v59)."
 }
