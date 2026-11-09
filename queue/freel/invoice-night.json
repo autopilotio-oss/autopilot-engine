@@ -1,0 +1,20 @@
+{
+ "id": "invoice-night",
+ "ep": "027-invoice-night",
+ "kind": "product",
+ "hook": [
+  "Still typing invoices",
+  "at 10pm?"
+ ],
+ "keyword": "AGENTS",
+ "video": "https://autopilotoi.app/media/freel/invoice-night.mp4",
+ "poster": "https://autopilotoi.app/media/freel/invoice-night-poster.jpg",
+ "caption": {
+  "ig": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
+  "other": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
+ },
+ "rendered_at": "2026-11-09T10:19:25+00:00",
+ "status": "rendered",
+ "gate": "pending",
+ "posts": []
+}
