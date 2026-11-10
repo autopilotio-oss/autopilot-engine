@@ -1,0 +1,41 @@
+{
+ "id": "2026-11-10-anthropic-ipo-price-range",
+ "kind": "news",
+ "story_key": "anthropic-ipo-roadshow-price-range-2026-11-10",
+ "cover_idea": "Off white page, giant justified price '$70 TO $78' at the top under a mono NASDAQ : ANT label, a ruled 3 stat row (825M shares, $64.4B raised at the top, ~$1T basic value), headline at the bottom CLAUDE'S MAKER / IS GOING PUBLIC (lime block). Changes vs Fable cover: black to white, headline top to bottom, ladder to giant price number, full width fit to price led rhythm.",
+ "theme": "light",
+ "status": "scheduled",
+ "gate": {
+  "score": 87,
+  "notes": "Accuracy 27/30 (Anthropic roadshow release for shares, split, range, ticker, option; TheWrap and FinanceFeeds for $64.4B, ~$1T basic and up to $1.4T diluted, $26B placement; Bloomberg headline for $1.4T and near SpaceX record; AP via Fast Company for SpaceX $86B; 9 month revenue $33.2B from FinanceFeeds, consistent with AP H1 $16.3B plus FinanceFeeds Q3 $16.96B; compute nearly $900B TheWrap/Reuters and FinanceFeeds $895.4B. Left out single source items: Nov 19 trading date (CNBC sources), $81B run rate). Hook 21/25 (biggest Claude business story of the week, money angle weaker for owners). Clarity 18/20. Design 13/15 (new giant price visual, one lime accent). CTA 8/10 (AGENTS confirmed; X uses free starter UTM). QA PASS 8 slides. Breaking exception: X cap was full, so the 21:00 Content Week text post (uuid -4361186970230767175) was moved to draft, not deleted. IG skipped (today full with Fable 5.2; Nov 11 18:00 keeps the prompt pack). Threads skipped: disconnected.",
+  "pages_note": "Media given to Metricool from raw.githubusercontent.com (Pages deploy still running); Metricool rehosted."
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "yes",
+  "basis": "campaign standing approval (news and prompt carousels); autopost after Nov 10 per MANAGER.md section 7 item 3, Seb 2026-11-04 01:39 'yes'"
+ },
+ "posts": [
+  {
+   "network": "twitter",
+   "networks": [
+    "twitter"
+   ],
+   "metricool_id": 423487674,
+   "uuid": "-5501097013741862027",
+   "at": "2026-11-10T21:00:00-03:00",
+   "type": "slides 01 to 04"
+  }
+ ],
+ "bumped": [
+  {
+   "network": "twitter",
+   "uuid": "-4361186970230767175",
+   "new_metricool_id": 423486863,
+   "was_at": "2026-11-10T21:00:00-03:00",
+   "now": "draft"
+  }
+ ],
+ "threads": "skipped: Threads disconnected from Metricool (MANAGER.md section 7 item 8 pending)",
+ "results": {}
+}

@@ -1,13 +1,14 @@
 {
  "id": "2026-11-07-realtor-24-prompts",
  "kind": "promptpack",
- "status": "bank",
+ "status": "scheduled",
  "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
  "cover_idea": "Vertical split: black left column with a tall justified stack STOP / TYPING / THESE. / PASTE THEM. (lime blocks), off white right side with a hanging yard sign (JUST LISTED, 24 PROMPTS, 6 FOLDERS rider) on a black post and the folder list under it.",
  "theme": "real estate agents: 24 new prompts in 6 folders (Leads, Listings, Showings, Clients, Posts, Money), all visible, hook test 'Stop typing these. Paste them.' (least recently used, last on Nov 4 detailer pack)",
  "gate": {
   "score": 93,
-  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, titles and prompts checked against every tools/carousel/posts/*prompts*.json, no repeats; listing prompt says describe the home, not the buyer; market post says no predictions; no legal, tax or money advice). Hook 21/25 (least recently used hook, new niche; note IG packs after Nov 4 got 10 to 13 views, so hook is unproven). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, read every slide). Design 14/15 vs last 5 covers: vertical black and off white split (new; shop off white, restaurant black, salon lime, cleaner horizontal split, detailer black), headline as a tall left column stack (vs bottom, right column, bottom, bottom, middle full width), yard sign visual (vs shipping label, kitchen ticket, giant number, calendar, folder tabs), narrow justified scale; first render failed QA on contrast (panel colors), fixed with bg-black and explicit panel colors. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (leads, showings), Review Desk, Content Week, Invoice Chaser (referral fee) and Bookkeeping Sorter). QA PASS all 8."
+  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, titles and prompts checked against every tools/carousel/posts/*prompts*.json, no repeats; listing prompt says describe the home, not the buyer; market post says no predictions; no legal, tax or money advice). Hook 21/25 (least recently used hook, new niche; note IG packs after Nov 4 got 10 to 13 views, so hook is unproven). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, read every slide). Design 14/15 vs last 5 covers: vertical black and off white split (new; shop off white, restaurant black, salon lime, cleaner horizontal split, detailer black), headline as a tall left column stack (vs bottom, right column, bottom, bottom, middle full width), yard sign visual (vs shipping label, kitchen ticket, giant number, calendar, folder tabs), narrow justified scale; first render failed QA on contrast (panel colors), fixed with bg-black and explicit panel colors. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (leads, showings), Review Desk, Content Week, Invoice Chaser (referral fee) and Bookkeeping Sorter). QA PASS all 8.",
+  "recheck": "2026-11-10 14:55 ART News Desk: re-read all 8 slides, CTA AGENTS plus free starter gift matches override, no parked offers, score 93 holds."
  },
  "sources": [],
  "captions": {
@@ -16,5 +17,34 @@
   "x": "Real estate agents: 24 Claude prompts for leads, listings, showings, clients, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
  },
  "media": "docs/media/car/2026-11-07-realtor-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
- "built_at": "2026-11-07T13:39Z"
+ "built_at": "2026-11-07T13:39Z",
+ "approval": {
+  "by": "Seb",
+  "quote": "yes",
+  "basis": "campaign standing approval (news and prompt carousels); autopost after Nov 10 per MANAGER.md section 7 item 3, Seb 2026-11-04 01:39 'yes'"
+ },
+ "posts": [
+  {
+   "network": "instagram",
+   "networks": [
+    "instagram"
+   ],
+   "metricool_id": 423487700,
+   "uuid": "2502762178435959174",
+   "at": "2026-11-11T18:00:00-03:00",
+   "type": "POST carousel, cover_ig.mp4 plus slides 02 to 08"
+  },
+  {
+   "network": "twitter",
+   "networks": [
+    "twitter"
+   ],
+   "metricool_id": 423487725,
+   "uuid": "434761735944160342",
+   "at": "2026-11-11T18:00:00-03:00",
+   "type": "slides 01 to 04"
+  }
+ ],
+ "threads": "skipped: Threads disconnected",
+ "results": {}
 }
