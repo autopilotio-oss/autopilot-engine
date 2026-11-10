@@ -14,7 +14,7 @@
   "other": "You know you should post, you just never know what. Type week, answer 5 quick questions about your real jobs, and Content Week gives you 7 posts: what to shoot on your phone, the caption and the hashtags, in your voice. You post them yourself. Sample deck builder shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #socialmediatips"
  },
  "rendered_at": "2026-11-07T09:57:13+00:00",
- "status": "passed",
+ "status": "scheduled",
  "gate": {
   "score": 90,
   "breakdown": {
@@ -30,6 +30,20 @@
   "by": "campaign operator",
   "at": "2026-11-07T07:35-03:00"
  },
- "posts": [],
- "note": "Gate passed; waiting for the next free IG 10:00 slot (Nov 11 on)."
+ "posts": [
+  {
+   "metricool_id": 422948786,
+   "uuid": "4496510848985219641",
+   "networks": [
+    "instagram"
+   ],
+   "at": "2026-11-14T10:00-03:00"
+  }
+ ],
+ "note": "2026-11-10 07:20 ART: scheduled IG 10:00 Nov 14 (Nov 10 to 13 taken). Gate 90 from Nov 7.",
+ "approval": {
+  "by": "Seb",
+  "quote": "Yes, 10 days only (Recommended)",
+  "basis": "campaign standing approval"
+ }
 }
