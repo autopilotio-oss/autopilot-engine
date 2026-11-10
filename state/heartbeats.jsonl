@@ -229,3 +229,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-10T12:27:11+00:00", "note": "0 posts out today (22 pending, 0 errors), top post saves+shares 4 (TikTok Nov 7), feed written yes"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-10T13:18:15+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-10T13:45:20+00:00", "note": "built 2026-11-10-mechanic-24-prompts, score 91"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-10T14:55:49+00:00", "note": "dropped the tap for sound pill on 12 store and library pages (demo videos have no audio); traced freel.yml failure to ElevenLabs 401, owner must renew key"}
