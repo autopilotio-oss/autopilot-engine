@@ -100,6 +100,7 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 
 ## 6. What works (evidence log, newest first)
 
+- 2026-11-10 EARLY: TikTok sequel tk-mistakes2 (same list shape, new mistakes) got 81 views, 0 shares vs tk-mistakes 132 views, 4 shares. A straight sequel did not repeat the shares; next test is a steal-this list (tk-hookfix).
 - 2026-11-09 EARLY: TikTok tk-mistakes (value first list, Nov 7) got 4 shares, the first TikTok shares ever, at 128 views. Demos never got a share. Follow up tk-mistakes2.
 - 2026-11-09 CONFIRMED: IG "You run a <niche> business" prompt pack covers dead after 5 tries (7 to 16 views, 0 saves, 0 shares). Testing the "should be illegal" cover on Nov 9.
 - 2026-11-08 EARLY: TikTok tk-review (reading your numbers, Nov 6) settled at 147 views and the only like of the week, ahead of tk-hooks 101 and value first tk-mistakes 77. Numbers angle gets a value first follow up (tk-numbers).
@@ -116,7 +117,6 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 - 2026-11-04 EARLY: IG feed reach is tiny (3 to 30 views a post). Only comments came on the Binance reopen carousel (2).
 - 2026-11-03 EARLY: TikTok videos beat TikTok photo posts (44 to 113 views vs 0 to 78). Best: small business 7 agents video, 113.
 - 2026-11-03 EARLY: IG best were carousels: credit carousel 35, Business Brain 33, Binance news 30.
-- 2026-11-03 EARLY: Threads best was PHP news, 64 views.
 - 2026-11-03 CONFIRMED: Zero orders and zero Kit subs so far. Reach is the bottleneck, then the click.
 
 ## 7. Open questions for Seb
@@ -138,6 +138,8 @@ Answers go here with his quote and date.
 9. PENDING 2026-11-07: The disconnect came after a day of about 60 Threads posts. When it is back, restart Threads questions at 1 an hour instead of 3?
 
 10. PENDING 2026-11-08: IG prompt packs got 0 saves and 0 shares 4 days running. Keep a pack every day at 18:00, or swap that slot to Front Desk reels for a week?
+
+11. PENDING 2026-11-10: ElevenLabs returns 401 (key expired or out of credit). Factory reels and TikTok renders are stopped until the key or plan is renewed. Can you fix it today?
 
 6. PENDING 2026-11-05: The IG 24 prompts post got 10 comments on 8 views. Were they real people (what did they ask), or our own replies?
 
