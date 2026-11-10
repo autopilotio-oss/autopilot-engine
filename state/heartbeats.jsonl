@@ -234,3 +234,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-10T16:33:32+00:00", "note": "0 routed (0 new subscribers on forms 10118407/10118386)"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-10T16:53:12+00:00", "note": "midday: X 7 IG 1 out, no failures, per post numbers missing, no move"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-10T19:16:08+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
+{"worker": "draft_factory", "status": "ok", "at": "2026-11-10T19:38:17+00:00", "note": "built 2026-11-10-bakery-24-prompts, score 92, QA PASS, bank 6"}
