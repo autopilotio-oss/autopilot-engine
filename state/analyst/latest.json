@@ -1,19 +1,12 @@
 {
-  "at": "2026-11-10T16:30:00Z",
+  "at": "2026-11-10T20:25:00Z",
   "posts_today": {
-    "twitter": {"published": 6, "pending": 14, "error": 0},
+    "twitter": {"published": 11, "pending": 10, "error": 0},
     "instagram": {"published": 1, "pending": 1, "error": 0},
     "threads": {"published": 0, "pending": 0, "error": 0},
     "tiktok": {"published": 0, "pending": 0, "error": 0}
   },
   "top_posts": [
-    {
-      "network": "tiktok",
-      "published_at": "2026-11-07T13:04:56-03:00",
-      "text": "3 mistakes that quietly kill TikTok views.",
-      "metrics": {"views": 132, "comments": 0, "shares": 4, "saves": null, "reach": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7705414851664809236"
-    },
     {
       "network": "instagram",
       "published_at": "2026-11-08T13:03:12-03:00",
@@ -22,13 +15,21 @@
       "url": "https://www.instagram.com/reel/Dfe0Wj8D9J5/"
     },
     {
-      "network": "instagram",
-      "published_at": "2026-11-09T13:04:58-03:00",
-      "text": "Dave is a week late and you hate the awkward text.",
-      "metrics": {"reach": 57, "views": 60, "saves": 0, "shares": 0, "comments": 0},
-      "url": "https://www.instagram.com/reel/DfhZUbwgO1q/"
+      "network": "tiktok",
+      "published_at": "2026-11-08T13:04:11-03:00",
+      "text": "Stop guessing which video worked.",
+      "metrics": {"views": 86, "reach": null, "shares": 0, "comments": 0, "saves": null},
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7705785438832708870"
+    },
+    {
+      "network": "tiktok",
+      "published_at": "2026-11-09T13:05:26-03:00",
+      "text": "3 more mistakes that quietly kill TikTok views.",
+      "metrics": {"views": 81, "reach": null, "shares": 0, "comments": 0, "saves": null},
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7706156788567084340"
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Snapshot 13:30 ART Nov 10. 7 posts out today (X 6, IG 1: Front Desk quote reel 10:00), 15 pending (X 14 incl. Fable 5.2 news 18:00, IG 1 Fable 5.2 news carousel 18:00), 0 errors. No Threads or TikTok scheduled today (TikTok held on ElevenLabs 401). Window Nov 7 10:24 to Nov 10 07:24 ART: only one post with saves+shares above 0 (TikTok Nov 7, 4 shares). All IG reels and carousels 0 saves, 0 shares, 0 comments (carousels reach 1 to 13). TikTok Nov 8 and Nov 9 videos 86 and 81 views, 0 shares. TikTok saves and reach not provided by Metricool (null); IG profile visits not in post connector (MISSING); X post metrics not pulled. Watch: freel.yml last run failed (already in Fix needed, ElevenLabs 401). Revenue: 0 verified orders all time, ledger synced 13:59Z. Kit 0 subscribers. HQ feed written v65."
+  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-10T19:40:12Z"},
+  "notes": "Snapshot 17:25 ART Nov 10. 12 posts out today (X 11, IG 1 Front Desk quote reel 10:00), 11 pending (X 10 incl. Fable 5.2 news 18:00, IPO news 21:00 and Content Week 21:00 which is still a DRAFT so will not auto publish; IG 1 Fable 5.2 carousel 18:00), 0 errors. No Threads or TikTok today. Window 6 to 72h: no post has any saves or shares (all 0; TikTok saves and reach not provided). Ranking falls to reach/views only, so there is no winner. IG Nov 9 Invoice Chaser reel reach 57. X post analytics not pulled. GitHub: freel.yml failed (ElevenLabs 401, already in Fix needed); ci.yml last run success. Revenue: 0 verified orders."
 }
