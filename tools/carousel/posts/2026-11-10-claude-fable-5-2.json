@@ -1,0 +1,86 @@
+{
+ "kind": "news",
+ "dateline": "NOV 10 2026",
+ "story_key": "anthropic-claude-fable-5-2-mythos-5-2-launch-2026-11-09",
+ "lines": [
+  "Claude's new top model",
+  "[Don't pick it first]"
+ ],
+ "subline": "fable 5.2 and mythos 5.2",
+ "bg_words": [
+  "FABLE",
+  "MYTHOS",
+  "CLAUDE",
+  "OPUS"
+ ],
+ "bg_facts": [
+  "Anthropic released Fable 5.2 and Mythos 5.2 on Nov 9.",
+  "API price fell 20 percent.",
+  "Up to 30 percent faster than 5.1.",
+  "Start with Opus 5.5, Anthropic says."
+ ],
+ "slides": [
+  {
+   "title": "What *happened*",
+   "body": "On <b>November 9</b>, Anthropic released <b>Claude Fable 5.2</b> and <b>Claude Mythos 5.2</b>. It calls them its best models for long, open ended technical work. Both write answers <b>up to 30% faster</b> than the 5.1 versions."
+  },
+  {
+   "title": "Fable vs *Mythos*",
+   "body": "They are <b>the same underlying model</b>. Fable 5.2 has cybersecurity and biology safeguards and is out now on <b>paid Claude plans</b>, Claude Code and the API. Mythos 5.2 has fewer limits and is <b>only for vetted</b> cybersecurity and life science teams."
+  },
+  {
+   "title": "The *numbers*",
+   "body": "API price per million tokens fell <b>20%</b>: <b>$8 in and $40 out</b>, down from $10 and $50. Opus 5.5 costs <b>$4 and $20</b>. A fast mode runs <b>up to 2.5x quicker</b> at double the price."
+  },
+  {
+   "title": "On a *Pro plan*",
+   "body": "From <b>Nov 9 to Nov 16</b>, Fable is included on Pro for <b>up to 50% of your weekly usage limit</b>. After that week, Fable use bills to <b>usage credits</b> if you turn them on. The <b>Free plan</b> does not get these offers."
+  },
+  {
+   "title": "What Anthropic *says*",
+   "body": "Start with <b>Opus 5.5</b> for most coding and knowledge work. Move up to <b>Fable</b> for the hardest, biggest jobs. Step down to <b>Sonnet or Haiku 5.5</b> when the task is simple and you want it cheaper."
+  },
+  {
+   "title": "What it means *for you*",
+   "body": "Invoices, review replies and customer texts do not need the top model. <b>Use Sonnet or Opus</b> and save your limit. Try Fable this week on one big job, like a long contract summary. <b>Always read the draft before you send.</b>"
+  }
+ ],
+ "cta": {
+  "big": "Run a business? Put AI *to work today*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes",
+  "small": "Free, right in your DMs. *It drafts, you decide.*"
+ },
+ "sources": [
+  [
+   "VentureBeat",
+   "https://venturebeat.com/technology/anthropic-releases-claude-fable-5-2-and-mythos-5-2-pairing-new-record-high-benchmarks-with-20-api-cost-reduction"
+  ],
+  [
+   "The Next Web",
+   "https://thenextweb.com/news/claude-fable-5-2-mythos-5-2-anthropic-launch-price"
+  ],
+  [
+   "MacRumors",
+   "https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/"
+  ],
+  [
+   "9to5Mac",
+   "https://9to5mac.com/2026/11/09/anthropic-upgrades-claude-with-new-fable-5-2-model-details-here/"
+  ],
+  [
+   "Claude Help Center",
+   "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers"
+  ],
+  [
+   "Fortune",
+   "https://fortune.com/2026/11/09/anthropic-debuts-updated-claude-fable-and-mythos-models-undercutting-price-of-openais-gpt-6-astra-by-up-to-80/"
+  ]
+ ],
+ "cover_bg": "bg-black",
+ "theme": "lime",
+ "grain": false,
+ "music": "bright",
+ "seed": 52,
+ "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">NEWS &middot; CLAUDE &middot; NOV 9</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"16\" style=\"left:56px;top:150px;font-size:150px;white-space:nowrap;color:#f2f2ee\">Claude's new top model</div>\n<div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:300px;font-size:150px;white-space:nowrap;background:#D4FF3A;color:#0c0c0c;padding:10px 22px 0\">Don't pick it first</div>\n<div class=\"fx Cc\" style=\"left:56px;top:560px;font-size:24px;color:#9a9a96\">The Claude ladder &middot; Anthropic's own advice</div>\n<div class=\"fx\" style=\"left:56px;top:612px;width:968px;height:92px;border:3px dashed #666;border-radius:14px;background:#0a0a0a\"></div><div class=\"fx A\" style=\"left:86px;top:628px;font-size:66px;color:#b5b5b0\">Mythos 5.2</div><div class=\"fx Mm\" style=\"left:600px;top:642px;width:400px;text-align:right;font-size:28px;font-weight:700;color:#b5b5b0\">VETTED TEAMS ONLY</div>\n<div class=\"fx\" style=\"left:56px;top:716px;width:968px;height:92px;background:#D4FF3A;border-radius:14px\"></div><div class=\"fx A\" style=\"left:86px;top:732px;font-size:66px;color:#0c0c0c;background:#D4FF3A\">Fable 5.2</div><div class=\"fx Mm\" style=\"left:600px;top:746px;width:400px;text-align:right;font-size:28px;font-weight:700;color:#0c0c0c;background:#D4FF3A\">NEW &middot; HARDEST JOBS</div>\n<div class=\"fx\" style=\"left:56px;top:820px;width:968px;height:92px;border:3px solid #f2f2ee;border-radius:14px\"></div><div class=\"fx A\" style=\"left:86px;top:836px;font-size:66px;color:#f2f2ee\">Opus 5.5</div><div class=\"fx Mm\" style=\"left:600px;top:850px;width:400px;text-align:right;font-size:28px;font-weight:700;color:#f2f2ee\">&#9664; START HERE</div>\n<div class=\"fx\" style=\"left:56px;top:924px;width:968px;height:92px;border:3px solid #333;border-radius:14px\"></div><div class=\"fx A\" style=\"left:86px;top:940px;font-size:66px;color:#bdbdb8\">Sonnet 5.5</div><div class=\"fx Mm\" style=\"left:600px;top:954px;width:400px;text-align:right;font-size:28px;font-weight:700;color:#9a9a96\">CHEAPER</div>\n<div class=\"fx\" style=\"left:56px;top:1028px;width:968px;height:92px;border:3px solid #333;border-radius:14px\"></div><div class=\"fx A\" style=\"left:86px;top:1044px;font-size:66px;color:#bdbdb8\">Haiku 5.5</div><div class=\"fx Mm\" style=\"left:600px;top:1058px;width:400px;text-align:right;font-size:28px;font-weight:700;color:#9a9a96\">CHEAPEST</div>\n<div class=\"fx Ii\" style=\"left:56px;top:1170px;width:800px;font-size:34px;line-height:1.28;color:#f2f2ee\">Faster, smarter, 20% cheaper on the API. Here is when it is worth it &#9656;</div>"
+}
