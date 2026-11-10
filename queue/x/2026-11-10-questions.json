@@ -1,0 +1,114 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "3134911293813902521",
+   "metricool_id": 423053844,
+   "at": "2026-11-10T09:45:00-03:00",
+   "pillar": "question",
+   "hook": "Phone alarm or a real alarm clock?"
+  },
+  {
+   "uuid": "7714444674973976187",
+   "metricool_id": 423053862,
+   "at": "2026-11-10T10:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you let AI answer your business phone?"
+  },
+  {
+   "uuid": "-2094340281003455833",
+   "metricool_id": 423053881,
+   "at": "2026-11-10T11:40:00-03:00",
+   "pillar": "question",
+   "hook": "Cold pizza or warmed up pizza?"
+  },
+  {
+   "uuid": "3139666438836339813",
+   "metricool_id": 423053906,
+   "at": "2026-11-10T12:40:00-03:00",
+   "pillar": "question",
+   "hook": "Lose your WiFi or your car for a week?"
+  },
+  {
+   "uuid": "-3664474829988344790",
+   "metricool_id": 423053929,
+   "at": "2026-11-10T13:40:00-03:00",
+   "pillar": "question",
+   "hook": "Stuck at work: ask a coworker or ask ChatGPT first?"
+  },
+  {
+   "uuid": "-5291846005866411566",
+   "metricool_id": 423054162,
+   "at": "2026-11-10T14:40:00-03:00",
+   "pillar": "question",
+   "hook": "Most overrated app on your phone?"
+  },
+  {
+   "uuid": "3007232078744928772",
+   "metricool_id": 423054178,
+   "at": "2026-11-10T15:40:00-03:00",
+   "pillar": "question",
+   "hook": "Inbox zero or 5,000 unread?"
+  },
+  {
+   "uuid": "-3856289161058826012",
+   "metricool_id": 423054195,
+   "at": "2026-11-10T16:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you let AI write your job ad?"
+  },
+  {
+   "uuid": "172565076753204586",
+   "metricool_id": 423054218,
+   "at": "2026-11-10T17:40:00-03:00",
+   "pillar": "question",
+   "hook": "Beach or mountains?"
+  },
+  {
+   "uuid": "-9215635521011036612",
+   "metricool_id": 423054237,
+   "at": "2026-11-10T18:40:00-03:00",
+   "pillar": "question",
+   "hook": "Hardest people to say no to: friends or family?"
+  },
+  {
+   "uuid": "-4756177751696126402",
+   "metricool_id": 423054645,
+   "at": "2026-11-10T19:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you ride in a self driving car today?"
+  },
+  {
+   "uuid": "11845894947356999",
+   "metricool_id": 423054659,
+   "at": "2026-11-10T20:40:00-03:00",
+   "pillar": "question",
+   "hook": "Tuesday night: cook at home or order in?"
+  },
+  {
+   "uuid": "-3618423958334520337",
+   "metricool_id": 423054674,
+   "at": "2026-11-10T21:40:00-03:00",
+   "pillar": "question",
+   "hook": "Best thing AI ever did for you? One line."
+  },
+  {
+   "uuid": "-5061899852697418562",
+   "metricool_id": 423054685,
+   "at": "2026-11-10T22:40:00-03:00",
+   "pillar": "question",
+   "hook": "Last thing you Googled? No lying."
+  },
+  {
+   "uuid": "-1387349988803918697",
+   "metricool_id": 423054705,
+   "at": "2026-11-10T23:40:00-03:00",
+   "pillar": "question",
+   "hook": "Phone face up or face down on the table?"
+  }
+ ]
+}

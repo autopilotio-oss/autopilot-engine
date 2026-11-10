@@ -1,0 +1,37 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "-9169752728628736023",
+   "metricool_id": 423053368,
+   "at": "2026-11-10T09:30:00-03:00",
+   "pillar": "invoice_chaser",
+   "hook": "ic_third_reminder: Nobody starts a business to send the third payment reminder."
+  },
+  {
+   "uuid": "-3618510829491631870",
+   "metricool_id": 423053389,
+   "at": "2026-11-10T12:00:00-03:00",
+   "pillar": "review_desk",
+   "hook": "rd_next_customer: Your next customer reads your reviews before they call."
+  },
+  {
+   "uuid": "2446076088998053260",
+   "metricool_id": 423053404,
+   "at": "2026-11-10T15:00:00-03:00",
+   "pillar": "front_desk",
+   "hook": "fd_up_a_ladder: You are up a ladder. Your phone buzzes: how much for Tuesday?"
+  },
+  {
+   "uuid": "-4361186970230767175",
+   "metricool_id": 423053429,
+   "at": "2026-11-10T21:00:00-03:00",
+   "pillar": "content_week",
+   "hook": "cw_tuesday_night: Tuesday night and you still have not posted once this week?"
+  }
+ ]
+}
