@@ -1,0 +1,42 @@
+{
+ "id": "2026-11-10-claude-fable-5-2",
+ "kind": "news",
+ "story_key": "anthropic-claude-fable-5-2-mythos-5-2-launch-2026-11-09",
+ "cover_idea": "Black cover, full width two line headline at top (CLAUDE'S NEW TOP MODEL / DON'T PICK IT FIRST in a lime block), below it a 5 row 'Claude ladder' (Mythos dashed and locked, Fable lime, Opus outlined with START HERE, Sonnet and Haiku dim). First ladder/rank visual; changes vs trainer cover: background white to black, headline bottom to top, stopwatch to ladder, mid scale to full width fit.",
+ "theme": "lime",
+ "status": "scheduled",
+ "gate": {
+  "score": 89,
+  "notes": "Accuracy 28/30 (VentureBeat, TNW, MacRumors, 9to5Mac, Fortune, Claude Help Center launch offers page; prices per million from VentureBeat and TNW, Fortune's per token wording ignored; Pro 50% weekly limit from Help Center plus MacRumors and 9to5Mac; free plan excluded per Help Center). Hook 21/25 (contrarian useful take on the biggest Claude story). Clarity 18/20 (6 fact slides plus CTA, every slide read). Design 13/15 (new ladder visual, one lime accent; some empty space between headline and ladder). CTA 9/10 (AGENTS confirmed, free starter gift; TOOLS not yet confirmed). QA PASS 8 slides.",
+  "pages_note": "GitHub Pages deploy timed out 4 times in a row (syncing_files), so media was given to Metricool from raw.githubusercontent.com; Metricool rehosted every file on static.metricool.com."
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "yes",
+  "basis": "campaign standing approval (news and prompt carousels); autopost after Nov 10 per MANAGER.md section 7 item 3, Seb 2026-11-04 01:39 'yes'"
+ },
+ "posts": [
+  {
+   "network": "instagram",
+   "networks": [
+    "instagram"
+   ],
+   "metricool_id": 422706143,
+   "uuid": "-3442569546560025467",
+   "at": "2026-11-10T18:00:00-03:00",
+   "type": "POST carousel, cover_ig.mp4 plus slides 02 to 08"
+  },
+  {
+   "network": "twitter",
+   "networks": [
+    "twitter"
+   ],
+   "metricool_id": 422706211,
+   "uuid": "-879204234879547917",
+   "at": "2026-11-10T18:00:00-03:00",
+   "type": "slides 01 to 04"
+  }
+ ],
+ "threads": "skipped: Threads disconnected from Metricool (MANAGER.md section 7 item 8 pending)",
+ "results": {}
+}
