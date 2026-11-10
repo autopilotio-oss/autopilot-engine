@@ -1,0 +1,170 @@
+{
+ "kind": "prompts",
+ "dateline": "NOV 10 2026",
+ "theme": "dark",
+ "music": "bright",
+ "seed": 103,
+ "folders": [
+  "Quotes",
+  "Customers",
+  "Repairs",
+  "Reviews",
+  "Posts",
+  "Money"
+ ],
+ "cover_bg": "bg-black",
+ "lava_opacity": 0.2,
+ "cover_html": "<div class=\"fx\" data-free=\"1\" style=\"left:0;top:800px;width:1080px;height:550px;background:#D4FF3A\"></div><div class=\"fx chip\" style=\"left:56px;top:70px;background:#D4FF3A;color:#0a0a0a\">AUTO REPAIR SHOPS &middot; ALL 24 INSIDE</div><div class=\"fx\" data-free=\"1\" style=\"left:150px;top:168px;width:780px;height:390px;border-radius:30px;background:#f2f2ee;color:#0a0a0a;box-shadow:0 30px 60px #0008;transform:rotate(-3deg)\"><div style=\"position:absolute;left:18px;top:18px;right:18px;bottom:18px;border:7px solid #0a0a0a;border-radius:20px\"></div><div style=\"position:absolute;left:120px;top:44px;width:22px;height:22px;border-radius:50%;background:#0a0a0a\"></div><div style=\"position:absolute;left:638px;top:44px;width:22px;height:22px;border-radius:50%;background:#0a0a0a\"></div><div style=\"position:absolute;left:120px;top:324px;width:22px;height:22px;border-radius:50%;background:#0a0a0a\"></div><div style=\"position:absolute;left:638px;top:324px;width:22px;height:22px;border-radius:50%;background:#0a0a0a\"></div><div style=\"position:absolute;left:0;top:40px;width:780px;text-align:center;font:700 28px C;letter-spacing:8px;color:#0a0a0a\">AUTO REPAIR</div><div style=\"position:absolute;left:0;top:124px;width:780px;text-align:center;font:400 124px/1 A;color:#0a0a0a;letter-spacing:2px\">24 <span style=\"background:#D4FF3A;padding:6px 16px 0\">PROMPTS</span></div><div style=\"position:absolute;left:0;top:312px;width:780px;text-align:center;font:400 22px M;letter-spacing:5px;color:#0a0a0a\">COPY &middot; PASTE &middot; SEND</div></div><div class=\"fx\" data-free=\"1\" style=\"left:56px;top:612px;width:300px;height:66px;box-sizing:border-box;border:2px solid #f2f2ee40;border-radius:8px;display:flex;justify-content:space-between;align-items:center;padding:0 18px\"><span style=\"font:400 34px A;text-transform:uppercase;color:#f2f2ee\">Quotes</span><span style=\"font:400 18px M;color:#D4FF3A\">01 to 04</span></div><div class=\"fx\" data-free=\"1\" style=\"left:390px;top:612px;width:300px;height:66px;box-sizing:border-box;border:2px solid #f2f2ee40;border-radius:8px;display:flex;justify-content:space-between;align-items:center;padding:0 18px\"><span style=\"font:400 34px A;text-transform:uppercase;color:#f2f2ee\">Customers</span><span style=\"font:400 18px M;color:#D4FF3A\">05 to 08</span></div><div class=\"fx\" data-free=\"1\" style=\"left:724px;top:612px;width:300px;height:66px;box-sizing:border-box;border:2px solid #f2f2ee40;border-radius:8px;display:flex;justify-content:space-between;align-items:center;padding:0 18px\"><span style=\"font:400 34px A;text-transform:uppercase;color:#f2f2ee\">Repairs</span><span style=\"font:400 18px M;color:#D4FF3A\">09 to 12</span></div><div class=\"fx\" data-free=\"1\" style=\"left:56px;top:696px;width:300px;height:66px;box-sizing:border-box;border:2px solid #f2f2ee40;border-radius:8px;display:flex;justify-content:space-between;align-items:center;padding:0 18px\"><span style=\"font:400 34px A;text-transform:uppercase;color:#f2f2ee\">Reviews</span><span style=\"font:400 18px M;color:#D4FF3A\">13 to 16</span></div><div class=\"fx\" data-free=\"1\" style=\"left:390px;top:696px;width:300px;height:66px;box-sizing:border-box;border:2px solid #f2f2ee40;border-radius:8px;display:flex;justify-content:space-between;align-items:center;padding:0 18px\"><span style=\"font:400 34px A;text-transform:uppercase;color:#f2f2ee\">Posts</span><span style=\"font:400 18px M;color:#D4FF3A\">17 to 20</span></div><div class=\"fx\" data-free=\"1\" style=\"left:724px;top:696px;width:300px;height:66px;box-sizing:border-box;border:2px solid #f2f2ee40;border-radius:8px;display:flex;justify-content:space-between;align-items:center;padding:0 18px\"><span style=\"font:400 34px A;text-transform:uppercase;color:#f2f2ee\">Money</span><span style=\"font:400 18px M;color:#D4FF3A\">21 to 24</span></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"18\" style=\"left:56px;top:850px;font-size:120px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A\">CLAUDE PROMPTS</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"18\" style=\"left:56px;top:980px;font-size:140px;white-space:nowrap;color:#0a0a0a;background:#D4FF3A\">EVERY MECHANIC</div><div class=\"fx A\" data-stack=\"h\" style=\"left:56px;top:1130px;font-size:120px;white-space:nowrap;color:#D4FF3A;background:#0a0a0a;padding:12px 24px 0;box-sizing:border-box\">NEEDS.</div><div class=\"fx\" style=\"left:500px;top:1170px;width:400px;font:800 28px/1.3 I;color:#0a0a0a;background:#D4FF3A\">Copy. Paste. Swap the [brackets]. Swipe &#9656;</div>",
+ "slides": [
+  {
+   "cat": "Quotes",
+   "cards": [
+    {
+     "t": "Brake job price",
+     "p": "Someone asked what brakes cost on a [year make model]. Reply: my range [range], what changes it, two open times.",
+     "star": true
+    },
+    {
+     "t": "Estimate in plain words",
+     "p": "Turn my estimate [paste] into a plain text for the customer: each part, labor, total, what can wait."
+    },
+    {
+     "t": "Fix now or later",
+     "p": "Sort my tech's notes [paste] into fix now and can wait, as written. Plain words, no scare words."
+    },
+    {
+     "t": "Estimate no reply",
+     "p": "I sent [name] an estimate [days] days ago and heard nothing. Write one short, friendly follow up, no pressure."
+    }
+   ]
+  },
+  {
+   "cat": "Customers",
+   "cards": [
+    {
+     "t": "Car is ready text",
+     "p": "Write a pickup text for [name]: car is ready, total [amount], our hours [hours], what we fixed in one line.",
+     "star": true
+    },
+    {
+     "t": "Part is late",
+     "p": "The part for [name]'s car is delayed until [date]. Write an honest update text and offer [ride or loaner]."
+    },
+    {
+     "t": "Found more work",
+     "p": "We found [issue] while doing [job]. Write a text asking [name] to approve or skip it, price [price]."
+    },
+    {
+     "t": "Key drop steps",
+     "p": "Write my after hours drop off steps: key box [where], form [link], what to leave in the car."
+    }
+   ]
+  },
+  {
+   "cat": "Repairs",
+   "cards": [
+    {
+     "t": "Notes to work order",
+     "p": "Turn my messy notes [paste] into a clean work order: complaint, cause, fix, parts, labor hours.",
+     "star": true
+    },
+    {
+     "t": "Tomorrow's bay plan",
+     "p": "Plan tomorrow for [number] bays and [number] techs from these jobs and times [paste]. List by bay."
+    },
+    {
+     "t": "Parts order list",
+     "p": "From these jobs [paste], list every part I need to order, grouped by supplier [suppliers], with quantities."
+    },
+    {
+     "t": "Explain it simply",
+     "p": "Explain this repair in 3 short sentences to someone who knows nothing about cars: [repair and notes]."
+    }
+   ]
+  },
+  {
+   "cat": "Reviews",
+   "cards": [
+    {
+     "t": "Slow repair review",
+     "p": "Reply to this 1 star review about a slow repair: [paste]. Own the delay, explain, invite them to call [number].",
+     "star": true
+    },
+    {
+     "t": "We overcharged?",
+     "p": "A review says we overcharged: [paste]. Write a calm public reply showing what we did. No arguing, under 60 words."
+    },
+    {
+     "t": "Ask at pickup",
+     "p": "Write a short text for after pickup asking [name] for a Google review with my link [link]. No pressure."
+    },
+    {
+     "t": "Reviews into fixes",
+     "p": "Read these reviews [paste]. List the 3 things customers complain about most and one fix for each."
+    }
+   ]
+  },
+  {
+   "cat": "Posts",
+   "cards": [
+    {
+     "t": "One job photo",
+     "p": "Here is today's job photo: [describe]. Write 5 posts for this week from it, one tip each, plain words.",
+     "star": true
+    },
+    {
+     "t": "Season check post",
+     "p": "Write a post reminding locals to check [tires, battery, wipers] before [season]. Friendly, under 80 words, link [link]."
+    },
+    {
+     "t": "Dash light post",
+     "p": "Write a short post on what [warning light] can mean and why to get it checked. Calm, no scare words."
+    },
+    {
+     "t": "Tech spotlight",
+     "p": "Write a post introducing [tech name]: years fixing cars [years], favorite job [job], one fun fact [fact]."
+    }
+   ]
+  },
+  {
+   "cat": "Money",
+   "cards": [
+    {
+     "t": "Unpaid repair bill",
+     "p": "[Name] picked up their car but still owes [amount] from [date]. Write a polite reminder with my pay link [link].",
+     "star": true
+    },
+    {
+     "t": "Parts receipts",
+     "p": "Sort these receipts into parts, tools, shop supplies, rent, other: [paste]. Total each, flag any missing a date."
+    },
+    {
+     "t": "What an hour costs",
+     "p": "My monthly costs are [rent, wages, tools] and we bill [hours] hours a month. Show what each hour costs me."
+    },
+    {
+     "t": "Pay at pickup",
+     "p": "Write my payment policy in plain words: pay at pickup, we take [methods], deposit [amount] on special orders."
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "big": "Your first *AI helper*",
+  "keyword": "AGENTS",
+  "gift": "Free starter: your first AI helper in 10 minutes.",
+  "small": "Free in your DMs. *It drafts, you send.*"
+ },
+ "bg_words": [
+  "PROMPTS",
+  "AGENTS",
+  "COPY",
+  "PASTE"
+ ],
+ "bg_facts": [
+  "24 prompts for auto repair shops in 6 folders.",
+  "Swap the brackets for your details.",
+  "Read every draft before you send it.",
+  "Save it for later."
+ ]
+}

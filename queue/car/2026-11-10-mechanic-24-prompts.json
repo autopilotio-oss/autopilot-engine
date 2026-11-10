@@ -1,0 +1,20 @@
+{
+ "id": "2026-11-10-mechanic-24-prompts",
+ "kind": "promptpack",
+ "status": "bank",
+ "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+ "cover_idea": "Split cover: black top with a tilted white license plate reading AUTO REPAIR / 24 PROMPTS (PROMPTS in a lime block) and a 2x3 grid of folder chips; lime bottom with the black headline CLAUDE PROMPTS / EVERY MECHANIC / NEEDS. (NEEDS. in a black block).",
+ "theme": "auto repair shops and mechanics (new niche, not in any earlier pack): 24 new prompts in 6 folders (Quotes, Customers, Repairs, Reviews, Posts, Money), all visible, hook test '24 Claude prompts every <niche> needs' (least recently used, last on Nov 7 landscaper pack)",
+ "gate": {
+  "score": 91,
+  "notes": "Accuracy 29/30 (no factual claims; prompts only, all 20 words or fewer, every title checked against tools/carousel/posts/*prompt*.json with no clash; no safety, legal, tax or money advice: fix now vs can wait follows the tech's own notes, the dash light post asks for a calm, no scare reply, hour cost is plain math on the owner's numbers). Hook 21/25 (least recently used hook, fresh trade niche a 60 year old mechanic gets at a glance; IG packs still 0 saves and 0 shares so the format is unproven). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, every slide read). Design 13/15 vs last 5 covers (trainer paper/bottom/stopwatch/huge, groomer black/top right/dog tag, fable news black/top/ladder, owners black/bottom/case file, photographer lime/center/viewfinder): first split black and lime background, first license plate visual, mid scale headline in the lower band; headline at the bottom repeats trainer and owners. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (quotes, customers), Review Desk, Content Week, Invoice Chaser (unpaid repair bill) and Bookkeeping Sorter (parts receipts)). QA PASS all 8. Site links checked in docs (index #tools and #free, /free/, /front-desk/); live fetch blocked by the session proxy, docs/live.json checked today."
+ },
+ "sources": [],
+ "captions": {
+  "ig": "You fix cars all day and still type every estimate, pickup text and late bill reminder by hand?\n\nHere are 24 Claude prompts in 6 folders: quotes, customers, repairs, reviews, posts and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next slow hour in the shop.\n\n#autorepair #mechanic #autoshop #smallbusiness #claudeai",
+  "threads": "24 Claude prompts every mechanic needs.\n\nBrake price replies, car is ready texts, found more work asks, slow repair reviews, unpaid repair bills. All in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+  "x": "Mechanics: 24 Claude prompts for quotes, customers, repairs, reviews, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+ },
+ "media": "docs/media/car/2026-11-10-mechanic-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+ "built_at": "2026-11-10T13:45Z"
+}
