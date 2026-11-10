@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-10T12:30:00Z",
+  "at": "2026-11-10T16:30:00Z",
   "posts_today": {
-    "twitter": {"published": 0, "pending": 20, "error": 0},
-    "instagram": {"published": 0, "pending": 2, "error": 0},
+    "twitter": {"published": 6, "pending": 14, "error": 0},
+    "instagram": {"published": 1, "pending": 1, "error": 0},
     "threads": {"published": 0, "pending": 0, "error": 0},
     "tiktok": {"published": 0, "pending": 0, "error": 0}
   },
@@ -30,5 +30,5 @@
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "notes": "Snapshot 09:30 ART Nov 10. 0 posts out yet today, 22 pending (X 20, IG 2: Front Desk quote reel 10:00, Claude Fable 5.2 news carousel 18:00), 0 errors. No Threads or TikTok scheduled today (TikTok held on ElevenLabs 401 per Daily Manager AM). Window Nov 7 09:26 to Nov 10 03:26 ART: only one post with saves+shares above 0 (TikTok Nov 7, 4 shares); every IG reel and carousel had 0 saves, 0 shares, 0 comments. TikTok saves and reach not provided by Metricool (null); IG profile visits not in post connector (MISSING); X post metrics not pulled. Watch: freel.yml last run failed (logged in Fix needed). Revenue: 0 verified orders all time, ledger synced 10:44Z. Kit 0 subscribers. HQ feed written v64."
+  "notes": "Snapshot 13:30 ART Nov 10. 7 posts out today (X 6, IG 1: Front Desk quote reel 10:00), 15 pending (X 14 incl. Fable 5.2 news 18:00, IG 1 Fable 5.2 news carousel 18:00), 0 errors. No Threads or TikTok scheduled today (TikTok held on ElevenLabs 401). Window Nov 7 10:24 to Nov 10 07:24 ART: only one post with saves+shares above 0 (TikTok Nov 7, 4 shares). All IG reels and carousels 0 saves, 0 shares, 0 comments (carousels reach 1 to 13). TikTok Nov 8 and Nov 9 videos 86 and 81 views, 0 shares. TikTok saves and reach not provided by Metricool (null); IG profile visits not in post connector (MISSING); X post metrics not pulled. Watch: freel.yml last run failed (already in Fix needed, ElevenLabs 401). Revenue: 0 verified orders all time, ledger synced 13:59Z. Kit 0 subscribers. HQ feed written v65."
 }
