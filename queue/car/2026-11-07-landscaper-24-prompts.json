@@ -1,38 +1,52 @@
 {
- "id": "2026-11-07-landscaper-24-prompts",
- "kind": "promptpack",
- "status": "scheduled",
- "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
- "cover_idea": "Off white top with a full width headline block at the top (24 CLAUDE PROMPTS / EVERY LANDSCAPER / NEEDS. in a black box), six garden stake tags (the 6 folders) planted in a mowed lime lawn with diagonal stripes across the bottom third.",
- "theme": "landscapers and lawn care: 24 new prompts in 6 folders (Quotes, Schedule, Clients, Reviews, Posts, Money), all visible, hook test '24 Claude prompts every <niche> needs' (least recently used, last on Nov 5 salon pack)",
- "gate": {
-  "score": 92,
-  "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, no dashes, titles and prompts checked against every tools/carousel/posts/*prompts*.json, no repeats; no legal, tax or money advice; profit prompt asks Claude to show the math on the owner's own numbers). Hook 20/25 (least recently used hook, new niche; IG packs since Nov 5 reached 5 to 7 with 0 saves, so the format is unproven). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, read every slide). Design 14/15 vs last 5 covers: headline full width at the top (vs left column, bottom, right, bottom, bottom), garden stake tags in a striped lawn (vs yard sign, shipping label, kitchen ticket, giant number, calendar), off white over a lime lawn band (vs black and white split, off white, black, lime, black over lime); first lawn render used black and lime piano key stripes, softened to lime mow stripes. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (quotes, sign lead, Google question), Review Desk, Content Week, Invoice Chaser (unpaid season) and Bookkeeping Sorter (fuel and parts)). QA PASS all 8."
- },
- "sources": [],
- "captions": {
-  "ig": "You run a lawn or landscaping business and still type every quote, skip week text and late payment reminder by hand?\n\nHere are 24 Claude prompts in 6 folders: quotes, schedule, clients, reviews, posts and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next rain day.\n\n#landscaping #lawncare #landscaper #smallbusiness #claudeai",
-  "threads": "24 Claude prompts every landscaper needs.\n\nLawn quotes by text, a weekly route that saves driving, skip week replies, storm cleanup offers, review asks with before and after photos, receipts sorted. All in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
-  "x": "Landscapers: 24 Claude prompts for quotes, routes, clients, reviews, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
- },
- "media": "docs/media/car/2026-11-07-landscaper-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
- "built_at": "2026-11-07T19:35Z",
- "approval": {
-  "by": "Seb",
-  "quote": "Yes, autopost to Nov 10 (Recommended)",
-  "basis": "campaign standing approval; MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
- },
- "scheduled_by": "Daily Manager 2026-11-08 08:51 ART run (bank promotion, gate 92, QA PASS, CTA AGENTS confirmed)",
- "posts": [
-  {
-   "networks": [
-    "instagram"
-   ],
-   "at": "2026-11-08T18:00:00-03:00",
-   "metricool_id": 420679565,
-   "uuid": "6697494897649536795",
-   "type": "POST carousel, cover_ig.mp4 + 02 to 08"
+  "id": "2026-11-07-landscaper-24-prompts",
+  "kind": "promptpack",
+  "status": "scheduled",
+  "tool": "Owner Toolkit tools (Bookkeeping Sorter, Invoice Chaser, Review Desk, Content Week, $10 each or $24, https://autopilotoi.app/#tools) and Front Desk Kit ($39, https://autopilotoi.app/front-desk/); free starter (/#free) as entry",
+  "cover_idea": "Off white top with a full width headline block at the top (24 CLAUDE PROMPTS / EVERY LANDSCAPER / NEEDS. in a black box), six garden stake tags (the 6 folders) planted in a mowed lime lawn with diagonal stripes across the bottom third.",
+  "theme": "landscapers and lawn care: 24 new prompts in 6 folders (Quotes, Schedule, Clients, Reviews, Posts, Money), all visible, hook test '24 Claude prompts every <niche> needs' (least recently used, last on Nov 5 salon pack)",
+  "gate": {
+    "score": 92,
+    "notes": "Accuracy 30/30 (no factual claims; prompts only, all 20 words or fewer, no dashes, titles and prompts checked against every tools/carousel/posts/*prompts*.json, no repeats; no legal, tax or money advice; profit prompt asks Claude to show the math on the owner's own numbers). Hook 20/25 (least recently used hook, new niche; IG packs since Nov 5 reached 5 to 7 with 0 saves, so the format is unproven). Clarity 19/20 (4 cards a slide, bracket chips, TRY FIRST per folder, no overflow into the progress bar, read every slide). Design 14/15 vs last 5 covers: headline full width at the top (vs left column, bottom, right, bottom, bottom), garden stake tags in a striped lawn (vs yard sign, shipping label, kitchen ticket, giant number, calendar), off white over a lime lawn band (vs black and white split, off white, black, lime, black over lime); first lawn render used black and lime piano key stripes, softened to lime mow stripes. CTA 9/10 (AGENTS confirmed in config/manychat.json, TOOLS not yet; gift is the free starter; prompts map to Front Desk (quotes, sign lead, Google question), Review Desk, Content Week, Invoice Chaser (unpaid season) and Bookkeeping Sorter (fuel and parts)). QA PASS all 8."
+  },
+  "sources": [],
+  "captions": {
+    "ig": "You run a lawn or landscaping business and still type every quote, skip week text and late payment reminder by hand?\n\nHere are 24 Claude prompts in 6 folders: quotes, schedule, clients, reviews, posts and money. All of them are in the slides. Copy one, swap the [brackets] for your details, read the draft, send.\n\nStart with the TRY FIRST card in each folder.\n\nWant your first AI helper set up in 10 minutes? Comment AGENTS and we will DM you the free starter.\n\nSave this for your next rain day.\n\n#landscaping #lawncare #landscaper #smallbusiness #claudeai",
+    "threads": "24 Claude prompts every landscaper needs.\n\nLawn quotes by text, a weekly route that saves driving, skip week replies, storm cleanup offers, review asks with before and after photos, receipts sorted. All in the slides.\n\nSwap the [brackets], read it, send.\n\nFree starter: https://autopilotoi.app/?utm_source=threads&utm_medium=social&utm_campaign=promptpack#free",
+    "x": "Landscapers: 24 Claude prompts for quotes, routes, clients, reviews, posts and money. Swap the [brackets], send.\n\nFree starter: https://autopilotoi.app/?utm_source=x&utm_medium=social&utm_campaign=promptpack#free"
+  },
+  "media": "docs/media/car/2026-11-07-landscaper-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
+  "built_at": "2026-11-07T19:35Z",
+  "approval": {
+    "by": "Seb",
+    "quote": "Yes, autopost to Nov 10 (Recommended)",
+    "basis": "campaign standing approval; MANAGER.md 3 PROMPT PACK PUSH, IG 18:00 daily pack"
+  },
+  "scheduled_by": "Daily Manager 2026-11-08 08:51 ART run (bank promotion, gate 92, QA PASS, CTA AGENTS confirmed)",
+  "posts": [
+    {
+      "networks": [
+        "instagram"
+      ],
+      "at": "2026-11-08T18:00:00-03:00",
+      "metricool_id": 420679565,
+      "uuid": "6697494897649536795",
+      "type": "POST carousel, cover_ig.mp4 + 02 to 08"
+    }
+  ],
+  "results": {
+    "instagram": {
+      "reach": 5,
+      "views": 12,
+      "saves": 0,
+      "shares": 0,
+      "comments": 0,
+      "follows": 0,
+      "profile_visits": "MISSING",
+      "keyword_comments": 0,
+      "posted_at": "2026-11-08T18:04:19-03:00",
+      "pulled_at": "2026-11-10T11:58:00-03:00",
+      "source": "Metricool IGPO 40h"
+    }
   }
- ],
- "results": {}
 }
