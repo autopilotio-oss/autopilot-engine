@@ -111,7 +111,7 @@ G["raise"] = dict(
 )
 TT = dict(cat="TIKTOK × AI", bundle_link="tiktok-agents", bundle_txt="$10, or all 3 TikTok agents for $24.", bundle_btn="ALL 3 · $24")
 G["video"] = dict(TT,
- kw="VIDEO", title="Make TikToks with AI that plans every edit and gets your posts scheduled", sub="Claude finds what works in your niche, writes the scripts, plans every cut and caption, and can schedule the posts if you connect a scheduler. You film and cut the clips.",
+ kw="VIDEO", title="Make TikToks with AI that writes the scripts and plans every edit", sub="Claude finds what works in your niche, writes the scripts, plans every cut and caption, and can schedule the posts if you connect a scheduler. You film and cut the clips.",
  time="About 1 hour for a full week of videos", need="A phone, CapCut (free), and Claude",
  why="Most of the work in a TikTok isn't filming. It's the hook, the script, the cuts, the captions and posting at the right time. Claude does the thinking and writing, CapCut does the cutting, and a scheduler posts on time.",
  steps=[
