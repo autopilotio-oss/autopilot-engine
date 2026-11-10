@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-10-tip",
+  "group": "stories-2026-11-10",
+  "at": "2026-11-10T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-10-tip.jpg"
+  ],
+  "text": "AI tip: Paste any long email into Claude and type: \"Explain this in 3 sentences. What do I need to do?\""
+ },
+ {
+  "id": "story-2026-11-10-quiz",
+  "group": "stories-2026-11-10",
+  "at": "2026-11-10T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-10-quiz.jpg"
+  ],
+  "text": "Quiz: AI gives you a number with total confidence. You should..."
+ },
+ {
+  "id": "story-2026-11-10-answer",
+  "group": "stories-2026-11-10",
+  "at": "2026-11-10T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-10-answer.jpg"
+  ],
+  "text": "Quiz answer: Check it. AI can sound sure and {still be wrong.} Always check facts that matter."
+ },
+ {
+  "id": "story-2026-11-10-fact",
+  "group": "stories-2026-11-10",
+  "at": "2026-11-10T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-10-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can sort your spending for you. Paste a month of transactions. It groups them and shows where the money actually went."
+ },
+ {
+  "id": "story-2026-11-10-poll",
+  "group": "stories-2026-11-10",
+  "at": "2026-11-10T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-10-poll.jpg"
+  ],
+  "text": "Poll: Claude or ChatGPT? A) Claude B) ChatGPT"
+ }
+]
