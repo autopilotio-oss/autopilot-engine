@@ -83,6 +83,14 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Nov 9 run (13:13 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 9 run (evening): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-10 (08:20 ART)
+- INCIDENT inc:worker:factory_reels_tts:2026-11-10 (SEV-2, OPEN, Seb messaged 11:27 UTC): Factory reels run 42794831290 (09:55 UTC schedule) failed. prep 029-review-pile voiced fine at 10:01:03 UTC, then prep 028-job-caption got ElevenLabs HTTP 401 Unauthorized on both eleven_v4 and eleven_multilingual_v2 at 10:01:57 UTC; render and final were skipped, so no new factory reels today. First failure after 7 green days (Nov 3 to 9). A 401 one minute after a success points to the ElevenLabs plan/credit limit or a revoked key, not code. Daily Pulse did NOT rerun it (a rerun would hit the same 401, and render/final feed autopost). Fix: Seb checks ElevenLabs usage/plan (a plan upgrade is a spending decision) or rotates the ELEVENLABS_API_KEY secret; then rerun failed jobs on run 42794831290 or wait for tomorrow 09:07 UTC.
+- Health: only meta_pixel_configured failing (SEV-3, known). All 20 checkouts ok. Heartbeats 13 of 13 ok. Failed Actions runs 24h: Factory reels (above) and 3 pages builds (04:13, 07:41, 10:45 UTC); the 10:45 deploy timed out with "Uploaded artifact size of 2498656304 bytes exceeds the allowed size of 1 GB", so intermittent pages failures are the site artifact at 2.5 GB, 2.5x the Pages limit (SEV-3, builder candidate: move docs/media video out of the Pages artifact). Later pages builds succeeded (10:17 UTC; 11:11 in progress).
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off. Cost guard ok (no cap hit). Last campaign day: 0 of 10. LAUNCH30 ends Nov 11 03:00 UTC. Final report due Nov 11 09:13 ART.
+- Threads: inc:metricool_networks still OPEN (SEV-2, Seb messaged Nov 7, not re-sent). getBrandSettings still lists only instagram, twitter, tiktok.
+- Metricool: 21 deliveries last 24h (X 18 incl. 13 questions, IG 2, TikTok 1), 0 ERROR. 4 non-draft posts Nov 10 08:15 to Nov 12 08:15 ART (IG 3, X 1), all approved (539 approved ids). Kit 0 subscribers.
+- ONE CHANGE: NONE (the only commander proposal, "Prove one funnel: 4 owner tools", needs the owner; the one failing job fails on a credential, so a retry would repeat the 401 and its render step feeds autopost).
+
 ## Daily Pulse 2026-11-09 (08:25 ART)
 - Health: only meta_pixel_configured failing (SEV-3, known). All 20 checkouts ok. 1 failed Actions run in 24h: pages build 08:12 UTC (14m, superseded; every later pages build succeeded, page probes ok). No late heartbeats.
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off. Cost guard ok (no cap hit). Last campaign day is Nov 10: 0 of 10. Final report due Nov 11 09:13 ART.
