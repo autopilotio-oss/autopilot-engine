@@ -235,12 +235,14 @@ HEAD = lambda title, desc, canon, og: f"""<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600;14..32,700;14..32,900&display=swap" rel="stylesheet">
 <style>{CSS}</style><link rel="stylesheet" href="/assets/brand.css"></head><body><div class="glow"></div><div class="w">"""
 FOOT = """<div class="ft">Education only, not financial, legal or medical advice. Sample outputs are from test runs on made-up data. AUTOPILOT.OI is independent and not affiliated with Anthropic. Claude is a product of Anthropic.</div>
-</div><script>document.querySelectorAll('.vid').forEach(b=>{const v=b.querySelector('video'),s=b.querySelector('.snd');if(!v)return;b.addEventListener('click',()=>{v.muted=!v.muted;s.textContent=v.muted?'🔇 tap for sound':'🔊 sound on';v.play()})})</script><script src="/assets/ap.js" defer></script></body></html>"""
+</div><script>document.querySelectorAll('.vid').forEach(b=>{const v=b.querySelector('video'),s=b.querySelector('.snd');if(!v||!s)return;b.addEventListener('click',()=>{v.muted=!v.muted;s.textContent=v.muted?'🔇 tap for sound':'🔊 sound on';v.play()})})</script><script src="/assets/ap.js" defer></script></body></html>"""
 
 def video_block(id, label="Demo · sample data"):
     if not id: return ""
     src, poster = (f"/media/ads/web/{id[4:]}.mp4", f"/media/{id}-poster.jpg") if id.startswith("ads/") else (f"/media/freel/web/{id}.mp4", f"/media/freel/{id}-poster.jpg")
-    return f'<div class="vid"><video src="{src}" poster="{poster}" muted loop playsinline autoplay preload="metadata"></video><span class="lab">{e(label)}</span><span class="snd">🔇 tap for sound</span></div>'
+    # Factory reel web copies are encoded without audio (tools/freel/make.sh final uses -an), so only ads/ videos get the sound pill.
+    snd = '<span class="snd">🔇 tap for sound</span>' if id.startswith("ads/") else ""
+    return f'<div class="vid"><video src="{src}" poster="{poster}" muted loop playsinline autoplay preload="metadata"></video><span class="lab">{e(label)}</span>{snd}</div>'
 
 def page(slug, p):
     rows = "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in r) + "</tr>" for r in p["sample_rows"])
