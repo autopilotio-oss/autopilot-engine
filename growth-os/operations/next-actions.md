@@ -61,6 +61,7 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Support agent run Nov 8 19:10 UTC: no new alerts (no new mail since 13:10 run; Threads disconnect incidents still open).
 - Support agent run Nov 9 13:13 UTC: no new alerts (only 2d mail the same personal travel notice, not business; Threads disconnect incidents still open).
 - Support agent run Nov 9 19:11 UTC: no new incidents. New since last run: Instagram email confirmation code (14:44Z, identity check code, no restriction or login from elsewhere; informational, Seb should ignore it if he didn't request it) and Metricool Flows marketing. Threads disconnect incidents still open.
+- Support agent run Nov 10 13:12 UTC: no new alerts (new mail since last run: Kit marketing and a personal travel notice, not business; Instagram confirmation code already noted). Threads disconnect incidents still open.
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -82,6 +83,7 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 - Nov 8 run (19:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 9 run (13:13 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 9 run (evening): 0 cases, 0 drafted, 0 escalated.
+- Nov 10 run (13:12 UTC): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-10 (08:20 ART)
 - INCIDENT inc:worker:factory_reels_tts:2026-11-10 (SEV-2, OPEN, Seb messaged 11:27 UTC): Factory reels run 42794831290 (09:55 UTC schedule) failed. prep 029-review-pile voiced fine at 10:01:03 UTC, then prep 028-job-caption got ElevenLabs HTTP 401 Unauthorized on both eleven_v4 and eleven_multilingual_v2 at 10:01:57 UTC; render and final were skipped, so no new factory reels today. First failure after 7 green days (Nov 3 to 9). A 401 one minute after a success points to the ElevenLabs plan/credit limit or a revoked key, not code. Daily Pulse did NOT rerun it (a rerun would hit the same 401, and render/final feed autopost). Fix: Seb checks ElevenLabs usage/plan (a plan upgrade is a spending decision) or rotates the ELEVENLABS_API_KEY secret; then rerun failed jobs on run 42794831290 or wait for tomorrow 09:07 UTC.
