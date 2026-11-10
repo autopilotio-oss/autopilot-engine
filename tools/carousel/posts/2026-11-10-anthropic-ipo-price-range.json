@@ -1,0 +1,32 @@
+{
+  "kind": "news",
+  "dateline": "NOV 10 2026",
+  "story_key": "anthropic-ipo-roadshow-price-range-2026-11-10",
+  "lines": ["Claude's maker", "[sets its price]"],
+  "subline": "anthropic ipo, nasdaq ANT",
+  "cover_bg": "bg-white",
+  "theme": "light",
+  "grain": false,
+  "music": "tense",
+  "seed": 61,
+  "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">NEWS &middot; ANTHROPIC &middot; NOV 10</div><div class=\"fx Mm\" style=\"left:56px;top:160px;font-size:30px;font-weight:700;color:#0c0c0c\">NASDAQ : ANT &middot; PRICE PER SHARE</div><div class=\"fx A\" data-fit=\"968\" style=\"left:56px;top:216px;font-size:330px;white-space:nowrap;color:#0c0c0c\">$70 to $78</div><div class=\"fx rule\" style=\"left:56px;top:560px;width:968px;color:#0c0c0c\"></div><div class=\"fx A\" style=\"left:56px;top:600px;font-size:96px;color:#0c0c0c\">825M</div><div class=\"fx Cc\" style=\"left:60px;top:700px;font-size:22px;color:#55554f\">Shares for sale</div><div class=\"fx A\" style=\"left:390px;top:600px;font-size:96px;color:#0c0c0c\">$64.4B</div><div class=\"fx Cc\" style=\"left:394px;top:700px;font-size:22px;color:#55554f\">Raised at the top</div><div class=\"fx A\" style=\"left:770px;top:600px;font-size:96px;color:#0c0c0c\">~$1T</div><div class=\"fx Cc\" style=\"left:774px;top:700px;font-size:22px;color:#55554f\">Basic value</div><div class=\"fx rule\" style=\"left:56px;top:770px;width:968px;color:#0c0c0c\"></div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"16\" style=\"left:56px;top:830px;font-size:150px;white-space:nowrap;color:#0c0c0c\">Claude's maker</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:980px;font-size:150px;white-space:nowrap;background:#D4FF3A;color:#0c0c0c;padding:10px 22px 0\">is going public</div><div class=\"fx Ii\" data-after=\"h\" style=\"left:56px;top:1190px;width:940px;font-size:32px;line-height:1.28;color:#0c0c0c\">The price range is set. Here is what that means for you &#9656;</div>",
+  "bg_words": ["ANTHROPIC", "IPO", "ANT", "NASDAQ"],
+  "bg_facts": ["Anthropic launched its IPO roadshow on Nov 10.", "825 million shares at $70 to $78.", "Ticker ANT on Nasdaq.", "Up to about $64.4 billion raised."],
+  "slides": [
+    {"title": "What *happened*", "body": "On <b>November 10</b>, Anthropic, the company behind Claude, started the roadshow for its stock market debut. It plans to sell <b>825 million shares</b> at <b>$70 to $78</b> each, on the <b>Nasdaq</b> under the ticker <b>ANT</b>."},
+    {"title": "The *numbers*", "body": "At the top of the range the sale brings in up to about <b>$64.4 billion</b>. Anthropic sells <b>801.4 million</b> new shares. Existing holders sell <b>23.6 million</b>, and Anthropic gets none of that money. A separate <b>$26 billion</b> private investment closes after the IPO."},
+    {"title": "What it is *worth*", "body": "About <b>$1 trillion</b> based on shares outstanding, and up to <b>$1.4 trillion</b> when stock options and similar shares are counted. SpaceX's IPO in June raised <b>$86 billion</b>, the record this one comes close to."},
+    {"title": "The *business*", "body": "Revenue in the first 9 months of 2026 was <b>$33.2 billion</b>, per the filing. Anthropic has also signed up for nearly <b>$900 billion</b> in computing deals and leases with partners like Amazon and Google, spread over many years."},
+    {"title": "What is *not set*", "body": "The final price can still move inside or outside the range. Anthropic has not confirmed a first trading day. Its filing is <b>not yet effective</b>, so no shares can be bought or sold yet. Goldman Sachs and Morgan Stanley lead the deal."},
+    {"title": "What it means *for you*", "body": "Your Claude app and plan work the same today. If you are thinking about buying the stock, new listings can swing hard in the first weeks, so read the prospectus first. <b>News, not financial advice.</b>"}
+  ],
+  "cta": {"big": "Run a business? Put AI *to work today*", "keyword": "AGENTS", "gift": "Free starter: your first AI helper in 10 minutes", "small": "Free, right in your DMs. *It drafts, you decide.*"},
+  "sources": [
+    ["Anthropic", "https://www.anthropic.com/news/roadshow-launch"],
+    ["TheWrap", "https://www.thewrap.com/industry-news/tech/anthropic-ipo-valuation/"],
+    ["FinanceFeeds", "https://financefeeds.com/anthropic-targets-1-02-trillion-ipo-valuation-as-ai-investor-appetite-cools/"],
+    ["Bloomberg", "https://www.bloomberg.com/news/articles/2026-11-10/anthropic-targets-64-4-billion-ipo-nearing-spacex-s-record"],
+    ["CNBC", "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html"],
+    ["AP via Fast Company", "https://fastcompany.com/91630606/biggest-stock-listing-ever-look-anthropics-ipo-numbers"]
+  ]
+}
