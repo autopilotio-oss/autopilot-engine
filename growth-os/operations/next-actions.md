@@ -169,3 +169,4 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 
 ## Fix needed
 - Store and guide demo videos show a "tap for sound" pill, but the web copies (docs/media/freel/web/*.mp4) are encoded without audio (make.sh final uses -an), so tapping does nothing. Either drop the pill or encode web copies with audio after checking each voice line for overclaims (subs-agent voice still says "finds every subscription you forgot about"). Logged by builder 2026-11-09.
+- 2026-11-10 analyst: GitHub workflow freel.yml last run failed (started 09:55:59Z, finished 10:02:00Z, 1 of 1 runs in 24h failed). Check the run log and fix. Logged by analyst 2026-11-10.
