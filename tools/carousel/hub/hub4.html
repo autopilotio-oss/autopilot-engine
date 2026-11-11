@@ -1,0 +1,132 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-Medium.woff)}
+@font-face{font-family:TS;src:url(/docs/assets/fonts/APText-SemiBold.woff)}
+@font-face{font-family:TB;src:url(/docs/assets/fonts/APText-Bold.woff)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#0b0b0b;--P:#f1f0ea;--G:#8c8c86}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:T;color:var(--K)}
+.s{position:absolute;inset:0;overflow:hidden}
+.k{background:var(--K);color:#fff}.p{background:var(--P)}.l{background:var(--L)}
+.grain:after{content:"";position:absolute;inset:0;opacity:.06;pointer-events:none;z-index:50;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.meta{position:absolute;left:80px;right:80px;top:64px;display:flex;justify-content:space-between;font-family:M;font-size:20px;letter-spacing:3px;text-transform:uppercase;padding-bottom:18px;border-bottom:2px solid currentColor;z-index:5}
+.foot{position:absolute;left:80px;right:80px;bottom:60px;display:flex;justify-content:space-between;align-items:center;font-family:TS;font-size:26px;z-index:5}
+.foot .ar{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;font-size:34px}
+.A{font-family:A;text-transform:uppercase;line-height:.95;letter-spacing:.5px}
+.acc{position:relative;display:inline-block;color:var(--L)}
+.acc svg{position:absolute;left:-2%;bottom:-22px;width:104%;height:34px}
+.chip{display:inline-block;font-family:M;font-size:21px;letter-spacing:3px;padding:10px 18px;border-radius:999px}
+.bw{filter:grayscale(1) contrast(1.15) brightness(1.02)}
+/* chat */
+.chat{position:absolute;left:80px;right:80px;background:#fff;color:var(--K);border-radius:34px;box-shadow:0 30px 70px rgba(0,0,0,.14),0 0 0 2px rgba(0,0,0,.06);overflow:hidden}
+.chat .bar{display:flex;align-items:center;justify-content:space-between;padding:22px 30px;border-bottom:2px solid #ececea;font-family:TS;font-size:24px}
+.chat .bar i{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--L);box-shadow:0 0 0 3px var(--K);margin-right:14px}
+.chat .body{padding:34px 30px 34px;display:flex;flex-direction:column;gap:30px}
+.me{align-self:flex-end;max-width:100%;background:var(--K);color:#ececE6;border-radius:28px 28px 8px 28px;padding:32px 34px;font-family:M;font-size:29px;line-height:1.45;position:relative}
+.me b{color:var(--L);font-weight:400}
+.me .lab{color:var(--L);font-size:16px;letter-spacing:3px;margin-right:10px}
+.me .cp{position:absolute;top:-18px;left:28px;background:var(--L);color:var(--K);font-size:18px;letter-spacing:2px;padding:6px 14px;border-radius:999px}
+.ai{align-self:stretch;background:#f1f1ee;border-radius:28px 28px 28px 8px;padding:22px 28px}
+.ai .who{font-family:M;font-size:16px;letter-spacing:3px;color:var(--G);margin-bottom:10px}
+.ai .row{padding-top:13px !important;padding-bottom:13px !important;display:flex;justify-content:space-between;align-items:baseline;gap:40px;font-family:TB;font-size:37px;padding:9px 0;border-top:2px solid #e2e2de}
+.ai .row:first-of-type{border-top:0}
+.ai .row span:last-child{font-family:A;font-size:52px}
+.ai .row.hi span:last-child{background:var(--L);padding:0 10px}
+.ai .q{font-family:TS;font-size:33px;line-height:1.32;padding:9px 0;border-top:2px solid #e2e2de}
+.ai .q:first-of-type{border-top:0}
+.thumb{align-self:flex-end;width:300px;height:200px;border-radius:20px;overflow:hidden;margin-bottom:-8px}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.sample{position:absolute;right:30px;top:24px;font-family:M;font-size:15px;letter-spacing:3px;color:var(--G)}
+</style></head><body><div id="root"></div>
+<script>
+const Qs=new URLSearchParams(location.search),N=+(Qs.get('n')||1),T=8;
+const PH='/docs/media/car/photos/hub-u/';
+const U=c=>`<svg viewBox="0 0 300 30" preserveAspectRatio="none"><path d="M4 18 C 60 6, 120 27, 180 13 S 268 9, 296 17" fill="none" stroke="${c}" stroke-width="7" stroke-linecap="round"/></svg>`;
+const hl=t=>t.replace(/\[(.*?)\]/g,'<b>[$1]</b>');
+const meta=c=>`<div class="meta" style="color:${c}"><span>Playbook 01 · Selling</span><span>${String(N).padStart(2,'0')} / ${String(T).padStart(2,'0')}</span></div>`;
+const foot=(c,bg,fg,ar=true)=>`<div class="foot" style="color:${c}"><span>@autopilot.oi</span>${ar?`<span class="ar" style="background:${bg};color:${fg}">→</span>`:'<span></span>'}</div>`;
+const P=[
+ {t:'Find the price',g:'3 prices for anything you sell',
+  att:1,pr:'Act as a resale pricing expert. Price my item 3 ways: quick sale, normal sale and top dollar. Item: [brand, model, size, condition]. Selling on: [platform]. Show a table with the reason for each price.',
+  rows:[['Quick sale','$160'],['Normal','$195'],['Top dollar','$230',1]]},
+ {t:'Price for profit',g:'the exact price that keeps your margin',
+  pr:'Act as my profit calculator. Cost: [$]. Fees on [platform]: [%]. Shipping: [$]. I want [%] profit. Give me my break even price and my list price, with the math in 3 lines.',
+  rows:[['Break even','$41.38'],['List at','$63.16'],['You keep','$18.95',1]]},
+ {t:'Write the listing',g:'a title buyers actually search for',
+  pr:'Act as an ecommerce copywriter. Write a listing for [item] on [platform]: a title under 80 characters with the words buyers search, 5 short bullets, and 1 line that builds trust.',
+  q:['<b style="font-family:TB">Men\'s White Leather Low Top Sneakers, Size 10, Lightly Worn</b>','Ships in 24h, double boxed. Every photo is the actual pair.'],tags:['white sneakers','size 10','leather','low top']},
+ {t:'Beat the lowball',g:'3 replies that keep the buyer',
+  pr:'Act as a calm, firm negotiator. A buyer offered [$] on my [item] listed at [$]. My lowest is [$]. Write 3 short replies: a counter, a polite no, and one that adds value instead of cutting price.',
+  off:1,q:['"I can do $85 and ship it today."','"Thanks! $95 is firm, it\'s priced to move."','"Can\'t drop it, but shipping is on me."']},
+ {t:'Move slow stock',g:'new prices for anything that sat too long',
+  pr:'Act as a retail inventory manager. Here is my stock with price and days listed: [paste]. Flag anything over 60 days, give each a new price, and suggest 2 bundles.',
+  stamp:'74 DAYS',rows:[['Hoodie · 74 days','$45 → $36'],['Jeans · 61 days','$38 → $30'],['Any 2 tees','$30',1]]},
+];
+let h='';
+if(N==1){const C=[+(Qs.get('sx')||300),+(Qs.get('sy')||610),+(Qs.get('sw')||640),+(Qs.get('sr')||-34)];h=`<div class="s k grain">
+ <img id="shoe" src="${PH}05_shoe.png" style="position:absolute;left:${C[0]}px;top:${C[1]}px;width:${C[2]}px;transform:rotate(${C[3]}deg);filter:grayscale(1) contrast(1.18) brightness(1.04) drop-shadow(0 50px 40px rgba(0,0,0,.8))">
+ <div id="tag" style="position:absolute;left:${+(Qs.get('tx')||760)}px;top:${+(Qs.get('ty')||640)}px;width:220px;height:290px;transform:rotate(${+(Qs.get('tr')||10)}deg)">
+  <div style="position:absolute;inset:0;background:var(--L);clip-path:polygon(28% 0,100% 0,100% 100%,0 100%,0 22%);border-radius:10px;box-shadow:0 20px 40px rgba(0,0,0,.55)"></div>
+  <div style="position:absolute;left:160px;top:36px;width:28px;height:28px;border-radius:50%;background:var(--K)"></div>
+  <div class="A" style="position:absolute;left:0;right:0;top:84px;text-align:center;font-size:108px;color:var(--K);line-height:1">$?</div>
+  <div style="position:absolute;left:0;right:0;top:208px;text-align:center;font-family:M;font-size:20px;letter-spacing:2px;color:var(--K);line-height:1.3">WHAT'S IT<br>WORTH?</div>
+ </div>
+ ${meta('#fff')}
+ <div id="hk" class="A" style="position:absolute;left:80px;top:150px;font-size:150px;line-height:1">You're pricing<br>your stuff <span style="color:var(--L)">wrong</span></div>
+ <div id="hc" style="position:absolute;left:80px;top:470px"><span class="chip" style="background:var(--L);color:var(--K);font-size:22px">FREE · 5 PROMPTS · SAVE THIS</span><div style="font-family:TS;font-size:36px;color:#f1f0ea;margin-top:22px">5 AI prompts that price it for you.</div></div>
+ ${foot('#fff','','',false)}</div>`}
+else if(N==2){h=`<div class="s p grain">
+ <div style="position:absolute;left:0;top:0;right:0;height:600px;overflow:hidden"><img src="${PH}03.jpg" class="bw" style="width:100%;height:200%;object-fit:cover;object-position:center top;transform:translateY(-4%)"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.72) 0%,rgba(11,11,11,.92) 70%)"></div></div>
+ ${meta('#fff')}
+ <div class="A" style="position:absolute;left:80px;top:190px;font-size:132px;color:#fff;line-height:.95">5 prompts.</div>
+ <div class="A" style="position:absolute;left:80px;top:338px;font-size:132px;color:#fff;line-height:.95">Zero <span style="background:var(--L);color:var(--K);padding:0 16px">lowballs.</span></div>
+ <div style="position:absolute;left:80px;right:80px;top:650px">${P.map((p,i)=>`<div style="display:grid;grid-template-columns:96px 1fr 80px;align-items:center;padding:14px 0;border-top:2px solid var(--K)">
+   <div class="A" style="font-size:62px;color:transparent;-webkit-text-stroke:2.5px #0b0b0b">0${i+1}</div>
+   <div><div style="font-family:TB;font-size:38px">${p.t}</div><div style="font-size:26px;color:#55554f;margin-top:2px">You get ${p.g}</div></div>
+   <div style="font-family:M;font-size:20px;letter-spacing:2px;text-align:right;color:#55554f">P.${i+3}</div></div>`).join('')}<div style="border-top:2px solid var(--K)"></div></div>
+ ${foot('var(--K)','','',false)}</div>`}
+else if(N<=7){const i=N-3,p=P[i],dark=(i==2),fc=dark?'#fff':'var(--K)';
+ const ans=p.rows?p.rows.map(r=>`<div class="row ${r[2]?'hi':''}"><span>${r[0]}</span><span>${r[1]}</span></div>`).join(''):p.q.map(q=>`<div class="q">${q}</div>`).join('');
+ h=`<div class="s ${dark?'k':'p'} grain">${meta(fc)}
+ <div style="position:absolute;left:80px;top:150px;display:flex;align-items:center;gap:26px">
+   <div class="A" style="font-size:120px;color:transparent;-webkit-text-stroke:3px ${dark?'#D4FF3A':'#0b0b0b'}">0${i+1}</div>
+   <div class="A" style="font-size:104px;color:${fc}">${p.t}</div></div>
+ <div style="position:absolute;left:80px;top:300px;font-size:34px;color:${dark?'#d8d8d2':'#3d3d38'}"><span style="font-family:TB;color:${fc}">You get</span> ${p.g}.</div>
+ <div class="chat" id="ch" style="top:380px">
+   <div class="bar"><span><i></i>Your AI chat</span><span style="font-family:M;font-size:18px;letter-spacing:3px;color:#6b6b6b">SAMPLE</span></div>
+   <div class="body">
+    ${p.thumb?`<div class="thumb"><img class="bw" src="${PH}${p.thumb}"></div>`:''}
+    ${p.att?`<div style="align-self:flex-end;display:flex;align-items:center;gap:16px;background:#f1f1ee;border-radius:20px;padding:10px 18px 10px 10px"><div style="width:110px;height:80px;border-radius:12px;background:#0b0b0b;display:grid;place-items:center;overflow:hidden"><img src="${PH}05_thumb.png" style="width:96px;transform:rotate(-40deg);filter:grayscale(1) contrast(1.2)"></div><div style="font-family:M;font-size:18px;letter-spacing:2px;color:#55554f">PHOTO OF YOUR ITEM<br><span style="color:#0b0b0b">WHITE LOW TOPS · SIZE 10</span></div></div>`:''}
+    <div class="me"><span class="cp">COPY THIS</span>${hl(p.pr)}</div>
+    <div class="ai" style="position:relative"><div class="who">AI · ANSWER</div>
+     ${p.off?`<div style="display:flex;align-items:center;gap:18px;margin:4px 0 10px"><span class="A" style="font-size:44px;color:#9a9a94;text-decoration:line-through;text-decoration-thickness:4px">$60 offer</span><span style="font-size:34px">→</span><span class="A" style="font-size:44px;background:var(--L);padding:0 10px">$85 counter</span></div>`:''}
+     ${ans}
+     ${p.tags?`<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px">${p.tags.map(t=>`<span style="font-family:M;font-size:18px;letter-spacing:1px;background:#0b0b0b;color:var(--L);padding:7px 14px;border-radius:999px">${t}</span>`).join('')}</div>`:''}
+     ${p.stamp?`<div class="A" style="position:absolute;right:26px;top:-34px;font-size:40px;color:var(--K);border:5px solid var(--K);padding:2px 16px;transform:rotate(6deg);background:var(--L)">${p.stamp}</div>`:''}
+    </div>
+   </div></div>
+ ${foot(fc,'','',false)}</div>`}
+else{h=`<div class="s l grain">${meta('var(--K)')}
+ <div class="A" style="position:absolute;left:80px;top:160px;font-size:132px;line-height:1">Want all 5</div>
+ <div class="A" style="position:absolute;left:80px;top:330px;font-size:132px;line-height:1">in one <span style="background:var(--K);color:var(--L);padding:0 16px">doc?</span></div>
+ <div style="position:absolute;left:80px;top:560px;font-family:M;font-size:24px;letter-spacing:4px">COMMENT</div>
+ <div class="A" style="position:absolute;left:80px;top:610px;font-size:170px;background:var(--K);color:var(--L);padding:4px 40px 10px;border-radius:26px;transform:rotate(-3deg)">PRICE</div>
+ <div style="position:absolute;left:80px;top:860px;width:520px;font-size:38px;line-height:1.3;font-family:TS">and we'll DM you the full playbook as a PDF.</div>
+ <div style="position:absolute;right:80px;top:560px;width:330px;height:470px;background:var(--K);border-radius:50px;padding:74px 24px 24px;box-shadow:0 40px 80px rgba(0,0,0,.3);transform:rotate(5deg)">
+  <div style="position:absolute;top:22px;left:50%;width:96px;height:24px;margin-left:-48px;border-radius:12px;background:#222"></div>
+  <div style="font-family:M;font-size:15px;letter-spacing:2px;color:#777;margin-bottom:14px">DIRECT MESSAGES</div>
+  <div style="background:#262626;color:#fff;font-size:22px;padding:14px 18px;border-radius:20px 20px 20px 6px;width:88%">Here's your playbook!</div>
+  <div style="margin-top:14px;background:#fff;border-radius:16px;padding:12px;width:94%;display:flex;gap:12px;align-items:center">
+   <div style="width:70px;height:90px;border-radius:8px;background:var(--K);position:relative;flex:none"><div class="A" style="position:absolute;left:8px;top:10px;font-size:20px;color:var(--L);line-height:1">PLAY<br>BOOK<br>01</div></div>
+   <div><div style="font-family:TB;font-size:20px;color:var(--K)">Playbook 01 · Selling</div><div style="font-family:M;font-size:14px;margin-top:6px;color:#666">PDF · 5 PROMPTS</div></div></div>
+  <div style="position:absolute;bottom:22px;left:26px;font-family:M;font-size:13px;color:#888;letter-spacing:2px">SAMPLE</div></div>
+ <div style="position:absolute;left:80px;top:1120px;font-size:32px;font-family:TS">Save this post · Follow for Playbook 02</div>
+ ${foot('var(--K)','','',false)}</div>`}
+document.getElementById('root').innerHTML=h;
+const ch=document.getElementById('ch');
+Promise.all([...document.images].map(im=>im.complete?1:new Promise(r=>{im.onload=im.onerror=r}))).then(()=>document.fonts.ready).then(()=>{
+ {const hk=document.getElementById('hk'),hc=document.getElementById('hc');if(hk&&hc)hc.style.top=(hk.offsetTop+hk.offsetHeight+40)+'px';}
+ if(ch){const top0=360,bot=1220,hh=ch.offsetHeight;if(hh<bot-top0){ch.style.top=(top0+(bot-top0-hh)/2)+'px';}const lim=1350-150;const b=ch.offsetTop+ch.offsetHeight;if(b>lim){ch.style.transformOrigin='top center';ch.style.transform=`scale(${Math.max(.82,(lim-ch.offsetTop)/ch.offsetHeight)})`;}}
+ window.READY=1});
+</script></body></html>

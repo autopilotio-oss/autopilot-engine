@@ -1,0 +1,127 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-Medium.woff)}
+@font-face{font-family:TS;src:url(/docs/assets/fonts/APText-SemiBold.woff)}
+@font-face{font-family:TB;src:url(/docs/assets/fonts/APText-Bold.woff)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#0b0b0b;--P:#f1f0ea}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;position:relative;color:var(--K)}
+.s{position:absolute;inset:0;overflow:hidden}
+.grain:after{content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;z-index:50;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.A{font-family:A;text-transform:uppercase;line-height:.95}
+.M{font-family:M}
+.mark{background:linear-gradient(transparent 12%,var(--L) 12%,var(--L) 92%,transparent 92%);padding:0 .08em}
+/* receipt */
+.rc{position:absolute;left:50%;width:660px;margin-left:-330px;background:#f4f3ee;color:#111;font-family:M;padding:56px 54px 70px;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+.rc:after{content:"";position:absolute;left:0;right:0;bottom:-22px;height:24px;background:linear-gradient(-45deg,transparent 12px,#f4f3ee 0) 0 0/24px 24px repeat-x,linear-gradient(45deg,transparent 12px,#f4f3ee 0) 0 0/24px 24px repeat-x}
+.rc .c{text-align:center}
+.rc .d{border-top:3px dashed #111;margin:22px 0}
+.rc .dd{border-top:3px double #111;border-bottom:3px double #111;height:8px;margin:22px 0}
+.rc .ln{display:flex;justify-content:space-between;font-size:28px;line-height:1.7}
+.rc .ln span:nth-child(2){flex:1;border-bottom:3px dotted #111;margin:0 12px 12px}
+.rc b{font-weight:400;background:var(--L);padding:0 4px}
+</style></head><body><div id="root"></div>
+<script>
+const Q=new URLSearchParams(location.search),D=Q.get('d')||'r',N=+(Q.get('n')||1);
+const PH='/docs/media/car/photos/hub-u/';
+const hl=t=>t.replace(/\[(.*?)\]/g,'<b>[$1]</b>');
+function bars(w,h,col='#111'){let s=7,o='',t=0;while(t<w){s=(s*9301+49297)%233280;const bw=2+Math.floor(s/233280*6);s=(s*9301+49297)%233280;const g=2+Math.floor(s/233280*5);if(t+bw>w)break;o+=`<rect x="${t}" y="0" width="${bw}" height="${h}" fill="${col}"/>`;t+=bw+g}return `<svg width="${w}" height="${h}" style="display:block;margin:0 auto">${o}</svg>`}
+const PR='Act as a resale pricing expert. Price my item 3 ways: quick sale, normal sale and top dollar. Item: [brand, model, size, condition]. Selling on: [platform].';
+let h='';
+if(D=='r'){ // RECEIPT
+ if(N==1) h=`<div class="s grain" style="background:#0b0b0b">
+  <div class="rc" style="top:90px;padding:60px 56px 76px">
+   <div class="c" style="font-size:28px;letter-spacing:6px">AUTOPILOT.OI</div>
+   <div class="c" style="font-size:20px;letter-spacing:3px;margin-top:8px;color:#555">RECEIPT 01 · FOR PEOPLE WHO SELL</div>
+   <div class="d"></div>
+   <div class="ln"><span>YOUR PRICE</span><span></span><span>$???</span></div>
+   <div class="ln"><span>MARKET PRICE</span><span></span><span>$???</span></div>
+   <div class="ln"><span>MONEY LEFT</span><span></span><span>$???</span></div>
+   <div class="dd"></div>
+   <div class="A" style="font-size:128px;line-height:1;margin-top:20px">You're<br>pricing<br>your stuff<br><span class="mark">wrong.</span></div>
+   <div class="d" style="margin-top:34px"></div>
+   <div class="c" style="font-size:24px;line-height:1.5">5 FREE AI PROMPTS INSIDE<br>SWIPE TO PRINT &gt;&gt;</div>
+   <div style="margin-top:26px">${bars(420,70)}</div>
+  </div>
+  </div>`;
+ else h=`<div class="s grain" style="background:#0b0b0b">
+  <div class="rc" style="top:110px;padding:64px 56px 80px">
+   <div class="ln" style="font-size:22px;color:#555"><span>ITEM 01 OF 05</span><span style="border:0"></span><span>FIND THE PRICE</span></div>
+   <div class="d"></div>
+   <div style="font-size:20px;letter-spacing:3px;color:#555">COPY THIS PROMPT</div>
+   <div style="font-size:31px;line-height:1.6;margin-top:12px">${hl(PR)}</div>
+   <div class="d"></div>
+   <div style="font-size:20px;letter-spacing:3px;color:#555">YOU GET (SAMPLE)</div>
+   <div class="ln" style="font-size:36px;margin-top:10px"><span>QUICK SALE</span><span></span><span>$160</span></div>
+   <div class="ln" style="font-size:36px"><span>NORMAL</span><span></span><span>$195</span></div>
+   <div class="ln" style="font-size:36px"><span>TOP DOLLAR</span><span></span><span><b>$230</b></span></div>
+   <div class="dd"></div>
+   <div class="ln" style="font-size:32px"><span>TOTAL</span><span style="border:0"></span><span>NO MORE GUESSING</span></div>
+  </div>
+  <div class="M" style="position:absolute;left:0;right:0;bottom:46px;text-align:center;color:#8c8c86;font-size:20px;letter-spacing:3px">@AUTOPILOT.OI · 02/08</div></div>`;
+}
+if(D=='n'){ // NOTES / PURE TYPE
+ const base=`font-family:TB;letter-spacing:-2px;line-height:1.02`;
+ if(N==1) h=`<div class="s" style="background:#f6f5f0">
+  <div class="M" style="position:absolute;left:96px;top:96px;font-size:22px;color:#8c8c86">playbook 01</div>
+  <div style="position:absolute;left:90px;top:300px;width:900px;${base};font-size:150px">you're pricing your stuff <span class="mark">wrong.</span></div>
+  <div style="position:absolute;left:96px;top:1010px;font-family:TS;font-size:40px;color:#55554f">here's the fix, in 5 prompts →</div>
+  <div class="M" style="position:absolute;left:96px;bottom:90px;font-size:22px;color:#8c8c86">@autopilot.oi</div></div>`;
+ else h=`<div class="s" style="background:#f6f5f0">
+  <div class="M" style="position:absolute;left:96px;top:96px;font-size:22px;color:#8c8c86">1 / 5</div>
+  <div style="position:absolute;left:90px;top:200px;width:900px;${base};font-size:110px">find the price.</div>
+  <div style="position:absolute;left:96px;top:360px;width:880px;font-family:T;font-size:40px;line-height:1.5;color:#1a1a1a">Act as a resale pricing expert. Price my item 3 ways: quick sale, normal sale and top dollar. Item: <span class="mark">[brand, model, size, condition]</span>. Selling on: <span class="mark">[platform]</span>.</div>
+  <div style="position:absolute;left:96px;top:780px;width:880px;border-top:3px solid #0b0b0b;padding-top:34px">
+   <div class="M" style="font-size:22px;color:#8c8c86">you get (sample)</div>
+   <div style="${base};font-size:96px;margin-top:14px">$160 · $195 · <span class="mark">$230</span></div>
+   <div style="font-family:T;font-size:34px;color:#55554f;margin-top:12px">quick sale, normal, top dollar</div></div>
+  <div class="M" style="position:absolute;left:96px;bottom:90px;font-size:22px;color:#8c8c86">@autopilot.oi</div></div>`;
+}
+if(D=='s'){ // SCREENSHOT FEEL
+ const sb=`<div style="display:flex;justify-content:space-between;padding:28px 54px 0;font-family:TS;font-size:30px;color:#fff"><span>9:41</span><span>●●● ▮</span></div>`;
+ const circ0=(x,y,w,hh)=>`<svg style="position:absolute;left:${x}px;top:${y}px;overflow:visible" width="${w}" height="${hh}"><path d="M ${w*.08} ${hh*.55} C ${w*.02} ${hh*.05}, ${w*.85} ${-hh*.08}, ${w*.97} ${hh*.4} S ${w*.55} ${hh*1.12}, ${w*.12} ${hh*.86}" fill="none" stroke="#D4FF3A" stroke-width="9" stroke-linecap="round"/></svg>`;
+ if(N==1) h=`<div class="s" style="background:#000">${sb}
+  <div style="position:absolute;left:54px;right:54px;top:120px;font-family:TB;font-size:76px;line-height:1.05;color:#fff;letter-spacing:-1px">POV: you finally stop <span style="color:var(--L)">guessing</span> what your stuff is worth</div>
+  <div style="position:absolute;left:54px;right:54px;top:330px;display:flex;flex-direction:column;gap:22px">
+   <div style="align-self:flex-end;width:520px;height:380px;border-radius:30px;overflow:hidden;background:#111"><img src="${PH}06.jpg" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15)"></div>
+   <div style="align-self:flex-end;max-width:80%;background:#2b2b2b;color:#fff;font-family:T;font-size:36px;line-height:1.35;padding:24px 30px;border-radius:34px 34px 10px 34px">what should I list these for?</div>
+   <div style="align-self:flex-start;max-width:88%;background:#1b1b1b;color:#fff;font-family:T;font-size:36px;line-height:1.45;padding:24px 30px;border-radius:34px 34px 34px 10px">Quick sale: $160<br>Normal: $195<br><span id="hit">Top dollar: <b style="font-family:TB">$230</b></span></div>
+  </div>
+  <svg id='ring' style='position:absolute;left:0;top:0;overflow:visible' width='1080' height='1350'></svg>
+  <div style="position:absolute;left:54px;bottom:60px;font-family:TS;font-size:28px;color:#8c8c86">5 prompts to copy → swipe · sample chat</div></div>`;
+ else h=`<div class="s" style="background:#000">${sb}
+  <div style="position:absolute;left:54px;right:54px;top:130px;font-family:TB;font-size:60px;line-height:1.08;color:#fff">1. Copy this. Swap the <span style="color:var(--L)">[brackets]</span>.</div>
+  <div style="position:absolute;left:54px;right:54px;top:330px;display:flex;flex-direction:column;gap:24px">
+   <div style="align-self:flex-end;max-width:92%;background:#2b2b2b;color:#fff;font-family:T;font-size:34px;line-height:1.45;padding:26px 32px;border-radius:34px 34px 10px 34px">${PR.replace(/\[(.*?)\]/g,'<span style="color:#D4FF3A">[$1]</span>')}</div>
+   <div style="align-self:flex-start;max-width:80%;background:#1b1b1b;color:#fff;font-family:T;font-size:36px;line-height:1.5;padding:26px 32px;border-radius:34px 34px 34px 10px">Quick sale: $160<br>Normal: $195<br><span id="hit">Top dollar: <b style="font-family:TB">$230</b></span><br><span style="color:#9a9a94;font-size:30px">Clean pair, size 10, worn twice.</span></div>
+  </div>
+  <svg id='ring' style='position:absolute;left:0;top:0;overflow:visible' width='1080' height='1350'></svg>
+  <div style="position:absolute;left:54px;bottom:60px;font-family:TS;font-size:28px;color:#8c8c86">@autopilot.oi · sample chat</div></div>`;
+}
+if(D=='e'){ // SWISS EDITORIAL
+ if(N==1) h=`<div class="s grain" style="background:var(--P)">
+  <div class="M" style="position:absolute;left:80px;top:80px;font-size:20px;letter-spacing:3px">AUTOPILOT.OI / PLAYBOOK 01</div><div class="M" style="position:absolute;right:80px;top:76px;font-size:30px">×</div>
+  <div class="A" style="position:absolute;left:70px;top:150px;font-size:380px;line-height:.85;color:transparent;-webkit-text-stroke:3px #0b0b0b">01</div>
+  <div style="position:absolute;right:80px;top:150px;width:430px;height:560px;overflow:hidden;background:#111"><img src="${PH}05_shoe.png" style="position:absolute;left:-40px;top:60px;width:720px;transform:rotate(34deg);filter:grayscale(1) contrast(1.15)"></div>
+  <div class="A" style="position:absolute;left:80px;top:740px;font-size:112px;line-height:1.04">You're pricing<br>your stuff<br><span style="background:var(--L);padding:0 14px;box-decoration-break:clone;display:inline-block;line-height:1.02;margin-top:8px">wrong.</span></div>
+  <div style="position:absolute;left:80px;right:80px;top:1110px;border-top:3px solid #0b0b0b;padding-top:22px;display:flex;justify-content:space-between" class="M"><span style="font-size:22px;letter-spacing:2px">5 FREE AI PROMPTS FOR PEOPLE WHO SELL</span><span style="font-size:22px">→</span></div>
+  <div class="M" style="position:absolute;left:80px;bottom:70px;font-size:20px;letter-spacing:3px">@AUTOPILOT.OI</div></div>`;
+ else h=`<div class="s grain" style="background:var(--P)">
+  <div class="M" style="position:absolute;left:80px;top:80px;font-size:20px;letter-spacing:3px">PLAYBOOK 01 / PROMPT 1 OF 5</div>
+  <div class="A" style="position:absolute;left:70px;top:130px;font-size:300px;line-height:.85;color:transparent;-webkit-text-stroke:3px #0b0b0b">01</div>
+  <div class="A" style="position:absolute;left:470px;top:150px;font-size:100px;line-height:.98;width:540px">Find the<br>price.</div>
+  <div style="position:absolute;left:80px;right:80px;top:470px;border-top:3px solid #0b0b0b"></div>
+  <div class="M" style="position:absolute;left:80px;top:500px;font-size:20px;letter-spacing:3px">THE PROMPT</div>
+  <div class="M" style="position:absolute;left:80px;top:550px;width:520px;font-size:28px;line-height:1.55">${hl(PR).replace(/<b>/g,'<b style="font-weight:400;background:var(--L)">')}</div>
+  <div class="M" style="position:absolute;left:660px;top:500px;font-size:20px;letter-spacing:3px">YOU GET (SAMPLE)</div>
+  <div style="position:absolute;left:660px;top:550px;width:340px">
+   ${[['Quick','$160'],['Normal','$195'],['Top','$230']].map((r,i)=>`<div style="border-bottom:2px solid #0b0b0b;padding:10px 0 14px"><div class="M" style="font-size:20px;letter-spacing:2px">${r[0].toUpperCase()}</div><div class="A" style="font-size:96px;line-height:1;${i==2?'background:var(--L);display:inline-block;padding:0 10px':''}">${r[1]}</div></div>`).join('')}</div>
+  <div class="M" style="position:absolute;left:80px;bottom:70px;font-size:20px;letter-spacing:3px">@AUTOPILOT.OI</div><div class="M" style="position:absolute;right:80px;bottom:66px;font-size:30px">→</div></div>`;
+}
+document.getElementById('root').innerHTML=h;
+const hit=document.getElementById('hit'),ring=document.getElementById('ring');
+if(hit&&ring){const r=hit.getBoundingClientRect();const x=r.left-30,y=r.top-8,w=r.width+60,hh=r.height+20;
+ ring.innerHTML=`<path d="M ${x+w*.1} ${y+hh*.15} C ${x+w*.55} ${y-hh*.12}, ${x+w*1.05} ${y+hh*.1}, ${x+w*1.02} ${y+hh*.55} S ${x+w*.35} ${y+hh*1.15}, ${x-w*.02} ${y+hh*.6} S ${x+w*.2} ${y-hh*.05}, ${x+w*.42} ${y+hh*.02}" fill="none" stroke="#D4FF3A" stroke-width="8" stroke-linecap="round"/>`;}
+Promise.all([...document.images].map(im=>im.complete?1:new Promise(r=>{im.onload=im.onerror=r}))).then(()=>document.fonts.ready).then(()=>window.READY=1);
+</script></body></html>
