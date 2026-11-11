@@ -8,6 +8,9 @@ with rembg, save to docs/media/car/photos/<slug>/:
   credits.json photographer, page url, Pexels id (Pexels asks for credit when possible; we keep it with the image)
 Rules: never request a named real person; generic people, hands, objects and places only. Status becomes "done" or "failed".
 
+Keyless topic search (no Pexels key): same {"query": ...} request; searches Unsplash then Openverse, skips Unsplash+ and
+  anything under 900px, writes sheet.jpg (numbered picks). "cutout": false skips rembg.
+
 Unsplash by id (free Unsplash License, no key): {"unsplash": ["6TdCjWc16bQ"], "status": "pending"}.
 Seb's own photos (sent in chat): queue/photos/<slug>.json {"files": ["queue/photos/in/<slug>/1.jpg", ...], "source": "...",
   "status": "pending"}. No Pexels call, just resize + cutout, same outputs. "source" records where the photo came from
@@ -69,8 +72,58 @@ def run():
             except Exception as e:
                 r["status"] = "failed"; r["error"] = repr(e)[:300]
             json.dump(r, open(f, "w"), indent=1); done += 1; print(slug, r["status"]); continue
-        if not KEY:
-            print(slug, "waiting: no PEXELS_API_KEY yet"); continue
+        if not KEY:                    # keyless topic search: Unsplash (free license, Unsplash+ skipped), then Openverse (CC, commercial OK)
+            try:
+                n = r.get("n", 6); credits = []; cands = []
+                q = urllib.parse.urlencode({"query": r["query"], "per_page": 30, "orientation": r.get("orientation", "portrait")})
+                try:
+                    for ph in json.loads(get("https://unsplash.com/napi/search/photos?" + q)).get("results", []):
+                        if ph.get("premium") or ph.get("plus") or "plus.unsplash.com" in ph["urls"]["raw"]:
+                            continue
+                        cands.append((ph["urls"]["raw"] + "&w=1800&q=88&fm=jpg", {"unsplash_id": ph["id"], "url": ph["links"]["html"],
+                                      "photographer": ph["user"]["name"], "license": "Unsplash License", "alt": ph.get("alt_description")}))
+                except Exception as e:
+                    print(slug, "unsplash search failed", repr(e)[:120])
+                if len(cands) < n:
+                    q2 = urllib.parse.urlencode({"q": r["query"], "license_type": "commercial,modification", "page_size": 20})
+                    try:
+                        for ph in json.loads(get("https://api.openverse.org/v1/images/?" + q2)).get("results", []):
+                            cands.append((ph["url"], {"openverse_id": ph["id"], "url": ph.get("foreign_landing_url"), "photographer": ph.get("creator"),
+                                          "license": f"CC {ph.get('license','').upper()} {ph.get('license_version','')}".strip(), "alt": ph.get("title")}))
+                    except Exception as e:
+                        print(slug, "openverse search failed", repr(e)[:120])
+                for src, meta in cands:
+                    if len(credits) >= n:
+                        break
+                    try:
+                        img = Image.open(io.BytesIO(get(src))).convert("RGB")
+                    except Exception:
+                        continue
+                    if min(img.size) < 900:
+                        continue
+                    i = len(credits) + 1
+                    img.thumbnail((1800, 1800)); img.save(os.path.join(out, f"{i:02d}.jpg"), quality=88)
+                    if r.get("cutout", True):
+                        cut = remove(img, session=session); bbox = cut.getbbox()
+                        if bbox:
+                            cut = cut.crop(bbox)
+                        cut.save(os.path.join(out, f"{i:02d}_cut.png"))
+                    credits.append({"n": i, **meta})
+                if credits:                # numbered contact sheet so the picker can choose fast
+                    th = [Image.open(os.path.join(out, f"{c['n']:02d}.jpg")) for c in credits]
+                    W = 360; sheet = Image.new("RGB", (W * min(4, len(th)), 450 * ((len(th) + 3) // 4)), "#111")
+                    from PIL import ImageDraw
+                    d = ImageDraw.Draw(sheet)
+                    for k, im in enumerate(th):
+                        im = im.copy(); im.thumbnail((W - 10, 440)); x, y = (k % 4) * W + 5, (k // 4) * 450 + 5
+                        sheet.paste(im, (x, y)); d.rectangle([x, y, x + 40, y + 30], fill="#D4FF3A"); d.text((x + 12, y + 8), str(k + 1), fill="#000")
+                    sheet.save(os.path.join(out, "sheet.jpg"), quality=85)
+                json.dump({"query": r["query"], "credits": credits}, open(os.path.join(out, "credits.json"), "w"), indent=1)
+                r["status"] = "done" if credits else "failed"; r["count"] = len(credits)
+                if not credits: r["error"] = "no usable results"
+            except Exception as e:
+                r["status"] = "failed"; r["error"] = repr(e)[:300]
+            json.dump(r, open(f, "w"), indent=1); done += 1; print(slug, r["status"], r.get("count", 0)); continue
         try:
             q = urllib.parse.urlencode({"query": r["query"], "orientation": r.get("orientation", "portrait"), "per_page": r.get("n", 3), "size": "large"})
             res = json.loads(get("https://api.pexels.com/v1/search?" + q, {"Authorization": KEY}))
