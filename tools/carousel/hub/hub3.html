@@ -49,9 +49,17 @@ const P=[
  {t:'Move slow stock',g:'New prices and bundles for items that sat too long',r:'You are a retail inventory manager.',k:'Clear the items that sat too long.',c:'My inventory with price and days in stock: [paste].',o:'Each slow item with a new price, then 2 bundle ideas to move them this week.',
   a:{h:'60+ days in stock',rows:[['Hoodie · 74 days','$45 → $36'],['Jeans · 61 days','$38 → $30'],['Any 2 tees','$30']]}},
 ];
+const V=+(new URLSearchParams(location.search).get('v')||0);
+const HOOKS=[
+ ['Price<br>anything<br>you sell<br>in <span class="acc">30 sec${U}</span>',178],
+ ['You are<br>pricing<br>your stuff<br><span class="acc">wrong${U}</span>',178],
+ ['Never<br>take a<br><span class="acc">lowball${U}</span><br>again',190],
+ ['Your price<br>is fine.<br>Your <span class="acc">listing${U}</span><br>is not.',160],
+];
+const HK=()=>{const [t,fs]=HOOKS[V];return `<div class="A" style="position:absolute;left:80px;top:170px;font-size:${fs}px">${t.replace('${U}',U('#D4FF3A'))}</div>`};
 let h='';
 if(N==1){h=`<div class="s k grain">${meta('#fff')}
- <div class="A" style="position:absolute;left:80px;top:170px;font-size:178px">Price<br>anything<br>you sell<br>in <span class="acc">30 sec${U('#D4FF3A')}</span></div>
+ ${HK()}
  <div style="position:absolute;left:80px;top:1010px;font-size:34px;color:#b9b9b2;width:520px;line-height:1.35">5 copy and paste prompts for ChatGPT or Claude.</div>
  <div style="position:absolute;left:680px;top:830px;width:300px;height:400px;transform:rotate(-10deg) scale(.9);transform-origin:center;">
   <div style="position:absolute;inset:0;background:var(--L);border-radius:30px 30px 40px 40px;clip-path:polygon(50% 0,100% 16%,100% 100%,0 100%,0 16%);box-shadow:0 40px 80px rgba(0,0,0,.6)"></div>
