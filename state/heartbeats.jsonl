@@ -239,3 +239,4 @@
 {"worker": "site_improver", "status": "ok", "at": "2026-11-10T21:03:30+00:00", "note": "/g/video/ headline no longer promises scheduled posts (writes the scripts and plans every edit)"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-10T22:56:28+00:00", "note": "PM: X 16 out, IG 2, 0 failed, per post data missing, no move"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-11T00:22:03+00:00", "note": "posts out today 19 (X 17, IG 2), 0 errors; top post saves+shares 0; feed written yes"}
+{"worker": "kit_sync", "status": "ok", "at": "2026-11-11T00:32:56+00:00", "note": "0 routed (forms empty)"}
