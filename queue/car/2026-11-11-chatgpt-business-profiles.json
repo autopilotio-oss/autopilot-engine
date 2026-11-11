@@ -1,0 +1,37 @@
+{
+ "id": "2026-11-11-chatgpt-business-profiles",
+ "kind": "news",
+ "story_key": "openai-businesses-in-chatgpt-business-hub-2026-11-10",
+ "cover_idea": "Full lime cover, small Inter kicker 'ChatGPT now lets you' over a giant two line justified headline CLAIM YOUR / BUSINESS at the top, a tilted off white SAMPLE ChatGPT business profile card with hard black shadow below (YOUR SHOP, CLAIMED badge, 3 stat rows with bars). Changes vs IPO (white, price led, headline bottom) and Fable (black, ladder): lime bg, headline top with mixed scale, mock profile card visual.",
+ "theme": "dark",
+ "status": "scheduled",
+ "gate": {
+  "score": 89,
+  "notes": "Accuracy 27/30 (TechCrunch Nov 10 + The Next Web Nov 10 + Unite.AI; every claim in 2+ sources: beta, Business Hub, blue check, update details/prices/stock, views/mentions/clicks, agents for eligible US ecommerce and online services, AI disclosure, no pressure tactics, explicit approval for purchases and data, no chats shared, 1.2B weekly; 'an early step' quote from OpenAI via TechCrunch. Left out single source: checkout retired in March, Shopify connect, website required, Visa payments). Hook 23/25 (direct owner story). Clarity 18/20. Design 13/15 (new lime profile card cover, one accent). CTA 8/10 (AGENTS confirmed; TOOLS not yet). QA PASS 8 slides."
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "yes",
+  "basis": "campaign standing approval (news and prompt carousels); autopost after Nov 10 per MANAGER.md section 7 item 3, Seb 2026-11-04 01:39 'yes'"
+ },
+ "posts": [
+  {
+   "network": "twitter",
+   "networks": [
+    "twitter"
+   ],
+   "metricool_id": 423947189,
+   "uuid": "-1392836035801298517",
+   "at": "2026-11-11T12:00:00-03:00",
+   "type": "slides 01 to 04"
+  }
+ ],
+ "instagram": {
+  "status": "awaiting_seb",
+  "planned_at": "2026-11-12T18:00:00-03:00",
+  "note": "Metricool createScheduledPost for Instagram was blocked by this session's permission check (external write denied); X went through. Waits for Seb's yes or a manual schedule. Caption ready in this file.",
+  "caption": "ChatGPT now lets businesses claim a profile, a lot like a Google business profile.\n\nOpenAI launched Businesses in ChatGPT in beta on Nov 10.\nClaimed profiles get a blue check and can update details, prices and stock.\nThe Business Hub shows profile views, mentions and clicks to your website.\nBusiness agents start with eligible US online shops and services.\n\nRun a business? Comment AGENTS and we will DM you the free starter: your first AI helper in 10 minutes.\n\nSources: TechCrunch, The Next Web, Unite.AI\n\n#smallbusiness #chatgpt #ainews #smallbusinessowner #openai"
+ },
+ "threads": "skipped: Threads disconnected from Metricool (MANAGER.md section 7 item 8 pending)",
+ "results": {}
+}
