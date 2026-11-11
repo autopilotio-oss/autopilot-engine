@@ -1,35 +1,35 @@
 {
-  "at": "2026-11-11T12:26:00Z",
+  "at": "2026-11-11T16:30:00Z",
   "posts_today": {
-    "twitter": {"published": 0, "pending": 20, "error": 0},
-    "instagram": {"published": 0, "pending": 2, "error": 0},
+    "twitter": {"published": 6, "pending": 14, "error": 0},
+    "instagram": {"published": 1, "pending": 1, "error": 0},
     "threads": {"published": 0, "pending": 0, "error": 0},
-    "tiktok": {"published": 0, "pending": 1, "error": 0}
+    "tiktok": {"published": 1, "pending": 0, "error": 0}
   },
   "top_posts": [
     {
       "network": "instagram",
-      "published_at": "2026-11-08T13:03:12-03:00",
-      "text": "A customer messages late at night.",
-      "metrics": {"reach": 99, "views": 111, "saves": 0, "shares": 0, "comments": 0},
-      "url": "https://www.instagram.com/reel/Dfe0Wj8D9J5/"
+      "published_at": "2026-11-09T13:04:58-03:00",
+      "text": "Dave is a week late and you hate the awkward text.",
+      "metrics": {"reach": 60, "views": 62, "saves": 0, "shares": 0, "comments": 0},
+      "url": "https://www.instagram.com/reel/DfhZUbwgO1q/"
     },
     {
       "network": "tiktok",
       "published_at": "2026-11-09T13:05:26-03:00",
       "text": "3 more mistakes that quietly kill TikTok views.",
-      "metrics": {"views": 93, "reach": null, "shares": 0, "comments": 0, "saves": null},
+      "metrics": {"views": 93, "reach": null, "likes": 0, "shares": 0, "comments": 0, "saves": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7706156788567084340"
     },
     {
-      "network": "tiktok",
-      "published_at": "2026-11-08T13:04:11-03:00",
-      "text": "Stop guessing which video worked.",
-      "metrics": {"views": 86, "reach": null, "shares": 0, "comments": 0, "saves": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7705785438832708870"
+      "network": "instagram",
+      "published_at": "2026-11-08T21:04:19-03:00",
+      "text": "You run a lawn or landscaping business and still type every quote, skip week text and late payment reminder by hand?",
+      "metrics": {"reach": 5, "views": 12, "saves": 0, "shares": 0, "comments": 0, "follows": 0},
+      "url": null
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-11T10:48:53Z"},
-  "notes": "Snapshot 09:26 ART Nov 11. 0 posts out yet today (first slot X 09:30); 23 pending: X 20 (14 polls, 3 manager product posts, ChatGPT business profile news 12:00, real estate prompt pack 18:00), IG 2 (Bookkeeping Sorter reel 10:00, real estate carousel 18:00), TikTok 1 (hook rewrites 12:00). 0 errors. Window 6 to 72h: still no saves or shares on any IG reel or TikTok (TikTok saves not provided, reach null), so ranking falls to reach/views and there is no winner. IG Nov 10 Front Desk quote reel reach 5, views 6; IG Nov 9 Invoice Chaser reach 60, views 62. X post analytics not pulled. GitHub: freel.yml failed again 2026-11-11 09:58Z (logged in Fix needed); ci.yml last run success. Revenue: 0 verified orders. HQ feed written (status/hub v68)."
+  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-11T14:03:24Z"},
+  "notes": "Snapshot 13:30 ART Nov 11. 8 posts out today: X 6 (bookkeeping 09:30, 3 polls, ChatGPT business profile news 12:00), IG 1 (Bookkeeping Sorter reel 10:00), TikTok 1 (hook rewrites 12:00). 15 pending: X 14 (Review Desk 15:00, Front Desk 21:00, real estate pack 18:00, 11 polls), IG 1 (real estate carousel 18:00). 0 errors. Window 6 to 72h: 0 saves and 0 shares on every IG post and TikTok (TikTok saves not provided, reach null), so no winner; list falls back to reach/views. Also seen: IG Nov 10 Front Desk quote reel reach 5, views 6; IG Nov 10 Claude Fable news carousel comments 3, reach 0, views 0; IG Nov 9 small business carousel reach 1, views 1. Nov 8 13:03 IG reel and 13:04 TikTok are now just past 72h. X post analytics not pulled; carousel urls not provided by Metricool. GitHub: freel.yml last run failure (already in Fix needed today); ci.yml last run success. Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v69)."
 }
