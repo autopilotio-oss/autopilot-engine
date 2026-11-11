@@ -1,0 +1,105 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:W;src:url(/docs/assets/fonts/APWide-Black.woff)}
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-SemiBold.woff)}
+@font-face{font-family:TB;src:url(/docs/assets/fonts/APText-Bold.woff)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#0a0a0a;--P:#ecebe6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:T;color:var(--K)}
+.s{position:absolute;inset:0;overflow:hidden}
+.paper{background:var(--P)}.lime{background:var(--L)}.ink{background:var(--K);color:var(--P)}
+.grain:after{content:"";position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.mono{font-family:M;font-size:22px;letter-spacing:2px;text-transform:uppercase}
+.pix{position:absolute;display:grid}
+.pix i{display:block}
+.out{font-family:W;font-style:italic;text-transform:uppercase;color:transparent;-webkit-text-stroke:3px var(--K);line-height:.86;letter-spacing:-1px}
+.wide{font-family:W;font-style:italic;text-transform:uppercase;line-height:.9}
+.band{position:absolute;top:0;bottom:0;display:flex;align-items:center;justify-content:center}
+.band span{font-family:W;font-style:italic;text-transform:uppercase;white-space:nowrap;transform:rotate(-90deg)}
+.code{position:absolute;display:flex;align-items:stretch}
+.code i{display:block;background:var(--K)}
+.stripes{position:absolute;background:repeating-linear-gradient(45deg,var(--K) 0 14px,transparent 14px 32px)}
+.card{position:absolute;background:var(--K);color:#f2f2ee;padding:44px 46px;font-family:M;font-size:31px;line-height:1.42}
+.card b{color:var(--L);font-weight:400}
+.card .lab{font-size:19px;letter-spacing:3px;color:#8a8a84;margin-bottom:22px;text-transform:uppercase}
+.x{position:absolute;font-family:M;font-size:30px}
+.ap{position:absolute;width:86px}
+</style></head><body>
+<div id="root"></div>
+<script>
+const Q=new URLSearchParams(location.search), N=+(Q.get('n')||1);
+const $=h=>{document.getElementById('root').innerHTML=h};
+function pix(x,y,cell,cols,map,col='var(--K)'){ // map: array of strings, '#' filled
+  let h=`<div class="pix" style="left:${x}px;top:${y}px;grid-template-columns:repeat(${cols},${cell}px);grid-auto-rows:${cell}px">`;
+  map.join('').split('').forEach(c=>h+=`<i style="background:${c=='#'?col:'transparent'}"></i>`);return h+'</div>'}
+function code(x,y,w,h,seed=7){let s=seed,o=`<div class="code" style="left:${x}px;top:${y}px;height:${h}px;width:${w}px;gap:0">`,t=0;
+  while(t<w){s=(s*9301+49297)%233280;const bw=2+Math.floor(s/233280*9),gap=2+Math.floor((s*7%233280)/233280*7);if(t+bw>w)break;o+=`<i style="width:${bw}px;margin-right:${gap}px"></i>`;t+=bw+gap}
+  return o+'</div>'}
+const hl=t=>t.replace(/\[(.*?)\]/g,'<b>[$1]</b>');
+function prompt(x,y,w,label,txt,extra=''){return `<div class="card" style="left:${x}px;top:${y}px;width:${w}px;${extra}"><div class="lab">${label}</div>${hl(txt)}</div>`}
+const get=(x,y,d,c='var(--K)')=>`<div style="position:absolute;left:${x}px;top:${y}px"><div class="mono" style="font-size:19px;letter-spacing:3px;opacity:.6;color:${c}">WHAT YOU GET</div>${d.get.split('|').map(g=>`<div style="font-family:TB;font-size:34px;margin-top:12px;color:${c}"><span style="display:inline-block;width:16px;height:16px;background:${c};margin-right:16px;transform:translateY(-4px)"></span>${g}</div>`).join('')}</div>`;
+const foot=(c='var(--K)',l=64)=>`<div class="mono" style="position:absolute;left:${l}px;bottom:52px;color:${c};font-size:19px">@AUTOPILOT.OI · FREE PLAYBOOK 01</div><div class="mono" style="position:absolute;right:64px;bottom:52px;color:${c};font-size:19px">SWIPE →</div>`;
+const P=[
+ {t:'FIND THE PRICE',use:'Something new walks in the door.',get:'3 prices: quick, normal, top dollar|The details that move the price',p:'I sell [item, brand, size, condition]. Act as a resale pricing expert. Give me a quick sale, a normal sale and a top dollar price on [platform or city], and the 3 details that change the price most.'},
+ {t:'PRICE FOR PROFIT',use:'Before you list anything.',get:'Your break even price|The list price that keeps your margin',p:'My cost on [item] is [$X]. Fees on [platform] are [X%] and shipping is [$Y]. What is my break even price, and what should I list at to keep [X%] profit after everything?'},
+ {t:'WRITE THE LISTING',use:'You hate writing descriptions.',get:'A title buyers search for|5 bullets and a trust line',p:'Write a listing for [item] on [platform]: a title under 80 characters using words buyers search, 5 short bullets on condition and details, and 1 line that builds trust. Details: [paste].'},
+ {t:'BEAT THE LOWBALL',use:'Someone offers half your price.',get:'3 replies ready to send',p:'A buyer offered [$X] on [item] listed at [$Y]. My floor is [$Z]. Write 3 short replies: a counter, a polite no, and one that adds value instead of dropping the price.'},
+ {t:'MOVE SLOW STOCK',use:'Stuff has sat for 60 days.',get:'A markdown for every slow item|2 bundles to clear it',p:'Here is my inventory with price and days in stock: [paste]. Flag what sat too long, suggest a markdown for each, and give me 2 bundle ideas to move it this week.'},
+];
+const S={
+1:()=>`<div class="s paper grain">
+ ${pix(0,0,92,4,['##..','#.#.','.##.','##.#','#..#','.#..','###.','#.#.','.#..','##..','#.#.','..#.','##.#','#...','.##.'])}
+ <div class="x" style="right:70px;top:60px">×</div>
+ <div class="mono" style="position:absolute;right:70px;top:150px;text-align:right;line-height:1.7">AUTOPILOT.OI<br>FREE PLAYBOOK 01</div>
+ <div style="position:absolute;left:250px;top:470px">
+  <div class="out" style="font-size:150px">PRICE</div><div class="out" style="font-size:150px">PRICE</div><div class="out" style="font-size:150px;color:var(--K);-webkit-text-stroke:0">PRICE</div></div>
+ <div class="wide" style="position:absolute;left:392px;top:900px;font-size:58px">ANYTHING<br>YOU SELL.</div>
+ <div class="mono" style="position:absolute;left:394px;top:1060px;font-size:24px;background:var(--L);padding:12px 18px">5 COPY PASTE PROMPTS · SAVE THIS</div>
+ ${foot('var(--K)',394)}</div>`,
+cta:()=>`<div class="s ink grain">
+ ${pix(784,0,74,4,['.###','#.##','..#.'],'var(--L)')}
+ <div class="wide" style="position:absolute;left:64px;top:260px;font-size:120px;color:var(--P)">SAVE IT.</div>
+ <div class="wide" style="position:absolute;left:64px;top:390px;font-size:120px;color:var(--L)">USE IT<br>TONIGHT.</div>
+ <div class="stripes" style="left:64px;top:720px;width:952px;height:60px;background:repeating-linear-gradient(45deg,var(--L) 0 14px,transparent 14px 32px)"></div>
+ <div style="position:absolute;left:64px;top:830px;font-family:TB;font-size:44px;line-height:1.3;color:var(--P);width:900px">One new free playbook every day for people who run a business.</div>
+ <div class="mono" style="position:absolute;left:64px;top:1000px;line-height:1.9;color:#bdbdb6">WORKS IN CHATGPT · CLAUDE · GEMINI<br>SWAP THE <span style="color:var(--L)">[BRACKETS]</span> FOR YOUR DETAILS</div>
+ <div style="position:absolute;left:64px;top:1130px;background:var(--L);color:var(--K);font-family:W;font-style:italic;font-size:46px;padding:18px 30px">FOLLOW @AUTOPILOT.OI</div>
+ <img class="ap" src="/tools/carousel/wow/ap_lime.png" style="right:64px;bottom:60px">
+</div>`
+};
+// prompt slides 2..5 (+ one more variant) with different layouts
+const L=[
+ (i,d)=>`<div class="s lime grain">
+  ${pix(0,0,80,3,['##.','#.#','.##','#..'])}
+  <div class="out" style="position:absolute;right:56px;top:40px;font-size:300px">0${i}</div>
+  <div class="wide" style="position:absolute;left:64px;top:380px;font-size:72px;width:950px">${d.t}</div>
+  ${prompt(64,520,952,'PROMPT 0'+i+' · COPY THIS',d.p)}
+  ${get(64,900,d)}<div class="mono" style="position:absolute;left:64px;top:1150px;font-size:22px">USE IT WHEN: ${d.use}</div>${foot()}</div>`,
+ (i,d)=>`<div class="s paper grain">
+  <div class="band" style="left:0;width:200px;background:var(--K)"><span style="font-size:118px;color:var(--L)">0${i} PROFIT</span></div>
+  <div class="wide" style="position:absolute;left:260px;top:110px;font-size:76px;width:760px">${d.t}.</div>
+  <div class="mono" style="position:absolute;left:262px;top:290px;font-size:22px">USE IT WHEN: ${d.use}</div>
+  ${prompt(260,380,756,'PROMPT 0'+i,d.p)}
+  ${get(262,780,d)}${code(596,990,420,96,i*13)}<div class="mono" style="position:absolute;left:596px;top:1096px;font-size:16px">1 0${i}8800 24001 3</div>${foot('var(--K)',262)}</div>`,
+ (i,d)=>`<div class="s ink grain">
+  <div class="stripes" style="left:0;top:0;width:150px;height:1350px;background:repeating-linear-gradient(45deg,var(--P) 0 14px,transparent 14px 32px)"></div>
+  <div class="out" style="position:absolute;left:200px;top:70px;font-size:128px;-webkit-text-stroke:3px var(--L)">0${i}</div>
+  <div class="wide" style="position:absolute;left:200px;top:210px;font-size:70px;color:var(--P);width:820px">${d.t}</div>
+  ${prompt(200,420,816,'PROMPT 0'+i+' · COPY THIS',d.p,'background:var(--P);color:var(--K)').replace(/<b>/g,'<b style="background:var(--L);color:var(--K)">')}${get(200,870,d,'var(--P)')}
+  <div class="mono" style="position:absolute;left:200px;top:1120px;font-size:22px;color:var(--L)">USE IT WHEN: ${d.use}</div>${foot('var(--P)',200)}</div>`,
+ (i,d)=>`<div class="s paper grain">
+  <div style="position:absolute;left:64px;top:90px">
+   <div class="out" style="font-size:132px">LOWBALL</div><div class="out" style="font-size:132px">LOWBALL</div><div class="out" style="font-size:132px;-webkit-text-stroke:0;color:var(--K)">LOWBALL</div></div>
+  <div class="mono" style="position:absolute;left:66px;top:470px;font-size:22px;background:var(--L);padding:10px 16px">0${i} · ${d.t}</div>
+  ${prompt(64,560,860,'PROMPT 0'+i,d.p)}
+  ${pix(964,560,58,2,['#.','.#','##','#.','.#','#.','##'])}${get(64,960,d)}<div class="mono" style="position:absolute;left:64px;top:1120px;font-size:22px">USE IT WHEN: ${d.use}</div>${foot()}</div>`,
+ (i,d)=>`<div class="s paper grain">
+  <div class="band" style="right:0;width:210px;background:var(--L)"><span style="font-size:110px;color:var(--K)">SLOW STOCK</span></div>
+  ${pix(0,0,70,4,['###.','#.#.','.#..'])}
+  <div class="wide" style="position:absolute;left:64px;top:270px;font-size:88px;width:760px">0${i}<br>${d.t}.</div>
+  ${prompt(64,560,780,'PROMPT 0'+i+' · COPY THIS',d.p)}${get(64,930,d)}
+  <div class="mono" style="position:absolute;left:64px;top:1150px;font-size:22px">USE IT WHEN: ${d.use}</div>${foot()}</div>`,
+];
+if(N==1) $(S[1]()); else if(N==7) $(S.cta()); else { const i=N-1; $(L[i-1](i,P[i-1])); }
+document.fonts.ready.then(()=>window.READY=1);
+</script></body></html>
