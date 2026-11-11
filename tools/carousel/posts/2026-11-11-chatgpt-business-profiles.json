@@ -1,0 +1,74 @@
+{
+  "kind": "news",
+  "dateline": "NOV 10 2026",
+  "story_key": "openai-businesses-in-chatgpt-business-hub-2026-11-10",
+  "lines": [
+    "ChatGPT now has",
+    "[business profiles]"
+  ],
+  "subline": "businesses in chatgpt, beta",
+  "cover_bg": "bg-lime",
+  "theme": "dark",
+  "grain": false,
+  "music": "bright",
+  "seed": 73,
+  "cover_html": "<div class=\"fx chip\" style=\"left:56px;top:70px\">NEWS &middot; OPENAI &middot; NOV 10</div><div class=\"fx Ii\" style=\"left:56px;top:168px;font-size:58px;color:#0c0c0c\">ChatGPT now lets you</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" data-gap=\"14\" style=\"left:56px;top:250px;font-size:200px;white-space:nowrap;color:#0c0c0c\">claim your</div><div class=\"fx A\" data-fit=\"968\" data-stack=\"h\" style=\"left:56px;top:440px;font-size:200px;white-space:nowrap;color:#0c0c0c\">business</div><div class=\"fx\" style=\"left:150px;top:730px;width:780px;padding:30px 40px 34px;box-sizing:border-box;background:#f2f2ee;border:5px solid #0c0c0c;border-radius:28px;box-shadow:16px 16px 0 #0c0c0c;transform:rotate(-2.5deg)\"><div style=\"font:700 20px C;letter-spacing:3px;color:#55554f\">SAMPLE &middot; CHATGPT BUSINESS PROFILE</div><div style=\"display:flex;align-items:flex-end;gap:24px;margin-top:22px\"><span style=\"font:400 84px/.9 A;text-transform:uppercase;color:#0c0c0c\">Your shop</span><span style=\"font:700 22px C;letter-spacing:3px;background:#0c0c0c;color:#D4FF3A;padding:8px 14px;margin-bottom:8px\">&#10003; CLAIMED</span></div><div style=\"height:3px;background:#0c0c0c;margin:26px 0 8px\"></div><div style=\"display:flex;align-items:center;justify-content:space-between;margin-top:18px\"><span style=\"font:700 28px M;color:#0c0c0c\">Profile views</span><span style=\"display:block;width:230px;height:14px;background:#0c0c0c\"></span></div><div style=\"display:flex;align-items:center;justify-content:space-between;margin-top:18px\"><span style=\"font:700 28px M;color:#0c0c0c\">Mentions in ChatGPT</span><span style=\"display:block;width:160px;height:14px;background:#0c0c0c\"></span></div><div style=\"display:flex;align-items:center;justify-content:space-between;margin-top:18px\"><span style=\"font:700 28px M;color:#0c0c0c\">Clicks to your site</span><span style=\"display:block;width:110px;height:14px;background:#0c0c0c\"></span></div><div style=\"font:700 20px C;letter-spacing:3px;color:#55554f;margin-top:28px\">STATS FOR YOU &middot; NO CHATS SHARED</div></div><div class=\"fx Ii\" style=\"left:56px;top:1236px;width:840px;font-size:32px;line-height:1.28;color:#0c0c0c\">Like a Google profile, but inside ChatGPT &#9656;</div>",
+  "bg_words": [
+    "CHATGPT",
+    "BUSINESS",
+    "PROFILES",
+    "AGENTS"
+  ],
+  "bg_facts": [
+    "OpenAI launched Businesses in ChatGPT in beta on Nov 10.",
+    "Claimed profiles get a blue check.",
+    "The Business Hub shows mentions and website clicks.",
+    "Business agents start with eligible US firms."
+  ],
+  "slides": [
+    {
+      "title": "What *happened*",
+      "body": "On <b>Tuesday, November 10</b>, OpenAI launched <b>Businesses in ChatGPT</b> in beta. Companies can now claim and verify a profile through a new <b>Business Hub</b>, a lot like the business profiles you know from Google search. ChatGPT has about <b>1.2 billion</b> weekly users."
+    },
+    {
+      "title": "What a profile *does*",
+      "body": "A claimed profile gets a <b>blue check</b>. You can update your details, prices and stock. The Hub shows <b>profile views</b>, how often ChatGPT <b>mentions</b> you, and how many people <b>click to your website</b>."
+    },
+    {
+      "title": "Business *agents*",
+      "body": "Eligible businesses can also launch their own <b>agent</b>. When you show up in an answer, people can open your profile and ask it about your products. These chats are labeled and kept separate from ChatGPT's own answers. Agents start with eligible <b>US online shops and online services</b>."
+    },
+    {
+      "title": "The *rules*",
+      "body": "Agents must say they are <b>AI</b>, keep prices accurate and avoid pressure tactics. Buying something or sharing personal data needs the customer's <b>clear approval</b>. OpenAI says it does <b>not share people's chats</b> with businesses."
+    },
+    {
+      "title": "What is *not clear*",
+      "body": "OpenAI called this <b>\"an early step\"</b>. It has not shared a price, the exact verification steps, or when other countries and business types get agents. It is a beta, so details can still change."
+    },
+    {
+      "title": "What it means *for you*",
+      "body": "Ask ChatGPT about your kind of business in your town and see what it says about you. If it gets things wrong, fix your <b>website</b> first: hours, prices, services. Then look for the claim option in the <b>Business Hub</b> as it rolls out."
+    }
+  ],
+  "cta": {
+    "big": "Run a business? Put AI *to work today*",
+    "keyword": "AGENTS",
+    "gift": "Free starter: your first AI helper in 10 minutes",
+    "small": "Free, right in your DMs. *It drafts, you decide.*"
+  },
+  "sources": [
+    [
+      "TechCrunch",
+      "https://techcrunch.com/2026/11/10/openai-rolls-out-new-business-profiles-making-chatgpt-just-a-little-bit-more-like-google/"
+    ],
+    [
+      "The Next Web",
+      "https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents"
+    ],
+    [
+      "Unite.AI",
+      "https://www.unite.ai/openai-launches-business-hub-and-business-agents-in-chatgpt/"
+    ]
+  ]
+}
