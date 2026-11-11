@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-10T20:25:00Z",
+  "at": "2026-11-11T00:25:00Z",
   "posts_today": {
-    "twitter": {"published": 11, "pending": 10, "error": 0},
-    "instagram": {"published": 1, "pending": 1, "error": 0},
+    "twitter": {"published": 17, "pending": 4, "error": 0},
+    "instagram": {"published": 2, "pending": 0, "error": 0},
     "threads": {"published": 0, "pending": 0, "error": 0},
     "tiktok": {"published": 0, "pending": 0, "error": 0}
   },
@@ -30,6 +30,6 @@
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-10T19:40:12Z"},
-  "notes": "Snapshot 17:25 ART Nov 10. 12 posts out today (X 11, IG 1 Front Desk quote reel 10:00), 11 pending (X 10 incl. Fable 5.2 news 18:00, IPO news 21:00 and Content Week 21:00 which is still a DRAFT so will not auto publish; IG 1 Fable 5.2 carousel 18:00), 0 errors. No Threads or TikTok today. Window 6 to 72h: no post has any saves or shares (all 0; TikTok saves and reach not provided). Ranking falls to reach/views only, so there is no winner. IG Nov 9 Invoice Chaser reel reach 57. X post analytics not pulled. GitHub: freel.yml failed (ElevenLabs 401, already in Fix needed); ci.yml last run success. Revenue: 0 verified orders."
+  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-10T22:29:01Z"},
+  "notes": "Snapshot 21:25 ART Nov 10. 19 posts out today (X 17: 12 polls, 3 product posts, Fable 5.2 news, Anthropic IPO news; IG 2: Front Desk quote reel 10:00, Fable 5.2 carousel 18:00), 4 pending on X (polls 21:40, 22:40, 23:40 plus Content Week 21:00 which is still a DRAFT so it will not auto publish), 0 errors. No Threads or TikTok today. Window 6 to 72h: no post has any saves or shares (all 0; TikTok saves and reach not provided), so ranking falls to reach/views only and there is no winner. IG Nov 9 Invoice Chaser reel reach 57, views 60. Nov 7 TikTok (4 shares) is outside the 72h window. X post analytics not pulled. GitHub: freel.yml failed (ElevenLabs 401, already in Fix needed); ci.yml last run success. Revenue: 0 verified orders. HQ feed written (status/hub v67)."
 }
