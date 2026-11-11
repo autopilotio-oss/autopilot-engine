@@ -70,6 +70,7 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Support agent run Nov 10 13:12 UTC: no new alerts (new mail since last run: Kit marketing and a personal travel notice, not business; Instagram confirmation code already noted). Threads disconnect incidents still open.
 - Support agent run Nov 10 19:11 UTC: no new alerts (no new mail since 13:12 run; 2d mail is Kit/Metricool marketing, a personal travel notice and the already-noted Instagram code). Threads disconnect incidents still open.
 - Support agent run Nov 11 13:10 UTC: no new alerts (no new mail since Nov 10 run; 2d mail is Kit/Metricool marketing, a personal travel notice and the already-noted Instagram code). Threads disconnect incidents still open.
+- Support agent run Nov 11 evening: no new alerts (only new mail a personal non-business survey; 2d mail otherwise Kit marketing and a personal travel notice). Threads disconnect incidents still open.
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -94,6 +95,7 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 10 run (13:12 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 10 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 11 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
+- Nov 11 run (evening): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-11 (08:25 ART)
 - INCIDENT inc:worker:factory_reels_tts:2026-11-10 (SEV-2, still OPEN, day 2, already reported Nov 10, not re-sent): Factory reels run 42999719823 (09:58 UTC) failed again. prep 029-review-pile got ElevenLabs HTTP 401 on eleven_v4 and eleven_multilingual_v2 at 10:02:39 UTC (prep 028 cancelled); render and final skipped, no reels today. Every voice call now 401s, so the key is revoked or the account is out of credit; code is fine. Not rerun (same 401; render/final feed autopost). Fix unchanged: Seb checks ElevenLabs plan/credits (a plan change is a spending decision) or rotates ELEVENLABS_API_KEY. Approved queue still has IG reels for Nov 11 and Nov 12, so IG keeps posting until the queue runs dry.
