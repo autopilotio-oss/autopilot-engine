@@ -1,0 +1,114 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "-3933421232260887697",
+   "metricool_id": 424332658,
+   "at": "2026-11-11T09:45:00-03:00",
+   "pillar": "question",
+   "hook": "Do you make your bed every morning?"
+  },
+  {
+   "uuid": "-3313591906836526883",
+   "metricool_id": 424332668,
+   "at": "2026-11-11T10:40:00-03:00",
+   "pillar": "question",
+   "hook": "Using ChatGPT to write a breakup text: fair or cold?"
+  },
+  {
+   "uuid": "2313710921800892425",
+   "metricool_id": 424332676,
+   "at": "2026-11-11T11:40:00-03:00",
+   "pillar": "question",
+   "hook": "Toilet paper: over or under?"
+  },
+  {
+   "uuid": "-5437065243835284700",
+   "metricool_id": 424332692,
+   "at": "2026-11-11T12:40:00-03:00",
+   "pillar": "question",
+   "hook": "An AI that knows everything. What is your first question?"
+  },
+  {
+   "uuid": "4697047161207016104",
+   "metricool_id": 424332706,
+   "at": "2026-11-11T13:40:00-03:00",
+   "pillar": "question",
+   "hook": "Work from home or work from the office?"
+  },
+  {
+   "uuid": "3812790000409395885",
+   "metricool_id": 424332714,
+   "at": "2026-11-11T14:40:00-03:00",
+   "pillar": "question",
+   "hook": "Robot vacuum: worth it or a toy?"
+  },
+  {
+   "uuid": "-8319874514966264523",
+   "metricool_id": 424332724,
+   "at": "2026-11-11T15:40:00-03:00",
+   "pillar": "question",
+   "hook": "Do you read the whole email or just the first line?"
+  },
+  {
+   "uuid": "-3504397844124711857",
+   "metricool_id": 424332744,
+   "at": "2026-11-11T16:40:00-03:00",
+   "pillar": "question",
+   "hook": "Socks with sandals: crime or comfort?"
+  },
+  {
+   "uuid": "8549551046803735051",
+   "metricool_id": 424333061,
+   "at": "2026-11-11T17:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you take a 4 day week for 10% less pay?"
+  },
+  {
+   "uuid": "-209912858145960636",
+   "metricool_id": 424333080,
+   "at": "2026-11-11T18:40:00-03:00",
+   "pillar": "question",
+   "hook": "A customer pays late again. Call or text?"
+  },
+  {
+   "uuid": "5490438741255867912",
+   "metricool_id": 424333096,
+   "at": "2026-11-11T19:40:00-03:00",
+   "pillar": "question",
+   "hook": "AI art: real art or not?"
+  },
+  {
+   "uuid": "165094920779812768",
+   "metricool_id": 424333123,
+   "at": "2026-11-11T20:40:00-03:00",
+   "pillar": "question",
+   "hook": "Movie night: something new or an old favorite?"
+  },
+  {
+   "uuid": "-2627155565894220475",
+   "metricool_id": 424333135,
+   "at": "2026-11-11T21:40:00-03:00",
+   "pillar": "question",
+   "hook": "Ketchup on eggs: yes or no?"
+  },
+  {
+   "uuid": "1014066366061562423",
+   "metricool_id": 424333155,
+   "at": "2026-11-11T22:40:00-03:00",
+   "pillar": "question",
+   "hook": "Would you let ChatGPT plan a whole trip?"
+  },
+  {
+   "uuid": "-3235680510519000418",
+   "metricool_id": 424333171,
+   "at": "2026-11-11T23:40:00-03:00",
+   "pillar": "question",
+   "hook": "Last app you open before sleep?"
+  }
+ ]
+}

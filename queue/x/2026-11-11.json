@@ -1,0 +1,30 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "-3403041102480980573",
+   "metricool_id": 424332112,
+   "at": "2026-11-11T09:30:00-03:00",
+   "pillar": "bookkeeping_sorter",
+   "hook": "bs_highlighter: Bank statement, highlighter, Sunday night, and still no idea where the money went."
+  },
+  {
+   "uuid": "-9116385911600363458",
+   "metricool_id": 424332137,
+   "at": "2026-11-11T15:00:00-03:00",
+   "pillar": "review_desk",
+   "hook": "rd_three_weeks: That 3 star review from three weeks ago still has no reply."
+  },
+  {
+   "uuid": "-8344538366510152181",
+   "metricool_id": 424332151,
+   "at": "2026-11-11T21:00:00-03:00",
+   "pillar": "front_desk",
+   "hook": "fd_cold_dinner: 9 PM, dinner is cold, and you are still answering \"are you free Thursday?\""
+  }
+ ]
+}

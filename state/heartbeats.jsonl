@@ -242,3 +242,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-11T00:32:56+00:00", "note": "0 routed (forms empty)"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-11T08:33:32+00:00", "note": "0 routed (forms empty)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-11T11:27:42+00:00", "note": "0 orders, $0 net, 20 checkouts ok; campaign closed 0 of 10; ElevenLabs 401 day 2 (already reported); Threads still disconnected"}
+{"worker": "daily_manager", "status": "ok", "at": "2026-11-11T12:03:40+00:00", "note": "AM 11-11: X 5+15q, TikTok tk-hookfix silent render 12:00, IG 2, Threads disconnected"}

@@ -100,6 +100,7 @@ Threads slots ART: 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00, 18:00
 
 ## 6. What works (evidence log, newest first)
 
+- 2026-11-11 EARLY: TikTok views fell to 0 on the one day with no post (Nov 10); with a daily video the floor was 86 to 147. Missing a day costs the whole day. Testing a no voice text video (tk-hookfix) to keep the slot.
 - 2026-11-10 EARLY: TikTok sequel tk-mistakes2 (same list shape, new mistakes) got 81 views, 0 shares vs tk-mistakes 132 views, 4 shares. A straight sequel did not repeat the shares; next test is a steal-this list (tk-hookfix).
 - 2026-11-09 EARLY: TikTok tk-mistakes (value first list, Nov 7) got 4 shares, the first TikTok shares ever, at 128 views. Demos never got a share. Follow up tk-mistakes2.
 - 2026-11-09 CONFIRMED: IG "You run a <niche> business" prompt pack covers dead after 5 tries (7 to 16 views, 0 saves, 0 shares). Testing the "should be illegal" cover on Nov 9.
@@ -140,6 +141,8 @@ Answers go here with his quote and date.
 10. PENDING 2026-11-08: IG prompt packs got 0 saves and 0 shares 4 days running. Keep a pack every day at 18:00, or swap that slot to Front Desk reels for a week?
 
 11. PENDING 2026-11-10: ElevenLabs returns 401 (key expired or out of credit). Factory reels and TikTok renders are stopped until the key or plan is renewed. Can you fix it today?
+
+12. PENDING 2026-11-11: ElevenLabs still 401, so today's TikTok went out with no voice (text and music only). If it holds about 90 views, keep shipping silent TikToks until the key is fixed?
 
 6. PENDING 2026-11-05: The IG 24 prompts post got 10 comments on 8 views. Were they real people (what did they ask), or our own replies?
 

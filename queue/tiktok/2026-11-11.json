@@ -1,0 +1,18 @@
+{
+ "approval": {
+  "by": "Seb",
+  "quote": "treads should be mass posting waiting for viral",
+  "basis": "Daily Manager standing rule"
+ },
+ "posts": [
+  {
+   "uuid": "3243283057406593524",
+   "metricool_id": 424339031,
+   "at": "2026-11-11T12:00:00-03:00",
+   "pillar": "tiktok_hooks",
+   "hook": "Steal these 3 hook rewrites",
+   "media": "docs/media/ads/tk-hookfix.mp4",
+   "gate": "85/100: on screen hook from 0.3s, 23.0s 1080x1920, SAMPLE labeled Was/Now cards fully typed and readable, value first (agent only last 2 beats), no view or money claims, audio mean -15.0 dB max -0.9 dB (synthesized score and sfx, NO voice: local FAKE=1 render because ElevenLabs is 401); minus points: no voiceover, each card readable only about 1.5s, stock plates not creator specific"
+  }
+ ]
+}
