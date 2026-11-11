@@ -51,5 +51,29 @@
    "by": "campaign operator",
    "what": "IG caption $10 changed to $9.99 per store-prices.md (updateScheduledPost, uuid unchanged)"
   }
+ ],
+ "results": [
+  {
+   "date": "2026-11-11",
+   "read_at": "2026-11-11T07:40-03:00",
+   "age_h": "about 45",
+   "source": "Metricool getAnalyticsDataByMetrics (IGRE), organic",
+   "instagram": {
+    "views": 62,
+    "reach": 60,
+    "avg_watch_s": 3.431,
+    "view_rate_3s_pct": 30.5,
+    "skip_rate_pct": 69.5,
+    "likes": 0,
+    "shares": 0,
+    "saves": 0,
+    "comments": 0,
+    "keyword_comments": "MISSING (ManyChat not read)"
+   },
+   "threads": "MISSING",
+   "x": "MISSING",
+   "guide_visits": "MISSING (no GoatCounter token)",
+   "attributed_orders": 0
+  }
  ]
 }

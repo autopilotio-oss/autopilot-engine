@@ -30,5 +30,12 @@
   "by": "campaign operator",
   "at": "2026-11-09T07:30-03:00"
  },
- "posts": []
+ "posts": [],
+ "log": [
+  {
+   "at": "2026-11-11T07:45-03:00",
+   "by": "campaign operator",
+   "what": "tried to schedule IG reel 10:00 Nov 15 (first free 10:00 slot, autopost yes on file Nov 4); the Metricool create call was blocked by this run's permission check, so it stays passed and unscheduled"
+  }
+ ]
 }
