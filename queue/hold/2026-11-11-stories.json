@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-11-tip",
+  "group": "stories-2026-11-11",
+  "at": "2026-11-11T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-11-tip.jpg"
+  ],
+  "text": "AI tip: Add this to the end of any request: \"Ask me 3 questions before you answer.\""
+ },
+ {
+  "id": "story-2026-11-11-quiz",
+  "group": "stories-2026-11-11",
+  "at": "2026-11-11T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-11-quiz.jpg"
+  ],
+  "text": "Quiz: Best way to make AI sound like you?"
+ },
+ {
+  "id": "story-2026-11-11-answer",
+  "group": "stories-2026-11-11",
+  "at": "2026-11-11T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-11-answer.jpg"
+  ],
+  "text": "Quiz answer: Paste 2 real examples of your writing. {Show, don't tell.} Two real examples beat any description."
+ },
+ {
+  "id": "story-2026-11-11-fact",
+  "group": "stories-2026-11-11",
+  "at": "2026-11-11T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-11-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can build a full trip in minutes. Give it the city, the days and your budget. You get a day by day plan you can edit."
+ },
+ {
+  "id": "story-2026-11-11-poll",
+  "group": "stories-2026-11-11",
+  "at": "2026-11-11T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-11-poll.jpg"
+  ],
+  "text": "Poll: When do you do admin work? A) Early morning B) Late at night"
+ }
+]
