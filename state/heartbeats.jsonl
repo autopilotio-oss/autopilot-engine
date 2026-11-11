@@ -245,3 +245,4 @@
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-11T12:03:40+00:00", "note": "AM 11-11: X 5+15q, TikTok tk-hookfix silent render 12:00, IG 2, Threads disconnected"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-11T12:24:20+00:00", "note": "0 posts out today (23 pending, 0 errors), top post saves+shares 0, feed written yes"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-11T13:12:14+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
+{"worker": "draft_factory", "status": "ok", "at": "2026-11-11T13:31:04+00:00", "note": "bank full (6); rechecked oldest 2026-11-06-shop-24-prompts, still bank"}
