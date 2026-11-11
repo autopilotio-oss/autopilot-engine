@@ -182,3 +182,4 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 
 ## Fix needed
 - 2026-11-10 analyst: GitHub workflow freel.yml last run failed (started 09:55:59Z, finished 10:02:00Z, 1 of 1 runs in 24h failed). Check the run log and fix. Logged by analyst 2026-11-10. Builder 2026-11-10: cause is ElevenLabs TTS "HTTP Error 401: Unauthorized" in prep (028-job-caption), both eleven_v4 and eleven_multilingual_v2, same 401 that held the Daily Manager TikTok render. Not a code bug: Seb needs to renew or replace the ELEVENLABS_API_KEY repo secret (or check the ElevenLabs plan).
+- 2026-11-11 analyst: GitHub workflow freel.yml failed again (started 09:58:58Z, finished 10:02:45Z, 1 of 1 runs in 24h failed). Likely the same ElevenLabs 401 noted 2026-11-10; check the run log. Logged by analyst 2026-11-11.
