@@ -1,5 +1,9 @@
 # Next actions (handoff between runs)
 
+## Awaiting approval: site
+- 2026-11-11 builder: branch builder/2026-11-11-expired-launch-code (1 commit, no PR). Removes the hidden "$7 this week with LAUNCH30" line from every paid guide (tools/guides/build.py, docs/g rebuilt, sitemap lastmod). Why: LAUNCH30 ended Nov 10, so tests/test_manifest.py::test_promotions_not_mentioned_after_expiry fails on main from Nov 11 and the next Tests run on main goes red. Nothing visible changes for visitors (ap.js only showed the line while the launch was on). 114 passed on the branch. To ship: Seb says "merge expired launch code" -> git merge --ff-only origin/builder/2026-11-11-expired-launch-code into main and push (if main moved, rerun python3 tools/guides/build.py after merging and commit docs/g with it).
+- Builder candidate after that (internal, not started on a branch): heartbeat.push_alerts skips alerts Daily Pulse marked sent with channel claude_message, so SEV-1/SEV-2 incidents like inc:worker:factory_reels_tts:2026-11-10 never get a GitHub issue. A tested patch (open one issue for fresh, under 72h, claude_message alerts and keep the message record) was written and shelved to keep one change per run.
+
 ## Awaiting approval: guide fixes
 From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the live text is accurate, just incomplete), so tools/guides/guides.py was not edited. On Seb's APPROVED, apply in tools/guides/guides.py, then run python3 tools/guides/build.py and python3 tools/guides/og.py. Sources are in TIKTOK_SHOP_PLAYBOOK.md section 1b/1c.
 
