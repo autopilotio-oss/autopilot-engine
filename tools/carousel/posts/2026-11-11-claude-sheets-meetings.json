@@ -1,0 +1,78 @@
+{
+  "kind": "news",
+  "dateline": "NOV 10 2026",
+  "story_key": "anthropic-claude-sheets-whiteboards-meetings-2026-11-10",
+  "lines": [
+    "Claude now builds",
+    "[your spreadsheets]"
+  ],
+  "subline": "claude sheets, whiteboards, meetings",
+  "cover_bg": "bg-black",
+  "theme": "light",
+  "grain": false,
+  "music": "tense",
+  "seed": 74,
+  "cover_html": "<div class=\"fx chip l\" style=\"left:56px;top:70px\">NEWS &middot; CLAUDE &middot; NOV 10</div><div class=\"fx\" style=\"left:56px;top:150px;width:968px;height:540px;border:3px solid #f2f2ee;border-radius:18px;background:#0a0a0a;overflow:hidden\"><div style=\"display:flex;height:64px;border-bottom:3px solid #f2f2ee\"><span style=\"width:96px;border-right:3px solid #f2f2ee\"></span><span style=\"flex:1;font:700 26px/64px M;color:#9a9a96;padding-left:22px;border-right:2px solid #444\">A &middot; CUSTOMER</span><span style=\"width:230px;font:700 26px/64px M;color:#9a9a96;padding-left:22px;border-right:2px solid #444\">B &middot; DUE</span><span style=\"width:230px;font:700 26px/64px M;color:#9a9a96;padding-left:22px\">C &middot; OWED</span></div><div style=\"display:flex;height:96px;border-bottom:2px solid #444\"><span style=\"width:96px;font:700 26px/96px M;color:#9a9a96;text-align:center;border-right:3px solid #f2f2ee\">2</span><span style=\"flex:1;font:700 34px/96px M;color:#f2f2ee;padding-left:22px;border-right:2px solid #444\">Rosa Cafe</span><span style=\"width:230px;font:700 34px/96px M;color:#f2f2ee;padding-left:22px;border-right:2px solid #444\">Nov 14</span><span style=\"width:230px;font:700 34px/96px M;color:#f2f2ee;padding-left:22px\">$420</span></div><div style=\"display:flex;height:96px;border-bottom:2px solid #444\"><span style=\"width:96px;font:700 26px/96px M;color:#9a9a96;text-align:center;border-right:3px solid #f2f2ee\">3</span><span style=\"flex:1;font:700 34px/96px M;color:#f2f2ee;padding-left:22px;border-right:2px solid #444\">Lee Auto</span><span style=\"width:230px;font:700 34px/96px M;color:#f2f2ee;padding-left:22px;border-right:2px solid #444\">Nov 18</span><span style=\"width:230px;font:700 34px/96px M;color:#f2f2ee;padding-left:22px\">$1,150</span></div><div style=\"display:flex;height:96px;border-bottom:2px solid #444\"><span style=\"width:96px;font:700 26px/96px M;color:#9a9a96;text-align:center;border-right:3px solid #f2f2ee\">4</span><span style=\"flex:1;font:700 34px/96px M;color:#f2f2ee;padding-left:22px;border-right:2px solid #444\">Park Dental</span><span style=\"width:230px;font:700 34px/96px M;color:#f2f2ee;padding-left:22px;border-right:2px solid #444\">Nov 21</span><span style=\"width:230px;font:700 34px/96px M;color:#f2f2ee;padding-left:22px\">$680</span></div><div style=\"display:flex;height:120px;border-bottom:2px solid #444\"><span style=\"width:96px;font:700 26px/120px M;color:#9a9a96;text-align:center;border-right:3px solid #f2f2ee\">5</span><span style=\"flex:1;font:700 34px/120px M;color:#f2f2ee;padding-left:22px;border-right:2px solid #444\">TOTAL</span><span style=\"width:460px;background:#D4FF3A;font:700 34px/120px M;color:#0c0c0c;padding-left:22px\">=SUM(C2:C4)</span></div><div style=\"font:700 22px/1 C;letter-spacing:3px;color:#9a9a96;padding:22px 0 0 22px\">SAMPLE &middot; CLAUDE EDITED C5 &middot; SHOWS EVERY CHANGE</div></div><div class=\"fx Ii\" style=\"left:56px;top:790px;font-size:56px;color:#f2f2ee\">Claude can now build your</div><div class=\"fx A\" data-fit=\"968\" style=\"left:56px;top:870px;font-size:270px;white-space:nowrap;color:#f2f2ee\">spreadsheet</div><div class=\"fx Ii\" style=\"left:56px;top:1210px;width:880px;font-size:32px;line-height:1.28;color:#f2f2ee\">Plus whiteboards and a helper in your calls &#9656;</div>",
+  "bg_words": [
+    "CLAUDE",
+    "SHEETS",
+    "MEETINGS",
+    "WHITEBOARDS"
+  ],
+  "bg_facts": [
+    "Anthropic launched Claude Sheets in beta on Nov 10.",
+    "Whiteboards turn plans into timelines.",
+    "Meetings puts Claude in your video call.",
+    "Sheets and Whiteboards are on paid plans."
+  ],
+  "slides": [
+    {
+      "title": "What *happened*",
+      "body": "On <b>Tuesday, November 10</b>, Anthropic launched <b>Claude Sheets</b> and <b>Claude Whiteboards</b> in beta, plus <b>Claude Meetings</b>, which puts Claude inside your video calls. It is a push into everyday office work, up against Microsoft and Google."
+    },
+    {
+      "title": "Claude *Sheets*",
+      "body": "Describe the table you need, like a campaign tracker or a hiring budget. Claude sets it up with <b>tabs, formulas, formatting and dropdown menus</b>. Your team edits it with Claude, and Claude <b>shows every change</b> it makes. Beta on <b>paid plans</b>, on web, desktop and mobile."
+    },
+    {
+      "title": "Claude *Whiteboards*",
+      "body": "Talk through a plan and Claude lays it out as a board with <b>timelines, owners and dates</b>. Several people can work on the same board at once. When you are done, turn it into a <b>doc or a slide deck</b>. Also beta on <b>paid plans</b>."
+    },
+    {
+      "title": "Claude *Meetings*",
+      "body": "Claude joins a video call as a <b>visible participant</b>, follows along, answers questions in the chat and pulls facts from your connected apps. Notes and action items land in Claude after the call. Beta for <b>Team and Enterprise</b>, starting with <b>Google Meet</b>."
+    },
+    {
+      "title": "The *guardrails*",
+      "body": "In a meeting, Claude <b>says it is there</b> and posts a notice in the chat. It will not join calls with <b>outside guests</b> unless an admin allows it, and it <b>leaves on its own</b> if an outside guest joins. No separate price for these tools has been reported."
+    },
+    {
+      "title": "What it means *for you*",
+      "body": "If you pay for Claude, try Sheets on something small: an <b>invoice tracker</b> or a <b>week of bookings</b>. Check every formula and total before you trust it, because it is a <b>beta</b>. On the free plan, nothing changes yet."
+    }
+  ],
+  "cta": {
+    "big": "Run a business? Put AI *to work today*",
+    "keyword": "AGENTS",
+    "gift": "Free starter: your first AI helper in 10 minutes",
+    "small": "Free, right in your DMs. *It drafts, you decide.*"
+  },
+  "sources": [
+    [
+      "TechCrunch",
+      "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/"
+    ],
+    [
+      "Yahoo Finance",
+      "https://finance.yahoo.com/technology/article/anthropic-launches-meetings-whiteboards-sheets-data-ahead-of-ipo-190548601.html"
+    ],
+    [
+      "iClarified",
+      "https://www.iclarified.com/103419/anthropic-launches-claude-sheets-and-whiteboards-previews-meetings"
+    ],
+    [
+      "Dataconomy",
+      "https://dataconomy.com/2026/11/11/anthropic-launches-claude-meetings-for-real-time-workplace/"
+    ]
+  ]
+}
