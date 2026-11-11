@@ -38,47 +38,58 @@
   ]
  ],
  [
-  "offer_code_ok",
-  "subs-agent"
+  "offer_code_deleted",
+  "subs-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "refund-agent"
+  "offer_code_deleted",
+  "refund-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "bill-agent"
+  "offer_code_deleted",
+  "bill-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "all-money-agents"
+  "offer_code_deleted",
+  "all-money-agents",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "raise-agent"
+  "offer_code_deleted",
+  "raise-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "debt-agent"
+  "offer_code_deleted",
+  "debt-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "shop-agent"
+  "offer_code_deleted",
+  "shop-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "video-agent"
+  "offer_code_deleted",
+  "video-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "sell-agent"
+  "offer_code_deleted",
+  "sell-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "deposit-agent"
+  "offer_code_deleted",
+  "deposit-agent",
+  "LAUNCH30"
  ],
  [
-  "offer_code_ok",
-  "tiktok-agents"
+  "offer_code_deleted",
+  "tiktok-agents",
+  "LAUNCH30"
  ]
 ]
