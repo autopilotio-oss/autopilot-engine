@@ -244,3 +244,4 @@
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-11T11:27:42+00:00", "note": "0 orders, $0 net, 20 checkouts ok; campaign closed 0 of 10; ElevenLabs 401 day 2 (already reported); Threads still disconnected"}
 {"worker": "daily_manager", "status": "ok", "at": "2026-11-11T12:03:40+00:00", "note": "AM 11-11: X 5+15q, TikTok tk-hookfix silent render 12:00, IG 2, Threads disconnected"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-11T12:24:20+00:00", "note": "0 posts out today (23 pending, 0 errors), top post saves+shares 0, feed written yes"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-11T13:12:14+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
