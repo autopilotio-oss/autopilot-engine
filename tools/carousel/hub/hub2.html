@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-Medium.woff)}
+@font-face{font-family:TB;src:url(/docs/assets/fonts/APText-Bold.woff)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#0b0b0b;--P:#efeee9}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:T;color:var(--K)}
+.s{position:absolute;inset:0;padding:96px 90px}
+.k{background:var(--K);color:#fff}.p{background:var(--P)}
+.hook{font-family:A;text-transform:uppercase;line-height:.98;letter-spacing:.5px}
+.acc{position:relative;color:var(--L);display:inline-block}
+.acc svg{position:absolute;left:-2%;bottom:-26px;width:104%;height:38px}
+.handle{position:absolute;left:90px;bottom:80px;font-family:T;font-size:30px;opacity:.85}
+.arrow{position:absolute;right:90px;bottom:70px;font-family:T;font-size:64px;line-height:1}
+.lab{font-family:M;font-size:24px;letter-spacing:3px;text-transform:uppercase}
+.card{background:var(--K);color:#f2f2ee;border-radius:28px;padding:44px 48px;font-family:M;font-size:30px;line-height:1.45}
+.card .r{margin-bottom:22px}.card .r:last-child{margin-bottom:0}
+.card .t{color:var(--L);font-size:22px;letter-spacing:3px;display:block;margin-bottom:4px}
+.card b{color:var(--L);font-weight:400}
+.pill{display:inline-block;background:var(--L);color:var(--K);font-family:M;font-size:24px;letter-spacing:2px;padding:10px 18px;border-radius:999px}
+</style></head><body><div id="root"></div>
+<script>
+const N=+(new URLSearchParams(location.search).get('n')||1);
+const U=`<svg viewBox="0 0 300 30" preserveAspectRatio="none"><path d="M4 18 C 60 8, 120 26, 180 14 S 270 10, 296 16" fill="none" stroke="#D4FF3A" stroke-width="7" stroke-linecap="round"/></svg>`;
+const hl=t=>t.replace(/\[(.*?)\]/g,'<b>[$1]</b>');
+const P=[
+ {t:'Find the price',g:'3 prices for any item, and what moves them',r:'You are a resale pricing expert.',k:'Price my item 3 ways: quick sale, normal sale, top dollar.',c:'Item: [brand, model, size, condition]. Selling on: [platform or city].',o:'A 3 row table with each price and why, then the 3 details that change the price most.'},
+ {t:'Price for profit',g:'Your break even price and the price that hits your margin',r:'You are my profit calculator.',k:'Find my break even price and the list price that hits my target profit.',c:'Cost: [$]. Fees on [platform]: [%]. Shipping: [$]. Target profit: [%].',o:'Break even price, list price, and the math in 3 short lines.'},
+ {t:'Write the listing',g:'A title buyers search for and a description that sells',r:'You are an ecommerce copywriter.',k:'Write a listing that gets found and trusted.',c:'Item details: [paste]. Platform: [platform].',o:'A title under 80 characters with search words, 5 short bullets, 1 trust line.'},
+ {t:'Beat the lowball',g:'3 replies to a low offer that keep the buyer',r:'You are a calm, firm negotiator.',k:'Answer a lowball offer without losing the buyer.',c:'Offer: [$]. Listed at: [$]. My lowest: [$].',o:'3 replies: a counter, a polite no, and one that adds value instead of cutting price.'},
+ {t:'Move slow stock',g:'Markdowns and bundles for items that sat too long',r:'You are a retail inventory manager.',k:'Clear the items that sat too long.',c:'My inventory with price and days in stock: [paste].',o:'Each slow item with a new price, then 2 bundle ideas to move them this week.'},
+];
+const foot=(c)=>`<div class="handle" style="color:${c}">@autopilot.oi</div><div class="arrow" style="color:${c}">→</div>`;
+let h='';
+if(N==1) h=`<div class="s k">
+ <div class="pill" style="position:absolute;left:90px;top:96px">FREE · 5 PROMPTS</div>
+ <div class="hook" style="position:absolute;left:90px;top:250px;font-size:168px">Price<br>anything<br>you sell<br>in <span class="acc">30 sec${U}</span></div>
+ <div style="position:absolute;left:90px;top:1010px;font-size:36px;color:#bdbdb6;width:860px">Copy, paste into ChatGPT or Claude, done.</div>
+ ${foot('#fff')}</div>`;
+else if(N==2) h=`<div class="s p">
+ <div class="lab" style="opacity:.6">In this post</div>
+ <div class="hook" style="font-size:108px;margin-top:16px">5 prompts for<br>people who <span class="acc" style="color:var(--K);background:var(--L);padding:0 14px">sell</span></div>
+ <div style="margin-top:50px">${P.map((p,i)=>`<div style="display:flex;gap:30px;align-items:baseline;padding:16px 0;border-top:3px solid var(--K)"><div style="font-family:A;font-size:56px;width:60px">${i+1}</div><div><div style="font-family:TB;font-size:38px">${p.t}</div><div style="font-size:27px;opacity:.7;margin-top:2px">${p.g}</div></div></div>`).join('')}</div>
+ ${foot('var(--K)')}</div>`;
+else if(N<=7){const i=N-3,p=P[i]; h=`<div class="s p">
+ <div class="lab"><span class="pill">PROMPT ${i+1} / 5</span></div>
+ <div class="hook" style="font-size:118px;margin-top:34px">${p.t}</div>
+ <div style="font-size:36px;margin-top:22px;width:880px;line-height:1.3"><span style="font-family:TB">You get:</span> ${p.g.toLowerCase()}.</div>
+ <div class="card" style="margin-top:50px">
+  <div class="r"><span class="t">ROLE</span>${p.r}</div>
+  <div class="r"><span class="t">TASK</span>${p.k}</div>
+  <div class="r"><span class="t">CONTEXT</span>${hl(p.c)}</div>
+  <div class="r"><span class="t">OUTPUT</span>${p.o}</div></div>
+ ${foot('var(--K)')}</div>`}
+else h=`<div class="s k">
+ <div class="hook" style="position:absolute;left:90px;top:220px;font-size:150px">Want all 5<br>in one <span class="acc">doc?${U}</span></div>
+ <div style="position:absolute;left:90px;top:760px;font-size:46px;line-height:1.35;width:880px">Comment <span class="pill" style="font-size:40px;padding:6px 20px">PRICE</span><br>and we'll send it to your DMs.</div>
+ <div style="position:absolute;left:90px;top:1010px;font-size:34px;color:#bdbdb6">Save this post. Follow for a new one daily.</div>
+ <div class="handle" style="color:#fff">@autopilot.oi</div></div>`;
+document.getElementById('root').innerHTML=h;
+document.fonts.ready.then(()=>window.READY=1);
+</script></body></html>
