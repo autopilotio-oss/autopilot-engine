@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-11T16:30:00Z",
+  "at": "2026-11-11T16:22:00Z",
   "posts_today": {
     "twitter": {"published": 6, "pending": 14, "error": 0},
     "instagram": {"published": 1, "pending": 1, "error": 0},
@@ -31,5 +31,5 @@
   ],
   "kit": {"subscribers": 0, "new_today": 0},
   "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-11T14:03:24Z"},
-  "notes": "Snapshot 13:30 ART Nov 11. 8 posts out today: X 6 (bookkeeping 09:30, 3 polls, ChatGPT business profile news 12:00), IG 1 (Bookkeeping Sorter reel 10:00), TikTok 1 (hook rewrites 12:00). 15 pending: X 14 (Review Desk 15:00, Front Desk 21:00, real estate pack 18:00, 11 polls), IG 1 (real estate carousel 18:00). 0 errors. Window 6 to 72h: 0 saves and 0 shares on every IG post and TikTok (TikTok saves not provided, reach null), so no winner; list falls back to reach/views. Also seen: IG Nov 10 Front Desk quote reel reach 5, views 6; IG Nov 10 Claude Fable news carousel comments 3, reach 0, views 0; IG Nov 9 small business carousel reach 1, views 1. Nov 8 13:03 IG reel and 13:04 TikTok are now just past 72h. X post analytics not pulled; carousel urls not provided by Metricool. GitHub: freel.yml last run failure (already in Fix needed today); ci.yml last run success. Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v69)."
+  "notes": "Snapshot 13:22 ART Nov 11. 8 posts out today: X 6 (bookkeeping 09:30, 3 polls, ChatGPT business profile news 12:00), IG 1 (Bookkeeping Sorter reel 10:00), TikTok 1 (hook rewrites 12:00). 15 pending: X 14 (Review Desk 15:00, Front Desk 21:00, real estate pack 18:00, 11 polls), IG 1 (real estate carousel 18:00). 0 errors. Window 6 to 72h: 0 saves and 0 shares on every IG post and TikTok (TikTok saves not provided, reach null), so no winner; list falls back to reach/views. Also seen: IG Nov 10 Front Desk quote reel reach 5, views 6; IG Nov 10 Claude Fable news carousel comments 3, reach 0, views 0; IG Nov 9 small business carousel reach 1, views 1. Nov 8 13:03 IG reel and 13:04 TikTok are now just past 72h. X post analytics not pulled; carousel urls not provided by Metricool. GitHub: freel.yml last run failure (already in Fix needed today); ci.yml last run success. Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v69)."
 }
