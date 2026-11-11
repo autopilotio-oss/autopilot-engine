@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-Medium.woff)}
+@font-face{font-family:TS;src:url(/docs/assets/fonts/APText-SemiBold.woff)}
+@font-face{font-family:TB;src:url(/docs/assets/fonts/APText-Bold.woff)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#0b0b0b;--P:#f6f5f0;--G:#5f5f5f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;background:var(--P);color:var(--K);font-family:T}
+.page{position:absolute;inset:0;padding:92px 96px 88px;display:flex;flex-direction:column}
+.page.dark{background:var(--K);color:#f6f5f0}.dark .top,.dark .bot{color:#9a9a93}
+.top,.bot{display:flex;justify-content:space-between;font-family:M;font-size:22px;color:var(--G);letter-spacing:.5px}
+.main{flex:1;display:flex;flex-direction:column;justify-content:center}
+.big{font-family:TB;letter-spacing:-.045em;line-height:.98}
+.mk{background:linear-gradient(transparent 14%,var(--L) 14%,var(--L) 90%,transparent 90%);padding:0 .06em;box-decoration-break:clone;-webkit-box-decoration-break:clone}.mk2{background:linear-gradient(transparent 16%,var(--L) 16%,var(--L) 100%);padding:0 .06em}
+.dark .mk{color:var(--K)}
+.body{font-family:T;letter-spacing:-.01em;line-height:1.42}
+.rule{border-top:3px solid currentColor;margin:46px 0 34px}
+.lab{font-family:M;font-size:22px;color:var(--G);margin-bottom:14px}
+</style></head><body><div id="root"></div>
+<script>
+const N=+(new URLSearchParams(location.search).get('n')||1),T=8;
+const mk=t=>t.replace(/\[(.*?)\]/g,(m,w)=>/^[$%]$/.test(w)?'<b style="font-family:TB">['+w+']</b>':'<span class="mk">['+w+']</span>');
+const P=[
+ {t:'find the price.',p:'Act as a resale pricing expert. Price my item 3 ways: quick sale, normal sale and top dollar. Item: [brand, model, size, condition]. Selling on: [platform].',
+  res:'$160 · $195 · <span class="mk">$230</span>',sub:'quick sale, normal, top dollar'},
+ {t:'price for profit.',p:'Act as my profit calculator. Cost: [$]. Fees on [platform]: [%]. Shipping: [$]. I want [%] profit. Give me my break even price and my list price.',
+  res:'list at <span class="mk">$63.16</span>',sub:'break even $41.38 · you keep $18.95'},
+ {t:'write the listing.',p:'Act as an ecommerce copywriter. Write a listing for [item] on [platform]: a title under 80 characters with the words buyers search, 5 short bullets and 1 line that builds trust.',
+  res:'<span style="font-size:.5em;line-height:1.14;display:block;letter-spacing:-.02em">men’s white leather low top sneakers, size 10, <span class="mk">lightly worn</span></span>',sub:'+ 5 bullets and a trust line'},
+ {t:'beat the lowball.',p:'Act as a calm, firm negotiator. A buyer offered [$] on my [item] listed at [$]. My lowest is [$]. Write 3 short replies: a counter, a polite no, and one that adds value instead.',
+  res:'<span style="color:#b9b9b2;text-decoration:line-through;text-decoration-thickness:6px">$60</span> → <span class="mk">$85</span>',sub:'“I can do $85 and ship it today.”'},
+ {t:'move slow stock.',p:'Act as a retail inventory manager. Here is my stock with price and days listed: [paste]. Flag anything over 60 days, give each a new price, and suggest 2 bundles.',
+  res:'<span style="color:#b9b9b2;text-decoration:line-through;text-decoration-thickness:6px">$45</span> → <span class="mk">$36</span>',sub:'pair sitting 74 days · new price + 2 bundles'},
+];
+const tp=(l)=>`<div class="top"><span>${l}</span><span>${N} / ${T}</span></div>`;
+const bot=(r='')=>`<div class="bot"><span>@autopilot.oi</span><span>${r}</span></div>`;
+let h='';
+if(N==1) h=`<div class="page">${tp('playbook 01 · selling')}
+ <div class="main"><div class="big" style="font-size:176px;line-height:1.02">you’re pricing your stuff <span class="mk2" style="display:inline-block;margin-top:16px;line-height:.96;padding-bottom:.12em">wrong.</span></div>
+ <div class="body" style="font-family:TS;font-size:50px;margin-top:56px;max-width:880px">here’s the fix: 5 free AI prompts you can copy tonight.</div></div>
+ ${bot('swipe →')}</div>`;
+else if(N==2) h=`<div class="page">${tp('what’s inside')}
+ <div class="main" style="justify-content:flex-start;padding-top:120px"><div class="big" style="font-size:132px">5 prompts. <span class="mk">zero</span> guessing.</div>
+ <div style="margin-top:80px">${P.map((p,i)=>`<div style="display:flex;align-items:center;gap:28px;padding:22px 0;border-top:3px solid var(--K)"><span style="font-family:M;font-size:28px;color:var(--G);width:44px;padding-top:4px">${i+1}</span><span class="big" style="font-size:54px;letter-spacing:-.03em">${p.t}</span></div>`).join('')}<div style="border-top:3px solid var(--K)"></div></div></div>
+ ${bot('swipe →')}</div>`;
+else if(N<=7){const i=N-3,p=P[i];h=`<div class="page">${tp('prompt '+(i+1)+' of 5')}
+ <div class="main" style="justify-content:flex-start;padding-top:56px">
+  <div class="big" style="font-size:128px;height:252px">${i+1}. ${p.t}</div>
+  <div style="margin-top:90px;height:300px"><div class="lab">copy this, swap the [brackets]</div><div class="body" style="font-size:42px">${mk(p.p)}</div></div>
+  <div style="border-top:3px solid var(--K);padding-top:30px;margin-top:44px"><div class="lab">you get · sample</div>
+   <div class="big" style="font-size:104px">${p.res}</div>
+   <div class="body" style="font-size:34px;color:#55554f;margin-top:14px">${p.sub}</div></div>
+ </div>${bot()}</div>`}
+else h=`<div class="page dark">${tp('playbook 01 · selling')}
+ <div class="main"><div class="big" style="font-size:132px">want all 5 in one pdf?</div>
+ <div class="body" style="font-family:TS;font-size:48px;margin-top:70px">comment</div>
+ <div class="big" style="font-size:250px;margin-top:6px"><span class="mk" style="padding:0 24px 0 10px">PRICE</span></div>
+ <div class="body" style="font-family:TS;font-size:46px;margin-top:40px">and we’ll DM it to you.</div></div>
+ ${bot('save this · follow for 02')}</div>`;
+document.getElementById('root').innerHTML=h;
+document.fonts.ready.then(()=>{document.querySelectorAll('.mk,.mk2').forEach(e=>{const r=e.getClientRects()[0],pl=parseFloat(getComputedStyle(e).paddingLeft);if(r&&r.left<=97)e.style.marginLeft=(-pl)+'px'});requestAnimationFrame(()=>window.READY=1)});
+</script></body></html>
