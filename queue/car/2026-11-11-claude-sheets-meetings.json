@@ -1,0 +1,29 @@
+{
+ "id": "2026-11-11-claude-sheets-meetings",
+ "kind": "news",
+ "story_key": "anthropic-claude-sheets-whiteboards-meetings-2026-11-10",
+ "cover_idea": "Black cover, big SAMPLE spreadsheet grid on top (customers, due dates, owed, lime =SUM total cell, 'Claude edited C5' note), small Inter kicker 'Claude can now build your' over one giant justified SPREADSHEET word at the bottom. Changes vs ChatGPT profiles (lime, headline top, tilted card): black bg, headline bottom, grid visual, one giant word.",
+ "theme": "light",
+ "status": "awaiting_seb",
+ "gate": {
+  "score": 87,
+  "notes": "Accuracy 27/30 (TechCrunch Nov 10 + Yahoo Finance + iClarified + Dataconomy + Engadget via AI Weekly; Sheets/Whiteboards beta on paid plans, web desktop mobile; Meetings beta Team and Enterprise, Google Meet first, visible participant, chat notice, leaves if outside guest joins. Left out: Microsoft share move (2% vs 1.77% conflict), xlsx export (single source), Claude Data details). Hook 21/25. Clarity 18/20. Design 13/15 (new grid cover). CTA 8/10 (AGENTS confirmed, TOOLS not yet). QA PASS 8 slides."
+ },
+ "approval": {
+  "by": "Seb",
+  "quote": "yes",
+  "basis": "campaign standing approval (news and prompt carousels); autopost after Nov 10 per MANAGER.md section 7 item 3, Seb 2026-11-04 01:39 'yes'"
+ },
+ "posts": [],
+ "planned": {
+  "twitter": {
+   "at": "2026-11-12T09:00:00-03:00",
+   "media": "slides 01 to 04",
+   "caption": "Run a business? Claude can now build your spreadsheets: tabs, formulas, dropdowns, and it shows every change. Sheets and Whiteboards are in beta on paid plans.\n\nFree starter: https://autopilotoi.app/#free?utm_source=x&utm_campaign=news"
+  },
+  "instagram": "no free 18:00 slot until Nov 13 (Nov 11 prompt pack, Nov 12 planned for ChatGPT profiles); bank for Seb",
+  "threads": "Threads disconnected from Metricool (MANAGER 7 item 8)"
+ },
+ "note": "Metricool createScheduledPost blocked by this session's permission check (External System Writes), second run in a row. Nothing scheduled. X Nov 11 already full (9:30, 12:00, 15:00, 18:00, 21:00 link posts plus 15 question posts).",
+ "results": {}
+}
