@@ -1,0 +1,29 @@
+{
+ "query": "price tag",
+ "credits": [
+  {
+   "n": 1,
+   "openverse_id": "c08ee6c6-6b4e-4996-af08-f11f1a7f42f8",
+   "url": "https://commons.wikimedia.org/w/index.php?curid=31162796",
+   "photographer": "Oren Rozen",
+   "license": "CC BY-SA 3.0",
+   "alt": "Peace Now Price Tag 310114 016"
+  },
+  {
+   "n": 2,
+   "openverse_id": "63edc4c6-3d7e-4427-ac4a-703ca6e1a33f",
+   "url": "https://commons.wikimedia.org/w/index.php?curid=9732974",
+   "photographer": "BrokenSphere",
+   "license": "CC BY-SA 3.0",
+   "alt": "File:Xbox 360 FF XIII Special Ed. bundle price tag at Target, Tanforan.JPG"
+  },
+  {
+   "n": 3,
+   "openverse_id": "bcb02715-c665-4be6-bb56-df80ea82c9c4",
+   "url": "https://commons.wikimedia.org/w/index.php?curid=31162780",
+   "photographer": "Oren Rozen",
+   "license": "CC BY-SA 3.0",
+   "alt": "Peace Now Price Tag 310114 006."
+  }
+ ]
+}

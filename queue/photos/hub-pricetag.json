@@ -1,1 +1,8 @@
-{"query": "price tag", "n": 8, "orientation": "portrait", "status": "pending", "note": "test of keyless topic search, Playbook 01 selling"}
+{
+ "query": "price tag",
+ "n": 8,
+ "orientation": "portrait",
+ "status": "done",
+ "note": "test of keyless topic search, Playbook 01 selling",
+ "count": 3
+}

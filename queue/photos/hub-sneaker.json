@@ -1,1 +1,9 @@
-{"query": "white sneaker studio", "n": 8, "orientation": "portrait", "status": "pending", "note": "test of keyless topic search, Playbook 01 selling"}
+{
+ "query": "white sneaker studio",
+ "n": 8,
+ "orientation": "portrait",
+ "status": "failed",
+ "note": "test of keyless topic search, Playbook 01 selling",
+ "count": 0,
+ "error": "no usable results"
+}
