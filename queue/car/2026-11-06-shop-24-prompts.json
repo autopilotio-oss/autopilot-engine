@@ -18,8 +18,8 @@
  "media": "docs/media/car/2026-11-06-shop-24-prompts/ (01.jpg to 08.jpg, cover.mp4, cover_ig.mp4, cover_beat.mp4)",
  "built_at": "2026-11-06T19:37Z",
  "rechecked": {
-  "at": "2026-11-11T13:30Z",
+  "at": "2026-11-11T19:30Z",
   "result": "still bank",
-  "notes": "Bank full (6), oldest item rechecked. No factual claims (prompts only). CTA matches the Nov 4 override: Comment AGENTS (TOOLS not yet in config/manychat.json confirmed), gift is the free starter, sells Owner Toolkit tools and Front Desk Kit; no LAUNCH30, no parked agents, Office Autopilot or Workspace. Links: docs/index.html has #tools and #free, docs/front-desk/ and docs/free/ present, docs/live.json (checked Nov 11) lists bookkeeping-sorter, invoice-chaser, review-desk, content-week, owner-toolkit; direct fetch of autopilotoi.app blocked by the sandbox proxy. Media 01 to 08 present. Note: MANAGER.md IG grid rule now wants rows via row.py, so IG use needs a row; Threads and X unaffected."
+  "notes": "Bank full (6), oldest item rechecked again. No factual claims (prompts only). CTA still matches the Nov 4 override: Comment AGENTS (TOOLS still not in config/manychat.json confirmed), gift is the free starter, sells Owner Toolkit tools and Front Desk Kit; no LAUNCH30 in spec or captions, no parked agents, Office Autopilot or Workspace. Links: docs/index.html has #tools and #free, docs/front-desk/ and docs/free/ present, docs/live.json lists the 4 owner tools and owner-toolkit. Media 01 to 08 and qa.json present. IG use still needs a row via row.py; Threads and X unaffected."
  }
 }
