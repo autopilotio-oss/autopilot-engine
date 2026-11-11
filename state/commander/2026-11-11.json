@@ -1,0 +1,79 @@
+{
+ "at": "2026-11-11T11:24:44+00:00",
+ "snapshot": {
+  "at": "2026-11-11T11:24:44+00:00",
+  "health_failing": [
+   "meta_pixel_configured"
+  ],
+  "critical": [],
+  "not_live_offers": [],
+  "subscribers": 0,
+  "site_connected": true,
+  "orders": 0,
+  "unattributed_orders": 0,
+  "budget": {
+   "spent_today_minor": 0,
+   "soft_cap_minor": 100,
+   "hard_cap_minor": 200,
+   "soft_cap_hit": false,
+   "hard_cap_hit": false,
+   "status": "capped"
+  },
+  "viral_waiting_owner": [],
+  "viral_concepts": 0,
+  "approvals_waiting": 0,
+  "ungated_publishers": [],
+  "focus": {
+   "since": "2026-11-04",
+   "by": "Seb",
+   "quote": "pretend it was your business and you had to make it make money ... find what works and double down",
+   "playbook": "growth-os/MANAGER.md",
+   "offers": {
+    "instagram_threads_x": "4 owner tools $10 each, Owner Toolkit $24 (https://autopilotoi.app/#tools), Front Desk Kit $39 (/front-desk/), free starter (/#free)",
+    "tiktok": "Video Agent, the TikTok content agent, $10 and TikTok Agents bundle $24 (https://autopilotoi.app/store/video/)"
+   },
+   "parked": "$10 money agents, Office Autopilot, Workspace: no new posts or CTAs; LAUNCH30 not mentioned",
+   "instagram_keyword": "TOOLS once Seb adds it to config/manychat.json confirmed; until then AGENTS or link in bio",
+   "previous": "2026-11-02 Front Desk only focus (Seb: 'Fix it')"
+  }
+ },
+ "bottleneck": "Prove one funnel: 4 owner tools $10 each",
+ "top3": [
+  {
+   "id": "first_funnel",
+   "title": "Prove one funnel: 4 owner tools $10 each",
+   "evidence": "0 orders, 0 leads: volume is not the bottleneck, proof is",
+   "action": "one gated reel -> 4 owner tools $10 each, Owner Toolkit $24 (https://autopilotoi.app/#tools), Front Desk Kit $39 (/front-desk/), free starter (/#free); trace every step to the first lead or order",
+   "needs_owner": true,
+   "rollback": "pause the concept",
+   "success_metric": "first traced order or lead",
+   "inputs": {
+    "impact": 6,
+    "confidence": 0.5,
+    "reversibility": 1,
+    "effort": 2,
+    "risk": 1
+   },
+   "priority": 1.5
+  }
+ ],
+ "all": [
+  {
+   "id": "first_funnel",
+   "title": "Prove one funnel: 4 owner tools $10 each",
+   "evidence": "0 orders, 0 leads: volume is not the bottleneck, proof is",
+   "action": "one gated reel -> 4 owner tools $10 each, Owner Toolkit $24 (https://autopilotoi.app/#tools), Front Desk Kit $39 (/front-desk/), free starter (/#free); trace every step to the first lead or order",
+   "needs_owner": true,
+   "rollback": "pause the concept",
+   "success_metric": "first traced order or lead",
+   "inputs": {
+    "impact": 6,
+    "confidence": 0.5,
+    "reversibility": 1,
+    "effort": 2,
+    "risk": 1
+   },
+   "priority": 1.5
+  }
+ ]
+}
