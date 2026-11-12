@@ -77,14 +77,28 @@ def push_alerts(alerts_path, store, owner, gh=_gh):
     rows = [json.loads(l) for l in open(alerts_path) if l.strip()]
     resolved = {e["payload"]["incident_id"] for e in store.of("incident.resolved")}
     opened = closed = 0
+    cutoff = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=72)
+    def fresh_message_only(a):
+        # Daily Pulse marks alerts it reported to Seb as sent via claude_message; those still need an issue
+        # so the incident is tracked and closes itself on recovery. Skip old ones to avoid a burst of stale issues.
+        if a.get("channel") != "claude_message":
+            return False
+        try:
+            return dt.datetime.fromisoformat(a["at"]) >= cutoff
+        except (KeyError, TypeError, ValueError):
+            return False
     for a in rows:
-        if a.get("issue") is None and not a.get("sent") and a["severity"] in ("SEV-1", "SEV-2") and a["incident_id"] not in resolved:
+        if a.get("issue") is None and (not a.get("sent") or fresh_message_only(a)) \
+                and a["severity"] in ("SEV-1", "SEV-2") and a["incident_id"] not in resolved:
             try:
                 r = gh("POST", "/issues", {"title": f"[{a['severity']}] AUTOPILOT.OI: {a['check']}",
                                            "body": f"{a['detail']}\n\nIncident `{a['incident_id']}` at {a['at']}.\nRunbook: growth-os/RUNBOOKS.md\n"
                                                    "This issue closes itself when the check passes again.",
                                            "assignees": [owner]})
-                a["issue"] = r.get("number"); a["sent"] = True; a["sent_at"] = now(); a["channel"] = "github_issue"; opened += 1
+                if a.get("channel") == "claude_message":
+                    a["issue"] = r.get("number"); a["issue_at"] = now(); opened += 1   # keep the message record
+                else:
+                    a["issue"] = r.get("number"); a["sent"] = True; a["sent_at"] = now(); a["channel"] = "github_issue"; opened += 1
             except Exception as e:
                 a["send_error"] = str(e)[:120]
         if a.get("issue") and a["incident_id"] in resolved and not a.get("issue_closed"):

@@ -364,6 +364,33 @@ def test_out_of_band_alert_opens_one_issue_and_closes_on_recovery(env, monkeypat
     assert [r for r in rows if r["check"] == "x"][0]["sent"] is False   # never claims it was sent
 
 
+def test_claude_message_alert_still_opens_issue_when_fresh(env, monkeypatch):
+    """Nov 7 and Nov 10 SEV-2 incidents were messaged to Seb by Daily Pulse (channel claude_message) and so never got
+    a GitHub issue. Fresh ones (under 72h) now get one; the message record is kept; old ones are left alone."""
+    import heartbeat, datetime as dt
+    monkeypatch.setattr(health, "HDIR", str(env["tmp"] / "health"))
+    st = env["store"]; calls = []
+    def gh(method, path, body=None):
+        calls.append((method, path)); return {"number": 21}
+    ap = str(env["tmp"] / "health" / "alerts.jsonl")
+    os.makedirs(os.path.dirname(ap), exist_ok=True)
+    nowu = dt.datetime.now(dt.timezone.utc)
+    rows = [{"at": (nowu - dt.timedelta(hours=5)).isoformat(), "check": "worker:tts", "severity": "SEV-2", "detail": "401",
+             "incident_id": "inc:worker:tts:new", "sent": True, "sent_at": "x", "channel": "claude_message"},
+            {"at": (nowu - dt.timedelta(hours=100)).isoformat(), "check": "net", "severity": "SEV-2", "detail": "old",
+             "incident_id": "inc:net:old", "sent": True, "sent_at": "x", "channel": "claude_message"},
+            {"at": (nowu - dt.timedelta(hours=5)).isoformat(), "check": "noise", "severity": "SEV-3", "detail": "x",
+             "incident_id": "inc:noise:new", "sent": True, "channel": "claude_message"}]
+    with open(ap, "w") as f:
+        for r in rows:
+            f.write(json.dumps(r) + "\n")
+    assert heartbeat.push_alerts(ap, st, "o", gh) == (1, 0)
+    assert heartbeat.push_alerts(ap, st, "o", gh) == (0, 0)      # no duplicate issue
+    out = {r["incident_id"]: r for r in (json.loads(l) for l in open(ap))}
+    assert out["inc:worker:tts:new"]["issue"] == 21 and out["inc:worker:tts:new"]["channel"] == "claude_message"
+    assert out["inc:net:old"].get("issue") is None and out["inc:noise:new"].get("issue") is None
+
+
 def test_threads_key_refresh_skips_while_api_paused():
     """Nov 1 Daily Pulse: the weekly refresh job failed ('Cannot parse access token') because get_token() returns None
     while config/threads.json says the Threads API is paused. The job must skip, not fail, in that state."""
