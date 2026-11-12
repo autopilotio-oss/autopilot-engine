@@ -260,3 +260,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-12T08:32:16+00:00", "note": "0 routed (forms empty)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-12T11:20:25+00:00", "note": "0 orders, 20/20 checkouts ok, posting paused (0 pending, 11 drafts), reels 401 day 3, no message"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-12T12:23:20+00:00", "note": "posts out today 0 (1 IG pending draft), top post saves+shares 0 (TikTok 93 views), feed written yes v72"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-12T13:12:13+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
