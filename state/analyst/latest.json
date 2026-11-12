@@ -1,35 +1,28 @@
 {
-  "at": "2026-11-12T00:25:00Z",
+  "at": "2026-11-12T12:23:13Z",
   "posts_today": {
-    "twitter": {"published": 11, "pending": 9, "error": 0},
-    "instagram": {"published": 1, "pending": 1, "error": 0},
+    "instagram": {"published": 0, "pending": 1, "error": 0},
+    "twitter": {"published": 0, "pending": 0, "error": 0},
     "threads": {"published": 0, "pending": 0, "error": 0},
-    "tiktok": {"published": 1, "pending": 0, "error": 0}
+    "tiktok": {"published": 0, "pending": 0, "error": 0}
   },
   "top_posts": [
-    {
-      "network": "instagram",
-      "published_at": "2026-11-09T13:04:58-03:00",
-      "text": "Dave is a week late and you hate the awkward text.",
-      "metrics": {"reach": 60, "views": 62, "saves": 0, "shares": 0, "comments": 0},
-      "url": "https://www.instagram.com/reel/DfhZUbwgO1q/"
-    },
     {
       "network": "tiktok",
       "published_at": "2026-11-09T13:05:26-03:00",
       "text": "3 more mistakes that quietly kill TikTok views.",
-      "metrics": {"views": 93, "reach": null, "likes": 0, "shares": 0, "comments": 0, "saves": null},
+      "metrics": {"views": 93, "likes": 0, "comments": 0, "shares": 0, "saves": null, "reach": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7706156788567084340"
     },
     {
-      "network": "instagram",
-      "published_at": "2026-11-10T13:06:49-03:00",
-      "text": "They want a quote tonight and you're still on a job.",
-      "metrics": {"reach": 5, "views": 6, "saves": 0, "shares": 0, "comments": 0},
-      "url": "https://www.instagram.com/reel/Dfj-ENLoSat/"
+      "network": "tiktok",
+      "published_at": "2026-11-11T15:11:02-03:00",
+      "text": "Steal these 3 hook rewrites.",
+      "metrics": {"views": 55, "likes": 0, "comments": 0, "shares": 0, "saves": null, "reach": null},
+      "url": null
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-11T22:41:27Z"},
-  "notes": "Snapshot 21:25 ART Nov 11. 13 posts out today: X 11, IG 1 (Bookkeeping Sorter reel 10:00), TikTok 1 (hook rewrites 12:00). 10 pending, all draft:true in Metricool (not approved), several past their slot: X 9 (real estate pack 18:00, polls 18:40 to 23:40, Front Desk 21:00), IG 1 (real estate carousel 18:00). 0 errors. Window 6 to 72h: 0 saves and 0 shares on every IG reel and TikTok (TikTok saves not provided, reach null), so no winner; list falls back to reach/views. Carousel rows returned without clear column labels, not used. IG Nov 11 Bookkeeping Sorter reel: no analytics rows yet. X analytics not pulled. GitHub: ci.yml last run failure (new, logged); freel.yml still failing (already logged today). Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v71)."
+  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-12T10:49:42Z"},
+  "notes": "Snapshot 09:23 ART Nov 12. 0 posts out today so far. 1 scheduled: IG reel Front Desk Kit FAQ 10:00, PENDING but draft:true (not approved, will not publish). 0 errors. Window 6 to 72h: 0 shares on both TikToks (saves not provided), so no winner; ranked by views. IG feed (IGPO) returned 2 carousels (Nov 9 24 prompts, Nov 10 Fable 5.2 news) with unlabeled near-zero values, not used; IG reels not covered by IGPO codes, not pulled. X and Threads analytics not pulled. GitHub: freel.yml failed again 10:00Z (ElevenLabs 401 likely), ci.yml last run failed 03:03Z (2 of 3 in 24h); both logged. Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v72)."
 }
