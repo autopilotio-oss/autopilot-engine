@@ -1,28 +1,51 @@
 {
-  "at": "2026-11-12T12:23:13Z",
+  "at": "2026-11-12T16:24:00Z",
   "posts_today": {
-    "instagram": {"published": 0, "pending": 1, "error": 0},
-    "twitter": {"published": 0, "pending": 0, "error": 0},
-    "threads": {"published": 0, "pending": 0, "error": 0},
-    "tiktok": {"published": 0, "pending": 0, "error": 0}
+    "instagram": {
+      "published": 0,
+      "pending": 1,
+      "error": 0
+    },
+    "twitter": {
+      "published": 0,
+      "pending": 0,
+      "error": 0
+    },
+    "threads": {
+      "published": 0,
+      "pending": 0,
+      "error": 0
+    },
+    "tiktok": {
+      "published": 0,
+      "pending": 0,
+      "error": 0
+    }
   },
   "top_posts": [
     {
       "network": "tiktok",
-      "published_at": "2026-11-09T13:05:26-03:00",
-      "text": "3 more mistakes that quietly kill TikTok views.",
-      "metrics": {"views": 93, "likes": 0, "comments": 0, "shares": 0, "saves": null, "reach": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7706156788567084340"
-    },
-    {
-      "network": "tiktok",
       "published_at": "2026-11-11T15:11:02-03:00",
       "text": "Steal these 3 hook rewrites.",
-      "metrics": {"views": 55, "likes": 0, "comments": 0, "shares": 0, "saves": null, "reach": null},
-      "url": null
+      "metrics": {
+        "views": 55,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": null,
+        "reach": null
+      },
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7706931701057850632"
     }
   ],
-  "kit": {"subscribers": 0, "new_today": 0},
-  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-12T10:49:42Z"},
-  "notes": "Snapshot 09:23 ART Nov 12. 0 posts out today so far. 1 scheduled: IG reel Front Desk Kit FAQ 10:00, PENDING but draft:true (not approved, will not publish). 0 errors. Window 6 to 72h: 0 shares on both TikToks (saves not provided), so no winner; ranked by views. IG feed (IGPO) returned 2 carousels (Nov 9 24 prompts, Nov 10 Fable 5.2 news) with unlabeled near-zero values, not used; IG reels not covered by IGPO codes, not pulled. X and Threads analytics not pulled. GitHub: freel.yml failed again 10:00Z (ElevenLabs 401 likely), ci.yml last run failed 03:03Z (2 of 3 in 24h); both logged. Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v72)."
+  "kit": {
+    "subscribers": 0,
+    "new_today": 0
+  },
+  "revenue_seen": {
+    "orders_all_time": 0,
+    "orders_7d": 0,
+    "ledger_synced": "2026-11-12T14:04:01Z"
+  },
+  "notes": "Snapshot 13:24 ART Nov 12. 0 posts out today. 1 scheduled: IG reel Front Desk Kit FAQ 10:00, still PENDING with draft:true (not approved, will not publish). 0 errors. Window 6 to 72h (from 13:21 ART Nov 9): only the Nov 11 TikTok qualifies (Nov 9 13:05 TikTok now just outside, last seen 93 views 0 shares); 0 shares, saves not provided by Metricool, so no winner. IG, X and Threads analytics not pulled. GitHub: freel.yml last run failed 10:00Z (1 of 1 in 24h), ci.yml failed 3 of 3 in 24h (latest 14:42Z); both already in Fix needed today. Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v73)."
 }
