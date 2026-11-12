@@ -255,3 +255,4 @@
 {"worker": "draft_factory", "status": "ok", "at": "2026-11-11T19:30:57+00:00", "note": "bank full (6); rechecked oldest 2026-11-06-shop-24-prompts, still bank"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-11T20:23:01+00:00", "note": "13 posts out today (X 11, IG 1, TikTok 1), 0 errors; top post saves+shares 0; feed written yes (v70)"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-11T20:41:08+00:00", "note": "none: checkouts and pages ok, only main test failure already fixed on builder/2026-11-11-expired-launch-code awaiting Seb, freel.yml fail is the ElevenLabs 401 key (Seb), no conversion evidence for a "}
+{"worker": "analyst", "status": "ok", "at": "2026-11-12T00:22:05+00:00", "note": "13 posts out today, top post saves+shares 0, feed written yes"}
