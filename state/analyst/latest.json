@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-11T20:25:00Z",
+  "at": "2026-11-12T00:25:00Z",
   "posts_today": {
     "twitter": {"published": 11, "pending": 9, "error": 0},
     "instagram": {"published": 1, "pending": 1, "error": 0},
@@ -23,13 +23,13 @@
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-08T21:04:19-03:00",
-      "text": "You run a lawn or landscaping business and still type every quote, skip week text and late payment reminder by hand?",
-      "metrics": {"reach": 5, "views": 12, "saves": 0, "shares": 0, "comments": 0, "follows": 0},
-      "url": null
+      "published_at": "2026-11-10T13:06:49-03:00",
+      "text": "They want a quote tonight and you're still on a job.",
+      "metrics": {"reach": 5, "views": 6, "saves": 0, "shares": 0, "comments": 0},
+      "url": "https://www.instagram.com/reel/Dfj-ENLoSat/"
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-11T19:47:03Z"},
-  "notes": "Snapshot 17:25 ART Nov 11. 13 posts out today: X 11 (bookkeeping 09:30, ChatGPT business profile news 12:00, Review Desk 15:00, 8 polls), IG 1 (Bookkeeping Sorter reel 10:00), TikTok 1 (hook rewrites 12:00). 10 pending: X 9 (real estate pack 18:00, Front Desk 21:00, 7 polls), IG 1 (real estate carousel 18:00). 0 errors. Window 6 to 72h: 0 saves and 0 shares on every IG post and TikTok (TikTok saves not provided, reach null), so no winner; list falls back to reach/views. Also seen: IG Nov 10 Front Desk quote reel reach 5, views 6; IG Nov 10 Claude Fable news carousel comments 3, reach 0, views 0; IG Nov 9 small business carousel reach 1, views 1. IG Nov 11 Bookkeeping Sorter reel (7h old): no analytics rows yet. Nov 8 13:03 IG reel and 13:04 TikTok are past 72h. X post analytics not pulled; carousel urls not provided by Metricool. GitHub: freel.yml last run failure (already in Fix needed today); ci.yml last run success. Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v70)."
+  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-11T22:41:27Z"},
+  "notes": "Snapshot 21:25 ART Nov 11. 13 posts out today: X 11, IG 1 (Bookkeeping Sorter reel 10:00), TikTok 1 (hook rewrites 12:00). 10 pending, all draft:true in Metricool (not approved), several past their slot: X 9 (real estate pack 18:00, polls 18:40 to 23:40, Front Desk 21:00), IG 1 (real estate carousel 18:00). 0 errors. Window 6 to 72h: 0 saves and 0 shares on every IG reel and TikTok (TikTok saves not provided, reach null), so no winner; list falls back to reach/views. Carousel rows returned without clear column labels, not used. IG Nov 11 Bookkeeping Sorter reel: no analytics rows yet. X analytics not pulled. GitHub: ci.yml last run failure (new, logged); freel.yml still failing (already logged today). Revenue: 0 verified orders, unchanged. HQ feed written (status/hub v71)."
 }
