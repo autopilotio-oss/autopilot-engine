@@ -258,3 +258,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-12T00:22:05+00:00", "note": "13 posts out today, top post saves+shares 0, feed written yes"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-12T00:33:12+00:00", "note": "0 routed (forms empty)"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-12T08:32:16+00:00", "note": "0 routed (forms empty)"}
+{"worker": "daily_pulse", "status": "ok", "at": "2026-11-12T11:20:25+00:00", "note": "0 orders, 20/20 checkouts ok, posting paused (0 pending, 11 drafts), reels 401 day 3, no message"}
