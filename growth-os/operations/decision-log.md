@@ -180,3 +180,5 @@
 - 2026-11-13: Posting resumed on Seb's instruction ("Start posting today"). New hub format (Nano Banana covers, Claude prompt carousels), 2 a day on Instagram and TikTok. First two: side hustles 12:00 ET, bill fighter 19:00 ET. Rollback: set the Metricool posts back to draft (uuids in queue/hub).
 
 - 2026-11-13: Site refocused on everyday people on Seb's instruction ("Fix everything"). New homepage with email capture, free Prompt Vault at /vault/ (email gate, Kit form 10118407, source vault_home / vault_page), money agents on the homepage. Old homepage moved to /business/. No prices changed. Rollback: git revert this commit.
+
+- 2026-11-13: Seb asked for more exciting captions with a comment keyword. All 11 scheduled hub posts rewritten in Metricool (hook, emoji list, Comment KEYWORD using confirmed ManyChat words BILL/MONEY/AGENTS/RAISE/SHOP, link in bio for TikTok). Instagram AI label switch turned off on all (static images, not required by Meta). Metricool captions now supersede content/hub/week1_final_captions.json. ManyChat DM link still /free/; Seb asked to change it to /vault/.
