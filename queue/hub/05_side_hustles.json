@@ -1,13 +1,13 @@
 {
  "slug": "05_side_hustles",
  "uuid": "3864956061672490559",
- "metricool_id": 427112243,
- "when": "2026-11-14T12:00:00-05:00",
+ "metricool_id": 427131232,
+ "when": "2026-11-13T12:00:00-05:00",
  "networks": [
   "instagram",
   "tiktok"
  ],
- "status": "draft",
- "approved_by_seb": false,
- "note": "Hub week 1. Draft only. Needs Seb's approval before it is switched from draft."
+ "status": "scheduled",
+ "approved_by_seb": true,
+ "note": "Seb, Nov 13: 'Start posting today'. Prompts not yet run in the Claude app."
 }
