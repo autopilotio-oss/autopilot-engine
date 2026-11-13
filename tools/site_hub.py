@@ -16,6 +16,12 @@ AG = [("bill-agent","Bill Agent","Checks a medical bill against your insurance b
       ("raise-agent","Raise Agent","Pay data, your number and a practice run with pushback")]
 G = "https://autopilotoi.gumroad.com/l/"
 e = html.escape
+from PIL import Image
+os.makedirs(f"{R}/docs/media/hub/week1/thumbs", exist_ok=True)
+for _k, _s, _t, _kind in ORDER:
+    _o = f"{R}/docs/media/hub/week1/thumbs/{_s}.jpg"
+    if not os.path.exists(_o) or os.path.getmtime(_o) < os.path.getmtime(f"{R}/docs/media/hub/week1/posts/{_s}/01.jpg"):
+        _im = Image.open(f"{R}/docs/media/hub/week1/posts/{_s}/01.jpg"); _im.thumbnail((480, 600)); _im.save(_o, quality=78, optimize=True)
 def br(t): return re.sub(r"\[(.*?)\]", r"<b>[\1]</b>", e(t))
 HEAD = lambda title, desc, path: f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{title}</title><meta name="description" content="{desc}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">
@@ -34,21 +40,22 @@ h2.hh{{font:400 clamp(26px,5vw,44px)/1 var(--W);text-transform:uppercase;letter-
 .pr b{{font-weight:500;color:#000;background:var(--l);padding:0 .15em;border-radius:3px}}.pr .t{{display:block;font:700 12px var(--T);letter-spacing:.14em;text-transform:uppercase;color:var(--l);margin-bottom:8px}}
 .cpy{{position:absolute;top:12px;right:12px;font:700 12px var(--T);background:var(--l);color:#000;border:0;border-radius:999px;padding:7px 14px;cursor:pointer}}
 .locked .pr{{filter:blur(7px);user-select:none;pointer-events:none}}.gate{{display:none}}.locked .gate{{display:block;position:sticky;top:76px;z-index:5;background:#0d0d0d;border:1.5px solid var(--l);border-radius:22px;padding:24px;margin:26px 0}}
+.offer{{display:none;background:#0d0d0d;border:1.5px solid var(--l);border-radius:22px;padding:22px;margin:22px 0}}.offer b{{display:block;font:700 20px var(--T);margin-top:12px}}.shr{{display:block;margin-top:14px;background:transparent;border:1.5px solid rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:9px 16px;font:700 13px var(--T);cursor:pointer}}
 .how{{color:#c9c9c2;font-size:15px;margin-top:6px}}.up{{display:inline-block;margin-top:16px;font:600 14px var(--T);color:var(--mut)}}.up a{{color:var(--l)}}
 </style></head><body class="hub"><div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links"><a href="/vault/" class="hm {'on' if path=='/vault/' else ''}">Free Vault</a><a href="/#agents" class="hm">Agents</a><a href="/business/" class="hm">For business</a><a href="/vault/" class="cta">Get it free</a></div></div></div>'''
 FOOT = '''<div class="foot"><div class="wrap"><div class="big">AUTOPILOT<span>.</span>OI</div><div><span>Free Claude prompts and agents, new every day.</span><span><a href="https://www.instagram.com/autopilot.oi/">Instagram</a> · <a href="/vault/">Free Vault</a> · <a href="/business/">For business</a> · <a href="/library/">All kits</a></span></div></div></div>
 <script src="/assets/ap.js"></script><script>
 function kit(f,src,done){f.addEventListener('submit',function(ev){ev.preventDefault();var i=f.querySelector('input'),b=f.querySelector('button'),m=f.parentNode.querySelector('.msg'),em=i.value.trim();
  if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
- b.disabled=true;var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',src);
+ b.disabled=true;var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',src);var it=(location.hash||'').replace('#','');if(it)fd.append('fields[interest]',it);
  fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){try{localStorage.setItem('ap_vault','1')}catch(x){}
   try{if(window.goatcounter)goatcounter.count({path:'optin/'+src,event:true})}catch(x){}done(m)}).catch(function(){b.disabled=false;m.textContent='Something went wrong. Try again in a moment.'})})}
 </script>'''
 FORM = lambda btn: f'<form class="cap"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email"><button class="btn" type="submit">{btn}</button></form><div class="msg"></div>'
 # ---------- home
 NP = sum(len(d["items"]) for d in D.values() if d["type"] == "p"); NA = sum(1 for d in D.values() if d["type"] == "a")
-drops = "".join(f'<a class="drop rv" href="/vault/#{s}"><img loading="lazy" src="/media/hub/week1/posts/{s}/01.jpg" alt="{e(t)}"><div><span>{k}</span><b>{e(t)}</b></div></a>' for _, s, t, k in ORDER)
-marq = "".join(f'<img src="/media/hub/week1/posts/{s}/01.jpg" alt="">' for _, s, t, k in ORDER) * 2
+drops = "".join(f'<a class="drop rv" href="/vault/#{s}"><img loading="lazy" width="480" height="600" src="/media/hub/week1/thumbs/{s}.jpg" alt="{e(t)}"><div><span>{k}</span><b>{e(t)}</b></div></a>' for _, s, t, k in ORDER)
+marq = "".join(f'<img loading="lazy" width="184" height="230" src="/media/hub/week1/thumbs/{s}.jpg" alt="">' for _, s, t, k in ORDER) * 2
 ags = "".join(f'<div class="card rv"><b>{n}</b><p>{e(d)}</p><a class="go buy" href="{G}{s}">Get it · $10 →</a></div>' for s, n, d in AG)
 DEMO = [("Lower a bill", D["23"]["items"][0][1]), ("Start a side hustle", D["7"]["items"][0][1]), ("Check a contract", D["20"]["items"][2][1])]
 tabs = "".join(f'<button class="tb{" on" if i == 0 else ""}" data-i="{i}">{e(t)}</button>' for i, (t, _) in enumerate(DEMO))
@@ -64,6 +71,7 @@ HOME_CSS = """<style>
 .demo .cpy{top:auto;bottom:16px;right:16px;font-size:14px;padding:10px 18px}.cur{display:inline-block;width:8px;height:1.1em;background:var(--l);vertical-align:-3px;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
 .steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px}.steps3 .card i{font:400 44px/1 var(--W);color:var(--l);font-style:normal;display:block;margin-bottom:10px}.steps3 .card b{font:700 18px var(--T)}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px;max-width:720px}.cmp>div{background:var(--g2);border:1px solid var(--line);border-radius:18px;padding:18px}.cmp .pro{border-color:var(--l)}.cmp span{font:700 12px var(--T);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}.cmp .pro span{color:var(--l)}.cmp p{font-size:14.5px;color:#d5d5ce;margin-top:10px;line-height:1.35}.cmp b{display:block;margin-top:14px;font:700 20px var(--T)}
 details{border-top:1px solid var(--line);padding:18px 0}details:last-of-type{border-bottom:1px solid var(--line)}summary{font:700 17px var(--T);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}summary:after{content:"+";color:var(--l);font-size:22px;line-height:1}details[open] summary:after{content:"−"}details p{color:#c9c9c2;margin-top:10px;max-width:680px}
 .stick{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;background:var(--l);color:#000;border-radius:999px;height:54px;align-items:center;justify-content:center;font:700 16px var(--T);box-shadow:0 10px 30px rgba(0,0,0,.6)}@media(max-width:760px){.stick.on{display:flex}}
 </style>"""
@@ -76,15 +84,16 @@ __FORM__<div class="chips"><span>100% free</span><span>No card needed</span><spa
 <div class="stats"><div><b>__NP__</b><span>free prompts</span></div><div><b>__NA__</b><span>free agents</span></div><div><b>2</b><span>new drops a day</span></div></div></div>
 <div class="sec"><div class="wrap"><span class="tagline">Try one right now</span><h2 class="hh rv" style="margin-top:16px">No sign up. Just copy.</h2>
 <p class="lead rv" style="margin-top:12px">Pick one, copy it, paste it into Claude and swap the lime parts for your own.</p>
-<div class="tabs">__TABS__</div><div class="demo" id="demo"></div>
+<div class="tabs">__TABS__</div><div class="demo" id="demo"></div><div id="nudge" style="display:none;margin-top:18px;background:#0d0d0d;border:1.5px solid var(--l);border-radius:20px;padding:20px"><b style="font:700 18px var(--T)">Copied. Want the other __NP1__?</b><p style="color:#c9c9c2;font-size:14.5px;margin-top:4px">Enter your email and the whole Vault opens, free.</p>__FORM2__</div>
 <p style="margin-top:22px"><a class="btn" href="/vault/">Unlock all __NP__ prompts free</a></p></div></div>
 <div class="sec"><div class="wrap"><span class="tagline">How it works</span><h2 class="hh rv" style="margin-top:16px">Three steps. Two minutes.</h2>
 <div class="steps3"><div class="card rv"><i>1</i><b>Open Claude</b><p>It's free at claude.ai or in the Claude app.</p></div><div class="card rv"><i>2</i><b>Paste a prompt</b><p>Tap copy in the Vault and paste it in.</p></div><div class="card rv"><i>3</i><b>Swap the brackets</b><p>Put your own details in the [brackets] and send.</p></div></div></div></div>
 <div class="sec"><div class="wrap"><span class="tagline">This week in the Vault</span><h2 class="hh rv" style="margin-top:16px">12 free drops.</h2><div class="drops">__DROPS__</div></div></div>
 <div class="sec" id="agents"><div class="wrap"><span class="tagline">Want the full setup?</span><h2 class="hh rv" style="margin-top:16px">Ready made money agents.</h2>
 <p class="lead rv" style="margin-top:14px">The free prompts get you started. These are complete setups for one job each: the master prompt, starter prompts, a 10 minute setup guide and a tracker. They run in your own Claude account. They draft, you decide.</p>
+<div class="cmp rv"><div><span>Free prompt</span><p>One prompt for one task</p><p>You figure out the setup</p><p>Great for a quick win</p><b>$0</b></div><div class="pro"><span>Full agent</span><p>Master prompt, 5 starter prompts and a tracker</p><p>10 minute guided setup</p><p>Built to handle the whole job, every time</p><b>$10 once</b></div></div>
 <div class="chips"><span>$10 each, one payment</span><span>No subscription</span><span>30 day refund</span><span>Secure checkout by Gumroad</span></div>
-<div class="ags">__AGS__<div class="card rv" style="border-color:var(--l)"><b>All 5 Money Agents</b><p>Every agent above in one bundle.</p><a class="go buy" href="__G__all-money-agents">Get all 5 · $39 →</a></div></div></div></div>
+<div class="ags">__AGS__<div class="card rv" style="border-color:var(--l)"><b>All 5 Money Agents</b><p>Every agent above in one bundle. Bought one by one they cost $50, so the bundle saves you $11.</p><a class="go buy" href="__G__all-money-agents">Get all 5 · $39 →</a></div></div></div></div>
 <div class="sec"><div class="wrap"><span class="tagline">Straight answers</span><h2 class="hh rv" style="margin-top:16px;margin-bottom:26px">Questions.</h2>
 <details><summary>Is it really free?</summary><p>Yes. Every prompt in the Vault is free. We make money only if you choose to buy one of the ready made agents.</p></details>
 <details><summary>Do I need to pay for Claude?</summary><p>No. The prompts work on Claude's free plan. Paid plans just let you use it more.</p></details>
@@ -96,18 +105,18 @@ __FORM__<div class="chips"><span>100% free</span><span>No card needed</span><spa
 <div class="sec"><div class="wrap"><span class="tagline">Run a business?</span><h2 class="hh rv" style="margin-top:16px">We have kits for that too.</h2><p style="margin-top:18px"><a class="btn ghost" href="/business/">See the business kits</a></p></div></div>
 <a class="stick" id="stick" href="/vault/">Unlock the free Vault →</a>
 """ + FOOT + """<script>
-kit(document.querySelector('.cap'),'vault_home',function(m){m.innerHTML='<b>You’re in.</b> Opening the Vault...';setTimeout(function(){location.href='/vault/'},700)});
+document.querySelectorAll('.cap').forEach(function(f,i){kit(f,i?'vault_demo':'vault_home',function(m){m.innerHTML='<b>You’re in.</b> Opening the Vault...';setTimeout(function(){location.href='/vault/'},700)})});
 var W=['lower your bills.','find a better job.','start a side hustle.','read the fine print.','plan your money.'],wi=0,r=document.getElementById('rot');
 setInterval(function(){r.classList.add('out');setTimeout(function(){wi=(wi+1)%W.length;r.textContent=W[wi];r.classList.remove('out')},360)},2600);
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(x){io.observe(x)});
 var DEMO=__DEMO__,dm=document.getElementById('demo'),tm;
 function hl(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\\[(.*?)\\]/g,'<b>[$1]</b>')}
 function show(i){clearInterval(tm);var t=DEMO[i],n=0;tm=setInterval(function(){n+=4;if(n>=t.length){n=t.length;clearInterval(tm)}dm.innerHTML=hl(t.slice(0,n))+(n<t.length?'<span class="cur"></span>':'')+'<button class="cpy">Copy prompt</button>';
- dm.querySelector('.cpy').onclick=function(){var b=this;navigator.clipboard.writeText(t).then(function(){b.textContent='Copied ✓';try{if(window.goatcounter)goatcounter.count({path:'demo/copy',event:true})}catch(x){}})}},16)}
+ dm.querySelector('.cpy').onclick=function(){var b=this;navigator.clipboard.writeText(t).then(function(){b.textContent='Copied ✓';try{if(!localStorage.getItem('ap_vault'))document.getElementById('nudge').style.display='block'}catch(x){}try{if(window.goatcounter)goatcounter.count({path:'demo/copy',event:true})}catch(x){}})}},16)}
 document.querySelectorAll('.tb').forEach(function(b){b.onclick=function(){document.querySelectorAll('.tb').forEach(function(x){x.classList.remove('on')});b.classList.add('on');show(+b.dataset.i)}});show(0);
 var st=document.getElementById('stick');addEventListener('scroll',function(){st.classList.toggle('on',scrollY>700)},{passive:true});
 </script></body></html>"""
-home = (HOME.replace("__FORM__", FORM("Unlock the free Vault")).replace("__MARQ__", marq).replace("__NP__", str(NP)).replace("__NA__", str(NA)).replace("__TABS__", tabs)
+home = (HOME.replace("__FORM__", FORM("Unlock the free Vault")).replace("__MARQ__", marq).replace("__NP__", str(NP)).replace("__NA__", str(NA)).replace("__TABS__", tabs).replace("__NP1__", str(NP - 1)).replace("__FORM2__", FORM("Unlock the Vault"))
         .replace("__DROPS__", drops).replace("__AGS__", ags).replace("__G__", G).replace("__DEMO__", json.dumps([t for _, t in DEMO], ensure_ascii=False)))
 open(f"{R}/docs/index.html", "w").write(home)
 # ---------- vault
@@ -121,18 +130,23 @@ for k, s, t, kind in ORDER:
     else:
         how = f'Set up in 10 minutes: open Claude, tap Projects, New project, name it “{d["name"]}”, paste this into the Instructions box' + (f', add {d["add"]}' if d.get("add") else "") + ', then open a chat and type “go”.'
         body = f'<div class="pr"><span class="t">Agent instructions</span>{br(d["instr"])}<button class="cpy">Copy</button></div>'
-    up = f'<span class="up">Want the full setup? <a class="buy" href="{G}{UP[s][0]}">Get the {UP[s][1]} · $10 →</a></span>' if s in UP else ""
+    up = (f'<span class="up">Want the full setup for this? <a class="buy" href="{G}{UP[s][0]}">Get the {UP[s][1]} · $10 →</a></span>' if s in UP else f'<span class="up">Like these? <a class="buy" href="{G}all-money-agents">Get all 5 money agents · $39 →</a></span>')
+    up += f'<button class="shr" data-t="{e(t)}" data-u="https://autopilotoi.app/vault/#{s}">Send to a friend ↗</button>'
     note = f'<p class="how">{e(d["note"])}</p>' if d.get("note") else ""
     posts += f'<div class="post" id="{s}"><span class="tagline">{kind}</span><h2>{e(t)}</h2><p class="how">{e(how)}</p>{body}{note}{up}</div>'
 vault = HEAD("The Free Prompt Vault · AUTOPILOT.OI", "Every Claude prompt and agent from our posts, free to copy.", "/vault/") + f'''
 <div class="wrap hero" style="padding-bottom:20px"><span class="tagline live">Free · updated every day</span><h1>The Prompt <em>Vault.</em></h1>
 <p class="lead">Every prompt and agent from our posts. Tap copy, paste into Claude, done.</p></div>
-<div class="wrap locked" id="v"><div class="gate"><b style="font:700 20px var(--T)">Unlock everything, free.</b><p class="how">Enter your email and the whole Vault opens. We send new prompts as they drop.</p>{FORM("Unlock the Vault")}</div>{posts}</div>
+<div class="wrap locked" id="v"><div class="gate"><b style="font:700 20px var(--T)">Unlock everything, free.</b><p class="how">Enter your email and the whole Vault opens. We send new prompts as they drop.</p>{FORM("Unlock the Vault")}</div>
+<div class="offer" id="offer"><span class="tagline live">You’re in</span><b>Want the done for you version?</b><p class="how">The 5 money agents are full setups for bills, debt, subscriptions, refunds and raises. $10 each, or all 5 for $39 (saves $11). One payment, 30 day refund.</p><a class="btn buy" style="margin-top:14px" href="{G}all-money-agents">Get all 5 · $39</a> <a class="up" style="margin-left:10px" href="/#agents">See each one</a></div>
+{posts}
+<div class="post"><h2>Get the full setups.</h2><p class="how">Every money agent in one bundle: master prompts, starter prompts, setup guides and trackers.</p><a class="btn buy" style="margin-top:16px" href="{G}all-money-agents">All 5 Money Agents · $39</a></div></div>
 {FOOT}<script>
-var v=document.getElementById('v');function open_(){{v.classList.remove('locked')}}
+var v=document.getElementById('v');function open_(){{v.classList.remove('locked');document.getElementById('offer').style.display='block'}}
+document.querySelectorAll('.shr').forEach(function(b){{b.onclick=function(){{var d={{title:b.dataset.t,text:'Free Claude prompts: '+b.dataset.t,url:b.dataset.u}};if(navigator.share)navigator.share(d).catch(function(){{}});else navigator.clipboard.writeText(d.url).then(function(){{b.textContent='Link copied'}});try{{if(window.goatcounter)goatcounter.count({{path:'vault/share',event:true}})}}catch(x){{}}}}}});
 try{{if(localStorage.getItem('ap_vault'))open_()}}catch(x){{}}
 kit(document.querySelector('.cap'),'vault_page',function(m){{open_()}});
-document.querySelectorAll('.cpy').forEach(function(b){{b.addEventListener('click',function(){{var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var t=p.querySelector('.t');if(t)t.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){{b.textContent='Copied';setTimeout(function(){{b.textContent='Copy'}},1400)}})}})}});
+document.querySelectorAll('.cpy').forEach(function(b){{b.addEventListener('click',function(){{var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var t=p.querySelector('.t');if(t)t.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){{try{{if(window.goatcounter)goatcounter.count({{path:'vault/copy',event:true}})}}catch(x){{}}b.textContent='Copied';setTimeout(function(){{b.textContent='Copy'}},1400)}})}})}});
 </script></body></html>'''
 open(f"{R}/docs/vault/index.html", "w").write(vault)
 print("built", len(home), len(vault))

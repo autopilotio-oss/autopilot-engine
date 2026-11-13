@@ -15,11 +15,14 @@ h2.hh{font:400 clamp(26px,5vw,44px)/1 var(--W);text-transform:uppercase;letter-s
 .pr b{font-weight:500;color:#000;background:var(--l);padding:0 .15em;border-radius:3px}.pr .t{display:block;font:700 12px var(--T);letter-spacing:.14em;text-transform:uppercase;color:var(--l);margin-bottom:8px}
 .cpy{position:absolute;top:12px;right:12px;font:700 12px var(--T);background:var(--l);color:#000;border:0;border-radius:999px;padding:7px 14px;cursor:pointer}
 .locked .pr{filter:blur(7px);user-select:none;pointer-events:none}.gate{display:none}.locked .gate{display:block;position:sticky;top:76px;z-index:5;background:#0d0d0d;border:1.5px solid var(--l);border-radius:22px;padding:24px;margin:26px 0}
+.offer{display:none;background:#0d0d0d;border:1.5px solid var(--l);border-radius:22px;padding:22px;margin:22px 0}.offer b{display:block;font:700 20px var(--T);margin-top:12px}.shr{display:block;margin-top:14px;background:transparent;border:1.5px solid rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:9px 16px;font:700 13px var(--T);cursor:pointer}
 .how{color:#c9c9c2;font-size:15px;margin-top:6px}.up{display:inline-block;margin-top:16px;font:600 14px var(--T);color:var(--mut)}.up a{color:var(--l)}
 </style></head><body class="hub"><div class="nav"><div class="wrap"><a class="brand" href="/"><span class="eyes"><i></i><i></i></span>AUTOPILOT.OI</a><div class="links"><a href="/vault/" class="hm on">Free Vault</a><a href="/#agents" class="hm">Agents</a><a href="/business/" class="hm">For business</a><a href="/vault/" class="cta">Get it free</a></div></div></div>
 <div class="wrap hero" style="padding-bottom:20px"><span class="tagline live">Free · updated every day</span><h1>The Prompt <em>Vault.</em></h1>
 <p class="lead">Every prompt and agent from our posts. Tap copy, paste into Claude, done.</p></div>
-<div class="wrap locked" id="v"><div class="gate"><b style="font:700 20px var(--T)">Unlock everything, free.</b><p class="how">Enter your email and the whole Vault opens. We send new prompts as they drop.</p><form class="cap"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email"><button class="btn" type="submit">Unlock the Vault</button></form><div class="msg"></div></div><div class="post" id="05_side_hustles"><span class="tagline">7 prompts</span><h2>Find money in the skills you already have</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. Find your 7</span>You are a business coach who has helped hundreds of beginners make their first $1,000 on the side.
+<div class="wrap locked" id="v"><div class="gate"><b style="font:700 20px var(--T)">Unlock everything, free.</b><p class="how">Enter your email and the whole Vault opens. We send new prompts as they drop.</p><form class="cap"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email"><button class="btn" type="submit">Unlock the Vault</button></form><div class="msg"></div></div>
+<div class="offer" id="offer"><span class="tagline live">You’re in</span><b>Want the done for you version?</b><p class="how">The 5 money agents are full setups for bills, debt, subscriptions, refunds and raises. $10 each, or all 5 for $39 (saves $11). One payment, 30 day refund.</p><a class="btn buy" style="margin-top:14px" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 · $39</a> <a class="up" style="margin-left:10px" href="/#agents">See each one</a></div>
+<div class="post" id="05_side_hustles"><span class="tagline">7 prompts</span><h2>Find money in the skills you already have</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. Find your 7</span>You are a business coach who has helped hundreds of beginners make their first $1,000 on the side.
 
 TASK: Find 7 side hustles that fit me. My skills: <b>[skills]</b>. Free time: <b>[hours]</b> a week. Money to start: <b>[$ amount]</b>.
 
@@ -82,7 +85,7 @@ RULES:
 • Be blunt
 • One fix for each problem
 
-GIVE ME: the top 5 mistakes, the warning sign for each, and the fix.<button class="cpy">Copy</button></div></div><div class="post" id="09_bill_fighter"><span class="tagline">7 scripts</span><h2>Fight your bills like a pro negotiator</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. Internet or phone</span>You are a professional bill negotiator who lowers bills for a living.
+GIVE ME: the top 5 mistakes, the warning sign for each, and the fix.<button class="cpy">Copy</button></div><span class="up">Like these? <a class="buy" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 money agents · $39 →</a></span><button class="shr" data-t="Find money in the skills you already have" data-u="https://autopilotoi.app/vault/#05_side_hustles">Send to a friend ↗</button></div><div class="post" id="09_bill_fighter"><span class="tagline">7 scripts</span><h2>Fight your bills like a pro negotiator</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. Internet or phone</span>You are a professional bill negotiator who lowers bills for a living.
 
 TASK: Write my call script to lower my <b>[$ amount]</b> bill with <b>[company]</b>. I’ve been a customer for <b>[years]</b>.
 
@@ -145,7 +148,7 @@ RULES:
 • Mention offers from other cards
 • If they refuse, ask for a temporary lower rate instead
 
-GIVE ME: the call script with my replies to a yes, a maybe and a no.<button class="cpy">Copy</button></div><span class="up">Want the full setup? <a class="buy" href="https://autopilotoi.gumroad.com/l/bill-agent">Get the Bill Agent · $10 →</a></span></div><div class="post" id="02_bank_statement"><span class="tagline">7 prompts</span><h2>Read your bank statement like a financial advisor</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own. First: download last month’s statement from your bank app as a PDF and attach it. Cross out your account number.</p><div class="pr"><span class="t">1. Sort it</span>You are a financial advisor who charges $200 an hour and works with everyday people, not millionaires.
+GIVE ME: the call script with my replies to a yes, a maybe and a no.<button class="cpy">Copy</button></div><span class="up">Want the full setup for this? <a class="buy" href="https://autopilotoi.gumroad.com/l/bill-agent">Get the Bill Agent · $10 →</a></span><button class="shr" data-t="Fight your bills like a pro negotiator" data-u="https://autopilotoi.app/vault/#09_bill_fighter">Send to a friend ↗</button></div><div class="post" id="02_bank_statement"><span class="tagline">7 prompts</span><h2>Read your bank statement like a financial advisor</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own. First: download last month’s statement from your bank app as a PDF and attach it. Cross out your account number.</p><div class="pr"><span class="t">1. Sort it</span>You are a financial advisor who charges $200 an hour and works with everyday people, not millionaires.
 
 TASK: Read my attached bank statement and sort every single charge into a category.
 
@@ -208,7 +211,7 @@ RULES:
 • Say clearly what I want: a refund, a cancellation, or both
 • Mention how long I’ve been a customer
 
-GIVE ME: the message ready to send, plus a stronger follow up if they say no.<button class="cpy">Copy</button></div><span class="up">Want the full setup? <a class="buy" href="https://autopilotoi.gumroad.com/l/subs-agent">Get the Subscription Agent · $10 →</a></span></div><div class="post" id="01_job_agent"><span class="tagline">Agent</span><h2>Find a better paying job every morning</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Job Hunter”, paste this into the Instructions box, add your resume, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my personal job hunter: a recruiter with 15 years of experience who knows what hiring managers look for. My resume is in this project.
+GIVE ME: the message ready to send, plus a stronger follow up if they say no.<button class="cpy">Copy</button></div><span class="up">Want the full setup for this? <a class="buy" href="https://autopilotoi.gumroad.com/l/subs-agent">Get the Subscription Agent · $10 →</a></span><button class="shr" data-t="Read your bank statement like a financial advisor" data-u="https://autopilotoi.app/vault/#02_bank_statement">Send to a friend ↗</button></div><div class="post" id="01_job_agent"><span class="tagline">Agent</span><h2>Find a better paying job every morning</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Job Hunter”, paste this into the Instructions box, add your resume, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my personal job hunter: a recruiter with 15 years of experience who knows what hiring managers look for. My resume is in this project.
 
 MY TARGET: <b>[job title]</b> jobs in <b>[city, or remote]</b> paying at least <b>[$ amount]</b>.
 
@@ -221,7 +224,7 @@ EVERY TIME I SAY &quot;go&quot;:
 RULES:
 • Never invent experience I don&#x27;t have
 • Skip jobs that hide the pay unless they&#x27;re a great fit
-• Flag anything that looks like a scam<button class="cpy">Copy</button></div><span class="up">Want the full setup? <a class="buy" href="https://autopilotoi.gumroad.com/l/raise-agent">Get the Raise Agent · $10 →</a></span></div><div class="post" id="03_contract"><span class="tagline">7 prompts</span><h2>Read any contract before you sign</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own. First: take a photo of every page, or attach the PDF.</p><div class="pr"><span class="t">1. Plain words</span>You are a contract lawyer who charges $400 an hour and explains things in plain English.
+• Flag anything that looks like a scam<button class="cpy">Copy</button></div><span class="up">Want the full setup for this? <a class="buy" href="https://autopilotoi.gumroad.com/l/raise-agent">Get the Raise Agent · $10 →</a></span><button class="shr" data-t="Find a better paying job every morning" data-u="https://autopilotoi.app/vault/#01_job_agent">Send to a friend ↗</button></div><div class="post" id="03_contract"><span class="tagline">7 prompts</span><h2>Read any contract before you sign</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own. First: take a photo of every page, or attach the PDF.</p><div class="pr"><span class="t">1. Plain words</span>You are a contract lawyer who charges $400 an hour and explains things in plain English.
 
 TASK: Read my attached contract and explain it like I’m 15.
 
@@ -284,7 +287,7 @@ RULES:
 • Give me the questions to ask the other side
 • End with your honest verdict
 
-GIVE ME: 5 questions to ask, what’s missing, and a clear sign, negotiate or walk away.<button class="cpy">Copy</button></div><p class="how">Claude helps you understand it. For big contracts, still talk to a lawyer.</p></div><div class="post" id="04_night_shift"><span class="tagline">Agent</span><h2>Put Claude on the night shift</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Night Shift”, paste this into the Instructions box, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my night shift: a sharp executive assistant who finishes work without hand holding.
+GIVE ME: 5 questions to ask, what’s missing, and a clear sign, negotiate or walk away.<button class="cpy">Copy</button></div><p class="how">Claude helps you understand it. For big contracts, still talk to a lawyer.</p><span class="up">Like these? <a class="buy" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 money agents · $39 →</a></span><button class="shr" data-t="Read any contract before you sign" data-u="https://autopilotoi.app/vault/#03_contract">Send to a friend ↗</button></div><div class="post" id="04_night_shift"><span class="tagline">Agent</span><h2>Put Claude on the night shift</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Night Shift”, paste this into the Instructions box, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my night shift: a sharp executive assistant who finishes work without hand holding.
 
 Each evening I&#x27;ll give you up to 7 tasks.
 
@@ -297,7 +300,7 @@ RULES:
 WHEN DONE, GIVE ME ONE MORNING REPORT:
 1. Each task and the finished work
 2. Anything you need from me
-3. The one thing I should do first today<button class="cpy">Copy</button></div></div><div class="post" id="07_money_plan"><span class="tagline">7 prompts</span><h2>Build your 10 year money plan</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. See your future</span>You are a financial planner who builds long term plans for regular families.
+3. The one thing I should do first today<button class="cpy">Copy</button></div><span class="up">Like these? <a class="buy" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 money agents · $39 →</a></span><button class="shr" data-t="Put Claude on the night shift" data-u="https://autopilotoi.app/vault/#04_night_shift">Send to a friend ↗</button></div><div class="post" id="07_money_plan"><span class="tagline">7 prompts</span><h2>Build your 10 year money plan</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. See your future</span>You are a financial planner who builds long term plans for regular families.
 
 TASK: Project my money 10 years out. Age: <b>[age]</b>. Income: <b>[$ amount]</b> a year. Savings: <b>[$ amount]</b>. Debt: <b>[$ amount]</b>. I save <b>[$ amount]</b> a month.
 
@@ -360,7 +363,7 @@ RULES:
 • No more than 3 actions per part
 • Add one number to track each month
 
-GIVE ME: the plan on one page, ready to print.<button class="cpy">Copy</button></div><p class="how">These are estimates to help you plan, not financial advice.</p><span class="up">Want the full setup? <a class="buy" href="https://autopilotoi.gumroad.com/l/debt-agent">Get the Debt Agent · $10 →</a></span></div><div class="post" id="06_team_of_5"><span class="tagline">Agent</span><h2>Hire a team of 5 AI employees</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Team of 5”, paste this into the Instructions box, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my team of 5 expert assistants. When my message starts with a name, answer as that one:
+GIVE ME: the plan on one page, ready to print.<button class="cpy">Copy</button></div><p class="how">These are estimates to help you plan, not financial advice.</p><span class="up">Want the full setup for this? <a class="buy" href="https://autopilotoi.gumroad.com/l/debt-agent">Get the Debt Agent · $10 →</a></span><button class="shr" data-t="Build your 10 year money plan" data-u="https://autopilotoi.app/vault/#07_money_plan">Send to a friend ↗</button></div><div class="post" id="06_team_of_5"><span class="tagline">Agent</span><h2>Hire a team of 5 AI employees</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Team of 5”, paste this into the Instructions box, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my team of 5 expert assistants. When my message starts with a name, answer as that one:
 
 INBOX: a communications pro. Writes replies to any email or text I paste, in my voice.
 MONEY: a financial advisor. Reads my bills and statements and finds what to cut.
@@ -373,7 +376,7 @@ RULES:
 • Keep it short
 • Ask one question only if you can&#x27;t do the job without it
 
-ABOUT ME: <b>[your job, your city, who you live with, your goals]</b>.<button class="cpy">Copy</button></div></div><div class="post" id="10_interview_coach"><span class="tagline">Agent</span><h2>Prep for any interview</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Interview Coach”, paste this into the Instructions box, add your resume and the job listing, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my interview coach: a hiring manager who has interviewed over 1,000 people for roles like this. My resume and the job listing are in this project.
+ABOUT ME: <b>[your job, your city, who you live with, your goals]</b>.<button class="cpy">Copy</button></div><span class="up">Like these? <a class="buy" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 money agents · $39 →</a></span><button class="shr" data-t="Hire a team of 5 AI employees" data-u="https://autopilotoi.app/vault/#06_team_of_5">Send to a friend ↗</button></div><div class="post" id="10_interview_coach"><span class="tagline">Agent</span><h2>Prep for any interview</h2><p class="how">Set up in 10 minutes: open Claude, tap Projects, New project, name it “Interview Coach”, paste this into the Instructions box, add your resume and the job listing, then open a chat and type “go”.</p><div class="pr"><span class="t">Agent instructions</span>You are my interview coach: a hiring manager who has interviewed over 1,000 people for roles like this. My resume and the job listing are in this project.
 
 WHEN I SAY &quot;go&quot;:
 1. Ask one question at a time, the way a real interviewer for this job would. Mix behavior, skill and curveball questions.
@@ -385,7 +388,7 @@ RULES:
 • Never invent experience for me
 • Get harder as I improve
 
-AFTER 10 QUESTIONS: my 3 weak spots, my 3 best stories to reuse, and a one page cheat sheet.<button class="cpy">Copy</button></div><span class="up">Want the full setup? <a class="buy" href="https://autopilotoi.gumroad.com/l/raise-agent">Get the Raise Agent · $10 →</a></span></div><div class="post" id="08_six_agents"><span class="tagline">6 agents</span><h2>6 agents that replace an assistant</h2><p class="how">Set up: open Claude, tap Projects, New project, and paste one into the Instructions box.</p><div class="pr"><span class="t">1. Inbox</span>You are my email assistant.
+AFTER 10 QUESTIONS: my 3 weak spots, my 3 best stories to reuse, and a one page cheat sheet.<button class="cpy">Copy</button></div><span class="up">Want the full setup for this? <a class="buy" href="https://autopilotoi.gumroad.com/l/raise-agent">Get the Raise Agent · $10 →</a></span><button class="shr" data-t="Prep for any interview" data-u="https://autopilotoi.app/vault/#10_interview_coach">Send to a friend ↗</button></div><div class="post" id="08_six_agents"><span class="tagline">6 agents</span><h2>6 agents that replace an assistant</h2><p class="how">Set up: open Claude, tap Projects, New project, and paste one into the Instructions box.</p><div class="pr"><span class="t">1. Inbox</span>You are my email assistant.
 
 TASK: Every time I paste an email, write the reply for me.
 
@@ -439,7 +442,7 @@ RULES:
 • Tell me the deadline and what happens if I ignore it
 • Draft any reply I need to send
 
-GIVE ME: what it is, what to do, by when, and the draft.<button class="cpy">Copy</button></div></div><div class="post" id="11_one_percent"><span class="tagline">7 upgrades</span><h2>Prompt Claude like the 1%</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own. Add any of these lines to whatever you ask. The answer gets much better.</p><div class="pr"><span class="t">1. Give it a job</span>Act as a <b>[type of expert]</b> with 20 years of experience who explains things simply.
+GIVE ME: what it is, what to do, by when, and the draft.<button class="cpy">Copy</button></div><span class="up">Like these? <a class="buy" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 money agents · $39 →</a></span><button class="shr" data-t="6 agents that replace an assistant" data-u="https://autopilotoi.app/vault/#08_six_agents">Send to a friend ↗</button></div><div class="post" id="11_one_percent"><span class="tagline">7 upgrades</span><h2>Prompt Claude like the 1%</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own. Add any of these lines to whatever you ask. The answer gets much better.</p><div class="pr"><span class="t">1. Give it a job</span>Act as a <b>[type of expert]</b> with 20 years of experience who explains things simply.
 
 Why it works: Claude answers like the expert you name, not like a search engine.<button class="cpy">Copy</button></div><div class="pr"><span class="t">2. Tell it your situation</span>Here’s my situation: <b>[who you are, what’s going on, what you’ve tried]</b>.
 
@@ -453,7 +456,7 @@ Why it works: one example beats ten sentences of explaining.<button class="cpy">
 
 Why it works: you see the tradeoffs before you choose.<button class="cpy">Copy</button></div><div class="pr"><span class="t">7. Make it check itself</span>Now act as a tough critic. What’s weak or wrong in your answer? Fix it and give me the better version.
 
-Why it works: the second answer is almost always stronger.<button class="cpy">Copy</button></div></div><div class="post" id="12_black_friday"><span class="tagline">7 prompts</span><h2>Plan your whole Black Friday</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. Buy or wait</span>You are a professional deal hunter who tracks prices all year.
+Why it works: the second answer is almost always stronger.<button class="cpy">Copy</button></div><span class="up">Like these? <a class="buy" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 money agents · $39 →</a></span><button class="shr" data-t="Prompt Claude like the 1%" data-u="https://autopilotoi.app/vault/#11_one_percent">Send to a friend ↗</button></div><div class="post" id="12_black_friday"><span class="tagline">7 prompts</span><h2>Plan your whole Black Friday</h2><p class="how">Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own.</p><div class="pr"><span class="t">1. Buy or wait</span>You are a professional deal hunter who tracks prices all year.
 
 TASK: Plan my Black Friday. I want: <b>[list]</b>. My budget: <b>[$ amount]</b>.
 
@@ -516,17 +519,19 @@ RULES:
 • Be polite and brief
 • Include what to say if they refuse
 
-GIVE ME: the message for chat or email, and a short in store script.<button class="cpy">Copy</button></div></div></div>
+GIVE ME: the message for chat or email, and a short in store script.<button class="cpy">Copy</button></div><span class="up">Like these? <a class="buy" href="https://autopilotoi.gumroad.com/l/all-money-agents">Get all 5 money agents · $39 →</a></span><button class="shr" data-t="Plan your whole Black Friday" data-u="https://autopilotoi.app/vault/#12_black_friday">Send to a friend ↗</button></div>
+<div class="post"><h2>Get the full setups.</h2><p class="how">Every money agent in one bundle: master prompts, starter prompts, setup guides and trackers.</p><a class="btn buy" style="margin-top:16px" href="https://autopilotoi.gumroad.com/l/all-money-agents">All 5 Money Agents · $39</a></div></div>
 <div class="foot"><div class="wrap"><div class="big">AUTOPILOT<span>.</span>OI</div><div><span>Free Claude prompts and agents, new every day.</span><span><a href="https://www.instagram.com/autopilot.oi/">Instagram</a> · <a href="/vault/">Free Vault</a> · <a href="/business/">For business</a> · <a href="/library/">All kits</a></span></div></div></div>
 <script src="/assets/ap.js"></script><script>
 function kit(f,src,done){f.addEventListener('submit',function(ev){ev.preventDefault();var i=f.querySelector('input'),b=f.querySelector('button'),m=f.parentNode.querySelector('.msg'),em=i.value.trim();
  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){m.textContent='Check that email and try again.';return}
- b.disabled=true;var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',src);
+ b.disabled=true;var fd=new FormData();fd.append('email_address',em);fd.append('fields[source]',src);var it=(location.hash||'').replace('#','');if(it)fd.append('fields[interest]',it);
  fetch('https://app.kit.com/forms/10118407/subscriptions',{method:'POST',body:fd,mode:'no-cors'}).then(function(){try{localStorage.setItem('ap_vault','1')}catch(x){}
   try{if(window.goatcounter)goatcounter.count({path:'optin/'+src,event:true})}catch(x){}done(m)}).catch(function(){b.disabled=false;m.textContent='Something went wrong. Try again in a moment.'})})}
 </script><script>
-var v=document.getElementById('v');function open_(){v.classList.remove('locked')}
+var v=document.getElementById('v');function open_(){v.classList.remove('locked');document.getElementById('offer').style.display='block'}
+document.querySelectorAll('.shr').forEach(function(b){b.onclick=function(){var d={title:b.dataset.t,text:'Free Claude prompts: '+b.dataset.t,url:b.dataset.u};if(navigator.share)navigator.share(d).catch(function(){});else navigator.clipboard.writeText(d.url).then(function(){b.textContent='Link copied'});try{if(window.goatcounter)goatcounter.count({path:'vault/share',event:true})}catch(x){}}});
 try{if(localStorage.getItem('ap_vault'))open_()}catch(x){}
 kit(document.querySelector('.cap'),'vault_page',function(m){open_()});
-document.querySelectorAll('.cpy').forEach(function(b){b.addEventListener('click',function(){var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var t=p.querySelector('.t');if(t)t.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1400)})})});
+document.querySelectorAll('.cpy').forEach(function(b){b.addEventListener('click',function(){var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var t=p.querySelector('.t');if(t)t.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){try{if(window.goatcounter)goatcounter.count({path:'vault/copy',event:true})}catch(x){}b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1400)})})});
 </script></body></html>
