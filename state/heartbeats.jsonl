@@ -278,3 +278,4 @@
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-13T16:43:02+00:00", "note": "0 routed (forms empty)"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-13T19:11:14+00:00", "note": "0 drafted, 0 escalated, 1 alert (SEV-2 Kit billing)"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-13T20:23:08+00:00", "note": "3 posts out today (IG 2, TikTok 1), top post saves+shares 0, feed written yes"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-13T20:45:02+00:00", "note": "branch builder/2026-11-13-cover-image-shape: drop and hero covers keep 4:5 shape on mobile (awaiting Seb)"}
