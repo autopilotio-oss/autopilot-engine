@@ -39,7 +39,7 @@ const d=D[P];
 document.getElementById('root').innerHTML=`<img class="ph" style="top:${-(d.sy||0)}px" src="/docs/media/hub/week1/${String(P).padStart(2,'0')}.jpg"><div class="fade"></div>
 <div class="logo"></div>
 <div class="blk"><div class="tag"><span>${d.tag||'100% AI · NOT REAL'}</span></div>${d.h.map((t,i)=>`<div class="ln${i==d.h.length-1?' l':''}">${t}</div>`).join('')}</div>
-<div class="bar"><span>@AUTOPILOT.OI</span><span>STEAL THE PROMPT →</span></div>`;
+<div class="bar"><span>@AUTOPILOT.OI</span><span>PROMPT HACK IN CAPTION ↓</span></div>`;
 Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>0))]).then(()=>{
  const W=976;
  document.querySelectorAll('.ln').forEach(e=>{e.style.fontSize='100px';const w=e.scrollWidth;e.style.fontSize=Math.max(64,Math.min(132,100*W/w))+'px'});
