@@ -32,7 +32,7 @@ HEAD = lambda title, desc, path: f'''<!DOCTYPE html><html lang="en"><head><meta 
 .cap{{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;max-width:560px}}.cap input{{flex:1;min-width:220px;height:56px;border-radius:999px;border:1.5px solid rgba(255,255,255,.22);background:#111;color:#fff;padding:0 22px;font:500 16px var(--T)}}
 .msg{{margin-top:12px;color:#c9c9c2;font-size:14px;min-height:20px}}.msg b{{color:var(--l)}}
 .drops{{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:34px}}.drop{{display:block;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--g2)}}
-.drop img{{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}}.drop div{{padding:14px 16px 16px}}.drop b{{display:block;font:700 15px/1.25 var(--T)}}.drop span{{font:600 11.5px var(--T);letter-spacing:.14em;text-transform:uppercase;color:var(--l)}}
+.drop img{{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}}.drop div{{padding:14px 16px 16px}}.drop b{{display:block;font:700 15px/1.25 var(--T)}}.drop span{{font:600 11.5px var(--T);letter-spacing:.14em;text-transform:uppercase;color:var(--l)}}
 .ags{{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:30px}}.ags .card b{{font:700 18px var(--T);display:block}}.ags .card .go{{display:inline-block;margin-top:14px;color:var(--l);font:700 15px var(--T)}}
 h2.hh{{font:400 clamp(26px,5vw,44px)/1 var(--W);text-transform:uppercase;letter-spacing:-.02em}}
 .post{{padding:54px 0;border-top:1px solid var(--line)}}.post h2{{font:400 clamp(22px,4.4vw,34px)/1.05 var(--W);text-transform:uppercase;letter-spacing:-.02em;margin:10px 0 8px}}
@@ -173,7 +173,7 @@ for k, sl, t, kind in ORDER:
     others = "".join(f'<a class="drop" href="/p/{SLUG[s2]}/"><img loading="lazy" width="480" height="600" src="/media/hub/week1/thumbs/{s2}.jpg" alt="{e(t2)}"><div><span>{k2}</span><b>{e(t2)}</b></div></a>' for _, s2, t2, k2 in ORDER if s2 != sl)[:99999]
     pg = HEAD(f"{t} · free Claude {'agent' if d['type']=='a' else 'prompts'} · AUTOPILOT.OI", e(desc), f"/p/{slug}/") + f"""
 <div class="wrap hero" style="padding-bottom:10px"><span class="tagline live">Free · {kind}</span><h1>{e(t)}<em>.</em></h1><p class="lead">{e(how)}</p></div>
-<div class="wrap"><img src="/media/hub/week1/thumbs/{sl}.jpg" width="480" height="600" alt="{e(t)}" style="display:block;width:100%;max-width:420px;border-radius:18px;margin:10px 0 6px">{body}{more}{up}
+<div class="wrap"><img src="/media/hub/week1/thumbs/{sl}.jpg" width="480" height="600" alt="{e(t)}" style="display:block;width:100%;height:auto;max-width:420px;border-radius:18px;margin:10px 0 6px">{body}{more}{up}
 <div class="post"><h2>More free drops</h2><div class="drops" style="margin-top:20px">{others}</div></div></div>
 {FOOT}<script>document.querySelectorAll('.cpy').forEach(function(b){{b.addEventListener('click',function(){{var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var x=p.querySelector('.t');if(x)x.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){{b.textContent='Copied';setTimeout(function(){{b.textContent='Copy'}},1400)}})}})}});</script></body></html>"""
     open(f"{R}/docs/p/{slug}/index.html", "w").write(pg)
