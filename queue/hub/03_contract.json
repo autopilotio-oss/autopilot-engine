@@ -1,0 +1,13 @@
+{
+ "slug": "03_contract",
+ "uuid": "-1583962397012440431",
+ "metricool_id": 427213580,
+ "when": "2026-11-15T19:00:00-05:00",
+ "networks": [
+  "instagram",
+  "tiktok"
+ ],
+ "status": "scheduled",
+ "approved_by_seb": true,
+ "note": "Seb, Nov 13: 'take control, start with these IG posts for a week'."
+}

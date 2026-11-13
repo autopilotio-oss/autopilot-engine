@@ -1,0 +1,13 @@
+{
+ "slug": "01_job_agent",
+ "uuid": "3708738770996120858",
+ "metricool_id": 427214229,
+ "when": "2026-11-18T12:00:00-05:00",
+ "networks": [
+  "instagram",
+  "tiktok"
+ ],
+ "status": "scheduled",
+ "approved_by_seb": true,
+ "note": "Seb, Nov 13: 'take control, start with these IG posts for a week'."
+}

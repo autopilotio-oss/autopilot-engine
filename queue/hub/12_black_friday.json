@@ -1,0 +1,13 @@
+{
+ "slug": "12_black_friday",
+ "uuid": "-8308895320733302662",
+ "metricool_id": 427214353,
+ "when": "2026-11-18T19:00:00-05:00",
+ "networks": [
+  "instagram",
+  "tiktok"
+ ],
+ "status": "scheduled",
+ "approved_by_seb": true,
+ "note": "Seb, Nov 13: 'take control, start with these IG posts for a week'."
+}

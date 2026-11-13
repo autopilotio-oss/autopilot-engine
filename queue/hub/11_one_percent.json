@@ -1,0 +1,13 @@
+{
+ "slug": "11_one_percent",
+ "uuid": "-1223160223536231187",
+ "metricool_id": 427213201,
+ "when": "2026-11-14T19:00:00-05:00",
+ "networks": [
+  "instagram",
+  "tiktok"
+ ],
+ "status": "scheduled",
+ "approved_by_seb": true,
+ "note": "Seb, Nov 13: 'take control, start with these IG posts for a week'."
+}
