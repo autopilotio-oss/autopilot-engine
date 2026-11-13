@@ -1,0 +1,374 @@
+{
+ "10": {
+  "type": "a",
+  "name": "Job Hunter",
+  "does": [
+   "Searches the web for new jobs that fit you",
+   "Shows the best 5 with pay and links",
+   "Rewrites your resume and cover letter for the one you pick"
+  ],
+  "instr": "You are my job hunter. My resume is in this project.\nI want [job title] jobs in [city, or remote] that pay at least [$ amount].\n\nEvery time I say \"go\":\n1. Search the web for new job listings from the last 7 days that fit me.\n2. Show me the best 5 in a simple table: job, company, pay, link, and why I fit.\n3. Ask me which one I want.\n4. For the one I pick, rewrite my resume for that job and write a short cover letter.\n\nNever make up experience I don't have.",
+  "use": [
+   "Type \"go\" to get today's best 5 jobs",
+   "Reply with the number of the job you want",
+   "Tell it \"do this every morning at 7am\" and wake up to the list"
+  ],
+  "add": "your resume",
+  "note": null
+ },
+ "17": {
+  "type": "p",
+  "name": "Bank Statement Check",
+  "items": [
+   [
+    "Sort it",
+    "Here is my bank statement. Sort every charge into groups (rent, food, subscriptions, fun, other) and show me the total for each."
+   ],
+   [
+    "Find subscriptions",
+    "List every subscription and repeating charge. Mark the ones I could cancel."
+   ],
+   [
+    "Catch mistakes",
+    "Find any charge that looks like a mistake, a double charge or a hidden fee."
+   ],
+   [
+    "Find the leaks",
+    "What are my 5 biggest money leaks? How much would I save each month if I fixed each one?"
+   ],
+   [
+    "Build a budget",
+    "I take home [$ amount] a month. Build me a simple budget from what you see here."
+   ],
+   [
+    "Hit a goal",
+    "I want to save [$ amount] by [date]. Show me exactly what to cut to get there."
+   ],
+   [
+    "Get money back",
+    "Write the message to cancel [charge] or ask for a refund."
+   ]
+  ],
+  "prep": "First: download last month’s statement from your bank app as a PDF and attach it. Cross out your account number.",
+  "label": "PROMPT",
+  "steps": "p",
+  "note": null
+ },
+ "20": {
+  "type": "p",
+  "name": "Contract Check",
+  "items": [
+   [
+    "Plain words",
+    "Explain this contract in plain words, like I’m 15."
+   ],
+   [
+    "What you pay",
+    "List everything I’m agreeing to pay, and when."
+   ],
+   [
+    "Red flags",
+    "What are the red flags or unusual parts?"
+   ],
+   [
+    "Your way out",
+    "How do I get out of this, and what would it cost me?"
+   ],
+   [
+    "The penalties",
+    "What happens if I pay late or break a rule?"
+   ],
+   [
+    "Ask for changes",
+    "What should I ask them to change before I sign? Write the message for me."
+   ],
+   [
+    "Before you sign",
+    "Give me 5 questions to ask before I sign."
+   ]
+  ],
+  "prep": "First: take a photo of every page, or attach the PDF.",
+  "label": "PROMPT",
+  "steps": "p",
+  "note": "Claude helps you understand it. For big contracts, still talk to a lawyer."
+ },
+ "25": {
+  "type": "a",
+  "name": "Night Shift",
+  "does": [
+   "Takes up to 7 tasks from you before bed",
+   "Does every one without asking questions",
+   "Hands you one morning report with the finished work"
+  ],
+  "instr": "You are my night shift.\nEach evening I'll give you a list of up to 7 tasks.\nDo every task fully. Don't stop to ask me questions. If something is unclear, make your best guess and tell me what you guessed.\n\nWhen you're done, give me one morning report:\n1. Each task and the finished work.\n2. Anything you need from me.\n3. The one thing I should do first today.",
+  "use": [
+   "Write replies to these 3 emails: [paste]",
+   "Compare these 3 [products] and pick the best one for me",
+   "Plan my dinners for the week on [$ amount]",
+   "Turn my messy notes into a clean to do list: [paste]",
+   "Write a message asking [company] for a refund"
+  ],
+  "add": null,
+  "note": null
+ },
+ "7": {
+  "type": "p",
+  "name": "Side Hustle Finder",
+  "items": [
+   [
+    "Find your 7",
+    "I’m good at [your skills] and I have [number] free hours a week. Give me 7 side hustles I could start this weekend with less than [$ amount]."
+   ],
+   [
+    "Find customers",
+    "For [the one you picked]: who would pay me for this, and where do I find them?"
+   ],
+   [
+    "Set your price",
+    "What should I charge? Give me a low, middle and high price."
+   ],
+   [
+    "Write the post",
+    "Write a short post offering this that I can put on Facebook, Nextdoor or Instagram."
+   ],
+   [
+    "First 10 customers",
+    "Write the message I can send to my first 10 possible customers."
+   ],
+   [
+    "Your first week",
+    "Give me a simple day by day plan for my first 7 days."
+   ],
+   [
+    "Avoid mistakes",
+    "What could go wrong, and how do I avoid it?"
+   ]
+  ],
+  "prep": null,
+  "label": "PROMPT",
+  "steps": "p",
+  "note": null
+ },
+ "26": {
+  "type": "a",
+  "name": "Team of 5",
+  "does": [
+   "INBOX writes your replies. MONEY finds what to cut",
+   "JOBS finds work. MEALS plans dinner and groceries",
+   "PLANNER turns your to do list into a schedule"
+  ],
+  "instr": "You are my team of 5 assistants. When my message starts with one of these names, answer as that assistant:\n\nINBOX: writes replies to any email or text I paste in.\nMONEY: reads my bills and statements and finds what I can cut.\nJOBS: finds job listings for me and fixes my resume for each one.\nMEALS: plans a week of dinners and one grocery list for [number] people on [$ amount].\nPLANNER: turns my to do list into a schedule for the day or week.\n\nKeep every answer short and ready to use.\nAbout me: [your job, your city, who you live with, your goals].",
+  "use": [
+   "MEALS: plan this week",
+   "INBOX: reply to this [paste email]",
+   "MONEY: check this bill [attach it]",
+   "PLANNER: here’s my to do list [paste]",
+   "JOBS: find me 5 jobs today"
+  ],
+  "add": null,
+  "note": null
+ },
+ "1": {
+  "type": "p",
+  "name": "10 Year Money Plan",
+  "items": [
+   [
+    "See your future",
+    "I’m [age]. I earn [$ amount] a year, I have [$ amount] saved and I owe [$ amount]. Show me where I could be in 10 years if I change nothing."
+   ],
+   [
+    "Try 3 versions",
+    "Now show me 3 more versions: if I save $100 more a month, $300 more, and $500 more."
+   ],
+   [
+    "The 3 big moves",
+    "What 3 decisions would change my numbers the most?"
+   ],
+   [
+    "Kill the debt",
+    "Here are my debts and their interest rates: [list]. What’s the fastest way to pay them off?"
+   ],
+   [
+    "Safety money",
+    "How much emergency money should I have, and how do I build it in one year?"
+   ],
+   [
+    "Where savings go",
+    "Explain in simple words where beginners usually put long term savings, with the good and bad of each."
+   ],
+   [
+    "One page plan",
+    "Turn all of this into a one page plan: what to do this month, this year, and by 2036."
+   ]
+  ],
+  "prep": null,
+  "label": "PROMPT",
+  "steps": "p",
+  "note": "These are estimates to help you plan, not financial advice."
+ },
+ "16": {
+  "type": "p",
+  "name": "6 Agents",
+  "items": [
+   [
+    "Inbox",
+    "Every time I paste an email, write a short, friendly reply in my voice that I can send as is."
+   ],
+   [
+    "Planner",
+    "Every time I paste my to do list, turn it into a schedule with times. Put the most important thing first."
+   ],
+   [
+    "Bills",
+    "Every time I add a bill or statement, tell me what it’s for, when it’s due, and if anything looks too high."
+   ],
+   [
+    "Meals",
+    "Every Sunday when I say \"go\", plan 7 dinners for [number] people on [$ amount] and give me one grocery list."
+   ],
+   [
+    "Shopper",
+    "Every time I name something I want to buy, search the web, compare the top 3 choices and tell me which to get."
+   ],
+   [
+    "Paperwork",
+    "Every time I add a letter or form, explain it in plain words and tell me exactly what to do next."
+   ]
+  ],
+  "prep": null,
+  "label": "AGENT",
+  "steps": "a",
+  "note": null
+ },
+ "23": {
+  "type": "p",
+  "name": "Bill Fighter",
+  "items": [
+   [
+    "Internet or phone",
+    "Write what to say when I call [company] to lower my [$ amount] bill. I’ve been a customer for [years]. Include what to say if they say no."
+   ],
+   [
+    "Rent",
+    "My landlord wants to raise my rent from [$ amount] to [$ amount]. Write a polite message asking for a smaller increase. I’ve lived here [years] and always pay on time."
+   ],
+   [
+    "Medical bill",
+    "Write a message asking [hospital or office] for an itemized bill, a discount and a payment plan for my [$ amount] bill."
+   ],
+   [
+    "Insurance",
+    "Write what to say to [company] to ask for a lower rate on my [car or home] insurance. I pay [$ amount] now."
+   ],
+   [
+    "Bank fee",
+    "Write a message asking [bank] to refund a [$ amount] [type of fee]."
+   ],
+   [
+    "Subscription",
+    "Write what to say to [company] to cancel, and how to answer if they offer me a deal to stay."
+   ],
+   [
+    "Credit card",
+    "Write what to say when I call [card company] to ask for a lower interest rate. I’ve had the card [years]."
+   ]
+  ],
+  "prep": null,
+  "label": "SCRIPT",
+  "steps": "p",
+  "note": null
+ },
+ "3": {
+  "type": "a",
+  "name": "Interview Coach",
+  "does": [
+   "Asks real interview questions for your exact job",
+   "Scores every answer and shows you a stronger one",
+   "Gives you a cheat sheet for the real thing"
+  ],
+  "instr": "You are my interview coach. My resume and the job listing are in this project.\n\nWhen I say \"go\":\n1. Ask me one interview question at a time, like a real interviewer for this job.\n2. After each answer, score it from 1 to 10. Tell me what was good and what to fix.\n3. Show me a stronger answer that uses my real experience.\n\nAfter 10 questions, tell me my 3 weak spots and give me a one page cheat sheet for the real interview.",
+  "use": [
+   "Type \"go\" to start the practice interview",
+   "Answer like it’s the real thing",
+   "Say \"harder\" when it gets easy"
+  ],
+  "add": "your resume and the job listing",
+  "note": null
+ },
+ "24": {
+  "type": "p",
+  "name": "The 1% Setup",
+  "items": [
+   [
+    "Give it a job",
+    "Act as a [type of expert]."
+   ],
+   [
+    "Tell it your situation",
+    "Here’s what’s going on: [2 or 3 sentences]."
+   ],
+   [
+    "Say what you want back",
+    "Give me [a table / 5 bullets / under 100 words]."
+   ],
+   [
+    "Let it ask first",
+    "Before you answer, ask me anything you need to know."
+   ],
+   [
+    "Show an example",
+    "Here’s one I like. Make it like this: [paste]."
+   ],
+   [
+    "Ask for choices",
+    "Give me 3 options and tell me which you’d pick."
+   ],
+   [
+    "Make it check itself",
+    "What’s weak about that answer? Fix it."
+   ]
+  ],
+  "prep": "Add any of these lines to whatever you ask. The answer gets much better.",
+  "label": "UPGRADE",
+  "steps": "p",
+  "note": null
+ },
+ "18": {
+  "type": "p",
+  "name": "Black Friday Plan",
+  "items": [
+   [
+    "Buy or wait",
+    "I want to buy [list of things]. My budget is [$ amount]. What’s worth buying on Black Friday, and what should I wait on?"
+   ],
+   [
+    "Real deal check",
+    "Search the web for what [item] usually costs. Is [$ amount] at [store] a real deal?"
+   ],
+   [
+    "Pick the winner",
+    "Compare [item A] and [item B]. Which is better for [what you’ll use it for]?"
+   ],
+   [
+    "Set your limits",
+    "Make my shopping list with a max price for each item so I don’t overspend."
+   ],
+   [
+    "Gift ideas",
+    "Give me gift ideas for [person and what they like] under [$ amount]."
+   ],
+   [
+    "Best stores",
+    "Which stores usually have the best deals on [item], and when do they start?"
+   ],
+   [
+    "Price match",
+    "I bought [item] for [$ amount] and found it cheaper. Write the message asking for a price match."
+   ]
+  ],
+  "prep": null,
+  "label": "PROMPT",
+  "steps": "p",
+  "note": null
+ }
+}

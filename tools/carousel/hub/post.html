@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-Medium.woff)}
+@font-face{font-family:TS;src:url(/docs/assets/fonts/APText-SemiBold.woff)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#050505}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;background:var(--K);color:#fff;font-family:T}
+.logo{position:absolute;left:46px;top:44px;width:112px;height:112px;border-radius:21px;background:url(/docs/media/hub/ap_badge.png) center/cover;transform:rotate(-6deg)}
+.cnt{position:absolute;right:56px;top:76px;font-family:M;font-size:26px;color:#b0b0b0;letter-spacing:1px}
+.bar{position:absolute;left:0;right:0;bottom:0;height:62px;background:var(--L);display:flex;align-items:center;justify-content:space-between;padding:0 52px;font-family:M;font-weight:700;font-size:24px;color:#000;letter-spacing:1px}
+.wrap{position:absolute;left:64px;right:64px;top:214px;bottom:110px;display:flex;flex-direction:column}
+.tag{align-self:flex-start;background:var(--L);color:#000;font-family:A;font-size:40px;letter-spacing:.5px;padding:5px 22px 3px;transform:skewX(-10deg);box-shadow:5px 5px 0 #000}
+.tag span{display:inline-block;transform:skewX(10deg)}
+.h{font-family:A;text-transform:uppercase;font-size:112px;line-height:.98;letter-spacing:.3px;margin-top:26px}
+.h .l{color:var(--L)}
+.box{margin-top:44px;border-left:8px solid var(--L);padding:4px 0 4px 34px;font-size:50px;line-height:1.38;color:#f1f0ea;white-space:pre-wrap}
+.box b{font-weight:400;color:#000;background:var(--L);padding:0 .1em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hint{margin-top:auto;font-family:M;font-size:26px;color:#b0b0b0;letter-spacing:.5px}
+.hint i{font-style:normal;color:var(--L)}
+.st{display:flex;gap:30px;align-items:flex-start;padding:30px 0;border-top:3px solid #2a2a27}
+.st:first-child{border-top:0}
+.st .n{font-family:A;font-size:92px;line-height:.9;color:var(--L);width:86px;flex:none}
+.st .t{font-family:TS;font-size:46px;line-height:1.22;padding-top:4px}
+.note{margin-top:34px;background:var(--L);color:#000;font-family:TS;font-size:36px;line-height:1.25;padding:22px 26px;border-radius:14px}
+</style></head><body><div id="root"></div><script>
+const q=new URLSearchParams(location.search),P=q.get('p'),N=+q.get('n');
+const br=t=>t.replace(/\[(.*?)\]/g,'<b>[$1]</b>');
+fetch('/content/hub/week1_posts.json').then(r=>r.json()).then(D=>{const d=D[P];
+const total=d.type=='p'?d.items.length+3:6;window.TOTAL=total;
+const SP=['Open Claude. It’s free at claude.ai or in the app','Copy the prompt and paste it in','Swap the words in [brackets] for yours and hit send'];
+const SA=['Open Claude. Tap Projects, then New project','Name it'+(d.type=='a'?' “'+d.name+'”':''),'Paste the instructions into the Instructions box',(d.add?'Add '+d.add:'Add your files if it asks for them'),'Open a chat in the project and type “go”'];
+const steps=a=>a.map((t,i)=>`<div class="st"><div class="n">${i+1}</div><div class="t">${br(t)}</div></div>`).join('');
+const fr=(tag,h,body,right='SWIPE →')=>`<div class="logo"></div><div class="cnt">${String(N).padStart(2,'0')}/${String(total).padStart(2,'0')}</div><div class="wrap"><div class="tag"><span>${tag}</span></div><div class="h">${h}</div>${body}</div><div class="bar"><span>@AUTOPILOT.OI</span><span>${right}</span></div>`;
+let h='';
+const save=()=>fr('LAST STEP','Save this.<br><span class="l">You’ll need it.</span>',`<div style="margin-top:50px">${steps(['Save this post so you can find it later','Send it to someone who needs it','Follow @autopilot.oi for a new one every day'])}</div>${d.note?`<div class="note">${d.note}</div>`:''}`,'SAVE ↓');
+if(d.type=='p'){
+ if(N==2) h=fr('START HERE',d.steps=='a'?'Set up takes<br><span class="l">10 minutes.</span>':'How to<br><span class="l">use this.</span>',`<div id="fit" style="margin-top:34px">${steps(d.steps=='a'?SA:SP)}${d.prep?`<div class="note">${d.prep}</div>`:''}</div>`);
+ else if(N==total) h=save();
+ else{const i=N-3,[t,x]=d.items[i];h=fr(`${d.label} ${i+1} OF ${d.items.length}`,t,`<div class="box" id="fit">${br(x)}</div><div class="hint">copy it · swap the <i>lime</i> parts for yours</div>`)}
+}else{
+ if(N==2) h=fr('MEET YOUR AGENT','What it<br><span class="l">does for you.</span>',`<div style="margin-top:44px">${steps(d.does)}</div>`);
+ else if(N==3) h=fr('SET UP','10 minutes.<br><span class="l">5 steps.</span>',`<div id="fit" style="margin-top:30px">${steps(SA)}</div>`);
+ else if(N==4) h=fr('STEP 3','Paste this<br><span class="l">in.</span>',`<div class="box" id="fit">${br(d.instr)}</div><div class="hint">full text in the caption · swap the <i>lime</i> parts</div>`);
+ else if(N==5) h=fr('NOW USE IT','Just<br><span class="l">type this.</span>',`<div id="fit" style="margin-top:30px">${steps(d.use)}</div>`);
+ else h=save();
+}
+document.getElementById('root').innerHTML=h;
+document.fonts.ready.then(()=>{const w=document.querySelector('.wrap'),f=document.getElementById('fit');
+ if(f){let z=1;const kids=[f,...f.querySelectorAll('.t,.n,.note')];const base=kids.map(e=>parseFloat(getComputedStyle(e).fontSize));
+  while(w.scrollHeight>w.clientHeight+1&&z>.45){z-=.03;kids.forEach((e,i)=>e.style.fontSize=base[i]*z+'px');f.querySelectorAll('.st').forEach(e=>e.style.padding=30*z+'px 0')}}
+ if(f&&f.classList.contains('box')){let z=parseFloat(getComputedStyle(f).fontSize);while(w.scrollHeight<=w.clientHeight&&z<84&&f.offsetHeight<560){z+=2;f.style.fontSize=z+'px'}if(w.scrollHeight>w.clientHeight)f.style.fontSize=(z-2)+'px'}
+ window.READY=1})});
+</script></body></html>
