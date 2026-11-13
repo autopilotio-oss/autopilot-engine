@@ -52,9 +52,12 @@ function kit(f,src,done){f.addEventListener('submit',function(ev){ev.preventDefa
   try{if(window.goatcounter)goatcounter.count({path:'optin/'+src,event:true})}catch(x){}done(m)}).catch(function(){b.disabled=false;m.textContent='Something went wrong. Try again in a moment.'})})}
 </script>'''
 FORM = lambda btn: f'<form class="cap"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email"><button class="btn" type="submit">{btn}</button></form><div class="msg"></div>'
+SLUG = {"05_side_hustles":"claude-prompts-side-hustle","09_bill_fighter":"claude-prompts-lower-bills","02_bank_statement":"claude-prompts-bank-statement","01_job_agent":"claude-agent-job-search",
+ "03_contract":"claude-prompts-read-a-contract","04_night_shift":"claude-agent-night-shift","07_money_plan":"claude-prompts-10-year-money-plan","06_team_of_5":"claude-agent-team-of-5",
+ "10_interview_coach":"claude-agent-interview-prep","08_six_agents":"claude-agents-personal-assistant","11_one_percent":"how-to-prompt-claude","12_black_friday":"claude-prompts-black-friday"}
 # ---------- home
 NP = sum(len(d["items"]) for d in D.values() if d["type"] == "p"); NA = sum(1 for d in D.values() if d["type"] == "a")
-drops = "".join(f'<a class="drop rv" href="/vault/#{s}"><img loading="lazy" width="480" height="600" src="/media/hub/week1/thumbs/{s}.jpg" alt="{e(t)}"><div><span>{k}</span><b>{e(t)}</b></div></a>' for _, s, t, k in ORDER)
+drops = "".join(f'<a class="drop rv" href="/p/{SLUG[s]}/"><img loading="lazy" width="480" height="600" src="/media/hub/week1/thumbs/{s}.jpg" alt="{e(t)}"><div><span>{k}</span><b>{e(t)}</b></div></a>' for _, s, t, k in ORDER)
 marq = "".join(f'<img loading="lazy" width="184" height="230" src="/media/hub/week1/thumbs/{s}.jpg" alt="">' for _, s, t, k in ORDER) * 2
 ags = "".join(f'<div class="card rv"><b>{n}</b><p>{e(d)}</p><a class="go buy" href="{G}{s}">Get it · $10 →</a></div>' for s, n, d in AG)
 DEMO = [("Lower a bill", D["23"]["items"][0][1]), ("Start a side hustle", D["7"]["items"][0][1]), ("Check a contract", D["20"]["items"][2][1])]
@@ -150,3 +153,27 @@ document.querySelectorAll('.cpy').forEach(function(b){{b.addEventListener('click
 </script></body></html>'''
 open(f"{R}/docs/vault/index.html", "w").write(vault)
 print("built", len(home), len(vault))
+
+# ---------- topic pages for search (first prompts open, the rest in the Vault)
+for k, sl, t, kind in ORDER:
+    d = D[k]; slug = SLUG[sl]; os.makedirs(f"{R}/docs/p/{slug}", exist_ok=True)
+    if d["type"] == "p":
+        open_ = d["items"][:2]; rest = len(d["items"]) - 2
+        body = "".join(f'<div class="pr"><span class="t">{i+1}. {e(a)}</span>{br(b)}<button class="cpy">Copy</button></div>' for i, (a, b) in enumerate(open_))
+        more = f'<div class="offer" style="display:block"><b>{rest} more in the free Vault.</b><p class="how">' + e(", ".join(a for a, _ in d["items"][2:])) + f'.</p><a class="btn" style="margin-top:14px" href="/vault/#{sl}">Unlock them free</a></div>'
+        how = "Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own."
+        desc = f"Free copy and paste Claude prompts: {t.lower()}. " + ", ".join(a for a, _ in d["items"][:4]) + " and more."
+    else:
+        body = "".join(f'<div class="pr"><span class="t">What it does</span>{e(x)}</div>' for x in d["does"])
+        more = f'<div class="offer" style="display:block"><b>Get the agent instructions free.</b><p class="how">The full instructions and the 5 step setup are in the Vault.</p><a class="btn" style="margin-top:14px" href="/vault/#{sl}">Unlock it free</a></div>'
+        how = "A Claude agent is a Claude project that remembers its job. Setup takes about 10 minutes."
+        desc = f"Free Claude agent: {t.lower()}. " + " ".join(d["does"])[:120]
+    up = f'<p style="margin-top:22px"><span class="up">Want the full setup? <a class="buy" href="{G}{UP[sl][0]}">Get the {UP[sl][1]} · $10 →</a></span></p>' if sl in UP else ""
+    others = "".join(f'<a class="drop" href="/p/{SLUG[s2]}/"><img loading="lazy" width="480" height="600" src="/media/hub/week1/thumbs/{s2}.jpg" alt="{e(t2)}"><div><span>{k2}</span><b>{e(t2)}</b></div></a>' for _, s2, t2, k2 in ORDER if s2 != sl)[:99999]
+    pg = HEAD(f"{t} · free Claude {'agent' if d['type']=='a' else 'prompts'} · AUTOPILOT.OI", e(desc), f"/p/{slug}/") + f"""
+<div class="wrap hero" style="padding-bottom:10px"><span class="tagline live">Free · {kind}</span><h1>{e(t)}<em>.</em></h1><p class="lead">{e(how)}</p></div>
+<div class="wrap"><img src="/media/hub/week1/thumbs/{sl}.jpg" width="480" height="600" alt="{e(t)}" style="display:block;width:100%;max-width:420px;border-radius:18px;margin:10px 0 6px">{body}{more}{up}
+<div class="post"><h2>More free drops</h2><div class="drops" style="margin-top:20px">{others}</div></div></div>
+{FOOT}<script>document.querySelectorAll('.cpy').forEach(function(b){{b.addEventListener('click',function(){{var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var x=p.querySelector('.t');if(x)x.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){{b.textContent='Copied';setTimeout(function(){{b.textContent='Copy'}},1400)}})}})}});</script></body></html>"""
+    open(f"{R}/docs/p/{slug}/index.html", "w").write(pg)
+print("topic pages", len(ORDER))
