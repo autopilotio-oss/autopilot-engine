@@ -1,0 +1,13 @@
+{
+ "slug": "09_bill_fighter",
+ "uuid": "-3611123161944143222",
+ "metricool_id": 427112334,
+ "when": "2026-11-14T19:00:00-05:00",
+ "networks": [
+  "instagram",
+  "tiktok"
+ ],
+ "status": "draft",
+ "approved_by_seb": false,
+ "note": "Hub week 1. Draft only. Needs Seb's approval before it is switched from draft."
+}
