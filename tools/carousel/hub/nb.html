@@ -43,6 +43,19 @@ const POSTS={
     next:[9,1,3]},
  5:{hook:"Nano Banana can now fake a photo this real. One prompt.",prompt:"x",next:[1,2,3]},
  8:{hook:"AI just made photography weird. Here’s the prompt.",prompt:"x",next:[1,2,3]},
+ 15:{hook:"Grandma just won the hot dog contest. None of this is real.",prompt:"x",next:[1,2,3]},
+ 16:{hook:"Just a normal Tuesday. Except none of it is real.",prompt:"x",next:[1,2,3]},
+ 17:{hook:"This photo isn’t real. Your feed won’t tell you that.",prompt:"x",next:[1,2,3]},
+ 18:{sy:360,hook:"Thanksgiving photos are about to get weird. One prompt.",prompt:"x",next:[1,2,3]},
+ 19:{hook:"Nobody in this photo exists. Not even the alligator.",prompt:"x",next:[1,2,3]},
+ 20:{hook:"No wedding photographer took this. AI did.",prompt:"x",next:[1,2,3]},
+ 21:{hook:"The most real fake photo we’ve made yet. One prompt.",prompt:"x",next:[1,2,3]},
+ 22:{sy:140,hook:"Zero cameras were used for this. One prompt.",prompt:"x",next:[1,2,3]},
+ 23:{hook:"Grandma had a night. None of it happened.",prompt:"x",next:[1,2,3]},
+ 24:{hook:"You’re going to zoom in to check. It’s not real.",prompt:"x",next:[1,2,3]},
+ 25:{hook:"Traffic, but make it AI. One prompt.",prompt:"x",next:[1,2,3]},
+ 26:{hook:"She’s winning. She also doesn’t exist.",prompt:"x",next:[1,2,3]},
+ 27:{sy:230,hook:"This priest doesn’t exist. The photo looks 100% real.",prompt:"x",next:[1,2,3]},
  7:{hook:"This photo isn’t real. Neither are the grandmas.",
     prompt:"Candid direct flash photo shot on a 35mm film camera: a [huge tanned bodybuilder in a tight tank top] [knitting a pink scarf], sitting in a [circle of smiling grandmas in a cozy living room] with floral couches and doilies, harsh on camera flash, film grain, realistic skin texture, vertical 4:5, no text, no logos",
     next:[10,3,2]},
@@ -59,7 +72,7 @@ const tp=()=>`<div class="top"><span class="cnt">${cnt}</span><span class="chip"
 const bot=r=>`<div class="bot"><b>@autopilot.oi</b><span>${r}</span></div>`;
 const br=t=>t.replace(/\[(.*?)\]/g,'<span class="b">$1</span>');
 let h='';
-if(N==1) h=`<div class="pg"><img class="ph" src="${img(P)}"><div class="fade"></div>${tp()}
+if(N==1) h=`<div class="pg"><img class="ph" style="top:${-(p.sy||0)}px" src="${img(P)}"><div class="fade"></div>${tp()}
  <div class="txt"><div class="hook">${p.hook}</div><div class="cta">Steal the prompt →</div></div>${bot('SWIPE →')}</div>`;
 else if(N==2) h=`<div class="pg" style="padding:58px 64px">${tp()}
  <div style="position:absolute;left:64px;right:64px;top:150px;bottom:140px;display:flex;flex-direction:column">

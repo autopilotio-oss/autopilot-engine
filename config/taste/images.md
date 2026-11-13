@@ -19,6 +19,14 @@ Week 1 (sent Nov 12, Nano Banana, all slot prompts used as written; files docs/m
 - #8 ballerina boxing: brick gym, sweat spray. Posters look like a famous boxer (needs regen).
 - #9 cowboy sushi: warm restaurant, customers watching. Pre-faded bottom.
 - #10 office dog: night city bokeh, dog in suit, profile.
+Batch 2 (Nov 13, his own ideas, files 15..33): hot dog contest grandma, horse at breakfast, cow in minivan,
+tortoise at Thanksgiving, alligator in shopping cart (tux grandpa), flooded wedding canoe priest, ship in driveway,
+flood rooftop BBQ, tiara grandma on cop car, giraffe through diner ceiling, bathtub on highway, grandma arm wrestling,
+upside down priest (dropped: reads as a hanging when cropped), bodybuilder yelling at crying grandma (held: mean),
+Santa at pool (beer logo), crying taco costume (fast food bag logo), suit water ski behind truck (truck/car badges),
+hearse coffin waving (car/jet ski logos, duplicate sent), hazmat chainsaw cake (chainsaw brand logo).
+Batch 2 patterns: absurd object or animal dropped into a mundane American suburban scene, bystanders reacting,
+deadpan subject looking at camera, vintage date stamps, red eye flash, heavy 90s/00s film look, elders as the stars.
 Patterns so far: real 35mm film grain, direct flash at night, deadpan or big genuine emotion, humor from one clean
 clash, subject centered in the upper two thirds, he often fades the bottom to black himself (ready for text).
 
