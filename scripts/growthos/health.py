@@ -11,7 +11,7 @@ import datetime as dt, json, os, sys, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from events import Store, ROOT, now  # noqa: E402
 
-PAGES = [("home", "https://autopilotoi.app/", "/marketplace/"), ("marketplace", "https://autopilotoi.app/marketplace/", "gumroad.com/l/autopilot"),
+PAGES = [("home", "https://autopilotoi.app/", "gumroad.com/l/all-money-agents"), ("vault", "https://autopilotoi.app/vault/", "kit.com"), ("business_home", "https://autopilotoi.app/business/", "/marketplace/"), ("marketplace", "https://autopilotoi.app/marketplace/", "gumroad.com/l/autopilot"),
          ("front_desk", "https://autopilotoi.app/front-desk/", "gumroad.com/l/autopilot"), ("fd_after_hours", "https://autopilotoi.app/front-desk/after-hours/", "Still answering quotes after hours"), ("fd_demo", "https://autopilotoi.app/front-desk/demo/", "The setup, step by step"), ("brain_optin", "https://autopilotoi.app/brain/", "early-optin"), ("workspace", "https://autopilotoi.app/workspace/", "gumroad.com/l/workspace-founding"),
          ("office_autopilot", "https://autopilotoi.app/office-autopilot/", "gumroad.com/l/workspace"), ("library", "https://autopilotoi.app/library/", "/store/subs/"),
          ("store_redirect", "https://autopilotoi.app/store/", "/library/"), ("autopilot_redirect", "https://autopilotoi.app/autopilot/", "/front-desk/"),
