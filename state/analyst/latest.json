@@ -1,35 +1,79 @@
 {
-  "at": "2026-11-13T00:30:00Z",
+  "at": "2026-11-13T12:30:00Z",
   "posts_today": {
-    "instagram": {"published": 0, "pending": 1, "error": 0},
-    "twitter": {"published": 0, "pending": 0, "error": 0},
-    "threads": {"published": 0, "pending": 0, "error": 0},
-    "tiktok": {"published": 0, "pending": 0, "error": 0}
+    "instagram": {
+      "published": 0,
+      "pending": 1,
+      "error": 0
+    },
+    "twitter": {
+      "published": 0,
+      "pending": 0,
+      "error": 0
+    },
+    "threads": {
+      "published": 0,
+      "pending": 0,
+      "error": 0
+    },
+    "tiktok": {
+      "published": 0,
+      "pending": 0,
+      "error": 0
+    }
   },
   "top_posts": [
     {
-      "network": "instagram",
-      "published_at": "2026-11-10T13:06:49-03:00",
-      "text": "They want a quote tonight and you're still on a job.",
-      "metrics": {"reach": 16, "views": 18, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/reel/Dfj-ENLoSat/"
-    },
-    {
       "network": "tiktok",
-      "published_at": "2026-11-11T15:11:02-03:00",
+      "published_at": "2026-11-11T15:11:02Z",
       "text": "Steal these 3 hook rewrites.",
-      "metrics": {"views": 55, "comments": 0, "shares": 0, "saves": null, "reach": null, "profile_visits": null},
+      "metrics": {
+        "views": 72,
+        "comments": 0,
+        "shares": 0,
+        "saves": null,
+        "reach": null,
+        "profile_visits": null
+      },
       "url": "https://www.tiktok.com/@autopilot.oi/video/7706931701057850632"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-11T13:04:31-03:00",
+      "published_at": "2026-11-10T13:06:49Z",
+      "text": "They want a quote tonight and you're still on a job.",
+      "metrics": {
+        "reach": 16,
+        "views": 18,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0,
+        "profile_visits": null
+      },
+      "url": "https://www.instagram.com/reel/Dfj-ENLoSat/"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-11T13:04:31Z",
       "text": "A shoebox of receipts and your accountant wants totals.",
-      "metrics": {"reach": 1, "views": 2, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
+      "metrics": {
+        "reach": 1,
+        "views": 2,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0,
+        "profile_visits": null
+      },
       "url": "https://www.instagram.com/reel/Dfmi6FCnGCF/"
     }
   ],
-  "kit": {"subscribers": 0, "new_today": 0},
-  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-12T22:31:53Z"},
-  "notes": "Snapshot 21:30 ART Nov 12. 0 posts published today; 1 Instagram Reel (Front Desk FAQ, 10:00 ART) still PENDING and marked draft in Metricool, so it never went out. No ERROR posts. Window 6 to 72h: no saves or shares on any post; ranked by reach then views. Profile visits not available per post (MISSING). Workflows: freel.yml and ci.yml failing, both already in Fix needed. HQ feed written (status/hub v75). No new orders."
+  "kit": {
+    "subscribers": 0,
+    "new_today": 0
+  },
+  "revenue_seen": {
+    "orders_all_time": 0,
+    "orders_7d": 0,
+    "ledger_synced": "2026-11-13T10:48:01Z"
+  },
+  "notes": "Snapshot 09:30 ART Nov 13. 0 posts published today; 1 Instagram Reel (Review Desk, 10:00 ART) PENDING and marked draft in Metricool. No ERROR posts. Window 6 to 72h: no saves or shares on any post; ranked by reach, using views where reach is MISSING (TikTok). IG carousel Dfk1NJMiseB shows 3 comments but reach 0 and views 0 in Metricool. X per post metrics not available from Metricool posts connector (MISSING). Profile visits MISSING. Workflows: freel.yml and ci.yml failing, logged under Fix needed for today. HQ feed written (status/hub v76). No new orders."
 }
