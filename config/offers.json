@@ -107,7 +107,7 @@
    "sends_messages": false,
    "audience": "owners new to AI",
    "advertise": "organic only until 3 owner tests pass",
-   "landing": "/",
+   "landing": "/business/",
    "refund": "30 day refund: reply to the Gumroad receipt",
    "verification": "prompt QA by simulated run 2026-11-03; not yet tested by an outside buyer"
   },
@@ -124,7 +124,7 @@
    "sends_messages": false,
    "audience": "owners new to AI",
    "advertise": "organic only until 3 owner tests pass",
-   "landing": "/",
+   "landing": "/business/",
    "refund": "30 day refund: reply to the Gumroad receipt",
    "verification": "prompt QA by simulated run 2026-11-03; not yet tested by an outside buyer"
   },
@@ -141,7 +141,7 @@
    "sends_messages": false,
    "audience": "owners new to AI",
    "advertise": "organic only until 3 owner tests pass",
-   "landing": "/",
+   "landing": "/business/",
    "refund": "30 day refund: reply to the Gumroad receipt",
    "verification": "prompt QA by simulated run 2026-11-03; not yet tested by an outside buyer"
   },
@@ -158,7 +158,7 @@
    "sends_messages": false,
    "audience": "owners new to AI",
    "advertise": "organic only until 3 owner tests pass",
-   "landing": "/",
+   "landing": "/business/",
    "refund": "30 day refund: reply to the Gumroad receipt",
    "verification": "prompt QA by simulated run 2026-11-03; not yet tested by an outside buyer"
   },
@@ -175,7 +175,7 @@
    "sends_messages": false,
    "audience": "owners new to AI",
    "advertise": "organic only until 3 owner tests pass",
-   "landing": "/",
+   "landing": "/business/",
    "refund": "30 day refund: reply to the Gumroad receipt",
    "verification": "prompt QA by simulated run 2026-11-03; not yet tested by an outside buyer"
   }

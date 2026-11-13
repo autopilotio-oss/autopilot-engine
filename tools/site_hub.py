@@ -4,7 +4,7 @@ import json, html, os, re
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = json.load(open(f"{R}/content/hub/week1_posts.json"))
 ORDER = [("7","05_side_hustles","Find money in the skills you already have","7 prompts"),("23","09_bill_fighter","Fight your bills like a pro negotiator","7 scripts"),
- ("17","02_bank_statement","Read your bank statement like a financial advisor","7 prompts"),("10","01_job_agent","Find a better paying job while you sleep","Agent"),
+ ("17","02_bank_statement","Read your bank statement like a financial advisor","7 prompts"),("10","01_job_agent","Find a better paying job every morning","Agent"),
  ("20","03_contract","Read any contract before you sign","7 prompts"),("25","04_night_shift","Put Claude on the night shift","Agent"),
  ("1","07_money_plan","Build your 10 year money plan","7 prompts"),("26","06_team_of_5","Hire a team of 5 AI employees","Agent"),
  ("3","10_interview_coach","Prep for any interview","Agent"),("16","08_six_agents","6 agents that replace an assistant","6 agents"),
