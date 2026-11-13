@@ -1,9 +1,9 @@
 {
-  "at": "2026-11-13T16:45:00Z",
+  "at": "2026-11-13T20:24:00Z",
   "posts_today": {
     "instagram": {
-      "published": 0,
-      "pending": 3,
+      "published": 2,
+      "pending": 2,
       "error": 0
     },
     "twitter": {
@@ -17,8 +17,8 @@
       "error": 0
     },
     "tiktok": {
-      "published": 0,
-      "pending": 2,
+      "published": 1,
+      "pending": 1,
       "error": 0
     }
   },
@@ -70,5 +70,5 @@
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "Snapshot 13:45 ART Nov 13. 0 posts published today (Metricool analytics show no IG or TikTok posts dated today). Pending: IG Reel Review Desk 10:00 ART (still marked draft, past its slot), IG+TikTok carousel '7 side hustles' 14:00 ART, IG+TikTok carousel '7 bill scripts' 21:00 ART. No ERROR posts. Window 6 to 72h: no saves or shares on any post; ranked by reach, using views where reach is MISSING (TikTok). IG carousel Dfk1NJMiseB shows 3 comments, reach 0, views 0. X and Threads per post metrics MISSING. Profile visits MISSING. Workflows: freel.yml last run failed (already logged today); ci.yml in progress, 3 of 4 runs failed in 24h (already logged today). HQ feed written (status/hub v77). No new orders."
+  "notes": "Snapshot 17:24 ART Nov 13. Published today: IG+TikTok carousel '7 side hustles' 14:00 ART (IG DfsIVJKjVfO, TikTok 7707703910621908231) and a second IG carousel with the same caption 14:44 ART (DfsMx3BjQU3, possible duplicate). Both under 6h old, not ranked yet. Pending: IG Reel Review Desk 10:00 ART (still marked draft, past its slot), IG+TikTok carousel '7 bill scripts' 21:00 ART. No ERROR posts. Window 6 to 72h: no saves or shares on any post; ranked by reach, using views where reach is MISSING (TikTok). X and Threads per post metrics MISSING. Profile visits MISSING. Workflows: freel.yml last run failed and ci.yml 3 of 4 runs failed in 24h (latest ci run success); both already logged today. HQ feed written (status/hub v78). No new orders (orders_all_time 0)."
 }
