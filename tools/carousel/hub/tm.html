@@ -16,6 +16,8 @@ body{width:1080px;height:1350px;overflow:hidden;background:var(--K);color:#fff}
 .bar{position:absolute;left:0;right:0;bottom:0;height:62px;background:var(--L);display:flex;align-items:center;justify-content:space-between;padding:0 52px;font-family:M;font-weight:700;font-size:24px;color:#000;letter-spacing:1px}
 .pr{font-family:T;font-size:44px;line-height:1.4;color:#eeede8}
 .pr b{font-weight:400;color:#000;background:var(--L);padding:0 .1em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hw{font-family:A;text-transform:uppercase;font-size:80px;line-height:1.02;letter-spacing:.3px;text-align:center;text-wrap:balance;max-width:976px}
+.hl{font-family:A;text-transform:uppercase;font-size:50px;line-height:1.08;letter-spacing:.4px;text-align:center;text-wrap:balance;color:var(--L);margin-top:18px;max-width:976px}
 </style></head><body><div id="root"></div>
 <script>
 const P=+(new URLSearchParams(location.search).get('p')||7);
@@ -68,11 +70,12 @@ if(N==2){fetch('/content/hub/week1_captions.json').then(r=>r.json()).then(C=>{co
 else{fetch('/content/hub/week1_captions.json').then(r=>r.json()).then(C=>{const c=C.find(x=>x.image.endsWith('/'+String(P).padStart(2,'0')+'.jpg'));const k=HK[P];let LN;if(k){LN=[...splitN(k.w,Math.ceil(k.w.length/24)).map(t=>[t,0]),...splitN(k.l,Math.ceil(k.l.length/30)).map(t=>[t,1])];d.tag=k.a?'STEAL THE AGENT':'STEAL THE 7 PROMPTS'}else{LN=split3(c.hook).map((t,i)=>[t,i==2]);d.tag=c.agent?'STEAL THE AGENT':'STEAL THE PROMPT'}
 document.getElementById('root').innerHTML=`<img class="ph" style="top:${-((HK[P]||d).sy||0)}px" src="/docs/media/hub/week1/${String(P).padStart(2,'0')}.jpg"><div class="fade"></div>
 <div class="logo"></div>
-<div class="blk"><div class="tag"><span>${d.tag}</span></div>${LN.map(([t,l])=>`<div class="ln${l?' l':''}" data-l="${l}">${t}</div>`).join('')}</div>
+<div class="blk"><div class="tag"><span>${d.tag}</span></div>${k?`<div class="hw">${k.w}</div><div class="hl">${k.l}</div>`:LN.map(([t,l])=>`<div class="ln${l?' l':''}" data-l="${l}">${t}</div>`).join('')}</div>
 <div class="bar"><span>@AUTOPILOT.OI</span><span>SWIPE →</span></div>`;
 Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>0))]).then(()=>{
  const W=976;
  document.querySelectorAll('.ln').forEach(e=>{e.style.fontSize='100px';const w=e.scrollWidth;e.style.fontSize=Math.max(56,Math.min(e.dataset.l=='1'?66:100,100*W/w))+'px'});
+ const hw=document.querySelector('.hw');if(hw){let f=104;do{hw.style.fontSize=f+'px';f-=2}while(hw.offsetHeight>f*1.02*2+12&&f>62)}
  const bt=document.querySelector('.blk').getBoundingClientRect().top,f=document.querySelector('.fade');f.style.top=(bt-170)+'px';f.style.height=(1350-bt+170)+'px';f.style.background='linear-gradient(180deg,rgba(5,5,5,0) 0,rgba(5,5,5,.75) 110px,#050505 210px)';
  window.READY=1});
 });}
