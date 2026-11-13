@@ -1,0 +1,74 @@
+{
+ "01_job_agent": {
+  "pic": 10,
+  "caption": "Claude can now find you a better paying job while you sleep.\n\nSet it up in 10 minutes:\n1. Open Claude, tap Projects, then New project\n2. Name it \"Job Hunter\"\n3. Paste the instructions below into the Instructions box\n4. Add your resume\n5. Open a chat in the project and type \"go\"\n\nCOPY THIS:\n\nYou are my personal job hunter: a recruiter with 15 years of experience who knows what hiring managers look for. My resume is in this project.\n\nMY TARGET: [job title] jobs in [city, or remote] paying at least [$ amount].\n\nEVERY TIME I SAY \"go\":\n1. Search the web for listings from the last 7 days that fit me.\n2. Show the best 5 in a table: job, company, pay, link, why I fit, and my odds (high, medium, low).\n3. Ask which one I want.\n4. For my pick, rewrite my resume to match the listing's key words and write a cover letter under 150 words.\n\nRULES:\n• Never invent experience I don't have\n• Skip jobs that hide the pay unless they're a great fit\n• Flag anything that looks like a scam\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now find you a better paying job while you sleep. Full setup inside. Free to copy.",
+  "slides": 6
+ },
+ "02_bank_statement": {
+  "pic": 17,
+  "caption": "Claude can now read your bank statement like a $200 an hour financial advisor.\n\nAll 7 prompts are on the slides. Swipe and copy them:\n1. Sort it\n2. Find subscriptions\n3. Catch mistakes\n4. Find the leaks\n5. Build a budget\n6. Hit a goal\n7. Get money back\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nFirst: download last month’s statement from your bank app as a PDF and attach it. Cross out your account number.\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now read your bank statement like a $200 an hour financial advisor. All 7 inside. Free to copy.",
+  "slides": 10
+ },
+ "03_contract": {
+  "pic": 20,
+  "caption": "Claude can now read any contract like a $400 an hour lawyer.\n\nAll 7 prompts are on the slides. Swipe and copy them:\n1. Plain words\n2. What you pay\n3. Red flags\n4. Your way out\n5. The penalties\n6. Ask for changes\n7. Before you sign\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nFirst: take a photo of every page, or attach the PDF.\n\nClaude helps you understand it. For big contracts, still talk to a lawyer.\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now read any contract like a $400 an hour lawyer. All 7 inside. Free to copy.",
+  "slides": 10
+ },
+ "04_night_shift": {
+  "pic": 25,
+  "caption": "Claude now works the night shift.\n\nSet it up in 10 minutes:\n1. Open Claude, tap Projects, then New project\n2. Name it \"Night Shift\"\n3. Paste the instructions below into the Instructions box\n4. Fill in the [brackets]\n5. Open a chat in the project and type \"go\"\n\nCOPY THIS:\n\nYou are my night shift: a sharp executive assistant who finishes work without hand holding.\n\nEach evening I'll give you up to 7 tasks.\n\nRULES:\n• Do every task fully. Finished work, not advice\n• Don't stop to ask questions. Make your best guess and tell me what you assumed\n• Search the web when a task needs facts\n• Order your work by what matters most to my day\n\nWHEN DONE, GIVE ME ONE MORNING REPORT:\n1. Each task and the finished work\n2. Anything you need from me\n3. The one thing I should do first today\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude now works the night shift. Full setup inside. Free to copy.",
+  "slides": 6
+ },
+ "05_side_hustles": {
+  "pic": 7,
+  "caption": "Claude can now find money in the skills you already have.\n\nAll 7 prompts are on the slides. Swipe and copy them:\n1. Find your 7\n2. Find customers\n3. Set your price\n4. Write the post\n5. First 10 customers\n6. Your first week\n7. Avoid mistakes\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now find money in the skills you already have. All 7 inside. Free to copy.",
+  "slides": 10
+ },
+ "06_team_of_5": {
+  "pic": 26,
+  "caption": "Claude can now hire you a team of 5 AI employees.\n\nSet it up in 10 minutes:\n1. Open Claude, tap Projects, then New project\n2. Name it \"Team of 5\"\n3. Paste the instructions below into the Instructions box\n4. Fill in the [brackets]\n5. Open a chat in the project and type \"go\"\n\nCOPY THIS:\n\nYou are my team of 5 expert assistants. When my message starts with a name, answer as that one:\n\nINBOX: a communications pro. Writes replies to any email or text I paste, in my voice.\nMONEY: a financial advisor. Reads my bills and statements and finds what to cut.\nJOBS: a recruiter. Finds listings and tailors my resume for each.\nMEALS: a meal planner. Plans a week of dinners and one grocery list for [number] people on [$ amount].\nPLANNER: a productivity coach. Turns my to do list into a schedule.\n\nRULES:\n• Give finished work I can use, not advice\n• Keep it short\n• Ask one question only if you can't do the job without it\n\nABOUT ME: [your job, your city, who you live with, your goals].\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now hire you a team of 5 AI employees. Full setup inside. Free to copy.",
+  "slides": 6
+ },
+ "07_money_plan": {
+  "pic": 1,
+  "caption": "Claude can now build your 10 year money plan in 10 minutes.\n\nAll 7 prompts are on the slides. Swipe and copy them:\n1. See your future\n2. Try 3 versions\n3. The 3 big moves\n4. Kill the debt\n5. Safety money\n6. Where savings go\n7. One page plan\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nThese are estimates to help you plan, not financial advice.\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now build your 10 year money plan in 10 minutes. All 7 inside. Free to copy.",
+  "slides": 10
+ },
+ "08_six_agents": {
+  "pic": 16,
+  "caption": "6 Claude agents that replace a $3,000 a month assistant.\n\nAll 6 agents are on the slides. Swipe and copy them:\n1. Inbox\n2. Planner\n3. Bills\n4. Meals\n5. Shopper\n6. Paperwork\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "6 Claude agents that replace a $3,000 a month assistant. All 6 inside. Free to copy.",
+  "slides": 9
+ },
+ "09_bill_fighter": {
+  "pic": 23,
+  "caption": "Claude can now fight your bills like a pro negotiator.\n\nAll 7 scripts are on the slides. Swipe and copy them:\n1. Internet or phone\n2. Rent\n3. Medical bill\n4. Insurance\n5. Bank fee\n6. Subscription\n7. Credit card\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now fight your bills like a pro negotiator. All 7 inside. Free to copy.",
+  "slides": 10
+ },
+ "10_interview_coach": {
+  "pic": 3,
+  "caption": "Claude can now prep you for any interview like a $300 career coach.\n\nSet it up in 10 minutes:\n1. Open Claude, tap Projects, then New project\n2. Name it \"Interview Coach\"\n3. Paste the instructions below into the Instructions box\n4. Add your resume and the job listing\n5. Open a chat in the project and type \"go\"\n\nCOPY THIS:\n\nYou are my interview coach: a hiring manager who has interviewed over 1,000 people for roles like this. My resume and the job listing are in this project.\n\nWHEN I SAY \"go\":\n1. Ask one question at a time, the way a real interviewer for this job would. Mix behavior, skill and curveball questions.\n2. After each answer, score it 1 to 10. Tell me what worked and what to fix.\n3. Show a stronger answer built from my real experience.\n\nRULES:\n• Be honest, not nice\n• Never invent experience for me\n• Get harder as I improve\n\nAFTER 10 QUESTIONS: my 3 weak spots, my 3 best stories to reuse, and a one page cheat sheet.\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now prep you for any interview like a $300 career coach. Full setup inside. Free to copy.",
+  "slides": 6
+ },
+ "11_one_percent": {
+  "pic": 24,
+  "caption": "Most people still type one line into Claude. The 1% set it up like this.\n\nAll 7 upgrades are on the slides. Swipe and copy them:\n1. Give it a job\n2. Tell it your situation\n3. Say what you want back\n4. Let it ask first\n5. Show an example\n6. Ask for choices\n7. Make it check itself\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nAdd any of these lines to whatever you ask. The answer gets much better.\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Most people still type one line into Claude. The 1% set it up like this. All 7 inside. Free to copy.",
+  "slides": 10
+ },
+ "12_black_friday": {
+  "pic": 18,
+  "caption": "Claude can now plan your whole Black Friday in one evening.\n\nAll 7 prompts are on the slides. Swipe and copy them:\n1. Buy or wait\n2. Real deal check\n3. Pick the winner\n4. Set your limits\n5. Gift ideas\n6. Best stores\n7. Price match\n\nHow to use them:\n1. Open Claude (free at claude.ai)\n2. Copy a prompt and paste it in\n3. Swap the words in [brackets] for yours\n\nSave this so you have it when you need it.\nFollow @autopilot.oi for a new one every day.\n\n#claude #aitools #aiagents #moneytips #sidehustle",
+  "x_text": "Claude can now plan your whole Black Friday in one evening. All 7 inside. Free to copy.",
+  "slides": 10
+ }
+}
