@@ -8,8 +8,11 @@
   try {
     // Internal links (/free/ to /brain/ to /front-desk/) carry utm_source=site. They must not overwrite the social source
     // the visit came in with, or an Instagram DM visitor who buys from the Kit page is recorded as utm_source=site.
-    var inSrc = q.get('utm_source'), had = sessionStorage.getItem('ap_utm_source');
-    if (inSrc && !(inSrc === 'site' && had && had !== 'site')) { K.forEach(function (k) { if (q.get(k)) sessionStorage.setItem('ap_' + k, q.get(k)); }); }
+    // Same for any click from one of our own pages (same origin referrer): /free/ links carry utm_source=instagram as the
+    // default for the sourceless DM link, and must not relabel a TikTok or Threads visit that already has its source.
+    var inSrc = q.get('utm_source'), had = sessionStorage.getItem('ap_utm_source'), internal = false;
+    try { internal = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (e) {}
+    if (inSrc && !((inSrc === 'site' || internal) && had && had !== 'site')) { K.forEach(function (k) { if (q.get(k)) sessionStorage.setItem('ap_' + k, q.get(k)); }); }
     K.forEach(function (k) { var v = sessionStorage.getItem('ap_' + k); if (v) cur[k] = v; });
     first = JSON.parse(localStorage.getItem('ap_first') || 'null');
     if (!first && cur.utm_source && cur.utm_source !== 'site') { first = { s: cur.utm_source, c: cur.utm_campaign || '', t: new Date().toISOString().slice(0, 10) }; localStorage.setItem('ap_first', JSON.stringify(first)); }
