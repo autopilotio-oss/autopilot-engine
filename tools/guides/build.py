@@ -63,7 +63,7 @@ def TOPCARD(slug, g):
             f'<div style="font-weight:800;font-size:20px;line-height:1.15;margin:4px 0 6px">{e(name)}</div>'
             f'<div style="font-size:14px;line-height:1.4;opacity:.8;margin-bottom:10px">{e(g["agent"]["what"])}</div>'
             f'<a href="https://autopilotoi.gumroad.com/l/{perm}" style="display:inline-block;background:#D4FF3A;color:#050505;text-decoration:none;font:700 13px \'Geist Mono\',monospace;letter-spacing:1.2px;border-radius:10px;padding:11px 14px">GET IT · $10</a>'
-            f'<div class="ap-launch-price" style="display:none;font-size:12px;margin-top:6px;color:#D4FF3A">$7 this week with LAUNCH30, applied at checkout</div>'
+            ''
             f'<div style="font-size:12px;opacity:.6;margin-top:6px">Or follow the free guide below.</div></div></div>')
 
 def KFORM(btn="SEND ME TIPS"):
