@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-13",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts + getBrandSettings (brand 7761544) + Kit get_growth_stats, pulled 2026-11-13 11:20 UTC by Daily Pulse. 7d window Nov 6 to Nov 12 (Metricool daily rows; Nov 12 partial).",
+ "kit": {
+  "subscribers": 0,
+  "new_7d": 0
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 87,
+   "posts_7d": 11,
+   "interactions_7d": 8,
+   "accounts_engaged_7d": 0,
+   "reel_views_7d": 328,
+   "note": "followers = IGEV01 on Nov 12 (85 on Nov 11); posts_7d = sum IGEV37 Nov 6 to 12; interactions_7d = sum IGEV38 Nov 6 to 10 (Nov 11, 12 null); accounts_engaged_7d = IGEV42 Nov 12 daily value, not additive; reel_views_7d = sum IGEV23 Nov 6 to 11 (Nov 8: 111 best day; Nov 12 null; posting paused since Nov 11 17:45 ART)"
+  },
+  "threads": {
+   "followers": null,
+   "posts_7d": null,
+   "views_7d": null,
+   "interactions_7d": null,
+   "note": "MISSING: Threads still absent from networksData in getBrandSettings (disconnected since Nov 6 ~23:30 ART, incident inc:metricool_networks:2026-11-07 open, Seb messaged Nov 7). THEV rows null Nov 6 to 11 and a zero row on Nov 12, not real data."
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 0,
+  "queued": 0,
+  "failed": 0,
+  "window": "published/failed = Metricool deliveries Nov 12 08:15 to Nov 13 08:15 ART (none: posting paused), queued = non-draft pending posts Nov 13 08:15 to Nov 15 08:15 ART",
+  "unapproved_pending": 0,
+  "unapproved_action": "none: 0 pending non-draft posts. Drafts from Seb's PAUSE ALL POSTING (Nov 11 17:45 ART) still held, incl. 3 IG reels (Front Desk Nov 12, Review Desk Nov 13, Content Week Nov 14), all approved uuids. Nothing changed by Daily Pulse.",
+  "cadence_ok": "Posting paused by Seb since Nov 11 17:45 ART; nothing published in 24h, nothing scheduled."
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-12",
+  "campaign": "120248645551300265 PAUSED Nov 3; campaign ads.status off since Nov 2",
+  "cap_usd": 60,
+  "source": "costs ledger (no spend after Nov 1; Adspirer not re-queried this run)"
+ },
+ "decisions": [
+  "Plan after the posting pause: remap proposal (done for you reels for detailers) at https://claude.ai/artifact/7x92AuTKfjEq9JvWiPVK8r is waiting on Seb.",
+  "ElevenLabs: ELEVENLABS_API_KEY still 401; factory reels run 43405563933 failed again Nov 13 (4th day). Rendering is moot while posting is paused; consider pausing freel.yml cron or fixing the key.",
+  "Merge builder/2026-11-11-expired-launch-code: Tests on main red since Nov 11 (LAUNCH30 hidden line after expiry); Tests run 43356685576 failed Nov 13 03:06 UTC.",
+  "Threads: reconnect the Threads account to Metricool brand autopilot.oi (dropped Nov 6, still disconnected Nov 13).",
+  "Viral Lab: pick a source for public view counts (open since Oct 31)."
+ ]
+}
