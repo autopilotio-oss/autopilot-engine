@@ -1,5 +1,6 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:T;src:url(/docs/assets/fonts/APText-Medium.woff)}
 @font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
 :root{--L:#D4FF3A;--K:#050505}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -13,6 +14,8 @@ body{width:1080px;height:1350px;overflow:hidden;background:var(--K);color:#fff}
 .ln{font-family:A;text-transform:uppercase;white-space:nowrap;line-height:.98;letter-spacing:.2px;text-align:center;text-shadow:0 3px 0 rgba(0,0,0,.35)}
 .ln.l{color:var(--L)}
 .bar{position:absolute;left:0;right:0;bottom:0;height:62px;background:var(--L);display:flex;align-items:center;justify-content:space-between;padding:0 52px;font-family:M;font-weight:700;font-size:24px;color:#000;letter-spacing:1px}
+.pr{font-family:T;font-size:44px;line-height:1.4;color:#eeede8}
+.pr b{font-weight:400;color:#000;background:var(--L);padding:0 .1em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 </style></head><body><div id="root"></div>
 <script>
 const P=+(new URLSearchParams(location.search).get('p')||7);
@@ -35,7 +38,19 @@ const D={
  25:{h:["Man takes bubble bath","in the middle of","rush hour traffic"]},
  26:{h:["Grandma beats","bodybuilder in","arm wrestling match"]},
 };
-const d=D[P];
+const d=D[P],N=+(new URLSearchParams(location.search).get('n')||1);
+if(N==2){fetch('/content/hub/week1_captions.json').then(r=>r.json()).then(C=>{const c=C.find(x=>x.image.endsWith('/'+String(P).padStart(2,'0')+'.jpg'));
+ const pr=c.caption.match(/"([^"]+)"/)[1].replace(/\[(.*?)\]/g,'<b>[$1]</b>');
+ document.getElementById('root').innerHTML=`<div class="logo"></div>
+ <div style="position:absolute;left:64px;right:64px;top:230px">
+  <div class="tag" style="display:inline-block;margin-bottom:30px"><span>PROMPT HACK</span></div>
+  <div class="ln" style="font-size:118px;text-align:left;white-space:normal;line-height:.95">${c.headline.split(' ').length?'':''}COPY THIS.<br><span style="color:var(--L)">FILL THE BRACKETS.</span></div>
+  <div style="margin-top:48px;border-left:8px solid var(--L);padding:6px 0 6px 34px" class="pr">${pr}</div>
+ </div>
+ <div style="position:absolute;left:64px;right:64px;bottom:110px;display:flex;gap:18px">${['OPEN CHATGPT OR CLAUDE','PASTE IT','FILL THE LIME PARTS'].map((t,i)=>`<div style="flex:1;border-top:4px solid var(--L);padding-top:16px;font-family:A;font-size:34px;line-height:1.05"><span style="color:var(--L)">0${i+1}</span><br>${t}</div>`).join('')}</div>
+ <div class="bar"><span>@AUTOPILOT.OI</span><span>SAVE THIS ↓</span></div>`;
+ document.fonts.ready.then(()=>window.READY=1)});}
+else{
 document.getElementById('root').innerHTML=`<img class="ph" style="top:${-(d.sy||0)}px" src="/docs/media/hub/week1/${String(P).padStart(2,'0')}.jpg"><div class="fade"></div>
 <div class="logo"></div>
 <div class="blk"><div class="tag"><span>${d.tag||'100% AI · NOT REAL'}</span></div>${d.h.map((t,i)=>`<div class="ln${i==d.h.length-1?' l':''}">${t}</div>`).join('')}</div>
@@ -44,4 +59,5 @@ Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catc
  const W=976;
  document.querySelectorAll('.ln').forEach(e=>{e.style.fontSize='100px';const w=e.scrollWidth;e.style.fontSize=Math.max(64,Math.min(132,100*W/w))+'px'});
  window.READY=1});
+}
 </script></body></html>
