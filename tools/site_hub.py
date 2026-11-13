@@ -25,7 +25,7 @@ HEAD = lambda title, desc, path: f'''<!DOCTYPE html><html lang="en"><head><meta 
 .hub h1{{margin:20px 0 22px}}.hub h1 em{{color:var(--l)}}
 .cap{{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;max-width:560px}}.cap input{{flex:1;min-width:220px;height:56px;border-radius:999px;border:1.5px solid rgba(255,255,255,.22);background:#111;color:#fff;padding:0 22px;font:500 16px var(--T)}}
 .msg{{margin-top:12px;color:#c9c9c2;font-size:14px;min-height:20px}}.msg b{{color:var(--l)}}
-.drops{{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-top:34px}}.drop{{display:block;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--g2)}}
+.drops{{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:34px}}.drop{{display:block;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--g2)}}
 .drop img{{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}}.drop div{{padding:14px 16px 16px}}.drop b{{display:block;font:700 15px/1.25 var(--T)}}.drop span{{font:600 11.5px var(--T);letter-spacing:.14em;text-transform:uppercase;color:var(--l)}}
 .ags{{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:30px}}.ags .card b{{font:700 18px var(--T);display:block}}.ags .card .go{{display:inline-block;margin-top:14px;color:var(--l);font:700 15px var(--T)}}
 h2.hh{{font:400 clamp(26px,5vw,44px)/1 var(--W);text-transform:uppercase;letter-spacing:-.02em}}
@@ -46,19 +46,69 @@ function kit(f,src,done){f.addEventListener('submit',function(ev){ev.preventDefa
 </script>'''
 FORM = lambda btn: f'<form class="cap"><input type="email" required placeholder="Your email" autocomplete="email" aria-label="Your email"><button class="btn" type="submit">{btn}</button></form><div class="msg"></div>'
 # ---------- home
-drops = "".join(f'<a class="drop" href="/vault/#{s}"><img loading="lazy" src="/media/hub/week1/posts/{s}/01.jpg" alt="{e(t)}"><div><span>{k}</span><b>{e(t)}</b></div></a>' for _, s, t, k in ORDER)
-ags = "".join(f'<div class="card"><b>{n}</b><p>{e(d)}</p><a class="go buy" href="{G}{s}">Get it · $10 →</a></div>' for s, n, d in AG)
-home = HEAD("AUTOPILOT.OI · Free Claude prompts and agents that save you money", "Free copy and paste Claude prompts and 10 minute agents for bills, jobs, money and everyday life. New every day.", "/") + f'''
+NP = sum(len(d["items"]) for d in D.values() if d["type"] == "p"); NA = sum(1 for d in D.values() if d["type"] == "a")
+drops = "".join(f'<a class="drop rv" href="/vault/#{s}"><img loading="lazy" src="/media/hub/week1/posts/{s}/01.jpg" alt="{e(t)}"><div><span>{k}</span><b>{e(t)}</b></div></a>' for _, s, t, k in ORDER)
+marq = "".join(f'<img src="/media/hub/week1/posts/{s}/01.jpg" alt="">' for _, s, t, k in ORDER) * 2
+ags = "".join(f'<div class="card rv"><b>{n}</b><p>{e(d)}</p><a class="go buy" href="{G}{s}">Get it · $10 →</a></div>' for s, n, d in AG)
+DEMO = [("Lower a bill", D["23"]["items"][0][1]), ("Start a side hustle", D["7"]["items"][0][1]), ("Check a contract", D["20"]["items"][2][1])]
+tabs = "".join(f'<button class="tb{" on" if i == 0 else ""}" data-i="{i}">{e(t)}</button>' for i, (t, _) in enumerate(DEMO))
+HOME_CSS = """<style>
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+.rot{display:inline-block;color:var(--l);transition:opacity .35s,transform .35s}.rot.out{opacity:0;transform:translateY(12px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips span{font:600 12.5px var(--T);color:#d9d9d2;border:1px solid var(--line);border-radius:999px;padding:7px 12px;background:#111}.chips span:before{content:"✓ ";color:var(--l)}
+.mq{overflow:hidden;margin-top:44px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}.mq div{display:flex;gap:14px;width:max-content;animation:mq 60s linear infinite}.mq img{height:230px;border-radius:14px;display:block}
+@keyframes mq{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.mq div{animation:none}.rv{opacity:1;transform:none}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}.stats div{background:var(--g2);border:1px solid var(--line);border-radius:18px;padding:18px 14px;text-align:center}.stats b{display:block;font:400 clamp(26px,7vw,44px)/1 var(--W);color:var(--l)}.stats span{font:600 12px var(--T);color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.tb{font:700 14px var(--T);border-radius:999px;padding:10px 16px;border:1.5px solid rgba(255,255,255,.22);background:transparent;color:#fff;cursor:pointer}.tb.on{background:var(--l);color:#000;border-color:var(--l)}
+.demo{position:relative;margin-top:16px;background:#0d0d0d;border:1px solid var(--line);border-left:5px solid var(--l);border-radius:16px;padding:20px 20px 64px;min-height:330px;white-space:pre-wrap;font:500 15.5px/1.55 var(--T);color:#e9e8e2}.demo b{font-weight:500;color:#000;background:var(--l);padding:0 .15em;border-radius:3px}
+.demo .cpy{top:auto;bottom:16px;right:16px;font-size:14px;padding:10px 18px}.cur{display:inline-block;width:8px;height:1.1em;background:var(--l);vertical-align:-3px;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px}.steps3 .card i{font:400 44px/1 var(--W);color:var(--l);font-style:normal;display:block;margin-bottom:10px}.steps3 .card b{font:700 18px var(--T)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+details{border-top:1px solid var(--line);padding:18px 0}details:last-of-type{border-bottom:1px solid var(--line)}summary{font:700 17px var(--T);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}summary:after{content:"+";color:var(--l);font-size:22px;line-height:1}details[open] summary:after{content:"−"}details p{color:#c9c9c2;margin-top:10px;max-width:680px}
+.stick{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;background:var(--l);color:#000;border-radius:999px;height:54px;align-items:center;justify-content:center;font:700 16px var(--T);box-shadow:0 10px 30px rgba(0,0,0,.6)}@media(max-width:760px){.stick.on{display:flex}}
+</style>"""
+HOME = HEAD("AUTOPILOT.OI · Free Claude prompts and agents that save you money", "Free copy and paste Claude prompts and 10 minute agents for bills, jobs, money and everyday life. New every day.", "/") + HOME_CSS + """
 <div class="wrap hero"><span class="tagline live">Free · new every day</span>
-<h1>Free Claude prompts and agents that <em>save you money.</em></h1>
-<p class="lead">Lower your bills, find a better job, read the fine print and plan your money. Copy, paste, done. No experience needed.</p>
-{FORM("Unlock the free Vault")}<p class="label" style="margin-top:6px">Every prompt from our posts in one place. Free. Unsubscribe any time.</p></div>
-<div class="sec"><div class="wrap"><span class="tagline">This week in the Vault</span><h2 class="hh" style="margin-top:16px">12 free drops.</h2><div class="drops">{drops}</div></div></div>
-<div class="sec" id="agents"><div class="wrap"><span class="tagline">Want it done for you?</span><h2 class="hh" style="margin-top:16px">Ready made money agents.</h2>
-<p class="lead" style="margin-top:14px">The free prompts get you started. These are full setups for one job each: the master prompt, starter prompts, a 10 minute setup guide and a tracker. $10 each, one payment, 30 day refund.</p>
-<div class="ags">{ags}<div class="card" style="border-color:var(--l)"><b>All 5 Money Agents</b><p>Every agent above in one bundle.</p><a class="go buy" href="{G}all-money-agents">Get all 5 · $39 →</a></div></div></div></div>
-<div class="sec"><div class="wrap"><span class="tagline">Run a business?</span><h2 class="hh" style="margin-top:16px">We have kits for that too.</h2><p style="margin-top:18px"><a class="btn ghost" href="/business/">See the business kits</a></p></div></div>
-{FOOT}<script>kit(document.querySelector('.cap'),'vault_home',function(m){{m.innerHTML='<b>You’re in.</b> Opening the Vault...';setTimeout(function(){{location.href='/vault/'}},700)}});</script></body></html>'''
+<h1>Free Claude prompts that help you <span class="rot" id="rot">lower your bills.</span></h1>
+<p class="lead">Copy, paste, done. Real prompts and 10 minute agents for money, jobs and everyday life. No experience needed.</p>
+__FORM__<div class="chips"><span>100% free</span><span>No card needed</span><span>No spam</span><span>Unsubscribe any time</span></div>
+<div class="mq"><div>__MARQ__</div></div>
+<div class="stats"><div><b>__NP__</b><span>free prompts</span></div><div><b>__NA__</b><span>free agents</span></div><div><b>2</b><span>new drops a day</span></div></div></div>
+<div class="sec"><div class="wrap"><span class="tagline">Try one right now</span><h2 class="hh rv" style="margin-top:16px">No sign up. Just copy.</h2>
+<p class="lead rv" style="margin-top:12px">Pick one, copy it, paste it into Claude and swap the lime parts for your own.</p>
+<div class="tabs">__TABS__</div><div class="demo" id="demo"></div>
+<p style="margin-top:22px"><a class="btn" href="/vault/">Unlock all __NP__ prompts free</a></p></div></div>
+<div class="sec"><div class="wrap"><span class="tagline">How it works</span><h2 class="hh rv" style="margin-top:16px">Three steps. Two minutes.</h2>
+<div class="steps3"><div class="card rv"><i>1</i><b>Open Claude</b><p>It's free at claude.ai or in the Claude app.</p></div><div class="card rv"><i>2</i><b>Paste a prompt</b><p>Tap copy in the Vault and paste it in.</p></div><div class="card rv"><i>3</i><b>Swap the brackets</b><p>Put your own details in the [brackets] and send.</p></div></div></div></div>
+<div class="sec"><div class="wrap"><span class="tagline">This week in the Vault</span><h2 class="hh rv" style="margin-top:16px">12 free drops.</h2><div class="drops">__DROPS__</div></div></div>
+<div class="sec" id="agents"><div class="wrap"><span class="tagline">Want the full setup?</span><h2 class="hh rv" style="margin-top:16px">Ready made money agents.</h2>
+<p class="lead rv" style="margin-top:14px">The free prompts get you started. These are complete setups for one job each: the master prompt, starter prompts, a 10 minute setup guide and a tracker. They run in your own Claude account. They draft, you decide.</p>
+<div class="chips"><span>$10 each, one payment</span><span>No subscription</span><span>30 day refund</span><span>Secure checkout by Gumroad</span></div>
+<div class="ags">__AGS__<div class="card rv" style="border-color:var(--l)"><b>All 5 Money Agents</b><p>Every agent above in one bundle.</p><a class="go buy" href="__G__all-money-agents">Get all 5 · $39 →</a></div></div></div></div>
+<div class="sec"><div class="wrap"><span class="tagline">Straight answers</span><h2 class="hh rv" style="margin-top:16px;margin-bottom:26px">Questions.</h2>
+<details><summary>Is it really free?</summary><p>Yes. Every prompt in the Vault is free. We make money only if you choose to buy one of the ready made agents.</p></details>
+<details><summary>Do I need to pay for Claude?</summary><p>No. The prompts work on Claude's free plan. Paid plans just let you use it more.</p></details>
+<details><summary>What do you do with my email?</summary><p>We send you new prompts as they drop, and sometimes tell you about a paid agent. We never sell your email, and every message has an unsubscribe link.</p></details>
+<details><summary>Will this really lower my bills or get me a job?</summary><p>We can't promise results. The prompts give you a strong script, plan or draft in minutes. You still make the call, send the message and decide what's right for you.</p></details>
+<details><summary>Is this legal or financial advice?</summary><p>No. The prompts help you understand and prepare. For big decisions, talk to a qualified professional.</p></details>
+<details><summary>Who makes this?</summary><p>AUTOPILOT.OI is a small independent team. We are not affiliated with Anthropic, the company that makes Claude. Find us on <a href="https://www.instagram.com/autopilot.oi/" style="color:var(--l)">Instagram</a>.</p></details>
+<details><summary>What if I buy an agent and don't like it?</summary><p>You get a refund within 30 days. Checkout and refunds run through Gumroad.</p></details></div></div>
+<div class="sec"><div class="wrap"><span class="tagline">Run a business?</span><h2 class="hh rv" style="margin-top:16px">We have kits for that too.</h2><p style="margin-top:18px"><a class="btn ghost" href="/business/">See the business kits</a></p></div></div>
+<a class="stick" id="stick" href="/vault/">Unlock the free Vault →</a>
+""" + FOOT + """<script>
+kit(document.querySelector('.cap'),'vault_home',function(m){m.innerHTML='<b>You’re in.</b> Opening the Vault...';setTimeout(function(){location.href='/vault/'},700)});
+var W=['lower your bills.','find a better job.','start a side hustle.','read the fine print.','plan your money.'],wi=0,r=document.getElementById('rot');
+setInterval(function(){r.classList.add('out');setTimeout(function(){wi=(wi+1)%W.length;r.textContent=W[wi];r.classList.remove('out')},360)},2600);
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(x){io.observe(x)});
+var DEMO=__DEMO__,dm=document.getElementById('demo'),tm;
+function hl(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\\[(.*?)\\]/g,'<b>[$1]</b>')}
+function show(i){clearInterval(tm);var t=DEMO[i],n=0;tm=setInterval(function(){n+=4;if(n>=t.length){n=t.length;clearInterval(tm)}dm.innerHTML=hl(t.slice(0,n))+(n<t.length?'<span class="cur"></span>':'')+'<button class="cpy">Copy prompt</button>';
+ dm.querySelector('.cpy').onclick=function(){var b=this;navigator.clipboard.writeText(t).then(function(){b.textContent='Copied ✓';try{if(window.goatcounter)goatcounter.count({path:'demo/copy',event:true})}catch(x){}})}},16)}
+document.querySelectorAll('.tb').forEach(function(b){b.onclick=function(){document.querySelectorAll('.tb').forEach(function(x){x.classList.remove('on')});b.classList.add('on');show(+b.dataset.i)}});show(0);
+var st=document.getElementById('stick');addEventListener('scroll',function(){st.classList.toggle('on',scrollY>700)},{passive:true});
+</script></body></html>"""
+home = (HOME.replace("__FORM__", FORM("Unlock the free Vault")).replace("__MARQ__", marq).replace("__NP__", str(NP)).replace("__NA__", str(NA)).replace("__TABS__", tabs)
+        .replace("__DROPS__", drops).replace("__AGS__", ags).replace("__G__", G).replace("__DEMO__", json.dumps([t for _, t in DEMO], ensure_ascii=False)))
 open(f"{R}/docs/index.html", "w").write(home)
 # ---------- vault
 posts = ""
