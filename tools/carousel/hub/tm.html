@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#050505}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;background:var(--K);color:#fff}
+.ph{position:absolute;left:0;top:0;width:1080px;height:1446px;object-fit:cover;object-position:50% 0}
+.fade{position:absolute;left:0;right:0;top:640px;height:710px;background:linear-gradient(180deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.7) 28%,rgba(5,5,5,.96) 46%,#050505 56%)}
+.logo{position:absolute;left:46px;top:44px;width:132px;height:132px;border-radius:24px;background:url(/docs/media/hub/ap_badge.png) center/cover;transform:rotate(-6deg);box-shadow:6px 8px 0 rgba(0,0,0,.55)}
+.blk{position:absolute;left:52px;right:52px;bottom:100px;display:flex;flex-direction:column;align-items:center}
+.tag{background:var(--L);color:#000;font-family:A;font-size:50px;letter-spacing:.5px;padding:6px 26px 4px;transform:skewX(-10deg);margin-bottom:26px;box-shadow:6px 6px 0 #000}
+.tag span{display:inline-block;transform:skewX(10deg)}
+.ln{font-family:A;text-transform:uppercase;white-space:nowrap;line-height:.98;letter-spacing:.2px;text-align:center;text-shadow:0 3px 0 rgba(0,0,0,.35)}
+.ln.l{color:var(--L)}
+.bar{position:absolute;left:0;right:0;bottom:0;height:62px;background:var(--L);display:flex;align-items:center;justify-content:space-between;padding:0 52px;font-family:M;font-weight:700;font-size:24px;color:#000;letter-spacing:1px}
+</style></head><body><div id="root"></div>
+<script>
+const P=+(new URLSearchParams(location.search).get('p')||7);
+const D={
+ 1:{h:["Grandpa shows up to the BBQ","with diamond grills","and 3 iced out chains"]},
+ 2:{h:["82 year old grandma","headlines warehouse rave,","crowd loses it"]},
+ 3:{h:["Nun lands kickflip","at local skate park,","nobody believes it"]},
+ 7:{h:["Bodybuilder joins","grandma knitting club,","makes pink scarf"]},
+ 10:{h:["Golden retriever","promoted to manager,","works late again"]},
+ 15:{h:["Grandma destroys","grown men in hot dog","eating contest"]},
+ 16:{h:["Family’s new roommate","eats cereal at","breakfast every day"]},
+ 17:{h:["Man drives cow home","in the minivan,","gives thumbs up"]},
+ 18:{sy:360,h:["Family invites giant","tortoise to","Thanksgiving dinner"]},
+ 19:{h:["Grandpa in tuxedo","wheels alligator","through grocery store"]},
+ 20:{h:["Priest paddles canoe","down flooded aisle,","wedding goes on"]},
+ 21:{h:["Cargo ship parks in","suburban driveway","overnight"]},
+ 22:{sy:140,h:["Man grills burgers","on his roof as","firefighters arrive"]},
+ 23:{h:["Grandma in tiara","detained over pizza,","shows no regret"]},
+ 24:{h:["Giraffe crashes","through diner ceiling","for pancakes"]},
+ 25:{h:["Man takes bubble bath","in the middle of","rush hour traffic"]},
+ 26:{h:["Grandma beats","bodybuilder in","arm wrestling match"]},
+};
+const d=D[P];
+document.getElementById('root').innerHTML=`<img class="ph" style="top:${-(d.sy||0)}px" src="/docs/media/hub/week1/${String(P).padStart(2,'0')}.jpg"><div class="fade"></div>
+<div class="logo"></div>
+<div class="blk"><div class="tag"><span>${d.tag||'100% AI · NOT REAL'}</span></div>${d.h.map((t,i)=>`<div class="ln${i==d.h.length-1?' l':''}">${t}</div>`).join('')}</div>
+<div class="bar"><span>@AUTOPILOT.OI</span><span>STEAL THE PROMPT →</span></div>`;
+Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>0))]).then(()=>{
+ const W=976;
+ document.querySelectorAll('.ln').forEach(e=>{e.style.fontSize='100px';const w=e.scrollWidth;e.style.fontSize=Math.max(64,Math.min(132,100*W/w))+'px'});
+ window.READY=1});
+</script></body></html>

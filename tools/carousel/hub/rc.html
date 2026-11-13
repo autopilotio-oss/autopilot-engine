@@ -1,0 +1,107 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:A;src:url(/docs/assets/fonts/Anton-Regular.ttf)}
+@font-face{font-family:M;src:url(/tools/office/fonts/JetBrainsMono.ttf)}
+:root{--L:#D4FF3A;--K:#0b0b0b;--R:#f3f2ec}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;position:relative;background:#0b0b0b;font-family:M;color:#141414}
+.bg{position:absolute;inset:0;background:radial-gradient(900px 700px at 50% 55%,#1a1a1a,#0b0b0b 70%)}
+.grain:after{content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;z-index:50;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.rc{position:absolute;left:110px;width:860px;background:var(--R);padding:58px 64px 64px;box-shadow:0 50px 100px rgba(0,0,0,.65),0 6px 18px rgba(0,0,0,.4)}
+.rc:before,.rc:after{content:"";position:absolute;left:0;right:0;height:22px}
+.rc:after{bottom:-21px;background:linear-gradient(-45deg,transparent 11px,var(--R) 0) 0 0/22px 22px repeat-x,linear-gradient(45deg,transparent 11px,var(--R) 0) 0 0/22px 22px repeat-x}
+.rc:before{top:-21px;background:linear-gradient(-135deg,transparent 11px,var(--R) 0) 0 0/22px 22px repeat-x,linear-gradient(135deg,transparent 11px,var(--R) 0) 0 0/22px 22px repeat-x}
+.paper{position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.6' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .4 0 0 0 0 .38 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23p)'/%3E%3C/svg%3E")}
+.c{text-align:center}
+.sm{font-size:21px;letter-spacing:4px;color:#5e5e58;text-transform:uppercase}
+.d{border-top:3px dashed #141414;margin:26px 0}
+.dd{border-top:3px solid #141414;border-bottom:3px solid #141414;height:9px;margin:26px 0}
+.ln{display:flex;align-items:baseline;font-size:30px;line-height:1.75}
+.ln .f{flex:1;border-bottom:3px dotted #8a8a84;margin:0 14px 10px}
+.A{font-family:A;text-transform:uppercase;line-height:.98;letter-spacing:.5px}
+.hl{background:var(--L);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.pr{font-size:30px;line-height:1.62}
+.pr b{font-weight:400;background:var(--L);padding:0 4px}
+.price{display:flex;align-items:baseline;justify-content:space-between;padding:6px 0;border-bottom:2px solid #d8d7d0}
+.price .k{font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#3b3b36}
+.price .v{font-family:A;font-size:76px;line-height:1.05}
+.tot{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.tot .k{font-size:26px;letter-spacing:3px}
+.tot .v{font-family:A;font-size:58px;line-height:1;background:var(--L);padding:4px 14px}
+.foot{position:absolute;left:0;right:0;bottom:34px;text-align:center;font-size:19px;letter-spacing:4px;color:#7a7a74}
+</style></head><body><div class="bg"></div><div id="root" class="grain" style="position:absolute;inset:0"></div>
+<script>
+const N=+(new URLSearchParams(location.search).get('n')||1),T=8;
+const hl=t=>t.replace(/\[(.*?)\]/g,'<b>[$1]</b>');
+function bars(w,h,seed=7){let s=seed,o='',t=0;while(t<w){s=(s*9301+49297)%233280;const bw=2+Math.floor(s/233280*7);s=(s*9301+49297)%233280;const g=2+Math.floor(s/233280*6);if(t+bw>w)break;o+=`<rect x="${t}" y="0" width="${bw}" height="${h}" fill="#141414"/>`;t+=bw+g}return `<svg width="${w}" height="${h}" style="display:block;margin:0 auto">${o}</svg>`}
+const P=[
+ {t:'Find the price',p:'Act as a resale pricing expert. Price my item 3 ways: quick sale, normal sale and top dollar. Item: [brand, model, size, condition]. Selling on: [platform].',
+  r:[['Quick sale','$160'],['Normal','$195'],['Top dollar','$230',1]],tk:'Top dollar vs quick sale',tv:'+$70'},
+ {t:'Price for profit',p:'Act as my profit calculator. Cost: [$]. Fees on [platform]: [%]. Shipping: [$]. I want [%] profit. Give me my break even price and my list price, with the math.',
+  r:[['Break even','$41.38'],['List at','$63.16',1]],tk:'You keep per sale',tv:'$18.95'},
+ {t:'Write the listing',p:'Act as an ecommerce copywriter. Write a listing for [item] on [platform]: a title under 80 characters with the words buyers search, 5 short bullets, and 1 line that builds trust.',
+  q:['Men\'s White Leather Low Top Sneakers, Size 10, Lightly Worn','Ships in 24h, double boxed. Every photo is the actual pair.'],tk:'Search words in title',tv:'6'},
+ {t:'Beat the lowball',p:'Act as a calm, firm negotiator. A buyer offered [$] on my [item] listed at [$]. My lowest is [$]. Write 3 short replies: a counter, a polite no, and one that adds value instead.',
+  q:['"I can do $85 and ship it today."','"Thanks! $95 is firm, it\'s priced to move."','"Can\'t drop it, but shipping is on me."'],tk:'Counter vs $60 lowball',tv:'+$25'},
+ {t:'Move slow stock',p:'Act as a retail inventory manager. Here is my stock with price and days listed: [paste]. Flag anything over 60 days, give each a new price, and suggest 2 bundles.',
+  r:[['Hoodie · 74 days','$36'],['Jeans · 61 days','$30'],['Bundle · any 2 tees','$30',1]],tk:'Items flagged to move',tv:'3'},
+];
+const sn=`${String(N).padStart(2,'0')}/${String(T).padStart(2,'0')}`;
+let h='',top=80,rot=-1.2;
+if(N==1){rot=-1.5;top=70;h=`
+ <div class="c A" style="font-size:44px;letter-spacing:8px">AUTOPILOT.OI</div>
+ <div class="c sm" style="margin-top:10px">Receipt 01 · for people who sell</div>
+ <div class="d"></div>
+ <div class="ln"><span>YOUR PRICE</span><span class="f"></span><span>$???</span></div>
+ <div class="ln"><span>WHAT IT'S WORTH</span><span class="f"></span><span>$???</span></div>
+ <div class="ln"><span>MONEY LEFT ON TABLE</span><span class="f"></span><span>$???</span></div>
+ <div class="dd"></div>
+ <div class="A" style="font-size:150px;line-height:.97;margin-top:24px">You're pricing<br>your stuff<br><span class="hl">wrong.</span></div>
+ <div class="d" style="margin-top:40px"></div>
+ <div class="tot"><span class="k">5 AI PROMPTS INSIDE</span><span class="v">FREE</span></div>
+ <div class="c sm" style="margin-top:30px;color:#141414">Swipe to print your receipt &gt;&gt;</div>
+ <div style="margin-top:26px">${bars(560,74,11)}</div>
+ <div class="c sm" style="margin-top:10px;font-size:17px">@autopilot.oi · ${sn}</div>`}
+else if(N==2){rot=1.2;h=`
+ <div class="c sm">Receipt 01 · items</div>
+ <div class="A" style="font-size:112px;margin-top:22px">Never take a<br><span class="hl">lowball</span> again.</div>
+ <div class="d"></div>
+ ${P.map((p,i)=>`<div style="display:flex;align-items:baseline;gap:22px;padding:13px 0;border-bottom:2px solid #d8d7d0"><span class="A" style="font-size:52px;width:70px">0${i+1}</span><span style="flex:1;font-size:32px">${p.t}</span><span style="font-size:24px;color:#5e5e58">p.${i+3}</span></div>`).join('')}
+ <div class="dd"></div>
+ <div class="tot"><span class="k">5 PROMPTS · TOTAL</span><span class="v">$0.00</span></div>
+ <div class="c sm" style="margin-top:28px;font-size:18px">Works in ChatGPT, Claude or Gemini</div>
+ <div class="c sm" style="margin-top:8px;font-size:17px">@autopilot.oi · ${sn}</div>`}
+else if(N<=7){const i=N-3,p=P[i];rot=i%2?1.1:-1.1;
+ const body=p.r?p.r.map(r=>`<div class="price"><span class="k">${r[0]}</span><span class="v ${r[2]?'hl':''}">${r[1]}</span></div>`).join('')
+  :p.q.map((q,j)=>`<div style="font-size:${j==0&&i==2?34:31}px;line-height:1.4;padding:12px 0;border-bottom:2px solid #d8d7d0;${j==0&&i==2?'font-weight:700':''}">${q}</div>`).join('');
+ h=`
+ <div class="ln" style="font-size:22px;letter-spacing:3px;color:#5e5e58"><span>ITEM 0${i+1} OF 05</span><span class="f" style="border:0"></span><span>${sn}</span></div>
+ <div class="A" style="font-size:118px;margin-top:8px">${p.t}</div>
+ <div class="d"></div>
+ <div class="sm">Copy this prompt</div>
+ <div class="pr" style="margin-top:12px">${hl(p.p)}</div>
+ <div class="d"></div>
+ <div class="sm">You get · sample</div>
+ <div style="margin-top:6px">${body}</div>
+ <div class="dd"></div>
+ <div class="tot"><span class="k">${p.tk.toUpperCase()}</span><span class="v">${p.tv}</span></div>
+ <div class="c sm" style="margin-top:22px;font-size:17px">@autopilot.oi</div>`}
+else{rot=-1.2;h=`
+ <div class="c A" style="font-size:44px;letter-spacing:8px">AUTOPILOT.OI</div>
+ <div class="c sm" style="margin-top:10px">Receipt 01 · your copy</div>
+ <div class="d"></div>
+ <div class="A" style="font-size:120px">Want all 5<br>in one PDF?</div>
+ <div class="d"></div>
+ <div class="sm">Comment this word</div>
+ <div class="A c" style="font-size:230px;line-height:1;margin-top:14px"><span class="hl" style="padding:0 30px">PRICE</span></div>
+ <div class="c" style="font-size:32px;margin-top:22px">and we'll DM it to you.</div>
+ <div class="dd"></div>
+ <div class="c sm" style="color:#141414">Thank you for selling smarter</div>
+ <div class="c sm" style="margin-top:8px;font-size:18px">Save this receipt · Follow for receipt 02</div>
+ <div style="margin-top:24px">${bars(560,70,23)}</div>
+ <div class="c sm" style="margin-top:10px;font-size:17px">@autopilot.oi · ${sn}</div>`}
+document.getElementById('root').innerHTML=`<div class="rc" id="rc" style="top:${top}px;transform:rotate(${rot}deg)"><div class="paper"></div>${h}</div>`;
+document.fonts.ready.then(()=>{const rc=document.getElementById('rc');const H=rc.offsetHeight;const avail=1350-2*60;
+ if(H>avail){const s=avail/H;rc.style.transform=`rotate(${rot}deg) scale(${s})`;rc.style.transformOrigin='top center';rc.style.top='60px';}
+ else rc.style.top=((1350-H)/2)+'px';
+ window.H=H;window.READY=1});
+</script></body></html>
