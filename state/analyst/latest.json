@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-12T20:30:00Z",
+  "at": "2026-11-13T00:30:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 1, "error": 0},
     "twitter": {"published": 0, "pending": 0, "error": 0},
@@ -15,21 +15,21 @@
       "url": "https://www.instagram.com/reel/Dfj-ENLoSat/"
     },
     {
-      "network": "instagram",
-      "published_at": "2026-11-11T13:04:31-03:00",
-      "text": "A shoebox of receipts and your accountant wants totals.",
-      "metrics": {"reach": 1, "views": 2, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/reel/Dfmi6FCnGCF/"
-    },
-    {
       "network": "tiktok",
       "published_at": "2026-11-11T15:11:02-03:00",
       "text": "Steal these 3 hook rewrites.",
       "metrics": {"views": 55, "comments": 0, "shares": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7706931701057850632"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-11T13:04:31-03:00",
+      "text": "A shoebox of receipts and your accountant wants totals.",
+      "metrics": {"reach": 1, "views": 2, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/reel/Dfmi6FCnGCF/"
     }
   ],
   "kit": {"subscribers": 0, "new_today": 0},
-  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-12T19:42:37Z"},
-  "notes": "Snapshot 17:30 ART Nov 12. 0 posts out today. 1 scheduled: IG reel FAQ 10:00, still PENDING with draft:true (not approved, will not publish). 0 errors. Window 6 to 72h (from 17:28 ART Nov 9): IG reels Nov 10 and Nov 11 and TikTok Nov 11 qualify; every post has 0 saves and 0 shares, so no winner (ranked by reach only as tiebreak). IG feed posts, X and Threads analytics not pulled. Kit 0 subscribers. Revenue 0 verified orders. GitHub: freel.yml failed 10:00Z (ElevenLabs 401), ci.yml failed 3 of 3 in 24h (latest 14:42Z); both already in Fix needed today. HQ feed written (status/hub v74)."
+  "revenue_seen": {"orders_all_time": 0, "orders_7d": 0, "ledger_synced": "2026-11-12T22:31:53Z"},
+  "notes": "Snapshot 21:30 ART Nov 12. 0 posts published today; 1 Instagram Reel (Front Desk FAQ, 10:00 ART) still PENDING and marked draft in Metricool, so it never went out. No ERROR posts. Window 6 to 72h: no saves or shares on any post; ranked by reach then views. Profile visits not available per post (MISSING). Workflows: freel.yml and ci.yml failing, both already in Fix needed. HQ feed written (status/hub v75). No new orders."
 }
