@@ -368,7 +368,7 @@
   "severity": "SEV-3"
  },
  "worker:support_agent": {
-  "ok": false,
+  "ok": true,
   "severity": "SEV-3"
  },
  "worker:tiktok_intel": {
