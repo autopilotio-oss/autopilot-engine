@@ -223,6 +223,10 @@
   "ok": true,
   "severity": "SEV-2"
  },
+ "page:business_home": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
  "page:fd_after_hours": {
   "ok": true,
   "severity": "SEV-2"
@@ -296,6 +300,10 @@
   "severity": "SEV-2"
  },
  "page:store_redirect": {
+  "ok": true,
+  "severity": "SEV-2"
+ },
+ "page:vault": {
   "ok": true,
   "severity": "SEV-2"
  },
