@@ -1,0 +1,22 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid6": {
+  "no": 38,
+  "lines": [
+   "Claude prompts",
+   "that should",
+   "be illegal."
+  ],
+  "mark": "illegal",
+  "sub": "24 prompts for business owners. All inside, no DM needed.",
+  "kicker": "PROMPTS · 24 INSIDE",
+  "k": 7,
+  "photo": "g6-k7/01"
+ }
+}

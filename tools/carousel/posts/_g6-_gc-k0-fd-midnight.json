@@ -1,0 +1,21 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid6": {
+  "no": 31,
+  "lines": [
+   "Texts at midnight?",
+   "Handled."
+  ],
+  "mark": "handled",
+  "sub": "It drafts the reply in your voice. You send it.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "k": 0,
+  "photo": "g6-k0/01"
+ }
+}

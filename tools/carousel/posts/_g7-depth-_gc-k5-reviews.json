@@ -1,0 +1,23 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid7": {
+  "no": 36,
+  "lines": [
+   "Get more",
+   "5 star",
+   "reviews."
+  ],
+  "mark": "reviews",
+  "sub": "5 Claude prompts to ask every customer, the honest way.",
+  "kicker": "PROMPTS · REVIEWS",
+  "style": "depth",
+  "k": 5,
+  "photo": "e1/01"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid9": {
+  "no": 36,
+  "lines": [
+   "Get more",
+   "5 star",
+   "reviews."
+  ],
+  "mark": "reviews",
+  "sub": "5 Claude prompts to ask every customer, the honest way.",
+  "kicker": "PROMPTS · REVIEWS",
+  "k": 5,
+  "photo": "seb/s6",
+  "pos": "center 35%",
+  "vertical": "REVIEWS",
+  "badge": "THE HONEST WAY *",
+  "badge_center": "5"
+ }
+}

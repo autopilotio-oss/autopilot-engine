@@ -1,0 +1,21 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid6": {
+  "no": 35,
+  "lines": [
+   "Type review.",
+   "Thank everyone."
+  ],
+  "mark": "review",
+  "sub": "A short thank you to each customer, with your review link.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "k": 4,
+  "photo": "g6-k4/01"
+ }
+}

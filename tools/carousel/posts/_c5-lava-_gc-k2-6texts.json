@@ -1,0 +1,22 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid5": {
+  "type": "lesson",
+  "no": 33,
+  "lines": [
+   "6 texts",
+   "that get",
+   "you paid."
+  ],
+  "mark": "paid",
+  "sub": "For the customer who \"forgot\". Save this.",
+  "kicker": "SCRIPTS · GET PAID",
+  "style": "lava"
+ }
+}

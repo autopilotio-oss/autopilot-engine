@@ -1,0 +1,26 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid9": {
+  "no": 32,
+  "lines": [
+   "11:48 PM.",
+   "Still doing",
+   "the books."
+  ],
+  "mark": "books",
+  "sub": "You did not start a business for this.",
+  "kicker": "OWNER STORIES",
+  "k": 1,
+  "photo": "seb/s2",
+  "pos": "center 35%",
+  "vertical": "THE BOOKS",
+  "badge": "OWNER STORIES *",
+  "badge_center": "▶"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid7": {
+  "no": 32,
+  "lines": [
+   "11:48 PM.",
+   "Still doing",
+   "the books."
+  ],
+  "mark": "books",
+  "sub": "You did not start a business for this.",
+  "kicker": "OWNER STORIES",
+  "style": "magazine",
+  "k": 1,
+  "photo": "seb/s2",
+  "grade": "color",
+  "pos": "center 35%"
+ }
+}

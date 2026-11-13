@@ -1,0 +1,24 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid5": {
+  "type": "store",
+  "no": 35,
+  "lines": [
+   "Type review.",
+   "Thank everyone."
+  ],
+  "mark": "review",
+  "sub": "A short thank you to each customer, with your review link.",
+  "product": "Front Desk Kit",
+  "product_sub": "Review asks in your voice",
+  "price": "$39",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "style": "chat"
+ }
+}

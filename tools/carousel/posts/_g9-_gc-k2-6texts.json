@@ -1,0 +1,26 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid9": {
+  "no": 33,
+  "lines": [
+   "6 texts",
+   "that get",
+   "you paid."
+  ],
+  "mark": "paid",
+  "sub": "For the customer who \"forgot\". Save this.",
+  "kicker": "SCRIPTS · GET PAID",
+  "k": 2,
+  "photo": "seb/s3",
+  "pos": "center 35%",
+  "vertical": "GET PAID",
+  "badge": "SAVE THIS FOR LATE PAYERS *",
+  "badge_center": "6"
+ }
+}

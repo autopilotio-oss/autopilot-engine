@@ -1,0 +1,25 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid7": {
+  "no": 33,
+  "lines": [
+   "6 texts",
+   "that get",
+   "you paid."
+  ],
+  "mark": "paid",
+  "sub": "For the customer who \"forgot\". Save this.",
+  "kicker": "SCRIPTS · GET PAID",
+  "style": "torn",
+  "k": 2,
+  "photo": "seb/s3",
+  "grade": "color",
+  "pos": "center 35%"
+ }
+}

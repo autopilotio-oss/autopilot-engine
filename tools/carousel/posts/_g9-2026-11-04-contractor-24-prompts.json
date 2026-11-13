@@ -1,0 +1,26 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid9": {
+  "no": 39,
+  "lines": [
+   "Claude prompts",
+   "that feel like",
+   "cheating."
+  ],
+  "mark": "cheating",
+  "sub": "24 prompts for contractors. All inside, no DM needed.",
+  "kicker": "PROMPTS · CONTRACTORS",
+  "k": 8,
+  "photo": "seb/s9",
+  "pos": "center 35%",
+  "vertical": "PROMPTS",
+  "badge": "NO DM NEEDED * ALL 24 INSIDE *",
+  "badge_center": "24"
+ }
+}

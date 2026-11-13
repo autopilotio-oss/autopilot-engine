@@ -1,0 +1,23 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid6": {
+  "no": 34,
+  "lines": [
+   "One fake",
+   "job interview.",
+   "$6.3B gone."
+  ],
+  "mark": "$6.3b",
+  "sub": "How the Binance theft started, and how to spot the same trick.",
+  "kicker": "AI NEWS · SECURITY",
+  "k": 3,
+  "photo": "g6-k3/01",
+  "bg": "40% 18%/190%"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid9": {
+  "no": 37,
+  "lines": [
+   "A quiet quote",
+   "is a maybe."
+  ],
+  "mark": "maybe",
+  "sub": "Type chase. One friendly nudge for each open quote.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "k": 6,
+  "photo": "seb/s7",
+  "pos": "center 35%",
+  "vertical": "QUOTES",
+  "badge": "FRONT DESK KIT * $39 *",
+  "badge_center": "▶"
+ }
+}

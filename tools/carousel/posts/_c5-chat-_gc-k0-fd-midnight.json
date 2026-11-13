@@ -1,0 +1,24 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid5": {
+  "type": "store",
+  "no": 31,
+  "lines": [
+   "Texts at midnight?",
+   "Handled."
+  ],
+  "mark": "handled",
+  "sub": "It drafts the reply in your voice. You send it.",
+  "product": "Front Desk Kit",
+  "product_sub": "Answers customers for you to send",
+  "price": "$39",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "style": "chat"
+ }
+}

@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset=utf-8><style>*{margin:0}html,body{background:transparent;width:3240px;height:4050px;overflow:hidden}</style></head><body>
+<canvas id=c width=3240 height=4050></canvas><script>
+const gl=document.getElementById('c').getContext('webgl',{alpha:true,premultipliedAlpha:false,preserveDrawingBuffer:true});
+const balls=JSON.parse(decodeURIComponent(location.hash.slice(1)));
+const N=balls.length;
+const fs=`precision highp float;uniform vec2 R;uniform vec4 B[${N}];
+float cap(vec3 p,vec3 a,vec3 b,float r){vec3 pa=p-a,ba=b-a;float h=clamp(dot(pa,ba)/dot(ba,ba),0.,1.);return length(pa-ba*h)-r;}
+float smin(float a,float b,float k){float h=clamp(.5+.5*(b-a)/k,0.,1.);return mix(b,a,h)-k*h*(1.-h);}
+float map(vec3 p){vec3 q=p;q.y-= -40.;float d=length(max(abs(vec3(q.x-1620.,q.y,q.z))-vec3(1800.,60.,0.),0.))-70.;
+ for(int i=0;i<${N};i++){vec4 b=B[i];float c=cap(p,vec3(b.x,0.,0.),vec3(b.x,b.z,0.),b.w);float bulb=length(p-vec3(b.x,b.z+b.w*.6,0.))-b.w*1.7;d=smin(d,smin(c,bulb,b.w*1.2),90.);}return d;}
+vec3 nrm(vec3 p){vec2 e=vec2(1.5,0.);return normalize(vec3(map(p+e.xyy)-map(p-e.xyy),map(p+e.yxy)-map(p-e.yxy),map(p+e.yyx)-map(p-e.yyx)));}
+float box(vec3 d,vec3 c,vec3 u,float w,float h){c=normalize(c);u=normalize(u-c*dot(u,c));vec3 v=cross(c,u);
+ float k=dot(d,c);if(k<=0.)return 0.;vec3 q=d/k-c;float x=dot(q,u),y=dot(q,v);
+ return smoothstep(w,w*.82,abs(x))*smoothstep(h,h*.82,abs(y));}
+vec3 env(vec3 d){
+ vec3 c=mix(vec3(.04),vec3(.38,.39,.37),smoothstep(-.6,.9,d.y))*(.55+.45*smoothstep(-.5,1.,d.z));
+ c*=.8+.2*sin(d.x*9.+d.y*4.);
+ c+=vec3(1.4)*box(d,vec3(.0,.85,.55),vec3(1,0,0),.9,.18);
+ c+=vec3(1.1)*box(d,vec3(.75,.25,.6),vec3(0,1,0),.12,.9);
+ c+=vec3(.9)*box(d,vec3(-.55,.35,.75),vec3(0,1,0),.07,.7);
+ c+=vec3(.83,1.,.23)*1.6*box(d,vec3(-.85,-.25,.45),vec3(0,1,0),.35,.6);
+ c+=vec3(.83,1.,.23)*1.2*box(d,vec3(.4,-.8,.45),vec3(1,0,0),.6,.12);
+ c+=vec3(1.)*box(d,vec3(.25,.15,.95),vec3(1,1,0),.05,.05)*3.;
+ c+=vec3(.25)*smoothstep(.02,0.,abs(d.y+.05))*smoothstep(0.,.5,d.z);
+ return c;}
+void main(){vec2 f=vec2(gl_FragCoord.x,R.y-gl_FragCoord.y);
+ vec3 ro=vec3(f+ (f-R*.5)*0.0,900.);vec3 rd=normalize(vec3((f-R*.5)/R.y*.35,-1.));
+ float t=0.;float hit=0.;for(int i=0;i<90;i++){vec3 p=ro+rd*t;float d=map(p);if(d<.6){hit=1.;break;}t+=d;if(t>1800.)break;}
+ if(hit<.5){gl_FragColor=vec4(0.);return;}
+ vec3 p=ro+rd*t;vec3 n=nrm(p);n.y=-n.y;vec3 v=-rd*vec3(1,-1,1);
+ vec3 L=normalize(vec3(-.4,.7,.6));float dif=max(dot(n,L),0.);float spec=pow(max(dot(reflect(-L,n),v),0.),70.);
+ float fr=pow(1.-max(dot(n,v),0.),3.);
+ vec3 lime=vec3(.83,1.,.23);
+ vec3 col=lime*(.32+.75*dif)+vec3(.55,.75,.05)*(1.-dif)*.25;
+ col=mix(col,env(reflect(-v,n))*vec3(.95,1.,.8),fr*.55);
+ col+=vec3(1.)*spec*1.3;
+ col+=vec3(1.)*smoothstep(.985,1.,dot(n,normalize(vec3(-.3,.5,.8))))*.6;
+ gl_FragColor=vec4(col,1.);}`;
+function sh(t,s){const x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);if(!gl.getShaderParameter(x,gl.COMPILE_STATUS))throw gl.getShaderInfoLog(x);return x}
+const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}'));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+const l=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
+gl.uniform2f(gl.getUniformLocation(pr,'R'),3240,4050);gl.uniform4fv(gl.getUniformLocation(pr,'B'),new Float32Array(balls.flat()));
+gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);gl.finish();window.READY=1;
+</script></body></html>

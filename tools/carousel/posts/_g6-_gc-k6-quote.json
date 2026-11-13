@@ -1,0 +1,21 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid6": {
+  "no": 37,
+  "lines": [
+   "A quiet quote",
+   "is a maybe."
+  ],
+  "mark": "maybe",
+  "sub": "Type chase. One friendly nudge for each open quote.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "k": 6,
+  "photo": "g6-k6/01"
+ }
+}

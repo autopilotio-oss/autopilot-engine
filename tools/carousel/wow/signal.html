@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset=utf-8><link rel=stylesheet href="/tools/carousel/style.css"><style>
+body{margin:0;width:3240px;height:4050px;position:relative;overflow:hidden;background:#f2f2ee}
+.row{position:absolute;left:0;width:3240px;height:1350px;overflow:hidden}
+.t{position:absolute;top:0;width:1080px;height:1350px;overflow:hidden}
+.ph{position:absolute;inset:0;background-size:cover;background-position:center;filter:grayscale(1) contrast(1.18) brightness(.95)}
+.A{position:absolute;font-family:A;text-transform:uppercase;line-height:.88;white-space:nowrap}
+.M{position:absolute;font:400 22px M;letter-spacing:5px;text-transform:uppercase}
+.O{position:absolute;font-family:A;text-transform:uppercase;line-height:.86;font-style:italic;transform:skewX(-8deg);color:transparent;-webkit-text-stroke:3px #0b0b0b;white-space:nowrap}
+.L{color:#D4FF3A}.I{color:#0b0b0b}.W{color:#f2f2ee}
+.bc{position:absolute;display:flex;gap:0}.bc i{display:block;height:100%;background:#0b0b0b}
+</style></head><body><script>
+const P=n=>`/docs/media/car/photos/${n}/01.jpg`;
+const bars=(w,h,seed)=>{let s=seed,o='';let x=0;while(x<w){s=(s*9301+49297)%233280;const bw=3+Math.floor(s/233280*14);s=(s*9301+49297)%233280;const gap=3+Math.floor(s/233280*10);o+=`<i style="width:${bw}px;margin-right:${gap}px"></i>`;x+=bw+gap}return `<div class=bc style="width:${w}px;height:${h}px;overflow:hidden">${o}</div>`};
+const pix=(cells,size,col)=>cells.map(([c,r])=>`<div style="position:absolute;left:${c*size}px;top:${r*size}px;width:${size}px;height:${size}px;background:${col}"></div>`).join('');
+const tag=(x,c='#0b0b0b')=>`<div class=M style="left:${x+70}px;top:64px;color:${c};font-weight:700;font-family:C;letter-spacing:6px">AUTOPILOT.OI</div>`;
+let h='';
+// ROW 1 : ILLEGAL
+h+=`<div class=row style="top:0">
+ <div class=t style="left:0;background:#0b0b0b"><div class=ph style="background-image:url(${P('e4')});background-position:50% 30%"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.85) 100%)"></div>
+  <svg style="position:absolute;left:0;top:0" width=1080 height=1350><polygon points="1080,0 600,0 1080,470" fill="#D4FF3A"/><polygon points="0,1350 0,1090 300,1350" fill="#D4FF3A"/></svg>
+  ${tag(0,'#f2f2ee')}
+  <div class="A W" style="left:70px;top:860px;font-size:128px">Prompts that<br>should be<br><span class=L>illegal.</span></div></div>
+ <div class=t style="left:1080px;background:#D4FF3A">
+  <div class=M style="left:70px;top:64px;color:#0b0b0b">24 PROMPTS / 6 FOLDERS</div>
+  <div class=M style="right:70px;top:1250px;color:#0b0b0b">SWIPE →</div></div>
+ <div class=t style="left:2160px;background:#f2f2ee">
+  <div style="position:absolute;left:70px;top:150px">${bars(940,120,7)}</div>
+  <div class=M style="left:70px;top:300px;color:#0b0b0b">THE STORE</div>
+  <div class="A I" style="left:66px;top:350px;font-size:150px">Front<br>desk kit</div>
+  <div class="A" style="left:70px;top:640px;font-size:96px;background:#0b0b0b;color:#D4FF3A;padding:14px 24px 6px">$39</div>
+  <div style="position:absolute;left:0;top:0">${pix([[10,15],[11,15],[13,15],[9,16],[10,16],[12,16],[13,16],[14,16],[8,17],[9,17],[11,17],[12,17],[14,17],[15,17],[7,18],[8,18],[10,18],[11,18],[13,18],[14,18],[15,18],[16,18],[17,18],[6,19],[7,19],[9,19],[10,19],[12,19],[13,19],[14,19],[16,19],[17,19]],70,'#0b0b0b')}</div>
+  <div class=M style="left:70px;top:1250px;color:#0b0b0b">LINK IN BIO</div></div>
+ <div class=O style="left:1150px;top:250px;font-size:250px">Illegal<br>illegal<br>illegal<br>illegal</div>
+</div>`;
+// ROW 2 : CHEATING
+h+=`<div class=row style="top:1350px">
+ <div class=t style="left:0;background:#f2f2ee">${tag(0)}
+  <svg style="position:absolute;left:0;top:0" width=230 height=1350><defs><pattern id=st width=56 height=56 patternUnits=userSpaceOnUse patternTransform="rotate(45)"><rect width=28 height=56 fill="#0b0b0b"/></pattern></defs><rect width=230 height=1350 fill="url(#st)"/></svg>
+  <div class="A I" style="left:300px;top:200px;font-size:560px;line-height:.8">24</div>
+  <div class="A I" style="left:300px;top:760px;font-size:96px">Prompts that<br>feel like<br>cheating.</div>
+  <div class=M style="left:300px;top:1240px;color:#0b0b0b">FOR CONTRACTORS</div></div>
+ <div class=t style="left:1080px;background:#0b0b0b"><div class=ph style="background-image:url(${P('e10')})"></div></div>
+ <div class=t style="left:2160px;background:#0b0b0b">
+  <div class=M style="right:70px;top:1250px;color:#f2f2ee">NO DM NEEDED</div></div>
+ <div class="A W" style="left:1600px;top:1310px;font-size:330px;transform-origin:0 0;transform:rotate(-90deg)">Prompts</div>
+ <div class="A L" style="left:2560px;top:1310px;font-size:330px;transform-origin:0 0;transform:rotate(-90deg)">Prompts</div>
+</div>`;
+// ROW 3 : PAID / NEWS
+h+=`<div class=row style="top:2700px">
+ <div class=t style="left:0;background:#D4FF3A">${tag(0)}
+  <div style="position:absolute;left:150px;top:200px;width:780px;height:640px;background:url(${P('e9')}) center 30%/cover;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply"></div>
+  <div class="A I" style="left:70px;top:900px;font-size:118px">6 texts that<br>get you paid.</div>
+  <div class=M style="left:70px;top:1240px;color:#0b0b0b">SAVE THIS</div></div>
+ <div class=t style="left:1080px;background:#f2f2ee">
+  <div class=M style="left:70px;top:220px;color:#0b0b0b">FOR THE NEXT</div>
+  <div class="A I" style="left:66px;top:262px;font-size:170px">Late<br>invoice.</div>
+  <div style="position:absolute;left:0;top:0">${pix([[9,12],[10,12],[11,12],[12,12],[13,12],[14,12],[15,12],[10,13],[12,13],[13,13],[15,13],[11,14],[12,14],[14,14],[15,14],[6,15],[11,15],[13,15],[14,15],[15,15],[7,16],[8,16],[12,16],[14,16],[15,16],[9,17],[13,17],[15,17],[11,18],[14,18]],70,'#0b0b0b')}</div></div>
+ <div class=t style="left:2160px;background:#0b0b0b"><div class=ph style="background-image:url(${P('e2')});background-position:40% 50%"></div>
+  <svg style="position:absolute;left:0;top:0" width=1080 height=1350><polygon points="0,0 520,0 0,420" fill="#D4FF3A"/></svg>
+  <div class=M style="right:70px;top:64px;color:#f2f2ee">AI NEWS</div>
+  <div class="A W" style="left:70px;top:900px;font-size:118px"><span class=L>$6.3B</span> gone after<br>one fake<br>interview.</div></div>
+ <div style="position:absolute;left:840px;top:110px">${bars(560,70,3)}</div>
+</div>`;
+document.body.innerHTML=h;
+</script></body></html>

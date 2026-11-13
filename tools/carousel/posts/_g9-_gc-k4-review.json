@@ -1,0 +1,25 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid9": {
+  "no": 35,
+  "lines": [
+   "Type review.",
+   "Thank everyone."
+  ],
+  "mark": "review",
+  "sub": "A short thank you to each customer, with your review link.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "k": 4,
+  "photo": "seb/s5",
+  "pos": "center 35%",
+  "vertical": "REVIEWS",
+  "badge": "FRONT DESK KIT * $39 *",
+  "badge_center": "▶"
+ }
+}

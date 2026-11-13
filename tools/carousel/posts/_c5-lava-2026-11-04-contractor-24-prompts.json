@@ -1,0 +1,22 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid5": {
+  "type": "lesson",
+  "no": 39,
+  "lines": [
+   "Claude prompts",
+   "that feel like",
+   "cheating."
+  ],
+  "mark": "cheating",
+  "sub": "24 prompts for contractors. All inside, no DM needed.",
+  "kicker": "PROMPTS · CONTRACTORS",
+  "style": "lava"
+ }
+}

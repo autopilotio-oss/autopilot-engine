@@ -1,0 +1,22 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid7": {
+  "no": 35,
+  "lines": [
+   "Type review.",
+   "Thank everyone."
+  ],
+  "mark": "review",
+  "sub": "A short thank you to each customer, with your review link.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "style": "magazine",
+  "k": 4,
+  "photo": "e8/01"
+ }
+}

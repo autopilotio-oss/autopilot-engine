@@ -1,0 +1,22 @@
+[
+ {
+  "slide": 1,
+  "level": "error",
+  "msg": "\"GET MORE\" hard to read: contrast 1.0:1"
+ },
+ {
+  "slide": 1,
+  "level": "error",
+  "msg": "\"5 STAR\" hard to read: contrast 1.0:1"
+ },
+ {
+  "slide": 1,
+  "level": "error",
+  "msg": "\"REVIEWS.\" hard to read: contrast 1.0:1"
+ },
+ {
+  "slide": 1,
+  "level": "error",
+  "msg": "\"5 Claude prompts to ask ever\" hard to read: contrast 1.0:1"
+ }
+]

@@ -1,0 +1,25 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid9": {
+  "no": 31,
+  "lines": [
+   "Texts at midnight?",
+   "Handled."
+  ],
+  "mark": "handled",
+  "sub": "It drafts the reply in your voice. You send it.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "k": 0,
+  "photo": "seb/s1",
+  "pos": "center 35%",
+  "vertical": "FRONT DESK",
+  "badge": "FRONT DESK KIT * $39 *",
+  "badge_center": "▶"
+ }
+}

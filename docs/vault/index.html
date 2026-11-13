@@ -531,7 +531,8 @@ function kit(f,src,done){f.addEventListener('submit',function(ev){ev.preventDefa
 </script><script>
 var v=document.getElementById('v');function open_(){v.classList.remove('locked');document.getElementById('offer').style.display='block'}
 document.querySelectorAll('.shr').forEach(function(b){b.onclick=function(){var d={title:b.dataset.t,text:'Free Claude prompts: '+b.dataset.t,url:b.dataset.u};if(navigator.share)navigator.share(d).catch(function(){});else navigator.clipboard.writeText(d.url).then(function(){b.textContent='Link copied'});try{if(window.goatcounter)goatcounter.count({path:'vault/share',event:true})}catch(x){}}});
-try{if(localStorage.getItem('ap_vault'))open_()}catch(x){}
+try{if(/utm_source=kit/.test(location.search))localStorage.setItem('ap_vault','1')}catch(x){}
+try{if(localStorage.getItem('ap_vault')||/utm_source=kit/.test(location.search))open_()}catch(x){}
 kit(document.querySelector('.cap'),'vault_page',function(m){open_()});
 document.querySelectorAll('.cpy').forEach(function(b){b.addEventListener('click',function(){var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var t=p.querySelector('.t');if(t)t.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){try{if(window.goatcounter)goatcounter.count({path:'vault/copy',event:true})}catch(x){}b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1400)})})});
 </script></body></html>

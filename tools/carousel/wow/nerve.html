@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset=utf-8><link rel="stylesheet" href="/tools/carousel/style.css"><style>body{margin:0;width:3240px;height:4050px;position:relative;overflow:hidden;background:#0c0d0c}canvas{position:absolute;left:0;top:0}.t{position:absolute;width:1080px;height:1350px}</style></head><body>
+<canvas id=c width=3240 height=4050></canvas><div id=o></div><script>
+const H=[["Texts at midnight?","Handled.","THE STORE"],["Texts that get","you paid.","SCRIPTS"],["Still doing","the books?","OWNER TOOLS"],["Gone after one","fake interview.","AI NEWS"],["Prompts for more","5 star reviews.","PROMPTS"],["A quiet quote","is a maybe.","THE STORE"],["Prompts that should","be illegal.","PROMPTS"],["Prompts that feel","like cheating.","CONTRACTORS"],["Type review.","Thank everyone.","THE STORE"]];
+const x=document.getElementById('c').getContext('2d');let S=7;const R=()=>{S=(S*16807)%2147483647;return S/2147483647};
+const L='212,255,58',W='236,240,228';
+// haze
+for(let i=0;i<9;i++){const ox=(i%3)*1080,oy=Math.floor(i/3)*1350;const g=x.createRadialGradient(ox+540,oy+420,0,ox+540,oy+420,760);g.addColorStop(0,'rgba(60,64,58,.55)');g.addColorStop(1,'rgba(12,13,12,0)');x.fillStyle=g;x.fillRect(ox,oy,1080,1350)}
+// database dot matrix, globally aligned
+for(let yy=15;yy<4050;yy+=30)for(let xx=15;xx<3240;xx+=30){x.fillStyle='rgba(255,255,255,.055)';x.fillRect(xx-1,yy-1,2,2)}
+function bez(a,c1,c2,b,n){const p=[];for(let i=0;i<=n;i++){const t=i/n,u=1-t;p.push([u*u*u*a[0]+3*u*u*t*c1[0]+3*u*t*t*c2[0]+t*t*t*b[0],u*u*u*a[1]+3*u*u*t*c1[1]+3*u*t*t*c2[1]+t*t*t*b[1]])}return p}
+function taper(p,w0,w1,col,a){for(let i=0;i<p.length-1;i++){const t=i/(p.length-1);x.beginPath();x.moveTo(p[i][0],p[i][1]);x.lineTo(p[i+1][0],p[i+1][1]);x.lineWidth=w0+(w1-w0)*Math.sin(Math.PI*t)**.6;x.strokeStyle=`rgba(${col},${a})`;x.lineCap='round';x.stroke()}}
+function nerve(p,w){x.globalCompositeOperation='lighter';taper(p,w*4,w*9,L,.035);taper(p,w*1.8,w*3.5,L,.09);x.globalCompositeOperation='source-over';taper(p,w*.9,w*1.9,W,.85)}
+function lit(p){x.globalCompositeOperation='lighter';p.forEach(q=>{const gx=Math.round((q[0]-15)/30)*30+15,gy=Math.round((q[1]-15)/30)*30+15;if(R()<.06){x.fillStyle=`rgba(${L},.6)`;x.fillRect(gx-2,gy-2,4,4)}});x.globalCompositeOperation='source-over'}
+function spark(q,r){x.globalCompositeOperation='lighter';const g=x.createRadialGradient(q[0],q[1],0,q[0],q[1],r);g.addColorStop(0,'rgba(255,255,240,1)');g.addColorStop(.2,`rgba(${L},.7)`);g.addColorStop(1,`rgba(${L},0)`);x.fillStyle=g;x.beginPath();x.arc(q[0],q[1],r,0,7);x.fill();x.globalCompositeOperation='source-over'}
+function twig(px,py,ang,len,w,d){if(d<=0)return;const ex=px+Math.cos(ang)*len,ey=py+Math.sin(ang)*len;const p=bez([px,py],[px+Math.cos(ang+.4)*len*.4,py+Math.sin(ang+.4)*len*.4],[ex-Math.cos(ang-.3)*len*.3,ey-Math.sin(ang-.3)*len*.3],[ex,ey],10);
+ x.globalCompositeOperation='lighter';taper(p,w*3,w*3,L,.05);x.globalCompositeOperation='source-over';taper(p,w,w*.6,W,.55);
+ if(d==1&&R()<.5)spark([ex,ey],10);twig(ex,ey,ang-.45+(R()-.5)*.3,len*.7,w*.7,d-1);if(R()<.7)twig(ex,ey,ang+.45+(R()-.5)*.3,len*.65,w*.7,d-1)}
+// fixed ports, same on every tile, so every post plugs into its neighbours
+const TOP=[300,780],SIDE=[380,1000];
+for(let i=0;i<9;i++){const ox=(i%3)*1080,oy=Math.floor(i/3)*1350;S=4000+i*131;x.save();x.beginPath();x.rect(ox,oy,1080,1350);x.clip();
+ const g=[ox+540+(R()-.5)*90,oy+520+(R()-.5)*60];// ganglion
+ const ends=[[ox+TOP[0],oy,0,1],[ox+TOP[1],oy,0,1],[ox+TOP[0],oy+1350,0,-1],[ox+TOP[1],oy+1350,0,-1],[ox,oy+SIDE[0],1,0],[ox,oy+SIDE[1],1,0],[ox+1080,oy+SIDE[0],-1,0],[ox+1080,oy+SIDE[1],-1,0]];
+ const paths=[];
+ ends.forEach(e=>{const [ex,ey,dx,dy]=e;const c1=[ex+dx*330,ey+dy*330];const ang=Math.atan2(ey-g[1],ex-g[0]);const c2=[g[0]+Math.cos(ang)*220+(R()-.5)*120,g[1]+Math.sin(ang)*220+(R()-.5)*120];
+  for(let s=0;s<3;s++){const o=(s-1)*7;const p=bez([ex+(dy?o:0),ey+(dx?o:0)],[c1[0]+(dy?o*3:0),c1[1]+(dx?o*3:0)],[c2[0]+o*2,c2[1]+o*2],[g[0]+(R()-.5)*20,g[1]+(R()-.5)*20],60);paths.push(p);nerve(p,s==1?2.2:1.1)}});
+ paths.forEach(p=>{lit(p);for(let k=0;k<2;k++){if(R()<.35)spark(p[Math.floor(10+R()*45)],22+R()*18)}});
+ // fine branches off the bundles
+ for(let k=0;k<10;k++){const p=paths[Math.floor(R()*paths.length)];const q=p[Math.floor(12+R()*36)];twig(q[0],q[1],R()*6.28,45+R()*40,1.6,3)}
+ // ganglion body
+ x.globalCompositeOperation='lighter';[[380,.07],[200,.16],[90,.45]].forEach(([r,a])=>{const gg=x.createRadialGradient(g[0],g[1],0,g[0],g[1],r);gg.addColorStop(0,`rgba(${L},${a})`);gg.addColorStop(1,`rgba(${L},0)`);x.fillStyle=gg;x.beginPath();x.arc(g[0],g[1],r,0,7);x.fill()});
+ x.globalCompositeOperation='source-over';const cg=x.createRadialGradient(g[0]-14,g[1]-16,4,g[0],g[1],46);cg.addColorStop(0,'#ffffff');cg.addColorStop(.5,'#e6eadf');cg.addColorStop(1,'#9aa08f');x.fillStyle=cg;x.beginPath();x.ellipse(g[0],g[1],46,40,.4,0,7);x.fill();spark(g,70);
+ const fg=x.createLinearGradient(0,oy+860,0,oy+1350);fg.addColorStop(0,'rgba(12,13,12,0)');fg.addColorStop(.4,'rgba(12,13,12,.8)');fg.addColorStop(.8,'rgba(12,13,12,.8)');fg.addColorStop(1,'rgba(12,13,12,0)');x.fillStyle=fg;x.fillRect(ox,oy+860,1080,490);
+ x.restore();
+ const [a,b,tag]=H[i];document.getElementById('o').insertAdjacentHTML('beforeend',`<div class=t style="left:${ox}px;top:${oy}px"><div style="position:absolute;left:90px;top:80px;font:700 20px C;letter-spacing:6px;color:#f2f2ee">AUTOPILOT.OI</div><div style="position:absolute;right:90px;top:80px;font:400 20px M;letter-spacing:2px;color:#9a9a92">Nº ${String(39-i).padStart(3,'0')}</div><div style="position:absolute;left:0;right:0;top:960px;text-align:center;font:400 102px/.92 A;text-transform:uppercase;color:#f2f2ee">${a}<br><span style="color:#D4FF3A">${b}</span></div><div style="position:absolute;left:0;right:0;top:1228px;text-align:center;font:400 20px M;letter-spacing:5px;color:#77776f">${tag}</div></div>`)}
+</script></body></html>

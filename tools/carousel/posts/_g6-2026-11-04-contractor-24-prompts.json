@@ -1,0 +1,23 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid6": {
+  "no": 39,
+  "lines": [
+   "Claude prompts",
+   "that feel like",
+   "cheating."
+  ],
+  "mark": "cheating",
+  "sub": "24 prompts for contractors. All inside, no DM needed.",
+  "kicker": "PROMPTS · CONTRACTORS",
+  "k": 8,
+  "photo": "g6-k8/01",
+  "layout": "poster"
+ }
+}

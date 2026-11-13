@@ -1,0 +1,24 @@
+{
+ "kind": "news",
+ "cover_only": true,
+ "slides": [],
+ "cta": {
+  "big": "",
+  "small": ""
+ },
+ "grid7": {
+  "no": 37,
+  "lines": [
+   "A quiet quote",
+   "is a maybe."
+  ],
+  "mark": "maybe",
+  "sub": "Type chase. One friendly nudge for each open quote.",
+  "kicker": "THE STORE · FRONT DESK KIT",
+  "style": "magazine",
+  "k": 6,
+  "photo": "seb/s7",
+  "grade": "color",
+  "pos": "center 35%"
+ }
+}
