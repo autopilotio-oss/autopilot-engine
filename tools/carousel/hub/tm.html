@@ -6,7 +6,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{width:1080px;height:1350px;overflow:hidden;background:var(--K);color:#fff}
 .ph{position:absolute;left:0;top:0;width:1080px;height:1446px;object-fit:cover;object-position:50% 0}
-.fade{position:absolute;left:0;right:0;top:640px;height:710px;background:linear-gradient(180deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.7) 28%,rgba(5,5,5,.96) 46%,#050505 56%)}
+.fade{position:absolute;left:0;right:0;top:520px;height:830px;background:linear-gradient(180deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.7) 28%,rgba(5,5,5,.96) 46%,#050505 56%)}
 .logo{position:absolute;left:46px;top:44px;width:132px;height:132px;border-radius:24px;background:url(/docs/media/hub/ap_badge.png) center/cover;transform:rotate(-6deg);box-shadow:6px 8px 0 rgba(0,0,0,.55)}
 .blk{position:absolute;left:52px;right:52px;bottom:100px;display:flex;flex-direction:column;align-items:center}
 .tag{background:var(--L);color:#000;font-family:A;font-size:50px;letter-spacing:.5px;padding:6px 26px 4px;transform:skewX(-10deg);margin-bottom:26px;box-shadow:6px 6px 0 #000}
@@ -38,6 +38,20 @@ const D={
  25:{h:["Man takes bubble bath","in the middle of","rush hour traffic"]},
  26:{h:["Grandma beats","bodybuilder in","arm wrestling match"]},
 };
+const HK={
+10:{a:1,w:"Claude can now find you a better paying job while you sleep",l:"This agent takes 10 minutes to set up"},
+19:{w:"Claude can now read your bank statement like a $200 an hour financial advisor",l:"It finds every dollar you’re wasting"},
+20:{w:"Claude can now read any contract like a $400 an hour lawyer",l:"Lease, job offer, car loan. Before you sign"},
+25:{a:1,w:"Claude now works the night shift",l:"Give it 7 tasks before bed. Wake up to it all done"},
+7:{w:"Claude can now find money in the skills you already have",l:"7 side hustles you can start this weekend"},
+26:{a:1,w:"Claude can now hire you a team of 5 AI employees",l:"Email, bills, job hunt, meals, planning"},
+1:{w:"Claude can now build your 10 year money plan in 10 minutes",l:"See where you could be by 2036"},
+16:{a:1,w:"6 Claude agents that replace a $3,000 a month assistant",l:"Set them up once. They work 24/7"},
+23:{w:"Claude can now fight your bills like a pro negotiator",l:"Rent, internet, medical, insurance"},
+3:{a:1,w:"Claude can now prep you for any interview like a $300 career coach",l:"Practice for your exact job"},
+24:{w:"Most people still type one line into Claude",l:"The 1% set it up like this"},
+18:{sy:360,w:"Claude can now plan your whole Black Friday in one evening",l:"What to buy, what to skip, real deals only"}};
+function splitN(t,n){const w=t.split(' '),L=t.length/n;let o=[''],k=0;for(const x of w){if(o[k].length+x.length/2>L&&k<n-1&&o[k]){k++;o[k]=''}o[k]+=(o[k]?' ':'')+x}return o}
 function split3(t){const w=t.split(' '),L=t.length/3;let out=[''],k=0;for(const x of w){if(out[k].length+x.length>L*1.08&&k<2&&out[k]){k++;out[k]=''}out[k]+=(out[k]?' ':'')+x}return out}
 const d=D[P],N=+(new URLSearchParams(location.search).get('n')||1);
 if(N==2){fetch('/content/hub/week1_captions.json').then(r=>r.json()).then(C=>{const c=C.find(x=>x.image.endsWith('/'+String(P).padStart(2,'0')+'.jpg'));
@@ -51,14 +65,14 @@ if(N==2){fetch('/content/hub/week1_captions.json').then(r=>r.json()).then(C=>{co
  <div style="position:absolute;left:64px;right:64px;bottom:110px;display:flex;gap:18px">${(c.agent?['NEW CLAUDE PROJECT','PASTE AS INSTRUCTIONS','ADD YOUR FILES']:['OPEN CLAUDE','PASTE IT','FILL THE LIME PARTS']).map((t,i)=>`<div style="flex:1;border-top:4px solid var(--L);padding-top:16px;font-family:A;font-size:34px;line-height:1.05"><span style="color:var(--L)">0${i+1}</span><br>${t}</div>`).join('')}</div>
  <div class="bar"><span>@AUTOPILOT.OI</span><span>SAVE THIS ↓</span></div>`;
  document.fonts.ready.then(()=>window.READY=1)});}
-else{fetch('/content/hub/week1_captions.json').then(r=>r.json()).then(C=>{const c=C.find(x=>x.image.endsWith('/'+String(P).padStart(2,'0')+'.jpg'));d.h=split3(c.hook);d.tag=c.agent?'STEAL THE AGENT':'STEAL THE PROMPT';
+else{fetch('/content/hub/week1_captions.json').then(r=>r.json()).then(C=>{const c=C.find(x=>x.image.endsWith('/'+String(P).padStart(2,'0')+'.jpg'));const k=HK[P];let LN;if(k){LN=[...splitN(k.w,Math.ceil(k.w.length/21)).map(t=>[t,0]),...splitN(k.l,Math.ceil(k.l.length/26)).map(t=>[t,1])];d.tag=k.a?'STEAL THE AGENT':'STEAL THE 7 PROMPTS'}else{LN=split3(c.hook).map((t,i)=>[t,i==2]);d.tag=c.agent?'STEAL THE AGENT':'STEAL THE PROMPT'}
 document.getElementById('root').innerHTML=`<img class="ph" style="top:${-(d.sy||0)}px" src="/docs/media/hub/week1/${String(P).padStart(2,'0')}.jpg"><div class="fade"></div>
 <div class="logo"></div>
-<div class="blk"><div class="tag"><span>${d.tag}</span></div>${d.h.map((t,i)=>`<div class="ln${i==d.h.length-1?' l':''}">${t}</div>`).join('')}</div>
-<div class="bar"><span>@AUTOPILOT.OI</span><span>PROMPT IN CAPTION ↓</span></div>`;
+<div class="blk"><div class="tag"><span>${d.tag}</span></div>${LN.map(([t,l])=>`<div class="ln${l?' l':''}" data-l="${l}">${t}</div>`).join('')}</div>
+<div class="bar"><span>@AUTOPILOT.OI</span><span>SWIPE →</span></div>`;
 Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>0))]).then(()=>{
  const W=976;
- document.querySelectorAll('.ln').forEach(e=>{e.style.fontSize='100px';const w=e.scrollWidth;e.style.fontSize=Math.max(64,Math.min(132,100*W/w))+'px'});
+ document.querySelectorAll('.ln').forEach(e=>{e.style.fontSize='100px';const w=e.scrollWidth;e.style.fontSize=Math.max(56,Math.min(e.dataset.l=='1'?82:118,100*W/w))+'px'});
  window.READY=1});
 });}
 </script></body></html>
