@@ -1,74 +1,32 @@
 {
-  "at": "2026-11-14T00:30:00Z",
+  "at": "2026-11-14T12:25:00Z",
   "posts_today": {
-    "instagram": {
-      "published": 3,
-      "pending": 1,
-      "error": 0
-    },
-    "twitter": {
-      "published": 0,
-      "pending": 0,
-      "error": 0
-    },
-    "threads": {
-      "published": 0,
-      "pending": 0,
-      "error": 0
-    },
-    "tiktok": {
-      "published": 2,
-      "pending": 0,
-      "error": 0
-    }
+    "instagram": {"published": 0, "pending": 3, "error": 0},
+    "tiktok": {"published": 0, "pending": 2, "error": 0}
   },
   "top_posts": [
     {
       "network": "tiktok",
       "published_at": "2026-11-13T17:07:49Z",
       "text": "Claude can now find money in the skills you already have.",
-      "metrics": {
-        "views": 92,
-        "shares": 1,
-        "comments": 0,
-        "saves": null,
-        "reach": null,
-        "profile_visits": null
-      },
+      "metrics": {"views": 92, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7707703910621908231"
     },
     {
       "network": "tiktok",
       "published_at": "2026-11-11T15:11:02Z",
       "text": "Steal these 3 hook rewrites.",
-      "metrics": {
-        "views": 72,
-        "shares": 0,
-        "comments": 0,
-        "saves": null,
-        "reach": null,
-        "profile_visits": null
-      },
+      "metrics": {"views": 72, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7706931701057850632"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-11T13:04:31Z",
-      "text": "A shoebox of receipts and your accountant wants totals.",
-      "metrics": {
-        "reach": 1,
-        "views": 2,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0,
-        "profile_visits": null
-      },
-      "url": "https://www.instagram.com/reel/Dfmi6FCnGCF/"
+      "published_at": "2026-11-14T00:05:24Z",
+      "text": "I don't think most people know you can just call and ask for a lower bill.",
+      "metrics": {"reach": 2, "views": 1, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/Dfs4HTDjTS1/"
     }
   ],
-  "kit": {
-    "subscribers": 0,
-    "new_today": 0
-  },
-  "notes": "Snapshot 21:30 ART Nov 13. Published today: IG+TikTok carousel '7 side hustles' 14:00 ART, second IG carousel same caption 14:44 ART (DfsMx3BjQU3, possible duplicate), IG+TikTok carousel '7 bill scripts' 21:00 ART (IG Dfs4HTDjTS1, TikTok 7707811427704130834). Pending: IG Reel Review Desk 10:00 ART still marked draft, past its slot. No ERROR posts. Window 6 to 72h: only saves+shares signal is 1 share on TikTok '7 side hustles'; rest ranked by reach, views where reach MISSING (TikTok). IG analytics for the Nov 13 IG carousels not yet returned by Metricool. IG post Dfk1NJMiseB (Nov 10 late, Claude 5.2 news) shows 3 comments, reach 0. X and Threads per post metrics MISSING. Profile visits MISSING. Workflows: freel.yml last run failed (already logged Nov 13); ci.yml 3 of 4 runs failed in 24h, latest success. HQ feed written (status/hub v79). No new orders (orders_all_time 0)."
+  "kit": {"subscribers": null, "new_today": null},
+  "notes": "Snapshot 09:25 ART Nov 14. Nothing published yet today. Pending: IG Reel Content Week 10:00 ART (still marked draft), IG+TikTok carousel bank statement prompts 14:00 ART, IG+TikTok carousel 7 prompt lines 21:00 ART. No ERROR posts. Window 6 to 72h: only saves+shares signal is 1 share on TikTok '7 side hustles'; rest ranked by reach, views where reach MISSING (TikTok). IG carousel DfsMx3BjQU3 (Nov 13) all zero. IG reel Dfmi6FCnGCF reach 1, views 2. Profile visits MISSING. Kit MISSING: Kit MCP returned paid plan required. Workflows: freel.yml failed again today 09:46Z (logged); ci.yml latest success, 1 of 2 runs failed in 24h. HQ feed written (status/hub v80). No new orders (orders_all_time 0)."
 }
