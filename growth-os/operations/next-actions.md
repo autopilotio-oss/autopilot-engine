@@ -76,6 +76,7 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Support agent run Nov 11 evening: no new alerts (only new mail a personal non-business survey; 2d mail otherwise Kit marketing and a personal travel notice). Threads disconnect incidents still open.
 - Support agent run Nov 12 13:10 UTC: no new alerts (2d mail: Metricool survey, Adspirer free-call limit notice (no spend, nothing live), one personal non-business survey).
 - Support agent run Nov 13 19:11 UTC (14:47 run failed, Gmail 502): inc:email:1a1d2e4b (SEV-2 Kit billing: Creator plan $39/month payment failed Nov 13 03:12Z; update payment method within 30 days or the plan lapses; keeping it is Seb's spending call). Kit login alerts x4 Nov 13 17:12-17:17Z, iOS Safari, Buenos Aires: SEV-3 informational (likely Seb). Also informational: AfterShip terms update, Adspirer Black Friday marketing.
+- Support agent run Nov 14 13:09 UTC: no new alerts (only new mail Kit weekly marketing; inc:email:1a1d2e4b Kit billing still open, Kit login alerts already noted).
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -104,6 +105,7 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 12 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 12 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 13 run (19:11 UTC): 0 cases, 0 drafted, 0 escalated.
+- Nov 14 run (13:09 UTC): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-14 (08:45 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known) and worker:kit_sync (SEV-2, issue #19). All 20 checkouts ok, flagships live. Heartbeats 12 of 13 ok (kit_sync failed). Failed Actions 24h: only Factory reels run 43582114206 (ElevenLabs 401, day 5, SEV-2 already reported, not rerun). Tests and pages builds green.
