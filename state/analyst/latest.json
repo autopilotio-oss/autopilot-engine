@@ -1,9 +1,9 @@
 {
-  "at": "2026-11-13T20:24:00Z",
+  "at": "2026-11-14T00:30:00Z",
   "posts_today": {
     "instagram": {
-      "published": 2,
-      "pending": 2,
+      "published": 3,
+      "pending": 1,
       "error": 0
     },
     "twitter": {
@@ -17,39 +17,39 @@
       "error": 0
     },
     "tiktok": {
-      "published": 1,
-      "pending": 1,
+      "published": 2,
+      "pending": 0,
       "error": 0
     }
   },
   "top_posts": [
     {
       "network": "tiktok",
+      "published_at": "2026-11-13T17:07:49Z",
+      "text": "Claude can now find money in the skills you already have.",
+      "metrics": {
+        "views": 92,
+        "shares": 1,
+        "comments": 0,
+        "saves": null,
+        "reach": null,
+        "profile_visits": null
+      },
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7707703910621908231"
+    },
+    {
+      "network": "tiktok",
       "published_at": "2026-11-11T15:11:02Z",
       "text": "Steal these 3 hook rewrites.",
       "metrics": {
         "views": 72,
-        "comments": 0,
         "shares": 0,
+        "comments": 0,
         "saves": null,
         "reach": null,
         "profile_visits": null
       },
       "url": "https://www.tiktok.com/@autopilot.oi/video/7706931701057850632"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-11-10T13:06:49Z",
-      "text": "They want a quote tonight and you're still on a job.",
-      "metrics": {
-        "reach": 16,
-        "views": 18,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0,
-        "profile_visits": null
-      },
-      "url": "https://www.instagram.com/reel/Dfj-ENLoSat/"
     },
     {
       "network": "instagram",
@@ -70,5 +70,5 @@
     "subscribers": 0,
     "new_today": 0
   },
-  "notes": "Snapshot 17:24 ART Nov 13. Published today: IG+TikTok carousel '7 side hustles' 14:00 ART (IG DfsIVJKjVfO, TikTok 7707703910621908231) and a second IG carousel with the same caption 14:44 ART (DfsMx3BjQU3, possible duplicate). Both under 6h old, not ranked yet. Pending: IG Reel Review Desk 10:00 ART (still marked draft, past its slot), IG+TikTok carousel '7 bill scripts' 21:00 ART. No ERROR posts. Window 6 to 72h: no saves or shares on any post; ranked by reach, using views where reach is MISSING (TikTok). X and Threads per post metrics MISSING. Profile visits MISSING. Workflows: freel.yml last run failed and ci.yml 3 of 4 runs failed in 24h (latest ci run success); both already logged today. HQ feed written (status/hub v78). No new orders (orders_all_time 0)."
+  "notes": "Snapshot 21:30 ART Nov 13. Published today: IG+TikTok carousel '7 side hustles' 14:00 ART, second IG carousel same caption 14:44 ART (DfsMx3BjQU3, possible duplicate), IG+TikTok carousel '7 bill scripts' 21:00 ART (IG Dfs4HTDjTS1, TikTok 7707811427704130834). Pending: IG Reel Review Desk 10:00 ART still marked draft, past its slot. No ERROR posts. Window 6 to 72h: only saves+shares signal is 1 share on TikTok '7 side hustles'; rest ranked by reach, views where reach MISSING (TikTok). IG analytics for the Nov 13 IG carousels not yet returned by Metricool. IG post Dfk1NJMiseB (Nov 10 late, Claude 5.2 news) shows 3 comments, reach 0. X and Threads per post metrics MISSING. Profile visits MISSING. Workflows: freel.yml last run failed (already logged Nov 13); ci.yml 3 of 4 runs failed in 24h, latest success. HQ feed written (status/hub v79). No new orders (orders_all_time 0)."
 }
