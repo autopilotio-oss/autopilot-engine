@@ -280,3 +280,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-13T20:23:08+00:00", "note": "3 posts out today (IG 2, TikTok 1), top post saves+shares 0, feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-13T20:45:02+00:00", "note": "branch builder/2026-11-13-cover-image-shape: drop and hero covers keep 4:5 shape on mobile (awaiting Seb)"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-14T00:22:16+00:00", "note": "posts out today 5 (IG 3, TikTok 2), top post saves+shares 1, feed written yes"}
+{"worker": "kit_sync", "status": "ok", "at": "2026-11-14T00:32:34+00:00", "note": "0 routed (forms empty)"}
