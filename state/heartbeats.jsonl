@@ -281,3 +281,4 @@
 {"worker": "site_improver", "status": "ok", "at": "2026-11-13T20:45:02+00:00", "note": "branch builder/2026-11-13-cover-image-shape: drop and hero covers keep 4:5 shape on mobile (awaiting Seb)"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-14T00:22:16+00:00", "note": "posts out today 5 (IG 3, TikTok 2), top post saves+shares 1, feed written yes"}
 {"worker": "kit_sync", "status": "ok", "at": "2026-11-14T00:32:34+00:00", "note": "0 routed (forms empty)"}
+{"worker": "kit_sync", "status": "failed", "at": "2026-11-14T08:32:24+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan"}
