@@ -1,64 +1,32 @@
 {
-  "at": "2026-11-14T16:25:00Z",
+  "at": "2026-11-14T20:30:00Z",
   "posts_today": {
-    "instagram": {
-      "published": 0,
-      "pending": 3,
-      "error": 0
-    },
-    "tiktok": {
-      "published": 0,
-      "pending": 2,
-      "error": 0
-    }
+    "instagram": {"published": 1, "pending": 2, "error": 0},
+    "tiktok": {"published": 1, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
       "network": "tiktok",
       "published_at": "2026-11-13T17:07:49Z",
       "text": "Claude can now find money in the skills you already have.",
-      "metrics": {
-        "views": 92,
-        "shares": 1,
-        "comments": 0,
-        "saves": null,
-        "reach": null,
-        "profile_visits": null
-      },
+      "metrics": {"views": 92, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7707703910621908231"
-    },
-    {
-      "network": "tiktok",
-      "published_at": "2026-11-11T15:11:02Z",
-      "text": "Steal these 3 hook rewrites.",
-      "metrics": {
-        "views": 72,
-        "shares": 0,
-        "comments": 0,
-        "saves": null,
-        "reach": null,
-        "profile_visits": null
-      },
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7706931701057850632"
     },
     {
       "network": "instagram",
       "published_at": "2026-11-14T00:05:24Z",
       "text": "I don't think most people know you can just call and ask for a lower bill.",
-      "metrics": {
-        "reach": 2,
-        "views": 1,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0,
-        "profile_visits": null
-      },
+      "metrics": {"reach": 2, "views": 1, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
       "url": "https://www.instagram.com/p/Dfs4HTDjTS1/"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-13T17:46:41Z",
+      "text": "Claude can now find money in the skills you already have.",
+      "metrics": {"reach": 0, "views": 0, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/DfsMx3BjQU3/"
     }
   ],
-  "kit": {
-    "subscribers": null,
-    "new_today": null
-  },
-  "notes": "Snapshot 13:25 ART Nov 14. Nothing published yet today. Pending: IG Reel Content Week 10:00 ART (still marked draft, time passed, not published), IG+TikTok carousel bank statement prompts 14:00 ART, IG+TikTok carousel 7 prompt lines 21:00 ART. No ERROR posts. Top post ranking unchanged: TikTok skills/money (1 share, 92 views). TikTok saves and profile visits not provided by Metricool. IG Nov 13 skills post: 0 reach so far. Kit MISSING: Kit MCP requires a paid Kit plan. Revenue (hq_feed): 0 verified orders all time. Watch: freel.yml failed again today (already logged). ci.yml latest run success."
+  "kit": {"subscribers": null, "new_today": null},
+  "notes": "Snapshot 17:30 ART Nov 14. Published today: IG+TikTok carousel bank statement prompts 14:00 ART (3.5h old, too new for analytics window). Pending: IG Reel Content Week 10:00 ART (still draft, time passed, not published), IG+TikTok carousel 7 prompt lines 21:00 ART. No ERROR posts. Top post unchanged: TikTok skills/money (1 share, 92 views). Metricool analytics not yet returning IG DfsIVJKjVfO (Nov 13 14:00 ART) or TikTok bills video 7707811427704130834; TikTok saves, reach and profile visits not provided. X post Nov 11 17:40 ART published, no metrics pulled. Kit MISSING: Kit MCP requires a paid Kit plan. Revenue (hq_feed): 0 verified orders all time. Watch: freel.yml failed today (already logged). ci.yml latest run success. HQ feed written (status/hub v82)."
 }
