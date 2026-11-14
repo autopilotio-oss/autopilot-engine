@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-14",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts + getBrandSettings (brand 7761544), pulled 2026-11-14 ~11:40 UTC by Daily Pulse. 7d window Nov 7 to Nov 13 (Metricool daily rows). Kit MISSING: Kit MCP refused (requires paid Kit plan; Creator plan payment failed Nov 13).",
+ "kit": {
+  "subscribers": null,
+  "new_7d": null,
+  "note": "MISSING DATA: Kit MCP get_growth_stats and list_subscribers rejected with 'requires a paid Kit plan' (Creator $39/mo payment failed Nov 13 03:12Z, inc:email:1a1d2e4b; kit_sync heartbeat failing, issue #19). consent.py ingest not run."
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 87,
+   "posts_7d": 10,
+   "interactions_7d": 6,
+   "accounts_engaged_7d": 0,
+   "reel_views_7d": 249,
+   "note": "followers = IGEV01 Nov 13 (85 on Nov 7); posts_7d = sum IGEV37 Nov 7 to 13 (Nov 12 null); interactions_7d = sum IGEV38 Nov 7 to 10 (Nov 11 to 13 null); accounts_engaged_7d = IGEV42 Nov 13 daily value; reel_views_7d = sum IGEV23 Nov 7 to 11 (Nov 8: 111 best day; Nov 12, 13 null). Nov 13: 3 hub carousels published (side hustles, side hustles repost, bill scripts)."
+  },
+  "threads": {
+   "followers": null,
+   "posts_7d": null,
+   "views_7d": null,
+   "interactions_7d": null,
+   "note": "Threads is back in networksData in getBrandSettings (reconnected; was missing Nov 6 to Nov 13). THEV rows still mostly null for Nov 7 to 13 (THEV01 1 on Nov 12 and 13, THEV02 3 and THEV06 9 on Nov 7 only, THEV05 0 on Nov 13): MISSING, not real zeros."
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled; 2 hub carousels published Nov 13"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 3,
+  "queued": 4,
+  "failed": 0,
+  "window": "published = Metricool posts with PUBLISHED provider dated Nov 13 08:30 ART to Nov 14 08:30 ART (IG 3, TikTok 2 of those 3 posts), queued = non-draft pending posts Nov 14 08:30 to Nov 16 08:30 ART",
+  "unapproved_pending": 0,
+  "unapproved_action": "none: the 4 pending non-draft posts (427275047, 427275176, 427275345, 427275488; IG+TikTok hub carousels) are recorded in queue/hub with approved_by_seb true and Seb's quote ('take control, start with these IG posts for a week', Nov 13), uuids match. health.approved_post_uuids does not read queue/hub, so its set misses them; widening that approval guard is left for Seb (not changed by Daily Pulse). 2 IG reel drafts (424924616, 424924853) untouched.",
+  "cadence_ok": "IG 2 a day (14:00 and 21:00 ART), within max_per_day 2. Posting resumed Nov 13 (Seb: 'Start posting today')."
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-13",
+  "campaign": "120248645551300265 PAUSED Nov 3; campaign ads.status off since Nov 2",
+  "cap_usd": 60,
+  "source": "costs ledger (no spend after Nov 1; Adspirer not re-queried this run)"
+ },
+ "decisions": [
+  "Kit: Creator plan payment failed Nov 13; Kit MCP now refuses all reads and kit_sync fails. Update the payment method within 30 days or decide to drop to free (spending decision).",
+  "ElevenLabs: ELEVENLABS_API_KEY still 401; factory reels run 43582114206 failed Nov 14 (5th day). Fix key/credits or pause freel.yml cron.",
+  "Merge pending builder branches: alert-issues, keep-social-source, cover-image-shape (expired-launch-code can be deleted).",
+  "Viral Lab: pick a source for public view counts (open since Oct 31)."
+ ]
+}

@@ -105,6 +105,14 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 12 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 13 run (19:11 UTC): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-14 (08:45 ART)
+- Health: failing checks meta_pixel_configured (SEV-3, known) and worker:kit_sync (SEV-2, issue #19). All 20 checkouts ok, flagships live. Heartbeats 12 of 13 ok (kit_sync failed). Failed Actions 24h: only Factory reels run 43582114206 (ElevenLabs 401, day 5, SEV-2 already reported, not rerun). Tests and pages builds green.
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit.
+- KIT LOCKED (SEV-2): Kit MCP refuses get_growth_stats and list_subscribers ("requires a paid Kit plan"), matching inc:email:1a1d2e4b (Creator $39/mo payment failed Nov 13 03:12Z). Kit data MISSING today, consent.py ingest not run. Seb messaged 11:47 UTC (claude_message): update payment method within 30 days or decide to drop to free and pause kit_sync (spending decision).
+- Threads reconnected: threadsData is back in getBrandSettings, so inc:metricool_networks should resolve on the next probe. THEV rows still mostly null (MISSING).
+- Posting resumed Nov 13 (Seb). 3 hub carousels published Nov 13 (IG 3, TikTok 2), 4 pending Nov 14 to 15 (IG+TikTok, 14:00 and 21:00 ART), 2 IG reel drafts held. 0 ERROR. All 4 pending are queue/hub records with approved_by_seb true and Seb's quote, uuids match, so no unapproved action. GAP: health.approved_post_uuids does not read queue/hub, so the approval guard would miss them. Daily Pulse did not widen the guard (oversight change, Seb's call). Builder candidate: either have the hub writer also record approval.quote in a queue dir health reads, or Seb approves teaching approved_post_uuids to read queue/hub (approved_by_seb true + quoted note), with a test.
+- ONE CHANGE: NONE (commander had no proposals; the only internal candidate, queue/hub approval reconciliation, changes an approval guard and was left for Seb).
+
 ## Daily Pulse 2026-11-13 (08:20 ART)
 - Health: only meta_pixel_configured failing (SEV-3, known). All 20 checkouts ok, flagships live. Heartbeats 13 of 13 ok. Failed Actions 24h: Factory reels run 43405563933 (ElevenLabs 401, day 4, SEV-2 already reported, not rerun) and Tests run 43356685576 (LAUNCH30 test, fix branch waits on Seb). Pages builds all succeeded.
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, no cap hit.
