@@ -287,3 +287,4 @@
 {"worker": "support_agent", "status": "ok", "at": "2026-11-14T13:09:43+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-14T14:44:45+00:00", "note": "branch builder/2026-11-14-job-title-claim: job agent title no longer promises a job (awaiting Seb)"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-14T16:22:27+00:00", "note": "0 posts out today (5 pending), top post saves+shares 1, feed written yes"}
+{"worker": "kit_sync", "status": "failed", "at": "2026-11-14T16:32:44+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (2nd in a row)"}
