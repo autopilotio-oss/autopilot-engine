@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-15T12:30:00Z",
+  "at": "2026-11-15T12:21:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 2, "error": 0},
     "tiktok": {"published": 0, "pending": 2, "error": 0}
@@ -28,5 +28,5 @@
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 09:30 ART Nov 15. Today: IG+TikTok carousel 10 year money plan 14:00 ART and IG+TikTok carousel read any contract 21:00 ART, both PENDING; nothing published yet. No ERROR posts. Three IG Reel drafts (Nov 12, 13, 14 10:00 ART) still PENDING past their time (draft=true). Top post: TikTok skills/money (1 share, 205 views); TikTok saves, reach and profile visits not provided by Metricool. Other TikTok views (no shares): lower bills 209, bank statement 118, 7 prompt lines 45. All IG posts 0 saves 0 shares; IG DfsIVJKjVfO (Nov 13 17:00Z) has no analytics row. IG profile visits not provided. Kit MISSING: Kit MCP requires a paid Kit plan. Revenue (hq_feed): 0 verified orders all time. Watch: freel.yml failed again Nov 15 09:47Z (logged). ci.yml latest run success. HQ feed written (status/hub v84)."
+  "notes": "Snapshot 09:21 ART Nov 15. Today: IG+TikTok carousel 10 year money plan 14:00 ART and IG+TikTok carousel read any contract 21:00 ART, both PENDING; nothing published yet. No ERROR posts. Three IG Reel drafts (Nov 12, 13, 14 10:00 ART) still PENDING past their time (draft=true). Top post: TikTok skills/money (1 share, 205 views); TikTok saves, reach and profile visits not provided by Metricool. Other TikTok views (no shares): lower bills 209, bank statement 118, 7 prompt lines 45. All IG posts 0 saves 0 shares; IG DfsIVJKjVfO (Nov 13 17:00Z) has no analytics row. IG profile visits not provided. Kit MISSING: Kit MCP requires a paid Kit plan. Revenue (hq_feed): 0 verified orders all time. Watch: freel.yml failed again Nov 15 09:47Z (logged). ci.yml latest run success. HQ feed written (status/hub v84)."
 }
