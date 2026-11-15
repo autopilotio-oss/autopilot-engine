@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-15-tip",
+  "group": "stories-2026-11-15",
+  "at": "2026-11-15T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-15-tip.jpg"
+  ],
+  "text": "AI tip: After any plan, ask: \"What am I missing?\""
+ },
+ {
+  "id": "story-2026-11-15-quiz",
+  "group": "stories-2026-11-15",
+  "at": "2026-11-15T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-15-quiz.jpg"
+  ],
+  "text": "Quiz: A credit repair company wants $199 upfront. That's..."
+ },
+ {
+  "id": "story-2026-11-15-answer",
+  "group": "stories-2026-11-15",
+  "at": "2026-11-15T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-15-answer.jpg"
+  ],
+  "text": "Quiz answer: Not allowed under federal law. They {can't charge you} before doing the work. Everything they do, you can do yourself with Claude."
+ },
+ {
+  "id": "story-2026-11-15-fact",
+  "group": "stories-2026-11-15",
+  "at": "2026-11-15T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-15-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can help you fix it from a photo. Leaky faucet, tripped breaker, error code on the washer. Show it and ask for the steps."
+ },
+ {
+  "id": "story-2026-11-15-poll",
+  "group": "stories-2026-11-15",
+  "at": "2026-11-15T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-15-poll.jpg"
+  ],
+  "text": "Poll: Which hurts more? A) A bad review B) A lost lead"
+ }
+]
