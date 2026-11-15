@@ -1,32 +1,64 @@
 {
-  "at": "2026-11-15T12:21:00Z",
+  "at": "2026-11-15T16:22:00Z",
   "posts_today": {
-    "instagram": {"published": 0, "pending": 2, "error": 0},
-    "tiktok": {"published": 0, "pending": 2, "error": 0}
+    "instagram": {
+      "published": 0,
+      "pending": 2,
+      "error": 0
+    },
+    "tiktok": {
+      "published": 0,
+      "pending": 2,
+      "error": 0
+    }
   },
   "top_posts": [
     {
       "network": "tiktok",
       "published_at": "2026-11-13T17:07:49Z",
       "text": "Claude can now find money in the skills you already have.",
-      "metrics": {"views": 205, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
+      "metrics": {
+        "views": 205,
+        "shares": 1,
+        "comments": 0,
+        "saves": null,
+        "reach": null,
+        "profile_visits": null
+      },
       "url": "https://www.tiktok.com/@autopilot.oi/video/7707703910621908231"
     },
     {
       "network": "instagram",
       "published_at": "2026-11-14T00:05:24Z",
       "text": "I don't think most people know you can just call and ask for a lower bill.",
-      "metrics": {"reach": 2, "views": 1, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
+      "metrics": {
+        "reach": 2,
+        "views": 1,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0,
+        "profile_visits": null
+      },
       "url": "https://www.instagram.com/p/Dfs4HTDjTS1/"
     },
     {
       "network": "instagram",
       "published_at": "2026-11-13T17:46:41Z",
       "text": "You already have a skill someone would pay for. You just haven't priced it yet.",
-      "metrics": {"reach": 1, "views": 2, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
+      "metrics": {
+        "reach": 1,
+        "views": 2,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0,
+        "profile_visits": null
+      },
       "url": "https://www.instagram.com/p/DfsMx3BjQU3/"
     }
   ],
-  "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 09:21 ART Nov 15. Today: IG+TikTok carousel 10 year money plan 14:00 ART and IG+TikTok carousel read any contract 21:00 ART, both PENDING; nothing published yet. No ERROR posts. Three IG Reel drafts (Nov 12, 13, 14 10:00 ART) still PENDING past their time (draft=true). Top post: TikTok skills/money (1 share, 205 views); TikTok saves, reach and profile visits not provided by Metricool. Other TikTok views (no shares): lower bills 209, bank statement 118, 7 prompt lines 45. All IG posts 0 saves 0 shares; IG DfsIVJKjVfO (Nov 13 17:00Z) has no analytics row. IG profile visits not provided. Kit MISSING: Kit MCP requires a paid Kit plan. Revenue (hq_feed): 0 verified orders all time. Watch: freel.yml failed again Nov 15 09:47Z (logged). ci.yml latest run success. HQ feed written (status/hub v84)."
+  "kit": {
+    "subscribers": null,
+    "new_today": null
+  },
+  "notes": "Snapshot 13:22 ART Nov 15. Today: IG+TikTok carousel 10 year money plan 14:00 ART and IG+TikTok carousel read any contract 21:00 ART, both PENDING; nothing published yet. No ERROR posts. No posts published in the 6 to 72h window since the 09:21 ART run; top_posts metrics carried from that pull, not re-read this hour. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v85); revenue 0 verified orders all time. Watch: freel.yml failed 09:47Z (already in Fix needed today, ElevenLabs 401). ci.yml last run success."
 }
