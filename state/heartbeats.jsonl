@@ -292,3 +292,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-14T20:27:25+00:00", "note": "posts out today 2 (IG 1, TikTok 1), 0 errors; top post saves+shares 1 (TikTok skills/money); feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-14T20:44:42+00:00", "note": "branch builder/2026-11-14-free-post-prompts: /free/ (ManyChat DM page) lists the 12 post prompt pages first; awaiting Seb"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-15T00:22:57+00:00", "note": "posts out today 4 (IG 2, TikTok 2), top post saves+shares 1, feed written yes"}
+{"worker": "kit_sync", "status": "failed", "at": "2026-11-15T00:32:14+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (3rd in a row)"}
