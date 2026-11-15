@@ -111,6 +111,13 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 14 run (13:09 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 14 run (19:09 UTC): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-15 (08:25 ART)
+- Health: failing checks meta_pixel_configured (SEV-3, known) and worker:kit_sync (SEV-2, issue #19, already reported). All 20 checkouts ok, flagships live. Heartbeats 12 of 13 ok (kit_sync failed). Failed Actions 24h: only Factory reels run 43700908411 (ElevenLabs 401 on eleven_v4 and eleven_multilingual_v2, day 6, SEV-2 already reported, not rerun). Health, revenue, stats, Threads and pages runs green.
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Known costs this month $56.86, contribution INCOMPLETE (5 vendors unknown).
+- Kit: still locked (Kit MCP: requires paid plan). Kit data MISSING, consent.py ingest not run. Not re-sent (Seb messaged Nov 14).
+- Metricool: 2 hub carousels published Nov 14 (IG+TikTok: bank statement 14:00, prompt lines 21:00), 4 non-draft pending Nov 15 to 16 (427275345, 427275488, 427275593, 427275746), all in queue/hub with approved_by_seb true and Seb's Nov 13 quote, uuids match. 0 ERROR, 0 unapproved. IG 88 followers. Threads THEV non-null again on Nov 14 (followers 1, 0 views).
+- ONE CHANGE: NONE (commander had no proposals; the only internal candidate, teaching health.approved_post_uuids to read queue/hub, changes an approval guard and stays Seb's call). No message sent.
+
 ## Daily Pulse 2026-11-14 (08:45 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known) and worker:kit_sync (SEV-2, issue #19). All 20 checkouts ok, flagships live. Heartbeats 12 of 13 ok (kit_sync failed). Failed Actions 24h: only Factory reels run 43582114206 (ElevenLabs 401, day 5, SEV-2 already reported, not rerun). Tests and pages builds green.
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit.
