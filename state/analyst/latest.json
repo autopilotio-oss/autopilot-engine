@@ -1,21 +1,21 @@
 {
-  "at": "2026-11-15T16:22:00Z",
+  "at": "2026-11-15T20:21:00Z",
   "posts_today": {
     "instagram": {
-      "published": 0,
-      "pending": 2,
+      "published": 1,
+      "pending": 1,
       "error": 0
     },
     "tiktok": {
-      "published": 0,
-      "pending": 2,
+      "published": 1,
+      "pending": 1,
       "error": 0
     }
   },
   "top_posts": [
     {
       "network": "tiktok",
-      "published_at": "2026-11-13T17:07:49Z",
+      "published_at": "2026-11-13T20:07:49Z",
       "text": "Claude can now find money in the skills you already have.",
       "metrics": {
         "views": 205,
@@ -29,7 +29,7 @@
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-14T00:05:24Z",
+      "published_at": "2026-11-14T03:05:24Z",
       "text": "I don't think most people know you can just call and ask for a lower bill.",
       "metrics": {
         "reach": 2,
@@ -43,7 +43,7 @@
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-13T17:46:41Z",
+      "published_at": "2026-11-13T20:46:41Z",
       "text": "You already have a skill someone would pay for. You just haven't priced it yet.",
       "metrics": {
         "reach": 1,
@@ -60,5 +60,5 @@
     "subscribers": null,
     "new_today": null
   },
-  "notes": "Snapshot 13:22 ART Nov 15. Today: IG+TikTok carousel 10 year money plan 14:00 ART and IG+TikTok carousel read any contract 21:00 ART, both PENDING; nothing published yet. No ERROR posts. No posts published in the 6 to 72h window since the 09:21 ART run; top_posts metrics carried from that pull, not re-read this hour. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v85); revenue 0 verified orders all time. Watch: freel.yml failed 09:47Z (already in Fix needed today, ElevenLabs 401). ci.yml last run success."
+  "notes": "Snapshot 17:21 ART Nov 15. Today: IG+TikTok carousel 10 year money plan published 14:00 ART (IG DfxSNrACj4F, TikTok 7708446649911184660); IG+TikTok carousel read any contract 21:00 ART PENDING. No ERROR posts. Window 6 to 72h: 4 IG and 4 TikTok posts; all saves+shares 0 except TikTok 13 Nov skills video (1 share). TikTok views in window: 209 (lower bill), 205 (skills), 118 (bank statement), 45 (ask 5 questions); TikTok saves and reach not provided by Metricool. IG posts from 14 to 15 Nov show reach 0. Published_at converted from Metricool ART timestamps to UTC (previous runs logged ART times with Z). Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v86); revenue 0 verified orders all time. Watch: freel.yml failed 09:47Z (already in Fix needed today). ci.yml last run success."
 }
