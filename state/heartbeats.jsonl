@@ -300,3 +300,4 @@
 {"worker": "newsletter", "status": "failed", "at": "2026-11-15T14:14:06+00:00", "note": "Kit MCP blocked: connector now requires a paid Kit plan; no stats read, no draft created"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-15T14:45:22+00:00", "note": "branch builder/2026-11-15-agent-title-claims: agent titles drop AI employees and replace an assistant, awaiting Seb"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-15T16:21:32+00:00", "note": "posts out today 0 (4 pending IG+TikTok), top post saves+shares 1, feed written yes"}
+{"worker": "kit_sync", "status": "failed", "at": "2026-11-15T16:32:21+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (5th in a row)"}
