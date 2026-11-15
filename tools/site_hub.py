@@ -6,8 +6,8 @@ D = json.load(open(f"{R}/content/hub/week1_posts.json"))
 ORDER = [("7","05_side_hustles","Find money in the skills you already have","7 prompts"),("23","09_bill_fighter","Fight your bills like a pro negotiator","7 scripts"),
  ("17","02_bank_statement","Read your bank statement like a financial advisor","7 prompts"),("10","01_job_agent","Search for better paying jobs every morning","Agent"),
  ("20","03_contract","Read any contract before you sign","7 prompts"),("25","04_night_shift","Put Claude on the night shift","Agent"),
- ("1","07_money_plan","Build your 10 year money plan","7 prompts"),("26","06_team_of_5","Hire a team of 5 AI employees","Agent"),
- ("3","10_interview_coach","Prep for any interview","Agent"),("16","08_six_agents","6 agents that replace an assistant","6 agents"),
+ ("1","07_money_plan","Build your 10 year money plan","7 prompts"),("26","06_team_of_5","Set up a team of 5 Claude agents","Agent"),
+ ("3","10_interview_coach","Prep for any interview","Agent"),("16","08_six_agents","6 agents for the jobs an assistant does","6 agents"),
  ("24","11_one_percent","Prompt Claude like the 1%","7 upgrades"),("18","12_black_friday","Plan your whole Black Friday","7 prompts")]
 UP = {"09_bill_fighter":("bill-agent","Bill Agent"),"02_bank_statement":("subs-agent","Subscription Agent"),"07_money_plan":("debt-agent","Debt Agent"),
       "01_job_agent":("raise-agent","Raise Agent"),"10_interview_coach":("raise-agent","Raise Agent")}
@@ -163,12 +163,12 @@ for k, sl, t, kind in ORDER:
         body = "".join(f'<div class="pr"><span class="t">{i+1}. {e(a)}</span>{br(b)}<button class="cpy">Copy</button></div>' for i, (a, b) in enumerate(open_))
         more = f'<div class="offer" style="display:block"><b>{rest} more in the free Vault.</b><p class="how">' + e(", ".join(a for a, _ in d["items"][2:])) + f'.</p><a class="btn" style="margin-top:14px" href="/vault/#{sl}">Unlock them free</a></div>'
         how = "Open Claude (free at claude.ai), paste a prompt, and swap the [brackets] for your own."
-        desc = f"Free copy and paste Claude prompts: {t.lower()}. " + ", ".join(a for a, _ in d["items"][:4]) + " and more."
+        desc = f"Free copy and paste Claude prompts: {t[:1].lower() + t[1:]}. " + ", ".join(a for a, _ in d["items"][:4]) + " and more."
     else:
         body = "".join(f'<div class="pr"><span class="t">What it does</span>{e(x)}</div>' for x in d["does"])
         more = f'<div class="offer" style="display:block"><b>Get the agent instructions free.</b><p class="how">The full instructions and the 5 step setup are in the Vault.</p><a class="btn" style="margin-top:14px" href="/vault/#{sl}">Unlock it free</a></div>'
         how = "A Claude agent is a Claude project that remembers its job. Setup takes about 10 minutes."
-        desc = f"Free Claude agent: {t.lower()}. " + " ".join(d["does"])[:120]
+        desc = f"Free Claude agent: {t[:1].lower() + t[1:]}. " + " ".join(d["does"])[:120]
     up = f'<p style="margin-top:22px"><span class="up">Want the full setup? <a class="buy" href="{G}{UP[sl][0]}">Get the {UP[sl][1]} · $10 →</a></span></p>' if sl in UP else ""
     others = "".join(f'<a class="drop" href="/p/{SLUG[s2]}/"><img loading="lazy" width="480" height="600" src="/media/hub/week1/thumbs/{s2}.jpg" alt="{e(t2)}"><div><span>{k2}</span><b>{e(t2)}</b></div></a>' for _, s2, t2, k2 in ORDER if s2 != sl)[:99999]
     pg = HEAD(f"{t} · free Claude {'agent' if d['type']=='a' else 'prompts'} · AUTOPILOT.OI", e(desc), f"/p/{slug}/") + f"""
