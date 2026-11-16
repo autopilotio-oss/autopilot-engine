@@ -116,6 +116,13 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 15 run (13:09 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 15 run (evening): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-16 (08:20 ART)
+- Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 43851057084 (ElevenLabs 401 on eleven_v4 and eleven_multilingual_v2, day 7, SEV-2 already reported, not rerun). Health, revenue, gumroad, stats, Threads and pages runs green.
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Contribution INCOMPLETE (5 vendors unknown).
+- Kit: still locked (Kit MCP: requires paid plan). Kit data MISSING, consent.py ingest not run. Not re-sent (Seb messaged Nov 14).
+- Metricool: Nov 15 money plan published IG+TikTok; contract carousel 427275488 published on IG but TikTok ERROR photo_pull_failed (SEV-3, not retried: retry would be a new public action). 4 non-draft pending Nov 16 to 17 (427275593, 427275746, 427275838, 427275971), all in queue/hub with approved_by_seb true, uuids match: 0 unapproved. Note for Seb's weekly: tonight's 21:00 TikTok title still "Hire a team of 5 AI employees" and Nov 17 21:00 "6 Claude agents that replace an assistant" (the wording builder/2026-11-15-agent-title-claims removes from the site). IG 88 followers, reel views 84 in 7d (carousels only since Nov 13). Threads views MISSING.
+- ONE CHANGE: NONE (commander had no proposals; the only internal candidate, teaching health.approved_post_uuids to read queue/hub, changes an approval guard and stays Seb's call). No message sent.
+
 ## Daily Pulse 2026-11-15 (08:25 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known) and worker:kit_sync (SEV-2, issue #19, already reported). All 20 checkouts ok, flagships live. Heartbeats 12 of 13 ok (kit_sync failed). Failed Actions 24h: only Factory reels run 43700908411 (ElevenLabs 401 on eleven_v4 and eleven_multilingual_v2, day 6, SEV-2 already reported, not rerun). Health, revenue, stats, Threads and pages runs green.
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Known costs this month $56.86, contribution INCOMPLETE (5 vendors unknown).

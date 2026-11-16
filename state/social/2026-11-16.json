@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-16",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts (brand 7761544), pulled 2026-11-16 ~11:20 UTC by Daily Pulse. 7d window Nov 9 to Nov 15 (Metricool daily rows). Kit MISSING: Kit MCP still refuses (requires paid Kit plan).",
+ "kit": {
+  "subscribers": null,
+  "new_7d": null,
+  "note": "MISSING DATA: Kit MCP get_growth_stats rejected again Nov 16 with 'requires a paid Kit plan' (kit_sync failing, issue #19, Seb messaged Nov 14). consent.py ingest not run."
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 88,
+   "posts_7d": 10,
+   "interactions_7d": 4,
+   "accounts_engaged_7d": 0,
+   "reel_views_7d": 84,
+   "note": "followers = IGEV01 Nov 15 (85 on Nov 9); posts_7d = sum IGEV37 Nov 9 to 15 (Nov 12 null); interactions_7d = sum IGEV38 Nov 9 to 10 (Nov 11 to 15 null); accounts_engaged_7d = IGEV42 Nov 15 daily value; reel_views_7d = sum IGEV23 Nov 9 to 11 (Nov 12 to 15 null; only carousels posted since Nov 13). Nov 15: 2 hub carousels published on IG (money plan, contract)."
+  },
+  "threads": {
+   "followers": 1,
+   "posts_7d": null,
+   "views_7d": null,
+   "interactions_7d": null,
+   "note": "THEV01 1 on Nov 12 to 15; THEV02, THEV06, THEV05 null Nov 9 to 15 (0 on partial Nov 16): MISSING DATA for the window."
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled; Nov 15 money plan carousel published, contract carousel ERROR photo_pull_failed (Metricool 427275488)"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 2,
+  "queued": 4,
+  "failed": 1,
+  "window": "published = Metricool posts PUBLISHED dated Nov 15 08:15 ART to Nov 16 08:15 ART (427275345 money plan 14:00 IG+TikTok, 427275488 contract 21:00 IG only), failed = 427275488 TikTok photo_pull_failed, queued = non-draft pending Nov 16 08:15 to Nov 18 08:15 ART",
+  "unapproved_pending": 0,
+  "unapproved_action": "none: the 4 pending non-draft posts (427275593, 427275746, 427275838, 427275971; IG+TikTok hub carousels) are in queue/hub (04_night_shift, 06_team_of_5, 10_interview_coach, 08_six_agents) with approved_by_seb true, uuids match.",
+  "cadence_ok": "IG 2 a day (14:00 and 21:00 ART), within max_per_day 2. 1 ERROR (TikTok, SEV-3)."
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-15",
+  "campaign": "120248645551300265 PAUSED Nov 3; campaign ads.status off since Nov 2",
+  "cap_usd": 60,
+  "source": "costs ledger (no spend after Nov 1; Adspirer not re-queried this run)"
+ },
+ "decisions": [
+  "Kit: Creator plan payment failed Nov 13; Kit MCP still refuses reads and kit_sync fails. Update the payment method (deadline ~Dec 13) or drop to free (spending decision). Already messaged Nov 14.",
+  "ElevenLabs: ELEVENLABS_API_KEY still 401; factory reels run 43851057084 failed Nov 16 (7th day). Fix key/credits or pause freel.yml cron.",
+  "Merge pending builder branches: alert-issues, keep-social-source, cover-image-shape, job-title-claim, free-post-prompts, agent-title-claims (expired-launch-code can be deleted).",
+  "Nov 16 21:00 and Nov 17 21:00 hub captions/TikTok titles still say 'Hire a team of 5 AI employees' and '6 Claude agents that replace an assistant' (approved by Seb Nov 13; site copy fix waits on builder/2026-11-15-agent-title-claims). Social is Seb's call.",
+  "Viral Lab: pick a source for public view counts (open since Oct 31)."
+ ]
+}
