@@ -31,6 +31,13 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 
 TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate and still waiting. No new guide fix needed and nothing in G["video"], G["shop"] or G["sell"] is wrong in a way that could hurt a reader, so guides.py was not edited. Optional for a later version (not a fix): G["shop"] step "Survive your first 30 days" could add "During TikTok's holiday campaign, slow shipping can also block campaign entry, so ship on time even when TikTok gives you extra days." Source: TIKTOK_SHOP_PLAYBOOK.md section 1d.
 
+## Weekly Sprint 2026-11-16 (handoff)
+- value_first_tk_001 closed INCONCLUSIVE (A 3 videos median 101, B 4 median 90.5). TikTok stays on hub photo carousels (median 190 views).
+- New draft ig_reel_format_001 (queue/drafts/ig_reel_format_001.json): next 4 hub posts on IG as silent slideshow reels from the same slides and caption. Do NOT render to docs/ or schedule until Seb says OK; then render with ffmpeg, save Metricool posts as draft, set approved_by_seb in queue/hub, un-draft. Read IGRE11 at 72h.
+- Asked Seb (waiting): GOATCOUNTER_TOKEN; Kit pay or drop (spending); merge free post prompts (+ job title, agent titles); approve ig_reel_format_001; disable Factory reels workflow or fix ElevenLabs key; OK to change tonight's TikTok caption "Hire a team of 5 AI employees" and Nov 17 "6 Claude agents that replace an assistant".
+- Proposed pause: kit_sync and newsletter until Kit is paid; site_improver no new branches until the 6 open ones are merged or rejected.
+- IG hub carousels reached 0 to 2 people each Nov 13 to 16: if reach stays at 0 after a reel test, check for an Instagram account restriction (Oct 30 precedent).
+
 ## Weekly Sprint 2026-11-09 (handoff)
 - Experiment value_first_tk_001 running (value first TikToks vs agent demos). Daily Manager: keep 1 value first TikTok a day. Nov 16 Sprint reads TKPO07/TKPO10 at 72h for every TikTok Nov 4 to 13 and applies the rule in experiments/experiments.jsonl.
 - hook_number_001 closed INCONCLUSIVE (never posted). optin_top_001 INCONCLUSIVE, proposed retire + delete docs/g/subs-v2 (waits for Seb).

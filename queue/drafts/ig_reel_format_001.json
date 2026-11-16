@@ -1,0 +1,12 @@
+{
+ "experiment_id": "ig_reel_format_001",
+ "status": "draft, waiting for Seb (customer facing, nothing scheduled)",
+ "created": "2026-11-16",
+ "what": "Post the next 4 hub posts on Instagram as silent 9:16 slideshow reels made from the same approved slides; TikTok keeps photo carousels.",
+ "render": "ffmpeg: each slide 1080x1350 padded to 1080x1920 on the brand background, 2.5s per slide, cover = slide 1, no voice (ElevenLabs 401), no music. Output to the Metricool media upload, not into docs/ (Pages artifact already over 1 GB).",
+ "copy": "Reuse the caption Seb approved for that hub post word for word, including Comment KEYWORD. No new claims.",
+ "schedule": "1 a day at the existing IG hub slot, only after Seb says OK; Metricool post saved as draft first, approved_by_seb set in queue/hub before un-drafting.",
+ "baseline_A": {"ig_carousels_nov13_16_reach": [1, 2, 0, 0, 1, 0], "ig_carousels_nov3_8_reach": [4, 10, 8, 8, 9, 13, 6], "ig_reels_nov5_11_reach": [50, 70, 49, 99, 61, 16, 1], "source": "Metricool IGPO14 / IGRE11, read 2026-11-16"},
+ "decision_rule": "Keep reels if B median reach at 72h >= 3x A median AND >= 20; rollback if B median <= A median; else ITERATE; under 4 per arm INCONCLUSIVE.",
+ "rollback": "Set the Metricool reel posts back to draft; carousels continue unchanged."
+}
