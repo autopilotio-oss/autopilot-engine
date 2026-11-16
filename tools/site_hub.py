@@ -140,7 +140,7 @@ for k, s, t, kind in ORDER:
 vault = HEAD("The Free Prompt Vault · AUTOPILOT.OI", "Every Claude prompt and agent from our posts, free to copy.", "/vault/") + f'''
 <div class="wrap hero" style="padding-bottom:20px"><span class="tagline live">Free · updated every day</span><h1>The Prompt <em>Vault.</em></h1>
 <p class="lead">Every prompt and agent from our posts. Tap copy, paste into Claude, done.</p></div>
-<div class="wrap locked" id="v"><div class="gate"><b style="font:700 20px var(--T)">Unlock everything, free.</b><p class="how">Enter your email and the whole Vault opens. We send new prompts as they drop.</p>{FORM("Unlock the Vault")}</div>
+<div class="wrap locked" id="v"><div class="gate"><b id="gh" style="font:700 20px var(--T)">Unlock everything, free.</b><p class="how">Enter your email and the whole Vault opens. We send new prompts as they drop.</p>{FORM("Unlock the Vault")}</div>
 <div class="offer" id="offer"><span class="tagline live">You’re in</span><b>Want the done for you version?</b><p class="how">The 5 money agents are full setups for bills, debt, subscriptions, refunds and raises. $10 each, or all 5 for $39 (saves $11). One payment, 30 day refund.</p><a class="btn buy" style="margin-top:14px" href="{G}all-money-agents">Get all 5 · $39</a> <a class="up" style="margin-left:10px" href="/#agents">See each one</a></div>
 {posts}
 <div class="post"><h2>Get the full setups.</h2><p class="how">Every money agent in one bundle: master prompts, starter prompts, setup guides and trackers.</p><a class="btn buy" style="margin-top:16px" href="{G}all-money-agents">All 5 Money Agents · $39</a></div></div>
@@ -149,6 +149,7 @@ var v=document.getElementById('v');function open_(){{v.classList.remove('locked'
 document.querySelectorAll('.shr').forEach(function(b){{b.onclick=function(){{var d={{title:b.dataset.t,text:'Free Claude prompts: '+b.dataset.t,url:b.dataset.u}};if(navigator.share)navigator.share(d).catch(function(){{}});else navigator.clipboard.writeText(d.url).then(function(){{b.textContent='Link copied'}});try{{if(window.goatcounter)goatcounter.count({{path:'vault/share',event:true}})}}catch(x){{}}}}}});
 try{{if(/utm_source=kit/.test(location.search))localStorage.setItem('ap_vault','1')}}catch(x){{}}
 try{{if(localStorage.getItem('ap_vault')||/utm_source=kit/.test(location.search))open_()}}catch(x){{}}
+try{{var it=document.getElementById(decodeURIComponent(location.hash.slice(1))),h2=it&&it.querySelector('h2');if(h2&&v.classList.contains('locked'))document.getElementById('gh').textContent=h2.textContent+': free with your email.'}}catch(x){{}}
 kit(document.querySelector('.cap'),'vault_page',function(m){{open_()}});
 document.querySelectorAll('.cpy').forEach(function(b){{b.addEventListener('click',function(){{var p=b.parentNode.cloneNode(true);p.querySelector('.cpy').remove();var t=p.querySelector('.t');if(t)t.remove();navigator.clipboard.writeText(p.textContent.trim()).then(function(){{try{{if(window.goatcounter)goatcounter.count({{path:'vault/copy',event:true}})}}catch(x){{}}b.textContent='Copied';setTimeout(function(){{b.textContent='Copy'}},1400)}})}})}});
 </script></body></html>'''
