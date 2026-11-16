@@ -1,15 +1,15 @@
 {
-  "at": "2026-11-16T00:24:00Z",
+  "at": "2026-11-16T12:21:22Z",
   "posts_today": {
     "instagram": {
-      "published": 2,
-      "pending": 0,
+      "published": 0,
+      "pending": 2,
       "error": 0
     },
     "tiktok": {
-      "published": 1,
-      "pending": 0,
-      "error": 1
+      "published": 0,
+      "pending": 2,
+      "error": 0
     }
   },
   "top_posts": [
@@ -18,7 +18,7 @@
       "published_at": "2026-11-13T17:07:49Z",
       "text": "Claude can now find money in the skills you already have.",
       "metrics": {
-        "views": 205,
+        "views": 206,
         "shares": 1,
         "comments": 0,
         "saves": null,
@@ -28,25 +28,25 @@
       "url": "https://www.tiktok.com/@autopilot.oi/video/7707703910621908231"
     },
     {
-      "network": "instagram",
-      "published_at": "2026-11-14T00:05:24Z",
-      "text": "I don't think most people know you can just call and ask for a lower bill.",
+      "network": "tiktok",
+      "published_at": "2026-11-15T00:03:34Z",
+      "text": "Steal this sentence and add it to the end of anything you ask Claude:",
       "metrics": {
-        "reach": 2,
-        "views": 1,
-        "saves": 0,
-        "shares": 0,
+        "views": 190,
+        "shares": 1,
         "comments": 0,
+        "saves": null,
+        "reach": null,
         "profile_visits": null
       },
-      "url": "https://www.instagram.com/p/Dfs4HTDjTS1/"
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7708182101530692872"
     },
     {
       "network": "tiktok",
       "published_at": "2026-11-14T00:05:03Z",
       "text": "I don't think most people know you can just call and ask for a lower bill.",
       "metrics": {
-        "views": 209,
+        "views": 210,
         "shares": 0,
         "comments": 0,
         "saves": null,
@@ -60,5 +60,5 @@
     "subscribers": null,
     "new_today": null
   },
-  "notes": "Snapshot 21:24 ART Nov 15. Today: IG+TikTok carousel 10 year money plan published 14:00 ART; carousel read any contract 21:00 ART published on IG (DfyBpo9CteN) but TikTok ERROR photo_pull_failed. Window 6 to 72h: saves+shares 0 everywhere except TikTok 13 Nov skills post (1 share). TikTok views: 209 lower bill, 205 skills, 118 bank statement, 45 ask 5 questions; TikTok saves/reach not provided by Metricool. IG 14 to 15 Nov posts reach 0. Metricool analytics times are UTC. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v87); revenue 0 verified orders all time (unchanged). Watch: TikTok contract post ERROR logged to Fix needed; freel.yml failure 15 Nov already listed; ci.yml last run success."
+  "notes": "Snapshot 09:21 ART Nov 16. Today: 2 carousels scheduled (14:00 ART night shift list, 21:00 ART team of 5 roles), each PENDING on IG and TikTok; nothing published yet, no errors. Window 6 to 72h: saves+shares 0 everywhere except TikTok 13 Nov skills post (1 share) and TikTok 15 Nov ask 5 questions post (1 share). TikTok reach and saves not provided by Metricool, so ties broken by views. TikTok views: 210 lower bill, 206 skills, 190 ask 5 questions, 183 bank statement, 174 10 year money plan. IG reach 0 to 2 on all posts in window, saves and shares 0. Metricool analytics times are UTC. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v88); revenue 0 verified orders all time (unchanged). Watch: freel.yml failure 16 Nov logged to Fix needed; ci.yml last run success; Metricool TikTok contract post ERROR from 15 Nov already listed."
 }
