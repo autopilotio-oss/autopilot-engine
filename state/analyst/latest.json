@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16T12:21:22Z",
+  "at": "2026-11-16T16:25:00Z",
   "posts_today": {
     "instagram": {
       "published": 0,
@@ -60,5 +60,5 @@
     "subscribers": null,
     "new_today": null
   },
-  "notes": "Snapshot 09:21 ART Nov 16. Today: 2 carousels scheduled (14:00 ART night shift list, 21:00 ART team of 5 roles), each PENDING on IG and TikTok; nothing published yet, no errors. Window 6 to 72h: saves+shares 0 everywhere except TikTok 13 Nov skills post (1 share) and TikTok 15 Nov ask 5 questions post (1 share). TikTok reach and saves not provided by Metricool, so ties broken by views. TikTok views: 210 lower bill, 206 skills, 190 ask 5 questions, 183 bank statement, 174 10 year money plan. IG reach 0 to 2 on all posts in window, saves and shares 0. Metricool analytics times are UTC. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v88); revenue 0 verified orders all time (unchanged). Watch: freel.yml failure 16 Nov logged to Fix needed; ci.yml last run success; Metricool TikTok contract post ERROR from 15 Nov already listed."
+  "notes": "Snapshot 13:25 ART Nov 16. Today: 2 carousels scheduled (14:00 ART night shift list, 21:00 ART team of 5 roles), each PENDING on IG and TikTok; nothing published yet, no errors. Window 6 to 72h: saves+shares 0 everywhere except TikTok 13 Nov skills post (1 share) and TikTok 15 Nov ask 5 questions post (1 share). TikTok reach and saves not provided by Metricool, ties broken by views. TikTok views: 210 lower bill, 206 skills, 190 ask 5 questions, 183 bank statement, 174 10 year money plan. IG reach 0 to 2 on all posts in window, saves and shares 0. Metricool analytics times are UTC. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v89); revenue 0 verified orders all time (unchanged). Watch: freel.yml failure 16 Nov already in Fix needed; ci.yml last run success; no ERROR posts today."
 }
