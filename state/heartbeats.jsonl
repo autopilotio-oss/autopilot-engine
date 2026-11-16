@@ -310,3 +310,4 @@
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-16T11:16:54+00:00", "note": "0 orders; checkouts ok; Kit still locked (reported); ElevenLabs 401 day 7 (reported); TikTok photo_pull_failed 1 (SEV-3); 4 approved hub posts pending; ONE CHANGE NONE"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-16T12:22:26+00:00", "note": "0 posts out today (4 pending), top post saves+shares 1, feed written yes"}
 {"worker": "weekly_sprint", "status": "ok", "at": "2026-11-16T12:42:04+00:00", "note": "IG carousels reach 0 to 2 + DM page misses promised prompts; visits and leads unreadable"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-16T13:09:23+00:00", "note": "0 drafted, 0 escalated, 1 alert (SEV-2 TikTok photo_pull_failed)"}
