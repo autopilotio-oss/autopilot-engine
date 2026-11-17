@@ -94,6 +94,7 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Support agent run Nov 15 19:09 UTC: no new incidents. Kit sent a second payment reminder Nov 15 16:44Z (Creator plan still unpaid); same issue as inc:email:1a1d2e4b, still open, not re-recorded.
 - Support agent run Nov 16 ~13:10 UTC: inc:email:1a1e1ac2 (SEV-2 Metricool: TikTok carousel 427275488 not published Nov 16 00:05Z, photo_pull_failed; same failure Daily Pulse logged as SEV-3; IG copy published, retry is a new public action so Seb's call). Also informational: Metricool TikTok manual-publish reminder, Kit payment reminder (inc:email:1a1d2e4b still open).
 - Support agent run Nov 16 evening: no new alerts (only new mail Adspirer marketing; inc:email:1a1e1ac2 Metricool TikTok and inc:email:1a1d2e4b Kit billing still open).
+- Support agent run Nov 17 13:10 UTC: no new alerts (new mail informational: Adspirer/Kit marketing, Ray-Ban Meta firmware notice; inc:email:1a1e1ac2 and inc:email:1a1d2e4b still open).
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -128,6 +129,7 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 15 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 16 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 16 run (evening): 0 cases, 0 drafted, 0 escalated.
+- Nov 17 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-17 (08:20 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 10th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 44061469830 (day 8 of the ElevenLabs 401, SEV-2 already reported, not rerun). Health, revenue, gumroad, stats, Threads and pages runs green.
