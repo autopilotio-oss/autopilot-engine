@@ -1,32 +1,32 @@
 {
-  "at": "2026-11-16T20:25:00Z",
+  "at": "2026-11-17T00:25:00Z",
   "posts_today": {
-    "instagram": {"published": 1, "pending": 1, "error": 0},
-    "tiktok": {"published": 1, "pending": 1, "error": 0}
+    "instagram": {"published": 2, "pending": 0, "error": 0},
+    "tiktok": {"published": 2, "pending": 0, "error": 0}
   },
   "top_posts": [
     {
       "network": "tiktok",
       "published_at": "2026-11-15T00:03:34Z",
       "text": "Steal this sentence and add it to the end of anything you ask Claude:",
-      "metrics": {"views": 190, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
+      "metrics": {"views": 190, "likes": 1, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708182101530692872"
-    },
-    {
-      "network": "tiktok",
-      "published_at": "2026-11-14T00:05:03Z",
-      "text": "I don't think most people know you can just call and ask for a lower bill.",
-      "metrics": {"views": 210, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7707811427704130834"
     },
     {
       "network": "tiktok",
       "published_at": "2026-11-14T17:08:55Z",
       "text": "Be honest. When did you last read your bank statement line by line?",
-      "metrics": {"views": 183, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
+      "metrics": {"views": 183, "likes": 1, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708074696343817473"
+    },
+    {
+      "network": "tiktok",
+      "published_at": "2026-11-15T17:09:57Z",
+      "text": "A question most people avoid: if nothing changes, where is your money in 10 years?",
+      "metrics": {"views": 174, "likes": 3, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
+      "url": null
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 17:25 ART Nov 16. Today: night shift list carousel (14:00 ART) PUBLISHED on IG and TikTok; team of 5 roles carousel (21:00 ART) PENDING on both; no errors. Window 6 to 72h (13 Nov 20:20Z to 16 Nov 14:20Z): only saves+shares signal is TikTok 15 Nov ask 5 questions post (1 share); TikTok 13 Nov skills post (1 share) aged out of the window. TikTok reach and saves not provided by Metricool, ties broken by views: 210 lower bill, 190 ask 5 questions, 183 bank statement, 174 10 year money plan. IG reach 0 to 2, saves 0 and shares 0 on all 6 posts in window (16 Nov lease post reach 0). Metricool analytics times are UTC. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v90); revenue 0 verified orders all time (unchanged). Watch: freel.yml failure 16 Nov already in Fix needed; ci.yml last run success; no ERROR posts today."
+  "notes": "Snapshot 21:25 ART Nov 16. Today: night shift list carousel (14:00 ART) and team of 5 roles carousel (21:00 ART) both PUBLISHED on IG and TikTok; no errors. Window 6 to 72h (14 Nov 00:25Z to 16 Nov 18:25Z): only saves+shares signal is TikTok 15 Nov ask 5 questions post (1 share). TikTok reach and saves not provided by Metricool, ties broken by views: 190 ask 5 questions, 183 bank statement, 174 10 year money plan; 10 year post URL not in analytics (MISSING). Lower bill (14 Nov 00:05Z) and skills posts aged out. Today's 14:00 ART TikTok not yet in analytics. IG reach 0 to 1, saves 0 and shares 0 on all 4 posts in window. Metricool analytics times are UTC. Kit MISSING: get_growth_stats says Kit MCP needs a paid Kit plan. HQ feed written (status/hub v91); revenue 0 verified orders all time (unchanged). Watch: freel.yml failure 16 Nov already in Fix needed; ci.yml last run success; no ERROR posts today."
 }
