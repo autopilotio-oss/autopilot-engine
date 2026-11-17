@@ -325,3 +325,4 @@
 {"worker": "support_agent", "status": "ok", "at": "2026-11-17T13:09:31+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-17T14:42:16+00:00", "note": "none: 7 builder branches await Seb, Sprint proposed pause; all still merge cleanly, CI green, checkouts ok"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-17T16:22:39+00:00", "note": "posts out today 0 (4 pending, 0 errors), top post saves+shares 1, feed written yes"}
+{"worker": "kit_sync", "status": "failed", "at": "2026-11-17T16:34:08+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (11th in a row)"}
