@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-17-tip",
+  "group": "stories-2026-11-17",
+  "at": "2026-11-17T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-17-tip.jpg"
+  ],
+  "text": "AI tip: Got a bad review? Paste it and say: \"Write a calm, professional reply.\""
+ },
+ {
+  "id": "story-2026-11-17-quiz",
+  "group": "stories-2026-11-17",
+  "at": "2026-11-17T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-17-quiz.jpg"
+  ],
+  "text": "Quiz: Your card is at 29.99% APR. Best first move?"
+ },
+ {
+  "id": "story-2026-11-17-answer",
+  "group": "stories-2026-11-17",
+  "at": "2026-11-17T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-17-answer.jpg"
+  ],
+  "text": "Quiz answer: Call and ask for a lower rate. It doesn't always work, but asking {costs nothing.} Claude writes the call script in seconds."
+ },
+ {
+  "id": "story-2026-11-17-fact",
+  "group": "stories-2026-11-17",
+  "at": "2026-11-17T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-17-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can compare anything side by side. Two phones, two quotes, two insurance plans. Paste both and ask for a simple table."
+ },
+ {
+  "id": "story-2026-11-17-poll",
+  "group": "stories-2026-11-17",
+  "at": "2026-11-17T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-17-poll.jpg"
+  ],
+  "text": "Poll: Would you let AI draft your replies? A) Yes, if I approve B) No way"
+ }
+]
