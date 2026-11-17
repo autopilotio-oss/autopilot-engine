@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-17T12:25:00Z",
+  "at": "2026-11-17T16:25:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 2, "error": 0},
     "tiktok": {"published": 0, "pending": 2, "error": 0}
@@ -7,26 +7,26 @@
   "top_posts": [
     {
       "network": "tiktok",
-      "published_at": "2026-11-15T00:03:34Z",
+      "published_at": "2026-11-15T00:03:34-03:00",
       "text": "Steal this sentence and add it to the end of anything you ask Claude:",
       "metrics": {"views": 190, "likes": 1, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708182101530692872"
     },
     {
       "network": "tiktok",
-      "published_at": "2026-11-15T17:09:57Z",
+      "published_at": "2026-11-15T17:09:57-03:00",
       "text": "A question most people avoid: if nothing changes, where is your money in 10 years?",
       "metrics": {"views": 184, "likes": 3, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708446649911184660"
     },
     {
       "network": "tiktok",
-      "published_at": "2026-11-14T17:08:55Z",
+      "published_at": "2026-11-14T17:08:55-03:00",
       "text": "Be honest. When did you last read your bank statement line by line?",
       "metrics": {"views": 183, "likes": 1, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708074696343817473"
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 09:25 ART Nov 17. Today: interview prep carousel (14:00 ART) and 6 chore agents carousel (21:00 ART) PENDING on IG and TikTok; no errors. Only 1 share across all posts 6 to 72h old; IG saves and shares 0 on every post (IG reach 0 to 3). TikTok reach and saves not returned by Metricool (null); ties ranked by TikTok views. Kit MISSING: Kit MCP says it needs a paid Kit plan. HQ revenue: 0 verified orders all time. freel.yml failed again 10:04Z (ElevenLabs 401 pattern)."
+  "notes": "Snapshot 13:25 ART Nov 17. Today: interview prep carousel (14:00 ART) and 6 chore agents carousel (21:00 ART) PENDING on IG and TikTok; no errors. Window 6 to 72h: 6 TikTok posts (29 to 190 views), only 1 share total; IG 6 posts, saves and shares 0 on all, reach 0 to 3. TikTok reach and saves not returned by Metricool (null); ties ranked by TikTok views. Newest TikTok (5 employees, Nov 17 00:04 ART) at 29 views. Kit MISSING: Kit MCP says it needs a paid Kit plan. HQ revenue: 0 verified orders all time (ledger synced 14:00Z). freel.yml failure 10:04Z already listed; ci.yml last run success."
 }
