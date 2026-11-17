@@ -129,6 +129,14 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 16 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 16 run (evening): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-17 (08:20 ART)
+- Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 10th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 44061469830 (day 8 of the ElevenLabs 401, SEV-2 already reported, not rerun). Health, revenue, gumroad, stats, Threads and pages runs green.
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Known costs this month $56.86, contribution INCOMPLETE (5 vendors unknown).
+- Kit: still locked (Kit MCP: requires paid plan). Kit data MISSING, consent.py ingest not run. Not re-sent (Seb messaged Nov 14).
+- Metricool: Nov 16 night shift 14:00 and team of 5 21:00 published on IG+TikTok, 0 ERROR. 4 non-draft pending Nov 17 to 18 (427275838, 427275971, 427276106, 427276495), all in queue/hub with approved_by_seb true and Seb's Nov 13 quote, uuids match: 0 unapproved. Tonight 21:00 TikTok title still "6 Claude agents that replace an assistant" (Seb's call, in the weekly list). IG 88 followers, IGEV23 reel views null since Nov 12 (carousels only). Threads views MISSING.
+- Note: health.check_metricool takes the list of posts, not the getScheduledPosts {"data": [...]} wrapper; the Pulse prompt's one-liner needs ['data'] (or the function could accept both, with a test). Builder candidate.
+- ONE CHANGE: NONE (commander had no proposals; the only internal candidates, teaching health.approved_post_uuids to read queue/hub or widening check_metricool input, were not commander proposals). No message sent.
+
 ## Daily Pulse 2026-11-16 (08:20 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 43851057084 (ElevenLabs 401 on eleven_v4 and eleven_multilingual_v2, day 7, SEV-2 already reported, not rerun). Health, revenue, gumroad, stats, Threads and pages runs green.
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Contribution INCOMPLETE (5 vendors unknown).
