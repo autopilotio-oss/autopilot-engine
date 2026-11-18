@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-18-tip",
+  "group": "stories-2026-11-18",
+  "at": "2026-11-18T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-18-tip.jpg"
+  ],
+  "text": "AI tip: Paste your to do list and ask: \"Put this in order. What makes me money first?\""
+ },
+ {
+  "id": "story-2026-11-18-quiz",
+  "group": "stories-2026-11-18",
+  "at": "2026-11-18T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-18-quiz.jpg"
+  ],
+  "text": "Quiz: Before paying a hospital bill, ask for the..."
+ },
+ {
+  "id": "story-2026-11-18-answer",
+  "group": "stories-2026-11-18",
+  "at": "2026-11-18T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-18-answer.jpg"
+  ],
+  "text": "Quiz answer: Itemized bill. The {itemized bill} shows every charge, so you and Claude can catch duplicates and errors."
+ },
+ {
+  "id": "story-2026-11-18-fact",
+  "group": "stories-2026-11-18",
+  "at": "2026-11-18T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-18-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can summarize a long document in seconds. Paste the report, the transcript or the PDF. Ask for the points that matter."
+ },
+ {
+  "id": "story-2026-11-18-poll",
+  "group": "stories-2026-11-18",
+  "at": "2026-11-18T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-18-poll.jpg"
+  ],
+  "text": "Poll: Claude or ChatGPT? A) Claude B) ChatGPT"
+ }
+]
