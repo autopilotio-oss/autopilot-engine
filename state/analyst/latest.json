@@ -1,32 +1,47 @@
 {
-  "at": "2026-11-18T00:33:00Z",
+  "at": "2026-11-18T12:25:00Z",
   "posts_today": {
     "instagram": {
-      "published": 2,
-      "pending": 0,
+      "published": 0,
+      "pending": 2,
       "error": 0
     },
     "tiktok": {
-      "published": 2,
-      "pending": 0,
+      "published": 0,
+      "pending": 2,
       "error": 0
     }
   },
   "top_posts": [
     {
       "network": "tiktok",
-      "published_at": "2026-11-15T00:03:34-03:00",
-      "text": "Steal this sentence and add it to the end of anything you ask Claude:",
+      "published_at": "2026-11-17T00:04:56-03:00",
+      "text": "What if you had 5 employees and paid none of them?",
       "metrics": {
-        "views": 190,
-        "likes": 1,
+        "views": 195,
+        "likes": 5,
         "shares": 1,
         "comments": 0,
         "saves": null,
         "reach": null,
         "profile_visits": null
       },
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7708182101530692872"
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7708924657411427591"
+    },
+    {
+      "network": "tiktok",
+      "published_at": "2026-11-16T17:06:53-03:00",
+      "text": "The most useful Claude setup I know is also the most boring one: a list.",
+      "metrics": {
+        "views": 190,
+        "likes": 4,
+        "shares": 0,
+        "comments": 0,
+        "saves": null,
+        "reach": null,
+        "profile_visits": null
+      },
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7708816879317568820"
     },
     {
       "network": "tiktok",
@@ -42,26 +57,11 @@
         "profile_visits": null
       },
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708446649911184660"
-    },
-    {
-      "network": "tiktok",
-      "published_at": "2026-11-16T17:06:53-03:00",
-      "text": "The most useful Claude setup I know is also the most boring one: a list.",
-      "metrics": {
-        "views": 173,
-        "likes": 4,
-        "shares": 0,
-        "comments": 0,
-        "saves": null,
-        "reach": null,
-        "profile_visits": null
-      },
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7708816879317568820"
     }
   ],
   "kit": {
     "subscribers": null,
     "new_today": null
   },
-  "notes": "Snapshot 21:33 ART Nov 17. Today: interview prep carousel (14:00 ART) and 6 agents carousel (21:00 ART) PUBLISHED on IG and TikTok, no errors. Next: job hunt agent (Nov 18 14:00) and Black Friday prompts (Nov 18 21:00) pending on IG+TikTok. Window 6-72h: only 1 share across all posts (TikTok 'Steal this sentence'); IG saves and shares 0 on every post, IG reach 0 to 3 per post. TikTok saves and reach not provided by Metricool; ranked by shares then views. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-17T22:40:24Z. Watch: freel.yml last run failed 10:08Z (ElevenLabs 401, already in Fix needed today)."
+  "notes": "Snapshot 09:25 ART Nov 18. Today: job hunt agent (14:00 ART) and Black Friday prompts (21:00 ART) PENDING on IG and TikTok, nothing published yet, no errors. Window 6-72h (Nov 15 09:22 to Nov 18 03:22 ART): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 3 per post (best: '10 years money' reach 3, views 6). TikTok saves and reach not provided by Metricool; ties ranked by shares then views. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-18T10:48:16Z. Watch: freel.yml failed again 10:05Z (likely ElevenLabs 401). HQ feed written to status/hub v96."
 }
