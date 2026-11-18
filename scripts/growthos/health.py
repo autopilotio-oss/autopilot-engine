@@ -209,8 +209,12 @@ def check_jobs(queue):
 
 def check_metricool(posts, approved_ids=None):
     """Run from a session with the Metricool connector: scheduled versus published, and (once the policy is active)
-    any scheduled post without an approved content_id."""
-    err = [p for p in posts if any(pr.get("status") == "ERROR" for pr in p.get("providers", []))]
+    any scheduled post without an approved content_id. posts may be the raw getScheduledPosts reply
+    ({"data": [...]}) or the list itself."""
+    if isinstance(posts, dict):
+        posts = posts.get("data") or []
+    posts = [p for p in posts if isinstance(p, dict)]
+    err =[p for p in posts if any(pr.get("status") == "ERROR" for pr in p.get("providers", []))]
     out = [{"check": "metricool_errors", "ok": not err, "severity": "SEV-3", "detail": f"{len(err)} post(s) in ERROR"}]
     if approved_ids is not None:
         rogue = [p.get("uuid") for p in p_pending(posts) if not any(cid in (p.get("text") or "") for cid in approved_ids)]

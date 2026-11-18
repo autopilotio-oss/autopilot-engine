@@ -134,6 +134,14 @@ TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate a
 - Nov 17 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 17 run (evening): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-18 (08:20 ART)
+- Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 13th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 44281653500 (ElevenLabs 401, 9th day, inc:worker:factory_reels_tts:2026-11-10 already open).
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Known costs this month $56.86, contribution INCOMPLETE (5 vendors unknown).
+- Kit: still locked (Kit MCP: requires paid plan). Kit data MISSING, consent.py ingest not run. Not re-sent (Seb messaged Nov 14).
+- Metricool: Nov 17 interview coach 14:00 and six agents 21:00 published on IG+TikTok, 0 ERROR. 2 non-draft pending (427276106 job agent, 427276495 Black Friday, both Nov 18), in queue/hub with approved_by_seb true and Seb's Nov 13 quote, uuids match: 0 unapproved. Nothing scheduled Nov 19 or 20: the hub week ends tonight, next posts need Seb (weekly report item, not an interrupt).
+- ONE CHANGE: health.check_metricool now accepts the raw getScheduledPosts {"data": [...]} reply as well as a list (tests/test_check_metricool.py). Still open, internal: health.approved_post_uuids does not read queue/hub, so hub carousels are matched by hand each run.
+- No message sent (no new SEV-1/2, no order, no new authorization item).
+
 ## Daily Pulse 2026-11-17 (08:20 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 10th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 44061469830 (day 8 of the ElevenLabs 401, SEV-2 already reported, not rerun). Health, revenue, gumroad, stats, Threads and pages runs green.
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Known costs this month $56.86, contribution INCOMPLETE (5 vendors unknown).
