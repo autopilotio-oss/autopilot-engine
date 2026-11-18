@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-18T16:25:00Z",
+  "at": "2026-11-18T20:25:00Z",
   "posts_today": {
-    "instagram": {"published": 0, "pending": 2, "error": 0},
-    "tiktok": {"published": 0, "pending": 2, "error": 0}
+    "instagram": {"published": 1, "pending": 1, "error": 0},
+    "tiktok": {"published": 1, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
@@ -21,12 +21,12 @@
     },
     {
       "network": "tiktok",
-      "published_at": "2026-11-15T17:09:57Z",
-      "text": "A question most people avoid: if nothing changes, where is your money in 10 years?",
-      "metrics": {"views": 184, "likes": 3, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7708446649911184660"
+      "published_at": "2026-11-17T17:10:03Z",
+      "text": "Most people practice for an interview in their head.",
+      "metrics": {"views": 164, "likes": 1, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7709188846306479381"
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 13:25 ART Nov 18. Today: job hunt agent (14:00 ART) and Black Friday prompts (21:00 ART) PENDING on IG and TikTok, nothing published yet, no errors today. Window 6-72h (Nov 15 13:22 to Nov 18 07:22 ART): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 3 per post (best: '10 years money' reach 3, views 6; '5 employees' reach 2, views 5). TikTok saves and reach not provided by Metricool; zero ties ranked by views. Metricool analytics timestamps are UTC (published_at now marked Z; earlier snapshot wrongly used -03:00). Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-18T14:02:26Z. Watch: freel.yml failure 10:05Z already logged today (ElevenLabs 401); ci.yml success. HQ feed written to status/hub v97."
+  "notes": "Snapshot 17:25 ART Nov 18. Today: job hunt agent (14:00 ART) PUBLISHED on IG and TikTok; Black Friday prompts (21:00 ART) PENDING on both; no errors today. Window 6-72h (Nov 15 17:22 to Nov 18 11:22 ART): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post in window, IG reach 0 to 2 (best: '5 employees' reach 2, views 5). TikTok saves, reach and profile visits not provided by Metricool; zero ties ranked by views. Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-18T19:46:19Z. Watch: freel.yml failure 10:05Z already logged today (ElevenLabs 401); ci.yml success. HQ feed written to status/hub v98."
 }
