@@ -335,3 +335,4 @@
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-18T11:17:42+00:00", "note": "0 orders, checkouts ok, kit_sync still locked, factory reels TTS still failing, 2 approved posts pending, queue empty from Nov 19"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-18T12:23:26+00:00", "note": "0 posts out today (4 pending), top post saves+shares 1, feed written yes"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-18T13:10:03+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
+{"worker": "tiktok_intel", "status": "ok", "at": "2026-11-18T14:17:09+00:00", "note": "7 changes: 1e added (AI beauty/health ban, Listing+Prohibited+Restricted Nov 4-6, Policy Pulse Oct ops, SPS affiliate precision, GMV Max Pro/Growth Autopilot), 3 guide diffs proposed, 1 kit note"}

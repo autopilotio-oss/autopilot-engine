@@ -34,6 +34,24 @@ From the TikTok Shop intel run 2026-11-04. None of these is a safety issue (the 
 
 TikTok Shop intel 2026-11-11: rechecked items 1 to 3 above, all still accurate and still waiting. No new guide fix needed and nothing in G["video"], G["shop"] or G["sell"] is wrong in a way that could hurt a reader, so guides.py was not edited. Optional for a later version (not a fix): G["shop"] step "Survive your first 30 days" could add "During TikTok's holiday campaign, slow shipping can also block campaign entry, so ship on time even when TikTok gives you extra days." Source: TIKTOK_SHOP_PLAYBOOK.md section 1d.
 
+TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still waiting. Nothing live is wrong in a way that could hurt a reader, so guides.py was not edited. Three new proposed fixes (sources: TIKTOK_SHOP_PLAYBOOK.md section 1e):
+
+4. G["shop"], step "Survive your first 30 days" (precision, Academy Affiliate Marketing Policy 10/21/2026)
+```diff
+-Below 3.5 you can't run affiliate plans with creators, and below 3.0 your creator plans are removed, so protecting this score protects your sales.
++Below 3.5 you can't add new products to affiliate plans with creators, and below 3.0 your creator plans can be ended, so protecting this score protects your sales.
+```
+5. G["shop"], step "Write a listing that sells and follows the rules", prompt (Product Listing Policy, updated Nov 6 2026)
+```diff
+-Only include claims I can prove. Avoid medical, guaranteed result or before and after promises. Flag anything that could break TikTok Shop rules.
++Only include claims I can prove. Avoid medical, weight loss, guaranteed result or before and after promises, hype like "Best Seller", all caps, and any links or mentions of other sites. Flag anything that could break TikTok Shop rules.
+```
+6. G["shop"], step "Show it every day, the right way" (Policy Pulse Oct 2026, AI in Beauty, Personal Care and Health videos, effective Oct 19 2026)
+```diff
+-Use real demos with your hands, your face or your own real voice (not AI text to speech), with real movement on screen from the first seconds.
++Use real demos with your hands, your face or your own real voice (not AI text to speech), with real movement on screen from the first seconds. Never use AI to show what the product does: for beauty, personal care and health products TikTok Shop bans AI demos and AI "experts" even with a label.
+```
+
 ## Weekly Sprint 2026-11-16 (handoff)
 - value_first_tk_001 closed INCONCLUSIVE (A 3 videos median 101, B 4 median 90.5). TikTok stays on hub photo carousels (median 190 views).
 - New draft ig_reel_format_001 (queue/drafts/ig_reel_format_001.json): next 4 hub posts on IG as silent slideshow reels from the same slides and caption. Do NOT render to docs/ or schedule until Seb says OK; then render with ffmpeg, save Metricool posts as draft, set approved_by_seb in queue/hub, un-draft. Read IGRE11 at 72h.
