@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-18T20:25:00Z",
+  "at": "2026-11-19T00:25:00Z",
   "posts_today": {
-    "instagram": {"published": 1, "pending": 1, "error": 0},
-    "tiktok": {"published": 1, "pending": 1, "error": 0}
+    "instagram": {"published": 2, "pending": 0, "error": 0},
+    "tiktok": {"published": 2, "pending": 0, "error": 0}
   },
   "top_posts": [
     {
@@ -13,20 +13,20 @@
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708924657411427591"
     },
     {
-      "network": "tiktok",
-      "published_at": "2026-11-16T17:06:53Z",
-      "text": "The most useful Claude setup I know is also the most boring one: a list.",
-      "metrics": {"views": 190, "likes": 4, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7708816879317568820"
+      "network": "instagram",
+      "published_at": "2026-11-17T00:05:24Z",
+      "text": "What if you had 5 employees and paid none of them?",
+      "metrics": {"reach": 2, "views": 5, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/Df0mfpeCsUC/"
     },
     {
-      "network": "tiktok",
-      "published_at": "2026-11-17T17:10:03Z",
-      "text": "Most people practice for an interview in their head.",
-      "metrics": {"views": 164, "likes": 1, "shares": 0, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7709188846306479381"
+      "network": "instagram",
+      "published_at": "2026-11-16T00:04:58Z",
+      "text": "Nobody reads the whole lease. I get it, it's 14 pages of fine print.",
+      "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/DfyBpo9CteN/"
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 17:25 ART Nov 18. Today: job hunt agent (14:00 ART) PUBLISHED on IG and TikTok; Black Friday prompts (21:00 ART) PENDING on both; no errors today. Window 6-72h (Nov 15 17:22 to Nov 18 11:22 ART): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post in window, IG reach 0 to 2 (best: '5 employees' reach 2, views 5). TikTok saves, reach and profile visits not provided by Metricool; zero ties ranked by views. Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-18T19:46:19Z. Watch: freel.yml failure 10:05Z already logged today (ElevenLabs 401); ci.yml success. HQ feed written to status/hub v98."
+  "notes": "Snapshot 21:25 ART Nov 18. Today: job hunt agent (14:00 ART) and Black Friday prompts (21:00 ART) both PUBLISHED on IG and TikTok; 0 pending, 0 errors. Window 6-72h (Nov 16 00:21Z to Nov 18 18:21Z): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post in window, IG reach 0 to 2. Zero ties ranked by reach; TikTok reach, saves and profile visits not provided by Metricool (TikTok views in window: 195, 190, 164, 42). Job hunt post (17:00Z) has no analytics row yet. Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-18T22:40:56Z. Watch: freel.yml failure 10:03Z already logged today (ElevenLabs 401); ci.yml success. HQ feed written to status/hub v99."
 }
