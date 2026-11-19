@@ -1,67 +1,32 @@
 {
-  "at": "2026-11-19T16:25:00Z",
+  "at": "2026-11-19T20:25:00Z",
   "posts_today": {
-    "instagram": {
-      "published": 0,
-      "pending": 1,
-      "error": 0
-    },
-    "tiktok": {
-      "published": 0,
-      "pending": 1,
-      "error": 0
-    }
+    "instagram": {"published": 0, "pending": 1, "error": 0},
+    "tiktok": {"published": 0, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
       "network": "tiktok",
       "published_at": "2026-11-17T00:04:56Z",
       "text": "What if you had 5 employees and paid none of them?",
-      "metrics": {
-        "views": 195,
-        "likes": 5,
-        "shares": 1,
-        "comments": 0,
-        "saves": null,
-        "reach": null,
-        "profile_visits": null
-      },
+      "metrics": {"views": 195, "likes": 5, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708924657411427591"
-    },
-    {
-      "network": "tiktok",
-      "published_at": "2026-11-18T00:04:26Z",
-      "text": "Pick the chore you avoid the most.",
-      "metrics": {
-        "views": 191,
-        "likes": 2,
-        "shares": 0,
-        "comments": 0,
-        "saves": null,
-        "reach": null,
-        "profile_visits": null
-      },
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7709295451823967489"
     },
     {
       "network": "instagram",
       "published_at": "2026-11-18T17:08:47Z",
       "text": "Job hunting is a second job. Give it to Claude.",
-      "metrics": {
-        "reach": 7,
-        "views": 13,
-        "saves": 0,
-        "shares": 0,
-        "comments": 0,
-        "follows": 0,
-        "profile_visits": null
-      },
+      "metrics": {"reach": 7, "views": 13, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
       "url": "https://www.instagram.com/p/Df5AW_SiEXT/"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-17T00:05:24Z",
+      "text": "What if you had 5 employees and paid none of them?",
+      "metrics": {"reach": 3, "views": 7, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/Df0mfpeCsUC/"
     }
   ],
-  "kit": {
-    "subscribers": null,
-    "new_today": null
-  },
-  "notes": "Snapshot 13:25 ART Nov 19. Today: Review Desk reel (14:00 ART) on IG and TikTok both PENDING and still draft=true in Metricool (not yet approved); 0 published, 0 errors. Window 6-72h (Nov 16 16:21Z to Nov 19 10:21Z): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 7 (job hunt 7, 5 employees 3, interview 1, others 0). TikTok reach, saves and profile visits not provided by Metricool; TikTok views in window: 195, 191, 190, 182, 102, 13 (Black Friday). IG reels connector returned no rows; IG data from feed posts connector. Ties after saves+shares ranked by views (TikTok) and reach (IG). Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-19T14:06:47Z. Watch: freel.yml failed 10:07Z (already logged today); ci.yml success. HQ feed written to status/hub v101."
+  "kit": {"subscribers": null, "new_today": null},
+  "notes": "Snapshot 17:25 ART Nov 19. Today: Review Desk reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved, time passed); 0 published, 0 errors. Window 6-72h (Nov 16 20:21Z to Nov 19 14:21Z): 1 share total (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 7. TikTok views: 5 employees 195, chores 191, boring list 190, interview 182, job hunt 102, Black Friday 13. TikTok saves, reach and profile visits not provided by Metricool; IG profile visits not provided. Kit MISSING: MCP requires paid Kit plan. Revenue feed: 0 verified orders all time. freel.yml failed again today (already logged in next-actions)."
 }
