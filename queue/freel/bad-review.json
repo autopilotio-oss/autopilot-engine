@@ -1,55 +1,78 @@
 {
- "id": "bad-review",
- "ep": "026-bad-review",
- "kind": "product",
- "hook": [
-  "A 1 star review",
-  "and you want to fire back"
- ],
- "keyword": "AGENTS",
- "video": "https://autopilotoi.app/media/freel/bad-review.mp4",
- "poster": "https://autopilotoi.app/media/freel/bad-review-poster.jpg",
- "caption": {
-  "ig": "A 1 star review lands and you want to fire back. Type bad, paste the review, and the Review Desk drafts a calm, professional reply that won't make it worse, plus a private note of what to check first. You post it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews",
-  "other": "A 1 star review lands and you want to fire back. Type bad, paste the review, and the Review Desk drafts a calm, professional reply that won't make it worse, plus a private note of what to check first. You post it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews"
- },
- "rendered_at": "2026-11-09T10:19:21+00:00",
- "status": "scheduled",
- "gate": {
-  "score": 93,
-  "breakdown": {
-   "hook": 24,
-   "demo": 23,
-   "legibility": 13,
-   "honesty": 15,
-   "cta": 10,
-   "brand_sound": 8
+  "id": "bad-review",
+  "ep": "026-bad-review",
+  "kind": "product",
+  "hook": [
+    "A 1 star review",
+    "and you want to fire back"
+  ],
+  "keyword": "AGENTS",
+  "video": "https://autopilotoi.app/media/freel/bad-review.mp4",
+  "poster": "https://autopilotoi.app/media/freel/bad-review-poster.jpg",
+  "caption": {
+    "ig": "A 1 star review lands and you want to fire back. Type bad, paste the review, and the Review Desk drafts a calm, professional reply that won't make it worse, plus a private note of what to check first. You post it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews",
+    "other": "A 1 star review lands and you want to fire back. Type bad, paste the review, and the Review Desk drafts a calm, professional reply that won't make it worse, plus a private note of what to check first. You post it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #googlereviews"
   },
-  "notes": "Re-render Nov 9: 19.9s, -15.3 LUFS, 1080x1920. Hook on screen by 0.5s (1 star review, urge to fire back). Shows the private check list before replying, the 1 CALM REPLY stat (sample business) and end card. End card, voice and caption now $9.99 per store-prices.md; Toolkit $24. CTA AGENTS (confirmed). Still opens on a blurred olive frame at t=0; audio 1.3 LU under target.",
-  "result": "pass",
-  "by": "campaign operator",
-  "at": "2026-11-09T07:30-03:00"
- },
- "posts": [
-  {
-   "metricool_id": 421617142,
-   "uuid": "-5672024461323778331",
-   "networks": [
-    "instagram"
-   ],
-   "at": "2026-11-13T10:00-03:00"
-  }
- ],
- "approval": {
-  "by": "Seb",
-  "quote": "Yes, 10 days only (Recommended)",
-  "basis": "campaign standing approval"
- },
- "log": [
-  {
-   "at": "2026-11-09T07:30-03:00",
-   "by": "campaign operator",
-   "what": "re-render gated 93 pass, scheduled IG reel 10:00 Nov 13"
-  }
- ]
+  "rendered_at": "2026-11-09T10:19:21+00:00",
+  "status": "scheduled",
+  "gate": {
+    "score": 93,
+    "breakdown": {
+      "hook": 24,
+      "demo": 23,
+      "legibility": 13,
+      "honesty": 15,
+      "cta": 10,
+      "brand_sound": 8
+    },
+    "notes": "Re-render Nov 9: 19.9s, -15.3 LUFS, 1080x1920. Hook on screen by 0.5s (1 star review, urge to fire back). Shows the private check list before replying, the 1 CALM REPLY stat (sample business) and end card. End card, voice and caption now $9.99 per store-prices.md; Toolkit $24. CTA AGENTS (confirmed). Still opens on a blurred olive frame at t=0; audio 1.3 LU under target.",
+    "result": "pass",
+    "by": "campaign operator",
+    "at": "2026-11-09T07:30-03:00"
+  },
+  "posts": [
+    {
+      "metricool_id": 421617142,
+      "uuid": "-5672024461323778331",
+      "networks": [
+        "instagram"
+      ],
+      "at": "2026-11-13T10:00-03:00"
+    },
+    {
+      "metricool_id": 433727501,
+      "uuid": "-1109433555079052266",
+      "networks": [
+        "instagram"
+      ],
+      "type": "REEL",
+      "at": "2026-11-19T14:00-03:00"
+    },
+    {
+      "metricool_id": 433727616,
+      "uuid": "4406380971893736802",
+      "networks": [
+        "tiktok"
+      ],
+      "at": "2026-11-19T14:00-03:00"
+    }
+  ],
+  "approval": {
+    "by": "Seb",
+    "quote": "Reels + demos (Recommended)",
+    "at": "2026-11-19T01:35-03:00",
+    "basis": "Seb chose to move IG back to 1 Reel a day and TikTok to video demos"
+  },
+  "log": [
+    {
+      "at": "2026-11-09T07:30-03:00",
+      "by": "campaign operator",
+      "what": "re-render gated 93 pass, scheduled IG reel 10:00 Nov 13"
+    },
+    {
+      "at": "2026-11-19T01:36-03:00",
+      "by": "interactive session",
+      "what": "scheduled IG Reel + TikTok video 2026-11-19 14:00 ART (gate pass on file). Earlier Nov 12/13 IG slots never published."
+    }
+  ]
 }

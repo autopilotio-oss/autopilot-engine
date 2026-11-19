@@ -1,55 +1,78 @@
 {
- "id": "same-questions",
- "ep": "025-same-questions",
- "kind": "product",
- "hook": [
-  "Same question",
-  "for the 10th time today?"
- ],
- "keyword": "AGENTS",
- "video": "https://autopilotoi.app/media/freel/same-questions.mp4",
- "poster": "https://autopilotoi.app/media/freel/same-questions-poster.jpg",
- "caption": {
-  "ig": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
-  "other": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
- },
- "rendered_at": "2026-11-08T09:59:56+00:00",
- "status": "scheduled",
- "gate": {
-  "score": 90,
-  "breakdown": {
-   "hook": 23,
-   "demo": 22,
-   "legibility": 13,
-   "honesty": 14,
-   "cta": 10,
-   "brand_sound": 8
+  "id": "same-questions",
+  "ep": "025-same-questions",
+  "kind": "product",
+  "hook": [
+    "Same question",
+    "for the 10th time today?"
+  ],
+  "keyword": "AGENTS",
+  "video": "https://autopilotoi.app/media/freel/same-questions.mp4",
+  "poster": "https://autopilotoi.app/media/freel/same-questions-poster.jpg",
+  "caption": {
+    "ig": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Comment AGENTS and I'll DM you the free Front Desk Starter.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner",
+    "other": "Answering the same question for the 10th time today? Type faq and the questions you always get. The Front Desk Kit writes one answer for each from your real hours and rules, in your voice, and keeps them in your FAQ bank. Next time, paste the message and the answer is ready. You send it yourself. Sample cleaning business shown. Free Front Desk Starter and the $39 Front Desk Kit at the link in bio.\n\n#smallbusiness #ai #claude #customerservice #smallbusinessowner"
   },
-  "notes": "19.8s, -15.0 LUFS, 1080x1920. Hook names a real owner problem (same question 10th time). Shows faq ask, FAQ bank build steps, a labeled sample answer and 3 ANSWERS stat. FAQ bank is on the Front Desk Kit listing; the literal faq command is not named there (minus 1 honesty). Answer bubble appears late in the reply beat. CTA AGENTS confirmed, Front Desk Kit $39.",
-  "result": "pass",
-  "by": "campaign operator",
-  "at": "2026-11-08T07:40-03:00"
- },
- "posts": [
-  {
-   "metricool_id": 421610369,
-   "uuid": "2419934413127762024",
-   "networks": [
-    "instagram"
-   ],
-   "at": "2026-11-12T10:00-03:00"
-  }
- ],
- "approval": {
-  "by": "Seb",
-  "quote": "Yes, 10 days only (Recommended)",
-  "basis": "campaign standing approval"
- },
- "log": [
-  {
-   "at": "2026-11-09T07:35-03:00",
-   "by": "campaign operator",
-   "what": "scheduled IG reel 10:00 Nov 12 (gate 90 pass, check_queue 0 problems, -15.0 LUFS, 19.8s). Threads/X skipped: Threads disconnected (MANAGER Q8), X text lane owned by Daily Manager."
-  }
- ]
+  "rendered_at": "2026-11-08T09:59:56+00:00",
+  "status": "scheduled",
+  "gate": {
+    "score": 90,
+    "breakdown": {
+      "hook": 23,
+      "demo": 22,
+      "legibility": 13,
+      "honesty": 14,
+      "cta": 10,
+      "brand_sound": 8
+    },
+    "notes": "19.8s, -15.0 LUFS, 1080x1920. Hook names a real owner problem (same question 10th time). Shows faq ask, FAQ bank build steps, a labeled sample answer and 3 ANSWERS stat. FAQ bank is on the Front Desk Kit listing; the literal faq command is not named there (minus 1 honesty). Answer bubble appears late in the reply beat. CTA AGENTS confirmed, Front Desk Kit $39.",
+    "result": "pass",
+    "by": "campaign operator",
+    "at": "2026-11-08T07:40-03:00"
+  },
+  "posts": [
+    {
+      "metricool_id": 421610369,
+      "uuid": "2419934413127762024",
+      "networks": [
+        "instagram"
+      ],
+      "at": "2026-11-12T10:00-03:00"
+    },
+    {
+      "metricool_id": 433727890,
+      "uuid": "5222036746009331501",
+      "networks": [
+        "instagram"
+      ],
+      "type": "REEL",
+      "at": "2026-11-21T14:00-03:00"
+    },
+    {
+      "metricool_id": 433727907,
+      "uuid": "7094003120024735558",
+      "networks": [
+        "tiktok"
+      ],
+      "at": "2026-11-21T14:00-03:00"
+    }
+  ],
+  "approval": {
+    "by": "Seb",
+    "quote": "Reels + demos (Recommended)",
+    "at": "2026-11-19T01:35-03:00",
+    "basis": "Seb chose to move IG back to 1 Reel a day and TikTok to video demos"
+  },
+  "log": [
+    {
+      "at": "2026-11-09T07:35-03:00",
+      "by": "campaign operator",
+      "what": "scheduled IG reel 10:00 Nov 12 (gate 90 pass, check_queue 0 problems, -15.0 LUFS, 19.8s). Threads/X skipped: Threads disconnected (MANAGER Q8), X text lane owned by Daily Manager."
+    },
+    {
+      "at": "2026-11-19T01:36-03:00",
+      "by": "interactive session",
+      "what": "scheduled IG Reel + TikTok video 2026-11-21 14:00 ART (gate pass on file). Earlier Nov 12/13 IG slots never published."
+    }
+  ]
 }

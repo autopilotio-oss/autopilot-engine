@@ -1,41 +1,70 @@
 {
- "id": "invoice-night",
- "ep": "027-invoice-night",
- "kind": "product",
- "hook": [
-  "Still typing invoices",
-  "at 10pm?"
- ],
- "keyword": "AGENTS",
- "video": "https://autopilotoi.app/media/freel/invoice-night.mp4",
- "poster": "https://autopilotoi.app/media/freel/invoice-night-poster.jpg",
- "caption": {
-  "ig": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
-  "other": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
- },
- "rendered_at": "2026-11-09T10:19:25+00:00",
- "status": "passed",
- "gate": {
-  "score": 91,
-  "breakdown": {
-   "hook": 24,
-   "demo": 22,
-   "legibility": 13,
-   "honesty": 15,
-   "cta": 10,
-   "brand_sound": 7
+  "id": "invoice-night",
+  "ep": "027-invoice-night",
+  "kind": "product",
+  "hook": [
+    "Still typing invoices",
+    "at 10pm?"
+  ],
+  "keyword": "AGENTS",
+  "video": "https://autopilotoi.app/media/freel/invoice-night.mp4",
+  "poster": "https://autopilotoi.app/media/freel/invoice-night-poster.jpg",
+  "caption": {
+    "ig": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24 at the link in bio. Comment AGENTS for the free starter.\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices",
+    "other": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
   },
-  "notes": "16.4s, -15.2 LUFS, 1080x1920. Hook 'Still typing invoices at 10pm?' on screen by 0.5s, real owner pain. Ask (invoice: Sara, full detail + pet hair, paid deposit $50) is on screen only about 1s, then the build steps and invoice 1043 labeled sample data ($360 + $75 - $50 = $385, math checks). Claims match the site listing (job notes to a clean invoice, who owes you list, owner sends). End card $9.99, Toolkit $24, CTA AGENTS (confirmed). Blurred olive frame at t=0; audio 1.2 LU under target. Held in the bank: same tool as late-payer (Nov 9), so it goes after a different tool.",
-  "result": "pass",
-  "by": "campaign operator",
-  "at": "2026-11-09T07:30-03:00"
- },
- "posts": [],
- "log": [
-  {
-   "at": "2026-11-11T07:45-03:00",
-   "by": "campaign operator",
-   "what": "tried to schedule IG reel 10:00 Nov 15 (first free 10:00 slot, autopost yes on file Nov 4); the Metricool create call was blocked by this run's permission check, so it stays passed and unscheduled"
+  "rendered_at": "2026-11-09T10:19:25+00:00",
+  "status": "scheduled",
+  "gate": {
+    "score": 91,
+    "breakdown": {
+      "hook": 24,
+      "demo": 22,
+      "legibility": 13,
+      "honesty": 15,
+      "cta": 10,
+      "brand_sound": 7
+    },
+    "notes": "16.4s, -15.2 LUFS, 1080x1920. Hook 'Still typing invoices at 10pm?' on screen by 0.5s, real owner pain. Ask (invoice: Sara, full detail + pet hair, paid deposit $50) is on screen only about 1s, then the build steps and invoice 1043 labeled sample data ($360 + $75 - $50 = $385, math checks). Claims match the site listing (job notes to a clean invoice, who owes you list, owner sends). End card $9.99, Toolkit $24, CTA AGENTS (confirmed). Blurred olive frame at t=0; audio 1.2 LU under target. Held in the bank: same tool as late-payer (Nov 9), so it goes after a different tool.",
+    "result": "pass",
+    "by": "campaign operator",
+    "at": "2026-11-09T07:30-03:00"
+  },
+  "posts": [
+    {
+      "metricool_id": 433727844,
+      "uuid": "-8586202197875273893",
+      "networks": [
+        "instagram"
+      ],
+      "type": "REEL",
+      "at": "2026-11-20T14:00-03:00"
+    },
+    {
+      "metricool_id": 433727859,
+      "uuid": "-4410828057216596265",
+      "networks": [
+        "tiktok"
+      ],
+      "at": "2026-11-20T14:00-03:00"
+    }
+  ],
+  "log": [
+    {
+      "at": "2026-11-11T07:45-03:00",
+      "by": "campaign operator",
+      "what": "tried to schedule IG reel 10:00 Nov 15 (first free 10:00 slot, autopost yes on file Nov 4); the Metricool create call was blocked by this run's permission check, so it stays passed and unscheduled"
+    },
+    {
+      "at": "2026-11-19T01:36-03:00",
+      "by": "interactive session",
+      "what": "scheduled IG Reel + TikTok video 2026-11-20 14:00 ART (gate pass on file). Earlier Nov 12/13 IG slots never published."
+    }
+  ],
+  "approval": {
+    "by": "Seb",
+    "quote": "Reels + demos (Recommended)",
+    "at": "2026-11-19T01:35-03:00",
+    "basis": "Seb chose to move IG back to 1 Reel a day and TikTok to video demos"
   }
- ]
 }
