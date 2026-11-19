@@ -14,7 +14,7 @@
     "other": "Still typing invoices at 10pm after a full day of jobs? Type invoice and your job notes, and the Invoice Chaser turns them into a clean invoice with your prices and payment details. It also keeps the list of who owes you. You check it and send it yourself. Sample detailing business shown. $9.99, or all 4 owner tools for $24: https://autopilotoi.app/#tools\n\n#smallbusiness #ai #claude #smallbusinessowner #invoices"
   },
   "rendered_at": "2026-11-09T10:19:25+00:00",
-  "status": "scheduled",
+  "status": "parked",
   "gate": {
     "score": 91,
     "breakdown": {
@@ -59,6 +59,11 @@
       "at": "2026-11-19T01:36-03:00",
       "by": "interactive session",
       "what": "scheduled IG Reel + TikTok video 2026-11-20 14:00 ART (gate pass on file). Earlier Nov 12/13 IG slots never published."
+    },
+    {
+      "at": "2026-11-19T02:27-03:00",
+      "by": "interactive session",
+      "what": "Seb: \"No don't use those videos they don't fit our new plan\". IG + TikTok posts set to draft in Metricool; do not reschedule."
     }
   ],
   "approval": {
