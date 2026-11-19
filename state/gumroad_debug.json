@@ -19,21 +19,21 @@
  ],
  [
   "covers",
-  "workspace-founding",
-  [
-   [
-    0.0,
-    "1f651d6c4b80f2209d93648610af650e"
-   ]
-  ]
- ],
- [
-  "covers",
   "autopilot",
   [
    [
     0.0,
     "de84bb1db9273418e0a589ac1ab31f49"
+   ]
+  ]
+ ],
+ [
+  "covers",
+  "workspace-founding",
+  [
+   [
+    0.0,
+    "1f651d6c4b80f2209d93648610af650e"
    ]
   ]
  ]
