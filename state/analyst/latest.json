@@ -1,32 +1,67 @@
 {
-  "at": "2026-11-19T00:25:00Z",
+  "at": "2026-11-19T12:25:00Z",
   "posts_today": {
-    "instagram": {"published": 2, "pending": 0, "error": 0},
-    "tiktok": {"published": 2, "pending": 0, "error": 0}
+    "instagram": {
+      "published": 0,
+      "pending": 1,
+      "error": 0
+    },
+    "tiktok": {
+      "published": 0,
+      "pending": 1,
+      "error": 0
+    }
   },
   "top_posts": [
     {
       "network": "tiktok",
       "published_at": "2026-11-17T00:04:56Z",
       "text": "What if you had 5 employees and paid none of them?",
-      "metrics": {"views": 195, "likes": 5, "shares": 1, "comments": 0, "saves": null, "reach": null, "profile_visits": null},
+      "metrics": {
+        "views": 195,
+        "likes": 5,
+        "shares": 1,
+        "comments": 0,
+        "saves": null,
+        "reach": null,
+        "profile_visits": null
+      },
       "url": "https://www.tiktok.com/@autopilot.oi/video/7708924657411427591"
     },
     {
-      "network": "instagram",
-      "published_at": "2026-11-17T00:05:24Z",
-      "text": "What if you had 5 employees and paid none of them?",
-      "metrics": {"reach": 2, "views": 5, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df0mfpeCsUC/"
+      "network": "tiktok",
+      "published_at": "2026-11-18T00:04:26Z",
+      "text": "Pick the chore you avoid the most.",
+      "metrics": {
+        "views": 191,
+        "likes": 2,
+        "shares": 0,
+        "comments": 0,
+        "saves": null,
+        "reach": null,
+        "profile_visits": null
+      },
+      "url": null
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-16T00:04:58Z",
-      "text": "Nobody reads the whole lease. I get it, it's 14 pages of fine print.",
-      "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/DfyBpo9CteN/"
+      "published_at": "2026-11-18T17:08:47Z",
+      "text": "Job hunting is a second job. Give it to Claude.",
+      "metrics": {
+        "reach": 7,
+        "views": 13,
+        "saves": 0,
+        "shares": 0,
+        "comments": 0,
+        "follows": 0,
+        "profile_visits": null
+      },
+      "url": null
     }
   ],
-  "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 21:25 ART Nov 18. Today: job hunt agent (14:00 ART) and Black Friday prompts (21:00 ART) both PUBLISHED on IG and TikTok; 0 pending, 0 errors. Window 6-72h (Nov 16 00:21Z to Nov 18 18:21Z): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post in window, IG reach 0 to 2. Zero ties ranked by reach; TikTok reach, saves and profile visits not provided by Metricool (TikTok views in window: 195, 190, 164, 42). Job hunt post (17:00Z) has no analytics row yet. Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-18T22:40:56Z. Watch: freel.yml failure 10:03Z already logged today (ElevenLabs 401); ci.yml success. HQ feed written to status/hub v99."
+  "kit": {
+    "subscribers": null,
+    "new_today": null
+  },
+  "notes": "Snapshot 09:25 ART Nov 19. Today: Review Desk reel (14:00 ART) on IG and TikTok both PENDING and still draft=true in Metricool (not yet approved); 0 published, 0 errors. Window 6-72h (Nov 16 12:21Z to Nov 19 06:21Z): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 7 (job hunt 7, 5 employees 3, interview 1, others 0). TikTok reach, saves and profile visits not provided by Metricool; TikTok views in window: 195, 191, 190, 182, 102, 13 (Black Friday at 12h). Ties after saves+shares ranked by views (TikTok) and reach (IG). URLs MISSING for posts 2 and 3 (not in analytics rows). Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-19T10:45:52Z. Watch: freel.yml failed 10:07Z (logged); ci.yml success. HQ feed written to status/hub v100."
 }
