@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-19T12:25:00Z",
+  "at": "2026-11-19T16:25:00Z",
   "posts_today": {
     "instagram": {
       "published": 0,
@@ -41,7 +41,7 @@
         "reach": null,
         "profile_visits": null
       },
-      "url": null
+      "url": "https://www.tiktok.com/@autopilot.oi/video/7709295451823967489"
     },
     {
       "network": "instagram",
@@ -56,12 +56,12 @@
         "follows": 0,
         "profile_visits": null
       },
-      "url": null
+      "url": "https://www.instagram.com/p/Df5AW_SiEXT/"
     }
   ],
   "kit": {
     "subscribers": null,
     "new_today": null
   },
-  "notes": "Snapshot 09:25 ART Nov 19. Today: Review Desk reel (14:00 ART) on IG and TikTok both PENDING and still draft=true in Metricool (not yet approved); 0 published, 0 errors. Window 6-72h (Nov 16 12:21Z to Nov 19 06:21Z): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 7 (job hunt 7, 5 employees 3, interview 1, others 0). TikTok reach, saves and profile visits not provided by Metricool; TikTok views in window: 195, 191, 190, 182, 102, 13 (Black Friday at 12h). Ties after saves+shares ranked by views (TikTok) and reach (IG). URLs MISSING for posts 2 and 3 (not in analytics rows). Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-19T10:45:52Z. Watch: freel.yml failed 10:07Z (logged); ci.yml success. HQ feed written to status/hub v100."
+  "notes": "Snapshot 13:25 ART Nov 19. Today: Review Desk reel (14:00 ART) on IG and TikTok both PENDING and still draft=true in Metricool (not yet approved); 0 published, 0 errors. Window 6-72h (Nov 16 16:21Z to Nov 19 10:21Z): only 1 share across all posts (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 7 (job hunt 7, 5 employees 3, interview 1, others 0). TikTok reach, saves and profile visits not provided by Metricool; TikTok views in window: 195, 191, 190, 182, 102, 13 (Black Friday). IG reels connector returned no rows; IG data from feed posts connector. Ties after saves+shares ranked by views (TikTok) and reach (IG). Timestamps UTC. Kit MISSING: Kit MCP says it requires a paid Kit plan. Revenue from HQ feed: 0 verified orders all time, ledger synced 2026-11-19T14:06:47Z. Watch: freel.yml failed 10:07Z (already logged today); ci.yml success. HQ feed written to status/hub v101."
 }
