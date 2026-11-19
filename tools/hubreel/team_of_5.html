@@ -1,0 +1,170 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:A;src:url(Anton-Regular.ttf)}
+@font-face{font-family:I;src:url(Inter-Bold.otf);font-weight:700}
+@font-face{font-family:I;src:url(Inter-Medium.otf);font-weight:500}
+@font-face{font-family:M;src:url(JetBrainsMono.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;background:#050505;overflow:hidden}
+#st{position:relative;width:1080px;height:1920px;overflow:hidden;background:#050505;color:#eeede8;font-family:I}
+#cam{position:absolute;inset:0;transform-origin:50% 45%}
+.sc{position:absolute;inset:0;visibility:hidden}
+.A{font-family:A;text-transform:uppercase;line-height:.9}
+.lime{color:#D4FF3A}
+#grid{position:absolute;inset:-200px;background-image:linear-gradient(rgba(212,255,58,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(212,255,58,.07) 2px,transparent 2px);background-size:90px 90px}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.09;mix-blend-mode:overlay;z-index:60}
+#flash{position:absolute;inset:0;background:#D4FF3A;opacity:0;z-index:55;mix-blend-mode:screen}
+#tag{position:absolute;top:70px;left:70px;z-index:50;display:flex;gap:16px;align-items:center}
+.logo{width:84px;height:84px;background:#D4FF3A;border-radius:20px;color:#000;font-weight:700;font-size:40px;display:flex;align-items:center;justify-content:center;letter-spacing:-2px}
+.handle{font-family:M;font-size:28px;opacity:.85}
+/* S1 hook */
+#heroWrap{position:absolute;left:0;top:0;width:1080px;height:1100px;overflow:hidden}
+#hero{position:absolute;left:-150px;top:150px;width:1380px;height:881px;object-fit:cover;transform-origin:50% 60%}
+#heroShade{position:absolute;inset:0;background:linear-gradient(180deg,#050505 0%,rgba(5,5,5,0) 14%,rgba(5,5,5,0) 70%,#050505 100%)}
+#h1{position:absolute;left:70px;right:110px;top:1000px}
+#h1 .l1{font-size:120px}
+#h1 .l2{font-size:205px;color:#D4FF3A;margin-top:6px}
+#h1 .l3{font-size:120px;margin-top:6px}
+#h1 .hl{display:inline-block;background:#D4FF3A;color:#000;padding:0 14px}
+/* S2 team */
+#s2 .ttl{position:absolute;left:70px;top:230px;font-size:150px}
+.role{position:absolute;left:70px;width:860px;height:200px;border:3px solid rgba(238,237,232,.14);background:#0d0d0d;border-radius:26px;display:flex;align-items:center;padding:0 40px;gap:34px}
+.role .n{font-family:A;font-size:110px;color:#D4FF3A;width:70px}
+.role .nm{font-family:A;font-size:84px;line-height:1}
+.role .d{font-size:36px;font-weight:500;opacity:.75;margin-top:8px}
+#bigN{position:absolute;right:-40px;top:120px;font-family:A;font-size:900px;line-height:1;color:rgba(212,255,58,.06)}
+/* S3 chat */
+#s3 .ttl{position:absolute;left:70px;top:230px;font-size:130px}
+#phone{position:absolute;left:70px;width:880px;top:560px;height:980px;background:#0e0e0e;border:3px solid rgba(238,237,232,.16);border-radius:44px;overflow:hidden}
+#phone .top{height:110px;border-bottom:2px solid rgba(238,237,232,.1);display:flex;align-items:center;padding:0 40px;gap:18px;font-size:34px;font-weight:700}
+.dot{width:20px;height:20px;border-radius:50%;background:#D4FF3A}
+.sample{margin-left:auto;font-family:M;font-size:24px;color:#D4FF3A;border:2px solid #D4FF3A;padding:4px 12px;border-radius:8px}
+.bub{position:absolute;max-width:720px;font-size:44px;line-height:1.28;padding:28px 34px;border-radius:30px;transform-origin:0 0}
+.me{right:32px;background:#D4FF3A;color:#000;font-weight:700;border-bottom-right-radius:8px;transform-origin:100% 0}
+.ai{left:32px;background:#1c1c1c;font-weight:500;border-bottom-left-radius:8px}
+.ai b{color:#D4FF3A}
+.cur{display:inline-block;width:4px;height:44px;background:#000;vertical-align:-8px;margin-left:3px}
+/* S4 setup */
+#ring{position:absolute;left:240px;top:250px}
+#s4 .big{position:absolute;left:320px;top:390px;width:440px;text-align:center;font-size:190px}
+#s4 .unit{position:absolute;left:320px;top:580px;width:440px;text-align:center;font-family:M;font-size:40px;color:#D4FF3A}
+#s4 .side{position:absolute;left:70px;width:940px;text-align:center;top:900px;font-size:120px}
+.step{position:absolute;left:70px;width:860px;font-size:50px;font-weight:500;display:flex;gap:30px;align-items:center}
+.ck{width:62px;height:62px;border-radius:16px;border:3px solid #D4FF3A;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:38px;color:#000;flex:none}
+/* S5 CTA */
+#s5{background:#D4FF3A;color:#000}
+#s5 .c1{position:absolute;left:70px;top:330px;font-size:130px}
+#s5 .c2{position:absolute;left:60px;top:470px;font-size:300px;transform-origin:0 50%}
+#cbox{position:absolute;left:70px;width:860px;top:830px;height:150px;background:#000;border-radius:80px;display:flex;align-items:center;padding:0 26px 0 50px;gap:24px;font-size:54px;font-weight:700;color:#eeede8}
+#cbox .ph{opacity:.4;font-weight:500}
+#send{margin-left:auto;width:100px;height:100px;border-radius:50%;background:#D4FF3A;color:#000;display:flex;align-items:center;justify-content:center;font-size:54px}
+#s5 .c3{position:absolute;left:70px;width:860px;top:1040px;font-size:58px;font-weight:700;line-height:1.22}
+</style></head>
+<body><div id="st">
+<div id="cam">
+<div id="grid"></div>
+<div class="sc" id="s1">
+  <div id="heroWrap"><img id="hero" src="hero.jpg"><div id="heroShade"></div></div>
+  <div id="h1" class="A"><div class="l1" id="hA">Hire</div><div class="l2" id="hB">5 AI employees</div><div class="l3" id="hC">in <span class="hl" id="hD">10 minutes.</span></div></div>
+</div>
+<div class="sc" id="s2"><div class="ttl A">Your new<br><span class="lime">team</span></div></div>
+<div class="sc" id="s3"><div class="ttl A">Just say<br><span class="lime">their name.</span></div>
+  <div id="phone"><div class="top"><div class="dot"></div>Team of 5 <span style="opacity:.45;font-weight:500">· Claude project</span><div class="sample">SAMPLE</div></div>
+  <div class="bub me" id="q1"></div><div class="bub ai" id="a1"></div><div class="bub me" id="q2"></div><div class="bub ai" id="a2"></div></div></div>
+<div class="sc" id="s4">
+  <svg id="ring" width="600" height="600" viewBox="0 0 600 600"><circle cx="300" cy="300" r="260" fill="none" stroke="rgba(238,237,232,.12)" stroke-width="26"/><circle id="arc" cx="300" cy="300" r="260" fill="none" stroke="#D4FF3A" stroke-width="26" stroke-linecap="round" transform="rotate(-90 300 300)" stroke-dasharray="1633.6" stroke-dashoffset="1633.6"/></svg>
+  <div class="big A" id="tm">0:00</div><div class="unit">SETUP TIME</div>
+  <div class="side A">Set up <span class="lime">once.</span></div>
+</div>
+<div class="sc" id="s5"><div class="c1 A" id="c1">Comment</div><div class="c2 A" id="kw">AGENTS</div>
+  <div id="cbox"><span id="typed"></span><div id="send">↑</div></div>
+  <div class="c3" id="c3">and I'll send you the whole team to copy and paste.</div></div>
+</div>
+<div id="tag"><div class="logo">ap.</div><div class="handle">@autopilot.oi</div></div>
+<div id="flash"></div>
+<canvas id="grain" width="540" height="960"></canvas>
+</div>
+<script>
+const CTA=new URLSearchParams(location.search).get('cta')||'ig';
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), r=(t,a,b)=>cl((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3), eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, eb=x=>{const c=1.9;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const BEAT=60/128, DUR=32*BEAT;              // 15.0 s, 8 bars: audio and video loop on the bar
+const C=[0,4*BEAT,12*BEAT,22*BEAT,26*BEAT,31*BEAT]; // scene starts; last = loop-back
+const SC=['s1','s2','s3','s4','s5'];
+const ROLES=[["INBOX","writes your replies"],["MONEY","finds what to cut"],["JOBS","finds work for you"],["MEALS","plans dinners + groceries"],["PLANNER","turns lists into a day"]];
+ROLES.forEach((x,i)=>{const d=document.createElement('div');d.className='role';d.id='r'+i;d.style.top=(560+i*222)+'px';d.innerHTML=`<div class="n">${i+1}</div><div><div class="nm">${x[0]}</div><div class="d">${x[1]}</div></div>`;$('s2').appendChild(d)});
+const STEPS=["New Claude project","Paste the instructions","Type “go”"];
+STEPS.forEach((x,i)=>{const d=document.createElement('div');d.className='step';d.id='p'+i;d.style.top=(1080+i*125)+'px';d.innerHTML=`<div class="ck" id="k${i}"></div><div>${x}</div>`;$('s4').appendChild(d)});
+const Q1="MONEY: here's my phone bill. What can I cut?", A1=["<b>3 things to cut</b>","1. A line you don't use","2. The insurance add-on","3. Autopay discount is off"];
+const Q2="MEALS: dinners for 4, $120", A2="<b>Done.</b> 7 dinners + grocery list.";
+if(CTA==='tt'){$('c1').textContent='It\'s all at the';$('kw').textContent='link in bio';$('kw').style.fontSize='210px';$('cbox').style.display='none';$('c3').style.top='780px';$('c3').textContent='The whole team, ready to copy and paste.';}
+const g=$('grain').getContext('2d'), gi=g.createImageData(540,960);
+function grain(f){let s=(f%12)*7919+1;for(let i=0;i<gi.data.length;i+=4){s=(s*16807)%2147483647;const v=s%256;gi.data[i]=gi.data[i+1]=gi.data[i+2]=v;gi.data[i+3]=255}g.putImageData(gi,0,0)}
+// whip transition: outgoing slides left with blur in the 0.13 s before a cut, incoming arrives from the right in 0.15 s after
+function place(i,t){const el=$(SC[i]), a=C[i], b=C[i+1]; const W=.13, Wi=.15;
+  let on=false,x=0,bl=0;
+  if(t>=a&&t<b){on=true; if(i>0&&t<a+Wi){const k=eo(r(t,a,a+Wi));x=(1-k)*1080;bl=(1-k)*28}}
+  if(t>=b-W&&t<b&&i<4){const k=eio(r(t,b-W,b));x=-k*1080;bl=k*28}
+  el.style.visibility=on?'visible':'hidden'; el.style.transform=`translateX(${x}px)`; el.style.filter=bl>0.5?`blur(${bl}px)`:'none'; return on;}
+// the first frame and the last frame are the same picture, so the replay is seamless
+function hook(t){
+  const zoom=1.06+0.05*eo(r(t,0,C[1]));                 // slow push in
+  const hit=Math.exp(-t*7);                              // shake on the opening hit
+  $('hero').style.transform=`scale(${zoom}) translate(${Math.sin(t*70)*16*hit}px,${Math.cos(t*55)*8*hit}px)`;
+  // text is fully readable on frame 0; beats only add emphasis
+  const p1=Math.exp(-((t-BEAT)%99)*8)*(t>=BEAT?1:0), p2=Math.exp(-((t-2*BEAT))*8)*(t>=2*BEAT?1:0);
+  $('hB').style.transform=`scale(${1+0.06*p1})`; $('hB').style.transformOrigin='0 50%';
+  $('hD').style.transform=`scale(${1+0.08*p2}) rotate(${-2*p2}deg)`;
+}
+window.render=function(t){
+  t=((t%DUR)+DUR)%DUR;
+  grain(Math.floor(t*30));
+  $('grid').style.transform=`translate(${-(t*40)%90}px,${-(t*24)%90}px)`;
+  // camera: slow drift per scene + a small punch on every beat after the hook
+  const si=C.findIndex((c,i)=>t>=c&&t<(C[i+1]??DUR)); const loc=t-C[Math.min(si,4)];
+  const beatPunch=t>C[1]&&t<C[5]?0.012*Math.exp(-((t%BEAT))*12):0;
+  $('cam').style.transform=`scale(${1+0.025*cl(loc/4)+beatPunch}) rotate(${(si%2?-1:1)*0.25*cl(loc/4)}deg)`;
+  // flash on cuts
+  let fl=0; for(let i=1;i<5;i++) fl=Math.max(fl,Math.exp(-Math.abs(t-C[i])*30)*.35); $('flash').style.opacity=fl;
+  // S1
+  if(place(0,t)) hook(t);
+  // S2
+  if(place(1,t)){const t0=C[1]; const ttl=$('s2').querySelector('.ttl'); ttl.style.transform=`translateY(${(1-eo(r(t,t0,t0+.25)))*-120}px)`;
+    let cur=0; ROLES.forEach((x,i)=>{const st=t0+.35+i*BEAT*1.25; const k=eb(r(t,st,st+.22)); const e=$('r'+i);
+      e.style.opacity=r(t,st,st+.05); e.style.transform=`translateX(${(1-k)*1000}px) rotate(${(1-k)*4}deg)`;
+      const hot=t>=st&&t<st+BEAT*1.25; if(t>=st)cur=i; e.style.borderColor=hot?'#D4FF3A':'rgba(238,237,232,.14)'; e.style.background=hot?'#161c04':'#0d0d0d';});
+  }
+  // S3
+  if(place(2,t)){const t0=C[2]; const ttl=$('s3').querySelector('.ttl'); const k=eo(r(t,t0,t0+.25)); ttl.style.transform=`translateY(${(1-k)*-160}px)`;
+    $('phone').style.transform=`translateY(${(1-eb(r(t,t0+.05,t0+.35)))*900}px)`;
+    const type=(el,s,a,b,top,cur)=>{const n=Math.floor(s.length*r(t,a,b)); el.style.top=top+'px'; el.style.opacity=t>=a?1:0; el.innerHTML=s.slice(0,n)+(t<b+.1&&t>=a?'<span class="cur"></span>':''); el.style.transform=`scale(${.85+.15*eb(r(t,a,a+.15))})`;};
+    type($('q1'),Q1,t0+.35,t0+1.25,150);
+    const a1=$('a1'); a1.style.top='360px'; a1.style.opacity=t>=t0+1.4?1:0; a1.style.transform=`scale(${.7+.3*eb(r(t,t0+1.4,t0+1.6))})`;
+    a1.innerHTML=A1.slice(0,Math.max(1,Math.ceil(r(t,t0+1.45,t0+2.25)*A1.length))).join('<br>');
+    type($('q2'),Q2,t0+2.55,t0+3.15,670);
+    const a2=$('a2'); a2.style.top='815px'; a2.style.opacity=t>=t0+3.3?1:0; a2.style.transform=`scale(${.7+.3*eb(r(t,t0+3.3,t0+3.5))})`; a2.innerHTML=A2;}
+  // S4
+  if(place(3,t)){const t0=C[3]; const k=eo(r(t,t0+.05,t0+1.2));
+    $('arc').setAttribute('stroke-dashoffset',1633.6*(1-k)); const sec=Math.round(k*600); $('tm').textContent=Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');
+    $('tm').style.transform=`scale(${1+0.06*Math.exp(-(t-(t0+1.2))*10)*(t>t0+1.2?1:0)})`;
+    const sd=$('s4').querySelector('.side'); sd.style.opacity=r(t,t0+.1,t0+.2); sd.style.transform=`translateY(${(1-eo(r(t,t0+.1,t0+.35)))*120}px)`;
+    STEPS.forEach((x,i)=>{const st=t0+.25+i*.3; const e=$('p'+i); e.style.opacity=r(t,st,st+.06); e.style.transform=`translateX(${(1-eo(r(t,st,st+.18)))*120}px)`;
+      const c=$('k'+i), done=t>st+.2; c.style.background=done?'#D4FF3A':'transparent'; c.textContent=done?'✓':'';});}
+  // S5 (CTA) and the loop back to frame 0
+  const t5=C[4]; const in5=t>=t5;
+  $('s5').style.visibility=in5?'visible':'hidden';
+  if(in5){const open=eb(r(t,t5,t5+.25)); const close=eio(r(t,C[5]+.05,DUR-1/30));
+    $('s5').style.clipPath=`circle(${open*(1-close)*1500}px at 540px 900px)`;
+    $('kw').style.transform=`scale(${(.4+.6*eb(r(t,t5+.1,t5+.35)))*(1+0.035*Math.exp(-((t-t5)%BEAT)*9))})`;
+    const W=CTA==='tt'?'':'AGENTS'; const m=Math.floor(W.length*r(t,t5+.4,t5+1.0)); $('typed').innerHTML=m?W.slice(0,m):'<span class="ph">Add a comment…</span>';
+    $('send').style.transform=`scale(${t>t5+1.05&&t<t5+1.3?1.25:1})`; $('c3').style.opacity=r(t,t5+.3,t5+.5);
+    // during the loop back, frame 0 of the hook sits underneath
+    if(t>=C[5]){$('s1').style.visibility='visible';$('s1').style.transform='none';$('s1').style.filter='none';hook(0);$('cam').style.transform='none';}
+  }
+  const lime=in5&&t<C[5]+.25; document.querySelector('.handle').style.color=lime?'#000':'#eeede8';
+  document.querySelector('.logo').style.background=lime?'#000':'#D4FF3A'; document.querySelector('.logo').style.color=lime?'#D4FF3A':'#000';
+};
+window.DUR=DUR; render(0);
+</script></body></html>
