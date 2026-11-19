@@ -351,3 +351,4 @@
 {"worker": "site_improver", "status": "ok", "at": "2026-11-19T14:41:48+00:00", "note": "none: pause stands, 8 builder branches await Seb, checkouts ok, tests green"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-19T16:25:06+00:00", "note": "0 posts out today (2 pending drafts), top post saves+shares 1, feed written yes"}
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-19T16:32:24+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (17th in a row)"}
+{"worker": "support_agent", "status": "ok", "at": "2026-11-19T19:10:01+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
