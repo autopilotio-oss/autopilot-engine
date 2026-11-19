@@ -1,8 +1,11 @@
 # Hub reels (animated, no voice)
 
-15 s vertical reels built from the hub carousels. 128 BPM, 32 beats, so audio and video loop on the bar.
-First frame shows the full hook; the last frame is the same picture, so the replay is seamless.
+13.1 s vertical reels built from the hub carousels: 128 BPM, 28 beats (7 bars), so audio and video loop on the bar.
+Frame 0 shows the full hook; the lime CTA slides off at the end to reveal that same frame, so the replay is seamless.
+Key text stays inside the safe zone (x <= 940, y <= 1540 on 1080x1920).
 
-Render: copy the fonts (Anton, Inter Bold/Medium, JetBrains Mono) next to the html, then
-`node render.js $PWD/team_of_5.html out_ig full ig` (or `tt` for the TikTok "link in bio" ending), then mux with ffmpeg at 30 fps.
-Status: team_of_5 v3 waiting for Seb's approval (Nov 19). Nothing scheduled.
+Render: put Anton-Regular.ttf, Inter-Bold.otf, Inter-Medium.otf, JetBrainsMono.ttf next to the html, then
+  node render.js $PWD/team_of_5.html out_ig full ig    (tt = TikTok ending with link in bio + URL)
+  python3 music.py music.wav
+  ffmpeg -framerate 30 -i out_ig/%04d.jpg -i music.wav -c:v libx264 -crf 17 -pix_fmt yuv420p -c:a aac -af loudnorm=I=-14:TP=-1.5 -t 13.125 out.mp4
+Status: team_of_5 final (Nov 19) waiting for Seb's approval. Nothing scheduled.
