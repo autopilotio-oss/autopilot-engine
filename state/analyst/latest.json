@@ -1,32 +1,32 @@
 {
-  "at": "2026-11-20T16:25:00Z",
+  "at": "2026-11-20T20:25:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 1, "error": 0},
     "tiktok": {"published": 0, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
-      "network": "instagram",
-      "published_at": "2026-11-18T17:08:47-03:00",
-      "text": "Job hunting is a second job. Give it to Claude.",
-      "metrics": {"reach": 16, "views": 28, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df5AW_SiEXT/"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-11-19T00:04:02-03:00",
-      "text": "Not every Black Friday deal is a deal.",
-      "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df5v7p_jca1/"
-    },
-    {
-      "network": "instagram",
-      "published_at": "2026-11-18T00:04:50-03:00",
+      "network": "tiktok",
+      "published_at": "2026-11-18T00:04:26-03:00",
       "text": "Pick the chore you avoid the most.",
-      "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df3LOYwCIc1/"
+      "metrics": {"views": 191, "likes": 2, "comments": 0, "shares": 0, "saves": null, "reach": null},
+      "url": null
+    },
+    {
+      "network": "tiktok",
+      "published_at": "2026-11-18T17:07:54-03:00",
+      "text": "Job hunting is a second job. Give it to Claude.",
+      "metrics": {"views": 172, "likes": 0, "comments": 0, "shares": 0, "saves": null, "reach": null},
+      "url": null
+    },
+    {
+      "network": "tiktok",
+      "published_at": "2026-11-19T00:03:51-03:00",
+      "text": "Not every Black Friday deal is a deal.",
+      "metrics": {"views": 108, "likes": 1, "comments": 0, "shares": 0, "saves": null, "reach": null},
+      "url": null
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 13:25 ART Nov 20. Today: Invoice Chaser reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved); 0 published, 0 errors. Window 6-72h: IG feed posts only (Metricool reels connector returned no rows; TikTok analytics not pulled). Times are brand timezone (ART). No post has saves or shares; ranking falls back to reach, so no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. Watch: freel.yml failed again today (already logged in Fix needed)."
+  "notes": "Snapshot 17:25 ART Nov 20. Today: Invoice Chaser reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved, slot passed); 0 published, 0 errors. Window 6-72h (Nov 17 17:21 to Nov 20 11:21 ART): 3 IG carousels (Job hunting reach 16 views 28; Black Friday reach 1; Chore reach 1; all 0 saves, 0 shares, 0 comments) and 3 TikToks (views above, 0 shares). No post has saves or shares, so ranking falls back to reach or views and there is no winner. TikTok saves and URLs not provided by Metricool; IG profile visits not provided. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. Watch: freel.yml failed again today (already logged in Fix needed); ci.yml success."
 }
