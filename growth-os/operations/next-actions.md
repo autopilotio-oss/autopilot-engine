@@ -161,6 +161,14 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 - Nov 19 run (13:09 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 19 run (evening): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-20 (08:20 ART)
+- Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 19th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 44715907896 (ElevenLabs 401, 11th day, inc:worker:factory_reels_tts:2026-11-10 already open; old factory reels parked by Seb Nov 19, so the daily run only burns Actions minutes).
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, no cap hit. Contribution INCOMPLETE (5 vendors unknown).
+- Kit: still locked (requires paid plan). Kit data MISSING, consent.py ingest not run. Not re-sent (Seb messaged Nov 14).
+- Metricool: 0 ERROR. 6 pending posts Nov 19 to 21 (433754328, 433754342, 433754366, 433754378, 433754405, 433754417) all draft (parked per Seb Nov 19): 0 non-draft pending, 0 unapproved. Nothing will publish in the next 48h. IG 90 followers; IGEV37 shows 1 IG post on Nov 19 although every scheduled post was draft (manual post or metric lag, not verified). Threads views MISSING.
+- ONE CHANGE: reports.py reliability line adds distinct checks ("43 open incidents (9 distinct checks)"), +1 test, 117 passed.
+- No message sent (no new SEV-1/2, no order, no new authorization item).
+
 ## Daily Pulse 2026-11-18 (08:20 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 13th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 44281653500 (ElevenLabs 401, 9th day, inc:worker:factory_reels_tts:2026-11-10 already open).
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, cost guard capped, no cap hit. Known costs this month $56.86, contribution INCOMPLETE (5 vendors unknown).

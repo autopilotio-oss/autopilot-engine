@@ -17,3 +17,13 @@ def test_no_heartbeat_yet_is_waiting():
 def test_not_ok_is_late():
     r = {"check": "worker:x", "ok": False, "detail": "no heartbeat yet (overdue)"}
     assert reports.worker_label(r) == "LATE/FAILED"
+
+
+def test_open_checks_dedupes_daily_reopens():
+    inc = {
+        "inc:worker:kit_sync:2026-11-19": {"payload": {"incident_id": "inc:worker:kit_sync:2026-11-19", "check": "worker:kit_sync"}},
+        "inc:worker:kit_sync:2026-11-20": {"payload": {"incident_id": "inc:worker:kit_sync:2026-11-20", "check": "worker:kit_sync"}},
+        "inc:email:metricool:1a1e1ac2": {"payload": {"incident_id": "inc:email:metricool:1a1e1ac2"}},
+    }
+    assert reports.open_checks(inc) == 2
+    assert reports.open_checks({}) == 0
