@@ -120,7 +120,7 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 - Support agent run Nov 18 evening: no new alerts (no new mail since 13:10 run; inc:email:1a1e1ac2 Metricool TikTok and inc:email:1a1d2e4b Kit billing still open).
 - Support agent run Nov 19 13:09 UTC: no new alerts (only new mail Adspirer marketing; inc:email:1a1e1ac2 Metricool TikTok and inc:email:1a1d2e4b Kit billing still open).
 - Support agent run Nov 19 evening: no new incidents. Kit sent another payment reminder Nov 19 16:13Z (Creator plan still unpaid, same as inc:email:1a1d2e4b, still open, not re-recorded); other new mail Metricool marketing.
-- Support agent run Nov 20 evening: no new alerts (new mail informational: TikTok likes notification; 2d mail otherwise the Nov 19 Kit payment reminder (inc:email:1a1d2e4b still open) and Metricool marketing; inc:email:1a1e1ac2 Metricool TikTok still open).
+- Support agent run Nov 20 13:10 UTC: no new alerts (new mail informational: TikTok likes notification; 2d mail otherwise the Nov 19 Kit payment reminder (inc:email:1a1d2e4b still open) and Metricool marketing; inc:email:1a1e1ac2 Metricool TikTok still open).
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -161,7 +161,7 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 - Nov 18 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 19 run (13:09 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 19 run (evening): 0 cases, 0 drafted, 0 escalated.
-- Nov 20 run (evening): 0 cases, 0 drafted, 0 escalated.
+- Nov 20 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-20 (08:20 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 19th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 44715907896 (ElevenLabs 401, 11th day, inc:worker:factory_reels_tts:2026-11-10 already open; old factory reels parked by Seb Nov 19, so the daily run only burns Actions minutes).
