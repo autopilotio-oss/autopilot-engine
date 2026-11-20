@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-20T12:30:00Z",
+  "at": "2026-11-20T16:25:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 1, "error": 0},
     "tiktok": {"published": 0, "pending": 1, "error": 0}
@@ -7,26 +7,26 @@
   "top_posts": [
     {
       "network": "instagram",
-      "published_at": "2026-11-18T17:08:47Z",
+      "published_at": "2026-11-18T17:08:47-03:00",
       "text": "Job hunting is a second job. Give it to Claude.",
       "metrics": {"reach": 16, "views": 28, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
       "url": "https://www.instagram.com/p/Df5AW_SiEXT/"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-18T00:04:50Z",
-      "text": "Pick the chore you avoid the most.",
+      "published_at": "2026-11-19T00:04:02-03:00",
+      "text": "Not every Black Friday deal is a deal.",
       "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df3LOYwCIc1/"
+      "url": "https://www.instagram.com/p/Df5v7p_jca1/"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-17T17:10:34Z",
-      "text": "Most people practice for an interview in their head. Then the first time they say the answer out loud is in the room.",
+      "published_at": "2026-11-18T00:04:50-03:00",
+      "text": "Pick the chore you avoid the most.",
       "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df2bz__irGF/"
+      "url": "https://www.instagram.com/p/Df3LOYwCIc1/"
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 09:30 ART Nov 20. Today: Invoice Chaser reel (14:00 ART) on IG and TikTok PENDING with draft=true in Metricool (not approved yet); 0 published, 0 errors. Window 6-72h (Nov 17 09:23 to Nov 20 03:23 ART): saves and shares 0 on every post in window (the 1 TikTok share on '5 employees' is now outside the window). IG reach: job hunt 16, Black Friday/chores/interview 1 each. TikTok views: chores 191, interview 182, job hunt 172, Black Friday 108; TikTok saves, reach and profile visits not provided by Metricool, so TikTok posts rank below IG on the reach tiebreak. IG profile visits not provided. Kit MISSING: MCP requires paid Kit plan. Revenue feed: 0 verified orders all time (unchanged). freel.yml failed again 2026-11-20 10:03Z (logged in next-actions). HQ feed written (status/hub v104)."
+  "notes": "Snapshot 13:25 ART Nov 20. Today: Invoice Chaser reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved); 0 published, 0 errors. Window 6-72h: IG feed posts only (Metricool reels connector returned no rows; TikTok analytics not pulled). Times are brand timezone (ART). No post has saves or shares; ranking falls back to reach, so no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. Watch: freel.yml failed again today (already logged in Fix needed)."
 }
