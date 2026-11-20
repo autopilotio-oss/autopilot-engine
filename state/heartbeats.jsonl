@@ -357,3 +357,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-20T00:22:20+00:00", "note": "posts out today 0 (2 pending drafts), top post saves+shares 1, feed written yes"}
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-20T00:32:45+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (18th in a row)"}
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-20T08:32:28+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (19th in a row)"}
+{"worker": "daily_pulse", "status": "ok", "at": "2026-11-20T11:17:46+00:00", "note": "0 orders, 20 checkouts ok, 117 tests pass, 0 unapproved posts (6 parked drafts), Kit MISSING, calendar empty, ONE CHANGE: distinct open checks in daily report"}
