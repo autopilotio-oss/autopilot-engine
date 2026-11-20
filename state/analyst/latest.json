@@ -1,32 +1,32 @@
 {
-  "at": "2026-11-20T00:25:00Z",
+  "at": "2026-11-20T12:30:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 1, "error": 0},
     "tiktok": {"published": 0, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
-      "network": "tiktok",
-      "published_at": "2026-11-17T00:04:56Z",
-      "text": "What if you had 5 employees and paid none of them?",
-      "metrics": {"views": 195, "shares": 1, "comments": 0, "likes": null, "saves": null, "reach": null, "profile_visits": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7708924657411427591"
-    },
-    {
       "network": "instagram",
       "published_at": "2026-11-18T17:08:47Z",
       "text": "Job hunting is a second job. Give it to Claude.",
-      "metrics": {"reach": 7, "views": 13, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
+      "metrics": {"reach": 16, "views": 28, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
       "url": "https://www.instagram.com/p/Df5AW_SiEXT/"
     },
     {
       "network": "instagram",
-      "published_at": "2026-11-17T00:05:24Z",
-      "text": "What if you had 5 employees and paid none of them?",
-      "metrics": {"reach": 3, "views": 7, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df0mfpeCsUC/"
+      "published_at": "2026-11-18T00:04:50Z",
+      "text": "Pick the chore you avoid the most.",
+      "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/Df3LOYwCIc1/"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-17T17:10:34Z",
+      "text": "Most people practice for an interview in their head. Then the first time they say the answer out loud is in the room.",
+      "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "follows": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/Df2bz__irGF/"
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 21:25 ART Nov 19. Today: Review Desk reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved, time passed); 0 published, 0 errors. Window 6-72h (Nov 16 21:21 to Nov 19 15:21 ART): 1 share total (TikTok '5 employees'); IG saves and shares 0 on every post, IG reach 0 to 7. TikTok views: 5 employees 195, chores 191, boring list 190, interview 182, job hunt 102, Black Friday 13. TikTok saves, reach and profile visits not provided by Metricool; IG profile visits not provided; IG Reels connector returned no rows (posts connector used). Kit MISSING: MCP requires paid Kit plan. Revenue feed: 0 verified orders all time (unchanged). freel.yml failure of Nov 19 already logged in next-actions."
+  "notes": "Snapshot 09:30 ART Nov 20. Today: Invoice Chaser reel (14:00 ART) on IG and TikTok PENDING with draft=true in Metricool (not approved yet); 0 published, 0 errors. Window 6-72h (Nov 17 09:23 to Nov 20 03:23 ART): saves and shares 0 on every post in window (the 1 TikTok share on '5 employees' is now outside the window). IG reach: job hunt 16, Black Friday/chores/interview 1 each. TikTok views: chores 191, interview 182, job hunt 172, Black Friday 108; TikTok saves, reach and profile visits not provided by Metricool, so TikTok posts rank below IG on the reach tiebreak. IG profile visits not provided. Kit MISSING: MCP requires paid Kit plan. Revenue feed: 0 verified orders all time (unchanged). freel.yml failed again 2026-11-20 10:03Z (logged in next-actions). HQ feed written (status/hub v104)."
 }
