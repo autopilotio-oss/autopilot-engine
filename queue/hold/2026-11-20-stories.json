@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-20-tip",
+  "group": "stories-2026-11-20",
+  "at": "2026-11-20T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-20-tip.jpg"
+  ],
+  "text": "AI tip: Paste any long email into Claude and type: \"Explain this in 3 sentences. What do I need to do?\""
+ },
+ {
+  "id": "story-2026-11-20-quiz",
+  "group": "stories-2026-11-20",
+  "at": "2026-11-20T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-20-quiz.jpg"
+  ],
+  "text": "Quiz: Which prompt gets the better answer?"
+ },
+ {
+  "id": "story-2026-11-20-answer",
+  "group": "stories-2026-11-20",
+  "at": "2026-11-20T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-20-answer.jpg"
+  ],
+  "text": "Quiz answer: \"Write a friendly 3 line email to a customer whose order is late. Offer 10% off.\". {Details in, quality out.} Tell it who, what and how."
+ },
+ {
+  "id": "story-2026-11-20-fact",
+  "group": "stories-2026-11-20",
+  "at": "2026-11-20T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-20-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can explain any bill from a photo. Snap the medical bill, phone bill or bank statement. It explains every line in plain English and flags charges that look off."
+ },
+ {
+  "id": "story-2026-11-20-poll",
+  "group": "stories-2026-11-20",
+  "at": "2026-11-20T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-20-poll.jpg"
+  ],
+  "text": "Poll: What would you automate first? A) Bookings B) Reviews"
+ }
+]
