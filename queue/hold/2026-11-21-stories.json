@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-21-tip",
+  "group": "stories-2026-11-21",
+  "at": "2026-11-21T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-21-tip.jpg"
+  ],
+  "text": "AI tip: Add this to the end of any request: \"Ask me 3 questions before you answer.\""
+ },
+ {
+  "id": "story-2026-11-21-quiz",
+  "group": "stories-2026-11-21",
+  "at": "2026-11-21T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-21-quiz.jpg"
+  ],
+  "text": "Quiz: Chatbot vs AI agent. What's the difference?"
+ },
+ {
+  "id": "story-2026-11-21-answer",
+  "group": "stories-2026-11-21",
+  "at": "2026-11-21T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-21-answer.jpg"
+  ],
+  "text": "Quiz answer: A chatbot answers. An agent does the work.. {Agents take action,} like checking your credit every month or drafting every reply."
+ },
+ {
+  "id": "story-2026-11-21-fact",
+  "group": "stories-2026-11-21",
+  "at": "2026-11-21T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-21-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can write the cancel message for you. Tell it the company and what you want. You get a short, firm message that's hard to argue with."
+ },
+ {
+  "id": "story-2026-11-21-poll",
+  "group": "stories-2026-11-21",
+  "at": "2026-11-21T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-21-poll.jpg"
+  ],
+  "text": "Poll: Do you reply to new leads within 1 hour? A) Always B) Not really"
+ }
+]
