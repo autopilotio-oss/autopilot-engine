@@ -1,32 +1,25 @@
 {
-  "at": "2026-11-21T16:22:00Z",
+  "at": "2026-11-21T20:24:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 1, "error": 0},
     "tiktok": {"published": 0, "pending": 1, "error": 0}
   },
   "top_posts": [
     {
-      "network": "instagram",
-      "published_at": "2026-11-18T14:08:47-03:00",
-      "text": "Job hunting is a second job. Give it to Claude.",
-      "metrics": {"reach": 16, "views": 28, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
-      "url": "https://www.instagram.com/p/Df5AW_SiEXT/"
-    },
-    {
-      "network": "tiktok",
-      "published_at": "2026-11-18T14:07:54-03:00",
-      "text": "Job hunting is a second job. Give it to Claude.",
-      "metrics": {"views": 173, "likes": 0, "comments": 0, "shares": 0, "saves": null, "reach": null},
-      "url": "https://www.tiktok.com/@autopilot.oi/video/7709558407438601524"
-    },
-    {
       "network": "tiktok",
       "published_at": "2026-11-18T21:03:51-03:00",
       "text": "Not every Black Friday deal is a deal.",
       "metrics": {"views": 120, "likes": 1, "comments": 0, "shares": 0, "saves": null, "reach": null},
       "url": "https://www.tiktok.com/@autopilot.oi/video/7709666534054006068"
+    },
+    {
+      "network": "instagram",
+      "published_at": "2026-11-18T21:04:02-03:00",
+      "text": "Not every Black Friday deal is a deal.",
+      "metrics": {"reach": 1, "views": 1, "saves": 0, "shares": 0, "comments": 0, "profile_visits": null},
+      "url": "https://www.instagram.com/p/Df5v7p_jca1/"
     }
   ],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 13:22 ART Nov 21. Today: Front Desk Kit reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved, slot not reached); 0 published, 0 errors. Window 6-72h (Nov 18 13:22 to Nov 21 07:22 ART) holds 4 posts: Job hunting and Black Friday on IG and TikTok, metrics unchanged since 09:27. IG Black Friday reach 1 views 1. Nov 19 Review Desk and Nov 20 Invoice Chaser reels never published (still draft PENDING). No post has saves or shares, so no winner; order falls back to reach or views. TikTok saves and reach not provided by Metricool; IG profile visits not provided. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. Watch: freel.yml failed today (already in Fix needed); ci.yml success; no post ERROR."
+  "notes": "Snapshot 17:24 ART Nov 21. Today: Front Desk Kit reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved, slot passed); 0 published, 0 errors. Window 6-72h (Nov 18 17:24 to Nov 21 11:24 ART) now holds only the Black Friday posts on IG and TikTok; Job hunting (Nov 18 14:08 ART) aged out. No post has saves or shares, so no winner; order falls back to views/reach. TikTok saves and reach not provided by Metricool; IG profile visits not provided. Nov 19 Review Desk and Nov 20 Invoice Chaser reels never published (still draft PENDING). Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. HQ feed written (status/hub v110). Watch: freel.yml failed today (already in Fix needed); ci.yml success; no post ERROR."
 }
