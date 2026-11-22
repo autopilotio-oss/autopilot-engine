@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-22T16:22:00Z",
+  "at": "2026-11-22T20:22:00Z",
   "posts_today": {
     "instagram": {"published": 0, "pending": 1, "error": 0},
     "tiktok": {"published": 0, "pending": 1, "error": 0}
   },
   "top_posts": [],
   "kit": {"subscribers": null, "new_today": null},
-  "notes": "Snapshot 13:22 ART Nov 22. Today: Content Week reel (14:00 ART) on IG and TikTok PENDING with draft=true in Metricool (not approved yet). 0 published, 0 errors. Window 6-72h (Nov 19 13:22 to Nov 22 10:22 ART) holds no published posts: Nov 20 Invoice Chaser and Nov 21 Front Desk Kit reels are still draft PENDING, never published (Nov 19 Review Desk 14:00 falls just outside the window, also never published). top_posts empty, no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. HQ feed written (status/hub v113). Watch: freel.yml failed today 09:48Z (already logged in Fix needed); ci.yml success; no post ERROR."
+  "notes": "Snapshot 17:22 ART Nov 22. Today: Content Week reel (14:00 ART) on IG and TikTok still PENDING with draft=true in Metricool (not approved, slot passed). 0 published, 0 errors. Window 6-72h (Nov 19 17:22 to Nov 22 11:22 ART) holds no published posts: Nov 20 Invoice Chaser and Nov 21 Front Desk Kit reels remain draft PENDING, never published. top_posts empty, no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. HQ feed written (status/hub v114). Watch: freel.yml failed today 09:48Z (already logged in Fix needed); ci.yml success; no post ERROR."
 }
