@@ -52,6 +52,17 @@ def fmt_money(m):
                      f"net receipts {b['net_receipts_minor'] / 100:.2f} {c} (unattributed {b['attributed']['unknown'] / 100:.2f})" for c, b in m["by_currency"].items())
 
 
+def leads_fact(kit, snapshot):
+    """Kit line for the daily report. A null count is MISSING DATA, never printed as 'None' under OBSERVED."""
+    if not kit:
+        return ("MISSING DATA", "no Kit snapshot")
+    subs, new = kit.get("subscribers"), kit.get("new_subscribers", kit.get("new_7d"))
+    if subs is None and new is None:
+        return ("MISSING DATA", f"Kit counts not readable (snapshot {snapshot})")
+    show = lambda v: "MISSING" if v is None else v
+    return ("OBSERVED", f"Kit subscribers {show(subs)}, new {show(new)} (snapshot {snapshot})")
+
+
 def facts(store, date, days):
     led = _j(os.path.join(ROOT, "state", "ledger", "summary.json"), {})
     socials = sorted(glob.glob(os.path.join(ROOT, "state", "social", "*.json")))
@@ -70,7 +81,7 @@ def facts(store, date, days):
     return {
         "money": ("OBSERVED", fmt_money(money_window(store, days, date)) + f" · ledger synced {led.get('sync', {}).get('ran', 'MISSING')}"),
         "contribution": ("CALCULATED", costs.report(store, orders.money(store))["contribution_status"]),
-        "leads": ("OBSERVED" if kit else "MISSING DATA", f"Kit subscribers {kit.get('subscribers')}, new {kit.get('new_subscribers', kit.get('new_7d'))} (snapshot {os.path.basename(socials[-1])[:10] if socials else 'none'})" if kit else "no Kit snapshot"),
+        "leads": leads_fact(kit, os.path.basename(socials[-1])[:10] if socials else "none"),
         "visits": ("MISSING DATA", "website analytics not connected (GoatCounter API token missing)") if (not site or "not connected" in str(site.get("status", ""))) else ("OBSERVED", json.dumps(site)[:120]),
         "content": ("OBSERVED", f"{len(vc)} concepts in the evidence register: " + (", ".join(f"{c['content_id']} {c['state']}" for c in vc) or "none")),
         "reliability": ("OBSERVED", f"{sum(1 for v in hs.values() if not v['ok'])} failing checks now; {len(inc_open)} open incidents ({open_checks(inc_open)} distinct checks); {len(incidents_window)} opened in window" if hs else "MISSING DATA: no health status"),

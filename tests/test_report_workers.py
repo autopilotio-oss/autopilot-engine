@@ -27,3 +27,11 @@ def test_open_checks_dedupes_daily_reopens():
     }
     assert reports.open_checks(inc) == 2
     assert reports.open_checks({}) == 0
+
+
+def test_leads_null_kit_counts_are_missing_not_observed():
+    assert reports.leads_fact({}, "none")[0] == "MISSING DATA"
+    label, text = reports.leads_fact({"subscribers": None, "new_7d": None}, "2026-11-22")
+    assert label == "MISSING DATA" and "None" not in text
+    label, text = reports.leads_fact({"subscribers": 12, "new_7d": None}, "2026-11-22")
+    assert label == "OBSERVED" and "12" in text and "new MISSING" in text and "None" not in text
