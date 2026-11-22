@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-22-tip",
+  "group": "stories-2026-11-22",
+  "at": "2026-11-22T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-22-tip.jpg"
+  ],
+  "text": "AI tip: Want it to sound like you? Paste 2 old messages and say: \"Write like this.\""
+ },
+ {
+  "id": "story-2026-11-22-quiz",
+  "group": "stories-2026-11-22",
+  "at": "2026-11-22T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-22-quiz.jpg"
+  ],
+  "text": "Quiz: AI gives you a number with total confidence. You should..."
+ },
+ {
+  "id": "story-2026-11-22-answer",
+  "group": "stories-2026-11-22",
+  "at": "2026-11-22T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-22-answer.jpg"
+  ],
+  "text": "Quiz answer: Check it. AI can sound sure and {still be wrong.} Always check facts that matter."
+ },
+ {
+  "id": "story-2026-11-22-fact",
+  "group": "stories-2026-11-22",
+  "at": "2026-11-22T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-22-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can write your dispute letter. Give it the date, the amount and what went wrong. It writes a clear, polite letter that gets read."
+ },
+ {
+  "id": "story-2026-11-22-poll",
+  "group": "stories-2026-11-22",
+  "at": "2026-11-22T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-22-poll.jpg"
+  ],
+  "text": "Poll: AI in your business this year? A) Already using it B) Starting now"
+ }
+]
