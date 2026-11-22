@@ -385,3 +385,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-22T12:21:33+00:00", "note": "0 posts out today (2 pending drafts), top post saves+shares n/a, feed written yes"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-22T13:09:52+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "newsletter", "status": "failed", "at": "2026-11-22T14:13:55+00:00", "note": "Kit MCP requires a paid Kit plan; no stats read, no draft created"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-22T14:42:06+00:00", "note": "none: site_improver pause stands, 8 builder branches await Seb, checkouts ok, tests green"}
