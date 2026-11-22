@@ -382,3 +382,4 @@
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-22T00:32:22+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (24th in a row)"}
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-22T08:32:07+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (25th in a row)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-22T11:16:48+00:00", "note": "0 orders, 20 checkouts ok, 0 unapproved posts, known Kit/ElevenLabs/pixel fails, 1 report fix"}
+{"worker": "analyst", "status": "ok", "at": "2026-11-22T12:21:33+00:00", "note": "0 posts out today (2 pending drafts), top post saves+shares n/a, feed written yes"}
