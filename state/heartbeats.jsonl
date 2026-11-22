@@ -378,3 +378,4 @@
 {"worker": "support_agent", "status": "ok", "at": "2026-11-21T19:11:17+00:00", "note": "0 drafted, 0 escalated, 0 alerts"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-21T20:22:59+00:00", "note": "posts out today 0 (2 draft pending), top post saves+shares 0, feed written yes"}
 {"worker": "site_improver", "status": "ok", "at": "2026-11-21T20:40:48+00:00", "note": "none: pause stands, 8 builder branches await Seb, all merge cleanly, 117 tests pass, checkouts ok"}
+{"worker": "analyst", "status": "ok", "at": "2026-11-22T00:21:54+00:00", "note": "0 posts out today (2 pending drafts), no top post in 6-72h window (0 saves+shares), feed written yes"}
