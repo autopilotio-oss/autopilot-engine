@@ -37,6 +37,7 @@
 - 2026-11-01 (weekly newsletter): skipped, Kit shows 0 active subscribers, so no draft was created. Learned: the list needs its first signups (guide pages and Kit form) before a weekly email is worth drafting.
 - 2026-11-08 (weekly newsletter): skipped again, Kit shows 0 active subscribers (0 new, 0 cancellations in 90 days), so no draft was created. Learned: two weeks running with no signups means the guide pages and Kit form are not capturing anyone yet; the newsletter stays parked until the first subscriber lands.
 - 2026-11-15 (weekly newsletter): failed, the Kit connector now refuses every call with "Kit MCP requires a paid Kit plan", so subscriber count, past broadcasts and stats could not be read and no draft was created. Learned: the newsletter routine is blocked on Kit plan access, not content; it needs a Kit plan upgrade (or a decision to drop Kit) before it can run again.
+- 2026-11-22 (weekly newsletter): failed again, Kit connector still answers "Kit MCP requires a paid Kit plan" on get_growth_stats, so nothing was read and no draft was created. Learned: third week blocked on the same Kit lock (already with Seb since Nov 14); nothing changes until the plan is upgraded or the routine is paused as proposed.
 
 ## Campaign learnings
 
