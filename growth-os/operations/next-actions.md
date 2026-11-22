@@ -169,6 +169,7 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 - Nov 20 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 21 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 22 run (scheduled): 0 cases, 0 drafted, 0 escalated.
+- Nov 22 run (evening): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-22 (08:25 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 25th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 45009358083 (ElevenLabs 401, 13th day, inc:worker:factory_reels_tts:2026-11-10 already open; old reels parked by Seb Nov 19).
