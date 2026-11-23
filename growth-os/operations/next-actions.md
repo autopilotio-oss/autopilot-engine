@@ -133,6 +133,7 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 - Support agent run Nov 21 13:10 UTC: no new alerts (new mail informational: Kit weekly summary, two personal non-business receipts; 2d mail otherwise the Nov 19 Kit payment reminder, TikTok likes and Metricool marketing; inc:email:1a1e1ac2 Metricool TikTok and inc:email:1a1d2e4b Kit billing still open).
 - Support agent run Nov 22: no new alerts (2d mail: 2 non-business invoices, Kit weekly digest; informational).
 - Support agent run Nov 23 13:10 UTC: no new incidents. Google new sign-in on Apple iPhone Nov 23 06:34Z (03:34 ART), same minute as Sign in with Google to Reddit plus an iPhone setup notice: looks like Seb's own phone, SEV-3 informational (if not him, Check activity in Google account). Other mail personal/non-business.
+- Support agent run Nov 23 evening: no new alerts (2d mail unchanged: the 06:34Z Google iPhone sign-in already noted SEV-3, rest personal/non-business).
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -179,6 +180,7 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 - Nov 22 run (scheduled): 0 cases, 0 drafted, 0 escalated.
 - Nov 22 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 23 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
+- Nov 23 run (evening): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-23 (08:15 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 28th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 45154218232 (ElevenLabs 401, 14th day, inc:worker:factory_reels_tts:2026-11-10 already open).
