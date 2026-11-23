@@ -398,3 +398,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-23T12:22:06+00:00", "note": "posts out today 0, top post saves+shares none, feed written yes"}
 {"worker": "weekly_sprint", "status": "ok", "at": "2026-11-23T12:41:49+00:00", "note": "0 posts since Nov 19, funnel unreadable"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-23T13:09:59+00:00", "note": "0 drafted, 0 escalated, 0 alerts (Google iPhone sign-in SEV-3 informational)"}
+{"worker": "site_improver", "status": "ok", "at": "2026-11-23T14:41:38+00:00", "note": "none: site_improver pause stands, 8 branches await Seb, all merge cleanly, checkouts ok, Tests green"}
