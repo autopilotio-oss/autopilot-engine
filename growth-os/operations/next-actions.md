@@ -171,6 +171,14 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 - Nov 22 run (scheduled): 0 cases, 0 drafted, 0 escalated.
 - Nov 22 run (evening): 0 cases, 0 drafted, 0 escalated.
 
+## Daily Pulse 2026-11-23 (08:15 ART)
+- Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 28th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 45154218232 (ElevenLabs 401, 14th day, inc:worker:factory_reels_tts:2026-11-10 already open).
+- Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, no cap hit. Contribution INCOMPLETE (5 vendors unknown).
+- Kit: still locked (requires paid plan). Kit data MISSING, consent.py ingest not run.
+- Metricool: 0 ERROR. 2 pending posts (433754444, 433754464, content-week reel Nov 22) both draft (parked per Seb Nov 19), uuids in the approved set: 0 unapproved. Nothing will publish in the next 48h. IG 89 followers (down 1), Threads 2; Threads views MISSING.
+- ONE CHANGE: NONE (commander had no proposals; the queue/hub fix to health.approved_post_uuids widens the post approval guard, so it is left for Seb or the Weekly Sprint to approve, not done by Daily Pulse).
+- No message sent (no new SEV-1/2, no order, no new authorization item).
+
 ## Daily Pulse 2026-11-22 (08:25 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 25th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 45009358083 (ElevenLabs 401, 13th day, inc:worker:factory_reels_tts:2026-11-10 already open; old reels parked by Seb Nov 19).
 - Money: 0 orders, $0 net, 0 refunds, reconciliation ok (10 products). Ads $49.89 lifetime, ads off, no cap hit. Contribution INCOMPLETE (5 vendors unknown).
