@@ -54,6 +54,13 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 +Use real demos with your hands, your face or your own real voice (not AI text to speech), with real movement on screen from the first seconds. Never use AI to show what the product does: for beauty, personal care and health products TikTok Shop bans AI demos and AI "experts" even with a label.
 ```
 
+## Weekly Sprint 2026-11-23 (handoff)
+- ig_reel_format_001 closed INCONCLUSIVE (never launched, no OK). Carried forward as hub_reel_002 (queue/drafts/hub_reel_002.json): 4 silent slideshow reels from docs/media/hub/week1/posts (12_black_friday, 04_night_shift, 10_interview_coach, 01_job_agent), approved captions word for word, IG Reel + TikTok, 1 a day. Test render of 12_black_friday OK (ffmpeg command in the draft file). Do NOT upload or schedule until Seb says OK; then Metricool draft first, record approved_by_seb in queue/hub, un-draft. Read IGRE11 / TKPO07 at 72h. Do not commit mp4s to docs/.
+- 0 posts since Nov 19 (6 factory reel drafts parked by Seb, must not be posted). Calendar empty.
+- Asked Seb (waiting): OK hub reels; Kit pay or drop (lapses about Dec 13); GOATCOUNTER_TOKEN; merge free post prompts then the other builder branches; disable freel.yml (8 of 8 failed this week) and pause kit_sync (21 of 21 failed) and newsletter tasks until Kit is decided.
+- Weekly Sprint tried to disable the newsletter scheduled task (failed its only run this week, snapshot growth-os/rollback/newsletter.txt); the action was refused by the permission classifier. Left enabled; needs Seb.
+- Monthly drill next due Dec 7 (first Monday).
+
 ## Weekly Sprint 2026-11-16 (handoff)
 - value_first_tk_001 closed INCONCLUSIVE (A 3 videos median 101, B 4 median 90.5). TikTok stays on hub photo carousels (median 190 views).
 - New draft ig_reel_format_001 (queue/drafts/ig_reel_format_001.json): next 4 hub posts on IG as silent slideshow reels from the same slides and caption. Do NOT render to docs/ or schedule until Seb says OK; then render with ffmpeg, save Metricool posts as draft, set approved_by_seb in queue/hub, un-draft. Read IGRE11 at 72h.

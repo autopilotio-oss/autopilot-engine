@@ -1,0 +1,33 @@
+{
+ "experiment_id": "hub_reel_002",
+ "status": "draft, waiting for Seb (customer facing, nothing scheduled)",
+ "created": "2026-11-23",
+ "what": "4 silent 9:16 slideshow reels from approved hub slides, posted on IG as Reels and TikTok as video, 1 a day; Black Friday first (Nov 27).",
+ "order": [
+  "12_black_friday",
+  "04_night_shift",
+  "10_interview_coach",
+  "01_job_agent"
+ ],
+ "render": "ffmpeg -framerate 1/2.5 -pattern_type glob -i 'docs/media/hub/week1/posts/<id>/*.jpg' -vf 'scale=1080:1350:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=0x0a0a0a,format=yuv420p,fps=30' -c:v libx264 -an out.mp4 ; test render of 12_black_friday OK 2026-11-23 (25s, frame checked). Do not commit mp4 to docs/ (Pages size); upload to Metricool.",
+ "copy": "Reuse the caption Seb approved for that hub post word for word (from Metricool, published Nov 13 to 18), including Comment KEYWORD.",
+ "schedule": "Only after Seb says OK: Metricool posts saved as draft first, approved_by_seb recorded in queue/hub, then un-draft. IG 14:00 ART, TikTok 21:00 ART.",
+ "baseline_A": {
+  "ig_reach_per_day_nov16_19": [
+   4,
+   1,
+   11,
+   6
+  ],
+  "tiktok_views_per_day_nov16_19": [
+   191,
+   377,
+   364,
+   158
+  ],
+  "tiktok_hub_carousel_median": 190,
+  "source": "Metricool IGEV06 / TKEV02 read 2026-11-23"
+ },
+ "decision_rule": "KEEP reels for repurposed slides if IG median reach at 72h >= 3x carousel median AND >= 20 and TikTok median >= 0.8x 190; ROLLBACK if IG median <= carousel median; else ITERATE (1.5s hook slide); under 4 per arm INCONCLUSIVE",
+ "rollback": "Set the Metricool reel posts back to draft; nothing else changes."
+}
