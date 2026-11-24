@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-24-tip",
+  "group": "stories-2026-11-24",
+  "at": "2026-11-24T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-24-tip.jpg"
+  ],
+  "text": "AI tip: Stuck on a reply? Type: \"Give me 3 versions: short, friendly, firm.\""
+ },
+ {
+  "id": "story-2026-11-24-quiz",
+  "group": "stories-2026-11-24",
+  "at": "2026-11-24T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-24-quiz.jpg"
+  ],
+  "text": "Quiz: How often can you check your credit reports for free?"
+ },
+ {
+  "id": "story-2026-11-24-answer",
+  "group": "stories-2026-11-24",
+  "at": "2026-11-24T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-24-answer.jpg"
+  ],
+  "text": "Quiz answer: Every week. Every week, from all 3 bureaus, at {AnnualCreditReport.com.} Claude can read them and find errors."
+ },
+ {
+  "id": "story-2026-11-24-fact",
+  "group": "stories-2026-11-24",
+  "at": "2026-11-24T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-24-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can plan dinner from a fridge photo. Take a picture of what you have. It gives you meals you can make tonight without a store run."
+ },
+ {
+  "id": "story-2026-11-24-poll",
+  "group": "stories-2026-11-24",
+  "at": "2026-11-24T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-24-poll.jpg"
+  ],
+  "text": "Poll: What eats more of your week? A) Answering messages B) Chasing payments"
+ }
+]
