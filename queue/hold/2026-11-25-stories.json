@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-25-tip",
+  "group": "stories-2026-11-25",
+  "at": "2026-11-25T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-25-tip.jpg"
+  ],
+  "text": "AI tip: After any plan, ask: \"What am I missing?\""
+ },
+ {
+  "id": "story-2026-11-25-quiz",
+  "group": "stories-2026-11-25",
+  "at": "2026-11-25T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-25-quiz.jpg"
+  ],
+  "text": "Quiz: Medical debt under $500. Does it show on your credit report?"
+ },
+ {
+  "id": "story-2026-11-25-answer",
+  "group": "stories-2026-11-25",
+  "at": "2026-11-25T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-25-answer.jpg"
+  ],
+  "text": "Quiz answer: No. The 3 bureaus don't report medical collections {under $500,} or paid ones. If you see one, dispute it."
+ },
+ {
+  "id": "story-2026-11-25-fact",
+  "group": "stories-2026-11-25",
+  "at": "2026-11-25T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-25-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can turn a week of meals into one list. Tell it your budget and how many people. It plans the meals and sorts the list by store aisle."
+ },
+ {
+  "id": "story-2026-11-25-poll",
+  "group": "stories-2026-11-25",
+  "at": "2026-11-25T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-25-poll.jpg"
+  ],
+  "text": "Poll: Would you let AI draft your replies? A) Yes, if I approve B) No way"
+ }
+]
