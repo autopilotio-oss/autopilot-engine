@@ -54,6 +54,8 @@ TikTok Shop intel 2026-11-18: items 1 to 3 rechecked, still accurate and still w
 +Use real demos with your hands, your face or your own real voice (not AI text to speech), with real movement on screen from the first seconds. Never use AI to show what the product does: for beauty, personal care and health products TikTok Shop bans AI demos and AI "experts" even with a label.
 ```
 
+TikTok Shop intel 2026-11-25: items 1 to 6 rechecked, still accurate and still waiting. No new guide fix needed: nothing in G["video"], G["shop"] or G["sell"] is wrong in a way that could hurt a reader, so guides.py was not edited (the LIVE step already says you must be 18 to sell, which covers the Aug 4 minors rule). Optional for a later version (not a fix): G["sell"] step "Answer every comment and DM" could add "Answer return requests and disputes in Seller Center fast: TikTok gives sellers 24 hours to send evidence in a dispute." Source: TIKTOK_SHOP_PLAYBOOK.md section 1f.
+
 ## Weekly Sprint 2026-11-23 (handoff)
 - ig_reel_format_001 closed INCONCLUSIVE (never launched, no OK). Carried forward as hub_reel_002 (queue/drafts/hub_reel_002.json): 4 silent slideshow reels from docs/media/hub/week1/posts (12_black_friday, 04_night_shift, 10_interview_coach, 01_job_agent), approved captions word for word, IG Reel + TikTok, 1 a day. Test render of 12_black_friday OK (ffmpeg command in the draft file). Do NOT upload or schedule until Seb says OK; then Metricool draft first, record approved_by_seb in queue/hub, un-draft. Read IGRE11 / TKPO07 at 72h. Do not commit mp4s to docs/.
 - 0 posts since Nov 19 (6 factory reel drafts parked by Seb, must not be posted). Calendar empty.
