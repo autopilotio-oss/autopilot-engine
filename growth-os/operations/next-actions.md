@@ -139,6 +139,7 @@ TikTok Shop intel 2026-11-25: items 1 to 6 rechecked, still accurate and still w
 - Support agent run Nov 24 13:10 UTC: no new alerts (new mail informational: Twelve Data welcome, Google data-sharing grants to Twelve Data and LinkedIn, TikTok likes; Nov 23 Google iPhone sign-in already noted SEV-3).
 - Support agent run Nov 24 evening: no new alerts (no new mail since 13:10 run; 2d mail informational: Twelve Data welcome, Google data-sharing grants, Reddit digest; Nov 23 Google iPhone sign-in already noted SEV-3).
 - Support agent run Nov 25 13:10 UTC: no new alerts (no new business mail; 2d mail informational: Google data-sharing grants to Twelve Data and LinkedIn, Twelve Data welcome, TikTok likes, Reddit digest, Adspirer marketing).
+- Support agent run Nov 25 evening: no new alerts (no new mail since 13:10 run; 2d mail unchanged and informational).
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -189,6 +190,7 @@ TikTok Shop intel 2026-11-25: items 1 to 6 rechecked, still accurate and still w
 - Nov 24 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 24 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 25 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
+- Nov 25 run (evening): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-23 (08:15 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 28th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 45154218232 (ElevenLabs 401, 14th day, inc:worker:factory_reels_tts:2026-11-10 already open).
