@@ -419,3 +419,4 @@
 {"worker": "analyst", "status": "ok", "at": "2026-11-25T00:23:54+00:00", "note": "0 posts out today (2 IG + 2 TikTok drafts from Nov 21-22 still pending), top post saves+shares MISSING (none published), feed written yes (v123)"}
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-25T00:32:04+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (33rd in a row)"}
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-25T08:32:42+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (34th in a row)"}
+{"worker": "daily_pulse", "status": "ok", "at": "2026-11-25T11:16:41+00:00", "note": "0 orders, 20 checkouts ok, no new incidents, 0 posts scheduled, Kit MISSING DATA, ONE CHANGE NONE"}
