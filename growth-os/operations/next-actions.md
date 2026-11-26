@@ -372,3 +372,4 @@ TikTok Shop intel 2026-11-25: items 1 to 6 rechecked, still accurate and still w
 - 2026-11-24 analyst: GitHub workflow freel.yml failed again (started 10:11:20Z, finished 10:13:41Z, 1 of 1 runs in 24h failed). Likely the same ElevenLabs 401 noted 2026-11-10; check the run log. Logged by analyst 2026-11-24.
 - 2026-11-25 analyst: GitHub workflow freel.yml failed again (started 10:14:20Z, finished 10:16:28Z, 1 of 1 runs in 24h failed). Likely the same ElevenLabs 401 noted 2026-11-10; check the run log. Logged by analyst 2026-11-25.
 - 2026-11-25 Daily Pulse: 0 orders, all 20 checkouts ok, no new incidents, 0 posts scheduled, Kit still MISSING DATA. ONE CHANGE: NONE (no commander proposals). No message to Seb.
+- 2026-11-26 Daily Pulse: 0 orders, all 20 checkouts ok, no new incidents, 0 posts scheduled, Kit still MISSING DATA. ONE CHANGE: NONE (no commander proposals). No message to Seb.

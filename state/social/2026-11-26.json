@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-26",
+ "source": "Metricool getAnalyticsDataByMetrics + getScheduledPosts (brand 7761544), pulled 2026-11-26 ~11:20 UTC by Daily Pulse. 7d window Nov 19 to Nov 25 (Metricool daily rows). Kit MISSING: Kit MCP still refuses (requires paid Kit plan).",
+ "kit": {
+  "subscribers": null,
+  "new_7d": null,
+  "note": "MISSING DATA: Kit MCP get_growth_stats rejected again Nov 26 with 'requires a paid Kit plan' (kit_sync still failing, issue #19, Seb messaged Nov 14). consent.py ingest not run."
+ },
+ "goatcounter": null,
+ "social": {
+  "instagram": {
+   "followers": 87,
+   "posts_7d": 1,
+   "interactions_7d": 1,
+   "accounts_engaged_7d": 0,
+   "reel_views_7d": 0,
+   "note": "followers = IGEV01 Nov 25 (90 Nov 19 to 21, 89 Nov 22, 88 Nov 23 to 24, 87 Nov 25); posts_7d = IGEV37 (1 on Nov 19, null after); interactions_7d = IGEV38 (1 on Nov 19, null after, partial); accounts_engaged_7d = IGEV42 (0 every day); reel_views_7d = IGEV23 Nov 25 only (0; earlier days null)."
+  },
+  "threads": {
+   "followers": 2,
+   "posts_7d": 0,
+   "views_7d": 0,
+   "interactions_7d": 0,
+   "note": "THEV01 1 on Nov 19 to 20, 2 on Nov 21 to 25; THEV02, THEV06, THEV05 null Nov 19 to 24, 0 on Nov 25: views and interactions only reported for Nov 25 (0), earlier days MISSING DATA."
+  },
+  "tiktok": {
+   "status": "connected, analytics not pulled; nothing scheduled"
+  },
+  "x": {
+   "status": "connected, analytics not pulled"
+  }
+ },
+ "publishing": {
+  "published": 0,
+  "queued": 0,
+  "failed": 0,
+  "window": "getScheduledPosts Nov 25 08:00 ART to Nov 28 08:00 ART returned no posts: nothing published from the scheduler in the last 24h, 0 ERROR, nothing pending in the next 48h.",
+  "unapproved_pending": 0,
+  "unapproved_action": "none: no pending posts at all.",
+  "cadence_ok": "Nothing scheduled to publish in the next 48h: content calendar empty since Nov 19 (posting paused by Seb Nov 11; hub_reel_002 awaiting Seb's OK)."
+ },
+ "ads": {
+  "meta_spend_to_date_usd": 49.89,
+  "through": "2026-11-25",
+  "campaign": "120248645551300265 PAUSED Nov 3; campaign ads.status off since Nov 2",
+  "cap_usd": 60,
+  "source": "costs ledger and SALES.md (no spend after Nov 1; Adspirer not re-queried this run)"
+ },
+ "decisions": [
+  "Kit: Creator plan payment failed Nov 13; Kit MCP still refuses reads and kit_sync fails (still failing). Update the payment method (deadline ~Dec 13) or drop to free (spending decision). Already messaged Nov 14.",
+  "ElevenLabs: factory reels run 45799139275 failed Nov 26 (17th day). Fix key/credits or pause freel.yml cron; Seb parked the old factory reels Nov 19, so the run only burns Actions minutes.",
+  "Merge pending builder branches: alert-issues, keep-social-source, cover-image-shape, job-title-claim, free-post-prompts, agent-title-claims, vault-gate-names-item, full-agent-claim (expired-launch-code and glow-up can be deleted).",
+  "Content calendar empty since Nov 19: OK hub_reel_002 (4 silent slideshow reels from approved hub posts, queue/drafts/hub_reel_002.json) or supply new videos.",
+  "Viral Lab: pick a source for public view counts (open since Oct 31)."
+ ]
+}
