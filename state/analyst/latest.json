@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-26T00:22:00Z",
+  "at": "2026-11-26T12:22:00Z",
   "posts_today": {},
   "top_posts": [],
   "kit": {
     "subscribers": null,
     "new_today": null
   },
-  "notes": "Snapshot 21:22 ART Nov 25. Metricool shows no posts scheduled for today (Nov 25) on any network: 0 published, 0 pending, 0 errors. Window 6-72h holds no published posts: Nov 22 Content Week reels (IG 433754444, TikTok 433754464) remain draft PENDING, never published. top_posts empty, no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. HQ feed written (status/hub v127). Watch: freel.yml failed 2026-11-25 10:14Z (already logged in Fix needed); ci.yml last run success; no post ERROR."
+  "notes": "Snapshot 09:22 ART Nov 26. Metricool returns no scheduled posts Nov 23 to 26 on any network: 0 published, 0 pending, 0 errors today. Window 6-72h holds no published posts, so top_posts empty, no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. HQ feed written (status/hub v128). Watch: freel.yml failed 2026-11-26 10:14Z (logged in Fix needed); ci.yml last run success; no post ERROR."
 }
