@@ -441,3 +441,4 @@
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-27T00:32:30+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (39th in a row)"}
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-27T08:32:31+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (40th in a row)"}
 {"worker": "daily_pulse", "status": "ok", "at": "2026-11-27T11:16:42+00:00", "note": "0 orders, 20 checkouts ok, no new SEV-1/2, 0 posts scheduled, Kit MISSING, ONE CHANGE NONE"}
+{"worker": "analyst", "status": "ok", "at": "2026-11-27T12:21:46+00:00", "note": "0 posts out today, top post saves+shares n/a (no posts), feed written yes"}
