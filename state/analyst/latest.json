@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-27T12:22:00Z",
+  "at": "2026-11-27T16:23:00Z",
   "posts_today": {},
   "top_posts": [],
   "kit": {
     "subscribers": null,
     "new_today": null
   },
-  "notes": "Snapshot 09:22 ART Nov 27. Metricool returns no scheduled posts Nov 24 to Nov 27 on any network: 0 published, 0 pending, 0 errors today. Window 6-72h holds no published posts, so top_posts empty, no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. HQ feed written (status/hub v132). Watch: freel.yml failed 2026-11-27 10:09Z (added to Fix needed); ci.yml last run success; no post ERROR."
+  "notes": "Snapshot 13:23 ART Nov 27. Metricool returns no scheduled posts Nov 24 to Nov 27 on any network: nothing published, pending or in error today. Window 6-72h holds no published posts, so top_posts empty, no winner. Kit MISSING: get_growth_stats needs a paid Kit plan. Revenue in hub feed: 0 verified orders all time, unchanged. HQ feed written (status/hub v133). Watch: freel.yml failed 2026-11-27 10:09Z (already in Fix needed today); ci.yml last run success; no post ERROR."
 }
