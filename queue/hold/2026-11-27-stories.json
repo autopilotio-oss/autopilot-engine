@@ -1,0 +1,57 @@
+[
+ {
+  "id": "story-2026-11-27-tip",
+  "group": "stories-2026-11-27",
+  "at": "2026-11-27T10:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-27-tip.jpg"
+  ],
+  "text": "AI tip: Got a bad review? Paste it and say: \"Write a calm, professional reply.\""
+ },
+ {
+  "id": "story-2026-11-27-quiz",
+  "group": "stories-2026-11-27",
+  "at": "2026-11-27T12:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-27-quiz.jpg"
+  ],
+  "text": "Quiz: A credit repair company wants $199 upfront. That's..."
+ },
+ {
+  "id": "story-2026-11-27-answer",
+  "group": "stories-2026-11-27",
+  "at": "2026-11-27T14:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-27-answer.jpg"
+  ],
+  "text": "Quiz answer: Not allowed under federal law. They {can't charge you} before doing the work. Everything they do, you can do yourself with Claude."
+ },
+ {
+  "id": "story-2026-11-27-fact",
+  "group": "stories-2026-11-27",
+  "at": "2026-11-27T16:30:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-27-fact.jpg"
+  ],
+  "text": "Everyday fix: Claude can explain homework like you're 10. Snap the problem. Ask it to teach the steps, not just give the answer, so you can help."
+ },
+ {
+  "id": "story-2026-11-27-poll",
+  "group": "stories-2026-11-27",
+  "at": "2026-11-27T18:00:00-05:00",
+  "kind": "story",
+  "threads": false,
+  "media": [
+   "https://autopilotio-oss.github.io/autopilot-engine/media/stories/2026-11-27-poll.jpg"
+  ],
+  "text": "Poll: When do you do admin work? A) Early morning B) Late at night"
+ }
+]
