@@ -447,3 +447,4 @@
 {"worker": "kit_sync", "status": "failed", "at": "2026-11-27T16:32:44+00:00", "note": "Kit MCP rejected list_subscribers_for_form: requires paid Kit plan (41st in a row)"}
 {"worker": "support_agent", "status": "ok", "at": "2026-11-27T19:09:50+00:00", "note": "0 drafted, 0 escalated, 0 alerts (Kit billing reminder, inc:email:1a1d2e4b still open)"}
 {"worker": "analyst", "status": "ok", "at": "2026-11-27T20:22:08+00:00", "note": "0 posts out today, no top post (0 saves+shares), feed written yes"}
+{"worker": "analyst", "status": "ok", "at": "2026-11-28T00:21:47+00:00", "note": "posts out today 0, top post saves+shares n/a (no posts), feed written yes"}
