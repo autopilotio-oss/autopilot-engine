@@ -144,6 +144,7 @@ TikTok Shop intel 2026-11-25: items 1 to 6 rechecked, still accurate and still w
 - Support agent run Nov 26 evening: no new alerts (2d mail informational only: Metricool newsletter, Reddit digests, Adspirer marketing).
 - Support agent run Nov 27 13:10 UTC: no new incidents. Google new sign-in on Apple iPhone 17 Pro Nov 27 02:20Z (23:20 ART Nov 26), same minute as Sign in with Google to mathematica.ai: looks like Seb's own phone, SEV-3 informational (if not him, Check activity in Google account). Other mail informational: Metricool newsletter, Reddit digests, TikTok likes.
 - Support agent run Nov 27 evening: no new incidents. Kit sent another payment-failed reminder Nov 27 15:03Z: Creator plan will be marked canceled if billing isn't updated within 15 days (around Dec 12). Same issue as inc:email:1a1d2e4b, still open, not re-recorded. Other 2d mail already noted or informational.
+- Support agent run Nov 28 13:10 UTC: no new incidents. Kit payment-failed reminder (Creator plan canceled around Dec 12 if billing not updated) still open under inc:email:1a1d2e4b, not re-recorded. Other 2d mail already noted or informational: Google iPhone sign-in (Nov 27, noted), Kit weekly digest, Metricool newsletter, TikTok likes, Reddit digests.
 
 ## Support this week
 - 0 buyer emails (no orders yet). Oct 31 run: 0 cases, 0 drafted, 0 escalated.
@@ -199,6 +200,7 @@ TikTok Shop intel 2026-11-25: items 1 to 6 rechecked, still accurate and still w
 - Nov 26 run (evening): 0 cases, 0 drafted, 0 escalated.
 - Nov 27 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 - Nov 27 run (evening): 0 cases, 0 drafted, 0 escalated.
+- Nov 28 run (13:10 UTC): 0 cases, 0 drafted, 0 escalated.
 
 ## Daily Pulse 2026-11-23 (08:15 ART)
 - Health: failing checks meta_pixel_configured (SEV-3, known), worker:kit_sync (SEV-2, issue #19, already reported, 28th failure in a row) and worker:newsletter (SEV-3, same Kit lock). All 20 checkouts ok, flagships live. Failed Actions 24h: only Factory reels run 45154218232 (ElevenLabs 401, 14th day, inc:worker:factory_reels_tts:2026-11-10 already open).
